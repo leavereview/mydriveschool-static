@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout 
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  publishedDate={post.data.date}
+>
+  <article>
+    <header class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+      <div class="container-custom">
+        <div class="max-w-4xl">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">{post.data.title}</h1>
+          <div class="flex items-center gap-4 text-gray-300">
+            <span>{post.data.author}</span>
+            <span>•</span>
+            <time datetime={post.data.date}>
+              {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-custom py-12">
+      <div class="max-w-4xl">
+        <div class="prose max-w-none">
+          <Content />
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <a href="/blog/" class="text-brand-red hover:underline">← Back to Blog</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+
+const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))];
+---
+
+<BaseLayout 
+  title="Blog" 
+  description="Pet care business insights, software guides, and industry tips for kennel owners, daycare managers, and cattery operators."
+>
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <span class="badge-primary mb-4">Resources</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">PetCare Blog</h1>
+        <p class="text-xl text-gray-300">
+          Insights, guides, and tips for running a successful pet care business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="card group">
+            <a href={`/blog/${post.slug}/`} class="block">
+              <h2 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-red transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="text-gray-600 text-sm line-clamp-2 mb-4">
+                {post.data.description}
+              </p>
+              <time class="text-sm text-gray-500" datetime={post.data.date}>
+                {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </a>
+          </article>
+        ))}
+      </div>
+      {posts.length === 0 && (
+        <div class="text-center py-12">
+          <p class="text-gray-500">No blog posts yet. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

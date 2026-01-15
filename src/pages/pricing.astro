@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Pricing" description="Simple, transparent pricing for driving school software. Plans from £29/month with no hidden fees.">
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-brand-navy mb-6">Simple, Transparent Pricing</h1>
+        <p class="text-xl text-gray-600 mb-12">
+          All features included. No setup fees. No contracts.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card border-2 border-gray-200">
+            <h3 class="text-xl font-bold text-brand-navy mb-2">Solo</h3>
+            <p class="text-gray-600 mb-4">For independent ADIs</p>
+            <div class="text-4xl font-bold text-brand-navy mb-4">£29<span class="text-lg font-normal text-gray-500">/month</span></div>
+            <ul class="text-left space-y-2 mb-6 text-sm">
+              <li>✓ Unlimited students</li>
+              <li>✓ Online booking</li>
+              <li>✓ Automated reminders</li>
+              <li>✓ Progress tracking</li>
+            </ul>
+            <a href="/contact/" class="btn-outline w-full">Start Free Trial</a>
+          </div>
+          <div class="card border-2 border-brand-red">
+            <span class="badge-primary mb-2">Most Popular</span>
+            <h3 class="text-xl font-bold text-brand-navy mb-2">School</h3>
+            <p class="text-gray-600 mb-4">For driving schools</p>
+            <div class="text-4xl font-bold text-brand-navy mb-4">£79<span class="text-lg font-normal text-gray-500">/month</span></div>
+            <ul class="text-left space-y-2 mb-6 text-sm">
+              <li>✓ Everything in Solo</li>
+              <li>✓ Up to 5 instructors</li>
+              <li>✓ Fleet management</li>
+              <li>✓ Business analytics</li>
+            </ul>
+            <a href="/contact/" class="btn-primary w-full">Start Free Trial</a>
+          </div>
+          <div class="card border-2 border-gray-200">
+            <h3 class="text-xl font-bold text-brand-navy mb-2">Enterprise</h3>
+            <p class="text-gray-600 mb-4">For large operations</p>
+            <div class="text-4xl font-bold text-brand-navy mb-4">Custom</div>
+            <ul class="text-left space-y-2 mb-6 text-sm">
+              <li>✓ Everything in School</li>
+              <li>✓ Unlimited instructors</li>
+              <li>✓ API access</li>
+              <li>✓ Dedicated support</li>
+            </ul>
+            <a href="/contact/" class="btn-outline w-full">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

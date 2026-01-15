@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-text-primary antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ease-out;
+  }
+  
+  .btn-primary {
+    @apply btn bg-brand-red text-white shadow-md;
+    @apply hover:bg-brand-red-dark hover:shadow-lg hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-white text-brand-navy border-2 border-gray-200;
+    @apply hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply btn bg-transparent text-brand-red border-2 border-brand-red;
+    @apply hover:bg-brand-red hover:text-white;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm p-6 transition-all duration-200;
+    @apply hover:shadow-md hover:-translate-y-0.5;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-lg transition-all duration-200;
+    @apply focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red-light;
+  }
+  
+  .link {
+    @apply text-brand-red hover:text-brand-red-dark transition-colors duration-200;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .badge-primary {
+    @apply badge bg-brand-red-light text-brand-red;
+  }
+  
+  .badge-navy {
+    @apply badge bg-brand-navy text-white;
+  }
+}
+
+.prose {
+  @apply text-text-secondary leading-relaxed;
+}
+
+.prose h2 {
+  @apply text-2xl md:text-3xl font-bold text-brand-navy mt-12 mb-6;
+}
+
+.prose h3 {
+  @apply text-xl md:text-2xl font-bold text-brand-navy mt-8 mb-4;
+}
+
+.prose p {
+  @apply mb-6;
+}
+
+.prose ul, .prose ol {
+  @apply mb-6 pl-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-brand-red hover:text-brand-red-dark underline;
+}
+
+.prose strong {
+  @apply text-text-primary font-semibold;
+}
