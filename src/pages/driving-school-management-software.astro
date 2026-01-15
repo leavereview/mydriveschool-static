@@ -1,62 +1,338 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: "What is driving school management software?",
+    answer: "Driving school management software is an all-in-one platform that handles student records, scheduling, payments, instructor management, and reporting. It replaces spreadsheets and paper records with automated digital systems."
+  },
+  {
+    question: "How much does driving school management software cost?",
+    answer: "Costs range from £29-150 per month depending on features and school size. MyDriveSchool offers flat monthly pricing from £29 with all features included—no per-user or per-student fees."
+  },
+  {
+    question: "Can I track student progress with management software?",
+    answer: "Yes, good management software tracks lesson hours completed, skills mastered, areas needing improvement, and test readiness. Parents can also view progress through their own portal."
+  },
+  {
+    question: "Does the software handle payments?",
+    answer: "Yes, modern driving school software processes card payments, sells lesson packages, tracks balances, and automatically generates invoices. Prepayment helps reduce no-shows."
+  },
+  {
+    question: "Can instructors access the system on their phones?",
+    answer: "Yes, instructors can view their schedule, access student information, record lesson notes, and update availability from any device with an internet connection."
+  }
+];
+
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Driving School Management Software: Complete Guide",
+  "description": "Everything you need to know about management software for driving schools. Student records, payments, instructor management, and business analytics.",
+  "author": {
+    "@type": "Organization",
+    "name": "MyDriveSchool"
+  },
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-01-15"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 ---
 
-<BaseLayout title="Driving School Management Software" description="Complete management software for driving schools. Student records, instructor management, fleet tracking, and business analytics.">
+<BaseLayout
+  title="Driving School Management Software: Complete Guide (2026)"
+  description="Complete guide to management software for driving schools. Student records, payments, instructor management, and business reporting in one platform."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
   <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
     <div class="container-custom">
       <div class="max-w-3xl">
-        <span class="badge-primary mb-4">Management Software</span>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Driving School Management</h1>
-        <p class="text-xl text-gray-300 mb-8">
-          From student enrolment to test pass tracking, manage every aspect of your driving school in one place.
+        <span class="inline-block bg-brand-red/20 text-brand-red-light px-3 py-1 rounded-full text-sm mb-4">Complete Guide</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Driving School Management Software</h1>
+        <p class="text-xl text-gray-300 mb-4">
+          <strong>Driving school management software</strong> centralizes student records, scheduling, payments, and reporting into one integrated system. It eliminates paperwork, reduces admin time, and helps you grow your business.
         </p>
+        <p class="text-gray-400 mb-8">Last updated: January 2026 | Reading time: 12 minutes</p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="/contact/" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
-          <a href="/pricing/" class="btn-secondary text-lg px-8 py-4">View Pricing</a>
+          <a href="#what-is" class="btn-secondary text-lg px-8 py-4">Read the Guide</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section bg-white">
+  <!-- Table of Contents -->
+  <section class="section bg-gray-50">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-6">Management Features</h2>
-        <ul class="space-y-4 mb-8">
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Student Records:</strong> Complete profiles with lesson history, progress, documents, and test dates.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Instructor Management:</strong> Track performance, assign students, manage availability and payroll.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Fleet Tracking:</strong> Vehicle assignments, service reminders, and MOT tracking.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Business Analytics:</strong> Revenue reports, pass rates, instructor performance, and growth insights.</span>
-          </li>
-        </ul>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-brand-navy mb-4">In This Guide</h2>
+          <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+            <li><a href="#what-is" class="hover:text-brand-red">→ What Is Management Software?</a></li>
+            <li><a href="#key-features" class="hover:text-brand-red">→ Key Features</a></li>
+            <li><a href="#student-management" class="hover:text-brand-red">→ Student Management</a></li>
+            <li><a href="#payments" class="hover:text-brand-red">→ Payments & Billing</a></li>
+            <li><a href="#instructor-management" class="hover:text-brand-red">→ Instructor Management</a></li>
+            <li><a href="#reporting" class="hover:text-brand-red">→ Reporting & Analytics</a></li>
+            <li><a href="#choosing" class="hover:text-brand-red">→ Choosing the Right Software</a></li>
+            <li><a href="#faq" class="hover:text-brand-red">→ FAQ</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section bg-gradient-to-r from-brand-red to-brand-red-dark text-white">
+  <!-- Main Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+
+        <h2 id="what-is" class="text-3xl font-bold text-brand-navy mb-6">What Is Driving School Management Software?</h2>
+
+        <p><strong>Driving school management software</strong> is a comprehensive platform that handles all aspects of running a driving school: student records, scheduling, payments, instructor management, communication, and business reporting. It replaces the patchwork of spreadsheets, paper files, and separate tools that many schools rely on.</p>
+
+        <p>The goal is simple: spend less time on admin and more time growing your business and teaching students to drive safely.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Benefits of Integrated Management Software</h3>
+
+        <ul class="space-y-3">
+          <li><strong>Single source of truth:</strong> All student, instructor, and business data in one place. No more hunting through spreadsheets or paper files.</li>
+          <li><strong>Automated workflows:</strong> Reminders, invoices, and communications happen automatically instead of manually.</li>
+          <li><strong>Better decisions:</strong> Real-time reporting shows what's working and what needs attention.</li>
+          <li><strong>Professional image:</strong> Online booking, digital payments, and automated communications make you look modern and organised.</li>
+        </ul>
+
+        <h2 id="key-features" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Key Features of Driving School Management Software</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 my-8">
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="font-bold text-brand-navy mb-2">Student Management</h3>
+            <p class="text-gray-700 text-sm">Complete student profiles, progress tracking, document storage, and parent portal access.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="font-bold text-brand-navy mb-2">Scheduling</h3>
+            <p class="text-gray-700 text-sm">Visual calendar, online booking, automated reminders, and multi-instructor coordination.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="font-bold text-brand-navy mb-2">Payments</h3>
+            <p class="text-gray-700 text-sm">Online payments, package sales, automatic invoicing, and balance tracking.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="font-bold text-brand-navy mb-2">Reporting</h3>
+            <p class="text-gray-700 text-sm">Revenue reports, pass rates, instructor performance, and business insights.</p>
+          </div>
+        </div>
+
+        <p>Related: <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">Driving School Scheduling Software Guide</a></p>
+
+        <h2 id="student-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Student Management</h2>
+
+        <p>Managing student information effectively is at the core of every successful driving school. Good software makes this effortless.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Student Profiles</h3>
+
+        <p>Each student should have a comprehensive profile containing:</p>
+
+        <ul class="space-y-2">
+          <li><strong>Contact information:</strong> Phone, email, address, emergency contacts</li>
+          <li><strong>Permit/licence details:</strong> Issue date, expiry, restrictions</li>
+          <li><strong>Lesson history:</strong> Every lesson attended with instructor notes</li>
+          <li><strong>Progress tracking:</strong> Skills mastered, areas needing work, hours completed</li>
+          <li><strong>Documents:</strong> Scanned permits, signed waivers, certificates</li>
+          <li><strong>Payment history:</strong> Packages purchased, lessons used, balance remaining</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Progress Tracking</h3>
+
+        <p>Track student progress against a structured curriculum:</p>
+
+        <ul class="space-y-2">
+          <li>Hours completed vs. required</li>
+          <li>Skills checklist (bay parking, roundabouts, motorway, etc.)</li>
+          <li>Instructor assessments after each lesson</li>
+          <li>Test readiness indicators</li>
+        </ul>
+
+        <p>This helps instructors pick up where others left off and gives students (and parents) visibility into progress.</p>
+
+        <p>Related: <a href="/blog/student-management-driving-schools/" class="text-brand-red hover:underline">Student Management for Driving Schools: Complete Guide</a></p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Parent Portal</h3>
+
+        <p>For teen students, parents often need involvement. A parent portal allows them to:</p>
+
+        <ul class="space-y-2">
+          <li>View upcoming and past lessons</li>
+          <li>See progress reports and instructor feedback</li>
+          <li>Book and reschedule lessons</li>
+          <li>Make payments and view balances</li>
+        </ul>
+
+        <h2 id="payments" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Payments & Billing</h2>
+
+        <p>Managing money shouldn't be complicated. Good management software handles payments smoothly.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Online Payments</h3>
+
+        <p>Accept card payments securely through:</p>
+
+        <ul class="space-y-2">
+          <li>Online booking (collect payment at time of booking)</li>
+          <li>Student portal (pay balances anytime)</li>
+          <li>Invoice links (send payment links via email/SMS)</li>
+        </ul>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+          <p class="font-bold text-brand-navy">Prepayment reduces no-shows</p>
+          <p>Students who pay in advance are significantly less likely to miss lessons. Collecting payment at booking time is the single most effective no-show prevention strategy.</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Package Sales</h3>
+
+        <p>Sell lesson packages (e.g., 10 lessons at a discount) and track:</p>
+
+        <ul class="space-y-2">
+          <li>Packages purchased and price paid</li>
+          <li>Lessons used and remaining</li>
+          <li>Expiry dates (if applicable)</li>
+          <li>Automatic notifications when packages run low</li>
+        </ul>
+
+        <p>Related: <a href="/blog/driving-school-payment-processing/" class="text-brand-red hover:underline">Driving School Payment Processing Guide</a></p>
+
+        <h2 id="instructor-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Instructor Management</h2>
+
+        <p>As your school grows, managing instructors becomes more complex. Software helps you stay organised.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Instructor Profiles</h3>
+
+        <ul class="space-y-2">
+          <li>Contact information and qualifications</li>
+          <li>ADI badge number and expiry</li>
+          <li>Working hours and availability</li>
+          <li>Assigned students and vehicles</li>
+          <li>Performance metrics (pass rates, lesson counts, feedback)</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Self-Service for Instructors</h3>
+
+        <p>Give instructors their own login to:</p>
+
+        <ul class="space-y-2">
+          <li>View their schedule on any device</li>
+          <li>Access student information before lessons</li>
+          <li>Record lesson notes and progress</li>
+          <li>Update their availability</li>
+          <li>View their performance and earnings</li>
+        </ul>
+
+        <h2 id="reporting" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Reporting & Analytics</h2>
+
+        <p>You can't improve what you don't measure. Good reporting helps you make better business decisions.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Essential Reports</h3>
+
+        <ul class="space-y-3">
+          <li><strong>Revenue reports:</strong> Income by day, week, month. Compare periods. Identify trends.</li>
+          <li><strong>Lesson reports:</strong> Lessons delivered, cancelled, no-shows. By instructor, by time period.</li>
+          <li><strong>Student reports:</strong> New enrolments, active students, test passes, pass rates.</li>
+          <li><strong>Instructor reports:</strong> Lessons per instructor, utilisation rates, pass rates, feedback scores.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Dashboard Overview</h3>
+
+        <p>A good dashboard shows key metrics at a glance:</p>
+
+        <ul class="space-y-2">
+          <li>Today's lessons and tomorrow's schedule</li>
+          <li>Revenue this week/month vs. last period</li>
+          <li>No-show rate and trend</li>
+          <li>Outstanding balances</li>
+          <li>Test passes this month</li>
+        </ul>
+
+        <h2 id="choosing" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Choosing the Right Software</h2>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">What to Look For</h3>
+
+        <ul class="space-y-3">
+          <li><strong>Ease of use:</strong> Can you figure out the basics without training? Will your instructors actually use it?</li>
+          <li><strong>Mobile access:</strong> Does it work well on phones? Instructors need mobile access.</li>
+          <li><strong>Support:</strong> Is help available when you need it? UK-based support is a plus.</li>
+          <li><strong>Pricing transparency:</strong> Are all costs clear upfront? Watch for per-user or per-SMS fees.</li>
+          <li><strong>Free trial:</strong> Can you test with real scenarios before committing?</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Red Flags</h3>
+
+        <ul class="space-y-2">
+          <li>Per-user pricing that makes adding instructors expensive</li>
+          <li>Per-student pricing that punishes growth</li>
+          <li>Hidden SMS fees that add up quickly</li>
+          <li>Long contracts with no easy exit</li>
+          <li>Outdated interface that instructors won't use</li>
+        </ul>
+
+        <p>Related: <a href="/blog/best-driving-school-software/" class="text-brand-red hover:underline">Best Driving School Software Comparison</a></p>
+
+        <h2 id="faq" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Frequently Asked Questions</h2>
+
+        <div class="space-y-6">
+          {faqs.map((faq) => (
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="font-bold text-brand-navy mb-2">{faq.question}</h3>
+              <p class="text-gray-700">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-to-r from-brand-red to-red-700 text-white">
     <div class="container-custom text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Manage Your School Like a Pro</h2>
-      <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Your Free Trial</a>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Simplify Your School Management?</h2>
+      <p class="text-xl mb-8 opacity-90">MyDriveSchool combines scheduling, student management, payments, and reporting in one easy-to-use platform.</p>
+      <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Free 14-Day Trial</a>
+      <p class="text-sm mt-4 opacity-75">No credit card required. Set up in under an hour.</p>
+    </div>
+  </section>
+
+  <!-- Related Content -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-2xl font-bold text-brand-navy mb-8 text-center">Related Guides</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <a href="/driving-school-software/" class="card p-6 hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-brand-navy mb-2">Driving School Software</h3>
+          <p class="text-gray-600 text-sm">Complete overview of features and benefits</p>
+        </a>
+        <a href="/driving-school-scheduling-software/" class="card p-6 hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-brand-navy mb-2">Scheduling Software Guide</h3>
+          <p class="text-gray-600 text-sm">Online booking, reminders, and calendars</p>
+        </a>
+        <a href="/blog/free-driving-school-software/" class="card p-6 hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-brand-navy mb-2">Free Software Options</h3>
+          <p class="text-gray-600 text-sm">What free tools can and can't do</p>
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -1,62 +1,306 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: "What is the best scheduling software for driving schools?",
+    answer: "The best scheduling software depends on your school's size and needs. Key factors include ease of use, online booking quality, SMS reminder capabilities, and total cost. MyDriveSchool offers all these features at an affordable flat rate."
+  },
+  {
+    question: "How much does driving school scheduling software cost?",
+    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. MyDriveSchool offers flat monthly pricing from £29, with SMS reminders included."
+  },
+  {
+    question: "Can students book driving lessons online?",
+    answer: "Yes, modern driving school scheduling software allows students to book lessons online 24/7. They can view real-time instructor availability, select their preferred time slot, and receive instant confirmation."
+  },
+  {
+    question: "How do I reduce no-shows at my driving school?",
+    answer: "The most effective strategies include: automated SMS reminders 24 hours and 2 hours before lessons, requiring prepayment or card on file, enforcing cancellation policies, and making rescheduling easy. Schools typically reduce no-shows by 30-50%."
+  },
+  {
+    question: "Does scheduling software prevent double-bookings?",
+    answer: "Quality driving school scheduling software completely prevents double-bookings by checking instructor, student, and vehicle availability before allowing any booking."
+  }
+];
+
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Driving School Scheduling Software: The Ultimate Guide",
+  "description": "Complete guide to scheduling and booking software for driving schools. Learn how to reduce no-shows, enable online booking, and save 10+ hours per week.",
+  "author": {
+    "@type": "Organization",
+    "name": "MyDriveSchool"
+  },
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-01-15"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 ---
 
-<BaseLayout title="Driving School Scheduling Software" description="Smart scheduling software for driving schools. Online booking, instructor availability, and automated reminders to reduce no-shows.">
+<BaseLayout
+  title="Driving School Scheduling Software: The Ultimate Guide (2026)"
+  description="Complete guide to scheduling software for driving schools. Online booking, automated reminders, and multi-instructor calendars. Reduce no-shows by 50%."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
   <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
     <div class="container-custom">
       <div class="max-w-3xl">
-        <span class="badge-primary mb-4">Scheduling Software</span>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Driving School Scheduling That Actually Works</h1>
-        <p class="text-xl text-gray-300 mb-8">
-          Stop double-booking, chasing students for confirmations, and manually sending reminders. Let the software handle it.
+        <span class="inline-block bg-brand-red/20 text-brand-red-light px-3 py-1 rounded-full text-sm mb-4">Ultimate Guide</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Driving School Scheduling Software</h1>
+        <p class="text-xl text-gray-300 mb-4">
+          <strong>Driving school scheduling software</strong> automates lesson booking, instructor coordination, and appointment management. The right system reduces phone calls by 70%, cuts no-shows in half, and saves 10+ hours every week.
         </p>
+        <p class="text-gray-400 mb-8">Last updated: January 2026 | Reading time: 14 minutes</p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="/contact/" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
-          <a href="/pricing/" class="btn-secondary text-lg px-8 py-4">View Pricing</a>
+          <a href="#what-is" class="btn-secondary text-lg px-8 py-4">Read the Guide</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section bg-white">
+  <!-- Table of Contents -->
+  <section class="section bg-gray-50">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-6">Scheduling Features</h2>
-        <ul class="space-y-4 mb-8">
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Drag & Drop Calendar:</strong> Visual scheduling with instructor colour-coding and easy rescheduling.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Availability Management:</strong> Set working hours, breaks, holidays, and coverage areas.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Automated Reminders:</strong> SMS and email reminders reduce no-shows by up to 60%.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Online Student Booking:</strong> Students book available slots through their portal.</span>
-          </li>
-        </ul>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-brand-navy mb-4">In This Guide</h2>
+          <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+            <li><a href="#what-is" class="hover:text-brand-red">→ What Is Scheduling Software?</a></li>
+            <li><a href="#why-matters" class="hover:text-brand-red">→ Why Scheduling Is Critical</a></li>
+            <li><a href="#essential-features" class="hover:text-brand-red">→ Essential Features</a></li>
+            <li><a href="#online-booking" class="hover:text-brand-red">→ Online Booking</a></li>
+            <li><a href="#reduce-no-shows" class="hover:text-brand-red">→ Reducing No-Shows</a></li>
+            <li><a href="#multi-instructor" class="hover:text-brand-red">→ Managing Multiple Instructors</a></li>
+            <li><a href="#evaluation" class="hover:text-brand-red">→ How to Evaluate Software</a></li>
+            <li><a href="#faq" class="hover:text-brand-red">→ FAQ</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section bg-gradient-to-r from-brand-red to-brand-red-dark text-white">
+  <!-- Main Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+
+        <h2 id="what-is" class="text-3xl font-bold text-brand-navy mb-6">What Is Driving School Scheduling Software?</h2>
+
+        <p><strong>Driving school scheduling software</strong> is a specialized tool that manages appointment calendars, coordinates instructors and vehicles, enables online student booking, and automates appointment reminders. It replaces paper calendars, spreadsheets, and phone-based scheduling with an integrated digital system.</p>
+
+        <p>Unlike generic calendar apps, driving school scheduling software handles the complexity unique to driver education: coordinating three resources (instructor, student, and vehicle) simultaneously, tracking required training hours, managing pickup locations, and accommodating unpredictable student schedules.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Key Differences from Generic Scheduling Tools</h3>
+
+        <ul class="space-y-3">
+          <li><strong>Multi-resource coordination:</strong> Every driving lesson requires an available instructor, student, and vehicle. Generic tools can't handle this three-way coordination.</li>
+          <li><strong>Behind-the-wheel hour tracking:</strong> Students need specific hours to meet requirements. The software automatically tracks completed and remaining hours.</li>
+          <li><strong>Geographic considerations:</strong> Lessons happen at student locations. Good software considers travel time and creates zones to minimize instructor driving.</li>
+          <li><strong>Parent involvement:</strong> For teen students, parents need to book lessons and monitor schedules.</li>
+        </ul>
+
+        <h2 id="why-matters" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Why Scheduling Is Critical for Driving Schools</h2>
+
+        <p>Scheduling is the operational heartbeat of every driving school. Poor scheduling directly impacts revenue, reputation, and instructor satisfaction.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">The Real Cost of Scheduling Problems</h3>
+
+        <div class="bg-red-50 border-l-4 border-brand-red p-4 my-6">
+          <p class="font-bold text-brand-navy">No-shows destroy revenue</p>
+          <p>At £45 per lesson, a single daily no-show costs over £11,000 per year. With a 15% no-show rate (common with manual systems), a school doing 500 lessons per month loses £3,375 monthly.</p>
+        </div>
+
+        <ul class="space-y-3">
+          <li><strong>Double-bookings damage reputation:</strong> When scheduling conflicts occur, you look unprofessional. These mistakes erode trust and lead to negative reviews.</li>
+          <li><strong>Phone scheduling is expensive:</strong> The average scheduling call takes 4-6 minutes. If you handle 30 calls per day, that's 2.5-3 hours daily—over 60 hours per month.</li>
+          <li><strong>Unfilled cancelled slots:</strong> When a student cancels, how quickly can you fill that slot? With phone-based scheduling, often not at all.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Impact of Good Scheduling Software</h3>
+
+        <p>Schools implementing proper scheduling software report:</p>
+
+        <ul class="space-y-2">
+          <li><strong>60-70% fewer phone calls</strong> — students book online instead</li>
+          <li><strong>30-50% reduction in no-shows</strong> — automated reminders work</li>
+          <li><strong>Zero double-bookings</strong> — software prevents conflicts automatically</li>
+          <li><strong>Higher instructor utilization</strong> — fewer gaps between lessons</li>
+        </ul>
+
+        <h2 id="essential-features" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Essential Scheduling Features</h2>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Visual Calendar Interface</h3>
+
+        <p>Your scheduling software should display appointments in a clear, visual calendar format:</p>
+
+        <ul class="space-y-2">
+          <li>All instructors' schedules on one screen (filterable)</li>
+          <li>Day, week, and month views</li>
+          <li>Colour-coding by instructor, lesson type, or status</li>
+          <li>Quick identification of open slots</li>
+          <li><strong>Drag-and-drop rescheduling</strong> — moving a lesson should be effortless</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Conflict Prevention</h3>
+
+        <p>The software should automatically prevent:</p>
+
+        <ul class="space-y-2">
+          <li>Booking an instructor who's already scheduled</li>
+          <li>Booking a vehicle that's already in use</li>
+          <li>Booking a student who already has a lesson</li>
+          <li>Booking outside of instructor availability</li>
+        </ul>
+
+        <h2 id="online-booking" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Online Booking: The Game Changer</h2>
+
+        <p><strong>Online booking</strong> transforms driving school operations more than any other single feature. Allowing students to book lessons themselves, anytime, from any device, delivers immediate benefits.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Why Online Booking Matters</h3>
+
+        <ul class="space-y-3">
+          <li><strong>Students expect it:</strong> In 2026, people book everything online. Not offering online booking feels outdated.</li>
+          <li><strong>24/7 availability:</strong> Students often think about scheduling in the evening or on weekends. Online booking captures these bookings.</li>
+          <li><strong>Reduces phone calls by 60-70%:</strong> Every online booking is a call you didn't have to answer.</li>
+          <li><strong>Fewer errors:</strong> When students enter their own information, there are no miscommunications.</li>
+        </ul>
+
+        <h2 id="reduce-no-shows" class="text-3xl font-bold text-brand-navy mt-12 mb-6">How to Reduce No-Shows</h2>
+
+        <p>No-shows are the silent profit killer for driving schools. Good scheduling software provides tools to dramatically reduce them.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Automated Reminder Strategy</h3>
+
+        <div class="bg-blue-50 p-4 rounded-lg my-6">
+          <p class="font-bold text-brand-navy mb-2">The most effective reminder sequence:</p>
+          <ul class="space-y-2">
+            <li><strong>24 hours before:</strong> Detailed reminder with time, instructor, pickup location, and what to bring.</li>
+            <li><strong>2 hours before:</strong> Brief confirmation reminder. Last chance to reschedule.</li>
+          </ul>
+          <p class="mt-4 text-sm"><strong>SMS is essential:</strong> 98% open rate compared to 20% for email. Most people read texts within minutes.</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Easy Rescheduling Options</h3>
+
+        <p>Often, students who no-show intended to reschedule but found it too difficult. Make rescheduling effortless:</p>
+
+        <ul class="space-y-2">
+          <li>Include reschedule links directly in reminder messages</li>
+          <li>Allow rescheduling through the student portal without calling</li>
+          <li>Set a reasonable rescheduling deadline (e.g., 12-24 hours before)</li>
+        </ul>
+
+        <p>Related: <a href="/blog/reduce-no-shows-driving-school/" class="text-brand-red hover:underline">How to Reduce No-Shows at Your Driving School</a></p>
+
+        <h2 id="multi-instructor" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Managing Multiple Instructors</h2>
+
+        <p>Scheduling complexity increases exponentially as you add instructors. Here's how software helps.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Multi-Instructor Calendar Views</h3>
+
+        <p>You need to see all instructors simultaneously to:</p>
+
+        <ul class="space-y-2">
+          <li>Identify who has availability for a specific time</li>
+          <li>Spot utilization imbalances</li>
+          <li>Quickly reassign lessons when an instructor is sick</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Self-Service for Instructors</h3>
+
+        <p>Empower instructors to manage their own schedules:</p>
+
+        <ul class="space-y-2">
+          <li><strong>View their schedule:</strong> Access daily/weekly schedule from their phone</li>
+          <li><strong>Update availability:</strong> Mark themselves unavailable for specific times</li>
+          <li><strong>Access student information:</strong> See student contact info, pickup location, and notes</li>
+          <li><strong>Record lesson notes:</strong> Log what was covered and student progress</li>
+        </ul>
+
+        <h2 id="evaluation" class="text-3xl font-bold text-brand-navy mt-12 mb-6">How to Evaluate Scheduling Software</h2>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Must-Test During Trial</h3>
+
+        <ul class="space-y-2">
+          <li><strong>Calendar usability:</strong> Spend 15 minutes scheduling, rescheduling, and cancelling. Is it intuitive?</li>
+          <li><strong>Online booking flow:</strong> Go through booking as a student. Time how long it takes.</li>
+          <li><strong>Mobile experience:</strong> Test both admin calendar and student booking on your phone.</li>
+          <li><strong>Conflict prevention:</strong> Try to create a double-booking. The system should prevent it completely.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Red Flags</h3>
+
+        <ul class="space-y-2">
+          <li>No free trial available</li>
+          <li>Can't test online booking without commitment</li>
+          <li>SMS reminders cost extra with unclear pricing</li>
+          <li>Mobile interface is just a scaled-down desktop version</li>
+          <li>Long implementation times (more than 2-4 weeks)</li>
+        </ul>
+
+        <p>Related: <a href="/blog/how-to-choose-driving-school-scheduling-software/" class="text-brand-red hover:underline">How to Choose Driving School Scheduling Software</a></p>
+
+        <h2 id="faq" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Frequently Asked Questions</h2>
+
+        <div class="space-y-6">
+          {faqs.map((faq) => (
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="font-bold text-brand-navy mb-2">{faq.question}</h3>
+              <p class="text-gray-700">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-to-r from-brand-red to-red-700 text-white">
     <div class="container-custom text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Take Control of Your Schedule</h2>
-      <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Your Free Trial</a>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Scheduling?</h2>
+      <p class="text-xl mb-8 opacity-90">MyDriveSchool makes scheduling effortless with drag-and-drop calendars, 24/7 online booking, and automated SMS reminders.</p>
+      <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Free 14-Day Trial</a>
+      <p class="text-sm mt-4 opacity-75">No credit card required. Set up in under an hour.</p>
+    </div>
+  </section>
+
+  <!-- Related Content -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-2xl font-bold text-brand-navy mb-8 text-center">Related Guides</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <a href="/driving-school-software/" class="card p-6 hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-brand-navy mb-2">Driving School Software</h3>
+          <p class="text-gray-600 text-sm">Complete overview of features and benefits</p>
+        </a>
+        <a href="/driving-school-management-software/" class="card p-6 hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-brand-navy mb-2">Management Software Guide</h3>
+          <p class="text-gray-600 text-sm">Student management, payments, and reporting</p>
+        </a>
+        <a href="/blog/best-driving-school-software/" class="card p-6 hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-brand-navy mb-2">Best Software Comparison</h3>
+          <p class="text-gray-600 text-sm">Compare top driving school platforms</p>
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
