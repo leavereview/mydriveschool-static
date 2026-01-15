@@ -1,30 +1,437 @@
 ---
+// About Page - EEAT Optimized for Google Trust
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Schema.org structured data for EEAT
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "John Powell",
+  "jobTitle": "Founder & SaaS Entrepreneur",
+  "description": "SaaS entrepreneur and software engineer specializing in vertical market solutions for service-based businesses",
+  "url": "https://mydriveschool.software/about/",
+  "sameAs": [
+    "https://www.linkedin.com/in/john-powell-saas/"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Winchester"
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "First Class Honours Degree in Software Engineering",
+    "credentialCategory": "degree"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "LEAVE.REVIEW LTD",
+    "url": "https://mydriveschool.software"
+  },
+  "knowsAbout": [
+    "Driving School Software",
+    "SaaS Development",
+    "Service Business Operations",
+    "Software Engineering",
+    "Project Management"
+  ]
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LEAVE.REVIEW LTD",
+  "alternateName": "MyDriveSchool Software",
+  "url": "https://mydriveschool.software",
+  "foundingDate": "2005-03-31",
+  "description": "UK-registered software development company providing vertical SaaS solutions for driving schools and instructors",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "124 City Road",
+    "addressLocality": "London",
+    "postalCode": "EC1V 2NX",
+    "addressCountry": "GB"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "John Powell"
+  },
+  "sameAs": [
+    "https://find-and-update.company-information.service.gov.uk/company/05408918"
+  ]
+};
+
+const testimonials = [
+  {
+    quote: "We have a small but rapidly expanding facility... to have a supported software package that is constantly updated and kept in the cloud is a true asset to our business. Anyone can use the product with ease... Recently I asked for an enhancement and it was acknowledged quickly, developed and presented back to me within a very short time frame.",
+    author: "Tim S.",
+    role: "Business Owner (New Zealand)",
+    duration: "2+ years use",
+    source: "Capterra Verified Review"
+  },
+  {
+    quote: "After some frustrating conversations with other companies I chose RevelationPets, and I look forward to using it every day! My clients like it as they find it easy to use.",
+    author: "Sara V.",
+    role: "Business Owner",
+    source: "Capterra Verified Review"
+  },
+  {
+    quote: "Saved time. Allows us to track bookings so we can make business decisions. Allows customers to book online instead of calling us. It is amazing all around and has automated many of our processes that took hours in the past.",
+    author: "Emmily B.",
+    role: "Facility Manager",
+    source: "Capterra Verified Review"
+  },
+  {
+    quote: "All the data is in one place and is accessible to all my staff wherever they are. The fact that my facility has been able to grow with the software makes it very much a partnership.",
+    author: "Anna S.",
+    role: "Manager and Trainer",
+    duration: "1-2 years use",
+    source: "Capterra Verified Review"
+  }
+];
 ---
 
-<BaseLayout title="About Us" description="Learn about MyDriveSchool.Software - driving school management software built by people who understand the industry.">
+<BaseLayout
+  title="About John Powell - Founder & SaaS Entrepreneur"
+  description="Learn about John Powell, founder of MyDriveSchool.Software. With a First Class Honours in Software Engineering and proven success building and selling RevelationPets.com, John brings 20 years of software business experience to driving school management."
+>
+  <!-- Additional Schema.org markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} is:inline />
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} is:inline />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16 md:py-24">
+    <div class="container-custom">
+      <div class="max-w-4xl">
+        <span class="badge-primary mb-6">About</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">John Powell</h1>
+        <p class="text-2xl text-brand-red font-semibold mb-4">Founder & SaaS Entrepreneur, MyDriveSchool.Software</p>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          SaaS entrepreneur and software engineer specializing in vertical market solutions for service-based businesses. With a First Class Honours degree in Software Engineering and proven experience building, growing, and exiting successful businesses, John applies systematic software development principles to help driving schools automate scheduling, reduce no-shows, and scale efficiently.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators Bar -->
+  <section class="bg-brand-red-light py-6 border-b border-gray-100">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-2xl font-bold text-brand-navy">20+ Years</div>
+          <div class="text-sm text-gray-600">Company Trading</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-brand-navy">First Class</div>
+          <div class="text-sm text-gray-600">Honours Degree</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-brand-navy">5 Countries</div>
+          <div class="text-sm text-gray-600">Software Deployed</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-brand-navy">Proven Exit</div>
+          <div class="text-sm text-gray-600">RevelationPets.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <section class="section bg-white">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold text-brand-navy mb-8">About MyDriveSchool.Software</h1>
-        <div class="prose max-w-none">
-          <p class="text-lg text-gray-600 mb-6">
-            We built MyDriveSchool.Software because we saw driving instructors drowning in admin work when they should be focusing on teaching.
-          </p>
-          <p class="text-gray-600 mb-6">
-            Founded in 2024, our mission is simple: give driving schools the tools they need to run efficiently, reduce no-shows, and help more students pass their tests.
-          </p>
-          <h2 class="text-2xl font-bold text-brand-navy mt-8 mb-4">Our Values</h2>
-          <ul class="space-y-3 mb-6">
-            <li><strong>Simplicity:</strong> Software should save time, not create work</li>
-            <li><strong>Reliability:</strong> Your diary is your business - we treat it accordingly</li>
-            <li><strong>Support:</strong> Real humans who understand driving school operations</li>
-          </ul>
-          <p class="text-gray-600">
-            We're based in the UK and serve driving schools across the UK, US, Australia, and beyond.
-          </p>
+
+        <!-- Professional Background -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-8">Professional Background</h2>
+
+          <!-- Current Focus -->
+          <div class="card mb-6 border-l-4 border-brand-red">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy">Founder, MyDriveSchool.Software</h3>
+                <p class="text-brand-red font-medium mb-2">2024 - Present</p>
+                <p class="text-gray-600">
+                  Founded MyDriveSchool.Software to address the operational challenges faced by driving instructors and school owners. The platform provides integrated solutions for lesson scheduling, student progress tracking, payment processing, and automated communications - helping driving schools reduce no-shows while improving student pass rates and business growth.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- UKRI -->
+          <div class="card mb-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy">Senior Project Manager, UK Research and Innovation (UKRI)</h3>
+                <p class="text-gray-500 font-medium mb-2">2019 - Present</p>
+                <p class="text-gray-600">
+                  Manages complex technology initiatives on the Technology and Funding Services (TFS) project, including Python-based Jira reporting systems for EPIC status tracking, cross-functional software development teams, and enterprise-grade project management. Experience delivering production systems for a major UK government research organization informs the robust, scalable architecture underlying MyDriveSchool products.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RevelationPets -->
+          <div class="card mb-6 bg-green-50 border-l-4 border-green-500">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <h3 class="text-xl font-bold text-brand-navy">Founder, RevelationPets.com</h3>
+                  <span class="bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-medium">Successful Exit</span>
+                </div>
+                <p class="text-gray-500 font-medium mb-2">2015 - 2022</p>
+                <p class="text-gray-600 mb-4">
+                  Successfully built, grew, and sold RevelationPets.com, a service-based business in the pet care industry. This hands-on experience running every aspect of a service business - from customer bookings and scheduling to payment processing and customer communications - provides deep insights into the operational challenges that driving schools face daily.
+                </p>
+                <p class="text-sm text-gray-500">
+                  <strong>Key achievements:</strong> Built custom booking and management systems, automated customer communications, implemented efficient scheduling workflows, and scaled operations to successful exit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PetCare.Software -->
+          <div class="card">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy">Founder, PetCare.Software</h3>
+                <p class="text-gray-500 font-medium mb-2">2024 - Present</p>
+                <p class="text-gray-600">
+                  Successfully launched and scaled a vertical SaaS platform serving facilities across five countries (US, UK, Canada, Australia, New Zealand). This experience in building, marketing, and supporting industry-specific software directly informs the development strategy for MyDriveSchool.Software.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Company Information - EEAT Trust Signal -->
+        <div class="mb-16 bg-gray-50 rounded-2xl p-8">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Company Information</h2>
+          <p class="text-gray-600 mb-6">
+            MyDriveSchool.Software is a trading name of <strong class="text-brand-navy">LEAVE.REVIEW LTD</strong>, a UK-registered software development company established in 2005.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm text-gray-500 mb-1">Company Number</div>
+              <div class="font-bold text-brand-navy">05408918</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm text-gray-500 mb-1">Incorporated</div>
+              <div class="font-bold text-brand-navy">31 March 2005 (20 years)</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm text-gray-500 mb-1">Registered Office</div>
+              <div class="font-bold text-brand-navy">124 City Road, London, EC1V 2NX</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm text-gray-500 mb-1">Nature of Business</div>
+              <div class="font-bold text-brand-navy">Business & domestic software development</div>
+            </div>
+          </div>
+
+          <a
+            href="https://find-and-update.company-information.service.gov.uk/company/05408918"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-brand-red hover:text-brand-red-dark font-medium"
+          >
+            View full company details on Companies House
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+
+          <div class="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+            <p class="text-sm text-blue-800">
+              <strong>Why This Matters:</strong> LEAVE.REVIEW LTD has been in continuous operation since 2005, originally trading as REVELATION MEDIA LTD - the company that built and operated RevelationPets.com. This 20-year track record demonstrates long-term business stability and genuine operational experience in the software industry.
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonials - Social Proof -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-4">Proven Track Record: RevelationPets.com Success</h2>
+          <p class="text-gray-600 mb-8">
+            John's business acumen and technical expertise are validated by the success of RevelationPets.com, which served hundreds of facilities across multiple countries. Verified customer reviews from Capterra highlight the real-world impact of his work:
+          </p>
+
+          <div class="space-y-6">
+            {testimonials.map((testimonial) => (
+              <blockquote class="card border-l-4 border-brand-red">
+                <div class="flex gap-1 mb-3">
+                  {[1,2,3,4,5].map(() => (
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p class="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+                <footer class="flex flex-wrap items-center justify-between gap-2">
+                  <div>
+                    <cite class="font-semibold text-brand-navy not-italic">{testimonial.author}</cite>
+                    <span class="text-gray-500"> - {testimonial.role}</span>
+                    {testimonial.duration && <span class="text-gray-400 text-sm"> | {testimonial.duration}</span>}
+                  </div>
+                  <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">{testimonial.source}</span>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+
+          <div class="mt-8 p-4 bg-brand-red-light rounded-xl">
+            <p class="text-sm text-gray-700">
+              <strong class="text-brand-navy">Why This Matters for Driving Schools:</strong> These verified reviews demonstrate John's ability to understand service business operations, build user-friendly scheduling systems, automate time-consuming administrative tasks, and create software that both staff and customers find intuitive. The same principles that made RevelationPets successful - automated reminders, online booking, efficient scheduling, and responsive development - now inform MyDriveSchool.Software's approach to lesson management and student progress tracking.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education & Credentials -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Education & Credentials</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="card">
+              <div class="w-12 h-12 rounded-full bg-brand-red-light flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">First Class Honours Degree</h3>
+              <p class="text-gray-600">Software Engineering - University of Winchester</p>
+            </div>
+            <div class="card">
+              <div class="w-12 h-12 rounded-full bg-brand-red-light flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-2">15+ Years Experience</h3>
+              <p class="text-gray-600">Software development, system architecture, and project management</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expertise Grid -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Expertise & Specializations</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="card">
+              <h3 class="font-bold text-brand-navy mb-2">Service Business Operations</h3>
+              <p class="text-gray-600 text-sm">Hands-on experience running a service-based business from startup to exit, including customer acquisition, scheduling optimization, payment processing, and operational efficiency.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-bold text-brand-navy mb-2">SaaS Development</h3>
+              <p class="text-gray-600 text-sm">Proven track record building and scaling vertical SaaS products with a focus on user experience, operational efficiency, and measurable ROI.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-bold text-brand-navy mb-2">Technical Architecture</h3>
+              <p class="text-gray-600 text-sm">Expert in Python development, WordPress/PHP ecosystem, React/JavaScript, RESTful APIs, and database architecture with hands-on production SaaS experience.</p>
+            </div>
+            <div class="card">
+              <h3 class="font-bold text-brand-navy mb-2">Business Process Automation</h3>
+              <p class="text-gray-600 text-sm">Specialist in identifying operational bottlenecks in service businesses and implementing software solutions that reduce administrative overhead.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Trust Section -->
+        <div class="mb-16 bg-brand-navy text-white rounded-2xl p-8">
+          <h2 class="text-3xl font-bold mb-6">Why Trust John's Guidance?</h2>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Proven Business Success:</strong> Successfully built, grown, and sold a service-based business, giving him firsthand understanding of the operational challenges driving schools face.
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Real-World Technical Experience:</strong> First Class Honours in Software Engineering with 15+ years developing production systems - deep technical credibility.
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Vertical SaaS Experience:</strong> Successfully launched PetCare.Software serving facilities across five countries - proven track record in vertical market software.
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Focus on Automation:</strong> Having automated his own business operations, John understands which processes can be effectively automated without sacrificing the instructor-student relationship.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connect -->
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Connect with John</h2>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.linkedin.com/in/john-powell-saas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              LinkedIn Profile
+            </a>
+            <a href="/contact/" class="btn-primary">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
       </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-to-r from-brand-red to-brand-red-dark text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Ready to Transform Your Driving School?
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Experience the same attention to detail and operational expertise that made RevelationPets a success.
+      </p>
+      <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">
+        Start Your Free Trial
+      </a>
     </div>
   </section>
 </BaseLayout>

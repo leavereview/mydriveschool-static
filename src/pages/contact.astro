@@ -1,25 +1,219 @@
 ---
+// Contact Page
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact" description="Get in touch with MyDriveSchool.Software. Start your free trial or ask us anything about our driving school software.">
+<BaseLayout title="Contact Us" description="Get in touch with MyDriveSchool Software. Request a demo, ask questions, or learn how we can help streamline your driving school management.">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+        <p class="text-xl text-gray-300">
+          Have questions about MyDriveSchool? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <section class="section bg-white">
     <div class="container-custom">
-      <div class="max-w-2xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-brand-navy mb-6">Get in Touch</h1>
-        <p class="text-xl text-gray-600 mb-8">
-          Ready to streamline your driving school? Start your free trial or ask us anything.
-        </p>
-        <div class="bg-gray-50 rounded-2xl p-8 mb-8">
-          <h2 class="text-2xl font-bold text-brand-navy mb-4">Start Your Free Trial</h2>
-          <p class="text-gray-600 mb-6">14 days free, no credit card required.</p>
-          <a href="mailto:hello@mydriveschool.software" class="btn-primary text-lg px-8 py-4">
-            Email Us to Get Started
-          </a>
+      <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+        <!-- Contact Form -->
+        <div class="card">
+          <h2 class="text-2xl font-bold text-brand-navy mb-6">Send us a Message</h2>
+          <form
+            action="https://formspree.io/f/xkoogqqg"
+            method="POST"
+            class="space-y-6"
+          >
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                Full Name <span class="text-brand-red">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="input"
+                placeholder="John Smith"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                Email Address <span class="text-brand-red">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="input"
+                placeholder="john@example.com"
+              />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+                Subject <span class="text-brand-red">*</span>
+              </label>
+              <select
+                id="subject"
+                name="subject"
+                required
+                class="input"
+              >
+                <option value="">Select a topic...</option>
+                <option value="demo">Request a Demo</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                Message <span class="text-brand-red">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="input resize-none"
+                placeholder="Tell us how we can help..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full">
+              Send Message
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </form>
         </div>
-        <div class="text-left space-y-4">
-          <p><strong>Email:</strong> hello@mydriveschool.software</p>
-          <p><strong>Response time:</strong> Within 24 hours (usually much faster)</p>
+
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <!-- Email Card -->
+          <div class="card">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-red-light rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-navy mb-1">Email Us</h3>
+                <p class="text-gray-600 mb-2">For general inquiries and support</p>
+                <a href="mailto:info@mydriveschool.software" class="text-brand-red hover:text-brand-red-dark font-medium transition-colors">
+                  info@mydriveschool.software
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Card -->
+          <div class="card">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-red-light rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-navy mb-1">Office Address</h3>
+                <p class="text-gray-600">
+                  124 City Road<br />
+                  London, England<br />
+                  EC1V 2NX
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Response Time Card -->
+          <div class="card">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-red-light rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-brand-navy mb-1">Response Time</h3>
+                <p class="text-gray-600">
+                  We typically respond within 24 hours during business days. For urgent support, please indicate this in your message.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Card -->
+          <div class="bg-brand-red-light rounded-xl p-6">
+            <h3 class="text-lg font-bold text-brand-navy mb-2">Ready to get started?</h3>
+            <p class="text-gray-600 mb-4">
+              Try MyDriveSchool free and see how it can transform your driving school management.
+            </p>
+            <a href="/pricing/" class="btn-primary">
+              View Pricing
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Info Section -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">About Our Company</h2>
+        <div class="card text-left">
+          <p class="text-gray-600 mb-4">
+            MyDriveSchool.Software is a trading name of <strong>LEAVE.REVIEW LTD</strong>, a UK software development company established in 2005 with extensive experience building management software for service-based businesses.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-6 mt-6 pt-6 border-t border-gray-200">
+            <div>
+              <h4 class="font-semibold text-brand-navy mb-2">Company Details</h4>
+              <p class="text-sm text-gray-600">
+                LEAVE.REVIEW LTD<br />
+                Company No: 05408918<br />
+                Incorporated: 31 March 2005
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-brand-navy mb-2">Registered Office</h4>
+              <p class="text-sm text-gray-600">
+                124 City Road<br />
+                London, England<br />
+                EC1V 2NX
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="https://find-and-update.company-information.service.gov.uk/company/05408918"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-brand-red hover:text-brand-red-dark font-medium transition-colors"
+            >
+              View on Companies House
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
