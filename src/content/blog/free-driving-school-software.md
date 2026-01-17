@@ -1,6 +1,7 @@
 ---
 title: "Free Driving School Software: What You Need to Know"
 description: "Wondering if you can run your driving school with free software? Here's what's available and when to pay for a proper solution."
+image: /images/blog-software.jpg
 date: "2025-12-27"
 tags: ["free software", "driving school software", "budget"]
 author: "MyDriveSchool Team"

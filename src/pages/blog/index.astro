@@ -1,55 +1,117 @@
 ---
+// Blog Index - /blog/
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
+// Get all blog posts, sorted by date
 const now = new Date();
 const posts = (await getCollection('blog'))
   .filter(post => new Date(post.data.date) <= now)
   .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 
+// Get unique tags
 const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))];
 ---
 
-<BaseLayout 
-  title="Blog" 
-  description="Pet care business insights, software guides, and industry tips for kennel owners, daycare managers, and cattery operators."
+<BaseLayout
+  title="Blog"
+  description="Driving school business insights, scheduling tips, and industry guides for driving instructors and school owners."
 >
+  <!-- Hero -->
   <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
     <div class="container-custom">
       <div class="max-w-3xl">
         <span class="badge-primary mb-4">Resources</span>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">PetCare Blog</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">MyDriveSchool Blog</h1>
         <p class="text-xl text-gray-300">
-          Insights, guides, and tips for running a successful pet care business.
+          Insights, guides, and tips for running a successful driving school. From scheduling optimization to student retention strategies.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- Tags Filter -->
+  <section class="bg-gray-50 border-b border-gray-100 py-4">
+    <div class="container-custom">
+      <div class="flex flex-wrap gap-2">
+        <a href="/blog/" class="badge-primary">All Posts</a>
+        {allTags.map(tag => (
+          <a
+            href={`/blog/tag/${tag}/`}
+            class="badge bg-white border border-gray-200 text-gray-600 hover:border-brand-red hover:text-brand-red transition-colors"
+          >
+            {tag}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
   <section class="section bg-white">
     <div class="container-custom">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
           <article class="card group">
             <a href={`/blog/${post.slug}/`} class="block">
+              {post.data.image && (
+                <div class="aspect-video overflow-hidden rounded-lg mb-4 -mx-6 -mt-6">
+                  <img
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div class="flex flex-wrap gap-2 mb-3">
+                {post.data.tags?.slice(0, 2).map(tag => (
+                  <span class="text-xs font-medium text-brand-red uppercase tracking-wider">
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <h2 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-red transition-colors">
                 {post.data.title}
               </h2>
               <p class="text-gray-600 text-sm line-clamp-2 mb-4">
                 {post.data.description}
               </p>
-              <time class="text-sm text-gray-500" datetime={post.data.date}>
-                {new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-              </time>
+              <div class="flex items-center justify-between text-sm text-gray-500">
+                <time datetime={post.data.date}>
+                  {new Date(post.data.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+                <span class="text-brand-red font-medium group-hover:underline">
+                  Read more →
+                </span>
+              </div>
             </a>
           </article>
         ))}
       </div>
+
       {posts.length === 0 && (
         <div class="text-center py-12">
           <p class="text-gray-500">No blog posts yet. Check back soon!</p>
         </div>
       )}
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="section bg-brand-red-light">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold text-brand-navy mb-4">Stay Updated</h2>
+      <p class="text-gray-600 mb-6 max-w-xl mx-auto">
+        Get the latest driving school business tips, scheduling guides, and industry insights delivered to your inbox.
+      </p>
+      <a href="/contact/" class="btn-primary">
+        Subscribe to Updates
+      </a>
     </div>
   </section>
 </BaseLayout>

@@ -1,6 +1,7 @@
 ---
 title: "Best Driving School Software in 2025: Complete Comparison"
 description: "Compare the top driving school software options. Features, pricing, and honest reviews to help you choose the right platform."
+image: /images/blog-software.jpg
 date: "2025-12-27"
 tags: ["software comparison", "driving school"]
 author: "MyDriveSchool Team"

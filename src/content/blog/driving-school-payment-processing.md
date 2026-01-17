@@ -1,6 +1,7 @@
 ---
 title: "Driving School Payment Processing: Options and Best Practices"
 description: "Make it easy for students to pay and improve your cash flow. Complete guide to payment processing options for driving schools."
+image: /images/blog-payment.jpg
 date: "2026-01-09"
 tags: ["payment processing", "driving school software", "cash flow"]
 author: "MyDriveSchool Team"

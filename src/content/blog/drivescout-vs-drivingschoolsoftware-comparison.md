@@ -1,6 +1,7 @@
 ---
 title: "DriveScout vs DrivingSchoolSoftware.com: Which Is Better?"
 description: "Honest comparison of DriveScout and DrivingSchoolSoftware.com. Features, pricing, pros and cons to help you choose the right platform."
+image: /images/blog-comparison.jpg
 date: "2025-12-27"
 tags: ["software comparison", "DriveScout", "driving school software"]
 author: "MyDriveSchool Team"
