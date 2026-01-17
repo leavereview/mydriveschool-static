@@ -59,8 +59,11 @@ const faqSchema = {
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
-    <div class="container-custom">
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url('/images/hero-driving.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+    <div class="container-custom relative">
       <div class="max-w-3xl">
         <span class="inline-block bg-brand-red/20 text-brand-red-light px-3 py-1 rounded-full text-sm mb-4">Ultimate Guide</span>
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Driving School Scheduling Software</h1>
