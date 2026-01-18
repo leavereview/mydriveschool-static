@@ -30,7 +30,7 @@ jobs:
         with:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
-          REMOTE_USER: deploy
+          REMOTE_USER: ubuntu
           SOURCE: dist/
           TARGET: /var/www/mydriveschool.software/
           ARGS: "-rltDvz --delete"
