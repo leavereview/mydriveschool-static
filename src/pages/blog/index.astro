@@ -9,8 +9,6 @@ const posts = (await getCollection('blog'))
   .filter(post => new Date(post.data.date) <= now)
   .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 
-// Get unique tags
-const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))];
 ---
 
 <BaseLayout
@@ -26,23 +24,6 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))];
         <p class="text-xl text-gray-300">
           Insights, guides, and tips for running a successful driving school. From scheduling optimization to student retention strategies.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tags Filter -->
-  <section class="bg-gray-50 border-b border-gray-100 py-4">
-    <div class="container-custom">
-      <div class="flex flex-wrap gap-2">
-        <a href="/blog/" class="badge-primary">All Posts</a>
-        {allTags.map(tag => (
-          <a
-            href={`/blog/tag/${tag}/`}
-            class="badge bg-white border border-gray-200 text-gray-600 hover:border-brand-red hover:text-brand-red transition-colors"
-          >
-            {tag}
-          </a>
-        ))}
       </div>
     </div>
   </section>
