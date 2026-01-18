@@ -1,6 +1,7 @@
 ---
 // Blog Post Template - /blog/[slug]
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -54,6 +55,17 @@ const relatedPosts = allPosts
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   )}
   <article>
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-100 py-3">
+      <div class="container-custom">
+        <Breadcrumbs items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog/' },
+          { label: post.data.title }
+        ]} />
+      </div>
+    </div>
+
     <!-- Hero -->
     <header class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
       <div class="container-custom">
@@ -61,7 +73,7 @@ const relatedPosts = allPosts
           <div class="flex flex-wrap gap-2 mb-4">
             {post.data.tags?.map(tag => (
               <a
-                href={`/blog/tag/${tag}/`}
+                href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
                 class="badge bg-white/10 text-white hover:bg-white/20 transition-colors"
               >
                 {tag}

@@ -11,6 +11,7 @@ interface Props {
   publishedDate?: string;
   modifiedDate?: string;
   noindex?: boolean;
+  author?: string;
 }
 
 const {
@@ -20,7 +21,8 @@ const {
   type = 'website',
   publishedDate,
   modifiedDate,
-  noindex = false
+  noindex = false,
+  author = 'John Powell'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -59,7 +61,17 @@ const schemaOrg = {
         "@id": "https://mydriveschool.software/#website"
       },
       ...(publishedDate && { "datePublished": publishedDate }),
-      ...(modifiedDate && { "dateModified": modifiedDate })
+      ...(modifiedDate && { "dateModified": modifiedDate }),
+      ...(type === 'article' && {
+        "author": {
+          "@type": "Person",
+          "name": author,
+          "url": "https://mydriveschool.software/about/"
+        },
+        "publisher": {
+          "@id": "https://mydriveschool.software/#organization"
+        }
+      })
     }
   ]
 };

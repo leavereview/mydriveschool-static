@@ -1,0 +1,49 @@
+---
+// Breadcrumbs.astro - Navigation breadcrumbs with schema.org markup
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  class?: string;
+}
+
+const { items, class: className = '' } = Astro.props;
+
+// Generate schema.org BreadcrumbList
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.label,
+    ...(item.href && { "item": new URL(item.href, Astro.site).href })
+  }))
+};
+---
+
+<nav aria-label="Breadcrumb" class={`text-sm ${className}`}>
+  <ol class="flex flex-wrap items-center gap-2">
+    {items.map((item, index) => (
+      <li class="flex items-center">
+        {index > 0 && (
+          <span class="text-gray-400 mx-2">/</span>
+        )}
+        {item.href && index < items.length - 1 ? (
+          <a href={item.href} class="text-gray-500 hover:text-brand-red transition-colors">
+            {item.label}
+          </a>
+        ) : (
+          <span class={index === items.length - 1 ? 'text-gray-700 font-medium' : 'text-gray-500'}>
+            {item.label}
+          </span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
