@@ -35,8 +35,8 @@ const posts = allPosts
 // Format tag for display
 const displayTag = tag.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
-// noindex sparse tags (fewer than 3 posts) to avoid thin content penalties
-const shouldNoindex = posts.length < 3;
+// noindex sparse tags (fewer than 5 posts) to avoid thin content penalties
+const shouldNoindex = posts.length < 5;
 
 // Tag descriptions for SEO
 const tagDescriptions: Record<string, string> = {
@@ -74,8 +74,14 @@ const description = tagDescriptions[tag] || `Explore ${posts.length} articles ab
         <h1 class="text-3xl md:text-5xl font-bold mb-4">
           {displayTag}
         </h1>
-        <p class="text-xl text-gray-300">
+        <p class="text-xl text-gray-300 mb-4">
           {posts.length} article{posts.length !== 1 ? 's' : ''} tagged with "{tag}"
+        </p>
+        <p class="text-gray-400 mb-4">
+          {description}
+        </p>
+        <p class="text-gray-400">
+          Whether you're an independent instructor building your client base or managing a multi-instructor school, our {tag.toLowerCase()} resources offer proven strategies and practical tips. Browse our curated collection below to find actionable insights for your driving school business.
         </p>
       </div>
     </div>

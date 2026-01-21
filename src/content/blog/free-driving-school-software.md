@@ -1,5 +1,5 @@
 ---
-title: "Free Software Options for Driving Schools"
+title: "Free Software for Driving Schools"
 description: "Wondering if you can run your driving school with free software? Here's what's available and when to pay for a proper solution."
 image: /images/blog-software.jpg
 date: "2025-12-27"
