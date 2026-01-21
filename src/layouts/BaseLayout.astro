@@ -8,6 +8,7 @@ interface Props {
   description?: string;
   image?: string;
   type?: 'website' | 'article';
+  schemaType?: 'Article' | 'BlogPosting' | 'WebPage' | 'CollectionPage';
   publishedDate?: string;
   modifiedDate?: string;
   noindex?: boolean;
@@ -19,11 +20,15 @@ const {
   description = 'MyDriveSchool.Software - The complete driving school management platform. Scheduling, student management, instructor allocation, and online booking.',
   image = '/images/og-default.jpg',
   type = 'website',
+  schemaType,
   publishedDate,
   modifiedDate,
   noindex = false,
   author = 'John Powell'
 } = Astro.props;
+
+// Determine the schema type to use
+const resolvedSchemaType = schemaType || (type === 'article' ? 'Article' : 'WebPage');
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const fullTitle = title === 'Home' ? 'MyDriveSchool.Software - Driving School Management Software' : `${title} | MyDriveSchool.Software`;
@@ -52,7 +57,7 @@ const schemaOrg = {
       }
     },
     {
-      "@type": type === 'article' ? 'Article' : 'WebPage',
+      "@type": resolvedSchemaType,
       "@id": canonicalURL.href,
       "url": canonicalURL.href,
       "name": title,
@@ -62,7 +67,7 @@ const schemaOrg = {
       },
       ...(publishedDate && { "datePublished": publishedDate }),
       ...(modifiedDate && { "dateModified": modifiedDate }),
-      ...(type === 'article' && {
+      ...((resolvedSchemaType === 'Article' || resolvedSchemaType === 'BlogPosting') && {
         "author": {
           "@type": "Person",
           "name": author,

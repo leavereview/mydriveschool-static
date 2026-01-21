@@ -29,8 +29,13 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 
   <section class="section bg-white">
     <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="sr-only">Pricing Plans</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-brand-navy mb-4">Choose the Right Plan for Your Driving School</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Whether you're an independent ADI or managing a multi-instructor driving school, we have a plan that fits your needs. All plans include our core scheduling, booking, and student management features with no hidden fees or long-term contracts.
+          </p>
+        </div>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="card border-2 border-gray-200">
             <h3 class="text-xl font-bold text-brand-navy mb-2">Solo</h3>
@@ -68,6 +73,60 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
               <li>✓ Dedicated support</li>
             </ul>
             <a href="/contact/" class="btn-outline w-full">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-8 text-center">What's Included in Every Plan</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">Online Booking System</h3>
+            <p class="text-gray-600 text-sm">Let students book lessons directly from your website. Reduce phone calls and administrative work with 24/7 self-service booking.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">Automated Reminders</h3>
+            <p class="text-gray-600 text-sm">Reduce no-shows with automatic SMS and email reminders. Customise timing and message content to match your preferences.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">Student Progress Tracking</h3>
+            <p class="text-gray-600 text-sm">Track each student's journey from first lesson to test day. Record skills covered, areas for improvement, and test readiness.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">Calendar Management</h3>
+            <p class="text-gray-600 text-sm">View and manage your schedule at a glance. Block out time, set recurring availability, and sync with external calendars.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">Is there a free trial?</h3>
+            <p class="text-gray-600 text-sm">Yes, all plans include a 14-day free trial with full access to all features. No credit card required to start.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">Can I change plans later?</h3>
+            <p class="text-gray-600 text-sm">Absolutely. Upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">Is there a contract?</h3>
+            <p class="text-gray-600 text-sm">No long-term contracts. All plans are month-to-month and you can cancel anytime with no cancellation fees.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-bold text-brand-navy mb-2">What payment methods do you accept?</h3>
+            <p class="text-gray-600 text-sm">We accept all major credit and debit cards. Payments are processed securely through Stripe.</p>
           </div>
         </div>
       </div>
