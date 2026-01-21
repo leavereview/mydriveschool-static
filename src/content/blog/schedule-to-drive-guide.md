@@ -2,7 +2,7 @@
 title: "How to Schedule Driving Lessons"
 description: "Master the art of scheduling driving lessons. Tips for students on booking lessons and for instructors on managing efficient schedules."
 image: /images/blog-scheduling.jpg
-date: "2026-01-18"
+date: "2026-02-06"
 tags: ["Scheduling"]
 author: "MyDriveSchool Team"
 ---

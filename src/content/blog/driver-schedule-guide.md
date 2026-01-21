@@ -2,7 +2,7 @@
 title: "Driver Schedule Guide"
 description: "Learn to create efficient instructor schedules that maximize bookings, reduce gaps, and keep students and instructors happy."
 image: /images/blog-scheduling.jpg
-date: "2026-01-18"
+date: "2026-01-23"
 tags: ["Scheduling", "Business"]
 author: "MyDriveSchool Team"
 ---

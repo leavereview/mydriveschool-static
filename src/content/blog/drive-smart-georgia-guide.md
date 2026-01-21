@@ -2,7 +2,7 @@
 title: "Drive Smart Georgia Guide"
 description: "Complete guide to Georgia's driver education requirements and the Drive Smart Georgia program. Essential information for driving schools and instructors."
 image: /images/blog-learner.jpg
-date: "2026-01-18"
+date: "2026-01-23"
 tags: ["Compliance"]
 author: "MyDriveSchool Team"
 ---
