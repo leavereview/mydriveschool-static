@@ -1,9 +1,9 @@
 ---
-title: "Why Student Progress Tracking Improves Pass Rates"
+title: "Student Progress Tracking Guide"
 description: "How tracking student progress leads to better outcomes and higher pass rates for your driving school."
 image: /images/blog-progress.jpg
 date: "2025-12-20"
-tags: ["teaching tips", "driving school"]
+tags: ["Student Management"]
 author: "MyDriveSchool Team"
 ---
 

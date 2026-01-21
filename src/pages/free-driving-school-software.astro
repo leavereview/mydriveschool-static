@@ -1,0 +1,635 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const faqs = [
+  {
+    question: "Is there truly free driving school software?",
+    answer: "Yes, some providers offer genuinely free plans with basic features. However, most free options have limitations on student numbers, features, or storage. Many driving instructors start with a free plan and upgrade as their business grows."
+  },
+  {
+    question: "What features are typically included in free driving school software?",
+    answer: "Free plans usually include basic scheduling, a limited number of student profiles, simple calendar views, and manual reminders. Premium features like online booking, payment processing, progress tracking, and automated SMS reminders typically require a paid plan."
+  },
+  {
+    question: "Can I run a driving school on free software alone?",
+    answer: "For a solo instructor with a small student base, free software might suffice initially. However, as you grow beyond 10-20 active students, the limitations of free software often create more work than they save. Most successful instructors find that investing in proper software pays for itself through time savings and reduced no-shows."
+  },
+  {
+    question: "What's the difference between free trials and free plans?",
+    answer: "Free trials give you full access to all features for a limited time (usually 14-30 days), after which you must pay or lose access. Free plans offer permanent access to basic features, with the option to upgrade for additional functionality."
+  },
+  {
+    question: "Is free driving school software secure?",
+    answer: "Security varies significantly between providers. Free software from established companies typically maintains good security standards. However, some free tools may lack proper data encryption or GDPR compliance. Always verify the provider's security credentials before storing student data."
+  },
+  {
+    question: "Can I upgrade from free to paid without losing data?",
+    answer: "With reputable software providers, yes. Your student records, lesson history, and settings should transfer seamlessly when you upgrade. This is one reason to choose free plans from established companies rather than obscure free-only tools."
+  }
+];
+
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Free Driving School Software: Complete Guide for ADIs",
+  "description": "Comprehensive guide to free driving school software options. Compare free plans, trials, and freemium models to find the right solution for your driving instruction business.",
+  "author": {
+    "@type": "Organization",
+    "name": "MyDriveSchool.Software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyDriveSchool.Software"
+  },
+  "datePublished": "2026-01-18",
+  "dateModified": "2026-01-18"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+---
+
+<BaseLayout
+  title="Free Driving School Software Guide"
+  description="Find the best free driving school software for your business. Compare free plans, trials, and freemium options. Honest guide for ADIs and driving instructors."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container-custom">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'Free Driving School Software' }
+      ]} />
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: url('/images/hero-driving.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1 bg-brand-red/20 text-brand-red-light rounded-full text-sm font-medium mb-4">Free Software Guide</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Free Driving School Software: What's Actually Available?</h1>
+        <p class="text-xl text-gray-300 mb-8">
+          Searching for free driving school software? This honest guide covers what's genuinely free, what has hidden costs, and when it makes sense to pay for better tools.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact/" class="btn-primary text-lg px-8 py-4">Try Free for 14 Days</a>
+          <a href="#comparison" class="btn-secondary text-lg px-8 py-4">Compare Options</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-8 bg-white border-b border-gray-100">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl font-bold text-brand-red">£0</div>
+          <div class="text-sm text-gray-600">Starting Cost</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-brand-red">14 Days</div>
+          <div class="text-sm text-gray-600">Typical Free Trial</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-brand-red">5-10</div>
+          <div class="text-sm text-gray-600">Free Plan Student Limit</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-brand-red">60%</div>
+          <div class="text-sm text-gray-600">ADIs Start with Free Tools</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-4">In This Guide</h2>
+        <nav class="bg-white rounded-xl p-6 shadow-sm">
+          <ul class="grid md:grid-cols-2 gap-3">
+            <li><a href="#types" class="text-brand-red hover:underline">Types of Free Software Options</a></li>
+            <li><a href="#comparison" class="text-brand-red hover:underline">Feature Comparison</a></li>
+            <li><a href="#free-vs-paid" class="text-brand-red hover:underline">Free vs Paid: Real Costs</a></li>
+            <li><a href="#limitations" class="text-brand-red hover:underline">Common Limitations</a></li>
+            <li><a href="#when-upgrade" class="text-brand-red hover:underline">When to Upgrade</a></li>
+            <li><a href="#choosing" class="text-brand-red hover:underline">How to Choose</a></li>
+            <li><a href="#alternatives" class="text-brand-red hover:underline">DIY Alternatives</a></li>
+            <li><a href="#faqs" class="text-brand-red hover:underline">FAQs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Introduction -->
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-600">
+            When you're starting out as a driving instructor, every penny counts. The idea of free <a href="/driving-school-software/" class="text-brand-red hover:underline">driving school software</a> is appealing—but what do you actually get for nothing? And more importantly, what are you giving up?
+          </p>
+          <p class="text-gray-600">
+            This guide cuts through the marketing speak to give you an honest look at free driving school software options, their limitations, and when it makes sense to invest in paid tools instead.
+          </p>
+        </div>
+
+        <!-- Types of Free Software -->
+        <div id="types" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Types of Free Driving School Software</h2>
+
+          <div class="space-y-8">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-brand-navy mb-3">1. Genuinely Free Plans (Freemium)</h3>
+              <p class="text-gray-600 mb-4">
+                Some software providers offer a permanently free tier with basic features. These plans typically include:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Limited student capacity (typically 5-10)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Basic scheduling calendar</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Manual data entry</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">No online booking or payments</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">No automated reminders</span>
+                </li>
+              </ul>
+              <p class="text-sm text-gray-500 mt-4">
+                <strong>Best for:</strong> Brand new instructors testing the waters, or those with very few regular students.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-brand-navy mb-3">2. Free Trials (Full Features, Limited Time)</h3>
+              <p class="text-gray-600 mb-4">
+                Most professional driving school software offers free trials, typically 14-30 days with full feature access:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">All features unlocked</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Unlimited students during trial</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Online booking and payments</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Automated SMS/email reminders</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Requires payment after trial period</span>
+                </li>
+              </ul>
+              <p class="text-sm text-gray-500 mt-4">
+                <strong>Best for:</strong> Serious instructors ready to commit who want to test drive the full system first.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-brand-navy mb-3">3. Open Source Software</h3>
+              <p class="text-gray-600 mb-4">
+                Free to use but requires technical knowledge to set up and maintain:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">No licensing fees</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Full customisation possible</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Requires web hosting (cost involved)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Technical skills needed</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">No support or updates guaranteed</span>
+                </li>
+              </ul>
+              <p class="text-sm text-gray-500 mt-4">
+                <strong>Best for:</strong> Technically minded instructors or those with IT support available.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Comparison -->
+        <div id="comparison" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Feature Comparison: Free vs Paid</h2>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-brand-navy text-white">
+                  <th class="p-4 text-left">Feature</th>
+                  <th class="p-4 text-center">Free Plans</th>
+                  <th class="p-4 text-center">Free Trials</th>
+                  <th class="p-4 text-center">Paid Plans</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="p-4 font-medium">Student Limit</td>
+                  <td class="p-4 text-center">5-10</td>
+                  <td class="p-4 text-center">Unlimited</td>
+                  <td class="p-4 text-center">Unlimited</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="p-4 font-medium">Online Booking</td>
+                  <td class="p-4 text-center text-red-500">✗</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-medium">Payment Processing</td>
+                  <td class="p-4 text-center text-red-500">✗</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="p-4 font-medium">SMS Reminders</td>
+                  <td class="p-4 text-center text-red-500">✗</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-medium">Progress Tracking</td>
+                  <td class="p-4 text-center">Basic</td>
+                  <td class="p-4 text-center">Full</td>
+                  <td class="p-4 text-center">Full</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="p-4 font-medium">Student Portal</td>
+                  <td class="p-4 text-center text-red-500">✗</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-medium">Reporting</td>
+                  <td class="p-4 text-center text-red-500">✗</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="p-4 font-medium">Support</td>
+                  <td class="p-4 text-center">Email only</td>
+                  <td class="p-4 text-center">Full</td>
+                  <td class="p-4 text-center">Priority</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Free vs Paid Real Costs -->
+        <div id="free-vs-paid" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">The Real Cost of "Free" Software</h2>
+
+          <p class="text-gray-600 mb-6">
+            Free software has hidden costs that aren't immediately obvious. Here's what you're actually trading when you choose free over paid:
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-red-50 rounded-xl p-6 border border-red-100">
+              <h3 class="text-xl font-bold text-red-800 mb-4">Hidden Costs of Free</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-red-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>Time spent on admin:</strong> Manual data entry, phone calls for bookings, chasing payments—easily 5+ hours/week</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>Lost revenue from no-shows:</strong> Without automated reminders, no-show rates are 15-25% higher</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>Missed bookings:</strong> Students who can't book online often go elsewhere</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>Unprofessional image:</strong> Basic tools can make your business look amateur</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-green-50 rounded-xl p-6 border border-green-100">
+              <h3 class="text-xl font-bold text-green-800 mb-4">Value of Paid Software</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>Time saved:</strong> Automation saves 5-10 hours per week on admin</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>Reduced no-shows:</strong> Automated reminders cut no-shows by 50-80%</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>24/7 booking:</strong> Students book when convenient—including evenings</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold">•</span>
+                  <span class="text-gray-700"><strong>Professional image:</strong> Online booking and portals build trust</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-brand-navy text-white rounded-xl p-6 mt-8">
+            <h3 class="text-xl font-bold mb-3">Quick Calculation</h3>
+            <p class="text-gray-300 mb-4">
+              If your hourly rate is £35 and free software costs you 5 extra hours of admin per week, that's £175/week or £700/month in lost teaching time. Most paid software costs £30-50/month.
+            </p>
+            <p class="font-bold text-brand-red-light">
+              The maths rarely favours free software once you have more than a handful of students.
+            </p>
+          </div>
+        </div>
+
+        <!-- Common Limitations -->
+        <div id="limitations" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Common Limitations of Free Plans</h2>
+
+          <div class="space-y-6">
+            <div class="border-l-4 border-amber-500 pl-6 py-2">
+              <h3 class="font-bold text-brand-navy mb-2">Student Limits</h3>
+              <p class="text-gray-600">Most free plans cap active students at 5-10. Once you exceed this, you'll need to delete old students to add new ones—losing valuable lesson history and progress records.</p>
+            </div>
+
+            <div class="border-l-4 border-amber-500 pl-6 py-2">
+              <h3 class="font-bold text-brand-navy mb-2">No Online Booking</h3>
+              <p class="text-gray-600">Students can't book themselves. This means phone calls, WhatsApp messages, and back-and-forth to find times that work. Many potential students will simply book with a competitor who offers online booking.</p>
+            </div>
+
+            <div class="border-l-4 border-amber-500 pl-6 py-2">
+              <h3 class="font-bold text-brand-navy mb-2">Manual Reminders</h3>
+              <p class="text-gray-600">You'll need to send your own text or email reminders before lessons. Miss one, and you risk a no-show—costing you an hour of income plus wasted travel time.</p>
+            </div>
+
+            <div class="border-l-4 border-amber-500 pl-6 py-2">
+              <h3 class="font-bold text-brand-navy mb-2">Limited Support</h3>
+              <p class="text-gray-600">Free plan users typically get email-only support with slow response times. If something breaks on a busy Monday morning, you're on your own until someone gets around to your ticket.</p>
+            </div>
+
+            <div class="border-l-4 border-amber-500 pl-6 py-2">
+              <h3 class="font-bold text-brand-navy mb-2">No Payment Processing</h3>
+              <p class="text-gray-600">Students can't pay online or buy lesson packages through the system. You're back to bank transfers, cash, or third-party payment apps—creating more admin work.</p>
+            </div>
+
+            <div class="border-l-4 border-amber-500 pl-6 py-2">
+              <h3 class="font-bold text-brand-navy mb-2">Branding & Ads</h3>
+              <p class="text-gray-600">Many free plans include the software provider's branding on student-facing pages, or may show ads. This can undermine your professional image.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- When to Upgrade -->
+        <div id="when-upgrade" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">When Should You Upgrade from Free?</h2>
+
+          <p class="text-gray-600 mb-6">
+            Free software makes sense when you're just starting out. But there are clear signals that it's time to invest in proper tools:
+          </p>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-brand-navy mb-4">Signs It's Time to Upgrade</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-red text-white rounded-full flex items-center justify-center font-bold">1</div>
+                <div>
+                  <strong class="text-brand-navy">You have more than 10 active students</strong>
+                  <p class="text-gray-600 text-sm">Once you hit this threshold, the admin time saved by proper software easily covers the cost.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-red text-white rounded-full flex items-center justify-center font-bold">2</div>
+                <div>
+                  <strong class="text-brand-navy">You're losing students to no-shows</strong>
+                  <p class="text-gray-600 text-sm">One prevented no-show per month typically covers a month's software subscription.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-red text-white rounded-full flex items-center justify-center font-bold">3</div>
+                <div>
+                  <strong class="text-brand-navy">Evening admin is eating into family time</strong>
+                  <p class="text-gray-600 text-sm">If you're spending evenings coordinating lessons instead of relaxing, automation is worth the investment.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-red text-white rounded-full flex items-center justify-center font-bold">4</div>
+                <div>
+                  <strong class="text-brand-navy">Students are asking for online booking</strong>
+                  <p class="text-gray-600 text-sm">Modern students expect to book online. If they're asking, they might go elsewhere if you can't provide it.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-brand-red text-white rounded-full flex items-center justify-center font-bold">5</div>
+                <div>
+                  <strong class="text-brand-navy">You're ready to grow</strong>
+                  <p class="text-gray-600 text-sm">Scaling a driving school on free tools is nearly impossible. Paid software provides the infrastructure for growth.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- How to Choose -->
+        <div id="choosing" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">How to Choose the Right Software</h2>
+
+          <p class="text-gray-600 mb-6">
+            Whether you start with free or go straight to paid, here's what to evaluate:
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Must-Have Features</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Easy-to-use scheduling calendar</li>
+                <li>• Student contact management</li>
+                <li>• Mobile-friendly interface</li>
+                <li>• Secure data storage</li>
+                <li>• GDPR compliance</li>
+              </ul>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Nice-to-Have Features</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Online booking portal</li>
+                <li>• Automated reminders</li>
+                <li>• Payment processing</li>
+                <li>• Progress tracking</li>
+                <li>• Student portal/app</li>
+              </ul>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Questions to Ask</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• What happens to my data if I cancel?</li>
+                <li>• Can I export my student records?</li>
+                <li>• Is there a contract or can I cancel anytime?</li>
+                <li>• What support is included?</li>
+                <li>• Are updates included in the price?</li>
+              </ul>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Red Flags to Watch</h3>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Long-term contracts required upfront</li>
+                <li>• Hidden fees for essential features</li>
+                <li>• No way to export your data</li>
+                <li>• Poor or non-existent mobile experience</li>
+                <li>• No security certifications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIY Alternatives -->
+        <div id="alternatives" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">DIY Alternatives to Dedicated Software</h2>
+
+          <p class="text-gray-600 mb-6">
+            Some instructors piece together free tools instead of using dedicated driving school software. Here's an honest look at this approach:
+          </p>
+
+          <div class="space-y-4">
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h3 class="font-bold text-brand-navy">Google Calendar + Spreadsheets</h3>
+              <p class="text-gray-600 text-sm mb-2">Free, but students can't book themselves. No reminders, no progress tracking, no payments.</p>
+              <div class="flex gap-4 text-sm">
+                <span class="text-green-600">Cost: Free</span>
+                <span class="text-red-600">Time cost: High</span>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h3 class="font-bold text-brand-navy">Calendly + Notion</h3>
+              <p class="text-gray-600 text-sm mb-2">Basic online booking with Calendly free plan, student notes in Notion. Limited to 1 event type on free Calendly.</p>
+              <div class="flex gap-4 text-sm">
+                <span class="text-green-600">Cost: Free (limited)</span>
+                <span class="text-amber-600">Time cost: Medium</span>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h3 class="font-bold text-brand-navy">Square Appointments</h3>
+              <p class="text-gray-600 text-sm mb-2">Free plan includes online booking and payments. Not designed for driving schools, so no progress tracking or lesson-specific features.</p>
+              <div class="flex gap-4 text-sm">
+                <span class="text-green-600">Cost: Free</span>
+                <span class="text-amber-600">Functionality: Limited</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-600 mt-6">
+            These workarounds can function for a few students, but they don't scale. You'll spend more time maintaining the system than a dedicated solution would cost.
+          </p>
+        </div>
+
+        <!-- FAQs -->
+        <div id="faqs" class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6">
+            {faqs.map((faq) => (
+              <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-brand-navy mb-2">{faq.question}</h3>
+                <p class="text-gray-600">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Related Resources -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">Related Resources</h2>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="/driving-school-software/" class="block bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+              <h3 class="font-bold text-brand-navy mb-2">Driving School Software</h3>
+              <p class="text-gray-600 text-sm">Complete guide to driving school software features and benefits.</p>
+            </a>
+            <a href="/blog/" class="block bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+              <h3 class="font-bold text-brand-navy mb-2">Driving School Blog</h3>
+              <p class="text-gray-600 text-sm">Tips, guides, and resources for driving instructors.</p>
+            </a>
+            <a href="/pricing/" class="block bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+              <h3 class="font-bold text-brand-navy mb-2">Pricing Plans</h3>
+              <p class="text-gray-600 text-sm">View our affordable pricing options for every business size.</p>
+            </a>
+            <a href="/about/" class="block bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+              <h3 class="font-bold text-brand-navy mb-2">About Us</h3>
+              <p class="text-gray-600 text-sm">Learn about our mission to help driving instructors succeed.</p>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-to-r from-brand-red to-brand-red-dark text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Try Before You Buy—No Card Required</h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Not ready to commit? Our 14-day free trial gives you full access to every feature. See for yourself why hundreds of instructors have made the switch.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Free Trial</a>
+        <a href="/pricing/" class="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4">View Pricing</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

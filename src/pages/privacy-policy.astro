@@ -1,9 +1,20 @@
 ---
 // Privacy Policy Page
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 
 <BaseLayout title="Privacy Policy" description="Privacy Policy for MyDriveSchool.Software. Learn how we collect, use, and protect your personal information when using our driving school management platform.">
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container-custom">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'Privacy Policy' }
+      ]} />
+    </div>
+  </div>
+
   <section class="section bg-white">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">

@@ -1,9 +1,20 @@
 ---
 // Terms of Service Page
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 
 <BaseLayout title="Terms of Service" description="Terms of Service for MyDriveSchool.Software. Read our terms and conditions for using our driving school management platform.">
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container-custom">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'Terms of Service' }
+      ]} />
+    </div>
+  </div>
+
   <section class="section bg-white">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">

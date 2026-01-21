@@ -1,9 +1,9 @@
 ---
-title: "How to Choose Driving School Scheduling Software"
+title: "Driving School Scheduling Software"
 description: "Step-by-step guide to choosing the right scheduling software for your driving school. Features to look for, red flags to avoid, and questions to ask."
 image: /images/blog-scheduling.jpg
 date: "2025-12-27"
-tags: ["scheduling software", "driving school software", "buying guide"]
+tags: ["Software", "Scheduling"]
 author: "MyDriveSchool Team"
 ---
 

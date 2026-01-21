@@ -1,9 +1,9 @@
 ---
-title: "Student Management for Driving Schools: Complete Guide"
+title: "Student Management for Driving Schools"
 description: "Learn how to effectively manage student data, track progress, and improve outcomes at your driving school with proper student management systems."
 image: /images/blog-student.jpg
 date: "2026-01-13"
-tags: ["student management", "driving school software", "progress tracking"]
+tags: ["Software", "Student Management"]
 author: "MyDriveSchool Team"
 ---
 

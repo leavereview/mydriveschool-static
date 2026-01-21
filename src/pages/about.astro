@@ -1,6 +1,7 @@
 ---
 // About Page - EEAT Optimized for Google Trust
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 // Schema.org structured data for EEAT
 const personSchema = {
@@ -92,12 +93,22 @@ const testimonials = [
 ---
 
 <BaseLayout
-  title="About John Powell - Founder & SaaS Entrepreneur"
+  title="About John Powell"
   description="Learn about John Powell, founder of MyDriveSchool.Software. With a First Class Honours in Software Engineering and proven success building and selling RevelationPets.com, John brings 20 years of software business experience to driving school management."
 >
   <!-- Additional Schema.org markup -->
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)} is:inline />
   <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} is:inline />
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container-custom">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'About' }
+      ]} />
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16 md:py-24">

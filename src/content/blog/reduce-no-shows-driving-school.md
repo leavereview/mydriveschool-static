@@ -1,9 +1,9 @@
 ---
-title: "How to Reduce No-Shows at Your Driving School"
+title: "Reduce No-Shows at Your School"
 description: "Practical strategies to reduce lesson cancellations and no-shows. Includes deposit policies and automation tips."
 image: /images/blog-scheduling.jpg
 date: "2025-12-27"
-tags: ["business tips", "driving school"]
+tags: ["Business"]
 author: "MyDriveSchool Team"
 ---
 

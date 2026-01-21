@@ -1,9 +1,20 @@
 ---
 // Contact Page
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 
 <BaseLayout title="Contact Us" description="Get in touch with MyDriveSchool Software. Request a demo, ask questions, or learn how we can help streamline your driving school management.">
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container-custom">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'Contact' }
+      ]} />
+    </div>
+  </div>
+
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
     <div class="container-custom">
@@ -186,7 +197,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
           <div class="grid sm:grid-cols-2 gap-6 mt-6 pt-6 border-t border-gray-200">
             <div>
-              <h4 class="font-semibold text-brand-navy mb-2">Company Details</h4>
+              <h3 class="font-semibold text-brand-navy mb-2">Company Details</h3>
               <p class="text-sm text-gray-600">
                 LEAVE.REVIEW LTD<br />
                 Company No: 05408918<br />
@@ -194,7 +205,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </p>
             </div>
             <div>
-              <h4 class="font-semibold text-brand-navy mb-2">Registered Office</h4>
+              <h3 class="font-semibold text-brand-navy mb-2">Registered Office</h3>
               <p class="text-sm text-gray-600">
                 124 City Road<br />
                 London, England<br />

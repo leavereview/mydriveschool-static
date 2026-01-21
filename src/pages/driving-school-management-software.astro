@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 const faqs = [
   {
@@ -52,11 +53,21 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title="Driving School Management Software: Complete Guide (2026)"
+  title="Management Software Guide (2026)"
   description="Complete guide to management software for driving schools. Student records, payments, instructor management, and business reporting in one platform."
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container-custom">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'Management Software' }
+      ]} />
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
