@@ -1,6 +1,6 @@
 ---
 title: "Starting a Driving School Guide"
-description: "Learn how to start a driving school business. Licensing requirements, startup costs, vehicle considerations, marketing strategies, and building your client base."
+description: "How to start a driving school business. Covers licensing, startup costs, vehicles, marketing, and building your client base."
 image: /images/blog-office.jpg
 date: "2026-01-18"
 tags: ["Startup", "Business"]
