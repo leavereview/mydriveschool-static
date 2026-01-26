@@ -1,9 +1,98 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+// Pricing tiers
+const pricingTiers = [
+  { name: 'Solo Plan', description: 'For independent ADIs', monthlyPrice: 29, popular: false },
+  { name: 'School Plan', description: 'For driving schools', monthlyPrice: 79, popular: true }
+];
+
+// Offer schemas
+const offerSchemas = pricingTiers.map((tier) => ({
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "@id": `https://mydriveschool.software/pricing/#${tier.name.toLowerCase().replace(/\s+/g, '-')}`,
+  "name": tier.name,
+  "description": `${tier.description}. All features included.`,
+  "price": tier.monthlyPrice,
+  "priceCurrency": "GBP",
+  "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": tier.monthlyPrice,
+    "priceCurrency": "GBP",
+    "unitText": "month",
+    "billingIncrement": 1
+  },
+  "priceValidUntil": "2026-12-31",
+  "availability": "https://schema.org/InStock",
+  "url": "https://mydriveschool.software/contact/",
+  "seller": {
+    "@type": "Organization",
+    "name": "MyDriveSchool.Software"
+  },
+  "itemOffered": {
+    "@type": "SoftwareApplication",
+    "name": "MyDriveSchool.Software",
+    "applicationCategory": "BusinessApplication"
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Free Trial",
+      "value": "14 days"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Setup Fee",
+      "value": "No"
+    }
+  ]
+}));
+
+// Free trial schema
+const freeTrialSchema = {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "@id": "https://mydriveschool.software/pricing/#free-trial",
+  "name": "14-Day Free Trial",
+  "description": "Try MyDriveSchool.Software free for 14 days. No credit card required.",
+  "price": "0",
+  "priceCurrency": "GBP",
+  "priceValidUntil": "2026-12-31",
+  "availability": "https://schema.org/InStock",
+  "url": "https://mydriveschool.software/contact/",
+  "eligibleRegion": {
+    "@type": "Place",
+    "name": "United Kingdom"
+  },
+  "itemOffered": {
+    "@type": "SoftwareApplication",
+    "name": "MyDriveSchool.Software",
+    "applicationCategory": "BusinessApplication"
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Trial Duration",
+      "value": "14 days"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Credit Card Required",
+      "value": "No"
+    }
+  ]
+};
 ---
 
 <BaseLayout title="Pricing" description="Simple, transparent pricing for driving school software. Plans from £29/month with no hidden fees.">
+  <!-- Offer Schemas -->
+  {offerSchemas.map(offerSchema => (
+    <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+  ))}
+  <script type="application/ld+json" set:html={JSON.stringify(freeTrialSchema)} />
+
   <!-- Breadcrumbs -->
   <div class="bg-gray-100 py-3">
     <div class="container-custom">

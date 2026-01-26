@@ -2,9 +2,62 @@
 // Contact Page
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+// ContactPoint Schema
+const contactPointSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://mydriveschool.software/#organization",
+    "name": "MyDriveSchool.Software",
+    "url": "https://mydriveschool.software",
+    "logo": "https://mydriveschool.software/images/logo.png",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@mydriveschool.software",
+        "availableLanguage": ["English"],
+        "areaServed": "GB",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "info@mydriveschool.software",
+        "availableLanguage": ["English"],
+        "areaServed": "GB"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "technical support",
+        "email": "info@mydriveschool.software",
+        "availableLanguage": ["English"],
+        "areaServed": "GB"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "124 City Road",
+      "addressLocality": "London",
+      "addressRegion": "England",
+      "postalCode": "EC1V 2NX",
+      "addressCountry": "GB"
+    }
+  }
+};
 ---
 
 <BaseLayout title="Contact Us" description="Get in touch with MyDriveSchool Software. Request a demo, ask questions, or learn how we can help streamline your driving school management.">
+  <!-- ContactPoint Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(contactPointSchema)} />
+
   <!-- Breadcrumbs -->
   <div class="bg-gray-100 py-3">
     <div class="container-custom">

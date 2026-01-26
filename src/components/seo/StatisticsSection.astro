@@ -1,0 +1,303 @@
+---
+/**
+ * Statistics Section Component
+ *
+ * Displays industry statistics and data with proper structured data markup.
+ * AI systems heavily favor citing statistics, making this component crucial
+ * for AI visibility.
+ *
+ * Best Practices:
+ * - Always include data source
+ * - Add publication date
+ * - Use specific numbers (not ranges like "50-100")
+ * - Include year in context
+ *
+ * Usage:
+ * <StatisticsSection
+ *   title="Dog Daycare Industry Statistics 2026"
+ *   stats={statsData}
+ *   source="Pet Industry Market Research"
+ * />
+ */
+
+import { createSchemaGenerator } from '../../utils/schema';
+import type { DatasetSchema } from '../../utils/schema/types';
+
+interface Statistic {
+  label: string;
+  value: string | number;
+  unit?: string;
+  change?: {
+    value: number;
+    direction: 'up' | 'down';
+    period: string;
+  };
+  context?: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  stats: Statistic[];
+  source?: string;
+  sourceUrl?: string;
+  datePublished?: string;
+  site: 'mydojo' | 'petcare' | 'driveschool' | 'tattoo';
+  pageUrl: string;
+  layout?: 'grid' | 'list';
+}
+
+const {
+  title,
+  description,
+  stats,
+  source,
+  sourceUrl,
+  datePublished,
+  site,
+  pageUrl,
+  layout = 'grid'
+} = Astro.props;
+
+// Generate Dataset schema
+const schemaGen = createSchemaGenerator(site);
+const datasetData: DatasetSchema = {
+  name: title,
+  description: description || title,
+  url: pageUrl,
+  datePublished: datePublished,
+  creator: {
+    type: 'Organization',
+    name: source || `${site} Research Team`
+  }
+};
+
+const schemaMarkup = schemaGen.getDatasetSchema(datasetData, pageUrl);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+<section class="statistics-section">
+  <header class="stats-header">
+    <h2 class="stats-title">{title}</h2>
+    {description && <p class="stats-description">{description}</p>}
+  </header>
+
+  <div class={`stats-grid layout-${layout}`}>
+    {stats.map((stat) => (
+      <article class="stat-card">
+        <div class="stat-value-wrapper">
+          <div class="stat-value">
+            {stat.value}
+            {stat.unit && <span class="stat-unit">{stat.unit}</span>}
+          </div>
+          {stat.change && (
+            <div class={`stat-change change-${stat.change.direction}`}>
+              {stat.change.direction === 'up' ? '↑' : '↓'}
+              {stat.change.value}%
+              <span class="change-period">{stat.change.period}</span>
+            </div>
+          )}
+        </div>
+        <div class="stat-label">{stat.label}</div>
+        {stat.context && (
+          <p class="stat-context">{stat.context}</p>
+        )}
+      </article>
+    ))}
+  </div>
+
+  {(source || datePublished) && (
+    <footer class="stats-footer">
+      {source && (
+        <p class="stats-source">
+          <strong>Source:</strong>
+          {sourceUrl ? (
+            <a href={sourceUrl} target="_blank" rel="noopener noreferrer">{source}</a>
+          ) : (
+            <span>{source}</span>
+          )}
+        </p>
+      )}
+      {datePublished && (
+        <p class="stats-date">
+          <strong>Data as of:</strong> {new Date(datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+        </p>
+      )}
+    </footer>
+  )}
+</section>
+
+<style>
+  .statistics-section {
+    margin: 3rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    padding: 2.5rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .stats-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .stats-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--brand-navy, #1A1A2E);
+    margin-bottom: 0.75rem;
+  }
+
+  .stats-description {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .stats-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .stats-grid.layout-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .stats-grid.layout-list {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    border-color: var(--brand-red, #E94560);
+  }
+
+  .stat-value-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--brand-red, #E94560);
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+  }
+
+  .stat-unit {
+    font-size: 1.5rem;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .stat-change {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .stat-change.change-up {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .stat-change.change-down {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  .change-period {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-left: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--brand-navy, #1A1A2E);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-context {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .stats-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  .stats-footer strong {
+    color: var(--brand-navy, #1A1A2E);
+  }
+
+  .stats-source a {
+    color: var(--brand-red, #E94560);
+    text-decoration: none;
+  }
+
+  .stats-source a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .statistics-section {
+      padding: 1.5rem;
+    }
+
+    .stats-title {
+      font-size: 1.5rem;
+    }
+
+    .stats-grid.layout-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+      padding: 1.5rem;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+    }
+
+    .stats-footer {
+      flex-direction: column;
+    }
+  }
+</style>

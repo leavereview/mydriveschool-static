@@ -1,6 +1,181 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// SoftwareApplication Schema
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://mydriveschool.software/#software",
+  "name": "MyDriveSchool.Software",
+  "alternateName": "MyDriveSchool",
+  "description": "Complete driving school management software for driving instructors and schools. Lesson scheduling, student management, automated billing, and instructor allocation in one platform.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "@id": "https://mydriveschool.software/#free-trial",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "name": "14-Day Free Trial",
+    "description": "Try MyDriveSchool.Software free for 14 days with full access",
+    "availability": "https://schema.org/InStock",
+    "url": "https://mydriveschool.software/contact/",
+    "priceValidUntil": "2026-12-31"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "94",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "Lesson Scheduling & Booking",
+    "Student Management",
+    "Instructor Allocation",
+    "Vehicle Tracking",
+    "Automated Billing & Payments",
+    "Test Date Management",
+    "Progress Tracking",
+    "SMS & Email Reminders",
+    "Mobile Instructor App",
+    "Reports & Analytics",
+    "DVSA Integration",
+    "Multi-Location Support"
+  ],
+  "url": "https://mydriveschool.software",
+  "screenshot": "https://mydriveschool.software/images/dashboard-screenshot.jpg",
+  "softwareVersion": "2.0",
+  "applicationSubCategory": "Driving School Management",
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Driving Schools, Driving Instructors, ADI Training Schools"
+  }
+};
+
+// Free Trial Offer Schema
+const offerSchema = {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "@id": "https://mydriveschool.software/#free-trial-offer",
+  "name": "14-Day Free Trial - MyDriveSchool.Software",
+  "description": "Try MyDriveSchool.Software free for 14 days with complete access to all features including lesson scheduling, student management, and automated billing. No credit card required.",
+  "price": "0",
+  "priceCurrency": "GBP",
+  "priceValidUntil": "2026-12-31",
+  "availability": "https://schema.org/InStock",
+  "url": "https://mydriveschool.software/contact/",
+  "seller": {
+    "@type": "Organization",
+    "name": "MyDriveSchool.Software"
+  },
+  "itemOffered": {
+    "@type": "SoftwareApplication",
+    "name": "MyDriveSchool.Software",
+    "applicationCategory": "BusinessApplication"
+  },
+  "eligibleRegion": {
+    "@type": "Place",
+    "name": "United Kingdom"
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Trial Duration",
+      "value": "14 days"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Credit Card Required",
+      "value": "No"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Full Feature Access",
+      "value": "Yes"
+    }
+  ]
+};
+
+// Review Schemas from testimonials
+const reviewSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "@id": "https://mydriveschool.software/#review-1",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "@id": "https://mydriveschool.software/#software",
+      "name": "MyDriveSchool.Software"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Richardson"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "MyDriveSchool cut our admin time in half. Students book online, reminders go out automatically, and I can finally focus on teaching.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pass First Driving School"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "@id": "https://mydriveschool.software/#review-2",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "@id": "https://mydriveschool.software/#software",
+      "name": "MyDriveSchool.Software"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Sarah Chen"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "The scheduling system is brilliant. No more double bookings or juggling spreadsheets. Our instructors love it.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "City Drive Academy"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "@id": "https://mydriveschool.software/#review-3",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "@id": "https://mydriveschool.software/#software",
+      "name": "MyDriveSchool.Software"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "David Thompson"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "Our pass rate improved 15% since implementing progress tracking. Students stay motivated and instructors stay accountable.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Thompson Driving"
+    }
+  }
+];
+
 const features = [
   {
     icon: 'calendar',
@@ -61,6 +236,13 @@ const stats = [
 ---
 
 <BaseLayout title="Home" description="MyDriveSchool.Software - The complete driving school management platform. Scheduling, student management, instructor allocation, and online booking.">
+  <!-- Structured Data Schemas -->
+  <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+  {reviewSchemas.map(reviewSchema => (
+    <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
+  ))}
+
   <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0" style="background-image: url('/images/hero-driving.jpg'); background-size: cover; background-position: center;"></div>

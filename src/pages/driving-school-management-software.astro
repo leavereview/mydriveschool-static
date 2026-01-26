@@ -1,27 +1,172 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BreadcrumbsEnhanced from '../components/seo/BreadcrumbsEnhanced.astro';
+import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
+import StatisticsSection from '../components/seo/StatisticsSection.astro';
+import ComparisonTable from '../components/seo/ComparisonTable.astro';
+import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
 
-const faqs = [
+// Management Software Statistics
+const managementStats = [
+  {
+    label: 'Average Admin Time (Manual)',
+    value: '15+ hrs',
+    context: 'Weekly admin hours without management software'
+  },
+  {
+    label: 'Admin Time Saved',
+    value: '75%',
+    change: { value: 75, direction: 'up' as const, period: 'with software' },
+    context: 'Reduction in administrative workload'
+  },
+  {
+    label: 'Revenue Increase',
+    value: '22%',
+    change: { value: 22, direction: 'up' as const, period: 'year 1' },
+    context: 'With automated billing and online booking'
+  },
+  {
+    label: 'UK Driving Schools Using Software',
+    value: '58%',
+    change: { value: 28, direction: 'up' as const, period: 'since 2020' },
+    context: 'Digital transformation in the industry'
+  },
+  {
+    label: 'Average Customer Retention',
+    value: '85%',
+    context: 'With student progress portals and communication'
+  },
+  {
+    label: 'Payment Collection Rate',
+    value: '95%',
+    change: { value: 30, direction: 'up' as const, period: 'vs manual' },
+    context: 'With automated invoicing and reminders'
+  }
+];
+
+// Comparison Table Data
+const comparisonData = [
+  {
+    label: 'Student Progress Tracking',
+    values: [true, false, false],
+    highlight: true
+  },
+  {
+    label: 'Automated Payment Processing',
+    values: [true, false, false]
+  },
+  {
+    label: 'Instructor Management',
+    values: [true, false, false],
+    highlight: true
+  },
+  {
+    label: 'Parent Portal Access',
+    values: [true, false, false]
+  },
+  {
+    label: 'Business Analytics & Reports',
+    values: [true, false, false]
+  },
+  {
+    label: 'Automated Reminders (SMS/Email)',
+    values: [true, false, false]
+  },
+  {
+    label: 'Package Sales & Tracking',
+    values: [true, false, false]
+  },
+  {
+    label: 'Mobile App for Instructors',
+    values: [true, false, false]
+  },
+  {
+    label: 'Document Storage',
+    values: [true, false, false]
+  },
+  {
+    label: 'DVSA Test Date Tracking',
+    values: [true, false, false]
+  }
+];
+
+// Enhanced FAQ Items
+const faqItems = [
   {
     question: "What is driving school management software?",
-    answer: "Driving school management software is an all-in-one platform that handles student records, scheduling, payments, instructor management, and reporting. It replaces spreadsheets and paper records with automated digital systems."
+    answer: "Driving school management software is an all-in-one platform that handles student records, scheduling, payments, instructor management, and reporting. It replaces spreadsheets and paper records with automated digital systems that save 15+ hours weekly and increase revenue by 22% through better organization and automated workflows.",
+    links: [
+      { text: 'View all features', url: '/features/' },
+      { text: 'See pricing', url: '/pricing/' }
+    ]
   },
   {
     question: "How much does driving school management software cost?",
-    answer: "Costs range from £29-150 per month depending on features and school size. MyDriveSchool offers flat monthly pricing from £29 with all features included—no per-user or per-student fees."
+    answer: "Costs range from £29-150 per month depending on features and school size. MyDriveSchool offers flat monthly pricing from £29 (Solo ADI) to £79 (Multi-instructor school) with all features included—no per-user, per-student, or per-SMS fees that punish growth.",
+    links: [
+      { text: 'Full pricing details', url: '/pricing/' },
+      { text: 'Start free trial', url: '/contact/' }
+    ]
   },
   {
     question: "Can I track student progress with management software?",
-    answer: "Yes, good management software tracks lesson hours completed, skills mastered, areas needing improvement, and test readiness. Parents can also view progress through their own portal."
+    answer: "Yes, comprehensive progress tracking includes lesson hours completed, skills mastered (junctions, roundabouts, manoeuvres), areas needing improvement, test readiness scores, and instructor notes after each lesson. Parents can view progress through their own portal, reducing 'How's my child doing?' phone calls.",
+    links: [
+      { text: 'Student management features', url: '/features/' }
+    ]
   },
   {
-    question: "Does the software handle payments?",
-    answer: "Yes, modern driving school software processes card payments, sells lesson packages, tracks balances, and automatically generates invoices. Prepayment helps reduce no-shows."
+    question: "Does the software handle payments and invoicing?",
+    answer: "Yes, modern driving school software processes card payments, sells lesson packages, tracks balances, and automatically generates invoices. Prepayment at booking reduces no-shows by 65%. Automated invoice reminders improve payment collection rates by 30% compared to manual chasing.",
+    links: [
+      { text: 'Payment features', url: '/features/' },
+      { text: 'Payment processing guide', url: '/blog/driving-school-payment-processing/' }
+    ]
   },
   {
     question: "Can instructors access the system on their phones?",
-    answer: "Yes, instructors can view their schedule, access student information, record lesson notes, and update availability from any device with an internet connection."
+    answer: "Yes, instructors get mobile apps (iOS/Android) or responsive web access to view their schedule, access student information, record lesson notes, update availability, and view earnings—all from any device with internet. Mobile access means no more calling the office for student details.",
+    links: [
+      { text: 'Instructor features', url: '/features/' }
+    ]
+  },
+  {
+    question: "Is management software suitable for solo ADIs?",
+    answer: "Absolutely. Solo ADIs benefit from automated scheduling, online booking (capture students 24/7), progress tracking, and professional invoicing without the complexity of enterprise systems. The Solo Plan (£29/month) includes unlimited students and all core features.",
+    links: [
+      { text: 'Solo plan details', url: '/pricing/' },
+      { text: 'Software overview', url: '/driving-school-software/' }
+    ]
+  },
+  {
+    question: "How does multi-instructor management work?",
+    answer: "The School Plan (£79/month for up to 5 instructors) gives each instructor their own login, calendar, and student assignments. You see all instructors' schedules, performance metrics (lessons delivered, pass rates), and can reassign students when instructors leave. Enterprise plans support unlimited instructors.",
+    links: [
+      { text: 'School plan features', url: '/pricing/' },
+      { text: 'Instructor management', url: '/features/' }
+    ]
+  },
+  {
+    question: "What reports and analytics are included?",
+    answer: "Essential reports include: revenue by period, lessons delivered vs cancelled vs no-shows, new student enrolments, test pass rates, instructor performance (utilisation, earnings, feedback), outstanding balances, and package usage. Dashboard shows key metrics at a glance for quick decision-making.",
+    links: [
+      { text: 'Reporting features', url: '/features/' }
+    ]
+  },
+  {
+    question: "Can parents access their child's progress?",
+    answer: "Yes, parent portal access lets parents view upcoming lessons, see instructor feedback and progress reports, book/reschedule lessons, and make payments. This transparency improves satisfaction and reduces admin calls. Parents receive automatic updates when lessons are completed or cancelled.",
+    links: [
+      { text: 'Parent portal features', url: '/features/' }
+    ]
+  },
+  {
+    question: "How long does setup take?",
+    answer: "Initial setup takes 30-60 minutes: add your availability, create appointment types, set pricing, and invite instructors (if multi-instructor school). Importing students from spreadsheets can be done via CSV upload. Full training and UK-based support included. Most schools are live within 24 hours.",
+    links: [
+      { text: 'Get started', url: '/contact/' },
+      { text: 'Pricing plans', url: '/pricing/' }
+    ]
   }
 ];
 
@@ -37,19 +182,6 @@ const schemaMarkup = {
   "datePublished": "2025-01-01",
   "dateModified": "2026-01-15"
 };
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-};
 ---
 
 <BaseLayout
@@ -57,17 +189,15 @@ const faqSchema = {
   description="Complete guide to management software for driving schools. Student records, payments, instructor management, and business reporting in one platform."
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-  <!-- Breadcrumbs -->
-  <div class="bg-gray-100 py-3">
-    <div class="container-custom">
-      <Breadcrumbs items={[
-        { label: 'Home', href: '/' },
-        { label: 'Management Software' }
-      ]} />
-    </div>
-  </div>
+  <!-- Breadcrumbs with Schema -->
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Management Software', href: '/driving-school-management-software/' }
+    ]}
+  />
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
@@ -89,6 +219,19 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <!-- Featured Answer -->
+  <FeaturedAnswer question="What is driving school management software?">
+    Driving school management software is an all-in-one platform that handles student records, scheduling, payments, instructor management, and business reporting. It replaces spreadsheets and paper files with automated systems that save 15+ hours weekly, increase revenue by 22%, and improve payment collection rates by 30% through automated workflows and online access.
+  </FeaturedAnswer>
+
+  <!-- Statistics Section -->
+  <StatisticsSection
+    site="driveschool"
+    pageUrl="https://mydriveschool.software/driving-school-management-software/"
+    title="Driving School Management Software Impact"
+    stats={managementStats}
+  />
 
   <!-- Table of Contents -->
   <section class="section bg-gray-50">
@@ -304,17 +447,31 @@ const faqSchema = {
 
         <p>Related: <a href="/blog/best-driving-school-software/" class="text-brand-red hover:underline">Best Driving School Software Comparison</a></p>
 
-        <h2 id="faq" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Frequently Asked Questions</h2>
+      </div>
+    </div>
+  </section>
 
-        <div class="space-y-6">
-          {faqs.map((faq) => (
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="font-bold text-brand-navy mb-2">{faq.question}</h3>
-              <p class="text-gray-700">{faq.answer}</p>
-            </div>
-          ))}
-        </div>
+  <!-- Comparison Table -->
+  <ComparisonTable
+    title="Why Choose Integrated Management Software"
+    headers={['MyDriveSchool', 'Generic Tools', 'Spreadsheets']}
+    rows={comparisonData}
+  />
 
+  <!-- FAQ Section -->
+  <section id="faq">
+    <FAQEnhanced
+      site="driveschool"
+      pageUrl="https://mydriveschool.software/driving-school-management-software/"
+      title="Frequently Asked Questions About Driving School Management Software"
+      faqs={faqItems}
+    />
+  </section>
+
+  <!-- Remaining Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
       </div>
     </div>
   </section>

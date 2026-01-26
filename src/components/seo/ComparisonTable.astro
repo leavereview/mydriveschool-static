@@ -1,0 +1,257 @@
+---
+/**
+ * Comparison Table Component
+ *
+ * Creates SEO-optimized comparison tables that:
+ * - Use semantic HTML table markup
+ * - Include proper headers and scope attributes
+ * - Are mobile responsive
+ * - Support sorting (optional)
+ * - Generate table structured data
+ *
+ * Usage:
+ * <ComparisonTable
+ *   title="Dog Daycare Software Comparison"
+ *   description="Compare features across leading pet care platforms"
+ *   headers={['Feature', 'Basic Plan', 'Pro Plan', 'Enterprise']}
+ *   rows={tableData}
+ * />
+ */
+
+interface ComparisonRow {
+  label: string;
+  values: (string | number | boolean)[];
+  highlight?: boolean;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  headers: string[];
+  rows: ComparisonRow[];
+  sortable?: boolean;
+  className?: string;
+}
+
+const {
+  title,
+  description,
+  headers,
+  rows,
+  sortable = false,
+  className = ''
+} = Astro.props;
+
+// Format cell values for display
+function formatValue(value: string | number | boolean): string {
+  if (typeof value === 'boolean') {
+    return value ? '✓' : '✗';
+  }
+  return String(value);
+}
+---
+
+<div class={`comparison-table-wrapper ${className}`}>
+  {description && (
+    <p class="comparison-table-description">{description}</p>
+  )}
+
+  <div class="table-responsive">
+    <table class="comparison-table" role="table">
+      <caption class="comparison-table-title">{title}</caption>
+      <thead>
+        <tr>
+          {headers.map((header, index) => (
+            <th
+              scope="col"
+              class={sortable ? 'sortable' : ''}
+              data-column={index}
+            >
+              {header}
+              {sortable && <span class="sort-icon" aria-hidden="true">↕</span>}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => (
+          <tr class={row.highlight ? 'highlight-row' : ''}>
+            <th scope="row" class="row-label">{row.label}</th>
+            {row.values.map((value) => (
+              <td class={typeof value === 'boolean' ? `bool-${value}` : ''}>
+                {formatValue(value)}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .comparison-table-wrapper {
+    margin: 2rem 0;
+  }
+
+  .comparison-table-description {
+    color: #64748b;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .comparison-table-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brand-navy, #1A1A2E);
+    margin-bottom: 1.5rem;
+    text-align: left;
+    caption-side: top;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.95rem;
+  }
+
+  .comparison-table thead {
+    background: var(--brand-navy, #1A1A2E);
+    color: white;
+  }
+
+  .comparison-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .comparison-table thead th {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .comparison-table th.sortable {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .comparison-table th.sortable:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .sort-icon {
+    margin-left: 0.5rem;
+    opacity: 0.6;
+    font-size: 0.875rem;
+  }
+
+  .comparison-table td {
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .comparison-table .row-label {
+    font-weight: 600;
+    color: var(--brand-navy, #1A1A2E);
+    background: #f8f9fa;
+  }
+
+  .comparison-table tbody tr:hover {
+    background: #f8f9fa;
+  }
+
+  .comparison-table .highlight-row {
+    background: #fff7ed;
+  }
+
+  .comparison-table .highlight-row:hover {
+    background: #ffedd5;
+  }
+
+  .comparison-table .bool-true {
+    color: #059669;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .comparison-table .bool-false {
+    color: #dc2626;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.25rem;
+    opacity: 0.4;
+  }
+
+  @media (max-width: 768px) {
+    .comparison-table {
+      font-size: 0.875rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.75rem 0.5rem;
+    }
+
+    .comparison-table-title {
+      font-size: 1.25rem;
+    }
+  }
+</style>
+
+{sortable && (
+  <script>
+    // Client-side table sorting
+    document.querySelectorAll('.comparison-table th.sortable').forEach(header => {
+      header.addEventListener('click', () => {
+        const table = header.closest('table');
+        const tbody = table?.querySelector('tbody');
+        const columnIndex = parseInt(header.getAttribute('data-column') || '0');
+
+        if (!tbody) return;
+
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const isAscending = header.classList.contains('sort-asc');
+
+        rows.sort((a, b) => {
+          const aValue = a.children[columnIndex].textContent?.trim() || '';
+          const bValue = b.children[columnIndex].textContent?.trim() || '';
+
+          // Try numeric comparison first
+          const aNum = parseFloat(aValue);
+          const bNum = parseFloat(bValue);
+
+          if (!isNaN(aNum) && !isNaN(bNum)) {
+            return isAscending ? bNum - aNum : aNum - bNum;
+          }
+
+          // Fallback to string comparison
+          return isAscending
+            ? bValue.localeCompare(aValue)
+            : aValue.localeCompare(bValue);
+        });
+
+        // Update DOM
+        rows.forEach(row => tbody.appendChild(row));
+
+        // Update header classes
+        if (table) {
+          table.querySelectorAll('th').forEach(th => {
+            th.classList.remove('sort-asc', 'sort-desc');
+          });
+        }
+        header.classList.add(isAscending ? 'sort-desc' : 'sort-asc');
+      });
+    });
+  </script>
+)}

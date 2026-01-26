@@ -1,0 +1,83 @@
+---
+/**
+ * Featured Answer Component
+ *
+ * Creates a highlighted answer box optimized for Google Featured Snippets.
+ *
+ * Best Practices:
+ * - Keep answer to 40-60 words
+ * - Answer the question directly in first sentence
+ * - Use simple, clear language
+ * - Place at the top of the content section
+ *
+ * Usage:
+ * <FeaturedAnswer question="What is dog daycare software?">
+ *   Dog daycare software is an all-in-one management system that handles
+ *   online reservations, vaccination tracking, billing, and customer
+ *   communication for pet daycare facilities.
+ * </FeaturedAnswer>
+ */
+
+interface Props {
+  question: string;
+  className?: string;
+}
+
+const { question, className = '' } = Astro.props;
+---
+
+<div class={`featured-answer ${className}`} itemscope itemtype="https://schema.org/Question">
+  <h2 itemprop="name" class="featured-answer__question">{question}</h2>
+  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+    <div itemprop="text" class="featured-answer__content">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .featured-answer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 4px solid var(--brand-red, #E94560);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .featured-answer__question {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--brand-navy, #1A1A2E);
+    margin: 0 0 1rem;
+  }
+
+  .featured-answer__content {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #2d3748;
+  }
+
+  .featured-answer__content :global(p) {
+    margin: 0;
+  }
+
+  .featured-answer__content :global(strong) {
+    color: var(--brand-navy, #1A1A2E);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .featured-answer {
+      padding: 1.25rem 1.5rem;
+    }
+
+    .featured-answer__question {
+      font-size: 1.125rem;
+    }
+
+    .featured-answer__content {
+      font-size: 1rem;
+    }
+  }
+</style>

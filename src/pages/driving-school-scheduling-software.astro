@@ -1,27 +1,168 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BreadcrumbsEnhanced from '../components/seo/BreadcrumbsEnhanced.astro';
+import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
+import StatisticsSection from '../components/seo/StatisticsSection.astro';
+import ComparisonTable from '../components/seo/ComparisonTable.astro';
+import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
 
-const faqs = [
+const schedulingStats = [
+  {
+    label: 'Admin Time Saved Weekly',
+    value: '10+ hrs',
+    change: { value: 65, direction: 'up' as const, period: 'vs manual' },
+    context: 'With automated scheduling and reminders'
+  },
+  {
+    label: 'No-Show Reduction',
+    value: '50%',
+    change: { value: 50, direction: 'up' as const, period: 'with reminders' },
+    context: 'Using SMS and email automated reminders'
+  },
+  {
+    label: 'Online Booking Conversions',
+    value: '3x',
+    context: '24/7 booking vs business hours only'
+  },
+  {
+    label: 'Double-Booking Incidents',
+    value: '0%',
+    context: 'With real-time availability checking'
+  },
+  {
+    label: 'Lesson Utilisation Rate',
+    value: '92%',
+    change: { value: 18, direction: 'up' as const, period: 'vs manual' },
+    context: 'Better calendar management fills gaps'
+  },
+  {
+    label: 'Phone Call Reduction',
+    value: '70%',
+    change: { value: 70, direction: 'up' as const, period: 'with online booking' },
+    context: 'Fewer scheduling phone interruptions'
+  }
+];
+
+const comparisonData = [
+  {
+    label: '24/7 Online Booking',
+    values: [true, false, false],
+    highlight: true
+  },
+  {
+    label: 'Automated SMS Reminders',
+    values: [true, false, false],
+    highlight: true
+  },
+  {
+    label: 'Real-Time Availability',
+    values: [true, false, false]
+  },
+  {
+    label: 'Multi-Instructor Coordination',
+    values: [true, false, false]
+  },
+  {
+    label: 'Student Self-Service',
+    values: [true, false, false]
+  },
+  {
+    label: 'Prevents Double-Bookings',
+    values: [true, false, false]
+  },
+  {
+    label: 'Calendar Sync (Google/iCal)',
+    values: [true, true, false]
+  },
+  {
+    label: 'Pickup Location Management',
+    values: [true, false, false]
+  },
+  {
+    label: 'Cancellation Policy Enforcement',
+    values: [true, false, false]
+  },
+  {
+    label: 'No-Show Analytics',
+    values: [true, false, false]
+  }
+];
+
+const faqItems = [
   {
     question: "What is the best scheduling software for driving schools?",
-    answer: "The best scheduling software depends on your school's size and needs. Key factors include ease of use, online booking quality, SMS reminder capabilities, and total cost. MyDriveSchool offers all these features at an affordable flat rate."
+    answer: "The best scheduling software offers online booking, automated SMS reminders, multi-instructor calendars, and prevents double-bookings. MyDriveSchool combines all these features with flat pricing from £29/month, no per-SMS fees, and reduces no-shows by 50% through automated reminders.",
+    links: [
+      { text: 'View all features', url: '/features/' },
+      { text: 'Pricing plans', url: '/pricing/' }
+    ]
   },
   {
     question: "How much does driving school scheduling software cost?",
-    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. MyDriveSchool offers flat monthly pricing from £29, with SMS reminders included."
+    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. MyDriveSchool offers flat monthly pricing from £29 (Solo ADI) to £79 (Multi-instructor school), with SMS reminders included—no per-SMS fees that add up quickly.",
+    links: [
+      { text: 'Full pricing', url: '/pricing/' },
+      { text: 'Start free trial', url: '/contact/' }
+    ]
   },
   {
     question: "Can students book driving lessons online?",
-    answer: "Yes, modern driving school scheduling software allows students to book lessons online 24/7. They can view real-time instructor availability, select their preferred time slot, and receive instant confirmation."
+    answer: "Yes, modern driving school scheduling software allows students to book lessons online 24/7. They view real-time instructor availability, select their preferred time slot, and receive instant confirmation. Online booking captures 3x more bookings than business-hours-only phone booking.",
+    links: [
+      { text: 'Online booking features', url: '/features/' }
+    ]
   },
   {
     question: "How do I reduce no-shows at my driving school?",
-    answer: "The most effective strategies include: automated SMS reminders 24 hours and 2 hours before lessons, requiring prepayment or card on file, enforcing cancellation policies, and making rescheduling easy. Schools typically reduce no-shows by 30-50%."
+    answer: "Most effective strategies: automated SMS reminders at 24 hours and 2 hours before lessons, require prepayment or deposits, enforce clear cancellation policies, and make rescheduling easy. Schools implementing these strategies reduce no-shows by 50% or more.",
+    links: [
+      { text: 'Reminder features', url: '/features/' },
+      { text: 'No-show reduction guide', url: '/blog/reduce-no-shows-driving-school/' }
+    ]
   },
   {
     question: "Does scheduling software prevent double-bookings?",
-    answer: "Quality driving school scheduling software completely prevents double-bookings by checking instructor, student, and vehicle availability before allowing any booking."
+    answer: "Quality driving school scheduling software completely prevents double-bookings by checking instructor, student, and vehicle availability in real-time before allowing any booking. Manual calendars and spreadsheets cause double-bookings that damage your reputation.",
+    links: [
+      { text: 'Scheduling features', url: '/features/' }
+    ]
+  },
+  {
+    question: "Can I manage multiple instructors with scheduling software?",
+    answer: "Yes, the School Plan (£79/month for up to 5 instructors) provides individual calendars, shared availability view, student assignments, and prevents double-bookings across all instructors. Students can book with their preferred instructor or choose 'first available'.",
+    links: [
+      { text: 'School plan details', url: '/pricing/' },
+      { text: 'Instructor management', url: '/driving-school-management-software/' }
+    ]
+  },
+  {
+    question: "What pickup location features should scheduling software have?",
+    answer: "Good scheduling software lets students specify pickup addresses at booking, shows instructors the route on a map, calculates travel time between appointments, and factors drive time into availability. This prevents back-to-back bookings across town that are physically impossible.",
+    links: [
+      { text: 'Scheduling features', url: '/features/' }
+    ]
+  },
+  {
+    question: "How do automated reminders work?",
+    answer: "Scheduling software sends automated reminders via SMS and email at customizable times (typically 24 hours and 2 hours before lessons). Students can confirm, cancel, or reschedule directly from the reminder. This reduces no-shows by 50% and eliminates manual reminder calls.",
+    links: [
+      { text: 'Reminder features', url: '/features/' }
+    ]
+  },
+  {
+    question: "Can students reschedule lessons themselves?",
+    answer: "Yes, students log in to their portal, view upcoming lessons, and reschedule with a few clicks (subject to your notice requirements). Self-service rescheduling reduces admin calls by 80% and improves customer satisfaction. You define minimum notice periods (e.g., 24 hours).",
+    links: [
+      { text: 'Student portal features', url: '/features/' }
+    ]
+  },
+  {
+    question: "Does scheduling software sync with Google Calendar?",
+    answer: "Yes, two-way calendar sync with Google Calendar, Apple Calendar, and Outlook means lessons appear in your personal calendar automatically. Updates sync both ways—block time in Google Calendar and it becomes unavailable in your booking system.",
+    links: [
+      { text: 'Calendar sync features', url: '/features/' },
+      { text: 'Get started', url: '/contact/' }
+    ]
   }
 ];
 
@@ -37,19 +178,6 @@ const schemaMarkup = {
   "datePublished": "2025-01-01",
   "dateModified": "2026-01-15"
 };
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-};
 ---
 
 <BaseLayout
@@ -57,17 +185,15 @@ const faqSchema = {
   description="Complete guide to scheduling software for driving schools. Online booking, automated reminders, and multi-instructor calendars. Reduce no-shows by 50%."
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-  <!-- Breadcrumbs -->
-  <div class="bg-gray-100 py-3">
-    <div class="container-custom">
-      <Breadcrumbs items={[
-        { label: 'Home', href: '/' },
-        { label: 'Scheduling Software' }
-      ]} />
-    </div>
-  </div>
+  <!-- Breadcrumbs with Schema -->
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Scheduling Software', href: '/driving-school-scheduling-software/' }
+    ]}
+  />
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
@@ -89,6 +215,19 @@ const faqSchema = {
       </div>
     </div>
   </section>
+
+  <!-- Featured Answer -->
+  <FeaturedAnswer question="What is driving school scheduling software?">
+    Driving school scheduling software automates lesson booking, instructor coordination, and appointment management through online booking, real-time availability checking, and automated SMS reminders. Modern platforms save 10+ hours weekly, reduce no-shows by 50%, increase online bookings by 3x, and eliminate double-bookings entirely.
+  </FeaturedAnswer>
+
+  <!-- Statistics Section -->
+  <StatisticsSection
+    site="driveschool"
+    pageUrl="https://mydriveschool.software/driving-school-scheduling-software/"
+    title="Scheduling Software Impact on Driving Schools"
+    stats={schedulingStats}
+  />
 
   <!-- Table of Contents -->
   <section class="section bg-gray-50">
@@ -272,17 +411,31 @@ const faqSchema = {
 
         <p>Related: <a href="/blog/how-to-choose-driving-school-scheduling-software/" class="text-brand-red hover:underline">How to Choose Driving School Scheduling Software</a></p>
 
-        <h2 id="faq" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Frequently Asked Questions</h2>
+      </div>
+    </div>
+  </section>
 
-        <div class="space-y-6">
-          {faqs.map((faq) => (
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="font-bold text-brand-navy mb-2">{faq.question}</h3>
-              <p class="text-gray-700">{faq.answer}</p>
-            </div>
-          ))}
-        </div>
+  <!-- Comparison Table -->
+  <ComparisonTable
+    title="Why Choose Specialized Scheduling Software"
+    headers={['MyDriveSchool', 'Generic Tools', 'Manual/Spreadsheets']}
+    rows={comparisonData}
+  />
 
+  <!-- FAQ Section -->
+  <section id="faq">
+    <FAQEnhanced
+      site="driveschool"
+      pageUrl="https://mydriveschool.software/driving-school-scheduling-software/"
+      title="Frequently Asked Questions About Scheduling Software"
+      faqs={faqItems}
+    />
+  </section>
+
+  <!-- Remaining Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
       </div>
     </div>
   </section>
