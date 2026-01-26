@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -117,6 +118,33 @@ const schemaOrg = {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+
+  <!-- Google Analytics - Conditional Loading Based on Cookie Consent -->
+  <script is:inline>
+    (function() {
+      // Check if user has accepted cookies
+      try {
+        const consent = localStorage.getItem('cookieConsent');
+        if (consent) {
+          const consentData = JSON.parse(consent);
+          if (consentData.accepted === true) {
+            // Load Google Analytics
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4HJLDWJ8DR';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4HJLDWJ8DR');
+          }
+        }
+      } catch (error) {
+        console.error('Error loading analytics:', error);
+      }
+    })();
+  </script>
 </head>
 <body class="min-h-screen flex flex-col">
   <Navigation />
@@ -126,5 +154,6 @@ const schemaOrg = {
   </main>
 
   <Footer />
+  <CookieConsent />
 </body>
 </html>

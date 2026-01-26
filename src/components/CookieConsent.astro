@@ -1,0 +1,183 @@
+---
+// TypeScript interface for consent data stored in localStorage
+interface ConsentData {
+  accepted: boolean;
+  timestamp: string;
+}
+---
+
+<div
+  id="cookie-consent"
+  class="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-lg border-t border-gray-200 transition-transform duration-300 translate-y-full"
+  role="region"
+  aria-label="Cookie consent notification"
+  aria-live="polite"
+>
+  <div class="container-custom">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-4 sm:px-0">
+      <p class="text-gray-600 text-sm text-center sm:text-left">
+        We use cookies to improve your experience and analyze site traffic.
+        <a href="/privacy-policy/" class="text-red-600 hover:text-red-700 underline">Learn more</a>
+      </p>
+      <div class="flex gap-3 w-full sm:w-auto justify-center">
+        <button
+          id="decline-cookies"
+          class="btn-secondary text-sm px-6 py-2"
+          aria-label="Decline cookies"
+        >
+          Decline
+        </button>
+        <button
+          id="accept-cookies"
+          class="btn-primary text-sm px-6 py-2"
+          aria-label="Accept all cookies"
+        >
+          Accept All
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // TypeScript interfaces
+  interface ConsentData {
+    accepted: boolean;
+    timestamp: string;
+  }
+
+  interface CookieConsentAPI {
+    isAccepted: () => boolean;
+    getData: () => ConsentData | null;
+    revoke: () => void;
+  }
+
+  // Constants
+  const STORAGE_KEY = 'cookieConsent';
+  const BANNER_ID = 'cookie-consent';
+  const ACCEPT_BTN_ID = 'accept-cookies';
+  const DECLINE_BTN_ID = 'decline-cookies';
+
+  // Helper functions
+  function getConsentData(): ConsentData | null {
+    try {
+      const data = localStorage.getItem(STORAGE_KEY);
+      if (!data) return null;
+      return JSON.parse(data) as ConsentData;
+    } catch (error) {
+      console.error('Error reading cookie consent from localStorage:', error);
+      return null;
+    }
+  }
+
+  function setConsentData(accepted: boolean): void {
+    try {
+      const data: ConsentData = {
+        accepted,
+        timestamp: new Date().toISOString(),
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (error) {
+      console.error('Error saving cookie consent to localStorage:', error);
+    }
+  }
+
+  function showBanner(): void {
+    const banner = document.getElementById(BANNER_ID);
+    if (!banner) return;
+
+    // Slide up animation with slight delay
+    setTimeout(() => {
+      banner.style.transform = 'translateY(0)';
+    }, 100);
+  }
+
+  function hideBanner(): void {
+    const banner = document.getElementById(BANNER_ID);
+    if (!banner) return;
+
+    // Slide down animation
+    banner.style.transform = 'translateY(100%)';
+
+    // Remove from DOM after animation completes
+    setTimeout(() => {
+      banner.remove();
+    }, 300);
+  }
+
+  function handleAccept(): void {
+    setConsentData(true);
+    hideBanner();
+
+    // Dispatch custom event for future analytics integration
+    window.dispatchEvent(new CustomEvent('cookieConsentAccepted'));
+  }
+
+  function handleDecline(): void {
+    setConsentData(false);
+    hideBanner();
+
+    // Dispatch custom event
+    window.dispatchEvent(new CustomEvent('cookieConsentRejected'));
+  }
+
+  // Global API
+  const cookieConsentAPI: CookieConsentAPI = {
+    isAccepted: (): boolean => {
+      const data = getConsentData();
+      return data?.accepted === true;
+    },
+    getData: (): ConsentData | null => {
+      return getConsentData();
+    },
+    revoke: (): void => {
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+        // Reload page to show banner again
+        window.location.reload();
+      } catch (error) {
+        console.error('Error revoking cookie consent:', error);
+      }
+    },
+  };
+
+  // Expose global API
+  declare global {
+    interface Window {
+      cookieConsent: CookieConsentAPI;
+    }
+  }
+  window.cookieConsent = cookieConsentAPI;
+
+  // Initialize on page load
+  function init(): void {
+    const consentData = getConsentData();
+
+    // If consent already given (accept or decline), don't show banner
+    if (consentData !== null) {
+      const banner = document.getElementById(BANNER_ID);
+      if (banner) {
+        banner.remove();
+      }
+      return;
+    }
+
+    // Show banner for first-time visitors
+    showBanner();
+
+    // Add event listeners
+    const acceptBtn = document.getElementById(ACCEPT_BTN_ID);
+    const declineBtn = document.getElementById(DECLINE_BTN_ID);
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', handleAccept);
+    }
+
+    if (declineBtn) {
+      declineBtn.addEventListener('click', handleDecline);
+    }
+  }
+
+  // Run initialization
+  init();
+</script>
