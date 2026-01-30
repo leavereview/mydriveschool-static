@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mydriveschool.software/sitemap.xml
+Sitemap: https://mydriveschool.software/sitemap-index.xml
 
 Disallow: /api/
-Disallow: /_astro/
