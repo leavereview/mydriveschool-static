@@ -186,6 +186,32 @@ Banks may view independent startups as higher risk, potentially affecting loan t
 
 This assumes equal revenue—franchise brand recognition might generate more business, but the margin difference is substantial.
 
+---
+
+<div class="not-prose bg-gradient-to-br from-brand-red to-red-600 rounded-xl p-8 my-12">
+  <div class="flex items-start gap-6 text-white">
+    <svg class="w-12 h-12 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+    </svg>
+    <div>
+      <h3 class="text-2xl font-bold mb-3">Calculate Your Driving School Earnings</h3>
+      <p class="text-white/90 mb-4">
+        Model your potential income, costs, and profitability with our free calculator. Get your
+        effective hourly rate (what you actually earn per hour after discounts, no-shows, and expenses),
+        break-even analysis, and compare to UK ADI averages.
+      </p>
+      <a href="/driving-school-calculator/" class="inline-flex items-center gap-2 bg-white text-brand-red px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+        Run the Calculator
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+---
+
 ## Questions to Ask Franchisors
 
 ### Financial Questions

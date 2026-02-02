@@ -1,0 +1,1981 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Driving School Revenue Calculator — Free ADI Earnings & Profit Planner";
+const description = "Calculate your driving school's revenue, instructor earnings, and growth potential with our free calculator. Plan schedules, pricing, and profit margins with UK industry benchmarks.";
+
+// Additional schema markup for calculator
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mydriveschool.software/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Driving School Revenue Calculator",
+      "item": "https://mydriveschool.software/driving-school-calculator/"
+    }
+  ]
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Calculate Your Driving School Revenue and Profitability",
+  "description": "Step-by-step guide to calculate your driving school or ADI earnings, costs, and growth projections with UK industry benchmarks",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Choose Your Business Model",
+      "text": "Select whether you're a solo ADI or school owner. This determines which revenue and cost factors apply to your business."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Enter Your Schedule & Pricing",
+      "text": "Input your weekly teaching hours, hourly rate, utilization rate, and number of instructors (for school owners). Add any additional revenue streams."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Configure Additional Revenue",
+      "text": "Enable and configure supplementary income sources including theory training, intensive courses, mock tests, pass protection, and fleet services."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Enter Operating Costs",
+      "text": "Input your expenses including vehicle costs, fuel, insurance, licensing, marketing, software, and instructor payments (for school owners)."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Review Your Financial Dashboard",
+      "text": "Analyze your comprehensive financial picture including income, utilization, profitability, seasonal variations, and growth projections compared to UK industry benchmarks."
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schemaType="WebPage"
+>
+  <!-- Additional Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+
+  <!-- Hero Section -->
+  <section class="section bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="badge bg-brand-red-light text-brand-red mb-6 inline-flex">
+          Free Financial Planning Tool
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          Driving School Revenue Calculator
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+          Calculate ADI earnings, school owner profits, and growth potential with real UK industry benchmarks
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Content -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto prose-custom">
+        <div class="bg-white rounded-xl shadow-sm p-8 md:p-12">
+          <p class="text-lg text-text-secondary leading-relaxed mb-6">
+            Understanding your driving school's financial picture is essential whether you're a solo ADI managing your own diary or a school owner coordinating multiple instructors. Having clarity on your actual earnings, utilization rates, and cost structure helps you make informed decisions about pricing, scheduling, and growth.
+          </p>
+          <p class="text-lg text-text-secondary leading-relaxed mb-6">
+            This free driving school calculator helps you model realistic scenarios based on UK industry benchmarks drawn from thousands of ADIs and driving schools nationwide. Unlike generic calculators, this tool understands the specific revenue streams and cost structures of UK driving instruction—from hourly lesson rates and block booking discounts to franchise fees and seasonal demand variations.
+          </p>
+
+          <h2 class="text-2xl font-bold text-brand-navy mt-8 mb-4">What You'll Discover</h2>
+          <ul class="space-y-3 text-text-secondary mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span><strong>True hourly earnings</strong> after accounting for prep time, admin work, unfilled hours, and all vehicle and operating costs</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span><strong>Utilization analysis</strong> showing how efficiently you're filling your available teaching hours and the revenue impact of empty slots</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span><strong>Seasonal revenue patterns</strong> with month-by-month projections reflecting June-August peaks and December-January troughs typical in the UK market</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span><strong>Growth projections</strong> for school owners showing your trajectory as you add instructors, with realistic scaling economics and margin impacts</span>
+            </li>
+          </ul>
+
+          <p class="text-lg text-text-secondary leading-relaxed mb-8">
+            The calculator uses real-world data from the UK driving instruction industry. Average ADI earnings are £34,963 annually, with typical hourly rates between £28-36 and utilization rates of 60-65%. Understanding where your numbers sit relative to these benchmarks helps identify opportunities to increase earnings through better scheduling, pricing optimization, or operational efficiency.
+          </p>
+
+          <div class="bg-brand-red-light border-l-4 border-brand-red p-6 rounded-lg">
+            <h3 class="text-lg font-semibold text-brand-navy mb-2">For ADIs & School Owners</h3>
+            <p class="text-text-secondary">
+              Whether you're a sole trader ADI, franchisee, or school owner with multiple instructors, this calculator adapts to your business model. All your data stays private—calculations happen entirely in your browser, nothing is stored or transmitted.
+            </p>
+          </div>
+
+          <div class="mt-8 text-center">
+            <p class="text-sm text-text-tertiary mb-4">
+              Already using <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">driving school scheduling software</a>? This calculator complements your existing systems by providing strategic financial planning insights. Learn more about <a href="/driving-school-management-software/" class="text-brand-red hover:underline">driving school management software</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-6xl mx-auto">
+        <div id="calculator-app" class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <!-- Progress bar -->
+          <div class="bg-gray-100 h-2">
+            <div id="progress-bar" class="bg-brand-red h-full transition-all duration-300" style="width: 20%"></div>
+          </div>
+
+          <!-- Calculator content -->
+          <div class="p-6 md:p-10">
+            <!-- Step indicators -->
+            <div class="flex justify-between items-center mb-8">
+              <div class="flex-1 text-center step-indicator active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Model</div>
+              </div>
+              <div class="flex-1 text-center step-indicator" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Schedule</div>
+              </div>
+              <div class="flex-1 text-center step-indicator" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Revenue</div>
+              </div>
+              <div class="flex-1 text-center step-indicator" data-step="4">
+                <div class="step-number">4</div>
+                <div class="step-label">Costs</div>
+              </div>
+              <div class="flex-1 text-center step-indicator" data-step="5">
+                <div class="step-number">5</div>
+                <div class="step-label">Results</div>
+              </div>
+            </div>
+
+            <!-- Step 1: Business Model -->
+            <div id="step-1" class="calculator-step">
+              <h2 class="text-3xl font-bold text-brand-navy mb-6">Your Business Model</h2>
+              <p class="text-text-secondary mb-8">Are you a solo ADI or do you run a school with multiple instructors?</p>
+
+              <div class="space-y-4">
+                <label class="flex items-start gap-4 p-6 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-brand-red transition-all">
+                  <input type="radio" name="business-model" value="solo" class="mt-1" checked>
+                  <div>
+                    <div class="font-semibold text-brand-navy text-lg mb-2">Solo ADI</div>
+                    <p class="text-sm text-text-secondary">I'm a self-employed driving instructor managing my own diary and pupils</p>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-4 p-6 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-brand-red transition-all">
+                  <input type="radio" name="business-model" value="school" class="mt-1">
+                  <div>
+                    <div class="font-semibold text-brand-navy text-lg mb-2">School Owner</div>
+                    <p class="text-sm text-text-secondary">I own a driving school and employ or franchise multiple instructors</p>
+                  </div>
+                </label>
+              </div>
+
+              <div class="mt-8 bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                <h4 class="font-semibold text-brand-navy mb-2">Calculator Customization</h4>
+                <p class="text-sm text-text-secondary">
+                  Your selection determines which revenue streams, costs, and metrics are most relevant. Solo ADIs see personal earnings focus, while school owners get multi-instructor scaling analysis.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: Schedule & Pricing -->
+            <div id="step-2" class="calculator-step hidden">
+              <h2 class="text-3xl font-bold text-brand-navy mb-6">Schedule & Pricing</h2>
+              <p class="text-text-secondary mb-8">Tell us about your weekly teaching schedule and rates.</p>
+
+              <div class="space-y-6">
+                <div>
+                  <label for="currency" class="block text-sm font-semibold text-brand-navy mb-2">Currency</label>
+                  <select id="currency" class="input">
+                    <option value="£" selected>£ (GBP)</option>
+                    <option value="€">€ (EUR)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="weekly-hours" class="block text-sm font-semibold text-brand-navy mb-2">
+                    Weekly Available Teaching Hours
+                    <span class="text-text-tertiary font-normal">(10-70)</span>
+                  </label>
+                  <input type="number" id="weekly-hours" class="input" value="40" min="10" max="70">
+                  <p class="text-sm text-text-tertiary mt-2">Maximum hours you could teach if fully booked</p>
+                </div>
+
+                <div>
+                  <label for="hourly-rate" class="block text-sm font-semibold text-brand-navy mb-2">
+                    Hourly Lesson Rate
+                    <span class="text-text-tertiary font-normal" id="rate-range">(£20-£50)</span>
+                  </label>
+                  <input type="number" id="hourly-rate" class="input" value="32" min="20" max="50">
+                  <p class="text-sm text-text-tertiary mt-2">UK average: £28-36 per hour</p>
+                </div>
+
+                <div>
+                  <label for="utilization" class="block text-sm font-semibold text-brand-navy mb-2">
+                    Utilization Rate (%)
+                    <span class="text-text-tertiary font-normal">(30-100%)</span>
+                  </label>
+                  <input type="number" id="utilization" class="input" value="65" min="30" max="100">
+                  <p class="text-sm text-text-tertiary mt-2">Percentage of available hours actually filled with pupils. UK average: 60-65%</p>
+                </div>
+
+                <!-- School owner only -->
+                <div id="instructor-count-field" class="hidden">
+                  <label for="instructor-count" class="block text-sm font-semibold text-brand-navy mb-2">
+                    Number of Instructors
+                    <span class="text-text-tertiary font-normal">(Including yourself, 1-20)</span>
+                  </label>
+                  <input type="number" id="instructor-count" class="input" value="1" min="1" max="20">
+                  <p class="text-sm text-text-tertiary mt-2">Total ADIs working in your school</p>
+                </div>
+
+                <div>
+                  <label for="block-discount" class="block text-sm font-semibold text-brand-navy mb-2">
+                    Block Booking Discount (%)
+                    <span class="text-text-tertiary font-normal">(0-30%)</span>
+                  </label>
+                  <input type="number" id="block-discount" class="input" value="10" min="0" max="30" step="1">
+                  <p class="text-sm text-text-tertiary mt-2">Average discount offered for block bookings (10 or 20 hours)</p>
+                </div>
+
+                <div>
+                  <label for="block-booking-pct" class="block text-sm font-semibold text-brand-navy mb-2">
+                    % of Students on Block Bookings
+                    <span class="text-text-tertiary font-normal">(0-100%)</span>
+                  </label>
+                  <input type="number" id="block-booking-pct" class="input" value="70" min="0" max="100">
+                  <p class="text-sm text-text-tertiary mt-2">Percentage of your pupils who pre-purchase hour blocks</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Additional Revenue -->
+            <div id="step-3" class="calculator-step hidden">
+              <h2 class="text-3xl font-bold text-brand-navy mb-6">Additional Revenue Streams</h2>
+              <p class="text-text-secondary mb-8">Enable supplementary income sources beyond standard hourly lessons.</p>
+
+              <div class="space-y-4">
+                <!-- Theory training -->
+                <div class="card">
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <h3 class="text-lg font-semibold text-brand-navy">Theory Test Training</h3>
+                      <p class="text-sm text-text-tertiary">Theory training sessions or packages</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                      <input type="checkbox" id="enable-theory" class="sr-only peer">
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div id="theory-inputs" class="space-y-4 hidden">
+                    <div>
+                      <label for="theory-fee" class="block text-sm font-medium text-brand-navy mb-2">Price Per Theory Package</label>
+                      <input type="number" id="theory-fee" class="input" value="50" min="0">
+                    </div>
+                    <div>
+                      <label for="theory-per-month" class="block text-sm font-medium text-brand-navy mb-2">Theory Students Per Month</label>
+                      <input type="number" id="theory-per-month" class="input" value="4" min="0" max="50">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Intensive courses -->
+                <div class="card">
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <h3 class="text-lg font-semibold text-brand-navy">Intensive/Crash Courses</h3>
+                      <p class="text-sm text-text-tertiary">Week-long intensive driving courses</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                      <input type="checkbox" id="enable-intensive" class="sr-only peer">
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div id="intensive-inputs" class="space-y-4 hidden">
+                    <div>
+                      <label for="intensive-fee" class="block text-sm font-medium text-brand-navy mb-2">Price Per Course</label>
+                      <input type="number" id="intensive-fee" class="input" value="800" min="0">
+                    </div>
+                    <div>
+                      <label for="intensive-per-month" class="block text-sm font-medium text-brand-navy mb-2">Courses Per Month</label>
+                      <input type="number" id="intensive-per-month" class="input" value="2" min="0" max="20">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mock tests -->
+                <div class="card">
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <h3 class="text-lg font-semibold text-brand-navy">Mock Driving Tests</h3>
+                      <p class="text-sm text-text-tertiary">Pre-test assessment sessions</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                      <input type="checkbox" id="enable-mock" class="sr-only peer">
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div id="mock-inputs" class="space-y-4 hidden">
+                    <div>
+                      <label for="mock-fee" class="block text-sm font-medium text-brand-navy mb-2">Price Per Mock Test</label>
+                      <input type="number" id="mock-fee" class="input" value="45" min="0">
+                    </div>
+                    <div>
+                      <label for="mock-per-month" class="block text-sm font-medium text-brand-navy mb-2">Mock Tests Per Month</label>
+                      <input type="number" id="mock-per-month" class="input" value="6" min="0" max="50">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pass protection -->
+                <div class="card">
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <h3 class="text-lg font-semibold text-brand-navy">Pass Protection Insurance</h3>
+                      <p class="text-sm text-text-tertiary">Free test retake insurance sold to pupils</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                      <input type="checkbox" id="enable-protection" class="sr-only peer">
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div id="protection-inputs" class="space-y-4 hidden">
+                    <div>
+                      <label for="protection-fee" class="block text-sm font-medium text-brand-navy mb-2">Commission Per Sale</label>
+                      <input type="number" id="protection-fee" class="input" value="15" min="0">
+                    </div>
+                    <div>
+                      <label for="protection-per-month" class="block text-sm font-medium text-brand-navy mb-2">Sales Per Month</label>
+                      <input type="number" id="protection-per-month" class="input" value="8" min="0" max="100">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fleet services (school owner only) -->
+                <div class="card" id="fleet-services-card" style="display: none;">
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <h3 class="text-lg font-semibold text-brand-navy">Fleet Services / B2B Contracts</h3>
+                      <p class="text-sm text-text-tertiary">Corporate driver training contracts</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                      <input type="checkbox" id="enable-fleet" class="sr-only peer">
+                      <div class="toggle-switch"></div>
+                    </label>
+                  </div>
+                  <div id="fleet-inputs" class="space-y-4 hidden">
+                    <div>
+                      <label for="fleet-monthly" class="block text-sm font-medium text-brand-navy mb-2">Average Monthly Revenue</label>
+                      <input type="number" id="fleet-monthly" class="input" value="500" min="0">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Additional revenue summary -->
+                <div class="bg-brand-red-light border-l-4 border-brand-red p-6 rounded-lg">
+                  <h4 class="font-semibold text-brand-navy mb-2">Additional Monthly Revenue</h4>
+                  <p class="text-3xl font-bold text-brand-red" id="additional-revenue-preview">£0</p>
+                  <p class="text-sm text-text-tertiary mt-2">Beyond core hourly lessons</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Operating Costs -->
+            <div id="step-4" class="calculator-step hidden">
+              <h2 class="text-3xl font-bold text-brand-navy mb-6">Operating Costs</h2>
+              <p class="text-text-secondary mb-8">Enter your monthly operating expenses to calculate profitability.</p>
+
+              <div class="space-y-6">
+                <div>
+                  <label for="vehicle-cost" class="block text-sm font-semibold text-brand-navy mb-2">Vehicle Cost (Monthly)</label>
+                  <input type="number" id="vehicle-cost" class="input" value="350" min="0">
+                  <p class="text-sm text-text-tertiary mt-2">Lease, HP, or depreciation equivalent</p>
+                </div>
+
+                <div>
+                  <label for="fuel-cost" class="block text-sm font-semibold text-brand-navy mb-2">Fuel</label>
+                  <input type="number" id="fuel-cost" class="input" value="280" min="0">
+                </div>
+
+                <div>
+                  <label for="insurance-cost" class="block text-sm font-semibold text-brand-navy mb-2">Insurance (Vehicle + Business)</label>
+                  <input type="number" id="insurance-cost" class="input" value="180" min="0">
+                </div>
+
+                <div>
+                  <label for="maintenance" class="block text-sm font-semibold text-brand-navy mb-2">Maintenance & Servicing</label>
+                  <input type="number" id="maintenance" class="input" value="80" min="0">
+                </div>
+
+                <div>
+                  <label for="licensing" class="block text-sm font-semibold text-brand-navy mb-2">ADI License & DBS</label>
+                  <input type="number" id="licensing" class="input" value="20" min="0">
+                  <p class="text-sm text-text-tertiary mt-2">ADI badge, standards check, DBS (averaged monthly)</p>
+                </div>
+
+                <!-- School owner only -->
+                <div id="instructor-payment-field" class="hidden">
+                  <label class="block text-sm font-semibold text-brand-navy mb-2">Instructor Payment Model</label>
+                  <div class="flex gap-4 mb-3">
+                    <label class="flex items-center">
+                      <input type="radio" name="instructor-payment" value="franchise" class="mr-2" checked>
+                      <span class="text-sm">Franchise (they pay you)</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input type="radio" name="instructor-payment" value="employed" class="mr-2">
+                      <span class="text-sm">Employed (you pay them)</span>
+                    </label>
+                  </div>
+                  <input type="number" id="instructor-payment" class="input" value="150" min="0" placeholder="Weekly franchise fee or instructor wage">
+                  <p class="text-sm text-text-tertiary mt-2">Franchise: Weekly fee they pay you. Employed: Weekly wage you pay them.</p>
+                </div>
+
+                <div>
+                  <label for="marketing-spend" class="block text-sm font-semibold text-brand-navy mb-2">Marketing & Advertising</label>
+                  <input type="number" id="marketing-spend" class="input" value="120" min="0">
+                </div>
+
+                <div>
+                  <label for="software-admin" class="block text-sm font-semibold text-brand-navy mb-2">Software & Admin Tools</label>
+                  <input type="number" id="software-admin" class="input" value="30" min="0">
+                </div>
+
+                <div>
+                  <label for="other-costs" class="block text-sm font-semibold text-brand-navy mb-2">Other Monthly Costs</label>
+                  <input type="number" id="other-costs" class="input" value="0" min="0">
+                  <p class="text-sm text-text-tertiary mt-2">Accounting, phone, office, etc.</p>
+                </div>
+
+                <!-- Cost breakdown preview -->
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg">
+                  <h4 class="font-semibold text-brand-navy mb-4">Cost Breakdown</h4>
+                  <div id="cost-breakdown-list" class="space-y-2 text-sm"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5: Results -->
+            <div id="step-5" class="calculator-step hidden">
+              <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Your Driving School Financial Dashboard</h2>
+                <p class="text-lg text-text-secondary">Comprehensive analysis of your earnings and profitability</p>
+              </div>
+
+              <div id="results-content" class="space-y-6">
+                <!-- Results will be dynamically generated -->
+              </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="flex justify-between items-center mt-10 pt-6 border-t border-gray-200">
+              <button id="btn-back" class="btn-secondary hidden">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back
+              </button>
+              <div id="back-spacer"></div>
+              <button id="btn-next" class="btn-primary ml-auto">
+                Next
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Content -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl shadow-sm p-8 md:p-12">
+          <h2 class="text-3xl font-bold text-brand-navy mb-6">How to Increase Your Driving School Revenue</h2>
+
+          <p class="text-lg text-text-secondary leading-relaxed mb-6">
+            The calculator reveals your current financial position—but what can you do to improve it? Successful ADIs and school owners focus on three key areas: maximizing utilization (filling empty hours), increasing revenue per teaching hour, and managing costs efficiently.
+          </p>
+
+          <h3 class="text-2xl font-bold text-brand-navy mb-4">Maximizing Utilization: The Biggest Earnings Lever</h3>
+
+          <p class="text-text-secondary mb-4">
+            If your calculator shows utilization below 60%, you have significant earnings potential locked in unfilled hours. Every empty hour represents lost revenue that will never return. The difference between 50% and 70% utilization can mean £8,000-12,000+ additional annual income for solo ADIs.
+          </p>
+
+          <ul class="space-y-3 text-text-secondary mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Efficient diary management</strong> reduces gaps between pupils. Using <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">professional scheduling software</a> helps optimize bookings and minimize drive time between pupils.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Block booking incentives</strong> encourage pupils to commit to multiple hours upfront, securing guaranteed future revenue and reducing last-minute cancellations.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Consistent marketing presence</strong> ensures a steady pipeline of new pupils to fill slots from pupils who pass or cancel. Even £100-150 monthly on targeted local ads can dramatically improve utilization.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Strategic test-date timing</strong> helps you plan for gaps when pupils pass, allowing you to onboard new learners before slots empty.</span>
+            </li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-brand-navy mb-4 mt-8">Revenue Diversification Beyond Hourly Lessons</h3>
+
+          <p class="text-text-secondary mb-4">
+            Most ADIs generate 85-95% of income from standard hourly lessons, but the most profitable instructors diversify. If your calculator shows you're relying entirely on hourly rates, consider these proven additional revenue streams:
+          </p>
+
+          <ul class="space-y-3 text-text-secondary mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Intensive courses</strong> command premium pricing (£700-1,000+) and efficiently fill multiple consecutive days. Just 2-3 intensive courses monthly can add £1,500-2,500 to monthly revenue.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Theory test training</strong> packages (£40-60) provide low-effort supplementary income. Many ADIs offer online theory support, requiring minimal time investment.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Pass protection insurance</strong> commissions (£10-20 per sale) add up quickly. If 50% of your pupils purchase this, you're generating £100-200+ monthly passive income.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span><strong>Mock tests</strong> (£40-50) help pupils assess readiness while generating additional income. These sessions often lead to booking more lessons before the real test.</span>
+            </li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-brand-navy mb-4 mt-8">Understanding Your True Effective Hourly Rate</h3>
+
+          <p class="text-text-secondary mb-4">
+            The calculator reveals your effective hourly rate—what you actually earn per hour when accounting for all costs and unfilled time. Many ADIs charging £32 per lesson find their effective rate is only £18-22 after expenses and utilization losses.
+          </p>
+
+          <p class="text-text-secondary mb-6">
+            If your effective rate is below £20, focus first on utilization (cheaper than raising prices) or cost reduction (vehicle efficiency, insurance shopping). If you're consistently hitting 70%+ utilization, that's when pricing increases make sense. Learn more about <a href="/driving-school-management-software/" class="text-brand-red hover:underline">driving school management systems</a> that help track these metrics automatically.
+          </p>
+
+          <h3 class="text-2xl font-bold text-brand-navy mb-4 mt-8">Cost Management: Every £100 Saved Increases Take-Home</h3>
+
+          <p class="text-text-secondary mb-4">
+            Your calculator's cost breakdown reveals where money goes. Compare your numbers to these UK ADI benchmarks:
+          </p>
+
+          <ul class="space-y-2 text-text-secondary mb-6">
+            <li><strong>Fuel:</strong> Typically £200-350 monthly depending on area and vehicle efficiency. Hybrid vehicles can reduce this by 30-40%.</li>
+            <li><strong>Insurance:</strong> ADI insurance ranges £1,200-2,500 annually (£100-210 monthly). Shopping annually saves £200-400 on average.</li>
+            <li><strong>Vehicle costs:</strong> Leasing typically £250-400 monthly for suitable vehicles. Outright ownership reduces this to depreciation (£150-250 monthly equivalent).</li>
+            <li><strong>Marketing:</strong> £50-200 monthly is typical. More established ADIs rely on referrals and spend less; new ADIs need consistent investment to build their diary.</li>
+          </ul>
+
+          <p class="text-text-secondary mb-6">
+            If any category is significantly above benchmarks, that's an opportunity. Sometimes the highest-impact change isn't adding revenue—it's renegotiating insurance, switching to a more fuel-efficient vehicle, or using proper <a href="/driving-school-software/" class="text-brand-red hover:underline">driving school software</a> to reduce admin time waste.
+          </p>
+
+          <h3 class="text-2xl font-bold text-brand-navy mb-4 mt-8">Understanding Seasonal Variations</h3>
+
+          <p class="text-text-secondary mb-6">
+            The calculator's seasonal revenue chart shows typical UK patterns. June-August see peak demand (100-105% of average) as students book lessons during school holidays. December-January experience troughs (65-75%) due to weather, holidays, and reduced learner motivation. Successful ADIs plan for this—building cash reserves during peak months to sustain through quiet periods or using winter months for vehicle maintenance and business development.
+          </p>
+
+          <div class="bg-brand-red-light border-l-4 border-brand-red p-6 rounded-lg my-8">
+            <h4 class="text-lg font-semibold text-brand-navy mb-2">Industry Insight: School Owner Economics</h4>
+            <p class="text-text-secondary">
+              School owners face a critical decision: franchise or employment models. Franchise models (instructors pay you £120-180 weekly) generate predictable income with minimal admin but lower per-instructor margins. Employment models (you pay instructors £450-600 weekly) offer higher margins but require managing payroll, holiday pay, and sick cover. Most schools start with franchise models and transition partially to employment as they scale and build operational systems.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-brand-navy mb-6 mt-12">Frequently Asked Questions</h2>
+
+          <div class="space-y-4">
+            <details class="group border border-gray-200 rounded-lg">
+              <summary class="cursor-pointer p-6 font-semibold text-brand-navy flex justify-between items-center hover:bg-gray-50">
+                What is the average ADI salary in the UK?
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="p-6 pt-0 text-text-secondary">
+                <p>Average ADI earnings in the UK are £34,963 annually according to recent industry surveys. However, this varies significantly based on location, utilization rates, and pricing. ADIs in London and Southeast England typically earn £38,000-48,000 due to higher hourly rates (£35-40). Those outside major cities average £28,000-38,000. High-performing ADIs with 70%+ utilization and diversified revenue streams earn £42,000-52,000+. These figures represent gross income before tax and business expenses—net take-home is typically 50-65% of gross depending on cost structure.</p>
+              </div>
+            </details>
+
+            <details class="group border border-gray-200 rounded-lg">
+              <summary class="cursor-pointer p-6 font-semibold text-brand-navy flex justify-between items-center hover:bg-gray-50">
+                What is a good utilization rate for a driving instructor?
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="p-6 pt-0 text-text-secondary">
+                <p>UK ADI utilization rates average 60-65%, meaning instructors fill 60-65% of their available teaching hours. Utilization above 70% is excellent and indicates strong diary management and consistent pupil pipeline. Rates below 50% suggest issues with marketing, booking efficiency, or pupil retention. New ADIs typically start at 30-40% utilization in their first 6 months, building to 60%+ by year two. Established ADIs with waiting lists achieve 75-85% utilization. Above 85% is difficult to sustain long-term without burning out, as it leaves no buffer for cancellations, holidays, or admin time.</p>
+              </div>
+            </details>
+
+            <details class="group border border-gray-200 rounded-lg">
+              <summary class="cursor-pointer p-6 font-semibold text-brand-navy flex justify-between items-center hover:bg-gray-50">
+                How much does it cost to run a driving school car per month?
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="p-6 pt-0 text-text-secondary">
+                <p>Total monthly running costs for a dual-control driving school vehicle typically range £850-1,200. This includes: Vehicle lease/finance (£250-400), Fuel (£200-350 depending on mileage and efficiency), Insurance (£100-210 averaged monthly), Maintenance and servicing (£60-100), MOT and road tax (£15-25 averaged). Dual controls and signage add approximately £40-60 monthly when amortized. These costs assume average teaching of 30-40 hours weekly. Lower mileage reduces fuel and maintenance; higher mileage increases both. Hybrid vehicles reduce fuel costs by 30-40% but may have higher lease costs initially.</p>
+              </div>
+            </details>
+
+            <details class="group border border-gray-200 rounded-lg">
+              <summary class="cursor-pointer p-6 font-semibold text-brand-navy flex justify-between items-center hover:bg-gray-50">
+                Should I offer block booking discounts?
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="p-6 pt-0 text-text-secondary">
+                <p>Yes, block booking discounts typically benefit both ADI and pupil. Most UK ADIs offer 5-10% discount on 10-hour blocks, or 10-15% on 20-hour blocks. The benefits for instructors include: Guaranteed future revenue reducing diary gaps, Upfront cash flow helping with business expenses, Reduced admin from processing fewer individual payments, and Pupil commitment leading to more consistent progression. The discount costs are typically offset by these efficiency gains. If your utilization is below 60%, block bookings are essential for diary stability. Even at 70%+ utilization, blocks provide cash flow benefits. Avoid discounts over 20%—they erode profit margins more than the stability benefits justify.</p>
+              </div>
+            </details>
+
+            <details class="group border border-gray-200 rounded-lg">
+              <summary class="cursor-pointer p-6 font-semibold text-brand-navy flex justify-between items-center hover:bg-gray-50">
+                How do driving school owners make money?
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="p-6 pt-0 text-text-secondary">
+                <p>Driving school owners generate income through multiple channels depending on their model. Franchise models: Instructors pay weekly fees (£120-180) to use the school's brand, insurance, and pupil leads. With 5-10 franchisees, this generates £2,400-7,200 monthly before marketing and admin costs. Employment models: Schools pay instructors (£450-600 weekly) and keep the margin between lesson revenue and instructor costs. With proper systems, margins of £200-400 per instructor per week are achievable. Hybrid models combine both, with some employed instructors and some franchisees. Additionally, school owners earn from theory training, intensive courses, and sometimes test booking fees. Successful school owners with 8-12 instructors typically earn £40,000-80,000+ annually, though this requires significant operational and marketing systems.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="mt-12 p-8 bg-gradient-to-br from-brand-navy to-gray-900 rounded-xl text-white">
+            <h3 class="text-2xl font-bold mb-4">Track these metrics automatically?</h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              MyDriveSchool automatically monitors your utilization, revenue per hour, pupil pipeline, and seasonal trends—so you always know exactly where your business stands. No more spreadsheets or manual calculations. Get real-time insights that help you maximize earnings.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/contact/" class="btn-primary text-center">Start Your Free Trial</a>
+              <a href="/driving-school-management-software/" class="btn-secondary text-center bg-white/10 border-white/20 text-white hover:bg-white/20">See How It Works</a>
+            </div>
+          </div>
+
+          <div class="mt-8 p-8 bg-blue-50 rounded-xl border border-blue-200">
+            <h3 class="text-xl font-bold text-brand-navy mb-4">Need better diary management?</h3>
+            <p class="text-text-secondary mb-6">
+              MyDriveSchool's intelligent <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">scheduling system</a> optimizes your diary automatically, reduces gaps between pupils, and maximizes your utilization rate.
+            </p>
+            <a href="/driving-school-scheduling-software/" class="btn-primary">Explore Scheduling Features</a>
+          </div>
+
+          <div class="mt-8 text-sm text-text-tertiary">
+            <p>Related resources: <a href="/driving-school-software/" class="text-brand-red hover:underline">Driving School Software</a> | <a href="/driving-school-management-software/" class="text-brand-red hover:underline">Management Software</a> | <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">Scheduling Software</a> | <a href="/free-driving-school-software/" class="text-brand-red hover:underline">Free Software Options</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the average ADI salary in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Average ADI earnings in the UK are £34,963 annually according to recent industry surveys. High-performing ADIs with 70%+ utilization and diversified revenue streams earn £42,000-52,000+. These figures represent gross income before tax and business expenses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good utilization rate for a driving instructor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UK ADI utilization rates average 60-65%, meaning instructors fill 60-65% of their available teaching hours. Utilization above 70% is excellent and indicates strong diary management and consistent pupil pipeline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to run a driving school car per month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Total monthly running costs for a dual-control driving school vehicle typically range £850-1,200. This includes vehicle lease/finance (£250-400), fuel (£200-350), insurance (£100-210), and maintenance (£60-100)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I offer block booking discounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, block booking discounts typically benefit both ADI and pupil. Most UK ADIs offer 5-10% discount on 10-hour blocks, or 10-15% on 20-hour blocks. The benefits include guaranteed future revenue, upfront cash flow, reduced admin, and pupil commitment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do driving school owners make money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Driving school owners generate income through franchise fees (£120-180 weekly per instructor) or employment margins (£200-400 weekly per instructor). Successful school owners with 8-12 instructors typically earn £40,000-80,000+ annually."
+      }
+    }
+  ]
+})} />
+
+<!-- Software Application Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Driving School Revenue Calculator",
+  "applicationCategory": "BusinessApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP"
+  },
+  "description": "Free calculator for ADIs and driving school owners to model revenue, earnings, and growth projections with UK industry benchmarks.",
+  "operatingSystem": "Web Browser",
+  "featureList": [
+    "ADI earnings calculation",
+    "Utilization rate analysis",
+    "Operating cost breakdown",
+    "Effective hourly rate calculation",
+    "Seasonal revenue projection",
+    "School owner growth modeling"
+  ]
+})} />
+
+<style>
+  /* Step indicators */
+  .step-indicator {
+    position: relative;
+  }
+
+  .step-indicator:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 60%;
+    right: -40%;
+    height: 2px;
+    background: #e5e7eb;
+  }
+
+  .step-indicator.active:not(:last-child)::after,
+  .step-indicator.completed:not(:last-child)::after {
+    background: #E94560;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s;
+  }
+
+  .step-indicator.active .step-number,
+  .step-indicator.completed .step-number {
+    background: #E94560;
+    color: white;
+  }
+
+  .step-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    transition: color 0.3s;
+  }
+
+  .step-indicator.active .step-label,
+  .step-indicator.completed .step-label {
+    color: #1A1A2E;
+  }
+
+  /* Toggle switch */
+  .toggle-switch {
+    width: 56px;
+    height: 28px;
+    background: #e5e7eb;
+    border-radius: 14px;
+    position: relative;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .toggle-switch::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  input:checked + .toggle-switch {
+    background: #E94560;
+  }
+
+  input:checked + .toggle-switch::after {
+    transform: translateX(28px);
+  }
+
+  /* Print styles */
+  @media print {
+    nav, footer, .calculator-step:not(#step-5) {
+      display: none !important;
+    }
+
+    #step-5 {
+      display: block !important;
+    }
+
+    .section {
+      padding: 20px 0;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  /* Custom prose styles */
+  .prose-custom p {
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+  }
+
+  .prose-custom h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose-custom h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+</style>
+
+<script>
+  // Calculator State
+  let currentStep = 1;
+  const totalSteps = 5;
+  let businessModel = 'solo';
+
+  // DOM Elements
+  const progressBar = document.getElementById('progress-bar') as HTMLElement;
+  const btnBack = document.getElementById('btn-back') as HTMLButtonElement;
+  const btnNext = document.getElementById('btn-next') as HTMLButtonElement;
+  const backSpacer = document.getElementById('back-spacer') as HTMLElement;
+
+  // Currency handling
+  let currencySymbol = '£';
+  const currencySelect = document.getElementById('currency') as HTMLSelectElement;
+
+  currencySelect?.addEventListener('change', () => {
+    currencySymbol = currencySelect.value;
+    updateRateRange();
+    updateAdditionalRevenue();
+  });
+
+  function updateRateRange() {
+    const rateRangeEl = document.getElementById('rate-range');
+    if (rateRangeEl) {
+      rateRangeEl.textContent = `(${currencySymbol}20-${currencySymbol}50)`;
+    }
+  }
+
+  // Business model selection
+  document.querySelectorAll('input[name="business-model"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      businessModel = (e.target as HTMLInputElement).value;
+      updateBusinessModelFields();
+    });
+  });
+
+  function updateBusinessModelFields() {
+    const instructorCountField = document.getElementById('instructor-count-field');
+    const instructorPaymentField = document.getElementById('instructor-payment-field');
+    const fleetServicesCard = document.getElementById('fleet-services-card');
+
+    if (businessModel === 'school') {
+      instructorCountField?.classList.remove('hidden');
+      instructorPaymentField?.classList.remove('hidden');
+      if (fleetServicesCard) fleetServicesCard.style.display = 'block';
+    } else {
+      instructorCountField?.classList.add('hidden');
+      instructorPaymentField?.classList.add('hidden');
+      if (fleetServicesCard) fleetServicesCard.style.display = 'none';
+    }
+  }
+
+  // Step navigation
+  function showStep(step: number) {
+    // Hide all steps
+    for (let i = 1; i <= totalSteps; i++) {
+      const stepEl = document.getElementById(`step-${i}`);
+      if (stepEl) {
+        stepEl.classList.add('hidden');
+      }
+    }
+
+    // Show current step
+    const currentStepEl = document.getElementById(`step-${step}`);
+    if (currentStepEl) {
+      currentStepEl.classList.remove('hidden');
+    }
+
+    // Update step indicators
+    document.querySelectorAll('.step-indicator').forEach((indicator, index) => {
+      indicator.classList.remove('active', 'completed');
+      if (index + 1 < step) {
+        indicator.classList.add('completed');
+      } else if (index + 1 === step) {
+        indicator.classList.add('active');
+      }
+    });
+
+    // Update progress bar
+    const progress = (step / totalSteps) * 100;
+    if (progressBar) {
+      progressBar.style.width = `${progress}%`;
+    }
+
+    // Update navigation buttons
+    if (step === 1) {
+      btnBack.classList.add('hidden');
+      backSpacer.classList.remove('hidden');
+    } else {
+      btnBack.classList.remove('hidden');
+      backSpacer.classList.add('hidden');
+    }
+
+    if (step === totalSteps) {
+      btnNext.classList.add('hidden');
+      generateResults();
+    } else {
+      btnNext.classList.remove('hidden');
+      btnNext.innerHTML = `Next<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>`;
+    }
+
+    // Special handling for step 4 (cost breakdown preview)
+    if (step === 4) {
+      updateCostBreakdown();
+    }
+  }
+
+  btnNext?.addEventListener('click', () => {
+    if (currentStep < totalSteps) {
+      currentStep++;
+      showStep(currentStep);
+      document.getElementById('calculator-app')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  btnBack?.addEventListener('click', () => {
+    if (currentStep > 1) {
+      currentStep--;
+      showStep(currentStep);
+      document.getElementById('calculator-app')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // Toggle switches for revenue streams
+  const revenueToggles = [
+    { checkbox: 'enable-theory', inputs: 'theory-inputs' },
+    { checkbox: 'enable-intensive', inputs: 'intensive-inputs' },
+    { checkbox: 'enable-mock', inputs: 'mock-inputs' },
+    { checkbox: 'enable-protection', inputs: 'protection-inputs' },
+    { checkbox: 'enable-fleet', inputs: 'fleet-inputs' }
+  ];
+
+  revenueToggles.forEach(({ checkbox, inputs }) => {
+    const checkboxEl = document.getElementById(checkbox) as HTMLInputElement;
+    const inputsEl = document.getElementById(inputs) as HTMLElement;
+
+    checkboxEl?.addEventListener('change', () => {
+      if (checkboxEl.checked) {
+        inputsEl.classList.remove('hidden');
+      } else {
+        inputsEl.classList.add('hidden');
+      }
+      updateAdditionalRevenue();
+    });
+
+    // Also update on input changes
+    inputsEl?.querySelectorAll('input').forEach(input => {
+      input.addEventListener('input', updateAdditionalRevenue);
+    });
+  });
+
+  function updateAdditionalRevenue() {
+    let additionalMonthly = 0;
+
+    // Theory training
+    const enableTheory = (document.getElementById('enable-theory') as HTMLInputElement)?.checked;
+    if (enableTheory) {
+      const theoryFee = parseFloat((document.getElementById('theory-fee') as HTMLInputElement)?.value || '0');
+      const theoryPerMonth = parseFloat((document.getElementById('theory-per-month') as HTMLInputElement)?.value || '0');
+      additionalMonthly += theoryFee * theoryPerMonth;
+    }
+
+    // Intensive courses
+    const enableIntensive = (document.getElementById('enable-intensive') as HTMLInputElement)?.checked;
+    if (enableIntensive) {
+      const intensiveFee = parseFloat((document.getElementById('intensive-fee') as HTMLInputElement)?.value || '0');
+      const intensivePerMonth = parseFloat((document.getElementById('intensive-per-month') as HTMLInputElement)?.value || '0');
+      additionalMonthly += intensiveFee * intensivePerMonth;
+    }
+
+    // Mock tests
+    const enableMock = (document.getElementById('enable-mock') as HTMLInputElement)?.checked;
+    if (enableMock) {
+      const mockFee = parseFloat((document.getElementById('mock-fee') as HTMLInputElement)?.value || '0');
+      const mockPerMonth = parseFloat((document.getElementById('mock-per-month') as HTMLInputElement)?.value || '0');
+      additionalMonthly += mockFee * mockPerMonth;
+    }
+
+    // Pass protection
+    const enableProtection = (document.getElementById('enable-protection') as HTMLInputElement)?.checked;
+    if (enableProtection) {
+      const protectionFee = parseFloat((document.getElementById('protection-fee') as HTMLInputElement)?.value || '0');
+      const protectionPerMonth = parseFloat((document.getElementById('protection-per-month') as HTMLInputElement)?.value || '0');
+      additionalMonthly += protectionFee * protectionPerMonth;
+    }
+
+    // Fleet services
+    const enableFleet = (document.getElementById('enable-fleet') as HTMLInputElement)?.checked;
+    if (enableFleet) {
+      const fleetMonthly = parseFloat((document.getElementById('fleet-monthly') as HTMLInputElement)?.value || '0');
+      additionalMonthly += fleetMonthly;
+    }
+
+    const previewEl = document.getElementById('additional-revenue-preview');
+    if (previewEl) {
+      previewEl.textContent = formatCurrency(additionalMonthly);
+    }
+  }
+
+  // Cost breakdown preview (Step 4)
+  function updateCostBreakdown() {
+    const vehicleCost = parseFloat((document.getElementById('vehicle-cost') as HTMLInputElement)?.value || '0');
+    const fuel = parseFloat((document.getElementById('fuel-cost') as HTMLInputElement)?.value || '0');
+    const insurance = parseFloat((document.getElementById('insurance-cost') as HTMLInputElement)?.value || '0');
+    const maintenance = parseFloat((document.getElementById('maintenance') as HTMLInputElement)?.value || '0');
+    const licensing = parseFloat((document.getElementById('licensing') as HTMLInputElement)?.value || '0');
+    const marketing = parseFloat((document.getElementById('marketing-spend') as HTMLInputElement)?.value || '0');
+    const software = parseFloat((document.getElementById('software-admin') as HTMLInputElement)?.value || '0');
+    const other = parseFloat((document.getElementById('other-costs') as HTMLInputElement)?.value || '0');
+
+    let instructorCosts = 0;
+    if (businessModel === 'school') {
+      const instructorPayment = parseFloat((document.getElementById('instructor-payment') as HTMLInputElement)?.value || '0');
+      const instructorCount = parseFloat((document.getElementById('instructor-count') as HTMLInputElement)?.value || '1');
+      const paymentType = (document.querySelector('input[name="instructor-payment"]:checked') as HTMLInputElement)?.value;
+
+      // Convert weekly to monthly (4.33 weeks per month)
+      const monthlyPerInstructor = instructorPayment * 4.33;
+
+      if (paymentType === 'franchise') {
+        // Franchise: this is income (negative cost)
+        instructorCosts = -monthlyPerInstructor * instructorCount;
+      } else {
+        // Employed: this is a cost
+        instructorCosts = monthlyPerInstructor * instructorCount;
+      }
+    }
+
+    const costs = [
+      { label: 'Vehicle', value: vehicleCost, color: '#E94560' },
+      { label: 'Fuel', value: fuel, color: '#FF6B8A' },
+      { label: 'Insurance', value: insurance, color: '#1A1A2E' },
+      { label: 'Maintenance', value: maintenance, color: '#4A4A5E' },
+      { label: 'Licensing', value: licensing, color: '#7A7A8E' },
+      { label: 'Marketing', value: marketing, color: '#AAAAAE' },
+      { label: 'Software', value: software, color: '#CCCCCE' },
+      { label: 'Other', value: other, color: '#E5E5E7' }
+    ];
+
+    if (businessModel === 'school') {
+      costs.push({
+        label: instructorCosts < 0 ? 'Franchise Income' : 'Instructor Wages',
+        value: Math.abs(instructorCosts),
+        color: instructorCosts < 0 ? '#10B981' : '#FF8A8A'
+      });
+    }
+
+    const filteredCosts = costs.filter(cost => cost.value > 0);
+    const totalCosts = vehicleCost + fuel + insurance + maintenance + licensing + marketing + software + other + (instructorCosts > 0 ? instructorCosts : 0);
+    const totalIncome = instructorCosts < 0 ? Math.abs(instructorCosts) : 0;
+
+    // Generate list
+    const listEl = document.getElementById('cost-breakdown-list');
+    if (listEl) {
+      listEl.innerHTML = filteredCosts.map(cost => {
+        const isIncome = cost.label === 'Franchise Income';
+        return `
+          <div class="flex justify-between items-center">
+            <span class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full" style="background: ${cost.color}"></span>
+              ${cost.label}
+            </span>
+            <span class="font-semibold ${isIncome ? 'text-green-600' : ''}">${isIncome ? '+' : ''}${formatCurrency(cost.value)}</span>
+          </div>
+        `;
+      }).join('');
+
+      if (totalIncome > 0) {
+        listEl.innerHTML += `
+          <div class="flex justify-between items-center pt-2 border-t border-gray-200 font-bold text-green-600">
+            <span>Franchise Income</span>
+            <span>+${formatCurrency(totalIncome)}</span>
+          </div>
+        `;
+      }
+
+      listEl.innerHTML += `
+        <div class="flex justify-between items-center pt-2 border-t border-gray-200 font-bold text-brand-navy">
+          <span>Net Monthly Costs</span>
+          <span>${formatCurrency(totalCosts - totalIncome)}</span>
+        </div>
+      `;
+    }
+  }
+
+  // Listen for changes in cost inputs
+  ['vehicle-cost', 'fuel-cost', 'insurance-cost', 'maintenance', 'licensing', 'marketing-spend', 'software-admin', 'other-costs', 'instructor-payment'].forEach(id => {
+    const input = document.getElementById(id) as HTMLInputElement;
+    input?.addEventListener('input', () => {
+      if (currentStep === 4) {
+        updateCostBreakdown();
+      }
+    });
+  });
+
+  // Instructor payment type change
+  document.querySelectorAll('input[name="instructor-payment"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (currentStep === 4) {
+        updateCostBreakdown();
+      }
+    });
+  });
+
+  // Format currency
+  function formatCurrency(value: number): string {
+    return `${currencySymbol}${Math.round(value).toLocaleString()}`;
+  }
+
+  // Generate results (Step 5)
+  function generateResults() {
+    const resultsContent = document.getElementById('results-content');
+    if (!resultsContent) return;
+
+    // Gather all data
+    const weeklyHours = parseFloat((document.getElementById('weekly-hours') as HTMLInputElement)?.value || '0');
+    const hourlyRate = parseFloat((document.getElementById('hourly-rate') as HTMLInputElement)?.value || '0');
+    const utilization = parseFloat((document.getElementById('utilization') as HTMLInputElement)?.value || '0') / 100;
+    const blockDiscount = parseFloat((document.getElementById('block-discount') as HTMLInputElement)?.value || '0') / 100;
+    const blockBookingPct = parseFloat((document.getElementById('block-booking-pct') as HTMLInputElement)?.value || '0') / 100;
+    const instructorCount = businessModel === 'school' ? parseFloat((document.getElementById('instructor-count') as HTMLInputElement)?.value || '1') : 1;
+
+    // Calculate effective hourly rate after discounts
+    const effectiveHourlyRate = hourlyRate * (1 - (blockDiscount * blockBookingPct));
+
+    // Calculate monthly teaching hours and revenue
+    const monthlyTeachingHours = weeklyHours * utilization * 4.33; // 4.33 weeks per month average
+    const totalPotentialHours = weeklyHours * 4.33;
+    const unfilledHours = totalPotentialHours - monthlyTeachingHours;
+
+    const lessonRevenue = monthlyTeachingHours * effectiveHourlyRate * instructorCount;
+
+    // Calculate additional revenue
+    let additionalRevenue = 0;
+    if ((document.getElementById('enable-theory') as HTMLInputElement)?.checked) {
+      const theoryFee = parseFloat((document.getElementById('theory-fee') as HTMLInputElement)?.value || '0');
+      const theoryPerMonth = parseFloat((document.getElementById('theory-per-month') as HTMLInputElement)?.value || '0');
+      additionalRevenue += theoryFee * theoryPerMonth;
+    }
+    if ((document.getElementById('enable-intensive') as HTMLInputElement)?.checked) {
+      const intensiveFee = parseFloat((document.getElementById('intensive-fee') as HTMLInputElement)?.value || '0');
+      const intensivePerMonth = parseFloat((document.getElementById('intensive-per-month') as HTMLInputElement)?.value || '0');
+      additionalRevenue += intensiveFee * intensivePerMonth;
+    }
+    if ((document.getElementById('enable-mock') as HTMLInputElement)?.checked) {
+      const mockFee = parseFloat((document.getElementById('mock-fee') as HTMLInputElement)?.value || '0');
+      const mockPerMonth = parseFloat((document.getElementById('mock-per-month') as HTMLInputElement)?.value || '0');
+      additionalRevenue += mockFee * mockPerMonth;
+    }
+    if ((document.getElementById('enable-protection') as HTMLInputElement)?.checked) {
+      const protectionFee = parseFloat((document.getElementById('protection-fee') as HTMLInputElement)?.value || '0');
+      const protectionPerMonth = parseFloat((document.getElementById('protection-per-month') as HTMLInputElement)?.value || '0');
+      additionalRevenue += protectionFee * protectionPerMonth;
+    }
+    if ((document.getElementById('enable-fleet') as HTMLInputElement)?.checked) {
+      const fleetMonthly = parseFloat((document.getElementById('fleet-monthly') as HTMLInputElement)?.value || '0');
+      additionalRevenue += fleetMonthly;
+    }
+
+    const totalRevenue = lessonRevenue + additionalRevenue;
+
+    // Calculate costs
+    const vehicleCost = parseFloat((document.getElementById('vehicle-cost') as HTMLInputElement)?.value || '0');
+    const fuel = parseFloat((document.getElementById('fuel-cost') as HTMLInputElement)?.value || '0');
+    const insurance = parseFloat((document.getElementById('insurance-cost') as HTMLInputElement)?.value || '0');
+    const maintenance = parseFloat((document.getElementById('maintenance') as HTMLInputElement)?.value || '0');
+    const licensing = parseFloat((document.getElementById('licensing') as HTMLInputElement)?.value || '0');
+    const marketing = parseFloat((document.getElementById('marketing-spend') as HTMLInputElement)?.value || '0');
+    const software = parseFloat((document.getElementById('software-admin') as HTMLInputElement)?.value || '0');
+    const other = parseFloat((document.getElementById('other-costs') as HTMLInputElement)?.value || '0');
+
+    let instructorCosts = 0;
+    let franchiseIncome = 0;
+    if (businessModel === 'school') {
+      const instructorPayment = parseFloat((document.getElementById('instructor-payment') as HTMLInputElement)?.value || '0');
+      const paymentType = (document.querySelector('input[name="instructor-payment"]:checked') as HTMLInputElement)?.value;
+      const monthlyPerInstructor = instructorPayment * 4.33;
+
+      if (paymentType === 'franchise') {
+        franchiseIncome = monthlyPerInstructor * instructorCount;
+      } else {
+        instructorCosts = monthlyPerInstructor * instructorCount;
+      }
+    }
+
+    const totalCosts = (vehicleCost + fuel + insurance + maintenance + licensing + marketing + software + other + instructorCosts) * instructorCount;
+    const netCosts = totalCosts - franchiseIncome;
+
+    const monthlyProfit = totalRevenue - netCosts;
+    const annualProfit = monthlyProfit * 12;
+    const profitMargin = totalRevenue > 0 ? (monthlyProfit / totalRevenue) * 100 : 0;
+
+    // Calculate effective hourly rate (after all costs and utilization)
+    const effectiveEarningsPerHour = monthlyTeachingHours > 0 ? monthlyProfit / monthlyTeachingHours : 0;
+
+    // Cost of unfilled hours
+    const unfilledCost = unfilledHours * effectiveHourlyRate * instructorCount;
+
+    // Break-even analysis
+    const hoursToBreakEven = netCosts / effectiveHourlyRate;
+    const utilizationToBreakEven = (hoursToBreakEven / (weeklyHours * 4.33 * instructorCount)) * 100;
+
+    // Seasonal projections (UK driving school typical seasonality)
+    const seasonalMultipliers = [
+      { month: 'Jan', multiplier: 0.70 },
+      { month: 'Feb', multiplier: 0.80 },
+      { month: 'Mar', multiplier: 0.90 },
+      { month: 'Apr', multiplier: 0.95 },
+      { month: 'May', multiplier: 1.00 },
+      { month: 'Jun', multiplier: 1.05 },
+      { month: 'Jul', multiplier: 1.05 },
+      { month: 'Aug', multiplier: 1.00 },
+      { month: 'Sep', multiplier: 1.00 },
+      { month: 'Oct', multiplier: 0.90 },
+      { month: 'Nov', multiplier: 0.80 },
+      { month: 'Dec', multiplier: 0.65 }
+    ];
+
+    const seasonalRevenues = seasonalMultipliers.map(s => ({
+      month: s.month,
+      revenue: totalRevenue * s.multiplier,
+      multiplier: s.multiplier
+    }));
+
+    // Growth projection for school owners
+    let growthProjection = null;
+    if (businessModel === 'school') {
+      const projectionMonths = 12;
+      const projections = [];
+      for (let month = 0; month <= projectionMonths; month++) {
+        const currentInstructors = instructorCount + Math.floor(month / 3); // Add 1 instructor every 3 months
+        const monthRevenue = (lessonRevenue / instructorCount) * currentInstructors + additionalRevenue;
+        const monthCosts = netCosts / instructorCount * currentInstructors;
+        const monthProfit = monthRevenue - monthCosts;
+
+        projections.push({
+          month,
+          instructors: currentInstructors,
+          revenue: monthRevenue,
+          profit: monthProfit
+        });
+      }
+      growthProjection = projections;
+    }
+
+    // Generate insights
+    const insights = generateInsights({
+      utilization: utilization * 100,
+      effectiveHourlyRate: effectiveEarningsPerHour,
+      hourlyRate,
+      profitMargin,
+      additionalRevenue,
+      totalRevenue,
+      unfilledHours,
+      marketing,
+      businessModel,
+      utilizationToBreakEven
+    });
+
+    // Render results
+    let resultsHTML = `
+      <!-- Summary Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gradient-to-br from-brand-red to-red-600 text-white p-6 rounded-xl shadow-lg">
+          <div class="text-sm font-medium opacity-90 mb-2">${businessModel === 'solo' ? 'Monthly Earnings' : 'Monthly Revenue'}</div>
+          <div class="text-4xl font-bold mb-1">${formatCurrency(totalRevenue)}</div>
+          <div class="text-sm opacity-75">${formatCurrency(totalRevenue * 12)} annually</div>
+        </div>
+        <div class="bg-gradient-to-br from-brand-navy to-gray-800 text-white p-6 rounded-xl shadow-lg">
+          <div class="text-sm font-medium opacity-90 mb-2">Monthly Costs</div>
+          <div class="text-4xl font-bold mb-1">${formatCurrency(netCosts)}</div>
+          <div class="text-sm opacity-75">${formatCurrency(netCosts * 12)} annually</div>
+        </div>
+        <div class="bg-gradient-to-br ${monthlyProfit >= 0 ? 'from-green-500 to-green-600' : 'from-red-600 to-red-700'} text-white p-6 rounded-xl shadow-lg">
+          <div class="text-sm font-medium opacity-90 mb-2">Net ${businessModel === 'solo' ? 'Income' : 'Profit'}</div>
+          <div class="text-4xl font-bold mb-1">${formatCurrency(monthlyProfit)}</div>
+          <div class="text-sm opacity-75">${formatCurrency(annualProfit)} annually</div>
+        </div>
+      </div>
+
+      <!-- Income Summary -->
+      <div class="card mb-8">
+        <h3 class="text-2xl font-bold text-brand-navy mb-6">Income Summary</h3>
+        <div class="space-y-3 mb-6">
+          <div class="flex justify-between items-center pb-3 border-b border-gray-200">
+            <span class="text-text-secondary">Lesson Revenue (${monthlyTeachingHours.toFixed(0)}h × ${formatCurrency(effectiveHourlyRate)}${instructorCount > 1 ? ` × ${instructorCount} instructors` : ''})</span>
+            <span class="font-semibold text-brand-navy">${formatCurrency(lessonRevenue)}</span>
+          </div>
+          ${additionalRevenue > 0 ? `
+            <div class="flex justify-between items-center pb-3 border-b border-gray-200">
+              <span class="text-text-secondary">Additional Revenue Streams</span>
+              <span class="font-semibold text-brand-navy">${formatCurrency(additionalRevenue)}</span>
+            </div>
+          ` : ''}
+          ${franchiseIncome > 0 ? `
+            <div class="flex justify-between items-center pb-3 border-b border-gray-200">
+              <span class="text-text-secondary">Franchise Income (${instructorCount} × ${formatCurrency(franchiseIncome / instructorCount)}/month)</span>
+              <span class="font-semibold text-green-600">+${formatCurrency(franchiseIncome)}</span>
+            </div>
+          ` : ''}
+          <div class="flex justify-between items-center pt-2">
+            <span class="font-bold text-brand-navy text-lg">Total Monthly ${businessModel === 'solo' ? 'Earnings' : 'Revenue'}</span>
+            <span class="font-bold text-brand-red text-2xl">${formatCurrency(totalRevenue)}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Utilization Analysis -->
+      <div class="card mb-8">
+        <h3 class="text-2xl font-bold text-brand-navy mb-6">Utilization Analysis</h3>
+        <div class="mb-6">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-text-secondary">Current Utilization Rate</span>
+            <span class="text-2xl font-bold ${utilization >= 0.7 ? 'text-green-600' : utilization >= 0.6 ? 'text-yellow-600' : 'text-red-600'}">${(utilization * 100).toFixed(0)}%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4">
+            <div class="bg-brand-red h-4 rounded-full transition-all duration-500" style="width: ${utilization * 100}%"></div>
+          </div>
+          <div class="flex justify-between items-center mt-2 text-xs text-text-tertiary">
+            <span>0%</span>
+            <span>Target: 60-70%</span>
+            <span>100%</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <div class="text-sm text-text-tertiary mb-1">Weekly Hours Available</div>
+            <div class="text-2xl font-bold text-brand-navy">${weeklyHours}h</div>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <div class="text-sm text-text-tertiary mb-1">Weekly Hours Filled</div>
+            <div class="text-2xl font-bold text-brand-red">${(weeklyHours * utilization).toFixed(1)}h</div>
+          </div>
+          <div class="text-center p-4 bg-gray-50 rounded-lg">
+            <div class="text-sm text-text-tertiary mb-1">Weekly Unfilled Hours</div>
+            <div class="text-2xl font-bold text-yellow-600">${(weeklyHours * (1 - utilization)).toFixed(1)}h</div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+          <h4 class="font-semibold text-brand-navy mb-2">Cost of Unfilled Time</h4>
+          <p class="text-text-secondary mb-2">Your ${unfilledHours.toFixed(0)} monthly unfilled hours represent ${formatCurrency(unfilledCost)} in lost revenue potential.</p>
+          <p class="text-sm text-text-tertiary">Improving utilization by just 10% would add ${formatCurrency(weeklyHours * 4.33 * 0.1 * effectiveHourlyRate * instructorCount)} monthly earnings.</p>
+        </div>
+      </div>
+
+      <!-- Cost Summary -->
+      <div class="card mb-8">
+        <h3 class="text-2xl font-bold text-brand-navy mb-6">Cost Summary</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold text-brand-navy mb-3">Monthly Breakdown</h4>
+            <div class="space-y-2 text-sm">
+              ${vehicleCost > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Vehicle</span><span class="font-semibold">${formatCurrency(vehicleCost * instructorCount)}</span></div>` : ''}
+              ${fuel > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Fuel</span><span class="font-semibold">${formatCurrency(fuel * instructorCount)}</span></div>` : ''}
+              ${insurance > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Insurance</span><span class="font-semibold">${formatCurrency(insurance * instructorCount)}</span></div>` : ''}
+              ${maintenance > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Maintenance</span><span class="font-semibold">${formatCurrency(maintenance * instructorCount)}</span></div>` : ''}
+              ${licensing > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Licensing</span><span class="font-semibold">${formatCurrency(licensing * instructorCount)}</span></div>` : ''}
+              ${marketing > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Marketing</span><span class="font-semibold">${formatCurrency(marketing)}</span></div>` : ''}
+              ${software > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Software</span><span class="font-semibold">${formatCurrency(software)}</span></div>` : ''}
+              ${other > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Other</span><span class="font-semibold">${formatCurrency(other)}</span></div>` : ''}
+              ${instructorCosts > 0 ? `<div class="flex justify-between"><span class="text-text-secondary">Instructor Wages</span><span class="font-semibold">${formatCurrency(instructorCosts)}</span></div>` : ''}
+              ${franchiseIncome > 0 ? `<div class="flex justify-between text-green-600"><span>Franchise Income</span><span class="font-semibold">-${formatCurrency(franchiseIncome)}</span></div>` : ''}
+            </div>
+          </div>
+          <div>
+            <h4 class="font-semibold text-brand-navy mb-3">Key Metrics</h4>
+            <div class="space-y-3">
+              <div class="p-3 bg-gray-50 rounded-lg">
+                <div class="text-sm text-text-tertiary">Cost per Teaching Hour</div>
+                <div class="text-xl font-bold text-brand-navy">${formatCurrency(netCosts / (monthlyTeachingHours * instructorCount))}</div>
+              </div>
+              <div class="p-3 bg-gray-50 rounded-lg">
+                <div class="text-sm text-text-tertiary">Effective Hourly Rate</div>
+                <div class="text-xl font-bold ${effectiveEarningsPerHour > 20 ? 'text-green-600' : effectiveEarningsPerHour > 15 ? 'text-yellow-600' : 'text-red-600'}">${formatCurrency(effectiveEarningsPerHour)}</div>
+                <div class="text-xs text-text-tertiary mt-1">After all costs and unfilled time</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profitability -->
+      <div class="card mb-8">
+        <h3 class="text-2xl font-bold text-brand-navy mb-6">Profitability Analysis</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <div class="text-sm text-text-tertiary mb-1">Profit Margin</div>
+            <div class="text-3xl font-bold ${profitMargin >= 30 ? 'text-green-600' : profitMargin >= 20 ? 'text-yellow-600' : 'text-red-600'}">${profitMargin.toFixed(1)}%</div>
+            <div class="text-xs text-text-tertiary mt-1">Target: 30-50%</div>
+          </div>
+          <div>
+            <div class="text-sm text-text-tertiary mb-1">Annual Net Income</div>
+            <div class="text-3xl font-bold ${annualProfit >= 0 ? 'text-green-600' : 'text-red-600'}">${formatCurrency(annualProfit)}</div>
+            <div class="text-xs text-text-tertiary mt-1">12 months projected</div>
+          </div>
+          <div>
+            <div class="text-sm text-text-tertiary mb-1">Break-Even Hours</div>
+            <div class="text-3xl font-bold text-brand-navy">${hoursToBreakEven.toFixed(0)}h</div>
+            <div class="text-xs text-text-tertiary mt-1">Per month needed</div>
+          </div>
+          <div>
+            <div class="text-sm text-text-tertiary mb-1">Break-Even Utilization</div>
+            <div class="text-3xl font-bold text-brand-navy">${Math.min(utilizationToBreakEven, 100).toFixed(0)}%</div>
+            <div class="text-xs text-text-tertiary mt-1">Current: ${(utilization * 100).toFixed(0)}%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seasonal Revenue Chart -->
+      <div class="card mb-8">
+        <h3 class="text-2xl font-bold text-brand-navy mb-6">Seasonal Revenue Pattern</h3>
+        <p class="text-text-secondary mb-4">Typical UK driving school demand variation throughout the year</p>
+        ${generateSeasonalChart(seasonalRevenues)}
+        <div class="mt-4 text-sm text-text-tertiary">
+          <p>Peak months (Jun-Aug) see increased demand from school holidays. Troughs (Dec-Jan) reflect weather and holiday impacts.</p>
+        </div>
+      </div>
+
+      ${businessModel === 'solo' ? `
+        <!-- Solo ADI: Earnings Comparison -->
+        <div class="card mb-8">
+          <h3 class="text-2xl font-bold text-brand-navy mb-6">UK ADI Earnings Comparison</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div class="p-4 bg-gray-50 rounded-lg text-center">
+              <div class="text-sm text-text-tertiary mb-1">UK Average ADI</div>
+              <div class="text-2xl font-bold text-gray-600">£34,963</div>
+              <div class="text-xs text-text-tertiary mt-1">Annual gross</div>
+            </div>
+            <div class="p-4 bg-brand-red-light rounded-lg text-center border-2 border-brand-red">
+              <div class="text-sm text-brand-red mb-1 font-semibold">Your Projection</div>
+              <div class="text-2xl font-bold text-brand-red">${formatCurrency(totalRevenue * 12)}</div>
+              <div class="text-xs text-text-tertiary mt-1">Annual gross</div>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-lg text-center">
+              <div class="text-sm text-text-tertiary mb-1">Top 25% ADIs</div>
+              <div class="text-2xl font-bold text-gray-600">£42,000+</div>
+              <div class="text-xs text-text-tertiary mt-1">Annual gross</div>
+            </div>
+          </div>
+          <p class="text-sm text-text-secondary">
+            ${totalRevenue * 12 > 42000 ? 'Excellent! Your projected earnings place you in the top 25% of UK ADIs.' : totalRevenue * 12 > 34963 ? 'You\'re tracking above the UK average ADI earnings.' : 'There\'s opportunity to increase your earnings through better utilization and revenue diversification.'}
+          </p>
+        </div>
+      ` : ''}
+
+      ${businessModel === 'school' && growthProjection ? `
+        <!-- School Owner: Growth Projection -->
+        <div class="card mb-8">
+          <h3 class="text-2xl font-bold text-brand-navy mb-6">12-Month Growth Projection</h3>
+          <p class="text-text-secondary mb-4">Adding 1 instructor every 3 months</p>
+          ${generateGrowthChart(growthProjection)}
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 p-4 bg-gray-50 rounded-lg">
+            <div class="text-center">
+              <div class="text-sm text-text-tertiary mb-1">Current Instructors</div>
+              <div class="text-2xl font-bold text-brand-navy">${instructorCount}</div>
+            </div>
+            <div class="text-center">
+              <div class="text-sm text-text-tertiary mb-1">Projected (Month 12)</div>
+              <div class="text-2xl font-bold text-brand-red">${growthProjection[12].instructors}</div>
+            </div>
+            <div class="text-center">
+              <div class="text-sm text-text-tertiary mb-1">Projected Monthly Profit</div>
+              <div class="text-2xl font-bold text-green-600">${formatCurrency(growthProjection[12].profit)}</div>
+            </div>
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- No-Show Impact (if utilization is low) -->
+      ${utilization < 0.70 ? `
+        <div class="card mb-8">
+          <h3 class="text-2xl font-bold text-brand-navy mb-6">No-Show & Cancellation Impact</h3>
+          <p class="text-text-secondary mb-4">Your utilization suggests opportunities to reduce last-minute cancellations</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-4 bg-red-50 rounded-lg border border-red-200">
+              <h4 class="font-semibold text-brand-navy mb-2">Current Situation</h4>
+              <p class="text-sm text-text-secondary mb-3">At ${(utilization * 100).toFixed(0)}% utilization, you're losing ${unfilledHours.toFixed(0)} hours monthly</p>
+              <div class="text-2xl font-bold text-red-600">${formatCurrency(unfilledCost)}</div>
+              <div class="text-xs text-text-tertiary">Monthly opportunity cost</div>
+            </div>
+            <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+              <h4 class="font-semibold text-brand-navy mb-2">If Improved to 70%</h4>
+              <p class="text-sm text-text-secondary mb-3">Reducing unfilled time by implementing block bookings and cancellation policies</p>
+              <div class="text-2xl font-bold text-green-600">+${formatCurrency((0.70 - utilization) * weeklyHours * 4.33 * effectiveHourlyRate * instructorCount)}</div>
+              <div class="text-xs text-text-tertiary">Additional monthly income</div>
+            </div>
+          </div>
+          <div class="mt-4 bg-blue-50 border-l-4 border-blue-400 p-4 rounded-lg">
+            <h4 class="font-semibold text-brand-navy mb-2">Strategies to Reduce Cancellations</h4>
+            <ul class="text-sm text-text-secondary space-y-1">
+              <li>• Implement 24-hour cancellation policy with fees for late cancellations</li>
+              <li>• Encourage block bookings (pre-payment reduces no-shows by 40-60%)</li>
+              <li>• Use automated SMS reminders 24 hours before lessons</li>
+              <li>• Maintain a waiting list to fill last-minute cancellations</li>
+            </ul>
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Key Insights -->
+      <div class="card mb-8">
+        <h3 class="text-2xl font-bold text-brand-navy mb-6">Key Insights</h3>
+        <div class="space-y-4">
+          ${insights.map(insight => `
+            <div class="flex items-start gap-3 p-4 bg-${insight.type === 'positive' ? 'green' : insight.type === 'warning' ? 'yellow' : 'blue'}-50 rounded-lg border border-${insight.type === 'positive' ? 'green' : insight.type === 'warning' ? 'yellow' : 'blue'}-200">
+              <svg class="w-6 h-6 text-${insight.type === 'positive' ? 'green' : insight.type === 'warning' ? 'yellow' : 'blue'}-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${insight.type === 'positive' ? 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' : insight.type === 'warning' ? 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' : 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'}"></path>
+              </svg>
+              <div>
+                <h4 class="font-semibold text-brand-navy mb-1">${insight.title}</h4>
+                <p class="text-sm text-text-secondary">${insight.message}</p>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Action Items -->
+      ${generateActionItems({
+        utilization: utilization * 100,
+        additionalRevenue,
+        effectiveHourlyRate: effectiveEarningsPerHour,
+        marketing,
+        profitMargin,
+        businessModel,
+        unfilledHours
+      })}
+
+      <!-- Actions -->
+      <div class="flex flex-col sm:flex-row gap-4 mt-8 no-print">
+        <button onclick="window.print()" class="btn-primary">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+          </svg>
+          Download PDF Report
+        </button>
+        <button onclick="location.reload()" class="btn-secondary">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          Start Over
+        </button>
+      </div>
+    `;
+
+    resultsContent.innerHTML = resultsHTML;
+  }
+
+  function generateSeasonalChart(seasonalRevenues: any[]): string {
+    const maxRevenue = Math.max(...seasonalRevenues.map(s => s.revenue));
+    const chartHeight = 300;
+    const chartWidth = 800;
+    const padding = 40;
+    const barWidth = (chartWidth - 2 * padding) / seasonalRevenues.length - 8;
+
+    return `
+      <svg viewBox="0 0 ${chartWidth} ${chartHeight}" class="w-full" style="max-height: 300px;">
+        <!-- Bars -->
+        ${seasonalRevenues.map((s, i) => {
+          const x = padding + (i * (chartWidth - 2 * padding) / seasonalRevenues.length);
+          const barHeight = (s.revenue / maxRevenue) * (chartHeight - 2 * padding);
+          const y = chartHeight - padding - barHeight;
+          const color = s.multiplier >= 1.0 ? '#10B981' : s.multiplier >= 0.85 ? '#FBBF24' : '#EF4444';
+
+          return `
+            <rect x="${x}" y="${y}" width="${barWidth}" height="${barHeight}" fill="${color}" opacity="0.8" rx="4"/>
+            <text x="${x + barWidth / 2}" y="${y - 5}" text-anchor="middle" fill="#374151" font-size="11" font-weight="600">${formatCurrency(s.revenue)}</text>
+            <text x="${x + barWidth / 2}" y="${chartHeight - 15}" text-anchor="middle" fill="#6b7280" font-size="12">${s.month}</text>
+          `;
+        }).join('')}
+      </svg>
+    `;
+  }
+
+  function generateGrowthChart(projections: any[]): string {
+    const maxRevenue = Math.max(...projections.map(p => p.revenue));
+    const maxProfit = Math.max(...projections.map(p => p.profit));
+    const minProfit = Math.min(...projections.map(p => p.profit));
+    const range = Math.max(maxRevenue, maxProfit) - Math.min(0, minProfit);
+    const chartHeight = 300;
+    const chartWidth = 800;
+    const padding = 40;
+
+    const revenuePoints = projections.map((p, i) => {
+      const x = padding + (i / (projections.length - 1)) * (chartWidth - 2 * padding);
+      const y = chartHeight - padding - ((p.revenue - Math.min(0, minProfit)) / range) * (chartHeight - 2 * padding);
+      return `${x},${y}`;
+    }).join(' ');
+
+    const profitPoints = projections.map((p, i) => {
+      const x = padding + (i / (projections.length - 1)) * (chartWidth - 2 * padding);
+      const y = chartHeight - padding - ((p.profit - Math.min(0, minProfit)) / range) * (chartHeight - 2 * padding);
+      return `${x},${y}`;
+    }).join(' ');
+
+    return `
+      <svg viewBox="0 0 ${chartWidth} ${chartHeight}" class="w-full" style="max-height: 300px;">
+        <!-- Grid lines -->
+        ${[0, 0.25, 0.5, 0.75, 1].map(pct => {
+          const y = chartHeight - padding - pct * (chartHeight - 2 * padding);
+          return `<line x1="${padding}" y1="${y}" x2="${chartWidth - padding}" y2="${y}" stroke="#e5e7eb" stroke-width="1"/>`;
+        }).join('')}
+
+        <!-- Revenue line -->
+        <polyline points="${revenuePoints}" fill="none" stroke="#E94560" stroke-width="3"/>
+
+        <!-- Profit line -->
+        <polyline points="${profitPoints}" fill="none" stroke="#10B981" stroke-width="3" stroke-dasharray="5,5"/>
+
+        <!-- Legend -->
+        <g transform="translate(${padding}, 20)">
+          <line x1="0" y1="0" x2="30" y2="0" stroke="#E94560" stroke-width="3"/>
+          <text x="35" y="5" fill="#374151" font-size="12">Revenue</text>
+
+          <line x1="120" y1="0" x2="150" y2="0" stroke="#10B981" stroke-width="3" stroke-dasharray="5,5"/>
+          <text x="155" y="5" fill="#374151" font-size="12">Profit</text>
+        </g>
+
+        <!-- X-axis labels -->
+        ${projections.filter((_, i) => i % 2 === 0 || i === projections.length - 1).map(p => {
+          const x = padding + (p.month / (projections.length - 1)) * (chartWidth - 2 * padding);
+          return `<text x="${x}" y="${chartHeight - 15}" text-anchor="middle" fill="#6b7280" font-size="12">M${p.month}</text>`;
+        }).join('')}
+      </svg>
+    `;
+  }
+
+  function generateInsights(data: any): any[] {
+    const insights = [];
+
+    // Utilization insight
+    if (data.utilization < 60) {
+      insights.push({
+        type: 'warning',
+        title: 'Utilization below industry average',
+        message: `At ${data.utilization.toFixed(0)}% utilization, you're below the UK average of 60-65%. Improving diary management and reducing unfilled hours is your highest-leverage opportunity to increase earnings. Consider implementing block bookings and automated reminders to reduce no-shows.`
+      });
+    } else if (data.utilization >= 70) {
+      insights.push({
+        type: 'positive',
+        title: 'Excellent diary utilization',
+        message: `Your ${data.utilization.toFixed(0)}% utilization is above industry average. This indicates strong demand and effective diary management. You have capacity to consider selective pricing increases or adding an additional instructor if you're a school owner.`
+      });
+    }
+
+    // Effective hourly rate insight
+    if (data.effectiveHourlyRate < 18) {
+      insights.push({
+        type: 'warning',
+        title: 'Effective hourly rate needs attention',
+        message: `Your effective hourly rate of ${formatCurrency(data.effectiveHourlyRate)} (after all costs and unfilled time) is below typical UK ADI rates. Focus on increasing utilization, reducing vehicle costs, or reviewing your pricing strategy to improve this critical metric.`
+      });
+    } else if (data.effectiveHourlyRate > 22) {
+      insights.push({
+        type: 'positive',
+        title: 'Strong effective earnings per hour',
+        message: `At ${formatCurrency(data.effectiveHourlyRate)} effective hourly rate, you're efficiently converting teaching time to income. This suggests good cost management and solid utilization, placing you above typical UK ADI take-home rates.`
+      });
+    }
+
+    // Additional revenue insight
+    if (data.additionalRevenue === 0) {
+      insights.push({
+        type: 'info',
+        title: 'Consider diversifying income streams',
+        message: `You're currently relying entirely on hourly lesson revenue. Top-performing ADIs typically generate 10-20% additional income from intensive courses, theory training, mock tests, and pass protection commissions. Adding just 2 intensive courses monthly could add ${formatCurrency(1600)} to your earnings.`
+      });
+    } else {
+      const additionalPct = (data.additionalRevenue / data.totalRevenue) * 100;
+      if (additionalPct > 15) {
+        insights.push({
+          type: 'positive',
+          title: 'Well-diversified income',
+          message: `Additional revenue streams account for ${additionalPct.toFixed(0)}% of your total income. This diversity reduces dependence on hourly lessons and provides more stable earnings during quiet periods.`
+        });
+      }
+    }
+
+    // Unfilled hours opportunity
+    if (data.unfilledHours > 15) {
+      const additionalEarnings = data.unfilledHours * 0.5 * (data.hourlyRate * 0.9); // Assume can fill half the gaps
+      insights.push({
+        type: 'info',
+        title: 'Significant unfilled time opportunity',
+        message: `You have ${data.unfilledHours.toFixed(0)} unfilled hours monthly. Even filling half these gaps would add ${formatCurrency(additionalEarnings)} to monthly earnings. Focus on marketing, referral incentives, and efficient diary management to capture this opportunity.`
+      });
+    }
+
+    // Profit margin insight
+    if (data.profitMargin < 25) {
+      insights.push({
+        type: 'warning',
+        title: 'Profit margin below target',
+        message: `At ${data.profitMargin.toFixed(1)}%, your margin is below the healthy 30-50% range typical for ADIs. Review your cost structure—particularly vehicle costs and fuel efficiency—or explore ways to increase your effective hourly rate through better utilization or selective pricing increases.`
+      });
+    } else if (data.profitMargin >= 30 && data.profitMargin <= 50) {
+      insights.push({
+        type: 'positive',
+        title: 'Healthy profit margin',
+        message: `Your ${data.profitMargin.toFixed(1)}% profit margin is within the healthy 30-50% range for UK ADIs. This indicates good cost management and sustainable pricing. Maintain this balance as you scale.`
+      });
+    } else if (data.profitMargin > 50) {
+      insights.push({
+        type: 'positive',
+        title: 'Exceptional profitability',
+        message: `At ${data.profitMargin.toFixed(1)}%, your profit margin is exceptional. This likely indicates efficient cost management and strong pricing. ${data.businessModel === 'school' ? 'As you scale, expect margins to normalize to 30-40% range.' : 'Consider reinvesting some margin in marketing to accelerate growth.'}`
+      });
+    }
+
+    // Break-even utilization insight
+    if (data.utilizationToBreakEven > data.utilization) {
+      insights.push({
+        type: 'warning',
+        title: 'Below break-even utilization',
+        message: `Your current ${data.utilization.toFixed(0)}% utilization is below your break-even point of ${data.utilizationToBreakEven.toFixed(0)}%. You need to either increase your filled hours, reduce costs, or raise your pricing to achieve profitability. Focus on utilization first—it's the quickest path to profitability.`
+      });
+    }
+
+    // Marketing investment insight
+    if (data.marketing === 0 && data.utilization < 70) {
+      insights.push({
+        type: 'info',
+        title: 'Consider marketing investment',
+        message: `With ${data.utilization.toFixed(0)}% utilization and no marketing budget, you're missing opportunities to fill your diary. Even £100-150 monthly on targeted local ads can significantly improve your pupil pipeline and reduce unfilled hours. Marketing spend pays for itself quickly when utilization is below 70%.`
+      });
+    }
+
+    // School owner specific insights
+    if (data.businessModel === 'school') {
+      insights.push({
+        type: 'info',
+        title: 'School scaling considerations',
+        message: `As a school owner, each additional instructor adds complexity but scales revenue. Ensure you have systems in place for quality control, pupil allocation, and instructor management before rapid expansion. Most successful schools maintain 3-6 months of operating capital to smooth seasonal variations and cover new instructor ramp-up periods.`
+      });
+    }
+
+    return insights;
+  }
+
+  function generateActionItems(data: any): string {
+    const actions = [];
+
+    // Low utilization
+    if (data.utilization < 60) {
+      actions.push({
+        title: 'Improve diary utilization',
+        description: `At ${data.utilization.toFixed(0)}% utilization, filling more hours is your highest-impact opportunity. Implement block bookings with incentives, use automated reminders to reduce no-shows, and maintain consistent marketing to ensure a steady pipeline of new pupils.`
+      });
+    }
+
+    // No additional revenue
+    if (data.additionalRevenue === 0) {
+      actions.push({
+        title: 'Launch intensive courses',
+        description: 'Intensive courses command premium pricing (£700-1,000+) and fill multiple consecutive days efficiently. Just 2 intensive courses monthly adds £1,400-2,000 to your earnings with minimal additional marketing effort.'
+      });
+
+      actions.push({
+        title: 'Add theory test training',
+        description: 'Offer theory test preparation packages at £40-60. Many pupils value this support, and it requires minimal time investment. Online theory support can generate passive income.'
+      });
+    }
+
+    // Low effective hourly rate
+    if (data.effectiveHourlyRate < 18) {
+      actions.push({
+        title: 'Review cost structure',
+        description: `Your ${formatCurrency(data.effectiveHourlyRate)} effective hourly rate suggests opportunities in cost reduction. Shop for better insurance quotes (potential £200-400 annual savings), consider more fuel-efficient vehicles, and audit all monthly expenses for optimization opportunities.`
+      });
+    }
+
+    // High unfilled hours
+    if (data.unfilledHours > 15) {
+      actions.push({
+        title: 'Reduce unfilled time',
+        description: `With ${data.unfilledHours.toFixed(0)} monthly unfilled hours, focus on booking efficiency. Use professional scheduling software to optimize diary layout, minimize drive time between pupils, and automatically fill last-minute cancellations from a waiting list.`
+      });
+    }
+
+    // No marketing budget with room to grow
+    if (data.marketing === 0 && data.utilization < 70) {
+      actions.push({
+        title: 'Invest in targeted marketing',
+        description: 'Allocate £100-150 monthly to targeted Facebook/Instagram ads focusing on your local area. Track cost per enquiry and conversion rates. Marketing pays for itself quickly when you have unfilled diary capacity.'
+      });
+    }
+
+    // Low profit margin
+    if (data.profitMargin < 25) {
+      actions.push({
+        title: 'Optimize profit margins',
+        description: `With a ${data.profitMargin.toFixed(1)}% margin, review your biggest expenses. Can you switch to a more fuel-efficient vehicle? Reduce insurance costs through comparison shopping? Small cost reductions compound significantly over a year.`
+      });
+    }
+
+    // School owner specific
+    if (data.businessModel === 'school') {
+      actions.push({
+        title: 'Implement scalable systems',
+        description: 'As you grow, operational systems become critical. Invest in quality driving school management software to handle instructor scheduling, pupil allocation, payment processing, and progress tracking. This foundation enables scaling without proportional admin overhead.'
+      });
+    }
+
+    // Default if everything looks good
+    if (actions.length === 0) {
+      actions.push({
+        title: 'Maintain operational excellence',
+        description: 'Your metrics look strong. Continue focusing on pupil experience, word-of-mouth referrals, and operational efficiency. Consider documenting your systems to facilitate future growth or hiring.'
+      });
+    }
+
+    return `
+      <div class="card">
+        <h3 class="text-2xl font-bold text-brand-navy mb-6">Recommended Action Items</h3>
+        <div class="space-y-4">
+          ${actions.map((action, i) => `
+            <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div class="flex-shrink-0 w-8 h-8 bg-brand-red text-white rounded-full flex items-center justify-center font-bold">
+                ${i + 1}
+              </div>
+              <div class="flex-1">
+                <h4 class="font-semibold text-brand-navy mb-1">${action.title}</h4>
+                <p class="text-sm text-text-secondary">${action.description}</p>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- CTA after action items -->
+        <div class="mt-8 p-6 bg-gradient-to-br from-blue-50 to-white rounded-lg border border-blue-200">
+          <h4 class="text-lg font-semibold text-brand-navy mb-2">Implement these strategies with MyDriveSchool</h4>
+          <p class="text-text-secondary mb-4">
+            Our platform helps you track utilization, optimize your diary, manage block bookings, and automate reminders—implementing many of these recommendations automatically.
+            <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline font-semibold">Learn more about scheduling optimization</a> or
+            <a href="/driving-school-management-software/" class="text-brand-red hover:underline font-semibold">explore full management features</a>.
+          </p>
+        </div>
+      </div>
+    `;
+  }
+
+  // Initialize
+  showStep(1);
+  updateBusinessModelFields();
+</script>
