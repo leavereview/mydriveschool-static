@@ -7,7 +7,7 @@ tags: ["Software"]
 author: "MyDriveSchool Team"
 ---
 
-Wondering if you can run your driving school with **free software**? Here's what's available and when to pay for a proper solution.
+Wondering if you can run your driving school with **free software**? Here's what's available and when to pay for a proper solution. Explore [Driving School Management Software](/driving-school-management-software/) solutions. See how [Driving School Software That Works As Hard As You Do](/driving-school-software/) can help. Learn more about [Driving School Software: What's Actually Available?](/free-driving-school-software/).
 
 ## Can You Run a Driving School with Free Software?
 
@@ -62,3 +62,4 @@ For £29/month, proper software pays for itself in saved time and reduced no-sho
 **Related Articles:**
 - [Best Driving School Software](/blog/best-driving-school-software/)
 - [How to Choose Scheduling Software](/blog/how-to-choose-driving-school-scheduling-software/)
+ Check out [Driving School Scheduling Software](/driving-school-scheduling-software/).

@@ -268,7 +268,7 @@ Georgia parents research online before choosing driving schools.
 - Digital record-keeping systems
 - Standardised processes
 - Regular audits
-- [Management software](/driving-school-software/) with built-in compliance features
+- [Management software](/driving-school-software/) with built-in compliance features Check out [Driving School Management Software](/driving-school-management-software/). Learn more about [Driving School Software: What's Actually Available?](/free-driving-school-software/).
 
 ### Instructor Certification Lapses
 

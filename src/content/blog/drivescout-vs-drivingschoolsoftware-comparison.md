@@ -60,7 +60,7 @@ Both platforms have significant drawbacks. MyDriveSchool.Software offers:
 - Simple, modern interface
 - Flat monthly pricing from £29
 - No setup fees
-- UK-focused features
+- UK-focused features See how [Driving School Management Software](/driving-school-management-software/) can help. Explore [Driving School Scheduling Software](/driving-school-scheduling-software/) solutions. Learn more about [Driving School Software That Works As Hard As You Do](/driving-school-software/).
 
 [Try MyDriveSchool.Software free](/contact/) and see the difference.
 

@@ -264,7 +264,7 @@ If your school has multiple training vehicles:
 - Allow student online booking
 - Send automatic reminders
 - Track lesson history
-- Generate reports
+- Generate reports Explore [Driving School Management Software](/driving-school-management-software/) solutions. Learn more about [Driving School Software: What's Actually Available?](/free-driving-school-software/).
 
 ### Integration Considerations
 

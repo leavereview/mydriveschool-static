@@ -32,6 +32,6 @@ Make it easier to reschedule than to cancel. Online rescheduling is key.
 
 ## Implementation
 
-[MyDriveSchool.Software](/driving-school-software/) handles all of this automatically. Automated reminders, deposit collection, and easy online rescheduling.
+[MyDriveSchool.Software](/driving-school-software/) handles all of this automatically. Automated reminders, deposit collection, and easy online rescheduling. Check out [Driving School Management Software](/driving-school-management-software/). Check out [Driving School Scheduling Software](/driving-school-scheduling-software/).
 
 [Start your free trial](/contact/) and watch your no-show rate drop.

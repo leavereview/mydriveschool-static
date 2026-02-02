@@ -56,7 +56,7 @@ Parents want to know how their kids are progressing. Good software provides:
 
 ## Getting Started
 
-Ready to streamline your student management? [See our student management features](/driving-school-software/) and discover how MyDriveSchool.Software can help you track every student's journey from first lesson to test day.
+Ready to streamline your student management? [See our student management features](/driving-school-software/) and discover how MyDriveSchool.Software can help you track every student's journey from first lesson to test day. Check out [Driving School Management Software](/driving-school-management-software/). See how [Driving School Scheduling Software](/driving-school-scheduling-software/) can help. Check out [Driving School Software: What's Actually Available?](/free-driving-school-software/).
 
 **Related Articles:**
 - [Best Driving School Software](/blog/best-driving-school-software/)

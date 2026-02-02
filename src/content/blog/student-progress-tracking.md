@@ -37,6 +37,6 @@ Without proper tracking:
 
 ## How to Implement
 
-Use [driving school software](/driving-school-software/) with built-in progress tracking. Students see their progress through their portal, and you have clear records for every lesson.
+Use [driving school software](/driving-school-software/) with built-in progress tracking. Students see their progress through their portal, and you have clear records for every lesson. Explore [Driving School Management Software](/driving-school-management-software/) solutions. Check out [Driving School Software: What's Actually Available?](/free-driving-school-software/).
 
 [Try MyDriveSchool.Software](/contact/) and see how progress tracking transforms your teaching.

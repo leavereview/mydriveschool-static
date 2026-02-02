@@ -337,6 +337,6 @@ Research thoroughly before committing to either path.
 
 ## Building Your Driving School Business
 
-Whatever model you choose, efficient operations matter. [MyDriveSchool.Software](/driving-school-software/) helps driving schools manage scheduling, student tracking, and administration without franchise restrictions or extra fees.
+Whatever model you choose, efficient operations matter. [MyDriveSchool.Software](/driving-school-software/) helps driving schools manage scheduling, student tracking, and administration without franchise restrictions or extra fees. Explore [Driving School Management Software](/driving-school-management-software/) solutions. See how [Driving School Scheduling Software](/driving-school-scheduling-software/) can help. Explore [Driving School Software: What's Actually Available?](/free-driving-school-software/) solutions.
 
 [Start your free trial](/contact/) and build your business on your terms.

@@ -265,7 +265,7 @@ May not understand dual-control, learner driver, or instruction-specific needs.
 - Correspondence
 
 **Why documentation matters:**
-[Driving school software](/driving-school-software/) helps maintain records that support your position in claims.
+[Driving school software](/driving-school-software/) helps maintain records that support your position in claims. Check out [Driving School Management Software](/driving-school-management-software/). Check out [Driving School Scheduling Software](/driving-school-scheduling-software/). See how [Driving School Software: What's Actually Available?](/free-driving-school-software/) can help.
 
 ### Claim Handling
 
