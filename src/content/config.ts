@@ -7,6 +7,7 @@ const blogCollection = defineCollection({
     description: z.string().optional(),
     date: z.string(),
     image: z.string().optional(),
+    imageAlt: z.string().optional(),
     tags: z.array(z.string()).optional(),
     author: z.string().default('MyDriveSchool Team'),
   }),

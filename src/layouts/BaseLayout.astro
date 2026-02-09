@@ -32,7 +32,14 @@ const {
 const resolvedSchemaType = schemaType || (type === 'article' ? 'Article' : 'WebPage');
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const fullTitle = title === 'Home' ? 'MyDriveSchool.Software - Driving School Management Software' : `${title} | MyDriveSchool.Software`;
+
+// Dynamic title suffix: skip for long titles, use shorter brand name
+const getTitleSuffix = (pageTitle: string): string => {
+  if (pageTitle === 'Home') return 'MyDriveSchool.Software - Driving School Management Software';
+  if (pageTitle.length > 50) return pageTitle; // No suffix for long titles
+  return `${pageTitle} | MyDriveSchool`;
+};
+const fullTitle = getTitleSuffix(title);
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -46,7 +53,26 @@ const schemaOrg = {
         "@type": "ImageObject",
         "url": "https://mydriveschool.software/logo.svg"
       },
-      "sameAs": []
+      "sameAs": [
+        "https://twitter.com/mydriveschool",
+        "https://www.linkedin.com/company/mydriveschool-software",
+        "https://www.facebook.com/mydriveschool"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "support@mydriveschool.software",
+        "url": "https://mydriveschool.software/contact/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "124 City Road",
+        "addressLocality": "London",
+        "postalCode": "EC1V 2NX",
+        "addressCountry": "GB"
+      },
+      "foundingDate": "2024",
+      "description": "Complete driving school management software for scheduling lessons, managing instructors, tracking student progress, and online booking."
     },
     {
       "@type": "WebSite",

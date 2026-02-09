@@ -7,11 +7,19 @@ const footerLinks = {
     { label: 'Scheduling Software', href: '/driving-school-scheduling-software/' },
     { label: 'Management Software', href: '/driving-school-management-software/' },
   ],
+  popular: [
+    { label: 'Best Driving School Software', href: '/blog/best-driving-school-software/' },
+    { label: 'Reduce No-Shows Guide', href: '/blog/reduce-no-shows-driving-school/' },
+    { label: 'Student Progress Tracking', href: '/blog/student-progress-tracking/' },
+    { label: 'Starting a Driving School', href: '/blog/starting-driving-school-guide/' },
+    { label: 'Driving School Insurance', href: '/blog/driving-school-insurance-guide/' },
+    { label: 'Free Software Options', href: '/blog/free-driving-school-software/' },
+  ],
   resources: [
     { label: 'Blog', href: '/blog/' },
-    { label: 'Revenue Calculator', href: '/driving-school-calculator/' },
+    { label: 'Calculator', href: '/driving-school-calculator/' },
     { label: 'Pricing', href: '/pricing/' },
-    { label: 'About Us', href: '/about/' },
+    { label: 'About', href: '/about/' },
     { label: 'Contact', href: '/contact/' },
   ],
   legal: [
@@ -23,7 +31,7 @@ const footerLinks = {
 
 <footer class="bg-brand-navy text-white">
   <div class="container-custom py-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
       <div class="lg:col-span-1">
         <a href="/" class="inline-block mb-6">
           <span class="text-2xl font-bold text-white">MyDriveSchool<span class="text-brand-red">.Software</span></span>
@@ -54,6 +62,19 @@ const footerLinks = {
         <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Software</h3>
         <ul class="space-y-3">
           {footerLinks.software.map((link) => (
+            <li>
+              <a href={link.href} class="text-gray-400 hover:text-white transition-colors text-sm">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Popular Articles</h3>
+        <ul class="space-y-3">
+          {footerLinks.popular.map((link) => (
             <li>
               <a href={link.href} class="text-gray-400 hover:text-white transition-colors text-sm">
                 {link.label}
