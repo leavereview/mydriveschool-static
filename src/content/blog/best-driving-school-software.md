@@ -2,6 +2,7 @@
 title: "Best Driving School Software 2025"
 description: "Compare 7 driving school platforms used by 10,000+ schools. Real pricing, feature tables, and best-fit guide by school size. Free trial links."
 image: /images/blog-software.jpg
+imageAlt: "Driving school instructor using management software on tablet to schedule lessons and track student progress"
 date: "2025-12-27"
 tags: ["Software"]
 author: "MyDriveSchool Team"

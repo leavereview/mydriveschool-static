@@ -2,6 +2,7 @@
 title: "Reduce No-Shows at Your School"
 description: "Cut no-shows by 40-60% with proven strategies. Includes statistics, automation tactics, deposit policies, reminder templates, and case studies from 1,200+ driving schools."
 image: /images/blog-scheduling.jpg
+imageAlt: "Driving school calendar and scheduling system showing automated reminders to reduce student no-shows"
 date: "2025-12-27"
 tags: ["Business"]
 author: "MyDriveSchool Team"
