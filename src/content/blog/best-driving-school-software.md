@@ -37,19 +37,19 @@ Your students should be able to book lessons 24/7 without phone calls. The syste
 
 ### 2. Automated SMS & Email Reminders
 
-No-shows cost UK driving schools an estimated £420 million annually. Automated reminders sent 24-48 hours before lessons reduce no-shows by 40-60%.
+No-shows cost UK driving schools an estimated £420 million annually. Automated reminders sent 24-48 hours before lessons reduce no-shows by 40-60%. (Learn more in our [complete guide to reducing no-shows](/blog/reduce-no-shows-driving-school/).)
 
 **What to check**: Does the software allow customizable reminder timing? Can you send reminders via both SMS and email? Are SMS costs included or extra?
 
 ### 3. Student Progress Tracking
 
-Digital progress tracking replaces paper logbooks and gives parents visibility into their teen's development. Essential for demonstrating readiness for practical tests.
+Digital progress tracking replaces paper logbooks and gives parents visibility into their teen's development. Essential for demonstrating readiness for practical tests. Schools using digital [student progress tracking](/blog/student-progress-tracking/) see 62% first-time pass rates vs 47% for paper-only schools.
 
 **What to check**: Can you track UK DVSA syllabus competencies? Does it generate test readiness reports? Can parents access progress dashboards?
 
 ### 4. Instructor Schedule Management
 
-If you manage multiple instructors, you need to see everyone's availability, lesson bookings, and driving test appointments in one dashboard.
+If you manage multiple instructors, you need to see everyone's availability, lesson bookings, and driving test appointments in one dashboard. Robust [scheduling software](/driving-school-scheduling-software/) prevents double-bookings and automatically balances instructor workloads.
 
 **What to check**: Can you assign students to specific instructors? Does it calculate instructor earnings/commissions? Can instructors block off personal time?
 
@@ -390,7 +390,7 @@ All reputable platforms allow data export (student lists, lesson history, financ
 
 ## Final Recommendations
 
-**For most UK driving schools (1-20 instructors)**: Start with **[MyDriveSchool.Software](/contact/)** at £29-99/month depending on instructor count. It's purpose-built for UK driving schools, includes SMS reminders, and offers the best value for features.
+**For most UK driving schools (1-20 instructors)**: Start with **[MyDriveSchool.Software](/driving-school-software/)** at £29-99/month depending on instructor count. It's purpose-built for UK driving schools, includes SMS reminders, and offers the best value for features.
 
 **For US multi-location schools**: Choose **DriveScout** at $79+/month for territory management and lead tracking.
 

@@ -7,7 +7,7 @@ tags: ["Student Management"]
 author: "MyDriveSchool Team"
 ---
 
-Driving schools that track student progress systematically see 23% higher first-time pass rates and 31% better student retention compared to schools using ad-hoc methods or memory alone.
+Driving schools that track student progress systematically see 23% higher first-time pass rates and 31% better [student retention](/blog/reduce-no-shows-driving-school/) compared to schools using ad-hoc methods or memory alone.
 
 But progress tracking isn't just about pass rates—it's about demonstrating value to parents, building student confidence, making data-driven test booking decisions, and protecting yourself from disputes.
 
@@ -242,7 +242,7 @@ This protects you from "he said, she said" disputes.
 ### Digital Tracking Systems
 
 **Tools:**
-- Driving school management software ([MyDriveSchool.Software](/driving-school-software/))
+- Driving school management software ([compare the best platforms](/blog/best-driving-school-software/))
 - Generic progress tracking apps (Trello, Notion)
 - Custom Excel/Google Sheets
 
