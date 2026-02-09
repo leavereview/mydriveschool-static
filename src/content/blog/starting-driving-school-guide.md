@@ -1,6 +1,6 @@
 ---
 title: "Starting a Driving School Guide"
-description: "How to start a driving school business. Covers licensing, startup costs, vehicles, marketing, and building your client base."
+description: "Start a driving school: £15K-£50K startup costs, ADI licensing steps, vehicle requirements, insurance, marketing strategies, and client acquisition plan."
 image: /images/blog-office.jpg
 date: "2026-02-13"
 tags: ["Startup", "Business"]

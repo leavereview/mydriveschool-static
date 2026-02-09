@@ -1,6 +1,6 @@
 ---
 title: "Student Progress Tracking Guide"
-description: "Digital progress tracking increases pass rates by 23% and student retention by 31%. Complete guide covering what to track, systems comparison, parent communication, and compliance."
+description: "Student progress tracking boosts pass rates 23% and retention 31%. Digital vs paper comparison, what to track, parent dashboards, and compliance checklist."
 image: /images/blog-progress.jpg
 date: "2025-12-20"
 tags: ["Student Management"]

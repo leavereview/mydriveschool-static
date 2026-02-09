@@ -1,6 +1,6 @@
 ---
 title: "SEO for Driving Schools"
-description: "Learn search engine optimization strategies for driving schools. Local SEO, keywords, Google Business Profile optimization, and content that ranks."
+description: "SEO for driving schools: rank #1 locally with Google Business optimization, keyword targeting, and content strategy. 47% of students find schools via search."
 image: /images/blog-software.jpg
 date: "2026-02-13"
 tags: ["Marketing"]
