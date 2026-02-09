@@ -221,7 +221,7 @@ Before diving in, understand that [driving school software](/driving-school-soft
 
 **Online presence:**
 - Professional website with booking capability
-- Google Business Profile (essential for local search)
+- Google Business Profile (essential for local search - learn [SEO strategies](/blog/seo-for-driving-schools/))
 - Social media presence (Facebook, Instagram)
 - Online advertising (Google Ads, Facebook Ads)
 
