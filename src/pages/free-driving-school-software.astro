@@ -43,7 +43,7 @@ const freeStats = [
 
 const comparisonData = [
   {
-    label: 'Online Booking (24/7)',
+    label: 'Drag-and-Drop Scheduling',
     values: [true, false, false],
     highlight: true
   },
@@ -57,15 +57,15 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Payment Processing',
+    label: 'Invoicing & Payment Recording',
     values: [true, false, false]
   },
   {
-    label: 'Progress Tracking',
+    label: 'DVSA Competency Tracking',
     values: [true, false, false]
   },
   {
-    label: 'Mobile Apps',
+    label: 'Responsive Web App',
     values: [true, false, false]
   },
   {
@@ -97,14 +97,14 @@ const faqItems = [
   },
   {
     question: "What features are typically included in free driving school software?",
-    answer: "Free plans usually include basic scheduling (5-10 students max), simple calendar views, manual reminders, and limited storage. Premium features excluded from free plans: online booking, automated SMS reminders, payment processing, progress tracking, multi-instructor support, mobile apps, and customer support. These limitations make free plans impractical beyond hobby-level use.",
+    answer: "Free plans usually include basic scheduling (5-10 students max), simple calendar views, manual reminders, and limited storage. Premium features excluded from free plans: drag-and-drop scheduling, automated SMS reminders, invoicing, DVSA competency tracking, multi-instructor support, student portal access, and customer support. These limitations make free plans impractical beyond hobby-level use.",
     links: [
       { text: 'Feature comparison', url: '/driving-school-software/' }
     ]
   },
   {
     question: "Can I run a driving school on free software alone?",
-    answer: "For a solo instructor with under 10 students, free software might suffice initially. However, limitations quickly appear: no online booking means constant phone calls, manual reminders lead to no-shows, student limit blocks growth, no payment processing requires separate tools. Most successful instructors find paid software (£29/month) pays for itself through time savings and reduced no-shows.",
+    answer: "For a solo instructor with under 10 students, free software might suffice initially. However, limitations quickly appear: no drag-and-drop scheduling means clunky diary management, manual reminders lead to no-shows, student limit blocks growth, no invoicing requires separate tools. Most successful instructors find paid software (£29/month) pays for itself through time savings and reduced no-shows.",
     links: [
       { text: 'ROI calculator', url: '/pricing/' },
       { text: 'Management features', url: '/driving-school-management-software/' }
@@ -135,7 +135,7 @@ const faqItems = [
   },
   {
     question: "What are the hidden costs of free driving school software?",
-    answer: "Hidden costs include: 6+ hours weekly on manual admin (scheduling calls, manual reminders, spreadsheet updates), 15-25% no-show rate without automated reminders (£3,000+ annual lost revenue for 500 lessons/month), missed bookings from no online booking (students book with competitors at 11pm), and opportunity cost of capped student limits blocking growth.",
+    answer: "Hidden costs include: 6+ hours weekly on manual admin (scheduling calls, manual reminders, spreadsheet updates), 15-25% no-show rate without automated reminders (£3,000+ annual lost revenue for 500 lessons/month), double-bookings and scheduling errors without conflict detection, and opportunity cost of capped student limits blocking growth.",
     links: [
       { text: 'Cost analysis', url: '/pricing/' },
       { text: 'No-show reduction', url: '/blog/reduce-no-shows-driving-school/' }
@@ -151,14 +151,14 @@ const faqItems = [
   },
   {
     question: "Should I use spreadsheets as free driving school software?",
-    answer: "Spreadsheets work for tracking but fail at automation. They can't send automated reminders (causing no-shows), don't offer online booking (missing 24/7 bookings), require manual calendar updates (risk of double-bookings), and become unmanageable beyond 15-20 students. Spreadsheets are 'free' but cost 6+ hours weekly in manual work.",
+    answer: "Spreadsheets work for tracking but fail at automation. They can't send automated reminders (causing no-shows), don't offer conflict detection (risk of double-bookings), have no student portal (more phone calls), and become unmanageable beyond 15-20 students. Spreadsheets are 'free' but cost 6+ hours weekly in manual work.",
     links: [
       { text: 'Spreadsheets vs software', url: '/driving-school-management-software/' }
     ]
   },
   {
     question: "What's the best free alternative to paid driving school software?",
-    answer: "There isn't one that works at scale. Best approach: Use MyDriveSchool's 14-day free trial (full features, no credit card) to test with real students. This beats limited 'free forever' plans that block growth. If cost is a barrier, the Solo Plan (£29/month for unlimited students, full automation) pays for itself through time savings and reduced no-shows.",
+    answer: "There isn't one that works at scale. Best approach: Use MyDriveSchool's 14-day free trial (full features, no credit card) to test with real students. This beats limited 'free forever' plans that block growth. If cost is a barrier, the Solo Plan (£29/month for unlimited students, DVSA tracking, automated reminders) pays for itself through time savings and reduced no-shows.",
     links: [
       { text: 'Start free trial', url: '/contact/' },
       { text: 'Solo plan details', url: '/pricing/' }
@@ -221,7 +221,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="Is there truly free driving school software?">
-    Yes, but with severe limitations. Free plans typically restrict to 5-10 students, exclude online booking and SMS reminders, and lack payment processing. 78% of ADIs upgrade within 6 months when hitting limitations. Free trials (14-day full access) are better for testing before committing. Paid plans (£29/month) deliver 8:1 ROI through time savings and reduced no-shows.
+    Yes, but with severe limitations. Free plans typically restrict to 5-10 students, exclude automated scheduling and SMS reminders, and lack invoicing. 78% of ADIs upgrade within 6 months when hitting limitations. Free trials (14-day full access) are better for testing before committing. Paid plans (£29/month) deliver 8:1 ROI through time savings and reduced no-shows.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -345,7 +345,7 @@ const schemaMarkup = {
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                  <span class="text-gray-700">Online booking and payments</span>
+                  <span class="text-gray-700">Scheduling, invoicing, and student portal</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
@@ -419,11 +419,11 @@ const schemaMarkup = {
                 <tr class="bg-gray-50">
                   <td class="p-4 font-medium">Online Booking</td>
                   <td class="p-4 text-center text-red-500">✗</td>
-                  <td class="p-4 text-center text-green-500">✓</td>
-                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-amber-500">Coming Soon</td>
+                  <td class="p-4 text-center text-amber-500">Coming Soon</td>
                 </tr>
                 <tr>
-                  <td class="p-4 font-medium">Payment Processing</td>
+                  <td class="p-4 font-medium">Invoicing & Payment Recording</td>
                   <td class="p-4 text-center text-red-500">✗</td>
                   <td class="p-4 text-center text-green-500">✓</td>
                   <td class="p-4 text-center text-green-500">✓</td>
@@ -435,13 +435,13 @@ const schemaMarkup = {
                   <td class="p-4 text-center text-green-500">✓</td>
                 </tr>
                 <tr>
-                  <td class="p-4 font-medium">Progress Tracking</td>
+                  <td class="p-4 font-medium">DVSA Competency Tracking</td>
                   <td class="p-4 text-center">Basic</td>
-                  <td class="p-4 text-center">Full</td>
-                  <td class="p-4 text-center">Full</td>
+                  <td class="p-4 text-center">Full (62+ skills)</td>
+                  <td class="p-4 text-center">Full (62+ skills)</td>
                 </tr>
                 <tr class="bg-gray-50">
-                  <td class="p-4 font-medium">Student Portal</td>
+                  <td class="p-4 font-medium">Student Portal (View & Track)</td>
                   <td class="p-4 text-center text-red-500">✗</td>
                   <td class="p-4 text-center text-green-500">✓</td>
                   <td class="p-4 text-center text-green-500">✓</td>
@@ -485,7 +485,7 @@ const schemaMarkup = {
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-red-500 font-bold">•</span>
-                  <span class="text-gray-700"><strong>Missed bookings:</strong> Students who can't book online often go elsewhere</span>
+                  <span class="text-gray-700"><strong>Disorganised scheduling:</strong> Without proper conflict detection, double-bookings and gaps damage your reputation</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-red-500 font-bold">•</span>
@@ -507,11 +507,11 @@ const schemaMarkup = {
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-green-500 font-bold">•</span>
-                  <span class="text-gray-700"><strong>24/7 booking:</strong> Students book when convenient—including evenings</span>
+                  <span class="text-gray-700"><strong>Student portal:</strong> Students check lessons and progress themselves—fewer phone calls</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-green-500 font-bold">•</span>
-                  <span class="text-gray-700"><strong>Professional image:</strong> Online booking and portals build trust</span>
+                  <span class="text-gray-700"><strong>Professional image:</strong> Student portal and DVSA tracking build trust</span>
                 </li>
               </ul>
             </div>
@@ -539,8 +539,8 @@ const schemaMarkup = {
             </div>
 
             <div class="border-l-4 border-amber-500 pl-6 py-2">
-              <h3 class="font-bold text-brand-navy mb-2">No Online Booking</h3>
-              <p class="text-gray-600">Students can't book themselves. This means phone calls, WhatsApp messages, and back-and-forth to find times that work. Many potential students will simply book with a competitor who offers online booking.</p>
+              <h3 class="font-bold text-brand-navy mb-2">No Proper Scheduling</h3>
+              <p class="text-gray-600">Free tools lack drag-and-drop calendars, conflict detection, and recurring lesson series. This means more time managing your diary and a higher risk of double-bookings and scheduling errors.</p>
             </div>
 
             <div class="border-l-4 border-amber-500 pl-6 py-2">
@@ -554,8 +554,8 @@ const schemaMarkup = {
             </div>
 
             <div class="border-l-4 border-amber-500 pl-6 py-2">
-              <h3 class="font-bold text-brand-navy mb-2">No Payment Processing</h3>
-              <p class="text-gray-600">Students can't pay online or buy lesson packages through the system. You're back to bank transfers, cash, or third-party payment apps—creating more admin work.</p>
+              <h3 class="font-bold text-brand-navy mb-2">No Invoicing</h3>
+              <p class="text-gray-600">Free tools can't generate invoices, track payment status, or manage lesson packages. You're left chasing payments manually and losing track of who owes what.</p>
             </div>
 
             <div class="border-l-4 border-amber-500 pl-6 py-2">
@@ -638,11 +638,11 @@ const schemaMarkup = {
             <div class="bg-white border border-gray-200 rounded-xl p-6">
               <h3 class="font-bold text-brand-navy mb-3">Nice-to-Have Features</h3>
               <ul class="space-y-2 text-gray-600">
-                <li>• Online booking portal</li>
+                <li>• Drag-and-drop scheduling</li>
                 <li>• Automated reminders</li>
-                <li>• Payment processing</li>
-                <li>• Progress tracking</li>
-                <li>• Student portal/app</li>
+                <li>• Invoicing & packages</li>
+                <li>• DVSA competency tracking</li>
+                <li>• Student portal</li>
               </ul>
             </div>
 

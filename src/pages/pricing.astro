@@ -86,7 +86,7 @@ const freeTrialSchema = {
 };
 ---
 
-<BaseLayout title="Pricing" description="Simple, transparent pricing for driving school software. Plans from £29/month with no hidden fees.">
+<BaseLayout title="Pricing - Plans from £29/mo" description="Driving school software from £29/month. DVSA tracking, scheduling, reminders, and invoicing included. No hidden fees. 14-day free trial.">
   <!-- Offer Schemas -->
   {offerSchemas.map(offerSchema => (
     <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
@@ -122,7 +122,7 @@ const freeTrialSchema = {
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-brand-navy mb-4">Choose the Right Plan for Your Driving School</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            Whether you're an independent ADI or managing a multi-instructor driving school, we have a plan that fits your needs. All plans include our core scheduling, booking, and student management features with no hidden fees or long-term contracts.
+            Whether you're an independent ADI or managing a multi-instructor driving school, we have a plan that fits your needs. All plans include our core scheduling, student management, and DVSA tracking features with no hidden fees or long-term contracts.
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
@@ -132,9 +132,10 @@ const freeTrialSchema = {
             <div class="text-4xl font-bold text-brand-navy mb-4">£29<span class="text-lg font-normal text-gray-500">/month</span></div>
             <ul class="text-left space-y-2 mb-6 text-sm">
               <li>✓ Unlimited students</li>
-              <li>✓ Online booking</li>
-              <li>✓ Automated reminders</li>
-              <li>✓ Progress tracking</li>
+              <li>✓ Lesson scheduling with conflict detection</li>
+              <li>✓ DVSA progress tracking</li>
+              <li>✓ Email & SMS reminders</li>
+              <li>✓ Invoicing & payment recording</li>
             </ul>
             <a href="/contact/" class="btn-outline w-full">Start Free Trial</a>
           </div>
@@ -146,8 +147,9 @@ const freeTrialSchema = {
             <ul class="text-left space-y-2 mb-6 text-sm">
               <li>✓ Everything in Solo</li>
               <li>✓ Up to 5 instructors</li>
-              <li>✓ Fleet management</li>
-              <li>✓ Business analytics</li>
+              <li>✓ Vehicle fleet & compliance tracking</li>
+              <li>✓ Business analytics & reports</li>
+              <li>✓ Role-based access control</li>
             </ul>
             <a href="/contact/" class="btn-primary w-full">Start Free Trial</a>
           </div>
@@ -158,8 +160,8 @@ const freeTrialSchema = {
             <ul class="text-left space-y-2 mb-6 text-sm">
               <li>✓ Everything in School</li>
               <li>✓ Unlimited instructors</li>
-              <li>✓ API access</li>
               <li>✓ Dedicated support</li>
+              <li>✓ Custom onboarding</li>
             </ul>
             <a href="/contact/" class="btn-outline w-full">Contact Us</a>
           </div>
@@ -175,20 +177,20 @@ const freeTrialSchema = {
         <h2 class="text-2xl font-bold text-brand-navy mb-8 text-center">What's Included in Every Plan</h2>
         <div class="grid md:grid-cols-2 gap-6">
           <div class="card">
-            <h3 class="font-bold text-brand-navy mb-2">Online Booking System</h3>
-            <p class="text-gray-600 text-sm">Let students book lessons directly from your website. Reduce phone calls and administrative work with 24/7 self-service booking.</p>
+            <h3 class="font-bold text-brand-navy mb-2">Drag-and-Drop Calendar</h3>
+            <p class="text-gray-600 text-sm">Interactive calendar with day, week, and month heatmap views. Reschedule lessons with drag-and-drop. Create recurring lesson series for regular students.</p>
           </div>
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">Automated Reminders</h3>
-            <p class="text-gray-600 text-sm">Reduce no-shows with automatic SMS and email reminders. Customise timing and message content to match your preferences.</p>
+            <p class="text-gray-600 text-sm">Email and SMS reminders with configurable timing. Per-student notification preferences and full delivery logs so you know every message was received.</p>
           </div>
           <div class="card">
-            <h3 class="font-bold text-brand-navy mb-2">Student Progress Tracking</h3>
-            <p class="text-gray-600 text-sm">Track each student's journey from first lesson to test day. Record skills covered, areas for improvement, and test readiness.</p>
+            <h3 class="font-bold text-brand-navy mb-2">DVSA Progress Tracking</h3>
+            <p class="text-gray-600 text-sm">Full DVSA competency framework with 17 categories and 62+ skills. Track each student's journey from Not Started to Test Ready on a 6-level scale.</p>
           </div>
           <div class="card">
-            <h3 class="font-bold text-brand-navy mb-2">Calendar Management</h3>
-            <p class="text-gray-600 text-sm">View and manage your schedule at a glance. Block out time, set recurring availability, and sync with external calendars.</p>
+            <h3 class="font-bold text-brand-navy mb-2">Student Portal</h3>
+            <p class="text-gray-600 text-sm">Students log in to view upcoming lessons, track their DVSA progress, check package balances, and update their personal details.</p>
           </div>
         </div>
       </div>
@@ -215,7 +217,7 @@ const freeTrialSchema = {
           </div>
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">What payment methods do you accept?</h3>
-            <p class="text-gray-600 text-sm">We accept all major credit and debit cards. Payments are processed securely through Stripe.</p>
+            <p class="text-gray-600 text-sm">For your students, the software supports recording payments via cash, bank transfer, and cheque. Online card payments via Stripe are coming soon. For your subscription, we accept all major credit and debit cards.</p>
           </div>
         </div>
       </div>

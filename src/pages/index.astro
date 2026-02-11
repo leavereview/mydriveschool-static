@@ -10,7 +10,7 @@ const softwareApplicationSchema = {
   "alternateName": "MyDriveSchool",
   "description": "Complete driving school management software for driving instructors and schools. Lesson scheduling, student management, automated billing, and instructor allocation in one platform.",
   "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Web, iOS, Android",
+  "operatingSystem": "Web",
   "offers": {
     "@type": "Offer",
     "@id": "https://mydriveschool.software/#free-trial",
@@ -22,26 +22,19 @@ const softwareApplicationSchema = {
     "url": "https://mydriveschool.software/contact/",
     "priceValidUntil": "2026-12-31"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "94",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "featureList": [
-    "Lesson Scheduling & Booking",
+    "Lesson Scheduling with Conflict Detection",
     "Student Management",
     "Instructor Allocation",
-    "Vehicle Tracking",
-    "Automated Billing & Payments",
+    "Vehicle Compliance Tracking",
+    "Invoicing & Payment Recording",
     "Test Date Management",
-    "Progress Tracking",
+    "DVSA Competency Framework",
     "SMS & Email Reminders",
-    "Mobile Instructor App",
+    "Student Self-Service Portal",
     "Reports & Analytics",
-    "DVSA Integration",
-    "Multi-Location Support"
+    "Recurring Lesson Series",
+    "Role-Based Access Control"
   ],
   "url": "https://mydriveschool.software",
   "screenshot": "https://mydriveschool.software/images/dashboard-screenshot.jpg",
@@ -97,133 +90,51 @@ const offerSchema = {
   ]
 };
 
-// Review Schemas from testimonials
-const reviewSchemas = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "@id": "https://mydriveschool.software/#review-1",
-    "itemReviewed": {
-      "@type": "SoftwareApplication",
-      "@id": "https://mydriveschool.software/#software",
-      "name": "MyDriveSchool.Software"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Mike Richardson"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "reviewBody": "MyDriveSchool cut our admin time in half. Students book online, reminders go out automatically, and I can finally focus on teaching.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Pass First Driving School"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "@id": "https://mydriveschool.software/#review-2",
-    "itemReviewed": {
-      "@type": "SoftwareApplication",
-      "@id": "https://mydriveschool.software/#software",
-      "name": "MyDriveSchool.Software"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Sarah Chen"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "reviewBody": "The scheduling system is brilliant. No more double bookings or juggling spreadsheets. Our instructors love it.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "City Drive Academy"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "@id": "https://mydriveschool.software/#review-3",
-    "itemReviewed": {
-      "@type": "SoftwareApplication",
-      "@id": "https://mydriveschool.software/#software",
-      "name": "MyDriveSchool.Software"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "David Thompson"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "reviewBody": "Our pass rate improved 15% since implementing progress tracking. Students stay motivated and instructors stay accountable.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Thompson Driving"
-    }
-  }
-];
-
 const features = [
   {
     icon: 'calendar',
     title: 'Smart Scheduling',
-    description: 'Drag-and-drop lesson scheduling with instructor availability, vehicle tracking, and automatic conflict detection.'
+    description: 'Interactive calendar with day, week, and month views. Three-way conflict detection ensures no double-bookings across students, instructors, and vehicles. Drag-and-drop rescheduling and recurring lesson series.'
   },
   {
     icon: 'users',
     title: 'Student Management',
-    description: 'Complete student profiles with progress tracking, test dates, documents, and communication history.'
+    description: 'Complete student profiles with search, filtering, and pagination. Track DVSA competencies across 17 categories and 62+ driving skills with a 6-level proficiency scale.'
   },
   {
     icon: 'credit-card',
-    title: 'Billing & Payments',
-    description: 'Automated invoicing, package management, and integrated payment processing with Stripe.'
+    title: 'Packages & Invoicing',
+    description: 'Lesson packages with configurable hours, pricing, and expiry dates. Create invoices with line items, track payment status, and send via email. Record cash, bank transfer, and cheque payments.'
   },
   {
     icon: 'chart',
     title: 'Business Analytics',
-    description: 'Track instructor utilization, pass rates, revenue per student, and identify growth opportunities.'
+    description: 'Real-time dashboard with 8 business metrics. Financial reports with 6-month revenue trends, instructor utilisation reports, and student progress overviews.'
   },
   {
     icon: 'bell',
     title: 'Automated Reminders',
-    description: 'SMS and email reminders for lessons, test dates, and document renewals. Reduce no-shows by 60%.'
+    description: 'Email reminders via Resend and SMS via Twilio with configurable timing. Per-student notification preferences. Full delivery logs with status tracking.'
   },
   {
     icon: 'mobile',
-    title: 'Instructor App',
-    description: 'Mobile app for instructors to view schedules, update progress, and communicate with students on the go.'
+    title: 'Student Portal',
+    description: 'Secure student login to view upcoming lessons, track DVSA competency progress, check package balances, and manage personal details. Reduces phone calls and WhatsApp messages.'
   }
 ];
 
-const testimonials = [
+const highlights = [
   {
-    quote: "MyDriveSchool cut our admin time in half. Students book online, reminders go out automatically, and I can finally focus on teaching.",
-    author: "Mike Richardson",
-    role: "Owner, Pass First Driving School"
+    title: 'DVSA Competency Framework',
+    description: 'Track 62+ driving competencies across 17 DVSA categories. Any instructor can pick up where the last left off.'
   },
   {
-    quote: "The scheduling system is brilliant. No more double bookings or juggling spreadsheets. Our instructors love it.",
-    author: "Sarah Chen",
-    role: "Manager, City Drive Academy"
+    title: 'Three-Way Conflict Detection',
+    description: 'Every booking checks student, instructor, and vehicle availability simultaneously. Zero double-bookings, guaranteed.'
   },
   {
-    quote: "Our pass rate improved 15% since implementing progress tracking. Students stay motivated and instructors stay accountable.",
-    author: "David Thompson",
-    role: "Owner, Thompson Driving"
+    title: 'Student Self-Service Portal',
+    description: 'Students log in to view lessons, track their DVSA progress, and check package balances. Fewer phone calls, less WhatsApp.'
   }
 ];
 
@@ -231,17 +142,14 @@ const stats = [
   { number: 'Unlimited', label: 'Students & Lessons' },
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '10+ hrs', label: 'Saved Weekly' },
-  { number: '24/7', label: 'Support' }
+  { number: '62+', label: 'DVSA Competencies' }
 ];
 ---
 
-<BaseLayout title="Home" description="Cut no-shows by 60% with automated reminders. MyDriveSchool handles instructor scheduling, payments & student progress tracking. 1,200+ schools enrolled. Try free.">
+<BaseLayout title="Driving School Software - UK" description="DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. 14-day free trial.">
   <!-- Structured Data Schemas -->
   <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
-  {reviewSchemas.map(reviewSchema => (
-    <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
-  ))}
 
   <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
     <div class="absolute inset-0 opacity-10">
@@ -249,7 +157,7 @@ const stats = [
     </div>
     <div class="container-custom relative py-20 md:py-32">
       <div class="max-w-3xl">
-        <span class="badge-primary mb-6">#1 Driving School Software</span>
+        <span class="badge-primary mb-6">Purpose-Built for UK Driving Schools</span>
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
           Run Your <span class="text-brand-red">Driving School</span> Like a Pro
         </h1>
@@ -284,7 +192,7 @@ const stats = [
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="badge-primary mb-4">Features</span>
         <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Everything You Need to Run Your Driving School</h2>
-        <p class="text-xl text-gray-600">From online booking to student progress tracking, we've got you covered.</p>
+        <p class="text-xl text-gray-600">From DVSA competency tracking to three-way scheduling, we've got you covered.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature) => (
@@ -335,7 +243,7 @@ const stats = [
               <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-700"><strong class="text-brand-navy">Franchise Operations:</strong> Multi-location support, centralized reporting, brand consistency</span>
+              <span class="text-gray-700"><strong class="text-brand-navy">Growing Schools:</strong> Role-based access control, vehicle fleet compliance, and 16 configurable settings pages</span>
             </li>
           </ul>
           <a href="/driving-school-software/" class="btn-primary">
@@ -369,24 +277,14 @@ const stats = [
   <section class="section bg-brand-navy text-white">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">Testimonials</span>
-        <h2 class="text-3xl md:text-5xl font-bold mb-6">Loved by Driving Instructors</h2>
+        <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">Why Us</span>
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Why Schools Choose MyDriveSchool</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial) => (
+        {highlights.map((highlight) => (
           <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <div class="flex gap-1 mb-4">
-              {[1,2,3,4,5].map(() => (
-                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p class="text-gray-300 mb-6 leading-relaxed">"{testimonial.quote}"</p>
-            <div>
-              <div class="font-semibold">{testimonial.author}</div>
-              <div class="text-sm text-gray-400">{testimonial.role}</div>
-            </div>
+            <h3 class="text-xl font-bold mb-4">{highlight.title}</h3>
+            <p class="text-gray-300 leading-relaxed">{highlight.description}</p>
           </div>
         ))}
       </div>

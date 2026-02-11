@@ -23,7 +23,7 @@ const managementStats = [
     label: 'Revenue Increase',
     value: '22%',
     change: { value: 22, direction: 'up' as const, period: 'year 1' },
-    context: 'With automated billing and online booking'
+    context: 'With automated billing and scheduling'
   },
   {
     label: 'UK Driving Schools Using Software',
@@ -47,12 +47,12 @@ const managementStats = [
 // Comparison Table Data
 const comparisonData = [
   {
-    label: 'Student Progress Tracking',
+    label: 'DVSA Competency Framework (62+ Skills)',
     values: [true, false, false],
     highlight: true
   },
   {
-    label: 'Automated Payment Processing',
+    label: 'Invoicing & Payment Recording',
     values: [true, false, false]
   },
   {
@@ -61,7 +61,7 @@ const comparisonData = [
     highlight: true
   },
   {
-    label: 'Parent Portal Access',
+    label: 'Student Self-Service Portal',
     values: [true, false, false]
   },
   {
@@ -77,11 +77,11 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Mobile App for Instructors',
+    label: 'Role-Based Instructor Access',
     values: [true, false, false]
   },
   {
-    label: 'Document Storage',
+    label: 'Vehicle Compliance Tracking',
     values: [true, false, false]
   },
   {
@@ -110,29 +110,28 @@ const faqItems = [
   },
   {
     question: "Can I track student progress with management software?",
-    answer: "Yes, comprehensive progress tracking includes lesson hours completed, skills mastered (junctions, roundabouts, manoeuvres), areas needing improvement, test readiness scores, and instructor notes after each lesson. Parents can view progress through their own portal, reducing 'How's my child doing?' phone calls.",
+    answer: "Yes. MyDriveSchool includes the full DVSA competency framework with 17 categories and 62+ skills, each tracked on a 6-level proficiency scale (Not Started to Test Ready). This provides cross-instructor continuity—any instructor can pick up exactly where the last left off. Students view their own progress through their secure portal.",
     links: [
-      { text: 'Student management features', url: '/features/' }
+      { text: 'Student management features', url: '/driving-school-software/' }
     ]
   },
   {
     question: "Does the software handle payments and invoicing?",
-    answer: "Yes, modern driving school software processes card payments, sells lesson packages, tracks balances, and automatically generates invoices. Prepayment at booking reduces no-shows by 65%. Automated invoice reminders improve payment collection rates by 30% compared to manual chasing.",
+    answer: "Yes. Record payments via cash, bank transfer, and cheque. Create invoices with line items, track status through a full lifecycle, and send to students via email. Sell lesson packages with configurable hours, pricing, and expiry dates. Refund processing is also supported. Online card payments via Stripe are coming soon.",
     links: [
-      { text: 'Payment features', url: '/features/' },
-      { text: 'Payment processing guide', url: '/blog/driving-school-payment-processing/' }
+      { text: 'Pricing details', url: '/pricing/' }
     ]
   },
   {
     question: "Can instructors access the system on their phones?",
-    answer: "Yes, instructors get mobile apps (iOS/Android) or responsive web access to view their schedule, access student information, record lesson notes, update availability, and view earnings—all from any device with internet. Mobile access means no more calling the office for student details.",
+    answer: "Yes. The platform is fully responsive and works on any device with a web browser. Instructors can view their schedule, access student information, record lesson notes, update availability, and manage their time-off requests from their phone or tablet. Role-based access ensures each instructor only sees what's relevant to them.",
     links: [
-      { text: 'Instructor features', url: '/features/' }
+      { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
   },
   {
     question: "Is management software suitable for solo ADIs?",
-    answer: "Absolutely. Solo ADIs benefit from automated scheduling, online booking (capture students 24/7), progress tracking, and professional invoicing without the complexity of enterprise systems. The Solo Plan (£29/month) includes unlimited students and all core features.",
+    answer: "Absolutely. Solo ADIs benefit from automated scheduling, DVSA competency tracking, automated reminders, and professional invoicing without the complexity of enterprise systems. The Solo Plan (£29/month) includes unlimited students and all core features.",
     links: [
       { text: 'Solo plan details', url: '/pricing/' },
       { text: 'Software overview', url: '/driving-school-software/' }
@@ -155,14 +154,14 @@ const faqItems = [
   },
   {
     question: "Can parents access their child's progress?",
-    answer: "Yes, parent portal access lets parents view upcoming lessons, see instructor feedback and progress reports, book/reschedule lessons, and make payments. This transparency improves satisfaction and reduces admin calls. Parents receive automatic updates when lessons are completed or cancelled.",
+    answer: "A dedicated parent/guardian portal is planned for a future release. Currently, students access their own portal to view lessons, track DVSA progress, and manage their details. For minor students, login credentials can be shared with parents so they can monitor progress. Automated lesson reminders also keep parents informed.",
     links: [
-      { text: 'Parent portal features', url: '/features/' }
+      { text: 'Student portal features', url: '/driving-school-software/' }
     ]
   },
   {
     question: "How long does setup take?",
-    answer: "Initial setup takes 30-60 minutes: add your availability, create appointment types, set pricing, and invite instructors (if multi-instructor school). Importing students from spreadsheets can be done via CSV upload. Full training and UK-based support included. Most schools are live within 24 hours.",
+    answer: "Initial setup takes 30-60 minutes: add your availability, create lesson types, set pricing, and configure your settings. With 16 configuration pages, you can customise the platform to match exactly how your school operates. Full support included. Most schools are live within 24 hours.",
     links: [
       { text: 'Get started', url: '/contact/' },
       { text: 'Pricing plans', url: '/pricing/' }
@@ -186,7 +185,7 @@ const schemaMarkup = {
 
 <BaseLayout
   title="Management Software Guide (2026)"
-  description="Complete guide to management software for driving schools. Student records, payments, instructor management, and business reporting in one platform."
+  description="Driving school management software with DVSA competency tracking, invoicing, vehicle compliance, and role-based instructor access. Built for UK driving schools."
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
 
@@ -222,7 +221,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school management software?">
-    Driving school management software is an all-in-one platform that handles student records, scheduling, payments, instructor management, and business reporting. It replaces spreadsheets and paper files with automated systems that save 15+ hours weekly, increase revenue by 22%, and improve payment collection rates by 30% through automated workflows and online access.
+    Driving school management software is an all-in-one platform that handles student records, DVSA competency tracking, scheduling, invoicing, instructor management, and business reporting. It replaces spreadsheets and paper files with automated systems that save 15+ hours weekly and improve organisation through features like three-way conflict detection, automated reminders, and a student self-service portal.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -271,7 +270,7 @@ const schemaMarkup = {
           <li><strong>Single source of truth:</strong> All student, instructor, and business data in one place. No more hunting through spreadsheets or paper files.</li>
           <li><strong>Automated workflows:</strong> Reminders, invoices, and communications happen automatically instead of manually.</li>
           <li><strong>Better decisions:</strong> Real-time reporting shows what's working and what needs attention.</li>
-          <li><strong>Professional image:</strong> Online booking, digital payments, and automated communications make you look modern and organised.</li>
+          <li><strong>Professional image:</strong> Student portal, professional invoicing, and automated communications make you look modern and organised.</li>
         </ul>
 
         <h2 id="key-features" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Key Features of Driving School Management Software</h2>
@@ -279,15 +278,15 @@ const schemaMarkup = {
         <div class="grid md:grid-cols-2 gap-6 my-8">
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Student Management</h3>
-            <p class="text-gray-700 text-sm">Complete student profiles, progress tracking, document storage, and parent portal access.</p>
+            <p class="text-gray-700 text-sm">Complete student profiles with DVSA competency tracking (17 categories, 62+ skills), student portal access, and per-student notification preferences.</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Scheduling</h3>
-            <p class="text-gray-700 text-sm">Visual calendar, online booking, automated reminders, and multi-instructor coordination.</p>
+            <p class="text-gray-700 text-sm">Drag-and-drop calendar with day/week/month views, three-way conflict detection, automated reminders, and recurring lesson series.</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Payments</h3>
-            <p class="text-gray-700 text-sm">Online payments, package sales, automatic invoicing, and balance tracking.</p>
+            <p class="text-gray-700 text-sm">Invoice lifecycle management, payment recording (cash, bank transfer, cheque), lesson packages, and email delivery. Online card payments coming soon.</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Reporting</h3>
@@ -314,49 +313,52 @@ const schemaMarkup = {
           <li><strong>Payment history:</strong> Packages purchased, lessons used, balance remaining</li>
         </ul>
 
-        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Progress Tracking</h3>
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">DVSA Competency Framework</h3>
 
-        <p>Track student progress against a structured curriculum:</p>
+        <p>Track student progress against the full DVSA competency framework:</p>
 
         <ul class="space-y-2">
-          <li>Hours completed vs. required</li>
-          <li>Skills checklist (bay parking, roundabouts, motorway, etc.)</li>
-          <li>Instructor assessments after each lesson</li>
-          <li>Test readiness indicators</li>
+          <li>17 DVSA categories covering all aspects of driving</li>
+          <li>62+ individual competencies with 6-level proficiency scale (Not Started to Test Ready)</li>
+          <li>Cross-instructor continuity — any instructor sees the complete picture</li>
+          <li>Students view their own progress through their secure portal</li>
         </ul>
 
-        <p>This helps instructors pick up where others left off and gives students (and parents) visibility into progress.</p>
+        <p>This ensures consistency across multiple instructors and gives students clear visibility into their progress.</p>
 
         <p>Related: <a href="/blog/student-management-driving-schools/" class="text-brand-red hover:underline">Student Management for Driving Schools: Complete Guide</a></p>
 
-        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Parent Portal</h3>
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Student Portal</h3>
 
-        <p>For teen students, parents often need involvement. A parent portal allows them to:</p>
+        <p>Students get their own secure login (JWT authenticated) to self-serve:</p>
 
         <ul class="space-y-2">
           <li>View upcoming and past lessons</li>
-          <li>See progress reports and instructor feedback</li>
-          <li>Book and reschedule lessons</li>
-          <li>Make payments and view balances</li>
+          <li>Track DVSA competency progress across all 17 categories</li>
+          <li>Check package balances and lesson history</li>
+          <li>Manage personal details and contact information</li>
         </ul>
+
+        <p><em>A dedicated parent/guardian portal for minor students is on our roadmap.</em></p>
 
         <h2 id="payments" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Payments & Billing</h2>
 
         <p>Managing money shouldn't be complicated. Good management software handles payments smoothly.</p>
 
-        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Online Payments</h3>
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Invoicing & Payment Recording</h3>
 
-        <p>Accept card payments securely through:</p>
+        <p>Record payments and manage invoices through a complete workflow:</p>
 
         <ul class="space-y-2">
-          <li>Online booking (collect payment at time of booking)</li>
-          <li>Student portal (pay balances anytime)</li>
-          <li>Invoice links (send payment links via email/SMS)</li>
+          <li>Create invoices with line items and track payment status</li>
+          <li>Record cash, bank transfer, and cheque payments</li>
+          <li>Send invoices to students via email</li>
+          <li>Process refunds when needed</li>
         </ul>
 
-        <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
-          <p class="font-bold text-brand-navy">Prepayment reduces no-shows</p>
-          <p>Students who pay in advance are significantly less likely to miss lessons. Collecting payment at booking time is the single most effective no-show prevention strategy.</p>
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+          <p class="font-bold text-brand-navy">Online card payments coming soon</p>
+          <p>Stripe integration for online card payments is in development. Currently, the system supports manual payment recording with full invoice lifecycle management.</p>
         </div>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Package Sales</h3>
@@ -388,14 +390,14 @@ const schemaMarkup = {
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Self-Service for Instructors</h3>
 
-        <p>Give instructors their own login to:</p>
+        <p>Give instructors their own login with role-based access (Owner, Manager, Instructor, Admin) to:</p>
 
         <ul class="space-y-2">
-          <li>View their schedule on any device</li>
-          <li>Access student information before lessons</li>
-          <li>Record lesson notes and progress</li>
-          <li>Update their availability</li>
-          <li>View their performance and earnings</li>
+          <li>View their schedule on any device (fully responsive web app)</li>
+          <li>Access student information and DVSA progress before lessons</li>
+          <li>Record lesson notes and update competency levels</li>
+          <li>Set availability templates and submit time-off requests</li>
+          <li>View their performance and assigned students</li>
         </ul>
 
         <h2 id="reporting" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Reporting & Analytics</h2>
@@ -527,7 +529,7 @@ const schemaMarkup = {
         </a>
         <a href="/driving-school-scheduling-software/" class="card p-6 hover:shadow-lg transition-shadow">
           <h3 class="font-bold text-brand-navy mb-2">Scheduling Software Guide</h3>
-          <p class="text-gray-600 text-sm">Online booking, reminders, and calendars</p>
+          <p class="text-gray-600 text-sm">Scheduling, reminders, and calendars</p>
         </a>
         <a href="/blog/free-driving-school-software/" class="card p-6 hover:shadow-lg transition-shadow">
           <h3 class="font-bold text-brand-navy mb-2">Free Software Options</h3>

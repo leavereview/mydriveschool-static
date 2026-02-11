@@ -34,7 +34,7 @@ const drivingStats = [
     label: 'Revenue Increase',
     value: '18%',
     change: { value: 18, direction: 'up' as const, period: 'year 1' },
-    context: 'With online booking and lesson packages'
+    context: 'With automated scheduling and lesson packages'
   },
   {
     label: 'Average Pass Rate',
@@ -46,7 +46,7 @@ const drivingStats = [
 // Comparison Table Data
 const comparisonData = [
   {
-    label: 'Online Booking (24/7)',
+    label: 'Lesson Scheduling with Conflict Detection',
     values: [true, false, false],
     highlight: true
   },
@@ -59,16 +59,16 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'DVSA Integration',
+    label: 'DVSA Competency Framework (62+ Skills)',
     values: [true, false, false],
     highlight: true
   },
   {
-    label: 'Automated Billing & Invoices',
+    label: 'Invoicing & Payment Recording',
     values: [true, false, false]
   },
   {
-    label: 'Vehicle & Fuel Tracking',
+    label: 'Vehicle Compliance Tracking (MOT/Tax/Insurance)',
     values: [true, false, false]
   },
   {
@@ -76,7 +76,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Mobile App for Students',
+    label: 'Student Self-Service Portal',
     values: [true, false, false]
   },
   {
@@ -93,15 +93,14 @@ const comparisonData = [
 const faqItems = [
   {
     question: "What is driving school software?",
-    answer: "Driving school software is a management platform for ADIs and driving schools that handles lesson scheduling, online booking, student progress tracking, test date management, automated billing, and instructor allocation. It replaces spreadsheets, paper diaries, and WhatsApp coordination with a centralized system accessible from any device.",
+    answer: "Driving school software is a management platform for ADIs and driving schools that handles lesson scheduling, student progress tracking, test date management, invoicing, and instructor allocation. It replaces spreadsheets, paper diaries, and WhatsApp coordination with a centralised system accessible from any device.",
     links: [
-      { text: 'View all features', url: '/features/' },
       { text: 'See pricing plans', url: '/pricing/' }
     ]
   },
   {
     question: "How much does driving school software cost?",
-    answer: "MyDriveSchool.Software plans start from £29/month for solo ADIs with unlimited students, online booking, and progress tracking. Multi-instructor schools pay £79/month for up to 5 instructors with fleet management and business analytics. All plans include a 14-day free trial with no credit card required.",
+    answer: "MyDriveSchool.Software plans start from £29/month for solo ADIs with unlimited students, DVSA progress tracking, and automated reminders. Multi-instructor schools pay £79/month for up to 5 instructors with vehicle compliance tracking and business analytics. All plans include a 14-day free trial with no credit card required.",
     links: [
       { text: 'Full pricing details', url: '/pricing/' },
       { text: 'Start free trial', url: '/contact/' }
@@ -109,36 +108,35 @@ const faqItems = [
   },
   {
     question: "Can students book lessons online?",
-    answer: "Yes. Students get their own portal where they can view your availability, book lessons, reschedule, track their progress, and make payments. They receive automatic confirmations and reminders via SMS and email. Online booking reduces phone calls by 80% and lets students book lessons outside business hours.",
+    answer: "Students have their own secure portal where they can view upcoming and past lessons, track their DVSA competency progress, check package balances, and manage their personal details. A self-service booking widget is on our roadmap. In the meantime, the student portal significantly reduces phone calls and WhatsApp messages.",
     links: [
-      { text: 'Online booking features', url: '/features/' }
+      { text: 'Student portal features', url: '/driving-school-management-software/' }
     ]
   },
   {
     question: "Does it integrate with DVSA?",
-    answer: "Yes. MyDriveSchool.Software tracks test dates, sends countdown reminders, and helps students monitor their readiness. While DVSA doesn't offer direct API integration, our system makes test date management seamless by storing test details, tracking skills coverage, and alerting you when students are approaching their test date.",
+    answer: "MyDriveSchool includes a built-in DVSA competency framework with 17 categories and 62+ skills. It tracks each student's proficiency on a 6-level scale (Not Started to Test Ready). This isn't a direct DVSA API integration, but a comprehensive curriculum tracking system that ensures cross-instructor continuity—any instructor can pick up exactly where the last left off.",
     links: [
-      { text: 'Student progress tracking', url: '/features/' }
+      { text: 'Student progress tracking', url: '/driving-school-management-software/' }
     ]
   },
   {
     question: "Can I track student progress?",
-    answer: "Absolutely. After each lesson, record which skills you covered (junctions, roundabouts, manoeuvres, etc.), note areas for improvement, and rate readiness. Students see their progress through their portal, which motivates them and reduces 'When will I be ready?' questions. Progress tracking also helps with test preparation.",
+    answer: "Yes. The full DVSA competency framework tracks 62+ skills across 17 categories with a 6-level proficiency scale. After each lesson, instructors record which competencies were covered and update proficiency levels. Students see their progress through their portal, which motivates them and reduces 'When will I be ready?' questions.",
     links: [
-      { text: 'Progress tracking features', url: '/features/' }
+      { text: 'Progress tracking features', url: '/driving-school-management-software/' }
     ]
   },
   {
     question: "How does automated billing work?",
-    answer: "Create lesson packages (e.g., 10-hour blocks) or charge per lesson. The system generates invoices automatically, tracks payments, and sends polite reminders for overdue accounts. Accept payments via bank transfer, card, or cash. Automated billing saves 3-5 hours per week and reduces unpaid lessons by 90%.",
+    answer: "Create lesson packages with configurable hours, pricing, and expiry dates. The system generates invoices with line items, tracks payment status through a full lifecycle, and sends invoices to students via email. Record payments via cash, bank transfer, or cheque. Online card payments via Stripe are coming soon.",
     links: [
-      { text: 'Billing features', url: '/features/' },
       { text: 'See pricing', url: '/pricing/' }
     ]
   },
   {
     question: "Is driving school software suitable for solo ADIs?",
-    answer: "Yes. Many of our users are independent ADIs who need better organization without the complexity of enterprise software. The Solo Plan (£29/month) includes unlimited students, online booking, progress tracking, automated reminders, and billing—everything a solo instructor needs to run professionally.",
+    answer: "Yes. Many of our users are independent ADIs who need better organisation without the complexity of enterprise software. The Solo Plan (£29/month) includes unlimited students, DVSA progress tracking, automated reminders, and invoicing—everything a solo instructor needs to run professionally.",
     links: [
       { text: 'Solo plan details', url: '/pricing/' },
       { text: 'Start free trial', url: '/contact/' }
@@ -146,31 +144,30 @@ const faqItems = [
   },
   {
     question: "Can I manage multiple instructors?",
-    answer: "Yes. The School Plan (£79/month) supports up to 5 instructors with individual calendars, student assignments, vehicle allocation, and performance tracking. Enterprise plans handle unlimited instructors across multiple locations. Each instructor gets their own login and can only see their assigned students.",
+    answer: "Yes. The School Plan (£79/month) supports up to 5 instructors with individual calendars, student assignments, vehicle allocation, and performance tracking. Each instructor gets their own login with role-based access. Enterprise plans support unlimited instructors with dedicated support and custom onboarding.",
     links: [
       { text: 'School plan details', url: '/pricing/' },
-      { text: 'Multi-instructor features', url: '/features/' }
+      { text: 'Management features', url: '/driving-school-management-software/' }
     ]
   },
   {
     question: "Does driving school software send lesson reminders?",
-    answer: "Yes. Automated reminders go out via SMS and email 24 hours before each lesson. This reduces no-shows by 65% and cancellations by 40%. You can customize reminder timing and messaging. Students can confirm, cancel, or request changes directly from the reminder, saving you phone calls.",
+    answer: "Yes. Automated reminders go out via SMS (Twilio) and email (Resend) with configurable timing. You can set per-student notification preferences, and full delivery logs let you verify every message was sent and received. This reduces no-shows significantly.",
     links: [
-      { text: 'Reminder features', url: '/features/' }
+      { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
   },
   {
-    question: "What about vehicle and fuel tracking?",
-    answer: "MyDriveSchool.Software includes vehicle management for tracking mileage, fuel consumption, maintenance schedules, and MOT dates. This is essential for claiming mileage deductions and ensuring your vehicles are roadworthy. Fleet tracking is included in the School Plan and above for managing multiple vehicles.",
+    question: "What about vehicle tracking?",
+    answer: "MyDriveSchool.Software includes vehicle compliance tracking for MOT dates, tax, and insurance expiry with automated alerts. This ensures your vehicles stay roadworthy and legally compliant. Vehicle fleet management is included in the School Plan and above.",
     links: [
-      { text: 'Vehicle tracking features', url: '/features/' },
       { text: 'School plan details', url: '/pricing/' }
     ]
   }
 ];
 ---
 
-<BaseLayout title="Driving School Software" description="Complete driving school software for scheduling, student management, and online booking. Built for ADIs and driving schools of all sizes.">
+<BaseLayout title="Driving School Software" description="Driving school software with DVSA competency tracking, three-way scheduling, vehicle compliance alerts, and student portal. Built for UK ADIs.">
   <!-- Breadcrumbs with Schema -->
   <BreadcrumbsEnhanced
     site="driveschool"
@@ -202,7 +199,7 @@ const faqItems = [
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school software?">
-    Driving school software is a management platform for ADIs and driving schools that handles lesson scheduling, online booking, student progress tracking, test date management, automated billing, and instructor allocation. Modern platforms integrate with DVSA for test booking and save instructors 12+ hours weekly while reducing no-shows by 65% through automated reminders.
+    Driving school software is a management platform for ADIs and driving schools that handles lesson scheduling, student progress tracking, test date management, invoicing, and instructor allocation. Modern platforms like MyDriveSchool include a full DVSA competency framework with 62+ skills, three-way conflict detection for scheduling, and automated SMS and email reminders that save instructors 10+ hours weekly.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -230,25 +227,25 @@ const faqItems = [
             <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Online Booking:</strong> Students book lessons 24/7. No more phone tag or back-and-forth messages.</span>
+            <span class="text-gray-700"><strong class="text-brand-navy">Three-Way Scheduling:</strong> Drag-and-drop calendar with conflict detection across students, instructors, and vehicles. Day, week, and month views with recurring lesson series.</span>
           </li>
           <li class="flex items-start gap-3">
             <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Smart Scheduling:</strong> Drag-and-drop diary with instructor availability, pickup locations, and automatic reminders.</span>
+            <span class="text-gray-700"><strong class="text-brand-navy">DVSA Progress Tracking:</strong> Full DVSA competency framework — 17 categories, 62+ skills with 6-level proficiency scale. Cross-instructor continuity so any instructor sees the full picture.</span>
           </li>
           <li class="flex items-start gap-3">
             <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Student Progress:</strong> Track skills, record notes, and share progress with students through their own portal.</span>
+            <span class="text-gray-700"><strong class="text-brand-navy">Student Portal:</strong> Secure student login to view lessons, track DVSA progress, check package balances, and manage personal details.</span>
           </li>
           <li class="flex items-start gap-3">
             <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Automated Billing:</strong> Invoices, packages, and payment reminders handled automatically.</span>
+            <span class="text-gray-700"><strong class="text-brand-navy">Invoicing & Packages:</strong> Invoices with line items, payment recording (cash, bank transfer, cheque), and email delivery. Lesson packages with automatic hour tracking.</span>
           </li>
         </ul>
 
