@@ -152,6 +152,28 @@ const stats = [
   <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
 
+  <!-- Announcement Banner -->
+  <div id="announcement-banner" class="bg-brand-red text-white py-3 relative">
+    <div class="container-custom flex items-center justify-center gap-3 text-sm md:text-base">
+      <span>We're launching in Spring 2026 — Join as a Founding Member and get 3 months free</span>
+      <a href="/early-access/" class="font-bold underline hover:no-underline whitespace-nowrap">Learn more &rarr;</a>
+      <button id="dismiss-banner" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white" aria-label="Dismiss banner">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+  </div>
+  <script>
+    const banner = document.getElementById('announcement-banner');
+    const dismissBtn = document.getElementById('dismiss-banner');
+    if (localStorage.getItem('ea-banner-dismissed')) {
+      banner?.remove();
+    }
+    dismissBtn?.addEventListener('click', () => {
+      banner?.remove();
+      localStorage.setItem('ea-banner-dismissed', '1');
+    });
+  </script>
+
   <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0" style="background-image: url('/images/hero-driving.jpg'); background-size: cover; background-position: center;"></div>
@@ -166,10 +188,10 @@ const stats = [
           The all-in-one platform for driving instructors and schools. Scheduling, student management, payments, and more.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact/" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href="/early-access/" class="btn-primary text-lg px-8 py-4">Become a Founding Member — Get 3 Months Free</a>
           <a href="/driving-school-software/" class="btn-secondary text-lg px-8 py-4">See Features</a>
         </div>
-        <p class="mt-6 text-sm text-gray-400">No credit card required • 14-day free trial</p>
+        <p class="mt-6 text-sm text-gray-400">No credit card required • Launching Spring 2026</p>
       </div>
     </div>
   </section>
