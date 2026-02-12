@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mydriveschool.software/</loc>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/dashboard-overview.webp</image:loc>
+      <image:title>MyDriveSchool Dashboard</image:title>
+      <image:caption>MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/calendar-week-view.webp</image:loc>
+      <image:title>Weekly Calendar View</image:title>
+      <image:caption>Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/dvsa-progress-tracking.webp</image:loc>
+      <image:title>DVSA Progress Tracking</image:title>
+      <image:caption>DVSA competency tracking grid showing 17 skill categories with proficiency levels from Not Started to Test Ready</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/portal-dashboard-mobile.webp</image:loc>
+      <image:title>Student Portal on Mobile</image:title>
+      <image:caption>Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/calendar-mobile.webp</image:loc>
+      <image:title>Calendar on Mobile</image:title>
+      <image:caption>Daily calendar view on mobile showing scheduled lessons with instructor and vehicle details</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mydriveschool.software/driving-school-software/</loc>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/dashboard-overview.webp</image:loc>
+      <image:title>MyDriveSchool Dashboard</image:title>
+      <image:caption>MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/calendar-week-view.webp</image:loc>
+      <image:title>Weekly Calendar View</image:title>
+      <image:caption>Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/dvsa-progress-tracking.webp</image:loc>
+      <image:title>DVSA Progress Tracking</image:title>
+      <image:caption>DVSA competency tracking grid showing 17 skill categories with proficiency levels</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/portal-dashboard-mobile.webp</image:loc>
+      <image:title>Student Portal on Mobile</image:title>
+      <image:caption>Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/payments.webp</image:loc>
+      <image:title>Invoice Management</image:title>
+      <image:caption>Professional invoice with itemised charges, VAT breakdown, and email delivery status</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mydriveschool.software/driving-school-scheduling-software/</loc>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/calendar-week-view.webp</image:loc>
+      <image:title>Weekly Calendar View</image:title>
+      <image:caption>Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/calendar-drag-drop.webp</image:loc>
+      <image:title>Drag-and-Drop Scheduling</image:title>
+      <image:caption>Drag-and-drop lesson rescheduling on the weekly calendar view</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/portal-dashboard-mobile.webp</image:loc>
+      <image:title>Student Portal on Mobile</image:title>
+      <image:caption>Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/instructor-availability.webp</image:loc>
+      <image:title>Instructor Availability</image:title>
+      <image:caption>Instructor weekly availability editor with time block templates and pending time-off requests</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mydriveschool.software/driving-school-management-software/</loc>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/student-list.webp</image:loc>
+      <image:title>Student Management</image:title>
+      <image:caption>Student management page with search, status filters, and paginated student records</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/dvsa-progress-tracking.webp</image:loc>
+      <image:title>DVSA Progress Tracking</image:title>
+      <image:caption>DVSA competency tracking grid showing 17 skill categories with proficiency levels</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/portal-progress-mobile.webp</image:loc>
+      <image:title>Student Progress on Mobile</image:title>
+      <image:caption>Student progress view on mobile showing DVSA competency levels by category</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/payments.webp</image:loc>
+      <image:title>Invoice Management</image:title>
+      <image:caption>Professional invoice with itemised charges, VAT breakdown, and email delivery status</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/reports-financial.webp</image:loc>
+      <image:title>Financial Reports</image:title>
+      <image:caption>Financial reports dashboard with 6-month revenue chart and key business metrics</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mydriveschool.software/free-driving-school-software/</loc>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/dashboard-overview.webp</image:loc>
+      <image:title>MyDriveSchool Dashboard</image:title>
+      <image:caption>MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mydriveschool.software/images/marketing/calendar-week-view.webp</image:loc>
+      <image:title>Weekly Calendar View</image:title>
+      <image:caption>Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling</image:caption>
+    </image:image>
+  </url>
+</urlset>

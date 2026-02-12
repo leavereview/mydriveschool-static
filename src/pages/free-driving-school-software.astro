@@ -5,6 +5,7 @@ import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
 import StatisticsSection from '../components/seo/StatisticsSection.astro';
 import ComparisonTable from '../components/seo/ComparisonTable.astro';
 import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
+import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 
 const freeStats = [
   {
@@ -187,6 +188,7 @@ const schemaMarkup = {
 <BaseLayout
   title="Free Driving School Software Guide"
   description="Find the best free driving school software for your business. Compare free plans, trials, and freemium options. Honest guide for ADIs and driving instructors."
+  image="/images/marketing/dashboard-overview.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
 
@@ -517,6 +519,16 @@ const schemaMarkup = {
             </div>
           </div>
 
+          <div class="my-10">
+            <MarketingScreenshot
+              src="/images/marketing/dashboard-overview.webp"
+              width={1440}
+              height={900}
+              alt="MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons"
+            />
+            <p class="text-sm text-gray-500 text-center mt-3">What paid driving school software looks like: the MyDriveSchool dashboard</p>
+          </div>
+
           <div class="bg-brand-navy text-white rounded-xl p-6 mt-8">
             <h3 class="text-xl font-bold mb-3">Quick Calculation</h3>
             <p class="text-gray-300 mb-4">
@@ -612,6 +624,16 @@ const schemaMarkup = {
                 </div>
               </li>
             </ul>
+          </div>
+
+          <div class="mt-10">
+            <MarketingScreenshot
+              src="/images/marketing/calendar-week-view.webp"
+              width={1440}
+              height={900}
+              alt="Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling"
+            />
+            <p class="text-sm text-gray-500 text-center mt-3">Professional scheduling that free tools can't match: drag-and-drop calendars with conflict detection</p>
           </div>
         </div>
 

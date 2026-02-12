@@ -1,0 +1,100 @@
+[
+  {
+    "src": "/images/marketing/dashboard-overview.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/calendar-week-view.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/student-list.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Student management page with search, status filters, and paginated student records",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/lesson-booking-form.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Lesson booking form showing student, instructor, and vehicle selection with date and time picker",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/dvsa-progress-tracking.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "DVSA competency tracking grid showing 17 skill categories with proficiency levels from Not Started to Test Ready",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/calendar-drag-drop.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Drag-and-drop lesson rescheduling on the weekly calendar view",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/portal-dashboard-mobile.webp",
+    "width": 375,
+    "height": 1193,
+    "alt": "Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages",
+    "mobile": true
+  },
+  {
+    "src": "/images/marketing/payments.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Professional invoice with itemised charges, VAT breakdown, and email delivery status",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/vehicle-compliance.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Vehicle fleet list showing MOT, tax, and insurance compliance status with colour-coded alerts",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/reports-financial.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Financial reports dashboard with 6-month revenue chart and key business metrics",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/settings-hours.webp",
+    "width": 1440,
+    "height": 1217,
+    "alt": "Operating hours configuration showing customisable daily schedules and blackout dates",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/instructor-availability.webp",
+    "width": 1440,
+    "height": 900,
+    "alt": "Instructor weekly availability editor with time block templates and pending time-off requests",
+    "mobile": false
+  },
+  {
+    "src": "/images/marketing/portal-progress-mobile.webp",
+    "width": 375,
+    "height": 7173,
+    "alt": "Student progress view on mobile showing DVSA competency levels by category",
+    "mobile": true
+  },
+  {
+    "src": "/images/marketing/calendar-mobile.webp",
+    "width": 375,
+    "height": 812,
+    "alt": "Daily calendar view on mobile showing scheduled lessons with instructor and vehicle details",
+    "mobile": true
+  }
+]

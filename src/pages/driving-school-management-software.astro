@@ -5,6 +5,7 @@ import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
 import StatisticsSection from '../components/seo/StatisticsSection.astro';
 import ComparisonTable from '../components/seo/ComparisonTable.astro';
 import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
+import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 
 // Management Software Statistics
 const managementStats = [
@@ -186,6 +187,7 @@ const schemaMarkup = {
 <BaseLayout
   title="Management Software Guide (2026)"
   description="Driving school management software with DVSA competency tracking, invoicing, vehicle compliance, and role-based instructor access. Built for UK driving schools."
+  image="/images/marketing/dvsa-progress-tracking.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
 
@@ -313,6 +315,16 @@ const schemaMarkup = {
           <li><strong>Payment history:</strong> Packages purchased, lessons used, balance remaining</li>
         </ul>
 
+        <div class="my-8 not-prose">
+          <MarketingScreenshot
+            src="/images/marketing/student-list.webp"
+            width={1440}
+            height={900}
+            alt="Student management page with search, status filters, and paginated student records"
+          />
+          <p class="text-sm text-gray-500 text-center mt-3">Student management with search, filters, and paginated records</p>
+        </div>
+
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">DVSA Competency Framework</h3>
 
         <p>Track student progress against the full DVSA competency framework:</p>
@@ -326,6 +338,16 @@ const schemaMarkup = {
 
         <p>This ensures consistency across multiple instructors and gives students clear visibility into their progress.</p>
 
+        <div class="my-8 not-prose">
+          <MarketingScreenshot
+            src="/images/marketing/dvsa-progress-tracking.webp"
+            width={1440}
+            height={900}
+            alt="DVSA competency tracking grid showing 17 skill categories with proficiency levels from Not Started to Test Ready"
+          />
+          <p class="text-sm text-gray-500 text-center mt-3">DVSA competency tracking with 17 categories and 6-level proficiency scale</p>
+        </div>
+
         <p>Related: <a href="/blog/student-management-driving-schools/" class="text-brand-red hover:underline">Student Management for Driving Schools: Complete Guide</a></p>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Student Portal</h3>
@@ -338,6 +360,17 @@ const schemaMarkup = {
           <li>Check package balances and lesson history</li>
           <li>Manage personal details and contact information</li>
         </ul>
+
+        <div class="my-8 not-prose flex justify-center">
+          <MarketingScreenshot
+            src="/images/marketing/portal-progress-mobile.webp"
+            width={375}
+            height={7173}
+            alt="Student progress view on mobile showing DVSA competency levels by category"
+            mobile
+          />
+        </div>
+        <p class="text-sm text-gray-500 text-center -mt-4 mb-8">Student DVSA progress view on mobile</p>
 
         <p><em>A dedicated parent/guardian portal for minor students is on our roadmap.</em></p>
 
@@ -355,6 +388,16 @@ const schemaMarkup = {
           <li>Send invoices to students via email</li>
           <li>Process refunds when needed</li>
         </ul>
+
+        <div class="my-8 not-prose">
+          <MarketingScreenshot
+            src="/images/marketing/payments.webp"
+            width={1440}
+            height={900}
+            alt="Professional invoice with itemised charges, VAT breakdown, and email delivery status"
+          />
+          <p class="text-sm text-gray-500 text-center mt-3">Professional invoicing with payment tracking and email delivery</p>
+        </div>
 
         <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
           <p class="font-bold text-brand-navy">Online card payments coming soon</p>
@@ -424,6 +467,16 @@ const schemaMarkup = {
           <li>Outstanding balances</li>
           <li>Test passes this month</li>
         </ul>
+
+        <div class="my-8 not-prose">
+          <MarketingScreenshot
+            src="/images/marketing/reports-financial.webp"
+            width={1440}
+            height={900}
+            alt="Financial reports dashboard with 6-month revenue chart and key business metrics"
+          />
+          <p class="text-sm text-gray-500 text-center mt-3">Financial reports with revenue trends and key business metrics</p>
+        </div>
 
         <h2 id="choosing" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Choosing the Right Software</h2>
 

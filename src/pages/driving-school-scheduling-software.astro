@@ -5,6 +5,7 @@ import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
 import StatisticsSection from '../components/seo/StatisticsSection.astro';
 import ComparisonTable from '../components/seo/ComparisonTable.astro';
 import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
+import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 
 const schedulingStats = [
   {
@@ -181,6 +182,7 @@ const schemaMarkup = {
 <BaseLayout
   title="Scheduling Software Guide (2026)"
   description="Driving school scheduling software with three-way conflict detection, recurring lesson series, and automated reminders. Drag-and-drop calendars. Reduce no-shows by 50%."
+  image="/images/marketing/calendar-week-view.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
 
@@ -310,6 +312,26 @@ const schemaMarkup = {
           <li><strong>Drag-and-drop rescheduling</strong> — moving a lesson should be effortless</li>
         </ul>
 
+        <div class="my-8 not-prose">
+          <MarketingScreenshot
+            src="/images/marketing/calendar-week-view.webp"
+            width={1440}
+            height={900}
+            alt="Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling"
+          />
+          <p class="text-sm text-gray-500 text-center mt-3">MyDriveSchool's weekly calendar view with colour-coded lessons and drag-and-drop scheduling</p>
+        </div>
+
+        <div class="my-8 not-prose">
+          <MarketingScreenshot
+            src="/images/marketing/calendar-drag-drop.webp"
+            width={1440}
+            height={900}
+            alt="Drag-and-drop lesson rescheduling on the weekly calendar view"
+          />
+          <p class="text-sm text-gray-500 text-center mt-3">Drag-and-drop rescheduling with automatic conflict detection</p>
+        </div>
+
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Conflict Prevention</h3>
 
         <p>The software should automatically prevent:</p>
@@ -333,6 +355,17 @@ const schemaMarkup = {
           <li><strong>Package tracking:</strong> Students see their remaining lesson hours and package balances without contacting you.</li>
           <li><strong>Personal details:</strong> Students update their own contact information and preferences, keeping records accurate.</li>
         </ul>
+
+        <div class="my-8 not-prose flex justify-center">
+          <MarketingScreenshot
+            src="/images/marketing/portal-dashboard-mobile.webp"
+            width={375}
+            height={1193}
+            alt="Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages"
+            mobile
+          />
+        </div>
+        <p class="text-sm text-gray-500 text-center -mt-4 mb-8">The student self-service portal on mobile</p>
 
         <h2 id="reduce-no-shows" class="text-3xl font-bold text-brand-navy mt-12 mb-6">How to Reduce No-Shows</h2>
 
@@ -374,6 +407,16 @@ const schemaMarkup = {
           <li>Spot utilization imbalances</li>
           <li>Quickly reassign lessons when an instructor is sick</li>
         </ul>
+
+        <div class="my-8 not-prose">
+          <MarketingScreenshot
+            src="/images/marketing/instructor-availability.webp"
+            width={1440}
+            height={900}
+            alt="Instructor weekly availability editor with time block templates and pending time-off requests"
+          />
+          <p class="text-sm text-gray-500 text-center mt-3">Instructor availability management with time block templates</p>
+        </div>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Self-Service for Instructors</h3>
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 
 // SoftwareApplication Schema
 const softwareApplicationSchema = {
@@ -37,7 +38,7 @@ const softwareApplicationSchema = {
     "Role-Based Access Control"
   ],
   "url": "https://mydriveschool.software",
-  "screenshot": "https://mydriveschool.software/images/dashboard-screenshot.jpg",
+  "screenshot": "https://mydriveschool.software/images/marketing/dashboard-overview.webp",
   "softwareVersion": "2.0",
   "applicationSubCategory": "Driving School Management",
   "audience": {
@@ -146,7 +147,7 @@ const stats = [
 ];
 ---
 
-<BaseLayout title="Driving School Software - UK" description="DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. 14-day free trial.">
+<BaseLayout title="Driving School Software - UK" description="DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. 14-day free trial." image="/images/marketing/dashboard-overview.webp">
   <!-- Structured Data Schemas -->
   <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
@@ -215,6 +216,55 @@ const stats = [
     </div>
   </section>
 
+  <!-- See It in Action -->
+  <section class="section bg-white border-t border-gray-100">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-primary mb-4">See It in Action</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Built for How You Actually Work</h2>
+        <p class="text-xl text-gray-600">Real screenshots from the MyDriveSchool platform — no stock photos, no mockups.</p>
+      </div>
+
+      <!-- Calendar Row -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <MarketingScreenshot
+            src="/images/marketing/calendar-week-view.webp"
+            width={1440}
+            height={900}
+            alt="Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling"
+          />
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-brand-navy mb-4">Drag-and-Drop Scheduling</h3>
+          <p class="text-lg text-gray-600 mb-4">
+            See your entire week at a glance with colour-coded lessons across all instructors. Drag lessons to reschedule instantly — three-way conflict detection prevents double-bookings automatically.
+          </p>
+          <a href="/driving-school-scheduling-software/" class="text-brand-red font-semibold hover:underline">Learn more about scheduling &rarr;</a>
+        </div>
+      </div>
+
+      <!-- DVSA Row (reversed) -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h3 class="text-2xl font-bold text-brand-navy mb-4">DVSA Competency Tracking</h3>
+          <p class="text-lg text-gray-600 mb-4">
+            Track 62+ driving skills across 17 DVSA categories with a 6-level proficiency scale. Any instructor can pick up exactly where the last left off — students see their progress through their own portal.
+          </p>
+          <a href="/driving-school-management-software/" class="text-brand-red font-semibold hover:underline">Learn more about student management &rarr;</a>
+        </div>
+        <div class="order-1 lg:order-2">
+          <MarketingScreenshot
+            src="/images/marketing/dvsa-progress-tracking.webp"
+            width={1440}
+            height={900}
+            alt="DVSA competency tracking grid showing 17 skill categories with proficiency levels from Not Started to Test Ready"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section bg-gray-50">
     <div class="container-custom">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -250,25 +300,13 @@ const stats = [
             Explore Driving School Software
           </a>
         </div>
-        <div class="relative">
-          <img
-            src="/images/feature-driving.jpg"
-            alt="Student learning to drive with instructor"
-            class="rounded-2xl shadow-2xl"
+        <div>
+          <MarketingScreenshot
+            src="/images/marketing/dashboard-overview.webp"
+            width={1440}
+            height={900}
+            alt="MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons"
           />
-          <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 hidden md:block">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-brand-red-light flex items-center justify-center">
-                <svg class="w-6 h-6 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <div class="font-bold text-brand-navy">All Schools</div>
-                <div class="text-sm text-gray-500">One Platform</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -280,13 +318,35 @@ const stats = [
         <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">Why Us</span>
         <h2 class="text-3xl md:text-5xl font-bold mb-6">Why Schools Choose MyDriveSchool</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
         {highlights.map((highlight) => (
           <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h3 class="text-xl font-bold mb-4">{highlight.title}</h3>
             <p class="text-gray-300 leading-relaxed">{highlight.description}</p>
           </div>
         ))}
+      </div>
+
+      <!-- Mobile Screenshots -->
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold mb-2">Works on Any Device</h3>
+        <p class="text-gray-300">Students and instructors access everything from their phone.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+        <MarketingScreenshot
+          src="/images/marketing/portal-dashboard-mobile.webp"
+          width={375}
+          height={1193}
+          alt="Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages"
+          mobile
+        />
+        <MarketingScreenshot
+          src="/images/marketing/calendar-mobile.webp"
+          width={375}
+          height={812}
+          alt="Daily calendar view on mobile showing scheduled lessons with instructor and vehicle details"
+          mobile
+        />
       </div>
     </div>
   </section>

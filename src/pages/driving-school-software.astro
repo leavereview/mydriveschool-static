@@ -5,6 +5,7 @@ import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
 import StatisticsSection from '../components/seo/StatisticsSection.astro';
 import ComparisonTable from '../components/seo/ComparisonTable.astro';
 import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
+import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 
 // Driving School Industry Statistics
 const drivingStats = [
@@ -167,7 +168,7 @@ const faqItems = [
 ];
 ---
 
-<BaseLayout title="Driving School Software" description="Driving school software with DVSA competency tracking, three-way scheduling, vehicle compliance alerts, and student portal. Built for UK ADIs.">
+<BaseLayout title="Driving School Software" description="Driving school software with DVSA competency tracking, three-way scheduling, vehicle compliance alerts, and student portal. Built for UK ADIs." image="/images/marketing/calendar-week-view.webp">
   <!-- Breadcrumbs with Schema -->
   <BreadcrumbsEnhanced
     site="driveschool"
@@ -221,33 +222,85 @@ const faqItems = [
           MyDriveSchool.Software handles the business side so you can focus on what you do best: helping students pass their tests.
         </p>
 
-        <h2 class="text-3xl font-bold text-brand-navy mb-6">Core Features</h2>
-        <ul class="space-y-4 mb-8">
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Three-Way Scheduling:</strong> Drag-and-drop calendar with conflict detection across students, instructors, and vehicles. Day, week, and month views with recurring lesson series.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">DVSA Progress Tracking:</strong> Full DVSA competency framework — 17 categories, 62+ skills with 6-level proficiency scale. Cross-instructor continuity so any instructor sees the full picture.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Student Portal:</strong> Secure student login to view lessons, track DVSA progress, check package balances, and manage personal details.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-brand-red flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-gray-700"><strong class="text-brand-navy">Invoicing & Packages:</strong> Invoices with line items, payment recording (cash, bank transfer, cheque), and email delivery. Lesson packages with automatic hour tracking.</span>
-          </li>
-        </ul>
+        <h2 class="text-3xl font-bold text-brand-navy mb-8">Core Features</h2>
+      </div>
+
+      <!-- Full-width dashboard screenshot -->
+      <div class="max-w-5xl mx-auto mb-12">
+        <MarketingScreenshot
+          src="/images/marketing/dashboard-overview.webp"
+          width={1440}
+          height={900}
+          alt="MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons"
+        />
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <!-- Three-Way Scheduling -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+          <div>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Three-Way Scheduling</h3>
+            <p class="text-gray-700">Drag-and-drop calendar with conflict detection across students, instructors, and vehicles. Day, week, and month views with recurring lesson series.</p>
+          </div>
+          <MarketingScreenshot
+            src="/images/marketing/calendar-week-view.webp"
+            width={1440}
+            height={900}
+            alt="Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling"
+          />
+        </div>
+
+        <!-- DVSA Progress Tracking -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+          <div class="order-2 md:order-1">
+            <MarketingScreenshot
+              src="/images/marketing/dvsa-progress-tracking.webp"
+              width={1440}
+              height={900}
+              alt="DVSA competency tracking grid showing 17 skill categories with proficiency levels from Not Started to Test Ready"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-xl font-bold text-brand-navy mb-3">DVSA Progress Tracking</h3>
+            <p class="text-gray-700">Full DVSA competency framework — 17 categories, 62+ skills with 6-level proficiency scale. Cross-instructor continuity so any instructor sees the full picture.</p>
+          </div>
+        </div>
+
+        <!-- Student Portal -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+          <div>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Student Portal</h3>
+            <p class="text-gray-700">Secure student login to view lessons, track DVSA progress, check package balances, and manage personal details.</p>
+          </div>
+          <div class="flex justify-center">
+            <MarketingScreenshot
+              src="/images/marketing/portal-dashboard-mobile.webp"
+              width={375}
+              height={1193}
+              alt="Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages"
+              mobile
+            />
+          </div>
+        </div>
+
+        <!-- Invoicing & Packages -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-8">
+          <div class="order-2 md:order-1">
+            <MarketingScreenshot
+              src="/images/marketing/payments.webp"
+              width={1440}
+              height={900}
+              alt="Professional invoice with itemised charges, VAT breakdown, and email delivery status"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Invoicing & Packages</h3>
+            <p class="text-gray-700">Invoices with line items, payment recording (cash, bank transfer, cheque), and email delivery. Lesson packages with automatic hour tracking.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
 
       </div>
     </div>
