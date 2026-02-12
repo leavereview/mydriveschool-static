@@ -178,6 +178,12 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
             </select>
           </div>
 
+          <!-- Comments -->
+          <div>
+            <label for="comments" class="block text-sm font-medium text-gray-700 mb-2">Anything else you'd like to tell us?</label>
+            <textarea id="comments" name="comments" rows="3" class="input resize-none" placeholder="e.g. features you'd love to see, frustrations with current tools, your school setup..."></textarea>
+          </div>
+
           <!-- Upgrade to Call -->
           <div class="border-t border-gray-200 pt-6">
             <label class="flex items-start gap-3 cursor-pointer group">
@@ -381,9 +387,8 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   </section>
 
   <script>
-    // ── API endpoint ──
-    // Update this URL once the Next.js app is deployed
-    const API_URL = 'https://app.mydriveschool.software/api/early-access';
+    // ── Formspree endpoint — emails submissions to johnpowell@hey.com ──
+    const FORMSPREE_URL = 'https://formspree.io/f/xkoogqqg';
 
     // ── DOM refs ──
     const form = document.getElementById('early-access-form') as HTMLFormElement;
@@ -442,7 +447,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       });
     });
 
-    // ── Form submission ──
+    // ── Form submission via Formspree ──
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -459,6 +464,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       const currentSoftwareInput = currentSoftwareSelect.value;
       const currentSoftwareOtherInput = (document.getElementById('currentSoftwareOther') as HTMLInputElement).value.trim();
       const biggestChallengeInput = (document.getElementById('biggestChallenge') as HTMLSelectElement).value;
+      const commentsInput = (document.getElementById('comments') as HTMLTextAreaElement).value.trim();
       const wantsCall = wantsCallCheckbox.checked;
       const phoneInput = (document.getElementById('phone') as HTMLInputElement).value.trim();
       const preferredTimeInput = (document.getElementById('preferredTime') as HTMLSelectElement).value;
@@ -487,21 +493,29 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         return;
       }
 
-      // Build payload
-      const payload: Record<string, unknown> = {
-        email: emailInput,
-        wantsCall,
+      // Determine tier
+      const tier = wantsCall ? 'Call (6 months free + 50% off for life)' : 'Survey (3 months free)';
+
+      // Build Formspree payload
+      const payload: Record<string, string> = {
+        _subject: `[Early Access] ${nameInput || 'New signup'} — ${tier}`,
+        _replyto: emailInput,
+        'Email': emailInput,
+        'Tier': tier,
       };
-      if (nameInput) payload.name = nameInput;
-      if (schoolNameInput) payload.schoolName = schoolNameInput;
-      if (schoolSizeInput) payload.schoolSize = schoolSizeInput;
-      if (currentSoftwareInput) payload.currentSoftware = currentSoftwareInput;
-      if (currentSoftwareOtherInput) payload.currentSoftwareOther = currentSoftwareOtherInput;
-      if (biggestChallengeInput) payload.biggestChallenge = biggestChallengeInput;
+      if (nameInput) payload['Name'] = nameInput;
+      if (schoolNameInput) payload['School Name'] = schoolNameInput;
+      if (schoolSizeInput) payload['School Size'] = schoolSizeInput;
+      if (currentSoftwareInput) {
+        payload['Current Software'] = currentSoftwareInput === 'other' ? (currentSoftwareOtherInput || 'Other') : currentSoftwareInput;
+      }
+      if (biggestChallengeInput) payload['Biggest Challenge'] = biggestChallengeInput;
+      if (commentsInput) payload['Comments'] = commentsInput;
       if (wantsCall) {
-        payload.phone = phoneInput;
-        if (preferredDays.length > 0) payload.preferredDays = preferredDays;
-        if (preferredTimeInput) payload.preferredTime = preferredTimeInput;
+        payload['Wants Call'] = 'Yes';
+        if (phoneInput) payload['Phone'] = phoneInput;
+        if (preferredDays.length > 0) payload['Preferred Days'] = preferredDays.join(', ');
+        if (preferredTimeInput) payload['Preferred Time'] = preferredTimeInput;
       }
 
       // Submit
@@ -510,26 +524,28 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       submitSpinner.classList.remove('hidden');
 
       try {
-        const res = await fetch(API_URL, {
+        const res = await fetch(FORMSPREE_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
           body: JSON.stringify(payload),
         });
 
         const data = await res.json();
 
-        if (!res.ok && !data.success) {
-          throw new Error(data.error || 'Something went wrong');
+        if (!res.ok) {
+          throw new Error(data.errors?.map((e: {message: string}) => e.message).join(', ') || 'Something went wrong');
         }
 
         // Show success
-        const tier = data.tier || (wantsCall ? 'CALL' : 'SURVEY');
-        if (tier === 'CALL') {
+        if (wantsCall) {
           successTitle.textContent = "You're in! Call tier secured.";
-          successMessage.textContent = "We'll be in touch within 2 working days to schedule your 20-minute call. Check your inbox for a confirmation email with all the details.";
+          successMessage.textContent = "We'll be in touch within 2 working days to schedule your 20-minute call. Keep an eye on your inbox.";
         } else {
           successTitle.textContent = "You're in! 3 months free secured.";
-          successMessage.textContent = "We'll email you before launch with your exclusive access link. Check your inbox for a confirmation email.";
+          successMessage.textContent = "We'll email you before launch with your exclusive access link. Keep an eye on your inbox.";
         }
 
         formContainer.classList.add('hidden');
