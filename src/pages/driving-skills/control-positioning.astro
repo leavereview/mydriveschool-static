@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+
+const relatedCategories = [
+  { title: 'The Basics', href: '/driving-skills/basics/', range: 'Skills 1–4' },
+  { title: 'Observation & Planning', href: '/driving-skills/observation-signalling/', range: 'Skills 8–13' },
+  { title: 'Junctions & Roundabouts', href: '/driving-skills/junctions-roundabouts/', range: 'Skills 14–16' },
+  { title: 'Manoeuvres', href: '/driving-skills/manoeuvres/', range: 'Skills 17–20' },
+  { title: 'Road Types', href: '/driving-skills/road-types/', range: 'Skills 21–23' },
+  { title: 'Driving Conditions', href: '/driving-skills/driving-conditions/', range: 'Skills 24–26' },
+  { title: 'Following Routes', href: '/driving-skills/following-routes/', range: 'Skill 27' },
+];
+
+const levels = [
+  { n: 1, label: 'Introduced', desc: 'Following instructor guidance' },
+  { n: 2, label: 'Helped', desc: 'Improving with assistance' },
+  { n: 3, label: 'Prompted', desc: 'Mostly independent, occasional prompts' },
+  { n: 4, label: 'Independent', desc: 'Consistent, confident performance' },
+  { n: 5, label: 'Reflection', desc: 'Understands the why — test ready' },
+];
+---
+
+<BaseLayout
+  title="Control & Positioning: Skills 5-7 | Master Your Vehicle"
+  description="Master car controls, moving off and stopping, and safe road positioning. Skills 5-7 of the DVSA Ready to Pass framework — the foundations of vehicle control."
+>
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: '27 Driving Skills', href: '/dvsa-27-driving-skills/' },
+      { label: 'Control & Positioning' },
+    ]}
+  />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-brand-red/20 border border-brand-red/40 text-brand-red-light text-sm font-semibold px-3 py-1 rounded-full">Skills 5–7</span>
+          <a href="/dvsa-27-driving-skills/" class="text-gray-400 hover:text-white text-sm transition-colors">← All 27 Skills</a>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-5">Control & Positioning: Master Your Vehicle</h1>
+        <p class="text-xl text-gray-300 mb-4">
+          Smooth, confident vehicle control and correct road positioning are the marks of a competent driver — and a prerequisite for passing your test.
+        </p>
+        <p class="text-gray-400 mb-8">
+          These three skills underpin every other skill on the list. Weak control makes junctions, roundabouts, and manoeuvres much harder than they need to be.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-4">Track Your Control Progress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-16">
+
+        <!-- Skill 5 -->
+        <div id="skill-5">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">5</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Controls and Instruments</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Knowing where every control is and how to use it — without looking down — is fundamental. The examiner watches for smooth, confident control throughout the entire test.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Key controls to master</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Pedals:</strong> Clutch (bite point feel), brake (progressive), accelerator (smooth)</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Gears:</strong> Smooth changes, correct gear for speed, block-changing</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Steering:</strong> Pull-push technique, hand position</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Handbrake:</strong> Applying and releasing smoothly on hills</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Dashboard:</strong> Warning lights, speedometer, fuel gauge</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Ancillary controls:</strong> Wipers, lights, horn, demister</div></li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 5</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains each control individually</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Operates controls with guidance and prompting</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Mostly smooth; occasional jerky inputs or wrong gear</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Consistently smooth and confident across all controls</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Adapts technique to different vehicles and conditions</li>
+              </ol>
+            </div>
+          </div>
+          <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-sm text-yellow-800">
+            <strong>Common mistake:</strong> Riding the clutch — keeping your foot lightly on the clutch pedal while driving causes premature wear and reduces control. Once you've changed gear, foot off the clutch completely.
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 6 -->
+        <div id="skill-6">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">6</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Moving Off and Stopping</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Moving off smoothly and stopping under control are two of the most frequently assessed moments on a driving test. The examiner will observe your observations, clutch control, and positioning every single time.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The POM routine for moving off</h3>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="flex items-start gap-2">
+                  <span class="font-bold text-brand-navy w-5">P</span>
+                  <div><strong>Prepare</strong> — set gas, find bite point</div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="font-bold text-brand-navy w-5">O</span>
+                  <div><strong>Observe</strong> — mirrors, blind spots, over both shoulders</div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="font-bold text-brand-navy w-5">M</span>
+                  <div><strong>Move</strong> — if safe, release handbrake and move off smoothly</div>
+                </li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-3">Signal if it will benefit another road user before moving.</p>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 6</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor guides through POM routine</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Attempts routine; stalls or misses observations</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Usually correct; occasional missed blind spot check</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Smooth, safe moves and stops without prompting</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Adapts to hills, traffic gaps, and pedestrians confidently</li>
+              </ol>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700">
+            <strong>Stopping:</strong> Use the MSM routine (Mirror–Signal–Manoeuvre). Check interior mirror, then left door mirror. Signal left if needed. Brake progressively — harder initial press, then ease off as you stop. Select neutral. Apply handbrake.
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 7 -->
+        <div id="skill-7">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">7</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Safe Positioning</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Where you position your vehicle on the road affects safety for you and every road user around you. The examiner assesses your positioning throughout the test — not just at junctions.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Positioning rules</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Keep left in normal driving — not too close to the kerb, not straddling the centre line</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Position correctly for the direction at junctions (left, straight, right)</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Stay in lane on multi-lane roads; don't drift between lanes</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Give cyclists, motorcyclists, and horses a wide berth</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Keep a safe following distance from the vehicle ahead (2-second rule)</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 7</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains road position principles</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Position generally correct with guidance</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Usually positioned correctly; occasional drift or wrong lane</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Consistently correct position on all road types</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Adjusts position proactively to hazards, road conditions, and other road users</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Level Reminder -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Tracking Progress Across Skills 5–7</h2>
+        <div class="grid grid-cols-5 gap-3">
+          {levels.map(({ n, label, desc }) => (
+            <div class="text-center">
+              <div class={`w-12 h-12 rounded-full mx-auto flex items-center justify-center font-bold text-lg mb-2 ${n === 5 ? 'bg-brand-red text-white' : 'bg-white border-2 border-gray-200 text-brand-navy'}`}>{n}</div>
+              <p class="font-semibold text-brand-navy text-xs mb-1">{label}</p>
+              <p class="text-gray-500 text-xs">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-gray-600 mt-6 text-sm">
+          Your instructor records your level on each skill after every lesson. Aim for <strong>Level 5 on all 27 skills</strong> before booking your test.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto bg-brand-navy text-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-bold mb-3">Track Your Vehicle Control Progress</h2>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+          See your level on every skill after each lesson. Know exactly which skills to focus on — no guessing.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-3">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Skills -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Other Skill Categories</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedCategories.map(({ title, href, range }) => (
+            <a href={href} class="card p-5 hover:border-brand-red hover:shadow-md transition-all group">
+              <span class="text-xs font-semibold text-brand-red mb-1 block">{range}</span>
+              <span class="font-bold text-brand-navy group-hover:text-brand-red transition-colors">{title}</span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">← Back to all 27 driving skills</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

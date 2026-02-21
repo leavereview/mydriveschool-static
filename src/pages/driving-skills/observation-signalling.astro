@@ -1,0 +1,327 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+
+const relatedCategories = [
+  { title: 'The Basics', href: '/driving-skills/basics/', range: 'Skills 1–4' },
+  { title: 'Control & Positioning', href: '/driving-skills/control-positioning/', range: 'Skills 5–7' },
+  { title: 'Junctions & Roundabouts', href: '/driving-skills/junctions-roundabouts/', range: 'Skills 14–16' },
+  { title: 'Manoeuvres', href: '/driving-skills/manoeuvres/', range: 'Skills 17–20' },
+  { title: 'Road Types', href: '/driving-skills/road-types/', range: 'Skills 21–23' },
+  { title: 'Driving Conditions', href: '/driving-skills/driving-conditions/', range: 'Skills 24–26' },
+  { title: 'Following Routes', href: '/driving-skills/following-routes/', range: 'Skill 27' },
+];
+
+const levels = [
+  { n: 1, label: 'Introduced', desc: 'Following instructor guidance' },
+  { n: 2, label: 'Helped', desc: 'Improving with assistance' },
+  { n: 3, label: 'Prompted', desc: 'Mostly independent, occasional prompts' },
+  { n: 4, label: 'Independent', desc: 'Consistent, confident performance' },
+  { n: 5, label: 'Reflection', desc: 'Understands the why — test ready' },
+];
+---
+
+<BaseLayout
+  title="Observation & Planning: Skills 8-13 | Read the Road"
+  description="Master mirrors, signals, anticipation, speed, other traffic, and eco-driving. Skills 8-13 of the DVSA Ready to Pass — the skills that prevent accidents."
+>
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: '27 Driving Skills', href: '/dvsa-27-driving-skills/' },
+      { label: 'Observation & Planning' },
+    ]}
+  />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-brand-red/20 border border-brand-red/40 text-brand-red-light text-sm font-semibold px-3 py-1 rounded-full">Skills 8–13</span>
+          <a href="/dvsa-27-driving-skills/" class="text-gray-400 hover:text-white text-sm transition-colors">← All 27 Skills</a>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-5">Observation, Signalling & Planning: Read the Road</h1>
+        <p class="text-xl text-gray-300 mb-4">
+          These six skills are the ones that separate drivers who react to hazards from drivers who see them coming. They're also the skills that prevent the most accidents.
+        </p>
+        <p class="text-gray-400 mb-8">
+          Poor observation and planning account for a significant proportion of driving test failures and real-world collisions. Mastering Skills 8–13 is essential.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-4">Track Your Observation Progress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-16">
+
+        <!-- Skill 8 -->
+        <div id="skill-8">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">8</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Mirrors</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Effective mirror use isn't just checking what's behind you — it's building a complete picture of everything around your vehicle so you can make safe decisions.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The MSM routine</h3>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="font-bold text-brand-navy w-5">M</span><div><strong>Mirror</strong> — check interior mirror first, then the relevant door mirror</div></li>
+                <li class="flex items-start gap-2"><span class="font-bold text-brand-navy w-5">S</span><div><strong>Signal</strong> — indicate your intention if it will help other road users</div></li>
+                <li class="flex items-start gap-2"><span class="font-bold text-brand-navy w-5">M</span><div><strong>Manoeuvre</strong> — act on what you've seen; position, speed, look</div></li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-3">Apply MSM before every change of speed, direction, or position.</p>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 8</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains when and how to use mirrors</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Checks mirrors when prompted</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Usually checks at the right time; occasional misses</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Checks mirrors regularly and correctly throughout</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Uses mirror information to inform every decision proactively</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 9 -->
+        <div id="skill-9">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">9</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Signals</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Signals tell other road users what you intend to do — but they must be given at the right time, for the right duration, and then cancelled promptly.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Signalling rules</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Signal in good time — not too early (confusing) or too late (useless)</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Only signal when it will benefit another road user</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Cancel signals promptly after completing the manoeuvre</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Don't wave pedestrians across — use official hand signals only</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Use horn only to alert others to your presence — not as a rebuke</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 9</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains when signals are needed</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Signals when reminded</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Usually signals correctly; occasionally forgets or cancels late</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Signals correctly and consistently</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Judges when signals help vs. confuse; adapts to each situation</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 10 -->
+        <div id="skill-10">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">10</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Anticipation and Planning</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Anticipation means reading the road ahead, spotting hazards early, and adjusting your speed and position <em>before</em> you reach them. It's what separates reactive driving from safe driving.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">What to watch for</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Parked vehicles with people inside (potential door opening)</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Children near the road or in school zones</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Junctions ahead — vehicles that may pull out</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Cyclists and motorcyclists in blind spots</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Road surface changes, bends, crests, and dips</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Brake lights several vehicles ahead</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 10</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor points out hazards</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Responds to hazards when they appear</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Spots most hazards; instructor prompts for complex ones</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Anticipates and plans for hazards independently</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Reads traffic flow and environment to prevent hazards from developing</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 11 -->
+        <div id="skill-11">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">11</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Use of Speed</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Driving at an appropriate speed doesn't just mean staying within the limit — it means adjusting your speed for conditions, road type, visibility, and the presence of other road users.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Speed awareness principles</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Speed limits are the <em>maximum</em> — not a target</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Reduce speed in built-up areas, near schools, and in poor visibility</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Adjust for road surface (wet, icy, gravel)</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Driving too slowly can also be a hazard</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Maintain speed that allows safe stopping within visible distance</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 11</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains speed limits and appropriate speed</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Stays within limits with reminders</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Usually appropriate speed; prompts for changing conditions</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Consistently manages speed correctly for all conditions</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Proactively adjusts speed before hazards develop; smooth throughout</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 12 -->
+        <div id="skill-12">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">12</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Other Traffic</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Being aware of — and responding appropriately to — all other road users is one of the most important skills for safe driving. This includes cyclists, motorcyclists, large vehicles, and pedestrians.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Vulnerable road users</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Cyclists:</strong> Pass with at least 1.5m gap; watch for dooring hazards</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Motorcyclists:</strong> Easy to miss in mirrors — always check blind spots</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Pedestrians:</strong> Priority at crossings; watch for jaywalkers</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Large vehicles:</strong> Wide turns, longer stopping distances, blind spots</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Emergency vehicles:</strong> Pull over safely when sirens approach</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 12</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains different road users</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Responds to other traffic when pointed out</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Notices most road users; misses some in complex situations</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Consistently aware of and responds to all road users</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Predicts other road users' behaviour and plans accordingly</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 13 -->
+        <div id="skill-13">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">13</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Fuel-Efficient Driving</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Eco-driving isn't just about saving money — it produces smoother, safer driving through better anticipation and progressive braking. It's a skill the DVSA expects all new drivers to understand.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Eco-driving techniques</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Accelerate gently — avoid harsh throttle inputs</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Change up to a higher gear early (around 2,000 rpm for diesel, 2,500 for petrol)</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Use engine braking where safe — lift off early before slowing</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Maintain steady speeds — cruise at consistent throttle</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Switch off engine if stationary for more than a minute</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 13</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains eco-driving principles</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Applies techniques when reminded</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Usually smooth; occasional harsh braking or late gear changes</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Consistently smooth and fuel-efficient driving style</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Understands environmental impact; adapts to vehicle and conditions</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Level Reminder -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Tracking Progress Across Skills 8–13</h2>
+        <div class="grid grid-cols-5 gap-3">
+          {levels.map(({ n, label, desc }) => (
+            <div class="text-center">
+              <div class={`w-12 h-12 rounded-full mx-auto flex items-center justify-center font-bold text-lg mb-2 ${n === 5 ? 'bg-brand-red text-white' : 'bg-white border-2 border-gray-200 text-brand-navy'}`}>{n}</div>
+              <p class="font-semibold text-brand-navy text-xs mb-1">{label}</p>
+              <p class="text-gray-500 text-xs">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-gray-600 mt-6 text-sm">
+          Your instructor records your level on each skill after every lesson. Aim for <strong>Level 5 on all 27 skills</strong> before booking your test.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto bg-brand-navy text-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-bold mb-3">Track Your Observation & Planning Progress</h2>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+          Our software records your level on every skill after each lesson. You and your instructor can see exactly where you stand.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-3">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Skills -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Other Skill Categories</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedCategories.map(({ title, href, range }) => (
+            <a href={href} class="card p-5 hover:border-brand-red hover:shadow-md transition-all group">
+              <span class="text-xs font-semibold text-brand-red mb-1 block">{range}</span>
+              <span class="font-bold text-brand-navy group-hover:text-brand-red transition-colors">{title}</span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">← Back to all 27 driving skills</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

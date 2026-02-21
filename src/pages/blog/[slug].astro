@@ -34,6 +34,21 @@ const faqSchema = faqs && faqs.length > 0 ? {
   }))
 } : null;
 
+// Generate HowTo schema if post has howTo steps
+const howToData = post.data.howTo;
+const howToSchema = howToData ? {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": howToData.name,
+  "description": howToData.description,
+  "step": howToData.steps.map((step: { name: string; text: string }, i: number) => ({
+    "@type": "HowToStep",
+    "position": i + 1,
+    "name": step.name,
+    "text": step.text
+  }))
+} : null;
+
 // Get related posts (same tags)
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
@@ -53,6 +68,9 @@ const relatedPosts = allPosts
 >
   {faqSchema && (
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )}
+  {howToSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
   )}
   <article>
     <!-- Breadcrumbs -->

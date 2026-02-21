@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+
+const relatedCategories = [
+  { title: 'The Basics', href: '/driving-skills/basics/', range: 'Skills 1–4' },
+  { title: 'Control & Positioning', href: '/driving-skills/control-positioning/', range: 'Skills 5–7' },
+  { title: 'Observation & Planning', href: '/driving-skills/observation-signalling/', range: 'Skills 8–13' },
+  { title: 'Junctions & Roundabouts', href: '/driving-skills/junctions-roundabouts/', range: 'Skills 14–16' },
+  { title: 'Manoeuvres', href: '/driving-skills/manoeuvres/', range: 'Skills 17–20' },
+  { title: 'Driving Conditions', href: '/driving-skills/driving-conditions/', range: 'Skills 24–26' },
+  { title: 'Following Routes', href: '/driving-skills/following-routes/', range: 'Skill 27' },
+];
+
+const levels = [
+  { n: 1, label: 'Introduced', desc: 'Following instructor guidance' },
+  { n: 2, label: 'Helped', desc: 'Improving with assistance' },
+  { n: 3, label: 'Prompted', desc: 'Mostly independent, occasional prompts' },
+  { n: 4, label: 'Independent', desc: 'Consistent, confident performance' },
+  { n: 5, label: 'Reflection', desc: 'Understands the why — test ready' },
+];
+---
+
+<BaseLayout
+  title="Road Types: Skills 21-23 | Country Roads to Motorways"
+  description="Master country roads, dual carriageways, and motorways. Skills 21-23 of the DVSA Ready to Pass framework — adapting your driving to different environments."
+>
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: '27 Driving Skills', href: '/dvsa-27-driving-skills/' },
+      { label: 'Road Types' },
+    ]}
+  />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-brand-red/20 border border-brand-red/40 text-brand-red-light text-sm font-semibold px-3 py-1 rounded-full">Skills 21–23</span>
+          <a href="/dvsa-27-driving-skills/" class="text-gray-400 hover:text-white text-sm transition-colors">← All 27 Skills</a>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-5">Road Types: Country Roads, Dual Carriageways & Motorways</h1>
+        <p class="text-xl text-gray-300 mb-4">
+          Each road type demands a different approach. Adapting your driving to the environment — speed, positioning, hazard awareness — is what these three skills are about.
+        </p>
+        <p class="text-gray-400 mb-8">
+          Note: motorway driving is not part of the practical test, but it is part of the DVSA framework. Many instructors introduce it during post-test lessons.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-4">Track Your Road Type Progress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-16">
+
+        <!-- Skill 21 -->
+        <div id="skill-21">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">21</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Country Roads</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Rural roads have some of the highest speed limits but also some of the most unexpected hazards. Many learners find country roads harder than town driving because there's less predictability.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Country road hazards</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Blind bends — reduce speed, stay left, sound horn on sharp bends if necessary</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Animals on the road — slow right down, stop if needed</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Tractors and farm vehicles — be patient, wait for a safe place to pass</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Passing places on narrow roads — use lay-bys to let oncoming traffic pass</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Unmarked junctions — hidden entrances from fields or farm tracks</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> National speed limit (60mph on single carriageway) — often too fast for the conditions</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 21</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor manages speed and points out hazards</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Drives on rural roads with frequent guidance</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Generally safe; needs prompts for speed or unusual hazards</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Drives safely and confidently on all country roads</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Reads the road ahead proactively; adjusts well before hazards arise</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 22 -->
+        <div id="skill-22">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">22</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Dual Carriageways</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Dual carriageways have a central reservation separating opposing traffic and are usually subject to 70mph speed limits. Joining, leaving, and lane discipline are the key skills here.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Dual carriageway skills</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Joining:</strong> Match speed of traffic on the main carriageway before merging</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Lane use:</strong> Keep left except when overtaking — don't sit in the middle lane</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Overtaking:</strong> Mirror–signal–manoeuvre; return to left lane promptly</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Leaving:</strong> Signal in good time; reduce speed on the slip road, not before</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <strong>Speed:</strong> 70mph limit, but adjust for traffic and conditions</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 22</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor manages all aspects of dual carriageway driving</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Drives on dual carriageway with considerable support</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Generally safe; prompts for lane discipline or joining speed</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Joins, drives, and leaves dual carriageways confidently</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Plans lane changes early; keeps left naturally; matches traffic flow smoothly</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 23 -->
+        <div id="skill-23">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">23</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Motorways</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Motorway driving is not assessed on the practical test (learners can only drive on motorways with an ADI in a dual-controlled car), but it's included in the DVSA framework because all new drivers need to understand it.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Motorway differences</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Maximum speed: 70mph (or as shown on variable signs)</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> No stopping except on hard shoulder in an emergency</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Lane 1 is the normal driving lane — lanes 2 and 3 are for overtaking only</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Smart motorways: obey variable speed limits; red X means do not use that lane</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> 2-second rule in dry conditions — much more in wet</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Learners can drive on motorways since 2018 — with an ADI only</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 23</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains motorway rules and differences</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Drives on motorway with close instructor support</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Manages motorway with occasional prompts for lane or speed</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Drives confidently at motorway speeds; keeps left; plans ahead</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Understands smart motorway risks; adapts to traffic and conditions naturally</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Level Reminder -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Tracking Progress Across Skills 21–23</h2>
+        <div class="grid grid-cols-5 gap-3">
+          {levels.map(({ n, label, desc }) => (
+            <div class="text-center">
+              <div class={`w-12 h-12 rounded-full mx-auto flex items-center justify-center font-bold text-lg mb-2 ${n === 5 ? 'bg-brand-red text-white' : 'bg-white border-2 border-gray-200 text-brand-navy'}`}>{n}</div>
+              <p class="font-semibold text-brand-navy text-xs mb-1">{label}</p>
+              <p class="text-gray-500 text-xs">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-gray-600 mt-6 text-sm">
+          Your instructor records your level on each skill after every lesson. Aim for <strong>Level 5 on all 27 skills</strong> before booking your test.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto bg-brand-navy text-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-bold mb-3">Track Your Road Type Progress</h2>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+          Our software records your level on every skill. Know exactly where to focus before your test.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-3">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Skills -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Other Skill Categories</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedCategories.map(({ title, href, range }) => (
+            <a href={href} class="card p-5 hover:border-brand-red hover:shadow-md transition-all group">
+              <span class="text-xs font-semibold text-brand-red mb-1 block">{range}</span>
+              <span class="font-bold text-brand-navy group-hover:text-brand-red transition-colors">{title}</span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">← Back to all 27 driving skills</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

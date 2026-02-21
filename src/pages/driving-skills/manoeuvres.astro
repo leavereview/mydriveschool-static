@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+
+const relatedCategories = [
+  { title: 'The Basics', href: '/driving-skills/basics/', range: 'Skills 1–4' },
+  { title: 'Control & Positioning', href: '/driving-skills/control-positioning/', range: 'Skills 5–7' },
+  { title: 'Observation & Planning', href: '/driving-skills/observation-signalling/', range: 'Skills 8–13' },
+  { title: 'Junctions & Roundabouts', href: '/driving-skills/junctions-roundabouts/', range: 'Skills 14–16' },
+  { title: 'Road Types', href: '/driving-skills/road-types/', range: 'Skills 21–23' },
+  { title: 'Driving Conditions', href: '/driving-skills/driving-conditions/', range: 'Skills 24–26' },
+  { title: 'Following Routes', href: '/driving-skills/following-routes/', range: 'Skill 27' },
+];
+
+const levels = [
+  { n: 1, label: 'Introduced', desc: 'Following instructor guidance' },
+  { n: 2, label: 'Helped', desc: 'Improving with assistance' },
+  { n: 3, label: 'Prompted', desc: 'Mostly independent, occasional prompts' },
+  { n: 4, label: 'Independent', desc: 'Consistent, confident performance' },
+  { n: 5, label: 'Reflection', desc: 'Understands the why — test ready' },
+];
+---
+
+<BaseLayout
+  title="Driving Manoeuvres: Skills 17-20 | Parking, Reversing & Emergency Stop"
+  description="Master reversing, turning around, parking, and emergency stop. Skills 17-20 of the DVSA Ready to Pass — all potentially tested on your UK driving test."
+>
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: '27 Driving Skills', href: '/dvsa-27-driving-skills/' },
+      { label: 'Manoeuvres' },
+    ]}
+  />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-brand-red/20 border border-brand-red/40 text-brand-red-light text-sm font-semibold px-3 py-1 rounded-full">Skills 17–20</span>
+          <a href="/dvsa-27-driving-skills/" class="text-gray-400 hover:text-white text-sm transition-colors">← All 27 Skills</a>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-5">Driving Manoeuvres: Parking, Reversing & More</h1>
+        <p class="text-xl text-gray-300 mb-4">
+          Manoeuvres test precise vehicle control at low speed. Your examiner will ask you to perform at least one manoeuvre during your test — and could ask for any of these four.
+        </p>
+        <p class="text-gray-400 mb-8">
+          The key to all manoeuvres is the same: slow speed, full observations, and controlled steering. Accuracy matters, but safety and observations matter more.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-4">Track Your Manoeuvre Progress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-16">
+
+        <!-- Skill 17 -->
+        <div id="skill-17">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">17</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Reversing</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Reversing safely requires good all-round observation, slow controlled speed, and smooth steering. It forms the foundation for bay parking, parallel parking, and any time you need to back up.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Reversing principles</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Check all around the car before reversing</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Move at a very slow, controlled speed — use clutch to control</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Keep checking all mirrors and blind spots throughout</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Stop immediately if a pedestrian or vehicle approaches</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> You don't have to reverse in a straight line — keep it under control</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 17</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor guides every movement and observation</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Reverses with significant instructor input</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Generally controlled; needs prompts for observations</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Reverses safely and smoothly without prompting</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Adapts technique for different situations; acts immediately on hazards</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 18 -->
+        <div id="skill-18">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">18</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Turning the Car Around</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            The turn in the road (formerly called the three-point turn) requires precise clutch control, full observations throughout, and confidence in tight spaces. You may need more than three moves — that's fine.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Turn in the road — key points</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Choose a safe, quiet location away from junctions</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Full all-round observations before each move</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Move very slowly — clutch control is everything</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Turn steering wheel briskly at low speed</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Stop before mounting the kerb — adjust if needed</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Give way to passing traffic at every stage</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 18</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor steers; learner controls speed</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Attempts manoeuvre with frequent guidance</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Completes it but may miss observations or mount kerb</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Completes safely and under control</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Selects safe locations; adapts to road width; stays calm under pressure</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 19 -->
+        <div id="skill-19">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">19</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Parking</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            You'll be asked to perform one parking manoeuvre on your test — parallel parking or bay parking (forward or reverse). You're not expected to be perfect, but you must be safe, controlled, and show accurate observations.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Parking types on the test</h3>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li>
+                  <strong class="text-brand-navy block mb-1">Parallel parking</strong>
+                  Pull up alongside reference vehicle, reverse back and steer into the space, finish close to and parallel with the kerb.
+                </li>
+                <li>
+                  <strong class="text-brand-navy block mb-1">Reverse bay parking</strong>
+                  Reverse into a marked bay, finish within the lines, with observations throughout.
+                </li>
+                <li>
+                  <strong class="text-brand-navy block mb-1">Forward bay parking + reverse out</strong>
+                  Drive forward into a bay, reverse out with full all-round observations.
+                </li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 19</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor guides every step of each manoeuvre</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Attempts parking with significant instructor input</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Parks mostly independently; misses occasional observation</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Parks confidently and safely across all types</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Adapts to gap size, incline, and traffic; self-corrects without prompting</li>
+              </ol>
+            </div>
+          </div>
+          <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-sm text-yellow-800">
+            <strong>Remember:</strong> You won't fail for needing to reposition during a parking manoeuvre — as long as you do so safely and with proper observations. Examiners want to see control and safety, not perfection first time.
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 20 -->
+        <div id="skill-20">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">20</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Emergency Stop</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Around 1 in 3 driving tests include an emergency stop. The examiner wants to see a prompt, controlled response — not a panic stop. Modern cars with ABS make it simpler than many learners expect.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The technique</h3>
+              <ol class="space-y-2 text-gray-700 text-sm list-decimal list-inside">
+                <li>React immediately to the examiner's raised hand signal</li>
+                <li>Press the brake firmly and progressively — don't pump it</li>
+                <li>Press the clutch down just before stopping (prevents stall)</li>
+                <li>Keep both hands on the wheel, steering straight</li>
+                <li>Apply handbrake, select neutral</li>
+                <li>Check mirrors before moving off again</li>
+              </ol>
+              <p class="text-xs text-gray-500 mt-3">With ABS, you may feel the pedal vibrate — this is normal. Keep firm pressure on the brake.</p>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 20</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains technique and ABS</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Attempts stop with coaching during</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Stops promptly; occasionally pumps brakes or steers off course</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Consistently controlled, prompt emergency stops</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Understands ABS, stopping distances; moves off safely afterwards</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Level Reminder -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Tracking Progress Across Skills 17–20</h2>
+        <div class="grid grid-cols-5 gap-3">
+          {levels.map(({ n, label, desc }) => (
+            <div class="text-center">
+              <div class={`w-12 h-12 rounded-full mx-auto flex items-center justify-center font-bold text-lg mb-2 ${n === 5 ? 'bg-brand-red text-white' : 'bg-white border-2 border-gray-200 text-brand-navy'}`}>{n}</div>
+              <p class="font-semibold text-brand-navy text-xs mb-1">{label}</p>
+              <p class="text-gray-500 text-xs">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-gray-600 mt-6 text-sm">
+          Your instructor records your level on each skill after every lesson. Aim for <strong>Level 5 on all 27 skills</strong> before booking your test.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto bg-brand-navy text-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-bold mb-3">Track Your Manoeuvre Progress</h2>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+          Know exactly which manoeuvres need more practice before test day.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-3">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Skills -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Other Skill Categories</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedCategories.map(({ title, href, range }) => (
+            <a href={href} class="card p-5 hover:border-brand-red hover:shadow-md transition-all group">
+              <span class="text-xs font-semibold text-brand-red mb-1 block">{range}</span>
+              <span class="font-bold text-brand-navy group-hover:text-brand-red transition-colors">{title}</span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">← Back to all 27 driving skills</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,406 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../components/seo/BreadcrumbsEnhanced.astro';
+import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
+
+const faqItems = [
+  {
+    question: "How many driving lessons do I need to pass?",
+    answer: "The DVSA recommends an average of 45 hours of professional lessons plus 22 hours of private practice. However, the number varies significantly depending on the individual. Some learners pass in fewer than 30 hours; others need 60+. Progress through the 27 driving skills framework is the most reliable indicator of test readiness — not hours alone.",
+    links: [
+      { text: 'Track your progress digitally', url: '/early-access/' }
+    ]
+  },
+  {
+    question: "When am I ready to take my driving test?",
+    answer: "You're ready for your practical test when you consistently achieve Level 5 (Reflection) across all 27 DVSA driving skills. At this level you can drive independently, adapt to new situations, and understand why safety decisions matter — not just what to do. Your instructor should agree you're test-ready before booking.",
+    links: [
+      { text: 'See the 27 skills', url: '#skills' }
+    ]
+  },
+  {
+    question: "What are the 5 levels of learning to drive?",
+    answer: "The DVSA's Ready to Pass framework defines 5 levels: (1) Introduced — following instructor guidance; (2) Helped — improving but needs assistance; (3) Prompted — mostly independent but occasional prompting needed; (4) Independent — consistent, confident performance; (5) Reflection — understands adaptations and safety reasoning. Test-ready means Level 5 across all skills.",
+    links: [
+      { text: 'See all 5 levels explained', url: '#levels' }
+    ]
+  },
+  {
+    question: "What is the DVSA Ready to Pass campaign?",
+    answer: "Ready to Pass is an official DVSA campaign that encourages learner drivers to prepare properly before booking their practical test. It defines the 27 driving skills every driver must master, organised into 8 categories. The framework uses a 5-level progression system so instructors and learners can clearly track readiness.",
+    links: [
+      { text: 'DVSA Ready to Pass (gov.uk)', url: 'https://readytopass.campaign.gov.uk/driving-skills/' }
+    ]
+  },
+  {
+    question: "Can I track my driving progress digitally?",
+    answer: "Yes. MyDriveSchool.Software follows the exact DVSA framework, allowing instructors to record progress across all 27 skills after each lesson. Learners can log in to their own portal to see their current level for every skill, identify weak areas, and watch confidence grow as levels increase — far more motivating than a paper record.",
+    links: [
+      { text: 'Start tracking digitally', url: '/early-access/' }
+    ]
+  }
+];
+
+const skillGroups = [
+  {
+    id: 'basics',
+    title: 'The Basics',
+    skillRange: 'Skills 1–4',
+    href: '/driving-skills/basics/',
+    skills: [
+      { number: 1, name: 'Legal responsibilities' },
+      { number: 2, name: 'Safety checks' },
+      { number: 3, name: 'Cockpit checks' },
+      { number: 4, name: 'Security' }
+    ],
+    description: 'The foundation every driver must have before getting on the road — from licences and insurance to pre-drive vehicle checks.'
+  },
+  {
+    id: 'control-positioning',
+    title: 'Control & Positioning',
+    skillRange: 'Skills 5–7',
+    href: '/driving-skills/control-positioning/',
+    skills: [
+      { number: 5, name: 'Controls and instruments' },
+      { number: 6, name: 'Moving off and stopping' },
+      { number: 7, name: 'Safe positioning' }
+    ],
+    description: 'Mastering the car\'s controls, moving off smoothly, and maintaining correct road position.'
+  },
+  {
+    id: 'observation-signalling',
+    title: 'Observation, Signalling & Planning',
+    skillRange: 'Skills 8–13',
+    href: '/driving-skills/observation-signalling/',
+    skills: [
+      { number: 8, name: 'Mirrors' },
+      { number: 9, name: 'Signals' },
+      { number: 10, name: 'Anticipation and planning' },
+      { number: 11, name: 'Use of speed' },
+      { number: 12, name: 'Other traffic' },
+      { number: 13, name: 'Fuel-efficient driving' }
+    ],
+    description: 'Reading the road, communicating with other drivers, and making smart decisions before situations develop.'
+  },
+  {
+    id: 'junctions-roundabouts',
+    title: 'Junctions, Roundabouts & Crossings',
+    skillRange: 'Skills 14–16',
+    href: '/driving-skills/junctions-roundabouts/',
+    skills: [
+      { number: 14, name: 'Junctions' },
+      { number: 15, name: 'Roundabouts' },
+      { number: 16, name: 'Pedestrian crossings' }
+    ],
+    description: 'The skills that cause the most test failures — approach, lane selection, observation, and safe execution.'
+  },
+  {
+    id: 'manoeuvres',
+    title: 'Manoeuvres',
+    skillRange: 'Skills 17–20',
+    href: '/driving-skills/manoeuvres/',
+    skills: [
+      { number: 17, name: 'Reversing' },
+      { number: 18, name: 'Turning the car around' },
+      { number: 19, name: 'Parking' },
+      { number: 20, name: 'Emergency stop' }
+    ],
+    description: 'Controlled low-speed exercises that test precise vehicle handling — all potentially assessed on your test day.'
+  },
+  {
+    id: 'road-types',
+    title: 'Road Types',
+    skillRange: 'Skills 21–23',
+    href: '/driving-skills/road-types/',
+    skills: [
+      { number: 21, name: 'Country roads' },
+      { number: 22, name: 'Dual carriageways' },
+      { number: 23, name: 'Motorways' }
+    ],
+    description: 'Adapting your driving to different road environments, from rural lanes to high-speed dual carriageways.'
+  },
+  {
+    id: 'driving-conditions',
+    title: 'Driving Conditions',
+    skillRange: 'Skills 24–26',
+    href: '/driving-skills/driving-conditions/',
+    skills: [
+      { number: 24, name: 'Driving in the dark' },
+      { number: 25, name: 'Weather conditions' },
+      { number: 26, name: 'Passengers and loads' }
+    ],
+    description: 'Staying safe when conditions change — night driving, rain and fog, and managing distractions.'
+  },
+  {
+    id: 'following-routes',
+    title: 'Following Routes',
+    skillRange: 'Skill 27',
+    href: '/driving-skills/following-routes/',
+    skills: [
+      { number: 27, name: 'Independent driving / sat nav' }
+    ],
+    description: 'The 20-minute independent driving section of your test — navigating by sat nav or road signs without instructor guidance.'
+  }
+];
+---
+
+<BaseLayout
+  title="27 Driving Skills You Need to Pass | DVSA Ready to Pass Guide"
+  description="Master all 27 DVSA driving skills from Level 1 to test-ready. Complete guide to the official Ready to Pass framework with digital progress tracking."
+>
+  <!-- Breadcrumbs -->
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: '27 Driving Skills' }
+    ]}
+  />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-20">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <span class="inline-block bg-brand-red/20 border border-brand-red/40 text-brand-red-light text-sm font-semibold px-3 py-1 rounded-full mb-4">
+          DVSA Ready to Pass Framework
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-5 leading-tight">
+          The Complete Guide to DVSA's 27 Driving Skills
+        </h1>
+        <p class="text-xl text-gray-300 mb-4">
+          Master every skill. Track your progress. Pass first time.
+        </p>
+        <p class="text-gray-400 mb-8">
+          This is the official DVSA framework used by every Approved Driving Instructor (ADI) in the UK. All 27 skills, clearly explained — plus the 5-level progression system that shows exactly when you're ready for your test.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/early-access/" class="btn-primary text-lg px-8 py-4">Start Tracking Your Progress</a>
+          <a href="#skills" class="btn-secondary text-lg px-8 py-4">See All 27 Skills</a>
+        </div>
+        <p class="mt-4 text-sm text-gray-500">
+          <a href="https://readytopass.campaign.gov.uk/driving-skills/" class="underline hover:text-gray-300 transition-colors" rel="noopener noreferrer" target="_blank">
+            Aligned with official DVSA Ready to Pass standards (gov.uk)
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 5 Progress Levels -->
+  <section class="section bg-white" id="levels">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-brand-navy mb-4">The 5 Levels of Learning to Drive</h2>
+        <p class="text-lg text-gray-600 mb-10">
+          The DVSA uses a 5-level progression system to measure competence on each skill. You and your instructor track where you are on every skill after each lesson.
+        </p>
+
+        <div class="relative">
+          <!-- Progress line -->
+          <div class="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-gray-200 z-0" style="left: 10%; right: 10%;"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+            {[
+              { level: 1, label: 'Introduced', desc: 'Following instructions given by your instructor', color: 'bg-gray-100 border-gray-300 text-gray-700' },
+              { level: 2, label: 'Helped', desc: 'Improving but still needs assistance to complete the skill', color: 'bg-blue-50 border-blue-300 text-blue-700' },
+              { level: 3, label: 'Prompted', desc: 'Mostly independent — occasional prompts needed in new situations', color: 'bg-yellow-50 border-yellow-300 text-yellow-700' },
+              { level: 4, label: 'Independent', desc: 'Consistent, confident performance without any help', color: 'bg-green-50 border-green-300 text-green-700' },
+              { level: 5, label: 'Reflection', desc: 'Understands adaptations and safety reasoning — test ready', color: 'bg-brand-red-light border-brand-red text-brand-red' },
+            ].map(({ level, label, desc, color }) => (
+              <div class="flex flex-col items-center text-center">
+                <div class={`w-16 h-16 rounded-full border-2 flex items-center justify-center font-bold text-2xl mb-3 ${color}`}>
+                  {level}
+                </div>
+                <h3 class="font-bold text-brand-navy mb-1">{label}</h3>
+                <p class="text-sm text-gray-600">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-10 bg-brand-red-light border border-brand-red/30 rounded-xl p-6 text-center">
+          <p class="text-lg font-semibold text-brand-navy">
+            You're ready for your test when you consistently achieve <span class="text-brand-red">Level 5 across all 27 skills</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 27 Skills -->
+  <section class="section bg-gray-50" id="skills">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-brand-navy mb-4">The 27 Driving Skills</h2>
+        <p class="text-lg text-gray-600 mb-10">
+          Organised into 8 categories, these are the skills every learner driver must master. Click any category to learn more about the individual skills and what examiners look for.
+        </p>
+
+        <div class="space-y-4">
+          {skillGroups.map((group) => (
+            <details class="group bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm" id={group.id}>
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+                <div class="flex items-center gap-4">
+                  <span class="inline-block bg-brand-red-light text-brand-red text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap">
+                    {group.skillRange}
+                  </span>
+                  <h3 class="text-lg font-bold text-brand-navy">{group.title}</h3>
+                </div>
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 border-t border-gray-100">
+                <p class="text-gray-600 mt-4 mb-4">{group.description}</p>
+                <ul class="space-y-2 mb-5">
+                  {group.skills.map((skill) => (
+                    <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 w-7 h-7 rounded-full bg-brand-navy text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                        {skill.number}
+                      </span>
+                      <span class="text-gray-700">{skill.name}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href={group.href} class="inline-flex items-center gap-2 text-brand-red font-semibold hover:underline">
+                  Learn about {group.title}
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Digital Progress Tracking -->
+  <section class="section bg-white" id="digital-tracking">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-brand-navy mb-4">Why Digital Progress Tracking Beats Paper Records</h2>
+        <p class="text-lg text-gray-600 mb-10">
+          Most instructors still record progress on a paper log sheet. Digital tracking changes what's possible for both instructors and learners.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-10">
+          {[
+            {
+              icon: '👁️',
+              title: 'Instant Visibility',
+              body: 'Instructor and learner both see the complete picture at a glance. No flicking through paper sheets trying to remember last session\'s progress.'
+            },
+            {
+              icon: '🎯',
+              title: 'Identifies Weak Areas Automatically',
+              body: 'The system highlights which skills are lagging. Instead of guessing what to focus on, instructors know exactly where to spend the next lesson.'
+            },
+            {
+              icon: '📈',
+              title: 'Builds Confidence',
+              body: 'Learners can see their levels improving after every lesson. Progress made visible is a powerful motivator — especially through the difficult intermediate stage.'
+            },
+            {
+              icon: '🔄',
+              title: 'Cross-Instructor Continuity',
+              body: 'If a learner changes instructor or uses a cover instructor, anyone can pick up exactly where the last lesson left off. No lost progress, no duplication.'
+            },
+            {
+              icon: '📱',
+              title: 'Accessible Anywhere',
+              body: 'Learners check progress from their phone. Instructors update after each lesson from any device. No paperwork to lose, no records left in the car.'
+            },
+            {
+              icon: '✅',
+              title: 'Follows the Exact DVSA Framework',
+              body: 'Our software follows the official Ready to Pass structure — the same 27 skills and 5-level system your ADI is trained to use.'
+            }
+          ].map(({ icon, title, body }) => (
+            <div class="card p-6">
+              <div class="text-3xl mb-3">{icon}</div>
+              <h3 class="font-bold text-brand-navy mb-2">{title}</h3>
+              <p class="text-gray-600 text-sm">{body}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-brand-navy text-white rounded-xl p-8 text-center">
+          <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Our Software</p>
+          <h3 class="text-2xl font-bold mb-3">Follows the Exact DVSA Framework</h3>
+          <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+            Track all 27 skills with the 5-level system. Learners see their own progress. Instructors update in seconds after each lesson.
+          </p>
+          <a href="/early-access/" class="btn-primary px-8 py-3">Start Tracking — Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Skills Reference -->
+  <section class="section bg-gray-50" id="reference">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-brand-navy mb-4">All 27 Skills at a Glance</h2>
+        <p class="text-gray-600 mb-8">A quick reference to all 27 DVSA driving skills and their categories.</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm text-sm">
+            <thead>
+              <tr class="bg-brand-navy text-white">
+                <th class="px-4 py-3 text-left font-semibold">#</th>
+                <th class="px-4 py-3 text-left font-semibold">Skill</th>
+                <th class="px-4 py-3 text-left font-semibold">Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              {skillGroups.flatMap((group) =>
+                group.skills.map((skill, i) => (
+                  <tr class={`border-t border-gray-100 ${i === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-brand-red-light/30 transition-colors`}>
+                    <td class="px-4 py-3 font-bold text-brand-navy">{skill.number}</td>
+                    <td class="px-4 py-3 text-gray-700">{skill.name}</td>
+                    <td class="px-4 py-3">
+                      <a href={group.href} class="text-brand-red hover:underline font-medium">{group.title}</a>
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <FAQEnhanced
+          site="driveschool"
+          pageUrl="https://mydriveschool.software/dvsa-27-driving-skills/"
+          title="Common Questions About the DVSA 27 Driving Skills"
+          faqs={faqItems}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section bg-gradient-to-r from-brand-red to-rose-600 text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Track All 27 Skills Digitally</h2>
+      <p class="text-xl text-white/90 mb-4 max-w-2xl mx-auto">
+        Our software follows the official DVSA Ready to Pass framework — the same 27 skills and 5 levels your instructor uses.
+      </p>
+      <p class="text-white/70 mb-8">
+        Instructors update progress after each lesson. Learners see exactly where they stand — and what to work on next.
+      </p>
+      <a href="/early-access/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4 font-bold">
+        Start Your Free Trial
+      </a>
+      <p class="mt-4 text-sm text-white/60">No credit card required</p>
+    </div>
+  </section>
+</BaseLayout>

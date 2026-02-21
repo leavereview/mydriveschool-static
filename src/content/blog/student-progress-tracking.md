@@ -96,7 +96,7 @@ Tracking protects you legally and professionally.
 
 ### 1. DVSA Competency Checklist
 
-The UK DVSA identifies 24 core driving competencies. Track proficiency in each:
+The UK DVSA identifies [27 driving skills](https://mydriveschool.software/dvsa-27-driving-skills/) across 8 categories as part of the official Ready to Pass framework. Track proficiency in each:
 
 **Vehicle Safety & Setup:**
 - Vehicle safety checks

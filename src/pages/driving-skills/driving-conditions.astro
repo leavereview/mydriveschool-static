@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+
+const relatedCategories = [
+  { title: 'The Basics', href: '/driving-skills/basics/', range: 'Skills 1–4' },
+  { title: 'Control & Positioning', href: '/driving-skills/control-positioning/', range: 'Skills 5–7' },
+  { title: 'Observation & Planning', href: '/driving-skills/observation-signalling/', range: 'Skills 8–13' },
+  { title: 'Junctions & Roundabouts', href: '/driving-skills/junctions-roundabouts/', range: 'Skills 14–16' },
+  { title: 'Manoeuvres', href: '/driving-skills/manoeuvres/', range: 'Skills 17–20' },
+  { title: 'Road Types', href: '/driving-skills/road-types/', range: 'Skills 21–23' },
+  { title: 'Following Routes', href: '/driving-skills/following-routes/', range: 'Skill 27' },
+];
+
+const levels = [
+  { n: 1, label: 'Introduced', desc: 'Following instructor guidance' },
+  { n: 2, label: 'Helped', desc: 'Improving with assistance' },
+  { n: 3, label: 'Prompted', desc: 'Mostly independent, occasional prompts' },
+  { n: 4, label: 'Independent', desc: 'Consistent, confident performance' },
+  { n: 5, label: 'Reflection', desc: 'Understands the why — test ready' },
+];
+---
+
+<BaseLayout
+  title="Driving Conditions: Skills 24-26 | Night, Weather & Passengers"
+  description="Master driving in the dark, adverse weather, and with passengers or loads. Skills 24-26 of the DVSA Ready to Pass — adapting to real-world conditions."
+>
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: '27 Driving Skills', href: '/dvsa-27-driving-skills/' },
+      { label: 'Driving Conditions' },
+    ]}
+  />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-block bg-brand-red/20 border border-brand-red/40 text-brand-red-light text-sm font-semibold px-3 py-1 rounded-full">Skills 24–26</span>
+          <a href="/dvsa-27-driving-skills/" class="text-gray-400 hover:text-white text-sm transition-colors">← All 27 Skills</a>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-5">Driving Conditions: Night, Weather & Passengers</h1>
+        <p class="text-xl text-gray-300 mb-4">
+          Real-world driving means adapting to conditions that change hour by hour. These three skills cover the scenarios new drivers are statistically most at risk in.
+        </p>
+        <p class="text-gray-400 mb-8">
+          Young drivers are disproportionately involved in night-time accidents and are at higher risk with passengers in the car. Understanding these skills could save your life.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-4">Track Your Conditions Progress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Content -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-16">
+
+        <!-- Skill 24 -->
+        <div id="skill-24">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">24</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Driving in the Dark</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Night driving reduces visibility dramatically, makes hazard perception harder, and is more tiring. New drivers are significantly over-represented in night-time collisions — which is why this skill is part of the DVSA framework.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Night driving essentials</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Use dipped headlights from dusk to dawn and in poor visibility</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Switch to full beam on unlit roads when no oncoming traffic</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Dip headlights when you see oncoming lights — switch back after they pass</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Drive to your stopping distance — not beyond the range of your lights</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Watch for pedestrians in dark clothing, cyclists without lights</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Take breaks on long journeys — fatigue sets in faster at night</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 24</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains lights and night hazards</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Drives at night with frequent support</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Generally safe; prompts for light use or speed</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Drives confidently and safely in the dark</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Manages fatigue awareness; adjusts for glare and reduced visibility proactively</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 25 -->
+        <div id="skill-25">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">25</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Weather Conditions</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Rain, fog, ice, snow, and sun glare all require you to adapt your driving significantly. What works in dry conditions may be dangerous in adverse weather.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Adapting to conditions</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Rain:</strong> Double the stopping distance; use wipers; reduce speed; watch for aquaplaning</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Fog:</strong> Use fog lights when visibility is below 100m; don't overtake</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Ice / snow:</strong> 10x stopping distance; gentle inputs; avoid braking on bends</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Sun glare:</strong> Use sun visor; slow down if visibility impaired; increase following distance</div></li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> <div><strong>Wind:</strong> Firm grip on the wheel; watch for vulnerable vehicles and pedestrians</div></li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 25</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains each weather type</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Drives in adverse weather with significant guidance</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Adapts to most conditions; needs prompts for extreme weather</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Adjusts speed, distance, and technique for all weather types</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Judges when conditions require postponing the journey; proactively prepares</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-gray-100" />
+
+        <!-- Skill 26 -->
+        <div id="skill-26">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy text-white font-bold text-xl flex items-center justify-center">26</span>
+            <h2 class="text-2xl font-bold text-brand-navy">Passengers and Loads</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Passengers — especially peers — significantly increase crash risk for young drivers. Research consistently shows that having friends in the car increases distraction. Understanding this risk is part of Skill 26.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">Passengers and loads</h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Driver is responsible for ensuring all passengers are belted</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Children under 12 or 135cm need appropriate car seats</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Don't allow passengers to distract you — ask them to be quiet if needed</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Loads must be secure — unsecured cargo can shift and affect handling</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Heavy loads lower the vehicle — adjust headlights and tyre pressure accordingly</li>
+                <li class="flex items-start gap-2"><span class="text-brand-red mt-1">✓</span> Don't exceed your vehicle's maximum load capacity</li>
+              </ul>
+            </div>
+            <div class="bg-brand-red-light rounded-xl p-6">
+              <h3 class="font-bold text-brand-navy mb-3">The 5 levels for Skill 26</h3>
+              <ol class="space-y-2 text-sm">
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">1 Introduced:</span> Instructor explains passenger responsibilities</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">2 Helped:</span> Manages passengers with instructor guidance</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">3 Prompted:</span> Generally handles passengers well; occasional distraction issues</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">4 Independent:</span> Manages passengers and loads safely and confidently</li>
+                <li class="text-gray-700"><span class="font-semibold text-brand-navy">5 Reflection:</span> Understands peer pressure risks; sets boundaries and maintains focus</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Level Reminder -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Tracking Progress Across Skills 24–26</h2>
+        <div class="grid grid-cols-5 gap-3">
+          {levels.map(({ n, label, desc }) => (
+            <div class="text-center">
+              <div class={`w-12 h-12 rounded-full mx-auto flex items-center justify-center font-bold text-lg mb-2 ${n === 5 ? 'bg-brand-red text-white' : 'bg-white border-2 border-gray-200 text-brand-navy'}`}>{n}</div>
+              <p class="font-semibold text-brand-navy text-xs mb-1">{label}</p>
+              <p class="text-gray-500 text-xs">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-gray-600 mt-6 text-sm">
+          Your instructor records your level on each skill after every lesson. Aim for <strong>Level 5 on all 27 skills</strong> before booking your test.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto bg-brand-navy text-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl font-bold mb-3">Track Your Driving Conditions Progress</h2>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+          Our software records your level on every skill after each lesson. Know exactly what to work on before test day.
+        </p>
+        <a href="/early-access/" class="btn-primary px-8 py-3">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Skills -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-6">Other Skill Categories</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {relatedCategories.map(({ title, href, range }) => (
+            <a href={href} class="card p-5 hover:border-brand-red hover:shadow-md transition-all group">
+              <span class="text-xs font-semibold text-brand-red mb-1 block">{range}</span>
+              <span class="font-bold text-brand-navy group-hover:text-brand-red transition-colors">{title}</span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-6 text-center">
+          <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">← Back to all 27 driving skills</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
