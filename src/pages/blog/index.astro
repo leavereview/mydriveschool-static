@@ -49,6 +49,36 @@ const tags = Array.from(allTags).sort();
     </div>
   </section>
 
+  <!-- DVSA Skills Featured Banner -->
+  <section class="bg-brand-red-light border-b border-red-100 py-8">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-start gap-4">
+          <div class="bg-brand-red text-white rounded-xl p-3 shrink-0">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-brand-red mb-1">New — Complete Skills Guide</p>
+            <h2 class="text-xl font-bold text-brand-navy">The 27 DVSA Driving Skills Explained</h2>
+            <p class="text-gray-600 text-sm mt-1">
+              Every skill assessed on the UK driving test — from basics and manoeuvres to motorways and independent driving. Guides for learners and instructors.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              {['Manoeuvres', 'Junctions', 'Observation', 'Road Types', 'Conditions'].map(cat => (
+                <span class="text-xs bg-white border border-red-200 text-brand-red px-2 py-0.5 rounded-full font-medium">{cat}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <a href="/dvsa-27-driving-skills/" class="btn-primary shrink-0 whitespace-nowrap">
+          Explore All 27 Skills →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Blog Posts Grid -->
   <section class="section bg-white">
     <div class="container-custom">
