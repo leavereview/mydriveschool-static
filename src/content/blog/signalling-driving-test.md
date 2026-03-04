@@ -21,7 +21,7 @@ howTo:
       text: "Check that the indicator has self-cancelled after a turn. If not, cancel it manually and glance in your mirror to confirm it is off."
 ---
 
-Signalling sounds straightforward — flick the indicator, complete the turn, move on. But incorrect signalling is one of the most misunderstood areas of the UK driving test. Both signalling when you should not and failing to signal when you should can lead to faults. The key is knowing when a signal genuinely communicates useful information.
+Signalling sounds straightforward — flick the indicator, complete the turn, move on. But incorrect signalling is one of the most misunderstood areas of the UK driving test. Both signalling when you should not and failing to signal when you should can lead to faults. The key is knowing when a signal genuinely communicates useful information. Signalling is assessed as part of the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) — a structured system your instructor uses to measure your readiness across every area of driving.
 
 ---
 

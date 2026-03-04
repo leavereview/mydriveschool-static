@@ -25,7 +25,7 @@ howTo:
       text: "At every pause between moves, complete a full scan of the road — mirrors, over both shoulders, and ahead — before committing to the next move."
 ---
 
-The turn in the road — still widely known as the 3-point turn — is one of the most practical manoeuvres you will ever perform. Whether you have taken a wrong turn, reached a dead end, or need to reverse direction on a narrow road, the ability to turn a car around safely in a confined space is something you will use throughout your driving life. The test examines whether you can manage this in a controlled, safe, and efficient way.
+The turn in the road — still widely known as the 3-point turn — is one of the most practical manoeuvres you will ever perform. Whether you have taken a wrong turn, reached a dead end, or need to reverse direction on a narrow road, the ability to turn a car around safely in a confined space is something you will use throughout your driving life. The test examines whether you can manage this in a controlled, safe, and efficient way. Understanding this skill in context means knowing where it fits within [DVSA's full list of 27 driving competencies](/dvsa-27-driving-skills/) and how it builds on the reversing and vehicle control skills you develop earlier in training.
 
 ---
 

@@ -21,7 +21,7 @@ howTo:
       text: "A fully loaded car takes longer to stop and handles differently in bends and at speed. Increase following distances, brake earlier and more progressively, and take corners at lower speeds than you would solo."
 ---
 
-Passengers and loads change the nature of driving in ways that are easy to underestimate. A car full of friends feels different to drive — it stops more slowly, handles differently in bends, and introduces social dynamics that can subtly (or not so subtly) influence your decisions behind the wheel. DVSA Skill 26 assesses your ability to manage these variables safely, and for newly qualified drivers it is one of the most practically important skills to develop.
+Passengers and loads change the nature of driving in ways that are easy to underestimate. A car full of friends feels different to drive — it stops more slowly, handles differently in bends, and introduces social dynamics that can subtly (or not so subtly) influence your decisions behind the wheel. DVSA Skill 26 assesses your ability to manage these variables safely, and for newly qualified drivers it is one of the most practically important skills to develop. For context on where this fits within your full training, see [DVSA's full list of 27 driving competencies](/dvsa-27-driving-skills/).
 
 ---
 

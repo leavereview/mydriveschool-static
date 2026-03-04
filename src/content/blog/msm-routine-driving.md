@@ -21,7 +21,7 @@ howTo:
       text: "Only proceed with the turn, lane change, or manoeuvre once you have acted on the mirror information and signalled where necessary."
 ---
 
-Every safe driving decision starts with knowing what is around you. The Mirror-Signal-Manoeuvre (MSM) routine is the system the DVSA uses to assess whether you are building an accurate picture of the road before you act. Get this right and you will not only pass your test — you will drive safely for life.
+Every safe driving decision starts with knowing what is around you. The Mirror-Signal-Manoeuvre (MSM) routine is the system the DVSA uses to assess whether you are building an accurate picture of the road before you act. Get this right and you will not only pass your test — you will drive safely for life. The MSM routine underpins multiple competencies within [the 27 skills tracked by approved driving instructors](/dvsa-27-driving-skills/), making it one of the most important foundations to master early.
 
 ---
 

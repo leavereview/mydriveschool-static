@@ -25,7 +25,7 @@ howTo:
 
 Moving off and stopping sounds simple, but the examiner will assess this skill from the moment the test begins to the moment the car parks at the test centre. It is not a box-ticking exercise at the start — it is a continuous standard that runs through every junction, every traffic light stop, and every hazard throughout the full 40 minutes of your test.
 
-Getting this skill to an automatic, confident level is one of the highest-return activities in driver training. It builds clutch control, observation habits, and the ability to stop safely and precisely — all of which feed into dozens of other skills.
+Getting this skill to an automatic, confident level is one of the highest-return activities in driver training. It builds clutch control, observation habits, and the ability to stop safely and precisely — all of which feed into dozens of other skills. You can track your progress across this and every other competency using the [DVSA skill progression tracker](/dvsa-27-driving-skills/) used by approved instructors across the UK.
 
 ---
 

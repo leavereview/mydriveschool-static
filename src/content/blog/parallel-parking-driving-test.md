@@ -27,7 +27,7 @@ howTo:
 
 Parallel parking is one of the three parking manoeuvres you might be asked to perform on your UK driving test. Around one-third of candidates are asked to parallel park, so there's a meaningful chance it will come up on your test day.
 
-The good news: you're not expected to be perfect. Examiners assess safety, control, and observation — not whether you finish within six inches of the kerb. Understanding this takes most of the pressure away.
+The good news: you're not expected to be perfect. Examiners assess safety, control, and observation — not whether you finish within six inches of the kerb. Understanding this takes most of the pressure away. Parallel parking is assessed within the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/), alongside every other manoeuvre and competency your instructor will track during your lessons.
 
 This guide walks through exactly what examiners look for, how to progress through all 5 DVSA skill levels, and the most common mistakes to avoid.
 

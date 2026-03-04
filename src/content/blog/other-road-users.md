@@ -21,7 +21,7 @@ howTo:
       text: "If any road user has to brake, swerve, or pause because of your actions, that is a fault. Position and timing should make interactions seamless, not reactive."
 ---
 
-Every drive puts you in contact with other people using the same road — some in vehicles, some on bikes, some on foot, and occasionally on horseback. DVSA Skill 12 is about reading their behaviour, predicting what they might do next, and responding in a way that keeps everyone safe without causing anyone to alter their course because of you.
+Every drive puts you in contact with other people using the same road — some in vehicles, some on bikes, some on foot, and occasionally on horseback. DVSA Skill 12 is about reading their behaviour, predicting what they might do next, and responding in a way that keeps everyone safe without causing anyone to alter their course because of you. Understanding where this fits in your wider training is easier with the [complete guide to all 27 DVSA driving skills](/dvsa-27-driving-skills/), which maps every competency from basics to test-ready standard.
 
 ---
 

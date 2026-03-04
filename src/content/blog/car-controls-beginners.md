@@ -23,7 +23,7 @@ howTo:
       text: "Turn the ignition to position two (before starting) to see which lights illuminate. Know what red, amber, and green lights mean before any moving practice begins."
 ---
 
-Before a car moves an inch, a competent driver must understand every control in it. This is not just good practice — it is a legal and examiner requirement. DVSA Skill 5 covers your ability to use all vehicle controls correctly and confidently, and it underpins every other skill you will learn.
+Before a car moves an inch, a competent driver must understand every control in it. This is not just good practice — it is a legal and examiner requirement. DVSA Skill 5 covers your ability to use all vehicle controls correctly and confidently, and it underpins every other skill you will learn. You can see exactly how it relates to the rest of your training by exploring [DVSA's full list of 27 driving competencies](/dvsa-27-driving-skills/).
 
 Understanding car controls thoroughly at the start of your training saves hours of correction later. Pupils who rush past this foundation often develop habits — riding the clutch, looking down at the gearstick, gripping the wheel too tight — that are far harder to undo at test standard than they would have been to avoid in the first place.
 

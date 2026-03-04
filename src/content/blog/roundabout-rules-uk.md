@@ -27,7 +27,7 @@ howTo:
 
 Roundabouts are one of the most common places for driving test faults. They demand simultaneous lane selection, observation, signalling, and speed management — and many learner drivers approach them with anxiety that compounds the difficulty.
 
-This guide covers everything you need to know: the rules, the technique for each type of exit, how to handle multi-lane and spiral roundabouts, and the 5-level DVSA progression framework so you know exactly when you're test-ready.
+This guide covers everything you need to know: the rules, the technique for each type of exit, how to handle multi-lane and spiral roundabouts, and the 5-level DVSA progression framework so you know exactly when you're test-ready. Roundabout skills sit within a broader set of junction competencies — understanding how they all connect is easier when you review the [DVSA skill progression framework](/dvsa-27-driving-skills/) as a whole.
 
 ---
 

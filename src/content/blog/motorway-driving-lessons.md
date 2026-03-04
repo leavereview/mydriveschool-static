@@ -25,7 +25,7 @@ howTo:
 
 Since June 2018, learner drivers in England, Scotland, and Wales have been permitted to drive on motorways, provided they are in a car with dual controls and accompanied by an approved driving instructor (ADI). This change was made precisely because motorway driving is a critical skill that new drivers previously had to learn for the first time alone — often on their first day after passing.
 
-DVSA Skill 23 covers motorway driving and is part of the full curriculum even if it is not always tested during the practical exam itself. Whether or not your test route includes a motorway, developing this skill during lessons is one of the highest-value things you can do as a learner.
+DVSA Skill 23 covers motorway driving and is part of the full curriculum even if it is not always tested during the practical exam itself. Whether or not your test route includes a motorway, developing this skill during lessons is one of the highest-value things you can do as a learner. See how it sits alongside every other competency in the [DVSA's full list of 27 driving competencies](/dvsa-27-driving-skills/).
 
 ---
 

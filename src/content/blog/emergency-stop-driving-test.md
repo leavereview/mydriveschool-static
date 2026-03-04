@@ -27,7 +27,7 @@ howTo:
 
 Around one in three driving tests include an emergency stop. It's the only part of the test that's deliberately unexpected — the examiner won't warn you until shortly before they give the signal. For many learners, that unpredictability is what makes it nerve-wracking.
 
-But the emergency stop is one of the more straightforward parts of the test to prepare for. The technique is simple, the examiner's expectations are clear, and modern cars with ABS make the braking itself less complicated than many learners expect.
+But the emergency stop is one of the more straightforward parts of the test to prepare for. The technique is simple, the examiner's expectations are clear, and modern cars with ABS make the braking itself less complicated than many learners expect. It forms part of the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/), which covers every manoeuvre and competency assessed during your training and test.
 
 This guide covers exactly what will happen on your test, the correct technique, and how to progress through the 5 DVSA skill levels to test-ready standard.
 

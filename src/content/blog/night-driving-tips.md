@@ -21,7 +21,7 @@ howTo:
       text: "You must be able to stop within the distance you can see ahead. On dipped beam that is roughly 30m — so in a 30mph zone you are at the limit. On full beam it extends to around 100m."
 ---
 
-Night driving demands a higher level of concentration and a different set of skills compared to daytime driving. Reduced visibility, glare from oncoming headlights, and the way artificial light creates misleading shadows all combine to make driving after dark genuinely more hazardous. Understanding and practising DVSA Skill 24 will not only help you pass your test — it will keep you safe for the rest of your driving life.
+Night driving demands a higher level of concentration and a different set of skills compared to daytime driving. Reduced visibility, glare from oncoming headlights, and the way artificial light creates misleading shadows all combine to make driving after dark genuinely more hazardous. Understanding and practising DVSA Skill 24 will not only help you pass your test — it will keep you safe for the rest of your driving life. It forms part of the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) that maps every competency your instructor is assessing throughout your training.
 
 ---
 

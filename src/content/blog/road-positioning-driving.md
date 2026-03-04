@@ -23,7 +23,7 @@ howTo:
 
 Road positioning is one of those skills that is always being assessed, even when the examiner has not explicitly asked you to do anything. Every metre of the test — from the moment the car moves to the moment it parks — the examiner is observing whether you are in the right place on the road.
 
-Poor positioning is the underlying cause of a surprisingly large number of test failures. Candidates who drift too close to parked cars risk opening-door collisions. Those who take the wrong lane at a roundabout create confusion for other drivers. Those who drift across the centre line on bends create a head-on hazard. All of these are directly addressed by mastering DVSA Skill 7.
+Poor positioning is the underlying cause of a surprisingly large number of test failures. Candidates who drift too close to parked cars risk opening-door collisions. Those who take the wrong lane at a roundabout create confusion for other drivers. Those who drift across the centre line on bends create a head-on hazard. All of these are directly addressed by mastering DVSA Skill 7. Road positioning is one of the key competencies covered in [the 27 skills tracked by approved driving instructors](/dvsa-27-driving-skills/) from the very first lesson.
 
 ---
 

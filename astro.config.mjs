@@ -7,7 +7,9 @@ export default defineConfig({
   site: 'https://mydriveschool.software',
   integrations: [
     tailwind(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/blog/tag/'),
+    }),
     compress({
       CSS: true,
       HTML: {

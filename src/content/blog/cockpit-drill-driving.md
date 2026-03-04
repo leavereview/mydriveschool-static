@@ -23,7 +23,7 @@ howTo:
       text: "Interior mirror: position it so you can see the full rear window without moving your head. Left door mirror: adjust so you can see the rear tyre just touching the road at the bottom of the mirror. Right door mirror: same — rear tyre visible at the bottom. Do not adjust mirrors after starting the engine."
 ---
 
-The cockpit drill is one of the first things you will learn in a driving lesson and one of the last things many drivers still do properly years after passing. DSSSM — Doors, Seat, Steering, Seatbelt, Mirrors — is a five-point pre-drive routine that takes less than 90 seconds and eliminates a surprising number of accident risk factors before the car has moved a metre. DVSA Skill 3 makes it explicit: you should complete this drill every single time you get into a car.
+The cockpit drill is one of the first things you will learn in a driving lesson and one of the last things many drivers still do properly years after passing. DSSSM — Doors, Seat, Steering, Seatbelt, Mirrors — is a five-point pre-drive routine that takes less than 90 seconds and eliminates a surprising number of accident risk factors before the car has moved a metre. DVSA Skill 3 makes it explicit: you should complete this drill every single time you get into a car. It is one of the foundational skills in the [DVSA skill progression framework](/dvsa-27-driving-skills/) that your instructor uses to assess your readiness for test.
 
 ---
 

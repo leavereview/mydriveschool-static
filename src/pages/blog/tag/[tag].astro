@@ -35,8 +35,8 @@ const posts = allPosts
 // Format tag for display
 const displayTag = tag.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
-// noindex sparse tags (fewer than 5 posts) to avoid thin content penalties
-const shouldNoindex = posts.length < 5;
+// noindex all tag pages to avoid diluting topical authority
+const shouldNoindex = true;
 
 // Tag descriptions for SEO
 const tagDescriptions: Record<string, string> = {

@@ -21,7 +21,7 @@ howTo:
       text: "Before opening the driver's door, check the left door mirror and blind spot for cyclists, motorcyclists, and pedestrians. The car door opening into a cyclist's path (known as 'dooring') is a common serious accident. Open the door using the opposite hand to encourage you to turn and look — the 'Dutch reach'."
 ---
 
-Vehicle security might seem like a mundane topic compared to roundabouts or motorway driving, but it is assessed on your test and it connects to a genuinely important set of habits. An unsecured vehicle causes accidents — rolling into traffic, collisions at junctions from slipping out of gear, cyclists injured by opening doors. DVSA Skill 4 is the discipline of finishing a drive safely, which matters as much as everything that happened during it.
+Vehicle security might seem like a mundane topic compared to roundabouts or motorway driving, but it is assessed on your test and it connects to a genuinely important set of habits. An unsecured vehicle causes accidents — rolling into traffic, collisions at junctions from slipping out of gear, cyclists injured by opening doors. DVSA Skill 4 is the discipline of finishing a drive safely, which matters as much as everything that happened during it. It sits alongside every other foundational competency in [the 27 skills tracked by approved driving instructors](/dvsa-27-driving-skills/) — from the cockpit drill through to independent driving.
 
 ---
 

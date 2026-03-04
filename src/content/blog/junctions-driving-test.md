@@ -23,7 +23,7 @@ howTo:
       text: "As you approach the give way or stop line, look effectively in both directions (and ahead if relevant). For a closed junction, stop before the line. For an open junction, you may be able to emerge without stopping if it is clearly safe."
 ---
 
-More driving test faults are recorded at junctions than at any other type of road feature. Emerging without adequate observation, approaching at the wrong speed, or misjudging priority at a crossroads — these are the errors that end driving tests prematurely every day. Understanding exactly what the examiner expects at a junction, and building the correct habits through methodical practice, is one of the highest-impact things you can do to prepare for your test.
+More driving test faults are recorded at junctions than at any other type of road feature. Emerging without adequate observation, approaching at the wrong speed, or misjudging priority at a crossroads — these are the errors that end driving tests prematurely every day. Understanding exactly what the examiner expects at a junction, and building the correct habits through methodical practice, is one of the highest-impact things you can do to prepare for your test. Junction skills are assessed as part of the [complete guide to all 27 DVSA driving skills](/dvsa-27-driving-skills/) — worth reading to understand the full picture of what examiners are tracking.
 
 ---
 

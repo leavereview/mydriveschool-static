@@ -23,7 +23,7 @@ howTo:
       text: "In fog, drive at a speed where you can stop within your visible distance. On ice, travel at the lowest safe speed and brake, accelerate, and steer as gently as possible to avoid losing traction."
 ---
 
-Rain is one of the most common adverse conditions UK drivers face, yet it dramatically changes the physics of driving — braking distances nearly double on a wet road compared to dry tarmac. DVSA Skill 25 covers the full range of adverse weather conditions, and examiners assess whether you genuinely adapt your driving or simply carry on as if the conditions have not changed. Understanding the science behind wet-weather driving will help you pass your test and stay safe long after.
+Rain is one of the most common adverse conditions UK drivers face, yet it dramatically changes the physics of driving — braking distances nearly double on a wet road compared to dry tarmac. DVSA Skill 25 covers the full range of adverse weather conditions, and examiners assess whether you genuinely adapt your driving or simply carry on as if the conditions have not changed. Understanding the science behind wet-weather driving will help you pass your test and stay safe long after. This skill forms part of the broader [DVSA skill progression framework](/dvsa-27-driving-skills/) covering all aspects of safe and responsible driving.
 
 ---
 

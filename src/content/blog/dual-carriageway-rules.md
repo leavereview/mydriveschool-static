@@ -25,7 +25,7 @@ howTo:
 
 Dual carriageways are included in some driving tests, and they are present on most driving routes taken in the weeks and months after passing. Understanding how to use them correctly is not just a test skill — it is a core road safety competency that affects every journey on a major road.
 
-DVSA Skill 22 covers the full sequence: joining from a slip road, travelling at speed with correct lane discipline, overtaking safely, and leaving via a deceleration lane. Each element has specific technique that is assessed independently.
+DVSA Skill 22 covers the full sequence: joining from a slip road, travelling at speed with correct lane discipline, overtaking safely, and leaving via a deceleration lane. Each element has specific technique that is assessed independently. To understand how dual carriageway driving fits within your complete curriculum, visit our guide to [all 27 DVSA driving skills](/dvsa-27-driving-skills/).
 
 ---
 

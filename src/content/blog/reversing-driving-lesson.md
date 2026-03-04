@@ -23,7 +23,7 @@ howTo:
       text: "If the car begins to drift left or right, make small steering inputs to correct. Remember that in reverse, the front of the car swings in the opposite direction to your steering."
 ---
 
-Reversing is the skill that makes all other manoeuvres possible. Before you can master a bay park, a parallel park, or a turn in the road, you need to be genuinely comfortable moving the car rearward at a slow, controlled speed while maintaining awareness of everything around you. Many learners underestimate this skill because they assume reversing is simply driving backwards — but the observation demands and the handling characteristics of the car in reverse make it a distinct skill that deserves dedicated practice.
+Reversing is the skill that makes all other manoeuvres possible. Before you can master a bay park, a parallel park, or a turn in the road, you need to be genuinely comfortable moving the car rearward at a slow, controlled speed while maintaining awareness of everything around you. Many learners underestimate this skill because they assume reversing is simply driving backwards — but the observation demands and the handling characteristics of the car in reverse make it a distinct skill that deserves dedicated practice. You can see how it connects to the broader manoeuvres category in our [complete guide to all 27 DVSA driving skills](/dvsa-27-driving-skills/).
 
 ---
 

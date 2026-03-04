@@ -25,7 +25,7 @@ howTo:
       text: "Inform your examiner the manoeuvre is complete and await further instructions."
 ---
 
-Bay parking is one of those manoeuvres that many learners approach with dread, yet it is a skill you will use almost every time you drive independently. Whether you are parking at a supermarket, a leisure centre, or a workplace car park, the ability to slot your car neatly into a bay is essential. The good news is that with a clear method and consistent practice, bay parking becomes second nature.
+Bay parking is one of those manoeuvres that many learners approach with dread, yet it is a skill you will use almost every time you drive independently. Whether you are parking at a supermarket, a leisure centre, or a workplace car park, the ability to slot your car neatly into a bay is essential. The good news is that with a clear method and consistent practice, bay parking becomes second nature. To see how this manoeuvre fits alongside every other skill you are learning, refer to the [complete guide to all 27 DVSA driving skills](/dvsa-27-driving-skills/).
 
 ---
 

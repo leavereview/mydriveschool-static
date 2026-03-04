@@ -21,7 +21,7 @@ howTo:
       text: "The examiner will ask one show me question (you demonstrate) and one tell me question (you explain). Practise answering all 20 standard questions aloud until your answers are clear, concise, and confident."
 ---
 
-The Show Me Tell Me section of the UK driving test carries one minor fault if answered incorrectly — a small penalty for a small exercise. But the underlying knowledge it tests matters far beyond test day. A driver who does not know how to check their tyre tread, spot low brake fluid, or find the screen wash reservoir is a less safe driver. DVSA Skill 2 is about building the habit of vehicle awareness that will serve you throughout your driving life.
+The Show Me Tell Me section of the UK driving test carries one minor fault if answered incorrectly — a small penalty for a small exercise. But the underlying knowledge it tests matters far beyond test day. A driver who does not know how to check their tyre tread, spot low brake fluid, or find the screen wash reservoir is a less safe driver. DVSA Skill 2 is about building the habit of vehicle awareness that will serve you throughout your driving life. It is one of the 27 skills tracked by approved driving instructors — see the full breakdown in our guide to [the 27 skills tracked by approved driving instructors](/dvsa-27-driving-skills/).
 
 ---
 

@@ -21,7 +21,7 @@ howTo:
       text: "Identify junctions, bends, school zones, and changes in road surface early, and reduce speed before you reach them rather than reacting at the last moment."
 ---
 
-Many learner drivers believe that matching the speed limit is the goal. In reality, DVSA Skill 11 — Use of Speed — is about choosing the right speed for the conditions at every moment of your drive. Getting this right is one of the clearest signals to an examiner that you are a safe, thinking driver.
+Many learner drivers believe that matching the speed limit is the goal. In reality, DVSA Skill 11 — Use of Speed — is about choosing the right speed for the conditions at every moment of your drive. Getting this right is one of the clearest signals to an examiner that you are a safe, thinking driver. Speed awareness fits within a wider set of observation and planning competencies — all of which are mapped out in the [complete guide to all 27 DVSA driving skills](/dvsa-27-driving-skills/).
 
 ---
 

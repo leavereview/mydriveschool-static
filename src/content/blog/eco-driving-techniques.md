@@ -21,7 +21,7 @@ howTo:
       text: "Reading the road ahead means you accelerate less often. Every time you avoid accelerating to then brake shortly after, you save fuel and wear on your brakes."
 ---
 
-Eco-driving is not about crawling along in top gear at 20 mph. Done properly, it makes you a smoother, more anticipatory driver — exactly the qualities that also help you pass your driving test. DVSA Skill 13 asks you to demonstrate that you understand how your inputs affect the environment, and that you can modify your driving accordingly without compromising safety.
+Eco-driving is not about crawling along in top gear at 20 mph. Done properly, it makes you a smoother, more anticipatory driver — exactly the qualities that also help you pass your driving test. DVSA Skill 13 asks you to demonstrate that you understand how your inputs affect the environment, and that you can modify your driving accordingly without compromising safety. Eco-driving is one of the 27 competencies your instructor tracks — explore them all in the [DVSA's full list of 27 driving competencies](/dvsa-27-driving-skills/).
 
 ---
 

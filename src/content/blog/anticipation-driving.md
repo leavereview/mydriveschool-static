@@ -21,7 +21,7 @@ howTo:
       text: "Keep enough space ahead and to the side that you always have somewhere to go if the unexpected happens. Never box yourself in."
 ---
 
-The difference between a safe driver and a reactive one is time. Safe drivers buy themselves time by looking further ahead and interpreting what they see. Reactive drivers are always catching up to events that have already happened. DVSA Skill 10 — anticipation and planning — is about training yourself to see hazards as they form, not as they arrive at your front bumper.
+The difference between a safe driver and a reactive one is time. Safe drivers buy themselves time by looking further ahead and interpreting what they see. Reactive drivers are always catching up to events that have already happened. DVSA Skill 10 — anticipation and planning — is about training yourself to see hazards as they form, not as they arrive at your front bumper. It sits within the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) that approved instructors use to track every learner's development from first lesson to test-ready standard.
 
 ---
 

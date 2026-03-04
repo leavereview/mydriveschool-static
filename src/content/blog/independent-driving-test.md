@@ -21,7 +21,7 @@ howTo:
       text: "If you are following road signs and become genuinely uncertain, you may pull over safely and ask the examiner to repeat the instruction. This is permitted and is far safer than guessing and making an unsafe manoeuvre."
 ---
 
-Since 2017, the independent driving section has been one of the most discussed parts of the UK driving test. It lasts up to 20 minutes — around a third of your total test time — and is specifically designed to assess whether you can navigate real roads without being guided turn by turn. Four out of five tests now use a sat nav rather than road sign following, but the underlying skill being assessed is the same: can you make safe decisions while managing a route independently?
+Since 2017, the independent driving section has been one of the most discussed parts of the UK driving test. It lasts up to 20 minutes — around a third of your total test time — and is specifically designed to assess whether you can navigate real roads without being guided turn by turn. Four out of five tests now use a sat nav rather than road sign following, but the underlying skill being assessed is the same: can you make safe decisions while managing a route independently? As Skill 27, it is the final competency in the [DVSA skill progression framework](/dvsa-27-driving-skills/) — a useful framework to review as you approach your test date.
 
 ---
 

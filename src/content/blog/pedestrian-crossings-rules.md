@@ -23,7 +23,7 @@ howTo:
       text: "Do not move off until the pedestrian has fully cleared the crossing — not just reached the central island. Do not creep forward or rev the engine while someone is crossing."
 ---
 
-Pedestrian crossings sit at the intersection of road law, driving test assessment, and everyday human safety. Getting a crossing wrong on your test is not just a fault — it can be a serious or dangerous fault if a pedestrian is affected. But the variety of crossing types in the UK causes genuine confusion, even among experienced drivers. Learning the rules for each type, and building the anticipation skills to handle them correctly, will serve you for your entire driving life.
+Pedestrian crossings sit at the intersection of road law, driving test assessment, and everyday human safety. Getting a crossing wrong on your test is not just a fault — it can be a serious or dangerous fault if a pedestrian is affected. But the variety of crossing types in the UK causes genuine confusion, even among experienced drivers. Learning the rules for each type, and building the anticipation skills to handle them correctly, will serve you for your entire driving life. This skill is assessed as part of [DVSA's full list of 27 driving competencies](/dvsa-27-driving-skills/) used by all approved UK driving instructors.
 
 ---
 
