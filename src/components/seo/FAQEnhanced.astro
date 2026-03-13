@@ -42,11 +42,14 @@ const {
   initiallyExpanded
 } = Astro.props;
 
-// Generate FAQ schema
+// Generate FAQ schema — strip HTML tags from answers so the JSON-LD is valid plain text
+// (HTML attributes inside JSON strings get mangled by the HTML minifier during build)
+const stripHtml = (html: string) => html.replace(/<[^>]+>/g, '');
+
 const schemaGen = createSchemaGenerator(site);
 const faqItems: FAQItem[] = faqs.map((faq, index) => ({
   question: faq.question,
-  answer: faq.answer,
+  answer: stripHtml(faq.answer),
   position: index + 1
 }));
 
