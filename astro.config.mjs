@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
 
 export default defineConfig({
-  site: 'https://mydriveschool.software',
+  site: 'https://driveschoolpro.com',
   integrations: [
     tailwind(),
     sitemap({

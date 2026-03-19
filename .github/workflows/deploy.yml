@@ -32,5 +32,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
           REMOTE_USER: ubuntu
           SOURCE: dist/
-          TARGET: /var/www/mydriveschool.software/
+          TARGET: /var/www/driveschoolpro.com/
           ARGS: "-rltDvz --delete"
