@@ -47,6 +47,8 @@ const schemaMarkup = schemaGen.getBreadcrumbSchema(breadcrumbItems);
 
 <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
 
+<div class="bg-gray-100 py-3">
+  <div class="container-custom">
 <nav aria-label="Breadcrumb" class="breadcrumbs">
   <ol class="breadcrumb-list">
     {items.map((item, index) => (
@@ -67,10 +69,11 @@ const schemaMarkup = schemaGen.getBreadcrumbSchema(breadcrumbItems);
     ))}
   </ol>
 </nav>
+  </div>
+</div>
 
 <style>
   .breadcrumbs {
-    padding: 1rem 0;
     font-size: 0.875rem;
   }
 
