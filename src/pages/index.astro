@@ -6,21 +6,21 @@ import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "@id": "https://mydriveschool.software/#software",
-  "name": "MyDriveSchool.Software",
-  "alternateName": "MyDriveSchool",
+  "@id": "https://driveschoolpro.com/#software",
+  "name": "DriveSchoolPro",
+  "alternateName": "DriveSchoolPro",
   "description": "Complete driving school management software for driving instructors and schools. Lesson scheduling, student management, automated billing, and instructor allocation in one platform.",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
   "offers": {
     "@type": "Offer",
-    "@id": "https://mydriveschool.software/#free-trial",
+    "@id": "https://driveschoolpro.com/#free-trial",
     "price": "0",
     "priceCurrency": "GBP",
     "name": "14-Day Free Trial",
-    "description": "Try MyDriveSchool.Software free for 14 days with full access",
+    "description": "Try DriveSchoolPro free for 14 days with full access",
     "availability": "https://schema.org/InStock",
-    "url": "https://mydriveschool.software/contact/",
+    "url": "https://driveschoolpro.com/contact/",
     "priceValidUntil": "2026-12-31"
   },
   "featureList": [
@@ -37,8 +37,8 @@ const softwareApplicationSchema = {
     "Recurring Lesson Series",
     "Role-Based Access Control"
   ],
-  "url": "https://mydriveschool.software",
-  "screenshot": "https://mydriveschool.software/images/marketing/dashboard-overview.webp",
+  "url": "https://driveschoolpro.com",
+  "screenshot": "https://driveschoolpro.com/images/marketing/dashboard-overview.webp",
   "softwareVersion": "2.0",
   "applicationSubCategory": "Driving School Management",
   "audience": {
@@ -51,21 +51,21 @@ const softwareApplicationSchema = {
 const offerSchema = {
   "@context": "https://schema.org",
   "@type": "Offer",
-  "@id": "https://mydriveschool.software/#free-trial-offer",
-  "name": "14-Day Free Trial - MyDriveSchool.Software",
-  "description": "Try MyDriveSchool.Software free for 14 days with complete access to all features including lesson scheduling, student management, and automated billing. No credit card required.",
+  "@id": "https://driveschoolpro.com/#free-trial-offer",
+  "name": "14-Day Free Trial - DriveSchoolPro",
+  "description": "Try DriveSchoolPro free for 14 days with complete access to all features including lesson scheduling, student management, and automated billing. No credit card required.",
   "price": "0",
   "priceCurrency": "GBP",
   "priceValidUntil": "2026-12-31",
   "availability": "https://schema.org/InStock",
-  "url": "https://mydriveschool.software/contact/",
+  "url": "https://driveschoolpro.com/contact/",
   "seller": {
     "@type": "Organization",
-    "name": "MyDriveSchool.Software"
+    "name": "DriveSchoolPro"
   },
   "itemOffered": {
     "@type": "SoftwareApplication",
-    "name": "MyDriveSchool.Software",
+    "name": "DriveSchoolPro",
     "applicationCategory": "BusinessApplication"
   },
   "eligibleRegion": {
@@ -147,7 +147,7 @@ const stats = [
 ];
 ---
 
-<BaseLayout title="MyDriveSchool | Driving School Software for UK ADIs" description="DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. 14-day free trial." image="/images/marketing/dashboard-overview.webp">
+<BaseLayout title="DriveSchoolPro | Driving School Software for UK ADIs" description="DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. 14-day free trial." image="/images/marketing/dashboard-overview.webp">
   <!-- Structured Data Schemas -->
   <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
@@ -314,7 +314,7 @@ const stats = [
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="badge-primary mb-4">See It in Action</span>
         <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Built for How You Actually Work</h2>
-        <p class="text-xl text-gray-600">Real screenshots from the MyDriveSchool platform — no stock photos, no mockups.</p>
+        <p class="text-xl text-gray-600">Real screenshots from the DriveSchoolPro platform — no stock photos, no mockups.</p>
       </div>
 
       <!-- Calendar Row -->
@@ -369,7 +369,7 @@ const stats = [
             Built for Instructors and Schools of All Sizes
           </h2>
           <p class="text-lg text-gray-600 mb-6">
-            Whether you're a solo instructor or manage a fleet of vehicles and instructors, MyDriveSchool adapts to your unique needs with flexible scheduling, multi-instructor support, and customizable lesson types.
+            Whether you're a solo instructor or manage a fleet of vehicles and instructors, DriveSchoolPro adapts to your unique needs with flexible scheduling, multi-instructor support, and customizable lesson types.
           </p>
           <ul class="space-y-4 mb-8">
             <li class="flex items-start gap-3">
@@ -400,7 +400,7 @@ const stats = [
             src="/images/marketing/dashboard-overview.webp"
             width={1440}
             height={900}
-            alt="MyDriveSchool dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons"
+            alt="DriveSchoolPro dashboard showing business metrics, today's lessons, compliance alerts, and quick action buttons"
           />
         </div>
       </div>
@@ -411,7 +411,7 @@ const stats = [
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">Why Us</span>
-        <h2 class="text-3xl md:text-5xl font-bold mb-6">Why Schools Choose MyDriveSchool</h2>
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Why Schools Choose DriveSchoolPro</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8 mb-16">
         {highlights.map((highlight) => (
@@ -477,11 +477,11 @@ const stats = [
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Streamline Your Driving School?</h2>
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-        Start your free trial today and see how MyDriveSchool.Software can transform your business.
+        Start your free trial today and see how DriveSchoolPro can transform your business.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Your Free Trial</a>
-        <a href="/pricing/" class="btn bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4">View Pricing</a>
+        <a href="/pricing/" class="btn bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4">See Plans & Pricing</a>
       </div>
     </div>
   </section>

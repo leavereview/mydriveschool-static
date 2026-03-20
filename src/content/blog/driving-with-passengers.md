@@ -3,7 +3,7 @@ title: "Driving with Passengers & Loads: DVSA Skill 26"
 description: "How to drive responsibly with passengers and loads for your UK driving test. Covers distractions, vehicle dynamics, and new driver rules."
 date: "2026-02-21"
 tags: ["driving-conditions", "dvsa-skills", "passengers", "vehicle-loading"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Driving Conditions"
 skill_number: 26
 imageAlt: "Driver with passengers in a car on a UK road"

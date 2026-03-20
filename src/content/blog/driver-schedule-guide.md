@@ -4,7 +4,7 @@ description: "Learn to create efficient instructor schedules that maximize booki
 image: /images/blog-scheduling.jpg
 date: "2026-01-23"
 tags: ["Scheduling", "Business"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 ---
 
 Creating an effective driver schedule is one of the most impactful things you can do for your driving school's profitability and student satisfaction. Poor scheduling means wasted time, frustrated instructors, and missed revenue. Good scheduling maximizes every hour.
@@ -450,6 +450,6 @@ Good scheduling isn't set-and-forget—it's ongoing optimization.
 
 ## Ready to Streamline Your Scheduling?
 
-Managing instructor schedules, student bookings, and vehicle coordination takes time. [MyDriveSchool.Software](/driving-school-software/) handles scheduling, reminders, and coordination in one platform.
+Managing instructor schedules, student bookings, and vehicle coordination takes time. [DriveSchoolPro](/driving-school-software/) handles scheduling, reminders, and coordination in one platform.
 
 [Start your free trial](/contact/) and see how much easier schedule management can be.

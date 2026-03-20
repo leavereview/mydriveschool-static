@@ -9,7 +9,7 @@ const blogCollection = defineCollection({
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     tags: z.array(z.string()).optional(),
-    author: z.string().default('MyDriveSchool Team'),
+    author: z.string().default('DriveSchoolPro Team'),
     category: z.string().optional(),
     skill_number: z.number().optional(),
     howTo: z.object({

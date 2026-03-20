@@ -3,7 +3,7 @@ title: "Legal Responsibilities: DVSA Skill 1 for Learner Drivers"
 description: "Everything UK learner drivers must know about legal responsibilities — licence, insurance, MOT, L plates and the new driver 6-point rule."
 date: "2026-02-21"
 tags: ["the-basics", "dvsa-skills", "legal", "learner-driver", "new-driver"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "The Basics"
 skill_number: 1
 imageAlt: "UK provisional driving licence and car keys on a table"

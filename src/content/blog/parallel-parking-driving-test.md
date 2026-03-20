@@ -3,7 +3,7 @@ title: "Parallel Parking: From Level 1 to Test-Ready"
 description: "Master parallel parking for your UK driving test. Learn reference points, common mistakes, and the 5 DVSA skill levels to pass first time."
 date: "2026-02-20"
 tags: ["student-management"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Manoeuvres"
 skill_number: 19
 imageAlt: "Diagram showing parallel parking reference points and technique for UK driving test"

@@ -3,7 +3,7 @@ title: "Car Safety Checks: DVSA Skill 2 — Show Me Tell Me Guide"
 description: "Complete guide to Show Me Tell Me for your UK driving test. Learn all 20 questions, what examiners ask, and how to check tyres, oil and lights."
 date: "2026-02-21"
 tags: ["the-basics", "dvsa-skills", "show-me-tell-me", "vehicle-checks", "driving-test"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "The Basics"
 skill_number: 2
 imageAlt: "Driver checking engine oil level under car bonnet"

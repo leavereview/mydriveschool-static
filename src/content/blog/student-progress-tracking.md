@@ -4,7 +4,7 @@ description: "Student progress tracking boosts pass rates 23% and retention 31%.
 image: /images/blog-progress.jpg
 date: "2025-12-20"
 tags: ["Student Management"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 ---
 
 Driving schools that track student progress systematically see 23% higher first-time pass rates and 31% better [student retention](/blog/reduce-no-shows-driving-school/) compared to schools using ad-hoc methods or memory alone.
@@ -96,7 +96,7 @@ Tracking protects you legally and professionally.
 
 ### 1. DVSA Competency Checklist
 
-The UK DVSA identifies [27 driving skills](https://mydriveschool.software/dvsa-27-driving-skills/) across 8 categories as part of the official Ready to Pass framework. Track proficiency in each:
+The UK DVSA identifies [27 driving skills](https://driveschoolpro.com/dvsa-27-driving-skills/) across 8 categories as part of the official Ready to Pass framework. Track proficiency in each:
 
 **Vehicle Safety & Setup:**
 - Vehicle safety checks
@@ -276,7 +276,7 @@ When evaluating digital systems, look for:
 7. **Progress graphs** (visual representation over time)
 8. **Export capability** (PDF reports for students/parents)
 
-[MyDriveSchool.Software](/contact/) includes all these features plus booking, billing, and reminders in one platform.
+[DriveSchoolPro](/contact/) includes all these features plus booking, billing, and reminders in one platform.
 
 ## How to Track Efficiently: Best Practices
 
@@ -437,7 +437,7 @@ When tracking student progress, you must comply with UK GDPR:
 - 👁️ Allow students to request their data (Subject Access Request)
 - 🗑️ Delete data when no longer needed (typically 2 years after last lesson)
 
-**Using software:** Ensure your software provider is GDPR-compliant (e.g., [MyDriveSchool.Software](/driving-school-software/) is UK GDPR-compliant).
+**Using software:** Ensure your software provider is GDPR-compliant (e.g., [DriveSchoolPro](/driving-school-software/) is UK GDPR-compliant).
 
 ## Implementation Roadmap
 
@@ -509,6 +509,6 @@ Student progress tracking isn't optional for modern driving schools—it's essen
 
 Ready to implement digital progress tracking with built-in DVSA competency checklists, parent dashboards, and mobile access?
 
-[Try MyDriveSchool.Software free for 14 days](/contact/) and see how systematic progress tracking transforms your teaching effectiveness and student outcomes.
+[Try DriveSchoolPro free for 14 days](/contact/) and see how systematic progress tracking transforms your teaching effectiveness and student outcomes.
 
 **Questions about setting up progress tracking?** [Contact our team](/contact/) for a free consultation and demonstration.

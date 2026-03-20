@@ -3,7 +3,7 @@ title: "Anticipation & Planning: DVSA Skill 10 for Safer Driving"
 description: "Learn how to read the road and anticipate hazards for your UK driving test. DVSA Skill 10 levels, techniques, and practice tips."
 date: "2026-02-21"
 tags: ["student-management"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Observation & Planning"
 skill_number: 10
 imageAlt: "View from the driver's seat looking ahead down a busy UK road with parked vehicles and a junction ahead"
@@ -118,7 +118,7 @@ Good anticipation means never putting yourself in a position with nowhere to go.
 
 Anticipation is a skill that develops gradually across many hours of driving. The improvement is real but hard to measure without a record. Logging the specific hazards you missed or spotted late in each lesson — pedestrians, junctions, crests — turns vague "drive more" advice into a clear development curve.
 
-MyDriveSchool lets instructors record anticipation faults by hazard type after each lesson, making it easy to see whether you are improving at static hazards but still struggling with dynamic ones, so practice stays targeted.
+DriveSchoolPro lets instructors record anticipation faults by hazard type after each lesson, making it easy to see whether you are improving at static hazards but still struggling with dynamic ones, so practice stays targeted.
 
 [Start Your Free Trial →](/early-access/)
 

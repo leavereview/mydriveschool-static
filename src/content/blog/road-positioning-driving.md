@@ -3,7 +3,7 @@ title: "Road Positioning: DVSA Skill 7 — Lane Discipline Guide"
 description: "Keep the right distance from parked cars, choose the correct lane, and nail road positioning for your UK driving test. DVSA Skill 7."
 date: "2026-02-21"
 tags: ["student-management", "control-positioning", "dvsa-skills"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Control & Positioning"
 skill_number: 7
 imageAlt: "Car driving on a UK road at correct distance from parked vehicles with lane markings visible"

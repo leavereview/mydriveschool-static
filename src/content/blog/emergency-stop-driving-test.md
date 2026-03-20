@@ -3,7 +3,7 @@ title: "The Emergency Stop: What Examiners Look For (Skill 20)"
 description: "How to perform an emergency stop on your UK driving test. ABS technique, 1-in-3 chance of being tested, and the 5 DVSA levels to test-ready standard."
 date: "2026-02-20"
 tags: ["student-management"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Manoeuvres"
 skill_number: 20
 imageAlt: "Car braking sharply on a wet UK road, illustrating the emergency stop technique for the driving test"

@@ -3,7 +3,7 @@ title: "Use of Speed: DVSA Skill 11 — Driving at the Right Pace"
 description: "Speed management for UK learner drivers: drive at the right pace for conditions, not just the limit. Master DVSA Skill 11 for your test."
 date: "2026-02-21"
 tags: ["student-management", "dvsa-skills", "speed", "observation"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Observation & Planning"
 skill_number: 11
 imageAlt: "Learner driver checking speedometer while driving on a UK road"

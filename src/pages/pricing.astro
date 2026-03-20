@@ -12,7 +12,7 @@ const pricingTiers = [
 const offerSchemas = pricingTiers.map((tier) => ({
   "@context": "https://schema.org",
   "@type": "Offer",
-  "@id": `https://mydriveschool.software/pricing/#${tier.name.toLowerCase().replace(/\s+/g, '-')}`,
+  "@id": `https://driveschoolpro.com/pricing/#${tier.name.toLowerCase().replace(/\s+/g, '-')}`,
   "name": tier.name,
   "description": `${tier.description}. All features included.`,
   "price": tier.monthlyPrice,
@@ -26,14 +26,14 @@ const offerSchemas = pricingTiers.map((tier) => ({
   },
   "priceValidUntil": "2026-12-31",
   "availability": "https://schema.org/InStock",
-  "url": "https://mydriveschool.software/contact/",
+  "url": "https://driveschoolpro.com/contact/",
   "seller": {
     "@type": "Organization",
-    "name": "MyDriveSchool.Software"
+    "name": "DriveSchoolPro"
   },
   "itemOffered": {
     "@type": "SoftwareApplication",
-    "name": "MyDriveSchool.Software",
+    "name": "DriveSchoolPro",
     "applicationCategory": "BusinessApplication"
   },
   "additionalProperty": [
@@ -50,25 +50,74 @@ const offerSchemas = pricingTiers.map((tier) => ({
   ]
 }));
 
+// FAQ schema for pricing page
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://driveschoolpro.com/pricing/#faqpage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there a free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all plans include a 14-day free trial with full access to all features. No credit card required to start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does driving school software cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DriveSchoolPro costs from £29/month for solo ADIs (Solo Plan) to £79/month for multi-instructor driving schools (School Plan). Enterprise pricing is available for large operations. All plans include scheduling, DVSA tracking, automated reminders, and invoicing. There are no setup fees and no long-term contracts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change plans later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No long-term contracts. All plans are month-to-month and you can cancel anytime with no cancellation fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For your subscription, we accept all major credit and debit cards. For student payments within the software, you can record cash, bank transfer, and cheque. Online card payments via Stripe are coming soon."
+      }
+    }
+  ]
+};
+
 // Free trial schema
 const freeTrialSchema = {
   "@context": "https://schema.org",
   "@type": "Offer",
-  "@id": "https://mydriveschool.software/pricing/#free-trial",
+  "@id": "https://driveschoolpro.com/pricing/#free-trial",
   "name": "14-Day Free Trial",
-  "description": "Try MyDriveSchool.Software free for 14 days. No credit card required.",
+  "description": "Try DriveSchoolPro free for 14 days. No credit card required.",
   "price": "0",
   "priceCurrency": "GBP",
   "priceValidUntil": "2026-12-31",
   "availability": "https://schema.org/InStock",
-  "url": "https://mydriveschool.software/contact/",
+  "url": "https://driveschoolpro.com/contact/",
   "eligibleRegion": {
     "@type": "Place",
     "name": "United Kingdom"
   },
   "itemOffered": {
     "@type": "SoftwareApplication",
-    "name": "MyDriveSchool.Software",
+    "name": "DriveSchoolPro",
     "applicationCategory": "BusinessApplication"
   },
   "additionalProperty": [
@@ -86,12 +135,13 @@ const freeTrialSchema = {
 };
 ---
 
-<BaseLayout title="Driving School Software Pricing | Plans from £29/month | MyDriveSchool" description="Driving school software pricing from £29/month for solo ADIs to £79/month for multi-instructor schools. DVSA tracking, scheduling, reminders, and invoicing included. No hidden fees. 14-day free trial.">
+<BaseLayout title="Driving School Software Pricing | Plans from £29/month | DriveSchoolPro" description="Driving school software pricing from £29/month for solo ADIs to £79/month for multi-instructor schools. DVSA tracking, scheduling, reminders, and invoicing included. No hidden fees. 14-day free trial.">
   <!-- Offer Schemas -->
   {offerSchemas.map(offerSchema => (
     <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
   ))}
   <script type="application/ld+json" set:html={JSON.stringify(freeTrialSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- Breadcrumbs -->
   <div class="bg-gray-100 py-3">
@@ -193,6 +243,56 @@ const freeTrialSchema = {
             <p class="text-gray-600 text-sm">Students log in to view upcoming lessons, track their DVSA progress, check package balances, and update their personal details.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost breakdown section -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-brand-navy mb-4">How Much Does Driving School Software Cost?</h2>
+        <p class="text-gray-600 mb-6">
+          Driving school software pricing in the UK typically ranges from free (limited tools) to £100+/month for enterprise platforms. Here's how to think about the real cost:
+        </p>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-brand-navy text-white">
+                <th class="text-left p-3 rounded-tl-lg">Plan</th>
+                <th class="text-left p-3">Best for</th>
+                <th class="text-left p-3">Monthly cost</th>
+                <th class="text-left p-3 rounded-tr-lg">Cost per student (50 students)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200">
+                <td class="p-3 font-medium">Solo</td>
+                <td class="p-3 text-gray-600">Independent ADIs</td>
+                <td class="p-3 font-bold text-brand-navy">£29/month</td>
+                <td class="p-3 text-gray-600">£0.58/student</td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-brand-red/5">
+                <td class="p-3 font-medium">School <span class="text-xs text-brand-red font-semibold">Most Popular</span></td>
+                <td class="p-3 text-gray-600">Multi-instructor schools</td>
+                <td class="p-3 font-bold text-brand-navy">£79/month</td>
+                <td class="p-3 text-gray-600">£1.58/student</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Enterprise</td>
+                <td class="p-3 text-gray-600">Large operations</td>
+                <td class="p-3 font-bold text-brand-navy">Custom</td>
+                <td class="p-3 text-gray-600">Contact us</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-gray-600 mb-4">
+          At £29/month, the Solo plan pays for itself if it saves you just 2 hours of admin per month — and most ADIs report saving 10+ hours weekly. The School plan at £79/month works out at under £16/instructor for a 5-instructor school.
+        </p>
+        <p class="text-gray-600">
+          There are no setup fees, no per-lesson charges, and no hidden costs. You pay monthly and can cancel at any time. See <a href="/driving-school-software/" class="text-brand-red hover:underline">all driving school software features</a> included in every plan.
+        </p>
       </div>
     </div>
   </section>

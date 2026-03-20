@@ -311,9 +311,9 @@ export function createSchemaGenerator(site: 'mydojo' | 'petcare' | 'driveschool'
       logo: 'https://petcare.software/logo.svg'
     },
     driveschool: {
-      url: 'https://mydriveschool.software',
-      name: 'MyDriveSchool Software',
-      logo: 'https://mydriveschool.software/logo.svg'
+      url: 'https://driveschoolpro.com',
+      name: 'DriveSchoolPro',
+      logo: 'https://driveschoolpro.com/logo.svg'
     },
     tattoo: {
       url: 'https://mytattoo.software',

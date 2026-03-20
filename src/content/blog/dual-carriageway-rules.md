@@ -3,7 +3,7 @@ title: "Dual Carriageways: Rules & Driving Test Guide (Skill 22)"
 description: "How to join, travel, overtake, and leave dual carriageways safely. DVSA Skill 22 fully explained for UK learner drivers and ADIs."
 date: "2026-02-21"
 tags: ["student-management", "road-types", "dvsa-skills"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Road Types"
 skill_number: 22
 imageAlt: "Two-lane dual carriageway in the UK with vehicles travelling in the left lane and central reservation visible"

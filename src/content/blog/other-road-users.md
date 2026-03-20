@@ -3,7 +3,7 @@ title: "Dealing with Other Road Users: DVSA Skill 12"
 description: "Learn how to safely interact with cyclists, pedestrians, horses, and other drivers on UK roads. Master DVSA Skill 12 for your driving test."
 date: "2026-02-21"
 tags: ["student-management", "dvsa-skills", "road-users", "observation"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Observation & Planning"
 skill_number: 12
 imageAlt: "Driver checking mirrors for cyclists and pedestrians at a busy UK junction"

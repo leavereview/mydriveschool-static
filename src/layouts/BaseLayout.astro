@@ -18,7 +18,7 @@ interface Props {
 
 const {
   title,
-  description = 'MyDriveSchool.Software - The complete driving school management platform. Scheduling, student management, instructor allocation, and online booking.',
+  description = 'DriveSchoolPro - The complete driving school management platform. Scheduling, student management, instructor allocation, and online booking.',
   image = '/images/og-default.jpg',
   type = 'website',
   schemaType,
@@ -35,9 +35,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Dynamic title suffix: skip for long titles, use shorter brand name
 const getTitleSuffix = (pageTitle: string): string => {
-  if (pageTitle === 'Home') return 'MyDriveSchool.Software - Driving School Management Software';
+  if (pageTitle === 'Home') return 'DriveSchoolPro - Driving School Management Software';
   if (pageTitle.length > 50) return pageTitle; // No suffix for long titles
-  return `${pageTitle} | MyDriveSchool`;
+  return `${pageTitle} | DriveSchoolPro`;
 };
 const fullTitle = getTitleSuffix(title);
 
@@ -46,12 +46,12 @@ const schemaOrg = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://mydriveschool.software/#organization",
-      "name": "MyDriveSchool.Software",
-      "url": "https://mydriveschool.software",
+      "@id": "https://driveschoolpro.com/#organization",
+      "name": "DriveSchoolPro",
+      "url": "https://driveschoolpro.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mydriveschool.software/logo.svg"
+        "url": "https://driveschoolpro.com/logo.svg"
       },
       "sameAs": [
         "https://twitter.com/mydriveschool",
@@ -61,8 +61,8 @@ const schemaOrg = {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Support",
-        "email": "support@mydriveschool.software",
-        "url": "https://mydriveschool.software/contact/"
+        "email": "support@driveschoolpro.com",
+        "url": "https://driveschoolpro.com/contact/"
       },
       "address": {
         "@type": "PostalAddress",
@@ -76,11 +76,11 @@ const schemaOrg = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://mydriveschool.software/#website",
-      "url": "https://mydriveschool.software",
-      "name": "MyDriveSchool.Software",
+      "@id": "https://driveschoolpro.com/#website",
+      "url": "https://driveschoolpro.com",
+      "name": "DriveSchoolPro",
       "publisher": {
-        "@id": "https://mydriveschool.software/#organization"
+        "@id": "https://driveschoolpro.com/#organization"
       }
     },
     {
@@ -90,7 +90,7 @@ const schemaOrg = {
       "name": title,
       "description": description,
       "isPartOf": {
-        "@id": "https://mydriveschool.software/#website"
+        "@id": "https://driveschoolpro.com/#website"
       },
       ...(publishedDate && { "datePublished": publishedDate }),
       ...(modifiedDate && { "dateModified": modifiedDate }),
@@ -98,10 +98,10 @@ const schemaOrg = {
         "author": {
           "@type": "Person",
           "name": author,
-          "url": "https://mydriveschool.software/about/"
+          "url": "https://driveschoolpro.com/about/"
         },
         "publisher": {
-          "@id": "https://mydriveschool.software/#organization"
+          "@id": "https://driveschoolpro.com/#organization"
         }
       })
     }
@@ -134,7 +134,7 @@ const schemaOrg = {
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(image, Astro.site)} />
-  <meta property="og:site_name" content="MyDriveSchool.Software" />
+  <meta property="og:site_name" content="DriveSchoolPro" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content={canonicalURL} />

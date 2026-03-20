@@ -3,7 +3,7 @@ title: "Mirrors & the MSM Routine: DVSA Skill 8 Explained"
 description: "Master the Mirror-Signal-Manoeuvre routine for your UK driving test. Learn what examiners check and how to hit DVSA Level 5."
 date: "2026-02-21"
 tags: ["student-management"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Observation & Planning"
 skill_number: 8
 imageAlt: "Learner driver checking interior mirror before a manoeuvre on a UK road"
@@ -106,7 +106,7 @@ The sequence is always: **Interior → Door Mirror → Signal (if needed) → Ma
 
 Mirrors are one of the most frequently failed DVSA competencies because they are assessed continuously, not just at specific points. Logging your mirror checks after each lesson — noting where you did well and where you forgot — turns vague feedback into a clear improvement plan.
 
-MyDriveSchool's progress tracking lets instructors mark each DVSA skill level after every lesson, so you can see your mirror use climb from Level 2 to Level 5 over time.
+DriveSchoolPro's progress tracking lets instructors mark each DVSA skill level after every lesson, so you can see your mirror use climb from Level 2 to Level 5 over time.
 
 [Start Your Free Trial →](/early-access/)
 

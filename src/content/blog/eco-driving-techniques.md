@@ -3,7 +3,7 @@ title: "Eco-Friendly Driving: DVSA Skill 13 — Fuel Efficiency Guide"
 description: "Eco-driving for UK learner drivers: master block gear changes, coasting, and smooth acceleration to pass your test and cut fuel costs."
 date: "2026-02-21"
 tags: ["student-management", "dvsa-skills", "eco-driving", "fuel-efficiency"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Observation & Planning"
 skill_number: 13
 imageAlt: "Driver's hand on gear stick demonstrating smooth gear changes in a UK driving lesson"

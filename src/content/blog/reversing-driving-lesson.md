@@ -3,7 +3,7 @@ title: "Reversing: Master DVSA Skill 17 for Your Driving Test"
 description: "Learn how to reverse safely and confidently for your UK driving test. Covers DVSA Skill 17: control, observation, and all-round awareness."
 date: "2026-02-21"
 tags: ["manoeuvres", "driving-test", "reversing"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Manoeuvres"
 skill_number: 17
 imageAlt: "A learner driver looking through the rear window while reversing slowly along a quiet residential road during a driving lesson"
@@ -108,7 +108,7 @@ Build a habit of checking: rear window, right mirror, left mirror, right blind s
 
 ## Track Your Progress
 
-Every time you practise reversing, you can log your competency level against the DVSA scale in MyDriveSchool. Both you and your instructor can see at a glance whether you are at Level 3 (needing prompts) or Level 4 (fully independent), making it easy to decide when you are genuinely test-ready.
+Every time you practise reversing, you can log your competency level against the DVSA scale in DriveSchoolPro. Both you and your instructor can see at a glance whether you are at Level 3 (needing prompts) or Level 4 (fully independent), making it easy to decide when you are genuinely test-ready.
 
 [Start Your Free Trial →](/early-access/)
 

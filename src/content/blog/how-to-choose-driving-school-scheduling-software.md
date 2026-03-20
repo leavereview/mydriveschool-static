@@ -4,7 +4,7 @@ description: "Step-by-step guide to choosing the right scheduling software for y
 image: /images/blog-scheduling.jpg
 date: "2025-12-27"
 tags: ["Software", "Scheduling"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 ---
 
 Step-by-step guide to choosing the right **scheduling software** for your driving school.
@@ -60,7 +60,7 @@ Always use free trials with realistic scenarios.
 
 ## Ready to Choose?
 
-[Start your free trial](/contact/) with MyDriveSchool.Software. No credit card required, no long-term commitment.
+[Start your free trial](/contact/) with DriveSchoolPro. No credit card required, no long-term commitment.
 
 **Related Articles:**
 - [Best Driving School Software](/blog/best-driving-school-software/)

@@ -3,7 +3,7 @@ title: "Night Driving: DVSA Skill 24 — Driving in the Dark"
 description: "Master night driving for your UK test. Learn correct headlight use, full vs dipped beam, and how to handle reduced visibility safely."
 date: "2026-02-21"
 tags: ["driving-conditions", "dvsa-skills", "night-driving", "headlights"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Driving Conditions"
 skill_number: 24
 imageAlt: "Car headlights illuminating a dark UK road at night"

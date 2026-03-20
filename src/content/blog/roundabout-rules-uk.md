@@ -3,7 +3,7 @@ title: "Roundabout Rules UK: Master DVSA Skill 15"
 description: "UK roundabout rules for learner drivers. Lane selection, signalling, mini roundabouts, and what examiners look for on your driving test."
 date: "2026-02-20"
 tags: ["student-management"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 category: "Junctions & Roundabouts"
 skill_number: 15
 imageAlt: "Overhead diagram of a UK roundabout showing correct lane positioning and signalling for each exit"

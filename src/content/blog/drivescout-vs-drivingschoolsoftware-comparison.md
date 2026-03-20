@@ -4,7 +4,7 @@ description: "Honest comparison of DriveScout and DrivingSchoolSoftware.com. Fea
 image: /images/blog-comparison.jpg
 date: "2025-12-27"
 tags: ["Software"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 ---
 
 Choosing the right [driving school software](/driving-school-software/) is one of the most important operational decisions you'll make as a driving school owner. The platform you pick will shape your daily scheduling workflow, how you communicate with students, how you track DVSA progress, and ultimately how much time you spend on admin rather than teaching. Two platforms that regularly come up in UK instructor forums are DriveScout and DrivingSchoolSoftware.com. This comparison breaks down both in detail so you can make an informed choice.
@@ -147,7 +147,7 @@ DriveScout is easier to get running quickly. DrivingSchoolSoftware.com requires 
 
 ## Consider a Third Option
 
-Both platforms have genuine drawbacks that are worth taking seriously. DriveScout is expensive for what smaller UK schools actually need, and DrivingSchoolSoftware.com's interface creates friction in daily use. MyDriveSchool.Software is built specifically for UK driving schools with:
+Both platforms have genuine drawbacks that are worth taking seriously. DriveScout is expensive for what smaller UK schools actually need, and DrivingSchoolSoftware.com's interface creates friction in daily use. DriveSchoolPro is built specifically for UK driving schools with:
 
 - Simple, modern interface instructors can use from day one
 - Flat monthly pricing from £29 — no setup fees, no per-student surprises
@@ -155,7 +155,7 @@ Both platforms have genuine drawbacks that are worth taking seriously. DriveScou
 - GoCardless integration for direct debit lesson packages
 - Student portal that works on mobile without friction
 
-[Try MyDriveSchool.Software free](/contact/) and see how it compares in practice.
+[Try DriveSchoolPro free](/contact/) and see how it compares in practice.
 
 ## Related Articles
 

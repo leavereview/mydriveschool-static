@@ -5,7 +5,7 @@ image: /images/blog-scheduling.jpg
 imageAlt: "Driving school calendar and scheduling system showing automated reminders to reduce student no-shows"
 date: "2025-12-27"
 tags: ["Business"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 ---
 
 No-shows and last-minute cancellations cost UK driving schools an estimated £420 million annually. For a typical instructor teaching 30 lessons per week with a 15% no-show rate, that's £8,190 in lost revenue every year.
@@ -102,7 +102,7 @@ Need to reschedule? Call [Phone] or use [Booking Link]
 - Cost per lesson reminder: £0.12 (4 messages total)
 - Break-even: If reminders prevent just ONE no-show per month, you save £35 vs £3.60 in SMS costs
 
-**Platform recommendation:** [MyDriveSchool.Software](/contact/) includes up to 500 SMS/month at no extra charge on standard plans.
+**Platform recommendation:** [DriveSchoolPro](/contact/) includes up to 500 SMS/month at no extra charge on standard plans.
 
 ### Strategy 2: Require Booking Deposits (Reduces No-Shows by 15-20%)
 
@@ -376,7 +376,7 @@ This might feel harsh, but your most reliable students shouldn't subsidize unrel
 
 Implementing these strategies manually is time-consuming. The right [driving school software](/blog/best-driving-school-software/) automates 90% of this work.
 
-**What [MyDriveSchool.Software](/driving-school-software/) automates:**
+**What [DriveSchoolPro](/driving-school-software/) automates:**
 - ✅ Automated SMS/email reminders (24h and 2h before)
 - ✅ Deposit collection at booking
 - ✅ Online self-service rescheduling for students
@@ -506,6 +506,6 @@ These three changes alone will reduce no-shows by 20-25% within the first month.
 
 The best part? Once set up, these systems run on autopilot.
 
-Ready to automate no-show prevention? [Try MyDriveSchool.Software free for 14 days](/contact/) and see the impact in your first week. Automated reminders, deposit collection, online rescheduling, and analytics dashboard—all in one platform.
+Ready to automate no-show prevention? [Try DriveSchoolPro free for 14 days](/contact/) and see the impact in your first week. Automated reminders, deposit collection, online rescheduling, and analytics dashboard—all in one platform.
 
 **Have questions about reducing no-shows?** [Contact our team](/contact/) for a free consultation. We've helped 1,200+ driving schools cut no-shows in half.

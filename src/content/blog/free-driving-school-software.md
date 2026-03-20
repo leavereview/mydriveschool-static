@@ -4,7 +4,7 @@ description: "Wondering if you can run your driving school with free software? H
 image: /images/blog-software.jpg
 date: "2025-12-27"
 tags: ["Software"]
-author: "MyDriveSchool Team"
+author: "DriveSchoolPro Team"
 ---
 
 Wondering if you can run your driving school with **free software**? Here's what's available and when to pay for a proper solution. Explore [Driving School Management Software](/driving-school-management-software/) solutions. See how [Driving School Software That Works As Hard As You Do](/driving-school-software/) can help. Learn more about [Driving School Software: What's Actually Available?](/free-driving-school-software/).
@@ -57,7 +57,7 @@ For £29/month, proper software pays for itself in saved time and reduced no-sho
 
 ## Try Before You Buy
 
-[Try MyDriveSchool.Software free for 14 days](/contact/). See how much time you save with proper scheduling, automated reminders, and online booking.
+[Try DriveSchoolPro free for 14 days](/contact/). See how much time you save with proper scheduling, automated reminders, and online booking.
 
 **Related Articles:**
 - [Best Driving School Software](/blog/best-driving-school-software/)
