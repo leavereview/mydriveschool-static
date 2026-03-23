@@ -80,11 +80,27 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Day/Week/Month Heatmap Views',
+    label: '6 Calendar Views (Agenda, Week, Month, Timeline, Availability, Day)',
     values: [true, false, false]
   },
   {
     label: 'Instructor Availability Templates',
+    values: [true, false, false]
+  },
+  {
+    label: '6 Calendar Views (incl. Timeline & Availability)',
+    values: [true, false, false]
+  },
+  {
+    label: 'Quick Booking from Calendar',
+    values: [true, false, false]
+  },
+  {
+    label: 'Online Booking Widget (Embeddable)',
+    values: [true, false, false]
+  },
+  {
+    label: 'Lesson Confirmation via Email',
     values: [true, false, false]
   }
 ];
@@ -161,6 +177,13 @@ const faqItems = [
     answer: "Calendar sync with Google Calendar, Apple Calendar, and Outlook is planned for a future release. Currently, DriveSchoolPro has its own full-featured calendar with day, week, and month heatmap views, drag-and-drop rescheduling, and recurring lesson series—so everything lives in one place.",
     links: [
       { text: 'Get started', url: '/contact/' }
+    ]
+  },
+  {
+    question: "How many calendar views are there?",
+    answer: "DriveSchoolPro offers six calendar views: agenda (chronological list), week (grid with time slots), month (overview with lesson counts), timeline (horizontal per instructor), availability (open vs booked slots), and day (detailed single day). Switch between views instantly — each is designed for a different workflow. You can also book lessons directly from the calendar using the quick booking panel.",
+    links: [
+      { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
   }
 ];
@@ -304,12 +327,16 @@ const schemaMarkup = {
 
         <p>Your scheduling software should display appointments in a clear, visual calendar format:</p>
 
+        <p>Six calendar views — agenda, week, month, timeline, availability, and day — so you always have the right view for the task. Planning the week ahead? Use week view. Checking instructor capacity? Switch to availability view. Need a quick list of what's coming? Agenda view has you covered.</p>
+
         <ul class="space-y-2">
           <li>All instructors' schedules on one screen (filterable)</li>
-          <li>Day, week, and month views</li>
+          <li>Six views: agenda, week, month, timeline, availability, and day</li>
           <li>Colour-coding by instructor, lesson type, or status</li>
           <li>Quick identification of open slots</li>
           <li><strong>Drag-and-drop rescheduling</strong> — moving a lesson should be effortless</li>
+          <li>Quick booking panel — schedule a lesson without leaving the calendar</li>
+          <li>Keyboard shortcuts for power users</li>
         </ul>
 
         <div class="my-8 not-prose">
