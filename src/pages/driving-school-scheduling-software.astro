@@ -18,7 +18,7 @@ const schedulingStats = [
     label: 'No-Show Reduction',
     value: '50%',
     change: { value: 50, direction: 'up' as const, period: 'with reminders' },
-    context: 'Using SMS and email automated reminders'
+    context: 'Using automated email reminders'
   },
   {
     label: 'Scheduling Efficiency',
@@ -51,7 +51,7 @@ const comparisonData = [
     highlight: true
   },
   {
-    label: 'Automated SMS Reminders',
+    label: 'Automated Email Reminders',
     values: [true, false, false],
     highlight: true
   },
@@ -92,22 +92,22 @@ const comparisonData = [
 const faqItems = [
   {
     question: "What is the best scheduling software for driving schools?",
-    answer: "The best scheduling software offers three-way conflict detection (student, instructor, and vehicle), automated SMS reminders, multi-instructor calendars, and prevents double-bookings. DriveSchoolPro combines all these features with flat pricing from £29/month, no per-SMS fees, and drag-and-drop rescheduling with recurring lesson series.",
+    answer: "The best scheduling software offers three-way conflict detection (student, instructor, and vehicle), automated reminders, multi-instructor calendars, and prevents double-bookings. DriveSchoolPro combines all these features with flat pricing from £29/month and drag-and-drop rescheduling with recurring lesson series.",
     links: [
       { text: 'Pricing plans', url: '/pricing/' }
     ]
   },
   {
     question: "How much does driving school scheduling software cost?",
-    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. DriveSchoolPro offers flat monthly pricing from £29 (Solo ADI) to £79 (Multi-instructor school), with SMS reminders included—no per-SMS fees that add up quickly.",
+    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. DriveSchoolPro offers flat monthly pricing from £29 (Solo ADI) to £79 (Multi-instructor school), with all features included and no hidden fees.",
     links: [
       { text: 'Full pricing', url: '/pricing/' },
-      { text: 'Start free trial', url: '/contact/' }
+      { text: 'Join early access', url: '/early-access/' }
     ]
   },
   {
     question: "Can students book driving lessons online?",
-    answer: "Students access their own secure portal to view upcoming and past lessons, track their DVSA competency progress, and manage their details. A public-facing self-service booking widget is on the roadmap. Currently, lesson scheduling is handled by school admin through the drag-and-drop calendar with three-way conflict detection.",
+    answer: "Yes. Schools can embed a public booking widget on their own website, and existing students can book directly through their secure portal. Lesson scheduling is also available through the admin drag-and-drop calendar with three-way conflict detection.",
     links: [
       { text: 'Student portal features', url: '/driving-school-management-software/' }
     ]
@@ -116,7 +116,7 @@ const faqItems = [
     question: "How do I reduce no-shows at my driving school?",
     answer: "Most effective strategies: automated SMS reminders at 24 hours and 2 hours before lessons, require prepayment or deposits, enforce clear cancellation policies, and make rescheduling easy. Schools implementing these strategies reduce no-shows by 50% or more.",
     links: [
-      { text: 'Reminder features', url: '/features/' },
+      { text: 'Reminder features', url: '/driving-school-software/' },
       { text: 'No-show reduction guide', url: '/blog/reduce-no-shows-driving-school/' }
     ]
   },
@@ -124,7 +124,7 @@ const faqItems = [
     question: "Does scheduling software prevent double-bookings?",
     answer: "Quality driving school scheduling software completely prevents double-bookings by checking instructor, student, and vehicle availability in real-time before allowing any booking. Manual calendars and spreadsheets cause double-bookings that damage your reputation.",
     links: [
-      { text: 'Scheduling features', url: '/features/' }
+      { text: 'Scheduling features', url: '/driving-school-software/' }
     ]
   },
   {
@@ -139,14 +139,14 @@ const faqItems = [
     question: "What pickup location features should scheduling software have?",
     answer: "Good scheduling software lets students specify pickup addresses at booking, shows instructors the route on a map, calculates travel time between appointments, and factors drive time into availability. This prevents back-to-back bookings across town that are physically impossible.",
     links: [
-      { text: 'Scheduling features', url: '/features/' }
+      { text: 'Scheduling features', url: '/driving-school-software/' }
     ]
   },
   {
     question: "How do automated reminders work?",
-    answer: "Scheduling software sends automated reminders via SMS and email at customizable times (typically 24 hours and 2 hours before lessons). Students can confirm, cancel, or reschedule directly from the reminder. This reduces no-shows by 50% and eliminates manual reminder calls.",
+    answer: "Scheduling software sends automated reminders via email at configurable times (typically 24 hours and 2 hours before lessons). Students can confirm, cancel, or reschedule directly from the reminder. This reduces no-shows significantly and eliminates manual reminder calls.",
     links: [
-      { text: 'Reminder features', url: '/features/' }
+      { text: 'Reminder features', url: '/driving-school-software/' }
     ]
   },
   {
@@ -209,7 +209,7 @@ const schemaMarkup = {
         </p>
         <p class="text-gray-400 mb-8">Last updated: January 2026 | Reading time: 14 minutes</p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact/" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href="/early-access/" class="btn-primary text-lg px-8 py-4">Become a Founding Member</a>
           <a href="#what-is" class="btn-secondary text-lg px-8 py-4">Read the Guide</a>
         </div>
       </div>
@@ -218,7 +218,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school scheduling software?">
-    Driving school scheduling software automates lesson management, instructor coordination, and appointment scheduling through drag-and-drop calendars, three-way conflict detection, and automated SMS reminders. Modern platforms like DriveSchoolPro save 10+ hours weekly, reduce no-shows by 50%, support recurring lesson series, and eliminate double-bookings entirely.
+    Driving school scheduling software automates lesson management, instructor coordination, and appointment scheduling through drag-and-drop calendars, three-way conflict detection, and automated email reminders. Modern platforms like DriveSchoolPro save 10+ hours weekly, reduce no-shows significantly, support recurring lesson series, and eliminate double-bookings entirely.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -493,54 +493,6 @@ const schemaMarkup = {
     rows={comparisonData}
   />
 
-  <!-- Testimonials -->
-  <section class="section bg-gray-50">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-4">What Driving School Owners Say</h2>
-        <p class="text-gray-600 mb-8">Real feedback from ADIs and driving school owners using DriveSchoolPro.</p>
-        <div class="grid md:grid-cols-3 gap-6">
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Study -->
-  <section class="section bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-4">Case Study: [PLACEHOLDER School Name]</h2>
-        <p class="text-gray-600 mb-8">[PLACEHOLDER — replace with a real customer case study before launch. Structure: business background, problem they had, how they solved it with DriveSchoolPro, specific metrics achieved.]</p>
-        <div class="bg-brand-red-light rounded-xl p-8 grid md:grid-cols-3 gap-6 text-center">
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[XX]%</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. reduction in no-shows]</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[X] hrs</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. saved per week on admin]</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[XX]%</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. increase in revenue]</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ Section -->
   <section id="faq">
     <FAQEnhanced
@@ -563,9 +515,9 @@ const schemaMarkup = {
   <section class="section bg-gradient-to-r from-brand-red to-red-700 text-white">
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Scheduling?</h2>
-      <p class="text-xl mb-8 opacity-90">DriveSchoolPro makes scheduling effortless with drag-and-drop calendars, three-way conflict detection, and automated SMS reminders.</p>
-      <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Free 14-Day Trial</a>
-      <p class="text-sm mt-4 opacity-75">No credit card required. Set up in under an hour.</p>
+      <p class="text-xl mb-8 opacity-90">DriveSchoolPro makes scheduling effortless with drag-and-drop calendars, three-way conflict detection, and automated email reminders.</p>
+      <a href="/early-access/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Become a Founding Member</a>
+      <p class="text-sm mt-4 opacity-75">No credit card required. Launching Spring 2026.</p>
     </div>
   </section>
 

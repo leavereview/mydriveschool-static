@@ -29,7 +29,7 @@ const drivingStats = [
   {
     label: 'No-Show Reduction',
     value: '65%',
-    context: 'With automated SMS and email reminders'
+    context: 'With automated email reminders'
   },
   {
     label: 'Revenue Increase',
@@ -60,7 +60,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'DVSA Competency Framework (62+ Skills)',
+    label: 'DVSA Competency Framework (27 Skills)',
     values: [true, false, false],
     highlight: true
   },
@@ -104,19 +104,19 @@ const faqItems = [
     answer: "DriveSchoolPro plans start from £29/month for solo ADIs with unlimited students, DVSA progress tracking, and automated reminders. Multi-instructor schools pay £79/month for up to 5 instructors with vehicle compliance tracking and business analytics. All plans include a 14-day free trial with no credit card required.",
     links: [
       { text: 'Full pricing details', url: '/pricing/' },
-      { text: 'Start free trial', url: '/contact/' }
+      { text: 'Join early access', url: '/early-access/' }
     ]
   },
   {
     question: "Can students book lessons online?",
-    answer: "Students have their own secure portal where they can view upcoming and past lessons, track their DVSA competency progress, check package balances, and manage their personal details. A self-service booking widget is on our roadmap. In the meantime, the student portal significantly reduces phone calls and WhatsApp messages.",
+    answer: "Students have their own secure portal where they can view upcoming and past lessons, track their DVSA competency progress, check package balances, and manage their personal details. Schools can also embed a public booking widget on their own website for new student enquiries. The student portal significantly reduces phone calls and WhatsApp messages.",
     links: [
       { text: 'Student portal features', url: '/driving-school-management-software/' }
     ]
   },
   {
     question: "Does it integrate with DVSA?",
-    answer: "DriveSchoolPro includes a built-in <a href='/dvsa-27-driving-skills/' class='text-brand-red hover:underline'>DVSA 27 driving skills framework</a> with 17 categories and 62+ skills. It tracks each student's proficiency on a 6-level scale (Not Started to Test Ready). This isn't a direct DVSA API integration, but a comprehensive curriculum tracking system that ensures cross-instructor continuity—any instructor can pick up exactly where the last left off.",
+    answer: "DriveSchoolPro includes a built-in <a href='/dvsa-27-driving-skills/' class='text-brand-red hover:underline'>DVSA 27 driving skills framework</a> with 8 categories and 27 skills. It tracks each student's proficiency on a 6-level scale (Not Started to Reflection). This isn't a direct DVSA API integration, but a comprehensive curriculum tracking system that ensures cross-instructor continuity—any instructor can pick up exactly where the last left off.",
     links: [
       { text: 'See the 27 driving skills', url: '/dvsa-27-driving-skills/' },
       { text: 'Student progress tracking', url: '/driving-school-management-software/' }
@@ -124,7 +124,7 @@ const faqItems = [
   },
   {
     question: "Can I track student progress?",
-    answer: "Yes. The full DVSA competency framework tracks 62+ skills across 17 categories with a 6-level proficiency scale. After each lesson, instructors record which competencies were covered and update proficiency levels. Students see their progress through their portal, which motivates them and reduces 'When will I be ready?' questions.",
+    answer: "Yes. The full DVSA competency framework tracks 27 skills across 8 categories with a 6-level proficiency scale. After each lesson, instructors record which competencies were covered and update proficiency levels. Students see their progress through their portal, which motivates them and reduces 'When will I be ready?' questions.",
     links: [
       { text: 'Progress tracking features', url: '/driving-school-management-software/' }
     ]
@@ -141,7 +141,7 @@ const faqItems = [
     answer: "Yes. Many of our users are independent ADIs who need better organisation without the complexity of enterprise software. The Solo Plan (£29/month) includes unlimited students, DVSA progress tracking, automated reminders, and invoicing—everything a solo instructor needs to run professionally.",
     links: [
       { text: 'Solo plan details', url: '/pricing/' },
-      { text: 'Start free trial', url: '/contact/' }
+      { text: 'Join early access', url: '/early-access/' }
     ]
   },
   {
@@ -154,7 +154,7 @@ const faqItems = [
   },
   {
     question: "Does driving school software send lesson reminders?",
-    answer: "Yes. Automated reminders go out via SMS (Twilio) and email (Resend) with configurable timing. You can set per-student notification preferences, and full delivery logs let you verify every message was sent and received. This reduces no-shows significantly.",
+    answer: "Yes. Automated reminders go out via email (Resend) with configurable timing (SMS coming soon). You can set per-student notification preferences, and full delivery logs let you verify every message was sent and received. This reduces no-shows significantly.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
@@ -192,7 +192,7 @@ const faqItems = [
           Stop juggling spreadsheets, WhatsApp messages, and paper diaries. DriveSchoolPro brings everything together in one powerful platform.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact/" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href="/early-access/" class="btn-primary text-lg px-8 py-4">Become a Founding Member</a>
           <a href="/pricing/" class="btn-secondary text-lg px-8 py-4">See Driving School Software Pricing</a>
         </div>
       </div>
@@ -201,7 +201,7 @@ const faqItems = [
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school software?">
-    Driving school software is a management platform for ADIs and driving schools that handles lesson scheduling, student progress tracking, test date management, invoicing, and instructor allocation. Modern platforms like DriveSchoolPro include a full DVSA competency framework with 62+ skills, three-way conflict detection for scheduling, and automated SMS and email reminders that save instructors 10+ hours weekly.
+    Driving school software is a management platform for ADIs and driving schools that handles lesson scheduling, student progress tracking, test date management, invoicing, and instructor allocation. Modern platforms like DriveSchoolPro include a full DVSA competency framework with 27 skills across 8 categories, three-way conflict detection for scheduling, and automated email reminders that save instructors 10+ hours weekly.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -258,12 +258,12 @@ const faqItems = [
               src="/images/marketing/dvsa-progress-tracking.webp"
               width={1440}
               height={900}
-              alt="DVSA competency tracking grid showing 17 skill categories with proficiency levels from Not Started to Test Ready"
+              alt="DVSA competency tracking grid showing 8 skill categories with proficiency levels from Not Started to Reflection"
             />
           </div>
           <div class="order-1 md:order-2">
             <h3 class="text-xl font-bold text-brand-navy mb-3">DVSA Progress Tracking</h3>
-            <p class="text-gray-700">Full DVSA competency framework — 17 categories, 62+ skills with 6-level proficiency scale. Cross-instructor continuity so any instructor sees the full picture.</p>
+            <p class="text-gray-700">Full DVSA competency framework — 8 categories, 27 skills with 6-level proficiency scale. Cross-instructor continuity so any instructor sees the full picture.</p>
           </div>
         </div>
 
@@ -344,54 +344,6 @@ const faqItems = [
     rows={comparisonData}
   />
 
-  <!-- Testimonials -->
-  <section class="section bg-gray-50">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-4">What Driving School Owners Say</h2>
-        <p class="text-gray-600 mb-8">Real feedback from ADIs and driving school owners using DriveSchoolPro.</p>
-        <div class="grid md:grid-cols-3 gap-6">
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Study -->
-  <section class="section bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-4">Case Study: [PLACEHOLDER School Name]</h2>
-        <p class="text-gray-600 mb-8">[PLACEHOLDER — replace with a real customer case study before launch. Structure: business background, problem they had, how they solved it with DriveSchoolPro, specific metrics achieved.]</p>
-        <div class="bg-brand-red-light rounded-xl p-8 grid md:grid-cols-3 gap-6 text-center">
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[XX]%</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. reduction in no-shows]</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[X] hrs</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. saved per week on admin]</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[XX]%</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. increase in revenue]</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ Section -->
   <FAQEnhanced
     site="driveschool"
@@ -448,9 +400,9 @@ const faqItems = [
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Simplify Your Driving School?</h2>
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-        Join hundreds of driving instructors who've reclaimed their evenings with DriveSchoolPro.
+        Join our founding members and streamline your driving school.
       </p>
-      <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Your Free Trial</a>
+      <a href="/early-access/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Become a Founding Member</a>
     </div>
   </section>
 </BaseLayout>

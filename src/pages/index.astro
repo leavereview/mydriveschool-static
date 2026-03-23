@@ -100,7 +100,7 @@ const features = [
   {
     icon: 'users',
     title: 'Student Management',
-    description: 'Complete student profiles with search, filtering, and pagination. Track DVSA competencies across 17 categories and 62+ driving skills with a 6-level proficiency scale.'
+    description: 'Complete student profiles with search, filtering, and pagination. Track DVSA competencies across 8 categories and 27 driving skills with a 6-level proficiency scale.'
   },
   {
     icon: 'credit-card',
@@ -115,7 +115,7 @@ const features = [
   {
     icon: 'bell',
     title: 'Automated Reminders',
-    description: 'Email reminders via Resend and SMS via Twilio with configurable timing. Per-student notification preferences. Full delivery logs with status tracking.'
+    description: 'Email reminders via Resend with configurable timing. SMS reminders coming soon. Per-student notification preferences. Full delivery logs with status tracking.'
   },
   {
     icon: 'mobile',
@@ -127,7 +127,7 @@ const features = [
 const highlights = [
   {
     title: 'DVSA Competency Framework',
-    description: 'Track 62+ driving competencies across 17 DVSA categories. Any instructor can pick up where the last left off.'
+    description: 'Track 27 driving competencies across 8 DVSA categories. Any instructor can pick up where the last left off.'
   },
   {
     title: 'Three-Way Conflict Detection',
@@ -143,7 +143,7 @@ const stats = [
   { number: 'Unlimited', label: 'Students & Lessons' },
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '10+ hrs', label: 'Saved Weekly' },
-  { number: '62+', label: 'DVSA Competencies' }
+  { number: '27', label: 'DVSA Skills' }
 ];
 ---
 
@@ -223,7 +223,7 @@ const stats = [
           The Only Driving School Software Built Around the DVSA Ready to Pass Framework
         </h2>
         <p class="text-lg text-gray-300">
-          Track all 27 skills from the official gov.uk framework — the same system your ADI examiner uses. Every lesson, every skill, every level. Recorded in seconds.
+          Track all 27 skills across 8 categories from the official gov.uk framework — the same system your ADI examiner uses. Every lesson, every skill, every level. Recorded in seconds.
         </p>
       </div>
 
@@ -231,7 +231,7 @@ const stats = [
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <div>
           <p class="text-gray-300 mb-4">
-            The DVSA's Ready to Pass framework sets out 27 driving skills across 7 categories. Students must progress from <strong class="text-white">Introduced</strong> through to <strong class="text-white">Reflection</strong> at all five levels before they're genuinely ready to book their UK practical test.
+            The DVSA's Ready to Pass framework sets out 27 driving skills across 8 categories. Students must progress through all six levels — from <strong class="text-white">Not Started</strong> through to <strong class="text-white">Reflection</strong> — before they're genuinely ready to book their UK practical test.
           </p>
           <p class="text-gray-300 mb-6">
             Our software makes recording and sharing that progress effortless. After every lesson, log each skill level in seconds. Students view their progress in real time through their own portal — cutting the "am I ready?" phone calls.
@@ -241,7 +241,7 @@ const stats = [
           <ul class="space-y-3 mb-8">
             {[
               'Aligned with the official gov.uk Ready to Pass competency framework',
-              'Covers all 27 DVSA skills across 7 categories — nothing missing',
+              'Covers all 27 DVSA skills across 8 categories — nothing missing',
               'Designed for ADIs teaching in England, Scotland & Wales',
               'Student portal shows readiness toward the UK practical test',
             ].map(point => (
@@ -254,7 +254,7 @@ const stats = [
 
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/dvsa-27-driving-skills/" class="btn-primary">Explore the 27 DVSA Skills</a>
-            <a href="/early-access/" class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-lg text-white font-semibold hover:bg-white/10 transition-colors">Start Free Trial</a>
+            <a href="/early-access/" class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-lg text-white font-semibold hover:bg-white/10 transition-colors">Become a Founding Member</a>
           </div>
         </div>
 
@@ -341,7 +341,7 @@ const stats = [
         <div class="order-2 lg:order-1">
           <h3 class="text-2xl font-bold text-brand-navy mb-4">DVSA Competency Tracking</h3>
           <p class="text-lg text-gray-600 mb-4">
-            Track 62+ driving skills across 17 DVSA categories with a 6-level proficiency scale. Any instructor can pick up exactly where the last left off — students see their progress through their own portal.
+            Track 27 driving skills across 8 DVSA categories with a 6-level proficiency scale. Any instructor can pick up exactly where the last left off — students see their progress through their own portal.
           </p>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">Explore the 27 DVSA skills &rarr;</a>
@@ -353,7 +353,7 @@ const stats = [
             src="/images/marketing/dvsa-progress-tracking.webp"
             width={1440}
             height={900}
-            alt="DVSA competency tracking grid showing 17 skill categories with proficiency levels from Not Started to Test Ready"
+            alt="DVSA competency tracking grid showing 8 skill categories with proficiency levels from Not Started to Reflection"
           />
         </div>
       </div>
@@ -477,10 +477,10 @@ const stats = [
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Streamline Your Driving School?</h2>
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-        Start your free trial today and see how DriveSchoolPro can transform your business.
+        Join as a founding member and see how DriveSchoolPro can transform your business.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Your Free Trial</a>
+        <a href="/early-access/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Become a Founding Member</a>
         <a href="/pricing/" class="btn bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4">See Plans & Pricing</a>
       </div>
     </div>
