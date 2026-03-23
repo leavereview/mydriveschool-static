@@ -87,6 +87,26 @@ const comparisonData = [
   {
     label: 'Multi-Instructor Management',
     values: [true, false, false]
+  },
+  {
+    label: 'Online Booking Widget',
+    values: [true, false, false]
+  },
+  {
+    label: 'Lesson Outcome Recording',
+    values: [true, false, false]
+  },
+  {
+    label: 'Driving Test Tracking & Pass Rates',
+    values: [true, false, false]
+  },
+  {
+    label: 'Document Management with Expiry Alerts',
+    values: [true, false, false]
+  },
+  {
+    label: 'Lesson Confirmation via Email with Message Templates',
+    values: [true, false, false]
   }
 ];
 
@@ -164,6 +184,27 @@ const faqItems = [
     answer: "DriveSchoolPro includes vehicle compliance tracking for MOT dates, tax, and insurance expiry with automated alerts. This ensures your vehicles stay roadworthy and legally compliant. Vehicle fleet management is included in the School Plan and above.",
     links: [
       { text: 'School plan details', url: '/pricing/' }
+    ]
+  },
+  {
+    question: "Can I embed a booking widget on my website?",
+    answer: "Yes. DriveSchoolPro includes an embeddable booking widget that you can add to any website with a single code snippet. Students see your available time slots, choose a lesson type, and book directly — no phone calls needed. You control booking rules, available times, and which lesson types are bookable from your settings.",
+    links: [
+      { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
+    ]
+  },
+  {
+    question: "How do I record what happened during a lesson?",
+    answer: "After each lesson, use the outcome wizard to record which DVSA competencies were covered and update the student's proficiency levels. Add instructor notes for handover and the student's progress updates automatically. The whole process takes under a minute from your phone.",
+    links: [
+      { text: 'Student progress tracking', url: '/driving-school-management-software/' }
+    ]
+  },
+  {
+    question: "Can I track driving test dates and results?",
+    answer: "Yes. Record test bookings with date, centre, and test type. Log results when they come in. Your dashboard shows upcoming tests across all students, and reporting tracks your school's first-time pass rate over time.",
+    links: [
+      { text: 'Management features', url: '/driving-school-management-software/' }
     ]
   }
 ];
@@ -285,7 +326,7 @@ const faqItems = [
         </div>
 
         <!-- Invoicing & Packages -->
-        <div class="grid md:grid-cols-2 gap-10 items-center mb-8">
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div class="order-2 md:order-1">
             <MarketingScreenshot
               src="/images/marketing/payments.webp"
@@ -297,6 +338,50 @@ const faqItems = [
           <div class="order-1 md:order-2">
             <h3 class="text-xl font-bold text-brand-navy mb-3">Invoicing & Packages</h3>
             <p class="text-gray-700">Invoices with line items, payment recording (cash, bank transfer, cheque), and email delivery. Lesson packages with automatic hour tracking.</p>
+          </div>
+        </div>
+
+        <!-- Online Booking Widget -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+          <div>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Online Booking Widget</h3>
+            <p class="text-gray-700">Let new students book lessons from your website — 24/7, without a phone call. Embed the DriveSchoolPro booking widget on any website with a single code snippet. Students choose their lesson type, pick an available time slot, enter their details, and book instantly. You control which times are available, which lesson types are bookable, and how far ahead students can book. Existing students can also book directly through their secure portal.</p>
+          </div>
+          <div>
+            <!-- TODO: Add screenshot for Online Booking Widget -->
+          </div>
+        </div>
+
+        <!-- Lesson Delivery Workflow -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+          <div class="order-2 md:order-1">
+            <!-- TODO: Add screenshot for Lesson Delivery Workflow -->
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Lesson Delivery Workflow</h3>
+            <p class="text-gray-700">After each lesson, record exactly what happened — directly from your phone. The outcome wizard walks you through selecting which DVSA competencies were covered, updating proficiency levels, and adding instructor notes. Everything is saved to the student's progress record instantly, so the next instructor (or you, next week) knows exactly where to pick up. Students see their updated progress through their portal.</p>
+          </div>
+        </div>
+
+        <!-- Driving Test Management -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+          <div>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Driving Test Management</h3>
+            <p class="text-gray-700">Track practical test bookings with date, test centre, and test type. When results come in, record pass or fail with examiner notes. The dashboard shows upcoming tests across all students, and you can monitor your school's first-time pass rate to measure the quality of your instruction over time.</p>
+          </div>
+          <div>
+            <!-- TODO: Add screenshot for Driving Test Management -->
+          </div>
+        </div>
+
+        <!-- Student Documents & Compliance -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-8">
+          <div class="order-2 md:order-1">
+            <!-- TODO: Add screenshot for Student Documents & Compliance -->
+          </div>
+          <div class="order-1 md:order-2">
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Student Documents & Compliance</h3>
+            <p class="text-gray-700">Upload and track student documents — provisional licence, passport photos, medical declarations — with expiry date alerts. The dashboard flags documents approaching expiry so nothing slips through the cracks. Custom document categories let you track whatever your school requires.</p>
           </div>
         </div>
       </div>
