@@ -128,10 +128,10 @@ const faqItems = [
   },
   {
     question: "Can I upgrade from free to paid without losing data?",
-    answer: "With reputable software providers, yes. Your student records, lesson history, and settings transfer seamlessly when upgrading. This is why choosing free plans from established companies (who offer paid tiers) is safer than obscure free-only tools. DriveSchoolPro's 14-day trial lets you test with real data before committing.",
+    answer: "With reputable software providers, yes. Your student records, lesson history, and settings transfer seamlessly when upgrading. This is why choosing free plans from established companies (who offer paid tiers) is safer than obscure free-only tools. DriveSchoolPro Founding Members get full access to test with real data before committing.",
     links: [
       { text: 'Upgrade path', url: '/pricing/' },
-      { text: 'Start trial', url: '/contact/' }
+      { text: 'Become a Founding Member', url: '/early-access/' }
     ]
   },
   {
@@ -769,11 +769,15 @@ const schemaMarkup = {
   </section>
 
   <!-- Comparison Table -->
-  <ComparisonTable
-    title="Paid Software vs Free Plans vs DIY Solutions"
-    headers={['Paid Software', 'Free Plans', 'Spreadsheets/DIY']}
-    rows={comparisonData}
-  />
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <ComparisonTable
+        title="Paid Software vs Free Plans vs DIY Solutions"
+        headers={['Paid Software', 'Free Plans', 'Spreadsheets/DIY']}
+        rows={comparisonData}
+      />
+    </div>
+  </section>
 
   <!-- FAQ Section -->
   <section id="faqs">
