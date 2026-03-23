@@ -90,15 +90,15 @@ const comparisonData = [
 const faqItems = [
   {
     question: "Is there truly free driving school software?",
-    answer: "Yes, some providers offer genuinely free plans with basic features. However, most free options have severe limitations: 5-10 student limit, no online booking, no SMS reminders, no payment processing. 78% of ADIs using free tools upgrade within 6 months when hitting limitations. Free trials (14-30 days full access) are better for testing before committing.",
+    answer: "Yes, some providers offer genuinely free plans with basic features. However, most free options have severe limitations: 5-10 student limit, no online booking, no automated email reminders, no payment processing. 78% of ADIs using free tools upgrade within 6 months when hitting limitations. Free trials (14-30 days full access) are better for testing before committing.",
     links: [
       { text: 'Free trial comparison', url: '/pricing/' },
-      { text: 'All features', url: '/features/' }
+      { text: 'All features', url: '/driving-school-software/' }
     ]
   },
   {
     question: "What features are typically included in free driving school software?",
-    answer: "Free plans usually include basic scheduling (5-10 students max), simple calendar views, manual reminders, and limited storage. Premium features excluded from free plans: drag-and-drop scheduling, automated SMS reminders, invoicing, DVSA competency tracking, multi-instructor support, student portal access, and customer support. These limitations make free plans impractical beyond hobby-level use.",
+    answer: "Free plans usually include basic scheduling (5-10 students max), simple calendar views, manual reminders, and limited storage. Premium features excluded from free plans: drag-and-drop scheduling, automated email reminders, invoicing, DVSA competency tracking, multi-instructor support, student portal access, and customer support. These limitations make free plans impractical beyond hobby-level use.",
     links: [
       { text: 'Feature comparison', url: '/driving-school-software/' }
     ]
@@ -115,7 +115,7 @@ const faqItems = [
     question: "What's the difference between free trials and free plans?",
     answer: "Free trials give full access to all features for 14-30 days, then require payment or lose access. Free plans offer permanent access to extremely limited features (5-10 students, basic calendar, no automation). Free trials are better for testing—you experience the full platform before committing. 68% of trial users convert to paid after seeing the value.",
     links: [
-      { text: 'Start free trial', url: '/contact/' },
+      { text: 'Become a Founding Member', url: '/early-access/' },
       { text: 'See pricing', url: '/pricing/' }
     ]
   },
@@ -123,7 +123,7 @@ const faqItems = [
     question: "Is free driving school software secure?",
     answer: "Security varies dramatically. Free software from established companies (offering paid plans too) typically maintains good security standards. Free-only tools often lack proper data encryption, GDPR compliance, regular backups, or security audits. Storing student personal data (names, addresses, licence details) in insecure systems creates liability. Always verify security credentials before storing student data.",
     links: [
-      { text: 'Security features', url: '/features/' }
+      { text: 'Security features', url: '/driving-school-software/' }
     ]
   },
   {
@@ -161,7 +161,7 @@ const faqItems = [
     question: "What's the best free alternative to paid driving school software?",
     answer: "There isn't one that works at scale. Best approach: Use DriveSchoolPro's 14-day free trial (full features, no credit card) to test with real students. This beats limited 'free forever' plans that block growth. If cost is a barrier, the Solo Plan (£29/month for unlimited students, DVSA tracking, automated reminders) pays for itself through time savings and reduced no-shows.",
     links: [
-      { text: 'Start free trial', url: '/contact/' },
+      { text: 'Become a Founding Member', url: '/early-access/' },
       { text: 'Solo plan details', url: '/pricing/' }
     ]
   }
@@ -214,7 +214,7 @@ const schemaMarkup = {
           Searching for free driving school software? This honest guide covers what's genuinely free, what has hidden costs, and when it makes sense to pay for better tools.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact/" class="btn-primary text-lg px-8 py-4">Try Free for 14 Days</a>
+          <a href="/early-access/" class="btn-primary text-lg px-8 py-4">Become a Founding Member</a>
           <a href="#comparison" class="btn-secondary text-lg px-8 py-4">Compare Options</a>
         </div>
       </div>
@@ -223,7 +223,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="Is there truly free driving school software?">
-    Yes, but with severe limitations. Free plans typically restrict to 5-10 students, exclude automated scheduling and SMS reminders, and lack invoicing. 78% of ADIs upgrade within 6 months when hitting limitations. Free trials (14-day full access) are better for testing before committing. Paid plans (£29/month) deliver 8:1 ROI through time savings and reduced no-shows.
+    Yes, but with severe limitations. Free plans typically restrict to 5-10 students, exclude automated scheduling and email reminders, and lack invoicing. 78% of ADIs upgrade within 6 months when hitting limitations. Free trials (14-day full access) are better for testing before committing. Paid plans (£29/month) deliver 8:1 ROI through time savings and reduced no-shows.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -351,7 +351,7 @@ const schemaMarkup = {
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                  <span class="text-gray-700">Automated SMS/email reminders</span>
+                  <span class="text-gray-700">Automated email reminders (SMS coming soon)</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
@@ -433,8 +433,8 @@ const schemaMarkup = {
                 <tr class="bg-gray-50">
                   <td class="p-4 font-medium">SMS Reminders</td>
                   <td class="p-4 text-center text-red-500">✗</td>
-                  <td class="p-4 text-center text-green-500">✓</td>
-                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-amber-500">Coming Soon</td>
+                  <td class="p-4 text-center text-amber-500">Coming Soon</td>
                 </tr>
                 <tr>
                   <td class="p-4 font-medium">DVSA Competency Tracking</td>
