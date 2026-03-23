@@ -11,13 +11,13 @@ const schedulingStats = [
   {
     label: 'Admin Time Saved Weekly',
     value: '10+ hrs',
-    change: { value: 65, direction: 'up' as const, period: 'vs manual' },
+    change: { value: 65, direction: 'up' as const, period: 'Industry average with software' },
     context: 'With automated scheduling and reminders'
   },
   {
     label: 'No-Show Reduction',
-    value: '50%',
-    change: { value: 50, direction: 'up' as const, period: 'with reminders' },
+    value: 'Up to 50%',
+    change: { value: 50, direction: 'up' as const, period: 'With automated reminders' },
     context: 'Using automated email reminders'
   },
   {
@@ -33,12 +33,12 @@ const schedulingStats = [
   {
     label: 'Lesson Utilisation Rate',
     value: '92%',
-    change: { value: 18, direction: 'up' as const, period: 'vs manual' },
+    change: { value: 18, direction: 'up' as const, period: 'Industry average with software' },
     context: 'Better calendar management fills gaps'
   },
   {
     label: 'Phone Call Reduction',
-    value: '70%',
+    value: 'Up to 70%',
     change: { value: 70, direction: 'up' as const, period: 'with student portal' },
     context: 'Fewer scheduling phone interruptions'
   }
@@ -130,7 +130,7 @@ const faqItems = [
   },
   {
     question: "How do I reduce no-shows at my driving school?",
-    answer: "Most effective strategies: automated SMS reminders at 24 hours and 2 hours before lessons, require prepayment or deposits, enforce clear cancellation policies, and make rescheduling easy. Schools implementing these strategies reduce no-shows by 50% or more.",
+    answer: "Most effective strategies: automated email reminders at 24 hours and 2 hours before lessons, require prepayment or deposits, enforce clear cancellation policies, and make rescheduling easy. Schools implementing these strategies can reduce no-shows by up to 50% or more.",
     links: [
       { text: 'Reminder features', url: '/driving-school-software/' },
       { text: 'No-show reduction guide', url: '/blog/reduce-no-shows-driving-school/' }
@@ -204,7 +204,7 @@ const schemaMarkup = {
 
 <BaseLayout
   title="Scheduling Software Guide (2026)"
-  description="Driving school scheduling software with three-way conflict detection, recurring lesson series, and automated reminders. Drag-and-drop calendars. Reduce no-shows by 50%."
+  description="Driving school scheduling software with three-way conflict detection, recurring lesson series, and automated reminders. Drag-and-drop calendars. Reduce no-shows by up to 50%."
   image="/images/marketing/calendar-week-view.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
@@ -228,7 +228,7 @@ const schemaMarkup = {
         <span class="inline-block bg-brand-red/20 text-brand-red-light px-3 py-1 rounded-full text-sm mb-4">Ultimate Guide</span>
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Driving School Scheduling Software</h1>
         <p class="text-xl text-gray-300 mb-4">
-          <strong>Driving school scheduling software</strong> automates lesson booking, instructor coordination, and appointment management. The right system reduces phone calls by 70%, cuts no-shows in half, and saves 10+ hours every week.
+          <strong>Driving school scheduling software</strong> automates lesson booking, instructor coordination, and appointment management. The right system can reduce phone calls by up to 70%, cut no-shows significantly, and save 10+ hours every week.
         </p>
         <p class="text-gray-400 mb-8">Last updated: January 2026 | Reading time: 14 minutes</p>
         <div class="flex flex-col sm:flex-row gap-4">
@@ -315,8 +315,8 @@ const schemaMarkup = {
         <p>Schools implementing proper scheduling software report:</p>
 
         <ul class="space-y-2">
-          <li><strong>60-70% fewer phone calls</strong> — students book online instead</li>
-          <li><strong>30-50% reduction in no-shows</strong> — automated reminders work</li>
+          <li><strong>Up to 70% fewer phone calls</strong> — students book online instead</li>
+          <li><strong>Up to 50% reduction in no-shows</strong> — automated reminders work</li>
           <li><strong>Zero double-bookings</strong> — software prevents conflicts automatically</li>
           <li><strong>Higher instructor utilization</strong> — fewer gaps between lessons</li>
         </ul>
