@@ -88,6 +88,34 @@ const comparisonData = [
   {
     label: 'DVSA Test Date Tracking',
     values: [true, false, false]
+  },
+  {
+    label: 'Driving Test Tracking & Pass Rates',
+    values: [true, false, false]
+  },
+  {
+    label: 'Document Management with Expiry Alerts',
+    values: [true, false, false]
+  },
+  {
+    label: 'Student Financial Ledger',
+    values: [true, false, false]
+  },
+  {
+    label: 'Customisable Message Templates',
+    values: [true, false, false]
+  },
+  {
+    label: 'Lesson Outcome Recording Wizard',
+    values: [true, false, false]
+  },
+  {
+    label: 'Online Booking Widget',
+    values: [true, false, false]
+  },
+  {
+    label: 'Guided Onboarding Wizard',
+    values: [true, false, false]
   }
 ];
 
@@ -162,11 +190,26 @@ const faqItems = [
   },
   {
     question: "How long does setup take?",
-    answer: "Initial setup takes 30-60 minutes: add your availability, create lesson types, set pricing, and configure your settings. With 16 configuration pages, you can customise the platform to match exactly how your school operates. Full support included. Most schools are live within 24 hours.",
+    answer: "A guided 7-step onboarding wizard walks you through setup: business details, your first instructor, your first vehicle, lesson types and pricing, booking rules, and your first student. Most schools are fully operational within an hour. With 16 configuration pages, you can customise the platform to match exactly how your school operates. Full support included.",
     links: [
       { text: 'Get started', url: '/contact/' },
       { text: 'Pricing plans', url: '/pricing/' }
     ]
+  },
+  {
+    question: "Can I track driving test bookings and results?",
+    answer: "Yes. Record test bookings with date, centre, and type. Log results and examiner notes when they come in. Your dashboard shows upcoming tests across all students, and reports track your school's first-time pass rate over time. Students near their test date are highlighted with their DVSA readiness score so you can focus final lessons effectively.",
+    links: [
+      { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
+    ]
+  },
+  {
+    question: "Can I upload and track student documents?",
+    answer: "Yes. Upload provisional licences and custom document types. Set expiry dates and the system alerts you when documents are approaching expiry. Documents are marked as verified or pending for clear compliance status."
+  },
+  {
+    question: "Is there a student financial ledger?",
+    answer: "Yes. Every student has a full credit and debit ledger tracking all payments, package purchases, lesson charges, and adjustments. See a student's complete financial history and current balance at a glance — no more chasing spreadsheets to work out who owes what."
   }
 ];
 
@@ -416,6 +459,14 @@ const schemaMarkup = {
         </ul>
 
         <p>Related: <a href="/blog/driving-school-payment-processing/" class="text-brand-red hover:underline">Driving School Payment Processing Guide</a></p>
+
+        <h2 id="test-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Driving Test Management</h2>
+
+        <p>Keep track of every student's test journey. Record practical test bookings with date, test centre, and test type. Log results when they come in — pass or fail, with examiner feedback. Your dashboard shows upcoming tests across all your students so nothing is missed, and reporting tracks your school's first-time pass rate over time. For students approaching their test date, the system highlights their DVSA readiness score so you can focus lesson time where it matters most.</p>
+
+        <h2 id="document-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Student Document Tracking</h2>
+
+        <p>Upload and manage student documents — provisional licences, passport photos, theory test certificates, medical declarations, and any custom document types your school requires. Set expiry dates and the dashboard alerts you when documents are approaching expiry. Verified documents are clearly marked so you always know a student's compliance status at a glance.</p>
 
         <h2 id="instructor-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Instructor Management</h2>
 
