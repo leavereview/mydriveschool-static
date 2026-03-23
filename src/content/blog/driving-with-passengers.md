@@ -110,7 +110,7 @@ For any load, check your tyre pressures. Most manufacturers specify a higher tyr
 
 Rate yourself against the DVSA 1-5 scale after every lesson where you drive with others present. The goal is Level 4 — managing passengers and loads independently, without your driving standard dropping even slightly compared to solo practice. Many drivers reach test standard when alone but drop a level with passengers — catching this early is key.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

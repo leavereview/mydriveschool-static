@@ -161,7 +161,7 @@ Some larger roundabouts use spiral lane markings — the lanes change their dire
 
 Our software tracks your roundabout progress across the 5 DVSA levels. After each lesson, your instructor records whether you're at Level 1, 2, 3, 4, or 5 — and you can see exactly which aspects (entry timing, signalling, lane selection) still need work.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

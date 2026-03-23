@@ -120,7 +120,7 @@ Anticipation is a skill that develops gradually across many hours of driving. Th
 
 DriveSchoolPro lets instructors record anticipation faults by hazard type after each lesson, making it easy to see whether you are improving at static hazards but still struggling with dynamic ones, so practice stays targeted.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

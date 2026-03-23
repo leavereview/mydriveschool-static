@@ -108,7 +108,7 @@ At a crossroads where you have give way lines or traffic lights, priority is cle
 
 Junction skills — along with every other DVSA competency — can be tracked lesson by lesson in DriveSchoolPro. Because junctions appear so frequently during normal driving, your competency data builds up quickly, giving you and your instructor a clear picture of your development and where to focus next.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

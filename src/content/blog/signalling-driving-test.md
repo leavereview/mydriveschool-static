@@ -118,7 +118,7 @@ Signalling faults are easy to miss in the moment but easy to spot in a lesson de
 
 DriveSchoolPro lets instructors log signalling faults by type and location after each lesson, so patterns become visible before they become test failures.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

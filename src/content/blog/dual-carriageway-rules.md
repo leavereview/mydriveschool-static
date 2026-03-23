@@ -128,7 +128,7 @@ Once in the deceleration lane, brake progressively and adjust your speed for the
 
 Many pupils have their first dual carriageway experience very late in their training, which means they arrive at test standard without having had the chance to build genuine confidence at speed. Ask your instructor to include dual carriageway driving from around 15–20 hours in, even if it feels early. Earlier exposure makes a significant difference to confidence on test day.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

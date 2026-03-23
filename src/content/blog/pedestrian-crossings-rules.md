@@ -138,7 +138,7 @@ Found near Crossrail (Elizabeth line) stations and level crossings where the roa
 
 Pedestrian crossing skills develop alongside your wider junction and observation skills. In DriveSchoolPro, your instructor can log your crossing competency separately for each crossing type, so you can see if, for example, you are consistently confident at zebra crossings but still need practice at Pelican crossings during the flashing amber phase.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

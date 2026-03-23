@@ -118,7 +118,7 @@ Anticipation — Skill 10 — is the foundation of eco-driving. If you read traf
 
 Your instructor can assess eco-driving alongside your normal lesson by noting how many times you held a gear unnecessarily or braked where coasting was available. Tracking these specific moments over several lessons gives you a clear picture of improvement.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

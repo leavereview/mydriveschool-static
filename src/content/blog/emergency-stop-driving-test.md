@@ -172,7 +172,7 @@ Understanding these numbers connects the emergency stop to the broader skill of 
 
 Our software records your DVSA level for the emergency stop after every lesson. Your instructor logs whether you're at Level 1, 2, 3, 4, or 5 — and you can see your progression at any time. When you reach Level 5, you know you're ready.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

@@ -106,7 +106,7 @@ Match your speed to these factors:
 
 Before your next lesson, ask your instructor to score your Use of Speed on the 1–5 DVSA scale and identify one specific situation where you chose the wrong pace. Targeting a single scenario each lesson is faster than trying to improve everything at once.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 

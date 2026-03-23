@@ -110,7 +110,7 @@ If the examiner asks you to drive forward into a bay, position yourself further 
 
 DriveSchoolPro lets you log each manoeuvre against the DVSA competency scale, so you and your instructor can see exactly when you move from Level 3 (prompted) to Level 4 (independent). Consistent tracking means no nasty surprises on test day.
 
-[Start Your Free Trial →](/early-access/)
+[Become a Founding Member →](/early-access/)
 
 ---
 
