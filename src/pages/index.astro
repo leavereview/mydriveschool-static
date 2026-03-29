@@ -32,7 +32,7 @@ const softwareApplicationSchema = {
     "Test Date Management",
     "DVSA Competency Framework",
     "SMS & Email Reminders",
-    "Student Self-Service Portal",
+    "Student Self-Service Portal (Coming Soon)",
     "Reports & Analytics",
     "Recurring Lesson Series",
     "Role-Based Access Control"
@@ -120,6 +120,7 @@ const features = [
   {
     icon: 'mobile',
     title: 'Student Portal',
+    comingSoon: true,
     description: 'Secure student login to view upcoming lessons, track DVSA competency progress, check package balances, and manage personal details. Reduces phone calls and WhatsApp messages.'
   }
 ];
@@ -135,10 +136,12 @@ const highlights = [
   },
   {
     title: 'Student Self-Service Portal',
+    comingSoon: true,
     description: 'Students log in to view lessons, track their DVSA progress, and check package balances. Fewer phone calls, less WhatsApp.'
   },
   {
     title: 'Online Booking Widget',
+    comingSoon: true,
     description: 'Embed a booking widget on your own website so new students can book lessons 24/7. Existing students book directly through their portal. You control available times, lesson types, and booking rules.'
   },
   {
@@ -163,7 +166,7 @@ const stats = [
   <!-- Announcement Banner -->
   <div id="announcement-banner" class="bg-brand-red text-white py-3 relative">
     <div class="container-custom flex items-center justify-center gap-3 text-sm md:text-base">
-      <span>We're launching in Spring 2026 — Join as a Founding Member and get 3 months free</span>
+      <span>Now Live — Join as a Founding Member and get 3 months free</span>
       <a href="/early-access/" class="font-bold underline hover:no-underline whitespace-nowrap">Learn more &rarr;</a>
       <button id="dismiss-banner" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white" aria-label="Dismiss banner">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -199,7 +202,7 @@ const stats = [
           <a href="/early-access/" class="btn-primary text-lg px-8 py-4">Become a Founding Member — Get 3 Months Free</a>
           <a href="/driving-school-software/" class="btn-secondary text-lg px-8 py-4">See Features</a>
         </div>
-        <p class="mt-6 text-sm text-gray-400">No credit card required • Launching Spring 2026</p>
+        <p class="mt-6 text-sm text-gray-400">No credit card required • Start your 14-day free trial today</p>
       </div>
     </div>
   </section>
@@ -242,7 +245,7 @@ const stats = [
             The DVSA's Ready to Pass framework sets out 27 driving skills across 8 categories. Students must progress through all six levels — from <strong class="text-white">Not Started</strong> through to <strong class="text-white">Reflection</strong> — before they're genuinely ready to book their UK practical test.
           </p>
           <p class="text-gray-300 mb-6">
-            Our software makes recording and sharing that progress effortless. After every lesson, log each skill level in seconds. Students view their progress in real time through their own portal — cutting the "am I ready?" phone calls.
+            Our software makes recording and sharing that progress effortless. After every lesson, log each skill level in seconds. Students will soon be able to view their progress in real time through their own portal — launching shortly after our initial release.
           </p>
 
           <!-- UK proof points -->
@@ -251,7 +254,7 @@ const stats = [
               'Aligned with the official gov.uk Ready to Pass competency framework',
               'Covers all 27 DVSA skills across 8 categories — nothing missing',
               'Designed for ADIs teaching in England, Scotland & Wales',
-              'Student portal shows readiness toward the UK practical test',
+              'Student portal (coming soon) will show readiness toward the UK practical test',
             ].map(point => (
               <li class="flex items-start gap-3 text-sm text-gray-300">
                 <span class="mt-1.5 w-1.5 h-1.5 bg-brand-red rounded-full flex-shrink-0"></span>
@@ -308,7 +311,10 @@ const stats = [
                 {feature.icon === 'mobile' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />}
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-2">{feature.title}</h3>
+            <h3 class="text-xl font-bold text-brand-navy mb-2">
+              {feature.title}
+              {feature.comingSoon && <span class="badge-coming-soon ml-2">Coming Soon</span>}
+            </h3>
             <p class="text-gray-600">{feature.description}</p>
           </div>
         ))}
@@ -349,7 +355,7 @@ const stats = [
         <div class="order-2 lg:order-1">
           <h3 class="text-2xl font-bold text-brand-navy mb-4">DVSA Competency Tracking</h3>
           <p class="text-lg text-gray-600 mb-4">
-            Track 27 driving skills across 8 DVSA categories with a 6-level proficiency scale. Any instructor can pick up exactly where the last left off — students see their progress through their own portal.
+            Track 27 driving skills across 8 DVSA categories with a 6-level proficiency scale. Any instructor can pick up exactly where the last left off — soon, students will see their progress through their own self-service portal.
           </p>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">Explore the 27 DVSA skills &rarr;</a>
@@ -424,7 +430,10 @@ const stats = [
       <div class="grid md:grid-cols-3 gap-8 mb-16">
         {highlights.map((highlight) => (
           <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 class="text-xl font-bold mb-4">{highlight.title}</h3>
+            <h3 class="text-xl font-bold mb-4">
+              {highlight.title}
+              {highlight.comingSoon && <span class="badge-coming-soon ml-2">Coming Soon</span>}
+            </h3>
             <p class="text-gray-300 leading-relaxed">{highlight.description}</p>
           </div>
         ))}
@@ -436,13 +445,16 @@ const stats = [
         <p class="text-gray-300">Students and instructors access everything from their phone.</p>
       </div>
       <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
-        <MarketingScreenshot
-          src="/images/marketing/portal-dashboard-mobile.webp"
-          width={375}
-          height={1193}
-          alt="Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages"
-          mobile
-        />
+        <div class="flex flex-col items-center">
+          <MarketingScreenshot
+            src="/images/marketing/portal-dashboard-mobile.webp"
+            width={375}
+            height={1193}
+            alt="Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages"
+            mobile
+          />
+          <p class="text-sm text-gray-400 mt-2 text-center">Student portal — coming soon</p>
+        </div>
         <MarketingScreenshot
           src="/images/marketing/calendar-mobile.webp"
           width={375}

@@ -70,6 +70,10 @@
   .badge-navy {
     @apply badge bg-brand-navy text-white;
   }
+
+  .badge-coming-soon {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 whitespace-nowrap;
+  }
 }
 
 .prose {

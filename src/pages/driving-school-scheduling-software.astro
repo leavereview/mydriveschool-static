@@ -39,7 +39,7 @@ const schedulingStats = [
   {
     label: 'Phone Call Reduction',
     value: 'Up to 70%',
-    change: { value: 70, direction: 'up' as const, period: 'with student portal' },
+    change: { value: 70, direction: 'up' as const, period: 'with student portal (coming soon)' },
     context: 'Fewer scheduling phone interruptions'
   }
 ];
@@ -64,7 +64,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Student Portal (View & Track)',
+    label: 'Student Portal (Coming Soon)',
     values: [true, false, false]
   },
   {
@@ -115,7 +115,7 @@ const faqItems = [
   },
   {
     question: "How much does driving school scheduling software cost?",
-    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. DriveSchoolPro offers flat monthly pricing from £29 (Solo ADI) to £79 (Multi-instructor school), with all features included and no hidden fees.",
+    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. DriveSchoolPro's Solo Plan is £29/month for solo ADIs. A multi-instructor School Plan (£79/month) is coming soon. All features included, no hidden fees.",
     links: [
       { text: 'Full pricing', url: '/pricing/' },
       { text: 'Join early access', url: '/early-access/' }
@@ -123,7 +123,7 @@ const faqItems = [
   },
   {
     question: "Can students book driving lessons online?",
-    answer: "Yes. Schools can embed a public booking widget on their own website, and existing students can book directly through their secure portal. Lesson scheduling is also available through the admin drag-and-drop calendar with three-way conflict detection.",
+    answer: "A student self-service portal and embeddable booking widget are coming soon — students will be able to view their lessons and book online. All scheduling is currently handled through the admin drag-and-drop calendar with three-way conflict detection.",
     links: [
       { text: 'Student portal features', url: '/driving-school-management-software/' }
     ]
@@ -145,7 +145,7 @@ const faqItems = [
   },
   {
     question: "Can I manage multiple instructors with scheduling software?",
-    answer: "Yes, the School Plan (£79/month for up to 5 instructors) provides individual calendars, shared availability view, student assignments, and three-way conflict detection that prevents double-bookings across all instructors and vehicles.",
+    answer: "Multi-instructor scheduling is coming soon with the School Plan (£79/month for up to 5 instructors). It will provide individual calendars, shared availability view, student assignments, and three-way conflict detection across all instructors and vehicles.",
     links: [
       { text: 'School plan details', url: '/pricing/' },
       { text: 'Instructor management', url: '/driving-school-management-software/' }
@@ -167,7 +167,7 @@ const faqItems = [
   },
   {
     question: "Can students reschedule lessons themselves?",
-    answer: "Students can view their full schedule through their secure portal. Rescheduling is currently handled by school admin through the drag-and-drop calendar, which makes moving lessons quick and easy with automatic conflict checking. Self-service rescheduling is planned for a future release.",
+    answer: "The student portal is coming soon — students will be able to view their full schedule online. Rescheduling is currently handled by school admin through the drag-and-drop calendar, which makes moving lessons quick and easy with automatic conflict checking. Self-service rescheduling will follow after the portal launches.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-software/' }
     ]
@@ -370,15 +370,15 @@ const schemaMarkup = {
           <li>Booking outside of instructor availability</li>
         </ul>
 
-        <h2 id="online-booking" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Student Self-Service: Reducing Admin</h2>
+        <h2 id="online-booking" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Student Self-Service: Reducing Admin <span class="badge-coming-soon ml-2">Coming Soon</span></h2>
 
-        <p><strong>Student self-service</strong> reduces the admin burden on driving schools significantly. When students can view their own lessons, track their progress, and manage their details, it frees up your time for teaching.</p>
+        <p><strong>Student self-service</strong> will reduce the admin burden on driving schools significantly. When students can view their own lessons, track their progress, and manage their details, it frees up your time for teaching. The student portal is launching shortly after the initial release.</p>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">What Student Self-Service Delivers</h3>
 
         <ul class="space-y-3">
           <li><strong>Progress visibility:</strong> Students check their DVSA competency progress any time, reducing "How am I doing?" phone calls.</li>
-          <li><strong>Lesson overview:</strong> Upcoming and past lessons are visible through the student portal, cutting WhatsApp back-and-forth.</li>
+          <li><strong>Lesson overview:</strong> Upcoming and past lessons will be visible through the student portal (coming soon), cutting WhatsApp back-and-forth.</li>
           <li><strong>Package tracking:</strong> Students see their remaining lesson hours and package balances without contacting you.</li>
           <li><strong>Personal details:</strong> Students update their own contact information and preferences, keeping records accurate.</li>
         </ul>
@@ -392,7 +392,7 @@ const schemaMarkup = {
             mobile
           />
         </div>
-        <p class="text-sm text-gray-500 text-center -mt-4 mb-8">The student self-service portal on mobile</p>
+        <p class="text-sm text-gray-500 text-center -mt-4 mb-8">The student self-service portal on mobile — coming soon</p>
 
         <h2 id="reduce-no-shows" class="text-3xl font-bold text-brand-navy mt-12 mb-6">How to Reduce No-Shows</h2>
 
@@ -415,7 +415,7 @@ const schemaMarkup = {
 
         <ul class="space-y-2">
           <li>Include reschedule links directly in reminder messages</li>
-          <li>Allow rescheduling through the student portal without calling</li>
+          <li>Allow rescheduling through the student portal without calling (coming soon)</li>
           <li>Set a reasonable rescheduling deadline (e.g., 12-24 hours before)</li>
         </ul>
 
@@ -462,7 +462,7 @@ const schemaMarkup = {
 
         <ul class="space-y-2">
           <li><strong>Calendar usability:</strong> Spend 15 minutes scheduling, rescheduling, and cancelling. Is it intuitive?</li>
-          <li><strong>Student experience:</strong> Check the student portal. Can students see their lessons and progress easily?</li>
+          <li><strong>Student experience:</strong> The student portal (coming soon) will let students see their lessons and progress easily.</li>
           <li><strong>Mobile experience:</strong> Test both admin calendar and student booking on your phone.</li>
           <li><strong>Conflict prevention:</strong> Try to create a double-booking. The system should prevent it completely.</li>
         </ul>
@@ -544,7 +544,7 @@ const schemaMarkup = {
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Scheduling?</h2>
       <p class="text-xl mb-8 opacity-90">DriveSchoolPro makes scheduling effortless with drag-and-drop calendars, three-way conflict detection, and automated email reminders.</p>
       <a href="/early-access/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Become a Founding Member</a>
-      <p class="text-sm mt-4 opacity-75">No credit card required. Launching Spring 2026.</p>
+      <p class="text-sm mt-4 opacity-75">No credit card required. Start your 14-day free trial today.</p>
     </div>
   </section>
 

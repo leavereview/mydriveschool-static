@@ -77,7 +77,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Student Self-Service Portal',
+    label: 'Student Self-Service Portal (Coming Soon)',
     values: [true, false, false]
   },
   {
@@ -85,11 +85,11 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Multi-Instructor Management',
+    label: 'Multi-Instructor Management (Coming Soon)',
     values: [true, false, false]
   },
   {
-    label: 'Online Booking Widget',
+    label: 'Online Booking Widget (Coming Soon)',
     values: [true, false, false]
   },
   {
@@ -121,7 +121,7 @@ const faqItems = [
   },
   {
     question: "How much does driving school software cost?",
-    answer: "DriveSchoolPro plans start from £29/month for solo ADIs with unlimited students, DVSA progress tracking, and automated reminders. Multi-instructor schools pay £79/month for up to 5 instructors with vehicle compliance tracking and business analytics. All plans include a 14-day free trial with no credit card required.",
+    answer: "DriveSchoolPro's Solo Plan starts from £29/month for solo ADIs with unlimited students, DVSA progress tracking, and automated reminders. A School Plan for multi-instructor schools (£79/month) is coming soon. All plans include a 14-day free trial with no credit card required.",
     links: [
       { text: 'Full pricing details', url: '/pricing/' },
       { text: 'Join early access', url: '/early-access/' }
@@ -129,7 +129,7 @@ const faqItems = [
   },
   {
     question: "Can students book lessons online?",
-    answer: "Students have their own secure portal where they can view upcoming and past lessons, track their DVSA competency progress, check package balances, and manage their personal details. Schools can also embed a public booking widget on their own website for new student enquiries. The student portal significantly reduces phone calls and WhatsApp messages.",
+    answer: "A student self-service portal is coming soon — students will be able to view upcoming and past lessons, track their DVSA competency progress, check package balances, and manage their personal details. Schools will also be able to embed a public booking widget on their website. In the meantime, scheduling is handled through the admin calendar with three-way conflict detection.",
     links: [
       { text: 'Student portal features', url: '/driving-school-management-software/' }
     ]
@@ -144,7 +144,7 @@ const faqItems = [
   },
   {
     question: "Can I track student progress?",
-    answer: "Yes. The full DVSA competency framework tracks 27 skills across 8 categories with a 6-level proficiency scale. After each lesson, instructors record which competencies were covered and update proficiency levels. Students see their progress through their portal, which motivates them and reduces 'When will I be ready?' questions.",
+    answer: "Yes. The full DVSA competency framework tracks 27 skills across 8 categories with a 6-level proficiency scale. After each lesson, instructors record which competencies were covered and update proficiency levels. Students will soon be able to see their progress through their own portal, which motivates them and reduces 'When will I be ready?' questions.",
     links: [
       { text: 'Progress tracking features', url: '/driving-school-management-software/' }
     ]
@@ -166,7 +166,7 @@ const faqItems = [
   },
   {
     question: "Can I manage multiple instructors?",
-    answer: "Yes. The School Plan (£79/month) supports up to 5 instructors with individual calendars, student assignments, vehicle allocation, and performance tracking. Each instructor gets their own login with role-based access. Enterprise plans support unlimited instructors with dedicated support and custom onboarding.",
+    answer: "Multi-instructor support is coming soon with the School Plan (£79/month for up to 5 instructors), which will include individual calendars, student assignments, vehicle allocation, and performance tracking. Enterprise plans will support unlimited instructors. The Solo Plan currently supports everything a single ADI needs.",
     links: [
       { text: 'School plan details', url: '/pricing/' },
       { text: 'Management features', url: '/driving-school-management-software/' }
@@ -181,14 +181,14 @@ const faqItems = [
   },
   {
     question: "What about vehicle tracking?",
-    answer: "DriveSchoolPro includes vehicle compliance tracking for MOT dates, tax, and insurance expiry with automated alerts. This ensures your vehicles stay roadworthy and legally compliant. Vehicle fleet management is included in the School Plan and above.",
+    answer: "DriveSchoolPro includes vehicle compliance tracking for MOT dates, tax, and insurance expiry with automated alerts. This ensures your vehicles stay roadworthy and legally compliant. Full vehicle fleet management will be included in the School Plan (coming soon) and above.",
     links: [
       { text: 'School plan details', url: '/pricing/' }
     ]
   },
   {
     question: "Can I embed a booking widget on my website?",
-    answer: "Yes. DriveSchoolPro includes an embeddable booking widget that you can add to any website with a single code snippet. Students see your available time slots, choose a lesson type, and book directly — no phone calls needed. You control booking rules, available times, and which lesson types are bookable from your settings.",
+    answer: "An embeddable booking widget is coming soon. When launched, you'll be able to add it to any website with a single code snippet so students can see available time slots, choose a lesson type, and book directly. In the meantime, you manage all bookings through the drag-and-drop calendar.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
@@ -311,7 +311,7 @@ const faqItems = [
         <!-- Student Portal -->
         <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div>
-            <h3 class="text-xl font-bold text-brand-navy mb-3">Student Portal</h3>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Student Portal <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
             <p class="text-gray-700">Secure student login to view lessons, track DVSA progress, check package balances, and manage personal details.</p>
           </div>
           <div class="flex justify-center">
@@ -344,7 +344,7 @@ const faqItems = [
         <!-- Online Booking Widget -->
         <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div>
-            <h3 class="text-xl font-bold text-brand-navy mb-3">Online Booking Widget</h3>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Online Booking Widget <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
             <p class="text-gray-700">Let new students book lessons from your website — 24/7, without a phone call. Embed the DriveSchoolPro booking widget on any website with a single code snippet. Students choose their lesson type, pick an available time slot, enter their details, and book instantly. You control which times are available, which lesson types are bookable, and how far ahead students can book. Existing students can also book directly through their secure portal.</p>
           </div>
           <div>
@@ -359,7 +359,7 @@ const faqItems = [
           </div>
           <div class="order-1 md:order-2">
             <h3 class="text-xl font-bold text-brand-navy mb-3">Lesson Delivery Workflow</h3>
-            <p class="text-gray-700">After each lesson, record exactly what happened — directly from your phone. The outcome wizard walks you through selecting which DVSA competencies were covered, updating proficiency levels, and adding instructor notes. Everything is saved to the student's progress record instantly, so the next instructor (or you, next week) knows exactly where to pick up. Students see their updated progress through their portal.</p>
+            <p class="text-gray-700">After each lesson, record exactly what happened — directly from your phone. The outcome wizard walks you through selecting which DVSA competencies were covered, updating proficiency levels, and adding instructor notes. Everything is saved to the student's progress record instantly, so the next instructor (or you, next week) knows exactly where to pick up. Students will soon see their updated progress through their self-service portal.</p>
           </div>
         </div>
 
