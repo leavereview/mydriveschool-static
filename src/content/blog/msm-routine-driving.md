@@ -108,7 +108,7 @@ Mirrors are one of the most frequently failed DVSA competencies because they are
 
 DriveSchoolPro's progress tracking lets instructors mark each DVSA skill level after every lesson, so you can see your mirror use climb from Level 2 to Level 5 over time.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

@@ -139,7 +139,7 @@ Once parked, apply the handbrake and select neutral. Take a moment to assess you
 
 Our driving school software lets you and your instructor record your DVSA level for parallel parking after every lesson. Watch your progression from Level 1 to Level 5 — and see at a glance which specific aspects (observations, accuracy, control) still need work.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

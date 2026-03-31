@@ -118,7 +118,7 @@ Red lights require immediate attention — they indicate a serious fault (oil pr
 
 DVSA Skill 5 is assessed as a background skill throughout your entire training. Use the five-level scale above to honestly rate where you are at the end of each lesson, and share that rating with your instructor. Drivers who self-assess accurately progress faster than those who rely solely on instructor feedback.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

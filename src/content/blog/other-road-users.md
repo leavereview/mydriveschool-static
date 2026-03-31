@@ -118,7 +118,7 @@ Horses are unpredictable around engine noise and sudden movements. Pass them wid
 
 After each lesson, ask your instructor to identify one interaction where your response to another road user was late, too close, or caused them to adjust. Reviewing one specific moment per lesson builds awareness faster than general feedback.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

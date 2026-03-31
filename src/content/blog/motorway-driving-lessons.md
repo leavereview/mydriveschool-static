@@ -155,7 +155,7 @@ Never attempt to repair a tyre or carry out any vehicle work on the hard shoulde
 
 Motorway driving is a skill that benefits enormously from gradual exposure across multiple lessons rather than a single long motorway session. Aim for three or four motorway lessons of 30–45 minutes each, across different times of day and traffic conditions. By your final lesson before the test, motorway driving should feel like the most straightforward part of the drive — because the high speed and simple layout (no junctions, no pedestrians, no cyclists) actually make it easier than urban driving once the initial unfamiliarity wears off.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

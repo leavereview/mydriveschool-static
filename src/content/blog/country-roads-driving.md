@@ -124,7 +124,7 @@ A crest in the road that hides the far side is called a blind summit. Always ass
 
 Country road driving progresses fastest when pupils drive on genuinely rural roads, not just quiet residential streets. Ask your instructor to include country routes from mid-training onwards. Instructors sometimes delay country roads until pupils are close to test standard — but earlier exposure produces better hazard awareness and more confident speed management.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

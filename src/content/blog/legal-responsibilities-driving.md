@@ -114,7 +114,7 @@ This rule exists because newly qualified drivers are statistically the most dang
 
 Legal knowledge underpins every other driving skill. As you progress through your training, revisit Skill 1 periodically — especially after your theory test, and again as you approach your practical test. Rate yourself honestly: can you explain every item listed here without hesitation? Level 4 means yes.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

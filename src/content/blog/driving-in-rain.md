@@ -104,7 +104,7 @@ Ice and snow require the most dramatic speed reductions. Stopping distances on i
 
 After each lesson in adverse weather conditions, rate yourself against the DVSA 1-5 scale for Skill 25. Consistent Level 4 performance — adapting your driving independently to whatever conditions you encounter — is the benchmark for test readiness. Your instructor should be formally logging this as part of your structured training.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

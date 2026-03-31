@@ -104,7 +104,7 @@ You are at test-ready standard. You perform safety checks automatically before d
 
 By the time you reach test standard (Level 4), you should be able to answer any of the 20 Show Me Tell Me questions without hesitation and perform any physical check correctly on your own. Practise with your instructor on multiple vehicles so you are not thrown by a different layout on test day.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

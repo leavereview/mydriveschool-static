@@ -158,10 +158,10 @@ const schemaOrg = {
     (function() {
       // Check if user has accepted cookies
       try {
-        const consent = localStorage.getItem('cookieConsent');
+        const consent = localStorage.getItem('dsp-cookie-consent');
         if (consent) {
           const consentData = JSON.parse(consent);
-          if (consentData.accepted === true) {
+          if (consentData.consent === 'all') {
             // Load Google Analytics
             const script = document.createElement('script');
             script.async = true;

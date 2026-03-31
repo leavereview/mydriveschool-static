@@ -124,7 +124,7 @@ Check mirrors (interior, left door mirror), reduce speed progressively with the 
 
 Moving off and stopping is one of the first skills taught and one of the last to be fully refined. Pupils often plateau at Level 3 — technically capable but still needing the occasional prompt. The jump from Level 3 to Level 4 comes from deliberate repetition across different road conditions: hills, busy roads, narrow streets, and car parks.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

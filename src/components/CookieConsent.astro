@@ -1,14 +1,9 @@
 ---
-// TypeScript interface for consent data stored in localStorage
-interface ConsentData {
-  accepted: boolean;
-  timestamp: string;
-}
 ---
 
 <div
   id="cookie-consent"
-  class="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-lg border-t border-gray-200 transition-transform duration-300 translate-y-full"
+  class="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-lg border-t-2 border-[#FF385C] rounded-t-xl transition-transform duration-300 translate-y-full"
   role="region"
   aria-label="Cookie consent notification"
   aria-live="polite"
@@ -16,20 +11,20 @@ interface ConsentData {
   <div class="container-custom">
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-4 sm:px-0">
       <p class="text-gray-600 text-sm text-center sm:text-left">
-        We use cookies to improve your experience and analyze site traffic.
+        We use cookies to improve your experience and analyse site traffic.
         <a href="/privacy-policy/" class="text-red-600 hover:text-red-700 underline">Learn more</a>
       </p>
       <div class="flex gap-3 w-full sm:w-auto justify-center">
         <button
-          id="decline-cookies"
-          class="btn-secondary text-sm px-6 py-2"
-          aria-label="Decline cookies"
+          id="necessary-only-cookies"
+          class="text-sm px-6 py-2.5 rounded-xl border border-gray-300 hover:bg-gray-50 transition-colors"
+          aria-label="Accept necessary cookies only"
         >
-          Decline
+          Necessary Only
         </button>
         <button
           id="accept-cookies"
-          class="btn-primary text-sm px-6 py-2"
+          class="text-sm px-6 py-2.5 rounded-xl bg-[#FF385C] text-white hover:bg-[#e02d50] transition-colors"
           aria-label="Accept all cookies"
         >
           Accept All
@@ -42,7 +37,7 @@ interface ConsentData {
 <script>
   // TypeScript interfaces
   interface ConsentData {
-    accepted: boolean;
+    consent: 'all' | 'necessary';
     timestamp: string;
   }
 
@@ -53,10 +48,10 @@ interface ConsentData {
   }
 
   // Constants
-  const STORAGE_KEY = 'cookieConsent';
+  const STORAGE_KEY = 'dsp-cookie-consent';
   const BANNER_ID = 'cookie-consent';
   const ACCEPT_BTN_ID = 'accept-cookies';
-  const DECLINE_BTN_ID = 'decline-cookies';
+  const NECESSARY_BTN_ID = 'necessary-only-cookies';
 
   // Helper functions
   function getConsentData(): ConsentData | null {
@@ -70,10 +65,10 @@ interface ConsentData {
     }
   }
 
-  function setConsentData(accepted: boolean): void {
+  function setConsentData(level: 'all' | 'necessary'): void {
     try {
       const data: ConsentData = {
-        accepted,
+        consent: level,
         timestamp: new Date().toISOString(),
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -105,16 +100,16 @@ interface ConsentData {
     }, 300);
   }
 
-  function handleAccept(): void {
-    setConsentData(true);
+  function handleAcceptAll(): void {
+    setConsentData('all');
     hideBanner();
 
-    // Dispatch custom event for future analytics integration
+    // Dispatch custom event for analytics integration
     window.dispatchEvent(new CustomEvent('cookieConsentAccepted'));
   }
 
-  function handleDecline(): void {
-    setConsentData(false);
+  function handleNecessaryOnly(): void {
+    setConsentData('necessary');
     hideBanner();
 
     // Dispatch custom event
@@ -125,7 +120,7 @@ interface ConsentData {
   const cookieConsentAPI: CookieConsentAPI = {
     isAccepted: (): boolean => {
       const data = getConsentData();
-      return data?.accepted === true;
+      return data?.consent === 'all';
     },
     getData: (): ConsentData | null => {
       return getConsentData();
@@ -153,7 +148,7 @@ interface ConsentData {
   function init(): void {
     const consentData = getConsentData();
 
-    // If consent already given (accept or decline), don't show banner
+    // If consent already given (accept or necessary), don't show banner
     if (consentData !== null) {
       const banner = document.getElementById(BANNER_ID);
       if (banner) {
@@ -167,14 +162,14 @@ interface ConsentData {
 
     // Add event listeners
     const acceptBtn = document.getElementById(ACCEPT_BTN_ID);
-    const declineBtn = document.getElementById(DECLINE_BTN_ID);
+    const necessaryBtn = document.getElementById(NECESSARY_BTN_ID);
 
     if (acceptBtn) {
-      acceptBtn.addEventListener('click', handleAccept);
+      acceptBtn.addEventListener('click', handleAcceptAll);
     }
 
-    if (declineBtn) {
-      declineBtn.addEventListener('click', handleDecline);
+    if (necessaryBtn) {
+      necessaryBtn.addEventListener('click', handleNecessaryOnly);
     }
   }
 

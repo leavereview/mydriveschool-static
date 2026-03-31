@@ -106,7 +106,7 @@ Adjust all three mirrors with the engine off. Mirror adjustments after starting 
 
 The cockpit drill is one of those skills where Level 4 is achievable relatively early in training — but many drivers plateau at Level 3 for longer than necessary because they only do it "properly" when the instructor is watching. The goal is Level 4 consistency: the same thorough drill whether your instructor, an examiner, a parent, or nobody is watching.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

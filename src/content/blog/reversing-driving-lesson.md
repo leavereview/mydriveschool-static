@@ -110,7 +110,7 @@ Build a habit of checking: rear window, right mirror, left mirror, right blind s
 
 Every time you practise reversing, you can log your competency level against the DVSA scale in DriveSchoolPro. Both you and your instructor can see at a glance whether you are at Level 3 (needing prompts) or Level 4 (fully independent), making it easy to decide when you are genuinely test-ready.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

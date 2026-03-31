@@ -112,7 +112,7 @@ Another full all-round observation before moving. Select first gear, apply appro
 
 DriveSchoolPro lets you track your competency for every DVSA skill, including the turn in the road, against the five-level scale. Logging your progress after each lesson helps both you and your instructor see clearly when you are ready to move from practising with prompts to performing independently on test day.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

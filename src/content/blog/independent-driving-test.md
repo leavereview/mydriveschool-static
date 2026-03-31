@@ -98,7 +98,7 @@ One in five tests still uses road sign following. In these cases, the examiner w
 
 The independent driving section is specifically logged as Skill 27 in the DVSA's Driver's Record. Rate yourself after practising: are you at Level 3 (needing occasional prompts) or Level 4 (fully independent)? The goal before test day is consistent Level 4, including when things go slightly wrong mid-route.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

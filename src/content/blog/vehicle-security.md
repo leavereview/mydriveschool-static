@@ -118,7 +118,7 @@ The regulation is increasingly enforced in air quality management zones and arou
 
 Vehicle security habits are assessed throughout your test, not just at the end. Every stop is an observation point for the examiner. Aim for Level 4 — applying the full routine automatically at every stop — before your test date. This is one of the few skills where reaching Level 4 early in training is entirely possible, and it builds good foundations for everything that follows.
 
-[Become a Founding Member →](/early-access/)
+[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 
