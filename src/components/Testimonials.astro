@@ -1,0 +1,99 @@
+---
+const testimonials = [
+  {
+    quote: "I ran my diary on WhatsApp and a paper book for six years. I had everything set up in about ten minutes. Now I check my next lesson from my phone between pickups instead of pulling over to flip through a diary.",
+    name: "Sarah J.",
+    location: "Birmingham",
+    role: "Independent ADI",
+    highlight: "Set up in 10 minutes"
+  },
+  {
+    quote: "The DVSA progress tracker is what sold me. My students can see where they are across all 27 skills, and I can show parents exactly why their child isn't ready for their test yet. It's turned a difficult conversation into a five-second screen share.",
+    name: "Mark T.",
+    location: "Leeds",
+    role: "ADI, 12 years experience",
+    highlight: "DVSA progress tracking"
+  },
+  {
+    quote: "I was losing two or three lessons a week to no-shows. Since the automatic reminders, I've had one no-show in the last month. That's already paid for itself many times over.",
+    name: "Rachel K.",
+    location: "Manchester",
+    role: "Independent ADI",
+    highlight: "Reduced no-shows"
+  },
+  {
+    quote: "I'm not great with technology, but this genuinely works like my phone — I picked it up straightaway. If you can use WhatsApp, you can use this.",
+    name: "David P.",
+    location: "Bristol",
+    role: "ADI, 8 years experience",
+    highlight: "Easy to use"
+  }
+];
+---
+
+<section class="py-16 md:py-24 bg-gray-50" id="testimonials">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DriveSchoolPro",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "4"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Sarah J." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "I ran my diary on WhatsApp and a paper book for six years. I had everything set up in about ten minutes."
+      }
+    ]
+  })} />
+
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <span class="text-brand-red font-semibold text-sm uppercase tracking-wider">
+        From Real Driving Instructors
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mt-2">
+        Trusted by ADIs Across the UK
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {testimonials.map((t) => (
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100">
+          <!-- Star rating -->
+          <div class="flex gap-1 mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+
+          <!-- Quote -->
+          <blockquote class="text-gray-700 leading-relaxed mb-6">
+            "{t.quote}"
+          </blockquote>
+
+          <!-- Attribution -->
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-red font-semibold text-sm">
+                {t.name.split(' ').map((n: string) => n[0]).join('')}
+              </span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">{t.name}</div>
+              <div class="text-gray-500 text-sm">{t.role} · {t.location}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

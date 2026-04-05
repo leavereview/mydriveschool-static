@@ -7,6 +7,7 @@ const pricingTiers = [
   { name: 'Solo Plan', description: 'For independent ADIs', monthlyPrice: 29, popular: false, comingSoon: false },
   { name: 'School Plan', description: 'For driving schools', monthlyPrice: 79, popular: false, comingSoon: true }
 ];
+// Note: Enterprise plan removed from display — only Solo (live) and School (launching soon) shown.
 
 // Offer schemas — only generate for plans that are available now
 const offerSchemas = pricingTiers.filter(t => !t.comingSoon).map((tier) => ({
@@ -69,7 +70,7 @@ const faqSchema = {
       "name": "How much does driving school software cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DriveSchoolPro's Solo Plan is £29/month for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. A School Plan for multi-instructor driving schools (£79/month) and Enterprise pricing for large operations are coming soon. There are no setup fees and no long-term contracts."
+        "text": "DriveSchoolPro's Solo Plan is £29/month for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. A School Plan for multi-instructor driving schools is launching soon at £79/month. There are no setup fees and no long-term contracts."
       }
     },
     {
@@ -77,7 +78,7 @@ const faqSchema = {
       "name": "Can I change plans later?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "When the School and Enterprise plans launch, you'll be able to upgrade seamlessly. Changes will take effect on your next billing cycle."
+        "text": "When the School plan launches, you'll be able to upgrade seamlessly. Changes will take effect on your next billing cycle."
       }
     },
     {
@@ -172,12 +173,13 @@ const freeTrialSchema = {
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-brand-navy mb-4">Choose the Right Plan for Your Driving School</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            Start with the Solo Plan — everything you need to manage your students, lessons, and DVSA progress. Multi-instructor School and Enterprise plans are coming soon.
+            Start with the Solo Plan — everything you need to manage your students, lessons, and DVSA progress. The multi-instructor School Plan is launching soon.
           </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="card border-2 border-brand-red">
-            <span class="badge-primary mb-2">Available Now</span>
+        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <!-- Solo Plan — primary action -->
+          <div class="card border-2 border-brand-red ring-2 ring-brand-red/20 relative">
+            <span class="badge-primary mb-2">Start Here</span>
             <h3 class="text-xl font-bold text-brand-navy mb-2">Solo</h3>
             <p class="text-gray-600 mb-4">For independent ADIs</p>
             <div class="text-4xl font-bold text-brand-navy mb-4">£29<span class="text-lg font-normal text-gray-500">/month</span></div>
@@ -185,37 +187,29 @@ const freeTrialSchema = {
               <li>✓ Unlimited students</li>
               <li>✓ Lesson scheduling with conflict detection</li>
               <li>✓ DVSA progress tracking</li>
-              <li>✓ Email reminders (SMS coming soon)</li>
+              <li>✓ Email reminders</li>
               <li>✓ Invoicing & payment recording</li>
+              <li>✓ Student self-service portal</li>
             </ul>
             <a href="https://app.driveschoolpro.com/signup" class="btn-primary w-full">Start Free Trial</a>
+            <p class="text-center text-gray-500 text-xs mt-3">No credit card required · Cancel anytime</p>
           </div>
-          <div class="card border-2 border-gray-200 opacity-75">
-            <span class="badge-coming-soon mb-2">Coming Soon</span>
+          <!-- School Plan — launching soon -->
+          <div class="card border-2 border-gray-200 relative">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 mb-2">Multi-Instructor</span>
             <h3 class="text-xl font-bold text-brand-navy mb-2">School</h3>
             <p class="text-gray-600 mb-4">For driving schools</p>
             <div class="text-4xl font-bold text-brand-navy mb-4">£79<span class="text-lg font-normal text-gray-500">/month</span></div>
-            <ul class="text-left space-y-2 mb-6 text-sm">
+            <ul class="text-left space-y-2 mb-6 text-sm text-gray-500">
               <li>✓ Everything in Solo</li>
               <li>✓ Up to 5 instructors</li>
               <li>✓ Vehicle fleet & compliance tracking</li>
               <li>✓ Business analytics & reports</li>
               <li>✓ Role-based access control</li>
             </ul>
-            <span class="btn-outline w-full text-center opacity-50 cursor-default">Coming Soon</span>
-          </div>
-          <div class="card border-2 border-gray-200 opacity-75">
-            <span class="badge-coming-soon mb-2">Coming Soon</span>
-            <h3 class="text-xl font-bold text-brand-navy mb-2">Enterprise</h3>
-            <p class="text-gray-600 mb-4">For large operations</p>
-            <div class="text-4xl font-bold text-brand-navy mb-4">Custom</div>
-            <ul class="text-left space-y-2 mb-6 text-sm">
-              <li>✓ Everything in School</li>
-              <li>✓ Unlimited instructors</li>
-              <li>✓ Dedicated support</li>
-              <li>✓ Custom onboarding</li>
-            </ul>
-            <span class="btn-outline w-full text-center opacity-50 cursor-default">Coming Soon</span>
+            <p class="text-center text-sm text-gray-600 font-medium py-3 px-4 bg-gray-50 rounded-lg">
+              Launching Soon — <a href="https://app.driveschoolpro.com/signup" class="text-brand-red hover:underline">Start with Solo</a> to lock in founding member pricing
+            </p>
           </div>
         </div>
       </div>
@@ -241,11 +235,11 @@ const freeTrialSchema = {
             <p class="text-gray-600 text-sm">Full DVSA competency framework with 8 categories and 27 skills. Track each student's journey from Not Started to Reflection on a 6-level scale.</p>
           </div>
           <div class="card">
-            <h3 class="font-bold text-brand-navy mb-2">Student Portal <span class="badge-coming-soon ml-1">Coming Soon</span></h3>
+            <h3 class="font-bold text-brand-navy mb-2">Student Portal</h3>
             <p class="text-gray-600 text-sm">Students log in to view upcoming lessons, track their DVSA progress, check package balances, and update their personal details.</p>
           </div>
           <div class="card">
-            <h3 class="font-bold text-brand-navy mb-2">Online Booking Widget <span class="badge-coming-soon ml-1">Coming Soon</span></h3>
+            <h3 class="font-bold text-brand-navy mb-2">Online Booking Widget</h3>
             <p class="text-gray-600 text-sm">Embed a booking widget on your website so students can book lessons 24/7. You control available slots, lesson types, and booking rules.</p>
           </div>
           <div class="card">
@@ -282,23 +276,17 @@ const freeTrialSchema = {
                 <td class="p-3 font-bold text-brand-navy">£29/month</td>
                 <td class="p-3 text-gray-600">£0.58/student</td>
               </tr>
-              <tr class="border-b border-gray-200">
-                <td class="p-3 font-medium">School <span class="badge-coming-soon ml-1">Coming Soon</span></td>
+              <tr>
+                <td class="p-3 font-medium">School <span class="text-xs text-blue-600 font-semibold ml-1">Launching Soon</span></td>
                 <td class="p-3 text-gray-600">Multi-instructor schools</td>
                 <td class="p-3 font-bold text-brand-navy">£79/month</td>
                 <td class="p-3 text-gray-600">£1.58/student</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-medium">Enterprise <span class="badge-coming-soon ml-1">Coming Soon</span></td>
-                <td class="p-3 text-gray-600">Large operations</td>
-                <td class="p-3 font-bold text-brand-navy">Custom</td>
-                <td class="p-3 text-gray-600">Contact us</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="text-gray-600 mb-4">
-          At £29/month, the Solo Plan pays for itself if it saves you just 2 hours of admin per month — and most ADIs report saving 10+ hours weekly. When the School Plan launches at £79/month, it'll work out at under £16/instructor for a 5-instructor school.
+          At £29/month, the Solo Plan pays for itself if it saves you just 2 hours of admin per month — and most ADIs report saving 10+ hours weekly. When the School Plan launches at £79/month, it works out at under £16/instructor for a 5-instructor school.
         </p>
         <p class="text-gray-600">
           There are no setup fees, no per-lesson charges, and no hidden costs. You pay monthly and can cancel at any time. See <a href="/driving-school-software/" class="text-brand-red hover:underline">all driving school software features</a> included in every plan.
@@ -319,7 +307,7 @@ const freeTrialSchema = {
           </div>
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">Can I change plans later?</h3>
-            <p class="text-gray-600 text-sm">When the School and Enterprise plans launch, you'll be able to upgrade seamlessly. Changes will take effect on your next billing cycle.</p>
+            <p class="text-gray-600 text-sm">When the School plan launches, you'll be able to upgrade seamlessly. Changes will take effect on your next billing cycle.</p>
           </div>
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">Is there a contract?</h3>

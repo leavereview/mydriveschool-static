@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MarketingScreenshot from '../components/MarketingScreenshot.astro';
+import Testimonials from '../components/Testimonials.astro';
 
 // SoftwareApplication Schema
 const softwareApplicationSchema = {
@@ -12,6 +13,11 @@ const softwareApplicationSchema = {
   "description": "Complete driving school management software for driving instructors and schools. Lesson scheduling, student management, automated billing, and instructor allocation in one platform.",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "4"
+  },
   "offers": {
     "@type": "Offer",
     "@id": "https://driveschoolpro.com/#free-trial",
@@ -32,7 +38,7 @@ const softwareApplicationSchema = {
     "Test Date Management",
     "DVSA Competency Framework",
     "SMS & Email Reminders",
-    "Student Self-Service Portal (Coming Soon)",
+    "Student Self-Service Portal",
     "Reports & Analytics",
     "Recurring Lesson Series",
     "Role-Based Access Control"
@@ -103,25 +109,14 @@ const features = [
     description: 'Complete student profiles with DVSA competency tracking across all 27 skills. Manage driving test bookings and results, upload documents with expiry alerts, and track every student\'s balance with a full credit and debit ledger.'
   },
   {
-    icon: 'credit-card',
-    title: 'Packages & Invoicing',
-    description: 'Lesson packages with configurable hours, pricing, and expiry dates. Create invoices with line items, track payment status, and send via email. Record cash, bank transfer, and cheque payments.'
+    icon: 'bell',
+    title: 'Automated Reminders',
+    description: 'Automated email reminders with configurable timing. Students confirm lessons with one click from their inbox — reducing no-shows before they happen. Customise your message templates with merge fields like student name, lesson time, and pickup location.'
   },
   {
     icon: 'chart',
     title: 'Business Analytics',
     description: 'Real-time dashboard with 8 business metrics. Financial reports with 6-month revenue trends, instructor utilisation reports, and student progress overviews.'
-  },
-  {
-    icon: 'bell',
-    title: 'Automated Reminders',
-    description: 'Automated email reminders with configurable timing. Students confirm lessons with one click from their inbox — reducing no-shows before they happen. Customise your message templates with merge fields like student name, lesson time, and pickup location. SMS reminders coming soon.'
-  },
-  {
-    icon: 'mobile',
-    title: 'Student Portal',
-    comingSoon: true,
-    description: 'Secure student login to view upcoming lessons, track DVSA competency progress, check package balances, and manage personal details. Reduces phone calls and WhatsApp messages.'
   }
 ];
 
@@ -136,13 +131,7 @@ const highlights = [
   },
   {
     title: 'Student Self-Service Portal',
-    comingSoon: true,
     description: 'Students log in to view lessons, track their DVSA progress, and check package balances. Fewer phone calls, less WhatsApp.'
-  },
-  {
-    title: 'Online Booking Widget',
-    comingSoon: true,
-    description: 'Embed a booking widget on your own website so new students can book lessons 24/7. Existing students book directly through their portal. You control available times, lesson types, and booking rules.'
   },
   {
     title: 'Test Day Tracking',
@@ -152,9 +141,9 @@ const highlights = [
 
 const stats = [
   { number: 'Unlimited', label: 'Students & Lessons' },
-  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: 'Built for', label: 'UK ADIs' },
   { number: '10+ hrs', label: 'Saved Weekly' },
-  { number: '27', label: 'DVSA Skills' }
+  { number: '27', label: 'DVSA Skills Tracked' }
 ];
 ---
 
@@ -185,6 +174,7 @@ const stats = [
     });
   </script>
 
+  <!-- Hero -->
   <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0" style="background-image: url('/images/hero-driving.jpg'); background-size: cover; background-position: center;"></div>
@@ -200,13 +190,15 @@ const stats = [
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="https://app.driveschoolpro.com/signup" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
-          <a href="/driving-school-software/" class="btn-secondary text-lg px-8 py-4">See Features</a>
+          <a href="#how-it-works" class="btn-secondary text-lg px-8 py-4">See How It Works</a>
         </div>
         <p class="mt-6 text-sm text-gray-400">No credit card required • Start your 14-day free trial today</p>
+        <p class="mt-2 text-sm text-white/60">Join UK driving instructors already streamlining their schools</p>
       </div>
     </div>
   </section>
 
+  <!-- Stats bar -->
   <section class="py-12 bg-gray-50 border-b border-gray-100">
     <div class="container-custom">
       <p class="text-center text-sm text-gray-500 uppercase tracking-wider mb-8">Built to scale with your school</p>
@@ -220,6 +212,88 @@ const stats = [
       </div>
     </div>
   </section>
+
+  <!-- See It in Action — MOVED UP, anchor for hero CTA -->
+  <section class="section bg-white border-t border-gray-100 scroll-mt-20" id="how-it-works">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-primary mb-4">See It in Action</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Built for How You Actually Work</h2>
+        <p class="text-xl text-gray-600">Real screenshots from the DriveSchoolPro platform — no stock photos, no mockups.</p>
+      </div>
+
+      <!-- Calendar Row -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <MarketingScreenshot
+            src="/images/marketing/calendar-week-view.webp"
+            width={1440}
+            height={900}
+            alt="Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling"
+          />
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-brand-navy mb-4">Drag-and-Drop Scheduling</h3>
+          <p class="text-lg text-gray-600 mb-4">
+            See your entire week at a glance with colour-coded lessons across all instructors. Drag lessons to reschedule instantly — three-way conflict detection prevents double-bookings automatically.
+          </p>
+          <a href="/driving-school-scheduling-software/" class="text-brand-red font-semibold hover:underline">Learn more about scheduling &rarr;</a>
+        </div>
+      </div>
+
+      <!-- DVSA Row (reversed) -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h3 class="text-2xl font-bold text-brand-navy mb-4">DVSA Competency Tracking</h3>
+          <p class="text-lg text-gray-600 mb-4">
+            Track 27 driving skills across 8 DVSA categories with a 6-level proficiency scale. Any instructor can pick up exactly where the last left off — students can see their progress through their own self-service portal.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">Explore the 27 DVSA skills &rarr;</a>
+            <a href="/driving-school-management-software/" class="text-gray-500 hover:text-brand-red hover:underline transition-colors">Student management features &rarr;</a>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <MarketingScreenshot
+            src="/images/marketing/dvsa-progress-tracking.webp"
+            width={1440}
+            height={900}
+            alt="DVSA competency tracking grid showing 8 skill categories with proficiency levels from Not Started to Reflection"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Everything You Need — 4 feature cards -->
+  <section class="section bg-white border-t border-gray-100">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-primary mb-4">Features</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Everything You Need to Run Your Driving School</h2>
+        <p class="text-xl text-gray-600">From DVSA competency tracking to three-way scheduling, we've got you covered.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature) => (
+          <div class="card group">
+            <div class="w-12 h-12 rounded-xl bg-brand-red-light flex items-center justify-center mb-4 group-hover:bg-brand-red transition-colors">
+              <svg class="w-6 h-6 text-brand-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {feature.icon === 'calendar' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />}
+                {feature.icon === 'users' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />}
+                {feature.icon === 'chart' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />}
+                {feature.icon === 'bell' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />}
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy mb-2">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <Testimonials />
 
   <!-- DVSA 27 Skills Section — UK Localised -->
   <section class="section bg-brand-navy text-white">
@@ -245,7 +319,7 @@ const stats = [
             The DVSA's Ready to Pass framework sets out 27 driving skills across 8 categories. Students must progress through all six levels — from <strong class="text-white">Not Started</strong> through to <strong class="text-white">Reflection</strong> — before they're genuinely ready to book their UK practical test.
           </p>
           <p class="text-gray-300 mb-6">
-            Our software makes recording and sharing that progress effortless. After every lesson, log each skill level in seconds. Students will soon be able to view their progress in real time through their own portal — launching shortly after our initial release.
+            Our software makes recording and sharing that progress effortless. After every lesson, log each skill level in seconds. Students can view their progress in real time through their own portal.
           </p>
 
           <!-- UK proof points -->
@@ -254,7 +328,7 @@ const stats = [
               'Aligned with the official gov.uk Ready to Pass competency framework',
               'Covers all 27 DVSA skills across 8 categories — nothing missing',
               'Designed for ADIs teaching in England, Scotland & Wales',
-              'Student portal (coming soon) will show readiness toward the UK practical test',
+              'Student portal shows readiness toward the UK practical test',
             ].map(point => (
               <li class="flex items-start gap-3 text-sm text-gray-300">
                 <span class="mt-1.5 w-1.5 h-1.5 bg-brand-red rounded-full flex-shrink-0"></span>
@@ -291,89 +365,7 @@ const stats = [
     </div>
   </section>
 
-  <section class="section bg-white">
-    <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="badge-primary mb-4">Features</span>
-        <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Everything You Need to Run Your Driving School</h2>
-        <p class="text-xl text-gray-600">From DVSA competency tracking to three-way scheduling, we've got you covered.</p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map((feature) => (
-          <div class="card group">
-            <div class="w-12 h-12 rounded-xl bg-brand-red-light flex items-center justify-center mb-4 group-hover:bg-brand-red transition-colors">
-              <svg class="w-6 h-6 text-brand-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {feature.icon === 'calendar' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />}
-                {feature.icon === 'users' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />}
-                {feature.icon === 'credit-card' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />}
-                {feature.icon === 'chart' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />}
-                {feature.icon === 'bell' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />}
-                {feature.icon === 'mobile' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />}
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-2">
-              {feature.title}
-              {feature.comingSoon && <span class="badge-coming-soon ml-2">Coming Soon</span>}
-            </h3>
-            <p class="text-gray-600">{feature.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- See It in Action -->
-  <section class="section bg-white border-t border-gray-100">
-    <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="badge-primary mb-4">See It in Action</span>
-        <h2 class="text-3xl md:text-5xl font-bold text-brand-navy mb-6">Built for How You Actually Work</h2>
-        <p class="text-xl text-gray-600">Real screenshots from the DriveSchoolPro platform — no stock photos, no mockups.</p>
-      </div>
-
-      <!-- Calendar Row -->
-      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-        <div>
-          <MarketingScreenshot
-            src="/images/marketing/calendar-week-view.webp"
-            width={1440}
-            height={900}
-            alt="Interactive weekly calendar with colour-coded lessons across multiple instructors and drag-and-drop scheduling"
-          />
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold text-brand-navy mb-4">Drag-and-Drop Scheduling</h3>
-          <p class="text-lg text-gray-600 mb-4">
-            See your entire week at a glance with colour-coded lessons across all instructors. Drag lessons to reschedule instantly — three-way conflict detection prevents double-bookings automatically.
-          </p>
-          <a href="/driving-school-scheduling-software/" class="text-brand-red font-semibold hover:underline">Learn more about scheduling &rarr;</a>
-        </div>
-      </div>
-
-      <!-- DVSA Row (reversed) -->
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="order-2 lg:order-1">
-          <h3 class="text-2xl font-bold text-brand-navy mb-4">DVSA Competency Tracking</h3>
-          <p class="text-lg text-gray-600 mb-4">
-            Track 27 driving skills across 8 DVSA categories with a 6-level proficiency scale. Any instructor can pick up exactly where the last left off — soon, students will see their progress through their own self-service portal.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="/dvsa-27-driving-skills/" class="text-brand-red font-semibold hover:underline">Explore the 27 DVSA skills &rarr;</a>
-            <a href="/driving-school-management-software/" class="text-gray-500 hover:text-brand-red hover:underline transition-colors">Student management features &rarr;</a>
-          </div>
-        </div>
-        <div class="order-1 lg:order-2">
-          <MarketingScreenshot
-            src="/images/marketing/dvsa-progress-tracking.webp"
-            width={1440}
-            height={900}
-            alt="DVSA competency tracking grid showing 8 skill categories with proficiency levels from Not Started to Reflection"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- Built for All Sizes -->
   <section class="section bg-gray-50">
     <div class="container-custom">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -421,19 +413,17 @@ const stats = [
     </div>
   </section>
 
+  <!-- Why Schools Choose DriveSchoolPro -->
   <section class="section bg-brand-navy text-white">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block">Why Us</span>
         <h2 class="text-3xl md:text-5xl font-bold mb-6">Why Schools Choose DriveSchoolPro</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         {highlights.map((highlight) => (
           <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 class="text-xl font-bold mb-4">
-              {highlight.title}
-              {highlight.comingSoon && <span class="badge-coming-soon ml-2">Coming Soon</span>}
-            </h3>
+            <h3 class="text-xl font-bold mb-4">{highlight.title}</h3>
             <p class="text-gray-300 leading-relaxed">{highlight.description}</p>
           </div>
         ))}
@@ -453,7 +443,7 @@ const stats = [
             alt="Student self-service portal on mobile showing upcoming lesson, progress summary, and active packages"
             mobile
           />
-          <p class="text-sm text-gray-400 mt-2 text-center">Student portal — coming soon</p>
+          <p class="text-sm text-gray-400 mt-2 text-center">Student portal</p>
         </div>
         <MarketingScreenshot
           src="/images/marketing/calendar-mobile.webp"
@@ -466,7 +456,7 @@ const stats = [
     </div>
   </section>
 
-  <!-- Calculator Callout -->
+  <!-- Know Your Numbers — Calculator -->
   <section class="section bg-gradient-to-br from-brand-navy to-gray-900 text-white">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto text-center">
@@ -493,6 +483,7 @@ const stats = [
     </div>
   </section>
 
+  <!-- Final CTA -->
   <section class="section bg-gradient-to-r from-brand-red to-brand-red-dark text-white">
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Streamline Your Driving School?</h2>
@@ -505,4 +496,19 @@ const stats = [
       </div>
     </div>
   </section>
+
+  <!-- Sticky mobile CTA — only visible on small screens -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t border-gray-200 md:hidden">
+    <a href="https://app.driveschoolpro.com/signup"
+       class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-semibold text-base hover:bg-brand-red-dark transition-colors">
+      Start Free Trial
+    </a>
+    <p class="text-center text-gray-500 text-xs mt-1">No credit card required</p>
+  </div>
 </BaseLayout>
+
+<style>
+  @media (max-width: 767px) {
+    body { padding-bottom: 5rem; }
+  }
+</style>
