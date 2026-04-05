@@ -1,0 +1,346 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DriveSchoolPro",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "url": "https://driveschoolpro.com",
+  "offers": {
+    "@type": "Offer",
+    "price": "29",
+    "priceCurrency": "GBP",
+    "priceValidUntil": "2026-12-31",
+    "description": "Solo plan — unlimited students, DVSA tracking, automated reminders"
+  },
+  "description": "Driving school management software for UK ADIs. Smart scheduling, DVSA progress tracking, and automated reminders.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "4"
+  }
+};
+
+const screenshots = [
+  {
+    src: '/images/marketing/calendar-week-view.webp',
+    alt: 'DriveSchoolPro weekly calendar showing lesson bookings',
+    caption: 'Your week at a glance'
+  },
+  {
+    src: '/images/marketing/dvsa-progress-tracking.webp',
+    alt: 'DVSA 27-skills competency tracking screen',
+    caption: 'DVSA competency tracking'
+  },
+  {
+    src: '/images/marketing/dashboard-overview.webp',
+    alt: "DriveSchoolPro dashboard showing today's schedule and alerts",
+    caption: "Today's schedule and alerts"
+  },
+  {
+    src: '/images/marketing/student-list.webp',
+    alt: 'Student list with lesson history and progress',
+    caption: 'Everything about each student'
+  }
+];
+
+const features = [
+  { name: 'Drag-and-drop calendar', desc: 'Reschedule in seconds, never double-book' },
+  { name: 'DVSA progress tracking', desc: '8 categories, 27 skills, test readiness scores' },
+  { name: 'Automated reminders', desc: 'SMS and WhatsApp, sent automatically' },
+  { name: 'Student management', desc: 'Contacts, licences, lesson history, notes' },
+  { name: 'Payments & invoicing', desc: 'Record payments, generate invoices, track balances' },
+  { name: 'Online booking', desc: 'Students book available slots themselves' },
+  { name: 'Works on any device', desc: 'Phone, tablet, laptop — fully responsive' },
+  { name: 'Reports & insights', desc: 'Revenue, utilisation, progress at a glance' }
+];
+---
+
+<LandingLayout
+  title="Try DriveSchoolPro Free — UK Driving School Software"
+  description="Manage your driving school from your phone. Smart scheduling, DVSA progress tracking, automated reminders. Free 14-day trial, no credit card required."
+  canonicalUrl="https://driveschoolpro.com/get-started/"
+  ogImage="/images/marketing/dashboard-overview.webp"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} slot="head" />
+
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <section class="bg-white pt-10 pb-12 md:pt-16 md:pb-20">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-12 lg:gap-16">
+
+        <!-- Text -->
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <!-- Logo wordmark (not a link) -->
+          <div class="flex items-center gap-2 mb-8">
+            <span class="text-2xl font-bold text-brand-navy tracking-tight">DriveSchool<span class="text-brand-red">Pro</span></span>
+          </div>
+
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight mb-4">
+            Manage your driving school from your phone
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            Smart scheduling, DVSA progress tracking, and automated reminders — purpose-built for UK driving instructors.
+          </p>
+
+          <a
+            href="https://app.driveschoolpro.com/signup"
+            class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+          >
+            Start Your Free Trial &rarr;
+          </a>
+          <p class="text-sm text-gray-400 mt-3">14-day trial &middot; No credit card required &middot; Cancel anytime</p>
+        </div>
+
+        <!-- Hero image -->
+        <div class="md:w-1/2">
+          <link rel="preload" as="image" href="/images/marketing/dashboard-overview.webp" />
+          <img
+            src="/images/marketing/dashboard-overview.webp"
+            alt="DriveSchoolPro dashboard showing lesson schedule, student progress, and reminders"
+            class="rounded-2xl shadow-xl border border-gray-100 w-full"
+            width="720"
+            height="480"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social Proof Bar ──────────────────────────────────────────── -->
+  <section class="bg-gray-50 py-6 border-y border-gray-100">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
+        <span class="flex items-center gap-2">
+          <span class="text-base">🇬🇧</span> Built for UK ADIs
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          27 DVSA Skills Tracked
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          10+ Hours Saved Weekly
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Trusted by ADIs Across the UK
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pain → Solution cards ─────────────────────────────────────── -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">
+        Built for the problems you actually have
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Card 1: Scheduling -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">Double bookings and diary chaos</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Three-way conflict detection checks your instructor, student, and vehicle before every booking. No more apologetic calls.</p>
+        </div>
+
+        <!-- Card 2: No-shows -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">No-shows costing you money</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Automatic reminders sent before every lesson. Students confirm or reschedule before you've left the house.</p>
+        </div>
+
+        <!-- Card 3: Test readiness -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">No idea when students are test-ready</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Full DVSA competency framework — 8 categories and 27 skills. Track progress from first lesson to test day with a single screen share.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── App Screenshots ───────────────────────────────────────────── -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">See it in action</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        {screenshots.map((shot) => (
+          <div class="flex flex-col">
+            <div class="rounded-2xl overflow-hidden shadow-md border border-gray-200 bg-white">
+              <img
+                src={shot.src}
+                alt={shot.alt}
+                class="w-full h-auto object-cover"
+                loading="lazy"
+                width="360"
+                height="240"
+              />
+            </div>
+            <p class="text-xs md:text-sm text-gray-500 text-center mt-2 font-medium">{shot.caption}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ──────────────────────────────────────────────── -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-10">
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-wider">From Real Driving Instructors</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mt-2">Trusted by ADIs Across the UK</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-5">
+            "Set up in ten minutes. Genuinely easier than my paper diary."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-red font-semibold text-xs">SJ</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Sarah J.</div>
+              <div class="text-gray-400 text-xs">Independent ADI · Birmingham</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-5">
+            "One no-show in the last month. Used to be two or three a week."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-red font-semibold text-xs">RK</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Rachel K.</div>
+              <div class="text-gray-400 text-xs">Independent ADI · Manchester</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-5">
+            "Parents love seeing their child's DVSA progress. Makes me look professional."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-red font-semibold text-xs">MT</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Mark T.</div>
+              <div class="text-gray-400 text-xs">ADI, 12 years experience · Leeds</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Feature Checklist ─────────────────────────────────────────── -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Everything you need in one app</h2>
+      <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-3">
+        {features.map((f) => (
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="font-semibold text-gray-900 text-sm">{f.name}</span>
+              <span class="text-gray-500 text-sm"> — {f.desc}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing Anchor ────────────────────────────────────────────── -->
+  <section class="py-10 bg-white text-center">
+    <div class="container-custom">
+      <p class="text-2xl font-bold text-brand-navy mb-1">£29/month after your free trial</p>
+      <p class="text-gray-500 mb-4">No setup fees &middot; No contracts &middot; No hidden costs</p>
+      <a href="/pricing/" class="text-brand-red font-medium hover:underline text-sm">See all features included &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ─────────────────────────────────────────────────── -->
+  <section class="section bg-brand-navy text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Ready to ditch the paper diary?</h2>
+      <p class="text-white/80 text-lg mb-8">Set up in under 3 minutes.</p>
+      <a
+        href="https://app.driveschoolpro.com/signup"
+        class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+      >
+        Start Your Free Trial &rarr;
+      </a>
+      <p class="text-white/50 text-sm mt-3">14-day free trial &middot; No credit card required &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- ── Sticky Mobile CTA ─────────────────────────────────────────── -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-sm border-t border-gray-200 md:hidden">
+    <a
+      href="https://app.driveschoolpro.com/signup"
+      class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors"
+    >
+      Start Free Trial &rarr;
+    </a>
+  </div>
+
+</LandingLayout>
