@@ -1,0 +1,391 @@
+---
+import type { CityData, FixedCosts, ExperienceLevel, NationalAverage } from '../../data/driving-costs';
+
+interface Props {
+  cities: CityData[];
+  fixedCosts: FixedCosts;
+  experienceLevels: ExperienceLevel[];
+  nationalAverage: NationalAverage;
+  defaultCitySlug?: string;
+  shareBaseUrl: string;
+}
+
+const {
+  cities,
+  fixedCosts,
+  experienceLevels,
+  nationalAverage,
+  defaultCitySlug = '',
+  shareBaseUrl,
+} = Astro.props;
+
+const citiesJson = JSON.stringify(cities);
+const fixedJson = JSON.stringify(fixedCosts);
+const levelsJson = JSON.stringify(experienceLevels);
+const nationalJson = JSON.stringify(nationalAverage);
+---
+
+<div
+  id="cost-calculator"
+  data-cities={citiesJson}
+  data-fixed={fixedJson}
+  data-levels={levelsJson}
+  data-national={nationalJson}
+  data-default={defaultCitySlug}
+  data-share-base={shareBaseUrl}
+>
+  <!-- ── Inputs ─────────────────────────────────────── -->
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 mb-6">
+
+    <!-- City -->
+    <div class="mb-6">
+      <label for="calc-city" class="block text-sm font-semibold text-gray-700 mb-2">
+        Your location
+      </label>
+      <select
+        id="calc-city"
+        class="w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent text-sm md:text-base"
+      >
+        <option value="">National average</option>
+        {cities.map((c) => (
+          <option value={c.slug} selected={c.slug === defaultCitySlug}>{c.name}</option>
+        ))}
+      </select>
+    </div>
+
+    <!-- Experience level -->
+    <div class="mb-6">
+      <p class="text-sm font-semibold text-gray-700 mb-3">Your experience level</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {experienceLevels.map((level, i) => (
+          <label class="calc-exp-label flex items-start gap-3 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-brand-red/40 transition-colors has-[:checked]:border-brand-red has-[:checked]:bg-[#FFF5F7]">
+            <input
+              type="radio"
+              name="calc-exp"
+              value={level.id}
+              checked={i === 0}
+              class="mt-0.5 accent-[#E94560]"
+            />
+            <div>
+              <div class="text-sm font-medium text-gray-900">{level.label}</div>
+              <div class="text-xs text-gray-500">{level.description}</div>
+            </div>
+          </label>
+        ))}
+      </div>
+    </div>
+
+    <!-- Transmission + Test timing -->
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div>
+        <p class="text-sm font-semibold text-gray-700 mb-2">Transmission</p>
+        <div class="flex rounded-xl overflow-hidden border border-gray-200">
+          <button type="button" id="trans-manual" data-trans="manual"
+            class="calc-trans-btn flex-1 py-2.5 text-sm font-medium transition-colors bg-brand-red text-white">
+            Manual
+          </button>
+          <button type="button" id="trans-auto" data-trans="automatic"
+            class="calc-trans-btn flex-1 py-2.5 text-sm font-medium transition-colors bg-white text-gray-600 hover:bg-gray-50">
+            Automatic
+          </button>
+        </div>
+        <p class="text-xs text-gray-400 mt-1.5">Automatic typically +£3–5/hr</p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-gray-700 mb-2">Test slot</p>
+        <div class="flex rounded-xl overflow-hidden border border-gray-200">
+          <button type="button" id="test-weekday" data-test="weekday"
+            class="calc-test-btn flex-1 py-2.5 text-sm font-medium transition-colors bg-brand-red text-white">
+            Weekday
+          </button>
+          <button type="button" id="test-weekend" data-test="weekend"
+            class="calc-test-btn flex-1 py-2.5 text-sm font-medium transition-colors bg-white text-gray-600 hover:bg-gray-50">
+            Weekend +£13
+          </button>
+        </div>
+        <p class="text-xs text-gray-400 mt-1.5">Weekday £62 · Evening/weekend £75</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Results ────────────────────────────────────── -->
+  <div id="calc-results" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+
+    <!-- Total -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 pb-6 border-b border-gray-100">
+      <div>
+        <p class="text-sm text-gray-500 mb-1">Estimated total cost</p>
+        <p id="result-total" class="text-3xl md:text-4xl font-bold text-brand-red">£—</p>
+        <p id="result-range" class="text-sm text-gray-500 mt-1">—</p>
+      </div>
+      <div class="mt-4 sm:mt-0 text-right">
+        <p class="text-xs text-gray-400 uppercase tracking-wider font-medium mb-1">Based on</p>
+        <p id="result-based-on" class="text-sm font-medium text-gray-700">—</p>
+      </div>
+    </div>
+
+    <!-- Breakdown -->
+    <div class="mb-6">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Cost breakdown</p>
+      <div class="space-y-2">
+        <div class="flex justify-between text-sm py-2 border-b border-gray-50">
+          <span class="text-gray-600">Provisional licence</span>
+          <span id="rb-provisional" class="font-medium text-gray-900">—</span>
+        </div>
+        <div class="flex justify-between text-sm py-2 border-b border-gray-50">
+          <span class="text-gray-600">Theory test</span>
+          <span id="rb-theory" class="font-medium text-gray-900">—</span>
+        </div>
+        <div class="flex justify-between text-sm py-2 border-b border-gray-50">
+          <span id="rb-test-label" class="text-gray-600">Practical test</span>
+          <span id="rb-practical" class="font-medium text-gray-900">—</span>
+        </div>
+        <div class="flex justify-between text-sm py-2 border-b border-gray-50">
+          <span class="text-gray-600">Theory prep app</span>
+          <span id="rb-theory-app" class="font-medium text-gray-900">—</span>
+        </div>
+        <div class="flex justify-between text-sm py-2 border-b border-gray-50 bg-gray-50/60 px-2 rounded">
+          <span id="rb-lessons-label" class="text-gray-700 font-medium">Lessons</span>
+          <span id="rb-lessons" class="font-semibold text-gray-900">—</span>
+        </div>
+        <div class="flex justify-between text-sm py-2 font-bold border-t-2 border-gray-200 pt-3">
+          <span class="text-gray-900">Estimated total</span>
+          <span id="rb-total" class="text-brand-red">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monthly spread -->
+    <div id="result-monthly" class="bg-blue-50 rounded-xl p-4 mb-6">
+      <p class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">Spread over time</p>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="text-center">
+          <p id="monthly-6" class="text-lg font-bold text-blue-900">—</p>
+          <p class="text-xs text-blue-600">Per month<br/>over 6 months</p>
+        </div>
+        <div class="text-center">
+          <p id="monthly-9" class="text-lg font-bold text-blue-900">—</p>
+          <p class="text-xs text-blue-600">Per month<br/>over 9 months</p>
+        </div>
+        <div class="text-center">
+          <p id="monthly-12" class="text-lg font-bold text-blue-900">—</p>
+          <p class="text-xs text-blue-600">Per month<br/>over 12 months</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pass rate + lessons -->
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="bg-gray-50 rounded-xl p-4 text-center">
+        <p id="result-lessons" class="text-2xl font-bold text-gray-900">—</p>
+        <p class="text-xs text-gray-500 mt-1">estimated lessons</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-4 text-center">
+        <p id="result-pass-rate" class="text-2xl font-bold text-gray-900">—</p>
+        <p class="text-xs text-gray-500 mt-1">first-time pass rate</p>
+      </div>
+    </div>
+
+    <!-- Share + disclaimer -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <button
+        id="calc-share-btn"
+        type="button"
+        class="inline-flex items-center gap-2 text-sm font-medium text-brand-red hover:underline"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+        </svg>
+        Share these results
+      </button>
+      <p id="calc-share-msg" class="text-xs text-green-600 hidden">Link copied to clipboard!</p>
+      <p class="text-xs text-gray-400">Estimates based on publicly available data. Prices vary.</p>
+    </div>
+  </div>
+
+  <!-- ADI CTA -->
+  <div class="bg-[#FFF5F7] rounded-xl p-5 mt-6 border border-[#FECDD3]">
+    <p class="font-semibold text-gray-900 text-sm">Are you a driving instructor?</p>
+    <p class="text-gray-600 text-sm mt-1">
+      DriveSchoolPro helps UK ADIs manage students, schedule lessons, and track DVSA progress — all from your phone.
+    </p>
+    <a href="/get-started/" class="inline-block mt-3 text-brand-red font-semibold text-sm hover:underline">
+      Try it free →
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    const container = document.getElementById('cost-calculator');
+    if (!container) return;
+
+    const CITIES      = JSON.parse(container.dataset.cities);
+    const FIXED       = JSON.parse(container.dataset.fixed);
+    const LEVELS      = JSON.parse(container.dataset.levels);
+    const NATIONAL    = JSON.parse(container.dataset.national);
+    const shareBase   = container.dataset.shareBase;
+
+    // ── State ────────────────────────────────────
+    let citySlug     = container.dataset.default || '';
+    let expId        = 'none';
+    let transmission = 'manual';
+    let testTiming   = 'weekday';
+
+    // ── Read URL params on load ──────────────────
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('city'))  citySlug     = params.get('city');
+    if (params.get('exp'))   expId        = params.get('exp');
+    if (params.get('trans')) transmission = params.get('trans');
+    if (params.get('test'))  testTiming   = params.get('test');
+
+    // ── DOM refs ─────────────────────────────────
+    const citySelect    = document.getElementById('calc-city');
+    const transButtons  = document.querySelectorAll('.calc-trans-btn');
+    const testButtons   = document.querySelectorAll('.calc-test-btn');
+
+    // ── Apply loaded state to form ───────────────
+    if (citySlug) citySelect.value = citySlug;
+    document.querySelectorAll('input[name="calc-exp"]').forEach(r => {
+      if (r.value === expId) r.checked = true;
+    });
+    applyToggle(transButtons, 'trans', transmission);
+    applyToggle(testButtons, 'test', testTiming);
+
+    // ── Calculate ────────────────────────────────
+    function calculate() {
+      const city = CITIES.find(c => c.slug === citySlug);
+      const exp  = LEVELS.find(l => l.id === expId);
+
+      const baseLessons = city
+        ? city.avgLessonsToPass * exp.lessonsMultiplier
+        : NATIONAL.lessonsToPass * exp.lessonsMultiplier;
+
+      const transExtra = transmission === 'automatic' ? 3.5 : 0;
+
+      const priceLow  = (city ? city.avgLessonPriceRange[0] : NATIONAL.lessonPriceRange[0]) + transExtra;
+      const priceHigh = (city ? city.avgLessonPriceRange[1] : NATIONAL.lessonPriceRange[1]) + transExtra;
+      const priceAvg  = (city ? city.avgLessonPrice : NATIONAL.lessonPrice) + transExtra;
+
+      const testFee = testTiming === 'weekend'
+        ? FIXED.practicalTest.weekend
+        : FIXED.practicalTest.weekday;
+
+      const fixedTotal = FIXED.provisionalLicence + FIXED.theoryTest + testFee + FIXED.theoryPrepApp;
+      const estLessons = Math.round(baseLessons);
+
+      const lessonAvg  = Math.round(estLessons * priceAvg);
+      const lessonLow  = Math.round(estLessons * priceLow);
+      const lessonHigh = Math.round(estLessons * priceHigh);
+
+      const totalAvg  = fixedTotal + lessonAvg;
+      const totalLow  = fixedTotal + lessonLow;
+      const totalHigh = fixedTotal + lessonHigh;
+
+      return {
+        city,
+        exp,
+        estLessons,
+        priceAvg,
+        testFee,
+        fixedTotal,
+        lessonAvg,
+        lessonLow,
+        lessonHigh,
+        totalAvg,
+        totalLow,
+        totalHigh,
+        passRate: city ? city.passRate : NATIONAL.passRate,
+      };
+    }
+
+    // ── Render ───────────────────────────────────
+    function fmt(n) { return '£' + n.toLocaleString('en-GB'); }
+
+    function render() {
+      const r = calculate();
+      const cityName = r.city ? r.city.name : 'UK national average';
+      const expLabel = r.exp.label.toLowerCase();
+
+      document.getElementById('result-total').textContent   = fmt(r.totalAvg);
+      document.getElementById('result-range').textContent   = `Range: ${fmt(r.totalLow)} – ${fmt(r.totalHigh)}`;
+      document.getElementById('result-based-on').textContent = `${cityName}, ${expLabel}`;
+
+      document.getElementById('rb-provisional').textContent  = fmt(FIXED.provisionalLicence);
+      document.getElementById('rb-theory').textContent       = fmt(FIXED.theoryTest);
+      document.getElementById('rb-practical').textContent    = fmt(r.testFee);
+      document.getElementById('rb-test-label').textContent   = testTiming === 'weekend'
+        ? 'Practical test (evening/weekend)' : 'Practical test (weekday)';
+      document.getElementById('rb-theory-app').textContent   = fmt(FIXED.theoryPrepApp);
+      document.getElementById('rb-lessons-label').textContent =
+        `${r.estLessons} lessons × ${fmt(Math.round(r.priceAvg))}/hr`;
+      document.getElementById('rb-lessons').textContent      = fmt(r.lessonAvg);
+      document.getElementById('rb-total').textContent        = fmt(r.totalAvg);
+
+      document.getElementById('monthly-6').textContent   = fmt(Math.round(r.totalAvg / 6));
+      document.getElementById('monthly-9').textContent   = fmt(Math.round(r.totalAvg / 9));
+      document.getElementById('monthly-12').textContent  = fmt(Math.round(r.totalAvg / 12));
+
+      document.getElementById('result-lessons').textContent   = r.estLessons;
+      document.getElementById('result-pass-rate').textContent = r.passRate.toFixed(1) + '%';
+    }
+
+    // ── Toggle helpers ───────────────────────────
+    function applyToggle(buttons, attr, activeVal) {
+      buttons.forEach(btn => {
+        const isActive = btn.dataset[attr] === activeVal;
+        btn.classList.toggle('bg-brand-red', isActive);
+        btn.classList.toggle('text-white', isActive);
+        btn.classList.toggle('bg-white', !isActive);
+        btn.classList.toggle('text-gray-600', !isActive);
+      });
+    }
+
+    // ── Event listeners ──────────────────────────
+    citySelect.addEventListener('change', e => {
+      citySlug = e.target.value;
+      render();
+    });
+
+    document.querySelectorAll('input[name="calc-exp"]').forEach(r => {
+      r.addEventListener('change', e => {
+        expId = e.target.value;
+        render();
+      });
+    });
+
+    transButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        transmission = btn.dataset.trans;
+        applyToggle(transButtons, 'trans', transmission);
+        render();
+      });
+    });
+
+    testButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        testTiming = btn.dataset.test;
+        applyToggle(testButtons, 'test', testTiming);
+        render();
+      });
+    });
+
+    // ── Share ────────────────────────────────────
+    document.getElementById('calc-share-btn').addEventListener('click', () => {
+      const url = new URL(shareBase);
+      if (citySlug)            url.searchParams.set('city', citySlug);
+      if (expId !== 'none')    url.searchParams.set('exp', expId);
+      if (transmission !== 'manual')  url.searchParams.set('trans', transmission);
+      if (testTiming !== 'weekday')   url.searchParams.set('test', testTiming);
+
+      navigator.clipboard.writeText(url.toString()).then(() => {
+        const msg = document.getElementById('calc-share-msg');
+        msg.classList.remove('hidden');
+        setTimeout(() => msg.classList.add('hidden'), 2500);
+      });
+    });
+
+    // ── Initial render ───────────────────────────
+    render();
+  })();
+</script>

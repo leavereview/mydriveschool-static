@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CostCalculator from '../../../components/calculator/CostCalculator.astro';
+import { CITIES, FIXED_COSTS, EXPERIENCE_LEVELS, NATIONAL_AVERAGE } from '../../../data/driving-costs';
+
+export function getStaticPaths() {
+  return CITIES.map(city => ({
+    params: { city: city.slug },
+    props: { city },
+  }));
+}
+
+const { city } = Astro.props;
+
+// Generate unique contextual paragraph
+const nationalAvgPrice = NATIONAL_AVERAGE.lessonPrice;
+const priceDiff = city.avgLessonPrice - nationalAvgPrice;
+const priceCompare = priceDiff > 2
+  ? `£${priceDiff} above the UK national average of £${nationalAvgPrice}/hour`
+  : priceDiff < -2
+    ? `£${Math.abs(priceDiff)} below the UK national average of £${nationalAvgPrice}/hour`
+    : `broadly in line with the UK national average of £${nationalAvgPrice}/hour`;
+
+const passCompare = city.passRate > NATIONAL_AVERAGE.passRate
+  ? `above the national average of ${NATIONAL_AVERAGE.passRate}%`
+  : `below the national average of ${NATIONAL_AVERAGE.passRate}%`;
+
+const cityContext = `Learning to drive in ${city.name} typically costs between £${city.avgLessonPriceRange[0]} and £${city.avgLessonPriceRange[1]} per hour for a professional lesson — ${priceCompare}. The average learner in ${city.name} takes around ${city.avgLessonsToPass} professional lessons before passing their practical test. The first-time pass rate at ${city.name} test centres is ${city.passRate}%, ${passCompare}.`;
+
+// Estimate total cost range for meta description
+const estLow  = Math.round(city.avgLessonsToPass * city.avgLessonPriceRange[0] + 124);
+const estHigh = Math.round(city.avgLessonsToPass * city.avgLessonPriceRange[1] + 124);
+
+const otherCities = CITIES.filter(c => c.slug !== city.slug);
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://driveschoolpro.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Cost Calculator', item: 'https://driveschoolpro.com/tools/cost-calculator/' },
+    { '@type': 'ListItem', position: 3, name: city.name, item: `https://driveschoolpro.com/tools/cost-calculator/${city.slug}/` },
+  ],
+};
+---
+
+<BaseLayout
+  title={`Cost of Learning to Drive in ${city.name} 2026 | DriveSchoolPro`}
+  description={`How much does it cost to learn to drive in ${city.name}? Lesson prices from £${city.avgLessonPriceRange[0]}–£${city.avgLessonPriceRange[1]}/hour. Estimated total cost £${estLow.toLocaleString()}–£${estHigh.toLocaleString()}. Calculate your personalised estimate.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <section class="section bg-white border-b border-gray-100">
+    <div class="container-custom">
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          <li><a href="/" class="hover:text-gray-600">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/tools/cost-calculator/" class="hover:text-gray-600">Cost Calculator</a></li>
+          <li aria-hidden="true">›</li>
+          <li class="text-gray-600 font-medium">{city.name}</li>
+        </ol>
+      </nav>
+
+      <div class="max-w-2xl">
+        <h1 class="text-3xl md:text-4xl font-bold text-brand-navy mb-3">
+          Cost of Learning to Drive in {city.name}
+        </h1>
+        <p class="text-lg text-gray-600 mb-4">{cityContext}</p>
+
+        <!-- Quick stats -->
+        <div class="grid grid-cols-3 gap-3 mt-6">
+          <div class="bg-gray-50 rounded-xl p-3 text-center">
+            <p class="text-xl font-bold text-brand-navy">£{city.avgLessonPrice}</p>
+            <p class="text-xs text-gray-500 mt-0.5">avg/hour</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3 text-center">
+            <p class="text-xl font-bold text-brand-navy">{city.avgLessonsToPass}</p>
+            <p class="text-xs text-gray-500 mt-0.5">avg lessons</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3 text-center">
+            <p class="text-xl font-bold text-brand-navy">{city.passRate}%</p>
+            <p class="text-xs text-gray-500 mt-0.5">1st-time pass</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator (pre-filled with this city) -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-xl font-bold text-brand-navy mb-6">Calculate your personalised cost in {city.name}</h2>
+        <CostCalculator
+          cities={CITIES}
+          fixedCosts={FIXED_COSTS}
+          experienceLevels={EXPERIENCE_LEVELS}
+          nationalAverage={NATIONAL_AVERAGE}
+          defaultCitySlug={city.slug}
+          shareBaseUrl={`https://driveschoolpro.com/tools/cost-calculator/${city.slug}/`}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare other cities -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-xl font-bold text-brand-navy mb-2">Compare driving costs in other cities</h2>
+        <p class="text-gray-500 text-sm mb-5">See how {city.name} compares across the UK.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+          {otherCities.map((other) => (
+            <a
+              href={`/tools/cost-calculator/${other.slug}/`}
+              class="flex flex-col items-center text-center px-3 py-3 rounded-lg bg-gray-50 border border-gray-100 text-gray-700 hover:border-brand-red hover:text-brand-red transition-colors"
+            >
+              <span class="text-sm font-medium">{other.name}</span>
+              <span class="text-xs text-gray-400 mt-0.5">£{other.avgLessonPrice}/hr</span>
+            </a>
+          ))}
+        </div>
+        <p class="mt-4 text-center">
+          <a href="/tools/cost-calculator/" class="text-sm text-brand-red hover:underline font-medium">
+            ← Back to the full calculator
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

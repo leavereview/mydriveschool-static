@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CostCalculator from '../../../components/calculator/CostCalculator.astro';
+import { CITIES, FIXED_COSTS, EXPERIENCE_LEVELS, NATIONAL_AVERAGE } from '../../../data/driving-costs';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://driveschoolpro.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://driveschoolpro.com/tools/' },
+    { '@type': 'ListItem', position: 3, name: 'Cost Calculator', item: 'https://driveschoolpro.com/tools/cost-calculator/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does it cost to learn to drive in the UK?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The total cost of learning to drive in the UK typically ranges from £1,200 to £2,500. This includes a provisional licence (£34), theory test (£23), practical test (£62 weekday / £75 weekend), and an average of 45 professional lessons at £30–40 per hour.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many driving lessons do I need?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The DVSA recommends an average of 45 hours of professional lessons. Complete beginners may need more, while those with prior experience may need fewer. Combining professional lessons with private practice can reduce the total number of paid lessons needed.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a driving lesson cost per hour in the UK?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'UK driving lesson prices typically range from £25 to £45 per hour depending on location. London averages £40/hour, while northern cities average £28–33/hour. Automatic lessons usually cost £2–5 more per hour than manual.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I reduce the cost of learning to drive?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — buying lesson packages (e.g., 10 lessons at a discount), supplementing professional lessons with private practice in a family car, and choosing a weekday test slot (£62 vs £75 weekend) can reduce overall costs significantly.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does manual or automatic cost more?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Automatic lessons typically cost £2–5 more per hour than manual. However, automatic learners often pass in fewer lessons. If you only plan to drive automatic cars, it may be worth the slightly higher per-lesson cost.',
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Cost of Learning to Drive Calculator | UK 2026 | DriveSchoolPro"
+  description="Calculate how much it costs to learn to drive in the UK. Enter your city and experience level for a personalised breakdown of lessons, tests, and all fees."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="section bg-white border-b border-gray-100">
+    <div class="container-custom">
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          <li><a href="/" class="hover:text-gray-600">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/tools/cost-calculator/" class="text-gray-600 font-medium">Cost Calculator</a></li>
+        </ol>
+      </nav>
+
+      <div class="max-w-2xl">
+        <h1 class="text-3xl md:text-4xl font-bold text-brand-navy mb-3">
+          How Much Does It Cost to Learn to Drive?
+        </h1>
+        <p class="text-lg text-gray-600">
+          Get a personalised estimate based on your location and experience. Updated for 2026 with current DVSA test fees.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+        <CostCalculator
+          cities={CITIES}
+          fixedCosts={FIXED_COSTS}
+          experienceLevels={EXPERIENCE_LEVELS}
+          nationalAverage={NATIONAL_AVERAGE}
+          shareBaseUrl="https://driveschoolpro.com/tools/cost-calculator/"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-8">Common questions about driving lesson costs</h2>
+        <div class="space-y-4" id="faq">
+          {faqSchema.mainEntity.map((faq) => (
+            <details class="group bg-white rounded-xl border border-gray-100 shadow-sm">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-gray-900 list-none">
+                {faq.name}
+                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-3 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-50 pt-3">
+                {faq.acceptedAnswer.text}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- City pages grid -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-xl font-bold text-brand-navy mb-2">Cost of driving lessons by city</h2>
+        <p class="text-gray-600 text-sm mb-6">See city-specific lesson prices, average lessons to pass, and local pass rates.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+          {CITIES.map((city) => (
+            <a
+              href={`/tools/cost-calculator/${city.slug}/`}
+              class="text-sm px-3 py-2 rounded-lg bg-white border border-gray-100 text-gray-700 hover:border-brand-red hover:text-brand-red transition-colors text-center"
+            >
+              {city.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
