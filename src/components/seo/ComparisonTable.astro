@@ -11,9 +11,8 @@
  *
  * Usage:
  * <ComparisonTable
- *   title="Dog Daycare Software Comparison"
- *   description="Compare features across leading pet care platforms"
- *   headers={['Feature', 'Basic Plan', 'Pro Plan', 'Enterprise']}
+ *   title="Why Schools Choose DriveSchoolPro"
+ *   headers={['DriveSchoolPro', 'Generic Software', 'Manual/Spreadsheets']}
  *   rows={tableData}
  * />
  */
@@ -29,6 +28,8 @@ interface Props {
   description?: string;
   headers: string[];
   rows: ComparisonRow[];
+  rowHeader?: string;       // Header label for the feature-name column (default: empty)
+  highlightColumn?: number; // 0-based index into headers[] to highlight (default: 0)
   sortable?: boolean;
   className?: string;
 }
@@ -38,218 +39,118 @@ const {
   description,
   headers,
   rows,
+  rowHeader = '',
+  highlightColumn = 0,
   sortable = false,
   className = ''
 } = Astro.props;
 
-// Format cell values for display
-function formatValue(value: string | number | boolean): string {
-  if (typeof value === 'boolean') {
-    return value ? '✓' : '✗';
-  }
-  return String(value);
+function formatValue(value: string | number | boolean): { text: string; type: 'true' | 'false' | 'text' } {
+  if (value === true)  return { text: 'Yes', type: 'true' };
+  if (value === false) return { text: 'No',  type: 'false' };
+  return { text: String(value), type: 'text' };
 }
 ---
 
-<div class={`comparison-table-wrapper ${className}`}>
-  {description && (
-    <p class="comparison-table-description">{description}</p>
-  )}
+<section class={`py-12 md:py-16 bg-gray-50 ${className}`}>
+  <div class="container-custom">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-2">{title}</h2>
+      {description && (
+        <p class="text-gray-600 mb-6 text-base">{description}</p>
+      )}
 
-  <div class="table-responsive">
-    <table class="comparison-table" role="table">
-      <caption class="comparison-table-title">{title}</caption>
-      <thead>
-        <tr>
-          {headers.map((header, index) => (
-            <th
-              scope="col"
-              class={sortable ? 'sortable' : ''}
-              data-column={index}
-            >
-              {header}
-              {sortable && <span class="sort-icon" aria-hidden="true">↕</span>}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((row) => (
-          <tr class={row.highlight ? 'highlight-row' : ''}>
-            <th scope="row" class="row-label">{row.label}</th>
-            {row.values.map((value) => (
-              <td class={typeof value === 'boolean' ? `bool-${value}` : ''}>
-                {formatValue(value)}
-              </td>
+      <div class="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+        <table class="w-full border-collapse bg-white text-sm md:text-base rounded-xl overflow-hidden shadow-sm" role="table" style="min-width: 560px;">
+          <thead>
+            <tr>
+              <!-- Feature name column header -->
+              <th scope="col" class="text-left py-3 px-4 font-semibold text-gray-700 border-b-2 border-gray-200 bg-gray-100 w-[40%]">
+                {rowHeader}
+              </th>
+              <!-- Value column headers -->
+              {headers.map((header, i) => (
+                <th
+                  scope="col"
+                  class={[
+                    'text-center py-3 px-4 font-bold border-b-2 w-[20%]',
+                    i === highlightColumn
+                      ? 'bg-[#FFF0F3] text-brand-red border-brand-red/30'
+                      : 'bg-gray-100 text-gray-700 border-gray-200'
+                  ].join(' ')}
+                  data-column={i + 1}
+                >
+                  {header}
+                  {sortable && <span class="sort-icon ml-1 opacity-60 text-xs" aria-hidden="true">↕</span>}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr class={['border-b border-gray-100 transition-colors', row.highlight ? 'bg-amber-50/60 hover:bg-amber-50' : 'hover:bg-gray-50'].join(' ')}>
+                <!-- Feature name cell -->
+                <th scope="row" class="text-left py-3 px-4 font-medium text-gray-800 text-sm md:text-base">
+                  {row.label}
+                </th>
+                <!-- Value cells -->
+                {row.values.map((value, i) => {
+                  const { text, type } = formatValue(value);
+                  const isDsp = i === highlightColumn;
+                  return (
+                    <td class={[
+                      'py-3 px-4 text-center',
+                      isDsp ? 'bg-[#FFFBFC]' : ''
+                    ].join(' ')}>
+                      {type === 'true' && (
+                        <span class="inline-flex items-center justify-center" aria-label="Yes">
+                          <svg class={['w-5 h-5 mx-auto', isDsp ? 'text-brand-red' : 'text-green-500'].join(' ')} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                      )}
+                      {type === 'false' && (
+                        <span class="inline-flex items-center justify-center" aria-label="No">
+                          <svg class="w-5 h-5 mx-auto text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </span>
+                      )}
+                      {type === 'text' && (
+                        <span class="text-gray-700">{text}</span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
             ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-</div>
-
-<style>
-  .comparison-table-wrapper {
-    margin: 2rem 0;
-  }
-
-  .comparison-table-description {
-    color: #64748b;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-  }
-
-  .comparison-table-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--brand-navy, #1A1A2E);
-    margin-bottom: 1.5rem;
-    text-align: left;
-    caption-side: top;
-  }
-
-  .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    font-size: 0.95rem;
-  }
-
-  .comparison-table thead {
-    background: var(--brand-navy, #1A1A2E);
-    color: white;
-  }
-
-  .comparison-table th {
-    padding: 1rem;
-    text-align: left;
-    font-weight: 600;
-    border-bottom: 2px solid #e2e8f0;
-  }
-
-  .comparison-table thead th {
-    color: white;
-    border-bottom-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .comparison-table th.sortable {
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .comparison-table th.sortable:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .sort-icon {
-    margin-left: 0.5rem;
-    opacity: 0.6;
-    font-size: 0.875rem;
-  }
-
-  .comparison-table td {
-    padding: 0.875rem 1rem;
-    border-bottom: 1px solid #e2e8f0;
-  }
-
-  .comparison-table .row-label {
-    font-weight: 600;
-    color: var(--brand-navy, #1A1A2E);
-    background: #f8f9fa;
-  }
-
-  .comparison-table tbody tr:hover {
-    background: #f8f9fa;
-  }
-
-  .comparison-table .highlight-row {
-    background: #fff7ed;
-  }
-
-  .comparison-table .highlight-row:hover {
-    background: #ffedd5;
-  }
-
-  .comparison-table .bool-true {
-    color: #059669;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1.25rem;
-  }
-
-  .comparison-table .bool-false {
-    color: #dc2626;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1.25rem;
-    opacity: 0.4;
-  }
-
-  @media (max-width: 768px) {
-    .comparison-table {
-      font-size: 0.875rem;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-      padding: 0.75rem 0.5rem;
-    }
-
-    .comparison-table-title {
-      font-size: 1.25rem;
-    }
-  }
-</style>
+</section>
 
 {sortable && (
   <script>
-    // Client-side table sorting
     document.querySelectorAll('.comparison-table th.sortable').forEach(header => {
       header.addEventListener('click', () => {
         const table = header.closest('table');
         const tbody = table?.querySelector('tbody');
         const columnIndex = parseInt(header.getAttribute('data-column') || '0');
-
         if (!tbody) return;
-
         const rows = Array.from(tbody.querySelectorAll('tr'));
         const isAscending = header.classList.contains('sort-asc');
-
         rows.sort((a, b) => {
           const aValue = a.children[columnIndex].textContent?.trim() || '';
           const bValue = b.children[columnIndex].textContent?.trim() || '';
-
-          // Try numeric comparison first
           const aNum = parseFloat(aValue);
           const bNum = parseFloat(bValue);
-
-          if (!isNaN(aNum) && !isNaN(bNum)) {
-            return isAscending ? bNum - aNum : aNum - bNum;
-          }
-
-          // Fallback to string comparison
-          return isAscending
-            ? bValue.localeCompare(aValue)
-            : aValue.localeCompare(bValue);
+          if (!isNaN(aNum) && !isNaN(bNum)) return isAscending ? bNum - aNum : aNum - bNum;
+          return isAscending ? bValue.localeCompare(aValue) : aValue.localeCompare(bValue);
         });
-
-        // Update DOM
         rows.forEach(row => tbody.appendChild(row));
-
-        // Update header classes
-        if (table) {
-          table.querySelectorAll('th').forEach(th => {
-            th.classList.remove('sort-asc', 'sort-desc');
-          });
-        }
+        if (table) table.querySelectorAll('th').forEach(th => th.classList.remove('sort-asc', 'sort-desc'));
         header.classList.add(isAscending ? 'sort-desc' : 'sort-asc');
       });
     });
