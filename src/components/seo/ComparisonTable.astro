@@ -61,7 +61,8 @@ function formatValue(value: string | number | boolean): { text: string; type: 't
       )}
 
       <div class="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-        <table class="w-full border-collapse bg-white text-sm md:text-base rounded-xl overflow-hidden shadow-sm" role="table" style="min-width: 560px;">
+        <div class="rounded-xl overflow-hidden shadow-sm">
+        <table class="w-full border-collapse bg-white text-sm md:text-base" role="table" style="min-width: 560px;">
           <thead>
             <tr>
               <!-- Feature name column header -->
@@ -126,6 +127,7 @@ function formatValue(value: string | number | boolean): { text: string; type: 't
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   </div>
