@@ -5,3 +5,4 @@ Sitemap: https://driveschoolpro.com/sitemap-index.xml
 Sitemap: https://driveschoolpro.com/image-sitemap.xml
 
 Disallow: /api/
+Disallow: /*?utm_source=

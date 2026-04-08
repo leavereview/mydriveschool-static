@@ -30,6 +30,7 @@ export default defineConfig({
   },
   vite: {
     build: {
+      minify: 'esbuild',
       cssCodeSplit: true,
       rollupOptions: {
         output: {

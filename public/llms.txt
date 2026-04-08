@@ -1,0 +1,39 @@
+# DriveSchoolPro
+
+> Driving school management software for UK ADIs and driving schools — lesson scheduling, student management, DVSA competency tracking, and automated billing.
+
+DriveSchoolPro helps independent driving instructors (ADIs) and driving school owners manage their business end-to-end. Tracks all 27 DVSA competency skills per student, automates lesson reminders to cut no-shows, and handles invoicing — so instructors can focus on teaching. Solo Plan from £29/month.
+
+## Core Pages
+
+- [Home](https://driveschoolpro.com/): Product overview, feature highlights, testimonials, and free trial
+- [Driving School Software](https://driveschoolpro.com/driving-school-management-software/): Full product overview — scheduling, student management, DVSA tracking, billing, and reminders
+- [Free Driving School Software](https://driveschoolpro.com/free-driving-school-software/): 14-day free trial with full feature access, no credit card required
+- [Pricing](https://driveschoolpro.com/pricing/): Solo Plan (£29/month) for independent ADIs; School Plan for multi-instructor schools launching soon
+- [About](https://driveschoolpro.com/about/): Product story and mission
+- [Contact](https://driveschoolpro.com/contact/): Start free trial or ask a question
+
+## DVSA Skills Reference
+
+- [All 27 DVSA Driving Skills](https://driveschoolpro.com/dvsa-27-driving-skills/): Complete reference for all 27 DVSA competency skills with 5-level progression framework (Introduced → Reflection)
+- [Basics (Skills 1–7)](https://driveschoolpro.com/driving-skills/basics/): Controls, cockpit drill, moving off, and stopping
+- [Observation & Signalling (Skills 8–13)](https://driveschoolpro.com/driving-skills/observation-signalling/): MSM routine, mirrors, signals, anticipation, speed, and eco-driving
+- [Junctions & Roundabouts (Skills 14–15)](https://driveschoolpro.com/driving-skills/junctions-roundabouts/): T-junctions, crossroads, and roundabout technique
+- [Pedestrian Crossings (Skill 16)](https://driveschoolpro.com/driving-skills/following-routes/): Crossing types and pedestrian priority
+- [Manoeuvres (Skills 17–21)](https://driveschoolpro.com/driving-skills/manoeuvres/): Reversing, bay parking, parallel parking, turn in road
+- [Road Types (Skills 22–24)](https://driveschoolpro.com/driving-skills/road-types/): Dual carriageways, motorways, and country roads
+- [Driving Conditions (Skills 25–27)](https://driveschoolpro.com/driving-skills/driving-conditions/): Night driving, adverse weather, and eco-safe driving
+
+## Tools
+
+- [Driving School Revenue Calculator](https://driveschoolpro.com/driving-school-calculator/): Free calculator for ADI earnings, utilisation rates, seasonal projections, and growth scenarios using UK industry benchmarks
+- [Driving Lesson Cost Calculator](https://driveschoolpro.com/tools/cost-calculator/): Local driving lesson pricing data by UK city
+
+## Blog & Guides
+
+- [Blog](https://driveschoolpro.com/blog/): 45+ guides on DVSA driving skills, driving test preparation, ADI business management, and UK driving instruction
+
+## Legal
+
+- [Privacy Policy](https://driveschoolpro.com/privacy-policy/)
+- [Terms of Service](https://driveschoolpro.com/terms/)
