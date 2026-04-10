@@ -62,7 +62,9 @@ Always use free trials with realistic scenarios.
 
 [Start your free trial](/contact/) with DriveSchoolPro. No credit card required, no long-term commitment.
 
-**Related Articles:**
+## Related Articles
+
+- [Driving School Scheduling Software](/driving-school-scheduling-software/)
 - [Best Driving School Software](/blog/best-driving-school-software/)
 - [Driving School Management Software](/driving-school-management-software/)
  Learn more about [Driving School Scheduling Software](/driving-school-scheduling-software/). See how [Driving School Software That Works As Hard As You Do](/driving-school-software/) can help. See how [Driving School Software: What's Actually Available?](/free-driving-school-software/) can help.

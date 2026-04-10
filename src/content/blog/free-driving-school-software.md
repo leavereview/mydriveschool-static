@@ -59,7 +59,9 @@ For £29/month, proper software pays for itself in saved time and reduced no-sho
 
 [Try DriveSchoolPro free for 14 days](/contact/). See how much time you save with proper scheduling, automated reminders, and online booking.
 
-**Related Articles:**
+## Related Articles
+
+- [Driving School Software](/driving-school-software/)
 - [Best Driving School Software](/blog/best-driving-school-software/)
 - [How to Choose Scheduling Software](/blog/how-to-choose-driving-school-scheduling-software/)
  Check out [Driving School Scheduling Software](/driving-school-scheduling-software/).

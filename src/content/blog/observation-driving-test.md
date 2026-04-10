@@ -25,7 +25,7 @@ howTo:
 
 Observation and anticipation are the foundation of everything on your driving test. You can master the mechanical controls, know every junction rule, and handle roundabouts perfectly — but if you're not reading the road and acting on what you see, examiners will record faults from the first minute.
 
-The DVSA examiner is not watching whether you look. They're watching whether you *act on what you see*, at the right moment, consistently across the full test. This guide explains exactly what that means, how it's assessed, and how to develop the habits that make observation second-nature before test day. Observation underpins every other driving skill — from how you approach a [junction](/blog/junctions-driving-test) to how you position yourself before a [roundabout](/blog/roundabout-rules-uk). Getting it right here raises your standard everywhere.
+The DVSA examiner is not watching whether you look. They're watching whether you *act on what you see*, at the right moment, consistently across the full test. This guide explains exactly what that means, how it's assessed, and how to develop the habits that make observation second-nature before test day. Observation underpins every skill in the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) — from how you approach a [junction](/blog/junctions-driving-test) to how you position yourself before a [roundabout](/blog/roundabout-rules-uk). Getting it right here raises your standard everywhere.
 
 ---
 
