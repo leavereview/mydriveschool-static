@@ -2,6 +2,7 @@
 // Blog Post Template - /blog/[slug]
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorByline from '../../components/AuthorByline.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -101,17 +102,7 @@ const relatedPosts = allPosts
           <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
             {post.data.title}
           </h1>
-          <div class="flex items-center gap-4 text-gray-300">
-            <span>{post.data.author}</span>
-            <span>•</span>
-            <time datetime={post.data.date}>
-              {new Date(post.data.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}
-            </time>
-          </div>
+          <AuthorByline date={post.data.date} />
         </div>
       </div>
     </header>
