@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const entries = [
+  {
+    date: "April 2026",
+    tag: "Portal",
+    title: "Student booking portal redesign",
+    body: "Students can now book and reschedule lessons directly from a redesigned dashboard — with a weekly calendar view, live instructor availability, and one-tap confirmation. The updated portal works smoothly on mobile without any app download.",
+  },
+  {
+    date: "April 2026",
+    tag: "Messaging",
+    title: "WhatsApp messaging for lesson reminders",
+    body: "Driving schools on DriveSchoolPro can now connect a WhatsApp Business number to send lesson reminders and follow-ups directly from the platform — in addition to existing SMS and email notifications.",
+  },
+  {
+    date: "March 2026",
+    tag: "Payments",
+    title: "Stripe Connect payment processing",
+    body: "Instructors can now accept card payments from students through Stripe Connect. Set up takes a few minutes from Settings — funds land directly in your bank account with no DriveSchoolPro middleman.",
+  },
+  {
+    date: "March 2026",
+    tag: "Calendar",
+    title: "iCal subscription feeds for instructors",
+    body: "Instructors can now subscribe their lesson schedule to any calendar app using a private iCal URL — works with Google Calendar, Apple Calendar, Outlook, and any app that supports the iCal standard.",
+  },
+  {
+    date: "March 2026",
+    tag: "Booking",
+    title: "Three-way conflict detection",
+    body: "The booking system now checks for scheduling conflicts across instructor, vehicle, and student simultaneously before confirming a lesson. When a conflict is found, it automatically suggests the next available slot.",
+  },
+  {
+    date: "February 2026",
+    tag: "DVSA",
+    title: "DVSA Ready to Pass framework integration",
+    body: "DriveSchoolPro now tracks student progress across all 27 DVSA driving skills, organised into 8 categories aligned with the official Ready to Pass framework. Instructors log skill levels after each lesson; students can see their progress in the portal.",
+  },
+  {
+    date: "February 2026",
+    tag: "Portal",
+    title: "Student self-service portal",
+    body: "Students can now log in to view their lesson history, upcoming bookings, and DVSA skill progress — without needing to contact their instructor. The portal uses a separate secure login and requires no app installation.",
+  },
+  {
+    date: "February 2026",
+    tag: "Reminders",
+    title: "Automated lesson reminders",
+    body: "DriveSchoolPro now sends automated SMS and email reminders to students before each lesson. Reminder timing is configurable from Settings — schools typically see a significant drop in no-shows within the first month.",
+  },
+  {
+    date: "February 2026",
+    tag: "Dashboard",
+    title: "Revenue tracking dashboard",
+    body: "The main dashboard now shows revenue totals, lesson counts, and outstanding balances at a glance — broken down by instructor and date range. Useful for end-of-month reviews without exporting a spreadsheet.",
+  },
+  {
+    date: "February 2026",
+    tag: "Tools",
+    title: "Cost of learning calculator",
+    body: "A free tool for driving schools to share with prospective students. It calculates the expected total cost of learning to drive based on current lesson prices, average hours to test, and theory test fees — personalised to each school.",
+  },
+];
+
+const tagColours: Record<string, string> = {
+  Portal: "bg-blue-100 text-blue-800",
+  Payments: "bg-green-100 text-green-800",
+  Calendar: "bg-purple-100 text-purple-800",
+  Booking: "bg-orange-100 text-orange-800",
+  DVSA: "bg-red-100 text-red-800",
+  Reminders: "bg-yellow-100 text-yellow-800",
+  Dashboard: "bg-indigo-100 text-indigo-800",
+  Tools: "bg-teal-100 text-teal-800",
+  Messaging: "bg-pink-100 text-pink-800",
+};
+---
+
+<BaseLayout
+  title="Changelog | DriveSchoolPro — What's New"
+  description="See the latest features and updates to DriveSchoolPro — driving school management software for UK ADIs."
+>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container-custom">
+      <Breadcrumbs items={[
+        { label: 'Home', href: '/' },
+        { label: 'Changelog' }
+      ]} />
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <div class="max-w-2xl">
+        <span class="inline-block bg-brand-red/20 text-brand-red-light px-3 py-1 rounded-full text-sm mb-4">Product Updates</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">What's New</h1>
+        <p class="text-xl text-gray-300">Recent updates to the DriveSchoolPro platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entries -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="max-w-2xl">
+        <p class="text-gray-600 mb-12">
+          DriveSchoolPro is actively developed and updated. Here's what we've shipped recently.
+        </p>
+
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute left-0 top-0 bottom-0 w-px bg-gray-200 ml-3 hidden md:block"></div>
+
+          <ol class="space-y-10">
+            {entries.map((entry) => (
+              <li class="md:pl-10 relative">
+                <!-- Timeline dot -->
+                <div class="hidden md:block absolute left-0 top-1.5 w-7 h-7 rounded-full bg-white border-2 border-brand-red flex items-center justify-center">
+                  <div class="w-2.5 h-2.5 rounded-full bg-brand-red"></div>
+                </div>
+
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <span class="text-sm text-gray-400 font-medium">{entry.date}</span>
+                    <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${tagColours[entry.tag] ?? 'bg-gray-100 text-gray-700'}`}>
+                      {entry.tag}
+                    </span>
+                  </div>
+                  <h2 class="text-lg font-bold text-brand-navy mb-1">{entry.title}</h2>
+                  <p class="text-gray-600 leading-relaxed">{entry.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 p-6 bg-brand-red-light rounded-xl">
+          <h3 class="text-lg font-bold text-brand-navy mb-2">Try the latest version free</h3>
+          <p class="text-gray-600 text-sm mb-4">14-day free trial. No credit card required. Full access to every feature from day one.</p>
+          <a href="https://app.driveschoolpro.com/signup" class="btn-primary">Start Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
