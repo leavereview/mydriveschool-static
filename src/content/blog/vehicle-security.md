@@ -21,7 +21,7 @@ howTo:
       text: "Before opening the driver's door, check the left door mirror and blind spot for cyclists, motorcyclists, and pedestrians. The car door opening into a cyclist's path (known as 'dooring') is a common serious accident. Open the door using the opposite hand to encourage you to turn and look — the 'Dutch reach'."
 ---
 
-Vehicle security might seem like a mundane topic compared to roundabouts or motorway driving, but it is assessed on your test and it connects to a genuinely important set of habits. An unsecured vehicle causes accidents — rolling into traffic, collisions at junctions from slipping out of gear, cyclists injured by opening doors. DVSA Skill 4 is the discipline of finishing a drive safely, which matters as much as everything that happened during it. It sits alongside every other foundational competency in [the 27 skills tracked by approved driving instructors](/dvsa-27-driving-skills/) — from the cockpit drill through to independent driving.
+Vehicle security might seem like a mundane topic compared to roundabouts or motorway driving, but it is assessed on your test and it connects to a genuinely important set of habits. An unsecured vehicle causes accidents — rolling into traffic, collisions at junctions from slipping out of gear, cyclists injured by opening doors. DVSA Skill 4 is the discipline of finishing a drive safely, which matters as much as everything that happened during it. It sits alongside every other foundational competency in [the 27 skills tracked by approved driving instructors](/dvsa-27-driving-skills/), including the [basics skills category](/driving-skills/basics/) covering the first lessons of every learner's training.
 
 ---
 
@@ -116,7 +116,7 @@ The regulation is increasingly enforced in air quality management zones and arou
 
 ## Track Your Progress
 
-Vehicle security habits are assessed throughout your test, not just at the end. Every stop is an observation point for the examiner. Aim for Level 4 — applying the full routine automatically at every stop — before your test date. This is one of the few skills where reaching Level 4 early in training is entirely possible, and it builds good foundations for everything that follows.
+Vehicle security habits are assessed throughout your test, not just at the end. Every stop is an observation point for the examiner. Aim for Level 4 — applying the full routine automatically at every stop — before your test date. This is one of the few skills where reaching Level 4 early in training is entirely possible, and it builds good foundations for everything that follows. Your instructor should be [tracking your progress](/blog/student-progress-tracking/) from the very first session.
 
 [Start Free Trial →](https://app.driveschoolpro.com/signup)
 

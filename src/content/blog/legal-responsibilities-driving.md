@@ -21,7 +21,7 @@ howTo:
       text: "For the first two years after passing your test, accumulating 6 or more penalty points results in your licence being revoked — not reduced to 3 as it would be for an established driver. You would need to retake both theory and practical tests."
 ---
 
-Legal responsibilities are the foundation of everything else in driving. Before you learn to steer, before you understand junctions, before you practise parallel parking — you must understand what it means to be a legally compliant driver on UK roads. DVSA Skill 1 is the starting point of the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) deliberately: a driver who understands their obligations is a more responsible driver, not just a more legal one.
+Legal responsibilities are the foundation of everything else in driving. Before you learn to steer, before you understand junctions, before you practise parallel parking — you must understand what it means to be a legally compliant driver on UK roads. DVSA Skill 1 is the starting point of the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) and the [basics skills group](/driving-skills/basics/) deliberately: a driver who understands their obligations is a more responsible driver, not just a more legal one.
 
 ---
 
@@ -64,7 +64,7 @@ You are at test-ready standard. You can explain not just what the rules are but 
 
 **Supervision**: While learning, you must be supervised by someone who is at least 21 years old and has held a full UK driving licence for at least three years. Your approved driving instructor (ADI) or trainee instructor (PDI) qualifies automatically. A friend or family member supervising you must meet both age and licence requirements.
 
-**Insurance**: At minimum, any vehicle you drive must have third-party insurance. Learner driver insurance policies are widely available — either as standalone policies or as short-term additions to an existing policy (often a parent's). Driving without insurance is a serious offence: six penalty points, a fine of up to £5,000, and possible disqualification.
+**Insurance**: At minimum, any vehicle you drive must have third-party insurance. Learner driver insurance policies are widely available — either as standalone policies or as short-term additions to an existing policy (often a parent's). Your instructor's [driving school insurance](/blog/driving-school-insurance-guide/) covers the training vehicle separately. Driving without insurance is a serious offence: six penalty points, a fine of up to £5,000, and possible disqualification.
 
 **MOT and road tax**: Vehicles over three years old require an annual MOT. Road tax (Vehicle Excise Duty, or VED) must be current. Both can be checked using the DVLA's free online vehicle check at gov.uk — search the registration plate. An untaxed or un-MOTed vehicle cannot legally be driven on a public road (with very limited exceptions).
 

@@ -29,7 +29,7 @@ The difference between a safe driver and a reactive one is time. Safe drivers bu
 
 Anticipation is one of the harder skills to assess because much of it is invisible — it shows up in what you do not have to do. A well-anticipated junction approach looks smooth and unhurried. A poorly anticipated one involves sudden braking, last-minute steering corrections, and a mildly sweating examiner.
 
-Examiners look for your speed to be **appropriate for the conditions** well before a hazard — not right as you reach it. If you are braking hard at a give way line, you did not anticipate the junction early enough. If you have already reduced your speed gently and are rolling in under control, that is what the examiner wants to see.
+Examiners look for your speed to be **appropriate for the conditions** well before a hazard — not right as you reach it. If you are braking hard at a give way line, you did not anticipate the [junction](/blog/junctions-driving-test/) early enough. If you have already reduced your speed gently and are rolling in under control, that is what the examiner wants to see.
 
 They also look at **how you respond to pedestrians and cyclists**. A pedestrian stepping off a kerb 50 metres ahead should cause you to cover the brake and gently reduce speed. Not notice them at all, then brake sharply when they step out, is a serious fault — or worse.
 
@@ -118,7 +118,7 @@ Good anticipation means never putting yourself in a position with nowhere to go.
 
 Anticipation is a skill that develops gradually across many hours of driving. The improvement is real but hard to measure without a record. Logging the specific hazards you missed or spotted late in each lesson — pedestrians, junctions, crests — turns vague "drive more" advice into a clear development curve.
 
-DriveSchoolPro lets instructors record anticipation faults by hazard type after each lesson, making it easy to see whether you are improving at static hazards but still struggling with dynamic ones, so practice stays targeted.
+DriveSchoolPro's [student progress tracking](/blog/student-progress-tracking/) lets instructors record anticipation faults by hazard type after each lesson, making it easy to see whether you are improving at static hazards but still struggling with dynamic ones, so practice stays targeted.
 
 [Start Free Trial →](https://app.driveschoolpro.com/signup)
 

@@ -37,7 +37,7 @@ The scheduling interface is genuinely well designed. Instructors can be assigned
 
 ### DVSA Progress Tracking
 
-DriveScout includes basic progress tracking tied to lesson records, but its DVSA competency mapping — the 27-skill framework that UK instructors use — is not as detailed as some UK-native platforms. Instructors who want to log progress against specific DVSA criteria with each lesson may find themselves working around limitations.
+DriveScout includes basic [progress tracking](/blog/student-progress-tracking/) tied to lesson records, but its DVSA competency mapping — the 27-skill framework that UK instructors use — is not as detailed as some UK-native platforms. Instructors who want to log progress against specific DVSA criteria with each lesson may find themselves working around limitations.
 
 ### Student Portal
 
@@ -150,7 +150,7 @@ DriveScout is easier to get running quickly. DrivingSchoolSoftware.com requires 
 Both platforms have genuine drawbacks that are worth taking seriously. DriveScout is expensive for what smaller UK schools actually need, and DrivingSchoolSoftware.com's interface creates friction in daily use. DriveSchoolPro is built specifically for UK driving schools with:
 
 - Simple, modern interface instructors can use from day one
-- Flat monthly pricing from £29 — no setup fees, no per-student surprises
+- [Flat monthly pricing from £29](/pricing/) — no setup fees, no per-student surprises
 - UK-focused features including DVSA progress tracking
 - GoCardless integration for direct debit lesson packages
 - Student portal that works on mobile without friction

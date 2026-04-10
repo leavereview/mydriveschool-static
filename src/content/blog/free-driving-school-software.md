@@ -36,7 +36,7 @@ Basic appointment booking with limited features.
 ## The True Cost of "Free"
 
 - **Time** – More manual work
-- **No-shows** – Without reminders, more missed appointments
+- **No-shows** – Without reminders, [more missed appointments and lost revenue](/blog/reduce-no-shows-driving-school/)
 - **Errors** – Manual systems cause double-bookings
 - **Unprofessional image** – Students expect online booking
 
@@ -53,7 +53,7 @@ Basic appointment booking with limited features.
 - Students asking for online booking
 - Adding instructors
 
-For £29/month, proper software pays for itself in saved time and reduced no-shows.
+For [£29/month](/pricing/), proper software pays for itself in saved time and reduced no-shows.
 
 ## Try Before You Buy
 

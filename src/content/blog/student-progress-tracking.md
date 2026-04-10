@@ -201,7 +201,7 @@ Track total hours and lessons completed:
 - Theory test status (booked/passed)
 - Practical test date (when booked)
 
-This helps you and the student understand pacing relative to national averages (45-50 hours typical).
+This helps you and the student understand pacing relative to national averages (45-50 hours typical). Booking consistent weekly slots through a [scheduling system](/driving-school-scheduling-software/) makes hitting that pace much easier.
 
 ### 6. Communication Log
 
@@ -257,7 +257,7 @@ This protects you from "he said, she said" disputes.
 - ✅ Integrated with booking/billing
 
 **Cons:**
-- ⚠️ Monthly subscription cost (£29-99/month)
+- ⚠️ Monthly subscription cost (£29-99/month — [see current pricing](/pricing/))
 - ⚠️ Requires internet connection (usually)
 - ⚠️ Small learning curve (1-2 weeks)
 

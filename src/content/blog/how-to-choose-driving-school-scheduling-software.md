@@ -33,7 +33,7 @@ Go through as a student. Easy? Mobile-friendly?
 
 ### Understand Pricing
 
-Calculate total cost. Per-user pricing adds up.
+Calculate total cost. Per-user pricing adds up. [See how DriveSchoolPro's flat-rate pricing compares](/pricing/).
 
 ### Read Reviews
 
@@ -54,7 +54,7 @@ Always use free trials with realistic scenarios.
 ## Questions to Ask
 
 1. Can students book online?
-2. Are SMS reminders included?
+2. Are SMS reminders included? (Automated reminders [cut no-shows by up to 30%](/blog/reduce-no-shows-driving-school/))
 3. What happens if I cancel?
 4. Can I import existing data?
 

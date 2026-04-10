@@ -25,7 +25,7 @@ howTo:
 
 Country roads are statistically more dangerous than motorways, despite feeling quieter and less threatening. Roughly 60% of road fatalities in the UK occur on rural roads, even though they carry far less traffic than urban or dual-carriageway routes. The primary cause is inappropriate speed — drivers who treat the 60mph national speed limit as a target rather than a ceiling.
 
-DVSA Skill 21 is tested whenever the examiner routes your test through rural roads, which is common in many parts of the UK. More importantly, the habits built here will be the ones that keep you safe throughout your driving life — country roads are where inexperienced drivers are most likely to have a fatal collision. You can see how this skill fits within your broader training using the [DVSA's complete list of 27 driving competencies](/dvsa-27-driving-skills/).
+DVSA Skill 21 is tested whenever the examiner routes your test through rural roads, which is common in many parts of the UK. More importantly, the habits built here will be the ones that keep you safe throughout your driving life — country roads are where inexperienced drivers are most likely to have a fatal collision. You can see how this skill fits within your broader training using the [DVSA's complete list of 27 driving competencies](/dvsa-27-driving-skills/), including the [driving conditions skills](/driving-skills/driving-conditions/).
 
 ---
 
@@ -88,7 +88,7 @@ Farm vehicles can be enormous, slow, and very wide. Combine harvesters and grain
 
 Livestock on roads — cattle, sheep, horses — require you to slow almost to a stop and pass wide and slowly. A startled horse can throw a rider; a startled cow can push a gate open. Do not sound your horn near animals.
 
-Mud on the road from farm vehicles leaving a gateway is common in autumn and winter. It significantly reduces tyre grip. Treat muddy country roads as you would ice — gentle inputs and reduced speed.
+Mud on the road from farm vehicles leaving a gateway is common in autumn and winter. It significantly reduces tyre grip. Treat muddy country roads as you would ice — the same [adverse weather driving principles](/blog/driving-in-rain/) apply.
 
 ### Blind Summits
 

@@ -25,7 +25,7 @@ howTo:
 
 Observation and anticipation are the foundation of everything on your driving test. You can master the mechanical controls, know every junction rule, and handle roundabouts perfectly — but if you're not reading the road and acting on what you see, examiners will record faults from the first minute.
 
-The DVSA examiner is not watching whether you look. They're watching whether you *act on what you see*, at the right moment, consistently across the full test. This guide explains exactly what that means, how it's assessed, and how to develop the habits that make observation second-nature before test day. Observation underpins every skill in the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) — from how you approach a [junction](/blog/junctions-driving-test) to how you position yourself before a [roundabout](/blog/roundabout-rules-uk). Getting it right here raises your standard everywhere.
+The DVSA examiner is not watching whether you look. They're watching whether you *act on what you see*, at the right moment, consistently across the full test. This guide explains exactly what that means, how it's assessed, and how to develop the habits that make observation second-nature before test day. Observation underpins every skill in the [DVSA 27 driving skills framework](/dvsa-27-driving-skills/) — from how you approach a [junction](/blog/junctions-driving-test) to how you position yourself before a [roundabout](/blog/roundabout-rules-uk). Getting it right here raises your standard everywhere. You can explore all [observation and signalling skills](/driving-skills/observation-signalling/) in this category.
 
 ---
 
@@ -144,7 +144,7 @@ The skills transfer — drivers who do well at hazard perception tend to observe
 
 ## Track Your Progress
 
-Observation and anticipation develop with supervised practice — but only if you know which aspects need work. DriveSchoolPro tracks all 27 DVSA skills, including Skill 10, across every lesson. Your instructor records your level after each session, and you can see whether your observation is improving, plateauing, or regressing in specific driving environments.
+Observation and anticipation develop with supervised practice — but only if you know which aspects need work. DriveSchoolPro's [student progress tracking](/blog/student-progress-tracking/) covers all 27 DVSA skills, including Skill 10, across every lesson. Your instructor records your level after each session, and you can see whether your observation is improving, plateauing, or regressing in specific driving environments.
 
 [Start Free Trial →](https://app.driveschoolpro.com/signup)
 

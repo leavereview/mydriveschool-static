@@ -23,7 +23,7 @@ howTo:
       text: "In fog, drive at a speed where you can stop within your visible distance. On ice, travel at the lowest safe speed and brake, accelerate, and steer as gently as possible to avoid losing traction."
 ---
 
-Rain is one of the most common adverse conditions UK drivers face, yet it dramatically changes the physics of driving — braking distances nearly double on a wet road compared to dry tarmac. DVSA Skill 25 covers the full range of adverse weather conditions, and examiners assess whether you genuinely adapt your driving or simply carry on as if the conditions have not changed. Understanding the science behind wet-weather driving will help you pass your test and stay safe long after. This skill forms part of the broader [DVSA skill progression framework](/dvsa-27-driving-skills/) covering all aspects of safe and responsible driving.
+Rain is one of the most common adverse conditions UK drivers face, yet it dramatically changes the physics of driving — braking distances nearly double on a wet road compared to dry tarmac. DVSA Skill 25 covers the full range of adverse weather conditions, and examiners assess whether you genuinely adapt your driving or simply carry on as if the conditions have not changed. Understanding the science behind wet-weather driving will help you pass your test and stay safe long after. This skill forms part of the broader [DVSA skill progression framework](/dvsa-27-driving-skills/) covering all aspects of safe and responsible driving, and sits within the [driving conditions category](/driving-skills/driving-conditions/).
 
 ---
 
@@ -102,7 +102,7 @@ Ice and snow require the most dramatic speed reductions. Stopping distances on i
 
 ## Track Your Progress
 
-After each lesson in adverse weather conditions, rate yourself against the DVSA 1-5 scale for Skill 25. Consistent Level 4 performance — adapting your driving independently to whatever conditions you encounter — is the benchmark for test readiness. Your instructor should be formally logging this as part of your structured training.
+After each lesson in adverse weather conditions, rate yourself against the DVSA 1-5 scale for Skill 25. Consistent Level 4 performance — adapting your driving independently to whatever conditions you encounter — is the benchmark for test readiness. Your instructor should be formally logging this as part of your [structured training record](/blog/student-progress-tracking/).
 
 [Start Free Trial →](https://app.driveschoolpro.com/signup)
 
