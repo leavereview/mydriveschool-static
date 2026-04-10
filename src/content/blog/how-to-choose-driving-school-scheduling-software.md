@@ -60,7 +60,7 @@ Always use free trials with realistic scenarios.
 
 ## Ready to Choose?
 
-[Start your free trial](/contact/) with DriveSchoolPro. No credit card required, no long-term commitment.
+[Start your free trial](https://app.driveschoolpro.com/signup) with DriveSchoolPro. No credit card required, no long-term commitment.
 
 ## Related Articles
 

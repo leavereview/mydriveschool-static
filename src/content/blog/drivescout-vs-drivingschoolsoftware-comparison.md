@@ -155,7 +155,7 @@ Both platforms have genuine drawbacks that are worth taking seriously. DriveScou
 - GoCardless integration for direct debit lesson packages
 - Student portal that works on mobile without friction
 
-[Try DriveSchoolPro free](/contact/) and see how it compares in practice.
+[Try DriveSchoolPro free](https://app.driveschoolpro.com/signup) and see how it compares in practice.
 
 ## Related Articles
 

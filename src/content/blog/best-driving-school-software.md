@@ -140,7 +140,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 
 **Best Fit**: Independent UK driving schools or regional schools with 2-10 instructors who want comprehensive features without complexity.
 
-[Try DriveSchoolPro free for 14 days →](/contact/)
+[Try DriveSchoolPro free for 14 days →](https://app.driveschoolpro.com/signup)
 
 ### DriveScout ⭐ Best for US Multi-Location Schools
 
@@ -410,7 +410,7 @@ Yes, in purpose-built platforms. Any instructor assigned to a pupil should see t
 
 ### What if I want to see it in action first?
 
-All reputable platforms offer a demo or free trial. For **DriveSchoolPro**, the [14-day free trial](/contact/) requires no credit card. Import 5–10 real pupils and run a week of lessons through it — that's the only reliable test of whether a platform suits your workflow.
+All reputable platforms offer a demo or free trial. For **DriveSchoolPro**, the [14-day free trial](https://app.driveschoolpro.com/signup) requires no credit card. Import 5–10 real pupils and run a week of lessons through it — that's the only reliable test of whether a platform suits your workflow.
 
 ### What if I'm already using Google Calendar?
 
@@ -459,7 +459,7 @@ All reputable platforms allow data export (student lists, lesson history, financ
 The best time to implement driving school software was 2 years ago. The second best time is today.
 
 Most platforms offer free trials:
-- [Try DriveSchoolPro free for 14 days](/contact/) (no credit card required)
+- [Try DriveSchoolPro free for 14 days](https://app.driveschoolpro.com/signup) (no credit card required)
 - [DriveScout 7-day trial](https://www.drivescout.com)
 - [Acuity Scheduling 7-day trial](https://acuityscheduling.com)
 

@@ -57,7 +57,7 @@ For £29/month, proper software pays for itself in saved time and reduced no-sho
 
 ## Try Before You Buy
 
-[Try DriveSchoolPro free for 14 days](/contact/). See how much time you save with proper scheduling, automated reminders, and online booking.
+[Try DriveSchoolPro free for 14 days](https://app.driveschoolpro.com/signup). See how much time you save with proper scheduling, automated reminders, and online booking.
 
 ## Related Articles
 

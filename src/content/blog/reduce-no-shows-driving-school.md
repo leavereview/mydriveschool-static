@@ -102,7 +102,7 @@ Need to reschedule? Call [Phone] or use [Booking Link]
 - Cost per lesson reminder: £0.12 (4 messages total)
 - Break-even: If reminders prevent just ONE no-show per month, you save £35 vs £3.60 in SMS costs
 
-**Platform recommendation:** [DriveSchoolPro](/contact/) includes up to 500 SMS/month at no extra charge on standard plans.
+**Platform recommendation:** [DriveSchoolPro](https://app.driveschoolpro.com/signup) includes up to 500 SMS/month at no extra charge on standard plans.
 
 ### Strategy 2: Require Booking Deposits (Reduces No-Shows by 15-20%)
 
@@ -388,7 +388,7 @@ Implementing these strategies manually is time-consuming. The right [driving sch
 
 **Time saved:** 6-8 hours per week on manual reminders, follow-ups, and rescheduling coordination.
 
-[Start your free 14-day trial](/contact/) and watch your no-show rate drop within the first week.
+[Start your free 14-day trial](https://app.driveschoolpro.com/signup) and watch your no-show rate drop within the first week.
 
 ## Case Studies: Real Results from Real Schools
 
@@ -506,7 +506,7 @@ These three changes alone will reduce no-shows by 20-25% within the first month.
 
 The best part? Once set up, these systems run on autopilot.
 
-Ready to automate no-show prevention? [Try DriveSchoolPro free for 14 days](/contact/) and see the impact in your first week. Automated reminders, deposit collection, online rescheduling, and analytics dashboard—all in one platform.
+Ready to automate no-show prevention? [Try DriveSchoolPro free for 14 days](https://app.driveschoolpro.com/signup) and see the impact in your first week. Automated reminders, deposit collection, online rescheduling, and analytics dashboard—all in one platform.
 
 **Have questions about reducing no-shows?** [Contact our team](/contact/) for a free consultation. We've helped 1,200+ driving schools cut no-shows in half.
 

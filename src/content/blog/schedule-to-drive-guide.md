@@ -352,7 +352,7 @@ When scheduling works well:
 
 Managing student bookings, reminders, and your teaching schedule doesn't have to be complicated. [DriveSchoolPro](/driving-school-software/) handles scheduling, reminders, and payments in one platform—giving you back hours of admin time each week.
 
-[Start your free trial](/contact/) and see how much easier teaching to drive can be.
+[Start your free trial](https://app.driveschoolpro.com/signup) and see how much easier teaching to drive can be.
 
 ## Related Articles
 

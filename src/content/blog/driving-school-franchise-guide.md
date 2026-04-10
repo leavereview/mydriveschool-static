@@ -435,7 +435,7 @@ Neither is universally better—choose based on your situation, personality, and
 
 Whatever path you choose, [DriveSchoolPro](/driving-school-software/) helps you manage scheduling, student progress, and business operations on your terms—without franchise restrictions.
 
-[Start your free trial](/contact/) and build the driving instruction business you want.
+[Start your free trial](https://app.driveschoolpro.com/signup) and build the driving instruction business you want.
 
 ## Related Articles
 

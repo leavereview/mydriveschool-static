@@ -350,7 +350,7 @@ Never compromise on insurance. The cost of coverage is insignificant compared to
 
 [DriveSchoolPro](/driving-school-software/) helps maintain the professional records and documentation that support your business and insurance needs.
 
-[Start your free trial](/contact/) and run your driving school professionally.
+[Start your free trial](https://app.driveschoolpro.com/signup) and run your driving school professionally.
 
 ## Related Articles
 

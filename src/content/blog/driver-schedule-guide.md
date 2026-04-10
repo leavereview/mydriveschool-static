@@ -452,7 +452,7 @@ Good scheduling isn't set-and-forget—it's ongoing optimization.
 
 Managing instructor schedules, student bookings, and vehicle coordination takes time. [DriveSchoolPro](/driving-school-software/) handles scheduling, reminders, and coordination in one platform.
 
-[Start your free trial](/contact/) and see how much easier schedule management can be.
+[Start your free trial](https://app.driveschoolpro.com/signup) and see how much easier schedule management can be.
 
 ## Related Articles
 
