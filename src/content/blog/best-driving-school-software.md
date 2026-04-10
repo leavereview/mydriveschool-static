@@ -18,9 +18,9 @@ UK driving instructors have requirements that generic appointment booking tools 
 
 ### The DVSA Competency Framework
 
-Every ADI teaching to UK standards works within the DVSA's 27 driving skill categories — from Cockpit Drill and Legal Responsibilities through to Motorway Driving and Independent Driving. Tracking pupil progress against this framework is not optional: it's the foundation of structured, consistent instruction.
+Every ADI teaching to UK standards works within the DVSA's 27 driving skills across 8 categories — from Cockpit Drill and Legal Responsibilities through to Motorway Driving and Independent Driving. Tracking pupil progress against this framework is not optional: it's the foundation of structured, consistent instruction.
 
-Generic scheduling tools have no awareness of the DVSA framework at all. Purpose-built UK driving school software should let instructors log which of the [27 DVSA skills](/dvsa-27-driving-skills/) were covered each lesson, assign proficiency levels (typically a 1–6 scale from Not Started to Test Ready), and generate a progress summary that tells both instructor and pupil how close they are to test readiness.
+Generic scheduling tools have no awareness of the DVSA framework at all. Purpose-built UK driving school software should let instructors log which of the [27 DVSA skills](/dvsa-27-driving-skills/) were covered each lesson, assign proficiency levels (a 6-level scale from Not Started to Reflection), and generate a progress summary that tells both instructor and pupil how close they are to test readiness.
 
 If a software product doesn't include DVSA competency tracking, it's not really driving school software — it's a calendar tool.
 

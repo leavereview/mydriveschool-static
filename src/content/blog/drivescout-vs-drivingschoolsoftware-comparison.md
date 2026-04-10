@@ -37,7 +37,7 @@ The scheduling interface is genuinely well designed. Instructors can be assigned
 
 ### DVSA Progress Tracking
 
-DriveScout includes basic progress tracking tied to lesson records, but its DVSA competency mapping — the 24-point driving syllabus that UK instructors use — is not as detailed as some UK-native platforms. Instructors who want to log progress against specific DVSA criteria with each lesson may find themselves working around limitations.
+DriveScout includes basic progress tracking tied to lesson records, but its DVSA competency mapping — the 27-skill framework that UK instructors use — is not as detailed as some UK-native platforms. Instructors who want to log progress against specific DVSA criteria with each lesson may find themselves working around limitations.
 
 ### Student Portal
 
