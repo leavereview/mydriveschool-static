@@ -139,12 +139,13 @@ const freeTrialSchema = {
 ---
 
 <BaseLayout title="Driving School Software Pricing | Plans from £29/month | DriveSchoolPro" description="Driving school software from £29/month for solo ADIs. DVSA tracking, scheduling, automated reminders, and invoicing included. No hidden fees. 14-day free trial. Multi-instructor School Plan coming soon.">
-  <!-- Offer Schemas -->
-  {offerSchemas.map(offerSchema => (
-    <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
-  ))}
-  <script type="application/ld+json" set:html={JSON.stringify(freeTrialSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <Fragment slot="head">
+    {offerSchemas.map(offerSchema => (
+      <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+    ))}
+    <script type="application/ld+json" set:html={JSON.stringify(freeTrialSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
 
   <!-- Breadcrumbs -->
   <div class="bg-gray-100 py-3">
