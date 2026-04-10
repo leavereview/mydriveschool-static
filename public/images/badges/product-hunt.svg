@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" width="160" height="48">
+  <rect width="160" height="48" rx="8" fill="#DA552F"/>
+  <!-- PH circle mark -->
+  <circle cx="28" cy="24" r="13" fill="white" fill-opacity="0.2"/>
+  <text x="28" y="29" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">PH</text>
+  <!-- Divider -->
+  <line x1="50" y1="12" x2="50" y2="36" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+  <!-- Wordmark -->
+  <text x="57" y="19" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="white" fill-opacity="0.85" letter-spacing="0.5">FEATURED ON</text>
+  <text x="57" y="34" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="white">Product Hunt</text>
+</svg>

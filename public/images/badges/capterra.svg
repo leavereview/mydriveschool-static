@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" width="160" height="48">
+  <rect width="160" height="48" rx="8" fill="#FF7043"/>
+  <!-- Star mark -->
+  <text x="24" y="31" font-family="Arial, sans-serif" font-size="22" fill="white">★</text>
+  <!-- Divider -->
+  <line x1="46" y1="12" x2="46" y2="36" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+  <!-- Wordmark -->
+  <text x="53" y="19" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="white" fill-opacity="0.85" letter-spacing="0.5">REVIEWS ON</text>
+  <text x="53" y="34" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="white">Capterra</text>
+</svg>
