@@ -36,7 +36,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Dynamic title suffix: skip for long titles, use shorter brand name
 const getTitleSuffix = (pageTitle: string): string => {
   if (pageTitle === 'Home') return 'DriveSchoolPro - Driving School Management Software';
-  if (pageTitle.length > 50) return pageTitle; // No suffix for long titles
+  if (pageTitle.includes('DriveSchoolPro')) return pageTitle; // Already has brand suffix
+  if (pageTitle.length > 50) return pageTitle; // No suffix for very long titles
   return `${pageTitle} | DriveSchoolPro`;
 };
 const fullTitle = getTitleSuffix(title);

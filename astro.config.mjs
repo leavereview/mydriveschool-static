@@ -9,6 +9,10 @@ export default defineConfig({
     tailwind(),
     sitemap({
       filter: (page) => !page.includes('/blog/tag/'),
+      serialize(item) {
+        item.lastmod = new Date().toISOString();
+        return item;
+      },
     }),
     compress({
       CSS: true,
