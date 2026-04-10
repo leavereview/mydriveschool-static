@@ -192,7 +192,7 @@ const stats = [
   </script>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
+  <section id="hero-section" class="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0" style="background-image: url('/images/hero-driving.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -523,6 +523,54 @@ const stats = [
     </a>
     <p class="text-center text-gray-500 text-xs mt-1">No credit card required</p>
   </div>
+
+  <!-- Sticky mobile CTA — shown on scroll past hero, mobile only -->
+  <a
+    id="sticky-mobile-cta"
+    href="https://app.driveschoolpro.com/signup"
+    class="md:hidden fixed bottom-0 left-0 right-0 z-40 py-4 text-center font-semibold text-white text-base translate-y-full transition-transform duration-300"
+    style="background-color: #E8546C;"
+    aria-label="Start your free trial"
+  >
+    Start Free Trial
+  </a>
+
+  <script>
+    (function () {
+      const hero = document.getElementById('hero-section');
+      const cta  = document.getElementById('sticky-mobile-cta') as HTMLAnchorElement | null;
+      if (!hero || !cta) return;
+
+      // Keep the CTA above the cookie banner when it is visible
+      function updateBottomOffset(): void {
+        const banner = document.getElementById('cookie-consent');
+        if (banner && !localStorage.getItem('dsp-cookie-consent')) {
+          cta!.style.bottom = banner.offsetHeight + 'px';
+        } else {
+          cta!.style.bottom = '';
+        }
+      }
+
+      // Show CTA once hero scrolls out of view; hide it when hero is visible
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            cta.classList.add('translate-y-full');
+          } else {
+            cta.classList.remove('translate-y-full');
+            updateBottomOffset();
+          }
+        },
+        { threshold: 0 }
+      );
+      observer.observe(hero);
+
+      // Reset bottom offset once user responds to cookie banner
+      (['cookieConsentAccepted', 'cookieConsentRejected'] as const).forEach((evt) => {
+        window.addEventListener(evt, () => { cta!.style.bottom = ''; });
+      });
+    })();
+  </script>
 </BaseLayout>
 
 <style>
