@@ -20,17 +20,30 @@ const softwareApplicationSchema = {
     "worstRating": 1,
     "reviewCount": 4
   },
-  "offers": {
-    "@type": "Offer",
-    "@id": "https://driveschoolpro.com/#free-trial",
-    "price": "0",
-    "priceCurrency": "GBP",
-    "name": "14-Day Free Trial",
-    "description": "Try DriveSchoolPro free for 14 days with full access",
-    "availability": "https://schema.org/InStock",
-    "url": "https://driveschoolpro.com/contact/",
-    "priceValidUntil": "2026-12-31"
-  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "@id": "https://driveschoolpro.com/#solo-plan",
+      "name": "Solo Plan",
+      "description": "For independent ADIs. Unlimited students, DVSA progress tracking, scheduling, and invoicing.",
+      "price": "29",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": "https://app.driveschoolpro.com/signup",
+      "priceValidUntil": "2026-12-31"
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://driveschoolpro.com/#free-trial",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "name": "14-Day Free Trial",
+      "description": "Try DriveSchoolPro free for 14 days with full access",
+      "availability": "https://schema.org/InStock",
+      "url": "https://app.driveschoolpro.com/signup",
+      "priceValidUntil": "2026-12-31"
+    }
+  ],
   "featureList": [
     "Lesson Scheduling with Conflict Detection",
     "Student Management",
@@ -66,7 +79,7 @@ const offerSchema = {
   "priceCurrency": "GBP",
   "priceValidUntil": "2026-12-31",
   "availability": "https://schema.org/InStock",
-  "url": "https://driveschoolpro.com/contact/",
+  "url": "https://app.driveschoolpro.com/signup",
   "seller": {
     "@type": "Organization",
     "name": "DriveSchoolPro"
@@ -151,9 +164,10 @@ const stats = [
 ---
 
 <BaseLayout title="DriveSchoolPro | Driving School Software for UK ADIs" description="DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. Get 3 months free — limited time offer." image="/images/marketing/dashboard-overview.webp">
-  <!-- Structured Data Schemas -->
-  <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+  </Fragment>
 
   <!-- Announcement Banner -->
   <div id="announcement-banner" class="bg-brand-red text-white py-3 relative">
