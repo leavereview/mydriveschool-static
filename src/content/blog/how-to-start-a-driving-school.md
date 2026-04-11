@@ -1,7 +1,7 @@
 ---
 title: "How to Start a Driving School in the UK: Complete 2026 Guide"
 description: "Step-by-step guide to starting a driving school in the UK. From ADI qualification to DVSA registration, insurance, vehicle choice, pricing strategy, and software setup."
-date: "2026-04-12"
+date: "2026-04-11"
 tags: ["business", "guide"]
 author: "John Powell"
 image: /images/blog-dual-controls.jpg
@@ -463,4 +463,5 @@ DriveSchoolPro gives you scheduling, DVSA competency tracking, student managemen
 
 - [Best Driving School Software 2026: UK ADI Comparison Guide](/blog/best-driving-school-software/)
 - [Driving School Insurance Guide](/blog/driving-school-insurance-guide/)
-- [How to Reduce No-Shows at Your Driving School](/blog/reduce-no-shows-driving-school/)
+- [How to Reduce Driving Lesson No-Shows: 8 Proven Strategies](/blog/reduce-driving-lesson-no-shows/)
+- [Switching from Paper Diary to Driving School Software](/blog/switch-paper-diary-to-driving-school-software/)

@@ -1,7 +1,7 @@
 ---
 title: "Switching from Paper Diary to Driving School Software: An ADI's Honest Guide"
 description: "Thinking of ditching your paper diary and WhatsApp? Here's a practical, honest guide to switching to driving school software — what changes, what gets easier, and how to make the transition without losing a single student record."
-date: "2026-04-12"
+date: "2026-04-11"
 tags: ["business", "guide"]
 author: "John Powell"
 image: /images/blog-scheduling.jpg
@@ -265,3 +265,11 @@ Run both systems side by side for two weeks. Add your students, let the reminder
 No risk. No commitment. If it does not work, your paper diary is still there.
 
 [Start Your Free 14-Day Trial →](/get-started/)
+
+---
+
+## Related Articles
+
+- [How to Reduce Driving Lesson No-Shows: 8 Proven Strategies](/blog/reduce-driving-lesson-no-shows/)
+- [How to Start a Driving School in the UK: Complete 2026 Guide](/blog/how-to-start-a-driving-school/)
+- [Best Driving School Software 2026: UK ADI Comparison Guide](/blog/best-driving-school-software/)

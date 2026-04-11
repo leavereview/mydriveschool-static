@@ -1,7 +1,7 @@
 ---
 title: "How to Reduce Driving Lesson No-Shows: 8 Proven Strategies for ADIs"
 description: "UK driving instructors lose £2,000+ per year to no-shows. Here are 8 proven strategies to reduce missed lessons — from automated reminders to deposit policies and smart scheduling."
-date: "2026-04-12"
+date: "2026-04-11"
 tags: ["business", "guide"]
 author: "John Powell"
 image: /images/blog-scheduling.jpg
@@ -245,3 +245,4 @@ DriveSchoolPro sends automated reminders, tracks cancellations, manages lesson p
 - [Driving School Software — Automated Reminders and Scheduling](/driving-school-software/)
 - [Best Driving School Software 2026: UK ADI Comparison Guide](/blog/best-driving-school-software/)
 - [How to Start a Driving School in the UK](/blog/how-to-start-a-driving-school/)
+- [Switching from Paper Diary to Driving School Software](/blog/switch-paper-diary-to-driving-school-software/)
