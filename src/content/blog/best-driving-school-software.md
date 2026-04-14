@@ -1,6 +1,6 @@
 ---
 title: "Best Driving School Software 2026: UK ADI Comparison Guide"
-description: "Compare the best driving school software for UK ADIs in 2026. Real pricing, DVSA compliance, feature tables, and best-fit guide by school size. Free trial links."
+description: "Compare the best driving school software for UK ADIs in 2026. Real pricing, DVSA compliance, feature tables, and best-fit guide by school size. DriveSchoolPro: 3 months free."
 image: /images/blog-software.jpg
 imageAlt: "Driving school instructor using management software on tablet to schedule lessons and track student progress"
 date: "2026-02-24"
@@ -50,7 +50,7 @@ UK ADIs must keep their tuition vehicles MOT'd, taxed, and insured. Schools with
 
 | Software | Best For | Starting Price | Mobile App | DVSA Tracking | Free Trial |
 |----------|----------|----------------|------------|---------------|------------|
-| DriveSchoolPro | UK ADIs & schools (1–20 instructors) | £29/month | ✅ Yes | ✅ Full | 14 days |
+| DriveSchoolPro | UK ADIs & schools (1–20 instructors) | £29/month | ✅ Yes | ✅ Full | 3 months free |
 | Driving School Office | UK schools wanting established platform | Contact for pricing | ✅ Yes | ✅ Yes | Demo only |
 | DrivingSchoolSoftware.com | Enterprise with custom needs | £99/month | ✅ Yes | ⚠️ Partial | 30 days |
 | Total Drive | UK instructors wanting all-in-one | Contact for pricing | ✅ Yes | ✅ Yes | Demo |
@@ -124,7 +124,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 - SMS reminders included (up to 500/month on standard plan)
 - Excellent mobile app for instructors
 - Bank-level payment processing with competitive 1.75% fees
-- 14-day free trial with no credit card required
+- 3-month free trial with no credit card required (limited time offer)
 - Outstanding UK-based support (avg response time: 2 hours)
 
 **What Could Be Better**:
@@ -140,7 +140,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 
 **Best Fit**: Independent UK driving schools or regional schools with 2-10 instructors who want comprehensive features without complexity.
 
-[Try DriveSchoolPro free for 14 days →](https://app.driveschoolpro.com/signup)
+[Try DriveSchoolPro free for 3 months →](https://app.driveschoolpro.com/signup)
 
 ### DriveScout ⭐ Best for US Multi-Location Schools
 
@@ -410,7 +410,7 @@ Yes, in purpose-built platforms. Any instructor assigned to a pupil should see t
 
 ### What if I want to see it in action first?
 
-All reputable platforms offer a demo or free trial. For **DriveSchoolPro**, the [14-day free trial](https://app.driveschoolpro.com/signup) requires no credit card. Import 5–10 real pupils and run a week of lessons through it — that's the only reliable test of whether a platform suits your workflow.
+All reputable platforms offer a demo or free trial. For **DriveSchoolPro**, the [3-month free trial](https://app.driveschoolpro.com/signup) requires no credit card. Import 5–10 real pupils and run a week of lessons through it — that's the only reliable test of whether a platform suits your workflow.
 
 ### What if I'm already using Google Calendar?
 
@@ -459,7 +459,7 @@ All reputable platforms allow data export (student lists, lesson history, financ
 The best time to implement driving school software was 2 years ago. The second best time is today.
 
 Most platforms offer free trials:
-- [Try DriveSchoolPro free for 14 days](https://app.driveschoolpro.com/signup) (no credit card required)
+- [Try DriveSchoolPro free for 3 months](https://app.driveschoolpro.com/signup) (no credit card required)
 - [DriveScout 7-day trial](https://www.drivescout.com)
 - [Acuity Scheduling 7-day trial](https://acuityscheduling.com)
 
