@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      filter: (page) => !page.includes('/blog/tag/'),
+      filter: (page) => !page.includes('/blog/tag/') && !page.includes('/ads/'),
       serialize(item) {
         item.lastmod = new Date().toISOString();
         return item;

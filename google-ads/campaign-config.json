@@ -1,0 +1,232 @@
+{
+  "campaign": {
+    "name": "DriveSchoolPro — UK Search — Launch Offer",
+    "type": "SEARCH",
+    "status": "PAUSED",
+    "networks": {
+      "google_search": true,
+      "search_partners": false,
+      "display_network": false
+    },
+    "locations": {
+      "target": ["United Kingdom"],
+      "exclude": []
+    },
+    "languages": ["English"],
+    "budget": {
+      "daily_gbp": 10,
+      "total_gbp": 640,
+      "notes": "£320 own spend + £320 Google matched credit. At £10/day, runs ~64 days. Adjust based on performance after week 1."
+    },
+    "bidding": {
+      "strategy": "MAXIMIZE_CLICKS",
+      "max_cpc_gbp": 3.00,
+      "notes": "Start with Maximize Clicks + max CPC cap. After 30+ conversions, switch to Target CPA."
+    },
+    "start_date": "MANUAL_ACTIVATION",
+    "ad_schedule": {
+      "notes": "Run all hours initially. After 2 weeks, review hour-of-day performance and pause low-performing hours."
+    }
+  },
+
+  "ad_groups": [
+    {
+      "name": "Driving School Software — Exact",
+      "keywords": [
+        { "text": "driving school software", "match_type": "EXACT" },
+        { "text": "driving school software uk", "match_type": "EXACT" },
+        { "text": "driving school management software", "match_type": "EXACT" },
+        { "text": "driving instructor software", "match_type": "EXACT" },
+        { "text": "driving instructor software uk", "match_type": "EXACT" },
+        { "text": "adi software", "match_type": "EXACT" },
+        { "text": "adi booking software", "match_type": "EXACT" }
+      ],
+      "negative_keywords": [
+        { "text": "free", "match_type": "EXACT", "notes": "We have a free trial but don't want pure 'free' seekers" },
+        { "text": "learn to drive", "match_type": "PHRASE", "notes": "Learner drivers, not our buyer" },
+        { "text": "driving lessons near me", "match_type": "PHRASE" },
+        { "text": "driving test", "match_type": "PHRASE" },
+        { "text": "theory test", "match_type": "PHRASE" },
+        { "text": "simulator", "match_type": "BROAD" },
+        { "text": "game", "match_type": "BROAD" },
+        { "text": "download", "match_type": "BROAD" }
+      ],
+      "ads": [
+        {
+          "type": "RESPONSIVE_SEARCH_AD",
+          "final_url": "https://driveschoolpro.com/ads/driving-school-software",
+          "headlines": [
+            "Driving School Software — UK",
+            "3 Months Free — Launch Offer",
+            "Built for UK Driving Instructors",
+            "DVSA Progress Tracking Built In",
+            "Smart Scheduling for ADIs",
+            "No More Double Bookings",
+            "Reduce No-Shows by 60%",
+            "Set Up in Under 10 Minutes",
+            "No Credit Card Required",
+            "Purpose-Built for UK ADIs",
+            "From £29/Month After Trial",
+            "Automated Lesson Reminders",
+            "Try DriveSchoolPro Free",
+            "Manage Your School From Phone",
+            "27 DVSA Skills Tracked"
+          ],
+          "descriptions": [
+            "Purpose-built driving school software with DVSA competency tracking, smart scheduling & automated reminders. Start free today.",
+            "The only UK driving school software with full DVSA Ready to Pass framework. Track 27 skills across 8 categories. Free 14-day trial.",
+            "Drag-and-drop calendar, automated SMS reminders, student portal & payment tracking. Everything UK ADIs need in one app. Try free.",
+            "Join UK driving instructors saving 10+ hours/week on admin. DVSA tracking, scheduling, reminders. 3 months free — launch offer."
+          ],
+          "pin_notes": "Pin 'Driving School Software — UK' or 'Built for UK Driving Instructors' to Headline 1 position for relevance"
+        }
+      ]
+    },
+    {
+      "name": "Scheduling & Booking — Exact",
+      "keywords": [
+        { "text": "driving school scheduling software", "match_type": "EXACT" },
+        { "text": "driving school booking system", "match_type": "EXACT" },
+        { "text": "driving lesson booking software", "match_type": "EXACT" },
+        { "text": "adi scheduling app", "match_type": "EXACT" },
+        { "text": "driving instructor diary app", "match_type": "EXACT" },
+        { "text": "driving instructor calendar app", "match_type": "EXACT" }
+      ],
+      "negative_keywords": [
+        { "text": "book driving lessons", "match_type": "PHRASE", "notes": "Learner intent" },
+        { "text": "book driving test", "match_type": "PHRASE" }
+      ],
+      "ads": [
+        {
+          "type": "RESPONSIVE_SEARCH_AD",
+          "final_url": "https://driveschoolpro.com/ads/driving-school-software",
+          "headlines": [
+            "Driving School Scheduling App",
+            "Ditch the Paper Diary",
+            "3 Months Free — Launch Offer",
+            "Drag-and-Drop Lesson Calendar",
+            "Never Double-Book Again",
+            "Automated SMS Reminders",
+            "Built for UK ADIs",
+            "Manage Lessons From Your Phone",
+            "Smart 3-Way Conflict Detection",
+            "Online Booking for Students",
+            "Set Up in 10 Minutes",
+            "No Credit Card Required",
+            "6 Calendar Views Built In",
+            "Reduce No-Shows Instantly",
+            "Try DriveSchoolPro Free"
+          ],
+          "descriptions": [
+            "Replace your paper diary with smart scheduling. Drag-and-drop calendar, 3-way conflict detection & automated reminders. Try free.",
+            "6 calendar views, recurring lessons, online booking & automated SMS reminders. The diary replacement built for UK driving instructors.",
+            "Stop juggling WhatsApp and paper diaries. DriveSchoolPro gives you smart scheduling, reminders & student management. 3 months free.",
+            "ADIs save 10+ hours/week on admin. Drag-and-drop scheduling, automated reminders, no double-bookings. Free 14-day trial."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DVSA Tracking — Exact",
+      "keywords": [
+        { "text": "dvsa progress tracking software", "match_type": "EXACT" },
+        { "text": "dvsa competency tracking", "match_type": "EXACT" },
+        { "text": "driving instructor progress tracking", "match_type": "EXACT" },
+        { "text": "student progress tracking driving school", "match_type": "EXACT" }
+      ],
+      "ads": [
+        {
+          "type": "RESPONSIVE_SEARCH_AD",
+          "final_url": "https://driveschoolpro.com/ads/driving-school-software",
+          "headlines": [
+            "DVSA Progress Tracking Software",
+            "Track All 27 DVSA Skills",
+            "3 Months Free — Launch Offer",
+            "Know When Students Are Ready",
+            "Full Ready to Pass Framework",
+            "8 Categories, 27 Skills",
+            "Share Progress With Parents",
+            "Built for UK ADIs",
+            "Student Portal Included",
+            "Record Skills in Seconds",
+            "Set Up in 10 Minutes",
+            "No Credit Card Required",
+            "6-Level Proficiency Scale",
+            "Test Readiness Scores",
+            "Try DriveSchoolPro Free"
+          ],
+          "descriptions": [
+            "Track all 27 DVSA driving skills across 8 categories. Know exactly when students are test-ready. Built for UK ADIs. Try free.",
+            "The only driving school software with the full DVSA Ready to Pass framework. Record progress in seconds after each lesson. 3 months free.",
+            "Show parents exactly why their child isn't ready yet — or celebrate when they are. DVSA progress tracking built into every lesson.",
+            "From Not Started to Reflection — track the complete learning journey. Student portal lets learners see their own progress. Free trial."
+          ]
+        }
+      ]
+    }
+  ],
+
+  "extensions": {
+    "sitelinks": [
+      {
+        "text": "See Pricing",
+        "url": "https://driveschoolpro.com/pricing/",
+        "description_1": "£29/month. No setup fees.",
+        "description_2": "No contracts. Cancel anytime."
+      },
+      {
+        "text": "DVSA Skills Guide",
+        "url": "https://driveschoolpro.com/dvsa-27-driving-skills/",
+        "description_1": "All 27 DVSA driving skills explained.",
+        "description_2": "Free guide for ADIs and learners."
+      },
+      {
+        "text": "Scheduling Features",
+        "url": "https://driveschoolpro.com/driving-school-scheduling-software/",
+        "description_1": "Drag-and-drop calendar with 6 views.",
+        "description_2": "Three-way conflict detection."
+      },
+      {
+        "text": "Cost Calculator",
+        "url": "https://driveschoolpro.com/tools/cost-calculator/",
+        "description_1": "Free tool for learner drivers.",
+        "description_2": "City-by-city UK cost breakdown."
+      }
+    ],
+    "callouts": [
+      "3 Months Free",
+      "No Credit Card Required",
+      "DVSA Tracking Built In",
+      "UK-Based Support",
+      "Set Up in 10 Minutes",
+      "Works on Any Device"
+    ],
+    "structured_snippets": [
+      {
+        "header": "Features",
+        "values": [
+          "DVSA Progress Tracking",
+          "Drag-and-Drop Calendar",
+          "Automated Reminders",
+          "Student Portal",
+          "Payment Tracking",
+          "Online Booking"
+        ]
+      }
+    ]
+  },
+
+  "conversion_tracking": {
+    "conversion_name": "Signup Started",
+    "conversion_action": "Click to signup page",
+    "category": "SIGNUP",
+    "counting": "ONE_PER_CLICK",
+    "notes": "Initially tracking CTA clicks. Once server-side tracking is set up on the Next.js app, upgrade to tracking actual account creation for more accurate data."
+  },
+
+  "quality_score_strategy": {
+    "landing_page_relevance": "Ads landing page H1, H2s, and body text all contain the exact keywords being bid on. FAQ section answers the questions searchers have. Page is mobile-optimised and loads in < 2 seconds.",
+    "ad_relevance": "Each ad group has tightly themed keywords with ad copy that uses those exact terms in headlines. No broad match keywords that dilute relevance.",
+    "expected_ctr": "Headlines include the offer (3 months free), specificity (UK ADIs, 27 DVSA skills), and urgency (Launch Offer). Descriptions provide concrete benefits (save 10+ hours/week, reduce no-shows 60%)."
+  }
+}

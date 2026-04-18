@@ -27,6 +27,7 @@ const {
   noindex = false,
   author = 'John Powell'
 } = Astro.props;
+const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
 
 // Determine the schema type to use
 const resolvedSchemaType = schemaType || (type === 'article' ? 'Article' : 'WebPage');
@@ -161,25 +162,24 @@ const schemaOrg = {
   <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
   <slot name="head" />
 
-  <!-- Google Analytics - Conditional Loading Based on Cookie Consent -->
-  <script is:inline>
+  <!-- Google Analytics + Google Ads - Conditional Loading Based on Cookie Consent -->
+  <script is:inline define:vars={{ GOOGLE_ADS_ID }}>
     (function() {
-      // Check if user has accepted cookies
       try {
         const consent = localStorage.getItem('dsp-cookie-consent');
         if (consent) {
           const consentData = JSON.parse(consent);
           if (consentData.consent === 'all') {
-            // Load Google Analytics
             const script = document.createElement('script');
             script.async = true;
             script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2E741HXVN9';
             document.head.appendChild(script);
-
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', 'G-2E741HXVN9');
+            if (GOOGLE_ADS_ID) { gtag('config', GOOGLE_ADS_ID); }
           }
         }
       } catch (error) {

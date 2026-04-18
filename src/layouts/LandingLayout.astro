@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { title, description, canonicalUrl, ogImage = '/images/og-default.jpg' } = Astro.props;
+const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
 ---
 
 <!DOCTYPE html>
@@ -41,12 +42,14 @@ const { title, description, canonicalUrl, ogImage = '/images/og-default.jpg' } =
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
 
+  <slot name="head" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
-  <script is:inline>
+  <script is:inline define:vars={{ GOOGLE_ADS_ID }}>
     (function() {
       try {
         const consent = localStorage.getItem('dsp-cookie-consent');
@@ -59,8 +62,10 @@ const { title, description, canonicalUrl, ogImage = '/images/og-default.jpg' } =
             document.head.appendChild(script);
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', 'G-2E741HXVN9');
+            if (GOOGLE_ADS_ID) { gtag('config', GOOGLE_ADS_ID); }
           }
         }
       } catch (e) {}

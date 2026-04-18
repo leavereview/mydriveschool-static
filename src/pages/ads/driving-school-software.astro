@@ -1,0 +1,462 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+
+const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
+const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || '';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is DriveSchoolPro free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DriveSchoolPro offers a 14-day free trial with full access to all features — no credit card required. After that, it's £29/month with no contracts. We're currently offering 50% off your first 3 months after your trial as a launch promotion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DriveSchoolPro work on my phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DriveSchoolPro is fully responsive and works on any device — iPhone, Android, iPad, laptop, or desktop. Most ADIs use it on their phone between lessons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it track DVSA driving skills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We track all 27 DVSA driving skills across 8 categories using the official Ready to Pass framework. Students can view their own progress through a self-service portal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch from my paper diary easily?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most ADIs are fully set up within 10 minutes. Add your students and schedule your first lesson — you can run both systems in parallel until you're comfortable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All plans are month-to-month. Cancel anytime with no fees."
+      }
+    }
+  ]
+};
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DriveSchoolPro",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "url": "https://driveschoolpro.com",
+  "offers": {
+    "@type": "Offer",
+    "price": "29",
+    "priceCurrency": "GBP",
+    "priceValidUntil": "2026-12-31",
+    "description": "Solo plan — unlimited students, DVSA tracking, automated reminders"
+  },
+  "description": "Driving school management software for UK ADIs. Smart scheduling, DVSA progress tracking, and automated reminders.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "4"
+  }
+};
+
+const features = [
+  { name: 'Drag-and-drop lesson calendar', desc: 'Reschedule in seconds, never double-book' },
+  { name: 'DVSA competency framework', desc: '8 categories, 27 skills, test readiness scores' },
+  { name: 'Automated SMS & email reminders', desc: 'Sent automatically before every lesson' },
+  { name: 'Student management & profiles', desc: 'Contacts, licences, lesson history, notes' },
+  { name: 'Payment tracking & invoicing', desc: 'Record payments, generate invoices, track balances' },
+  { name: 'Online booking for students', desc: 'Students book available slots themselves' },
+  { name: 'Works on any device', desc: 'Phone, tablet, laptop — fully responsive' },
+  { name: 'Business reports & insights', desc: 'Revenue, utilisation, pass rates at a glance' }
+];
+---
+
+<LandingLayout
+  title="Driving School Software for UK ADIs — 3 Months Free | DriveSchoolPro"
+  description="Purpose-built driving school software with DVSA progress tracking, smart scheduling, and automated reminders. Start your free trial — no credit card required."
+  ogImage="/images/marketing/dashboard-overview.webp"
+>
+  <meta name="robots" content="noindex, follow" slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} slot="head" />
+
+  <!-- Conversion tracking setup -->
+  <script is:inline define:vars={{ GOOGLE_ADS_ID, GOOGLE_ADS_CONVERSION_LABEL }} slot="head">
+    window.trackAdConversion = function(url) {
+      if (typeof window.gtag === 'function' && GOOGLE_ADS_ID && GOOGLE_ADS_CONVERSION_LABEL) {
+        window.gtag('event', 'conversion', {
+          'send_to': GOOGLE_ADS_ID + '/' + GOOGLE_ADS_CONVERSION_LABEL,
+          'event_callback': function() { window.location = url; }
+        });
+        setTimeout(function() { window.location = url; }, 1000);
+        return false;
+      }
+      window.location = url;
+    };
+  </script>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <section class="bg-white pt-10 pb-12 md:pt-16 md:pb-20">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-12 lg:gap-16">
+
+        <!-- Text -->
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <div class="flex items-center gap-2 mb-8">
+            <span class="text-2xl font-bold text-brand-navy tracking-tight">DriveSchool<span class="text-brand-red">Pro</span></span>
+          </div>
+
+          <!-- Launch offer badge -->
+          <div class="inline-flex items-center gap-2 bg-brand-red-light text-brand-red text-sm font-semibold px-3 py-1.5 rounded-full mb-5">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            Launch Offer: 50% off your first 3 months
+          </div>
+
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight mb-4">
+            Driving School Software Built for UK ADIs
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            DVSA progress tracking, drag-and-drop scheduling, and automated lesson reminders — all from your phone. Purpose-built for UK driving instructors.
+          </p>
+
+          <a
+            href="https://app.driveschoolpro.com/signup"
+            onclick="return trackAdConversion(this.href)"
+            class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+          >
+            Start Your Free Trial &rarr;
+          </a>
+          <p class="text-sm text-gray-400 mt-3">No credit card required &middot; 14-day free trial &middot; Cancel anytime</p>
+        </div>
+
+        <!-- Hero image -->
+        <div class="md:w-1/2">
+          <link rel="preload" as="image" href="/images/marketing/dashboard-overview.webp" />
+          <img
+            src="/images/marketing/dashboard-overview.webp"
+            alt="DriveSchoolPro dashboard showing lesson schedule, student progress, and reminders"
+            class="rounded-2xl shadow-xl border border-gray-100 w-full"
+            width="720"
+            height="480"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social Proof Bar ──────────────────────────────────────────── -->
+  <section class="bg-gray-50 py-6 border-y border-gray-100">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
+        <span class="flex items-center gap-2">
+          <span class="text-base">🇬🇧</span> Built for UK ADIs
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          27 DVSA Skills Tracked
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          10+ Hours Saved Weekly
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Trusted by ADIs Across the UK
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Feature Cards ─────────────────────────────────────────────── -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-3">
+        The Only UK Driving School Software with Full DVSA Tracking
+      </h2>
+      <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">Built around the problems UK ADIs actually face — double bookings, no-shows, and knowing when students are test-ready.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Card 1: DVSA -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">DVSA Competency Tracking</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Track all 27 DVSA driving skills across 8 categories. See exactly when each student is test-ready. Share progress with parents and students through their own portal.</p>
+        </div>
+
+        <!-- Card 2: Scheduling -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">Smart Lesson Scheduling</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Six calendar views with drag-and-drop rescheduling. Three-way conflict detection checks instructor, student, and vehicle before every booking. No more double-bookings.</p>
+        </div>
+
+        <!-- Card 3: Reminders -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">Automated Lesson Reminders</p>
+          <p class="text-gray-600 text-sm leading-relaxed">SMS and email reminders sent automatically 24 hours before each lesson. Students confirm with one click. ADIs report reducing no-shows by 60% or more.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ──────────────────────────────────────────────── -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-10">
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-wider">From Real Driving Instructors</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mt-2">Trusted by UK Driving Instructors</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-5">
+            "Set up in ten minutes. Genuinely easier than my paper diary."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-red font-semibold text-xs">SJ</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Sarah J.</div>
+              <div class="text-gray-400 text-xs">Independent ADI · Birmingham</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-5">
+            "One no-show in the last month. Used to be two or three a week."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-red font-semibold text-xs">RK</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Rachel K.</div>
+              <div class="text-gray-400 text-xs">Independent ADI · Manchester</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            {[...Array(5)].map(() => (
+              <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-5">
+            "If you can use WhatsApp, you can use this. I picked it up straightaway."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-red-light flex items-center justify-center flex-shrink-0">
+              <span class="text-brand-red font-semibold text-xs">DP</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">David P.</div>
+              <div class="text-gray-400 text-xs">ADI, 8 years experience · Bristol</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Feature Checklist ─────────────────────────────────────────── -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Everything You Need to Run Your Driving School</h2>
+      <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-3">
+        {features.map((f) => (
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="font-semibold text-gray-900 text-sm">{f.name}</span>
+              <span class="text-gray-500 text-sm"> — {f.desc}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing ───────────────────────────────────────────────────── -->
+  <section class="section bg-gray-50">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-3">Simple, Transparent Pricing</h2>
+      <p class="text-gray-500 mb-2">£29/month after your free trial. No setup fees. No contracts. No per-student charges.</p>
+      <p class="inline-flex items-center gap-2 text-brand-red font-semibold text-sm bg-brand-red-light px-4 py-2 rounded-full mb-8">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        Launch offer: 50% off your first 3 months after your free trial
+      </p>
+      <div>
+        <a
+          href="https://app.driveschoolpro.com/signup"
+          onclick="return trackAdConversion(this.href)"
+          class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+        >
+          Start Your Free Trial &rarr;
+        </a>
+        <p class="text-sm text-gray-400 mt-3">No credit card required &middot; Cancel anytime</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────────────────────────── -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Frequently Asked Questions</h2>
+      <div class="max-w-2xl mx-auto divide-y divide-gray-100">
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+            Is DriveSchoolPro free?
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            DriveSchoolPro offers a 14-day free trial with full access to all features — no credit card required. After that, it's £29/month with no contracts. We're currently offering 50% off your first 3 months after your trial as a launch promotion.
+          </p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+            Does it work on my phone?
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Yes. DriveSchoolPro is fully responsive and works on any device — iPhone, Android, iPad, laptop, or desktop. Most ADIs use it on their phone between lessons.
+          </p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+            Does it track DVSA driving skills?
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Yes. We track all 27 DVSA driving skills across 8 categories using the official Ready to Pass framework. Students can view their own progress through a self-service portal.
+          </p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+            Can I switch from my paper diary easily?
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Most ADIs are fully set up within 10 minutes. Add your students and schedule your first lesson — you can run both systems in parallel until you're comfortable.
+          </p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+            Is there a contract?
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            No. All plans are month-to-month. Cancel anytime with no fees.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ─────────────────────────────────────────────────── -->
+  <section class="section bg-brand-navy text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Ready to Simplify Your Driving School?</h2>
+      <p class="text-white/80 text-lg mb-8">Join UK driving instructors already saving 10+ hours a week on admin.</p>
+      <a
+        href="https://app.driveschoolpro.com/signup"
+        onclick="return trackAdConversion(this.href)"
+        class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+      >
+        Start Your Free Trial &rarr;
+      </a>
+      <p class="text-white/50 text-sm mt-3">14-day free trial &middot; No credit card required &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- ── Sticky Mobile CTA ─────────────────────────────────────────── -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-sm border-t border-gray-200 md:hidden">
+    <a
+      href="https://app.driveschoolpro.com/signup"
+      onclick="return trackAdConversion(this.href)"
+      class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors"
+    >
+      Start Free Trial &rarr;
+    </a>
+  </div>
+
+</LandingLayout>
