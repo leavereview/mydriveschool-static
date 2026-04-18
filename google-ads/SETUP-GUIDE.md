@@ -37,7 +37,7 @@ Then rebuild and redeploy the Astro site:
 ```bash
 cd /Users/john/Projects-code/Front-end-sites/mydriveschool.software
 npm run build
-rsync -avz --delete dist/ ubuntu@13.43.71.165:/var/www/mydriveschool.software/
+rsync -avz --delete dist/ lightsail:/var/www/driveschoolpro.com/
 ```
 
 ---

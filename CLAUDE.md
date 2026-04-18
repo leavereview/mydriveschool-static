@@ -44,4 +44,11 @@ This is a static marketing site built with **Astro 4** and **Tailwind CSS**. It 
 
 ## Deployment
 
-Auto-deploys to `/var/www/mydriveschool.software/` via GitHub Actions on push to `main`. Requires `DEPLOY_KEY` and `SERVER_IP` secrets.
+**Direct rsync to Lightsail — no GitHub Actions, no auto-deploy.**
+
+```bash
+npm run build
+rsync -avz --delete dist/ lightsail:/var/www/driveschoolpro.com/
+```
+
+Always use the `lightsail` SSH alias, not the raw IP.
