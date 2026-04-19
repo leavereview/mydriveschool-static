@@ -1,2 +1,83 @@
 [11:00:48] Starting pipeline...
 [11:00:48] [1;33m⚠ Uncommitted changes — committing first[0m
+[11:00:48] [0;32m✓ Pre-flight passed — 4 prompts queued[0m
+[11:00:48] [1;33m[1/4] Running: CC-Prompt-Pillar-Start-Driving-School.md[0m
+Done. Here's what was created and deployed:
+
+**New file:** `src/content/blog/how-to-start-a-driving-school.md`
+
+**Content:**
+- 10 H2 sections covering: suitability assessment, ADI qualification (Parts 1–3 with fees and pass rates), business setup, vehicle selection, pricing strategy, finding students, operations/software, growth, common mistakes, and a startup cost table
+- Honest pros/cons table and regional pricing table
+- FAQPage schema (5 questions) via `faqs` frontmatter — required adding the `faqs` field to the Zod schema in `src/content/config.ts` since Astro strips undeclared fields
+
+**Links (all verified in built output):**
+- 8 internal pages: `/driving-school-software/`, `/driving-school-scheduling-software/`, `/driving-school-calculator/`, `/tools/cost-calculator/`, `/dvsa-27-driving-skills/`, `/blog/best-driving-school-software/`, `/pricing/`, `/get-started/`
+- 2 external gov.uk links: ADI registration page and Ready to Pass? framework
+
+**Note:** The SEO verification script flagged `what-i-learned-building-pet-care-software/` for having only 1 inbound link — that's a pre-existing issue unrelated to this post.
+[11:07:59] [0;32m✓ Completed: CC-Prompt-Pillar-Start-Driving-School.md[0m
+[11:07:59] [1;33m[2/4] Running: CC-Prompt-Pillar-Reduce-No-Shows.md[0m
+Deployed successfully. Here's a summary of what was done:
+
+**New file created:** `src/content/blog/reduce-driving-lesson-no-shows.md`
+
+**Content highlights:**
+- H1 + intro framing the problem in pounds (£3,640/year example for 2 no-shows/week)
+- Cost table showing annual losses at 1/2/3 no-shows per week at £35/lesson
+- 8 fully-written strategies: automated reminders, cancellation policy, prepayment/packages, easy rescheduling, smart scheduling, understanding root causes, relationship building, data tracking
+- Copy-paste cancellation policy template
+- 8-item "do this today" checklist
+- 5 FAQs in frontmatter → auto-generates FAQPage schema via `[slug].astro`
+- Internal links to: `/driving-school-software/`, `/driving-school-calculator/`, `/driving-school-scheduling-software/`, `/driving-school-management-software/`, `/dvsa-27-driving-skills/`, `/pricing/`, `/get-started/`, `/blog/best-driving-school-software/`, `/blog/how-to-start-a-driving-school/`
+
+The existing `reduce-no-shows-driving-school.md` was left untouched — the new post is a distinct piece targeting the `reduce-driving-lesson-no-shows` slug with ADI-specific framing and a different keyword focus.
+[11:11:17] [0;32m✓ Completed: CC-Prompt-Pillar-Reduce-No-Shows.md[0m
+[11:11:17] [1;33m[3/4] Running: CC-Prompt-Pillar-Switch-Paper-To-Software.md[0m
+Deployed successfully. Here's what was done:
+
+**New file created:** `src/content/blog/switch-paper-diary-to-driving-school-software.md`
+
+**Content summary:**
+- ~2,400 words, targeting ADIs on the fence about switching from paper/WhatsApp
+- Honest tone throughout — acknowledges paper works before explaining failure modes
+- Week-in-the-life comparison (Monday morning → end of year) showing concrete daily differences
+- 6-step migration guide with the parallel-running safety net approach
+- Honest downsides section (cost, learning curve, connectivity dependency)
+- ROI section showing break-even at <1 prevented no-show/month
+- "I'm not technical" objection handled directly with David P. testimonial
+- 5-question FAQ with FAQPage schema baked into frontmatter (rendered by the existing `FAQEnhanced.astro` component)
+- Internal links to 11 pages: `/driving-school-software/`, `/driving-school-management-software/`, `/driving-school-scheduling-software/`, `/dvsa-27-driving-skills/`, `/pricing/`, `/get-started/`, `/driving-school-calculator/`, `/free-driving-school-software/`, `/blog/best-driving-school-software/`, `/blog/reduce-driving-lesson-no-shows/`, `/blog/drivescout-vs-drivingschoolsoftware-comparison/`, `/blog/how-to-choose-driving-school-scheduling-software/`
+
+Live at: `https://mydriveschool.software/blog/switch-paper-diary-to-driving-school-software/`
+[11:14:41] [0;32m✓ Completed: CC-Prompt-Pillar-Switch-Paper-To-Software.md[0m
+[11:14:41] [1;33m[4/4] Running: CC-Prompt-Fix-Stale-CTAs-CrossLinks.md[0m
+All done. Here's a summary of every change made:
+
+**Phase 1 — Stale Early Access copy**
+- `pricing.astro`: Changed "lock in early access pricing" → "now and upgrade when it launches" on the School plan card
+
+**Phase 2 — Nav CTA standardised**
+- `Navigation.astro`: Both desktop and mobile "Get Started Free" buttons now link to `/get-started/` instead of directly to `https://app.driveschoolpro.com/signup`
+
+**Phase 3 — Cross-links to pillar content**
+- `driving-school-software.astro`: Updated "Reduce No-Shows" card to point to the new comprehensive pillar (`/blog/reduce-driving-lesson-no-shows/`); added two new cards for the switching guide and the starting guide
+- `pricing.astro`: Added a note below the FAQ section linking to the switching guide's `#the-numbers` anchor
+- `how-to-start-a-driving-school.md`: Updated stale no-shows link to the new pillar; added switching guide to Related Articles
+- `reduce-driving-lesson-no-shows.md`: Added switching guide to Related Articles
+- `switch-paper-diary-to-driving-school-software.md`: Added a full Related Articles section (had none) linking to both other pillar posts
+
+**Bonus fix** — All three pillar posts were dated `2026-04-12` (tomorrow), which would have filtered them out of the blog index at build time. Dates corrected to `2026-04-11` so they appear immediately.
+
+**Sitemap**: All 3 new pillar posts + 21 cost-calculator pages confirmed present. Build clean, deployed to Lightsail.
+[11:20:21] [0;32m✓ Completed: CC-Prompt-Fix-Stale-CTAs-CrossLinks.md[0m
+[11:20:21] [0;32m═══════════════════════════════════════════[0m
+[11:20:21] [0;32mPipeline complete — all 4 prompts executed[0m
+[11:20:21] [0;32m═══════════════════════════════════════════[0m
+[11:20:21] 
+[11:20:21] New pages:
+[11:20:21]   /blog/how-to-start-a-driving-school
+[11:20:21]   /blog/reduce-driving-lesson-no-shows
+[11:20:21]   /blog/switch-paper-diary-to-driving-school-software
+[11:20:21] 
+[11:20:21] Log: /Users/john/Projects-code/Front-end-sites/mydriveschool.software/pillar-build-20260411-110048.log
