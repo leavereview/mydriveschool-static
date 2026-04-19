@@ -10,6 +10,22 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "What does the AI actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DriveSchoolPro uses Anthropic's Claude model to generate a 3–4 sentence briefing for each lesson based on your previous notes and the pupil's progress. It's not a chatbot — it's lesson prep that's already written for you when you open the card. You can turn it off if you don't want it, and your pupil data is never used to train AI models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this different from Total Drive or other apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most UK driving school apps are digital diaries. DriveSchoolPro is a full platform: AI lesson briefings, the complete DVSA 8-category framework (not just a progress bar), automated Google review generation, and Stripe Connect payments — all included. See a detailed comparison at driveschoolpro.com/compare/total-drive."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is DriveSchoolPro free?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -74,14 +90,14 @@ const softwareSchema = {
 };
 
 const features = [
-  { name: 'Drag-and-drop lesson calendar', desc: 'Reschedule in seconds, never double-book' },
-  { name: 'DVSA competency framework', desc: '8 categories, 27 skills, test readiness scores' },
-  { name: 'Automated SMS & email reminders', desc: 'Sent automatically before every lesson' },
-  { name: 'Student management & profiles', desc: 'Contacts, licences, lesson history, notes' },
-  { name: 'Payment tracking & invoicing', desc: 'Record payments, generate invoices, track balances' },
-  { name: 'Online booking for students', desc: 'Students book available slots themselves' },
-  { name: 'Works on any device', desc: 'Phone, tablet, laptop — fully responsive' },
-  { name: 'Business reports & insights', desc: 'Revenue, utilisation, pass rates at a glance' }
+  { name: 'AI lesson briefings', desc: 'Pre-generated for every lesson — saves 5–10 minutes' },
+  { name: 'Full DVSA framework', desc: '8 categories, 27 skills, test readiness scoring' },
+  { name: 'Automated Google review requests', desc: 'Triggered automatically on every test pass' },
+  { name: 'WhatsApp + SMS reminders', desc: 'Automated before every lesson, reduces no-shows' },
+  { name: 'Three-way scheduling', desc: 'Pupil, instructor, and vehicle conflicts auto-detected' },
+  { name: 'Embeddable booking widget', desc: 'Pupils book directly on your own website' },
+  { name: 'Stripe Connect payments', desc: 'Take card payments, send invoices, track balances' },
+  { name: 'Works on any device', desc: 'Phone, tablet, laptop — fully responsive' }
 ];
 ---
 
@@ -129,10 +145,10 @@ const features = [
           </div>
 
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight mb-4">
-            Driving School Software Built for UK ADIs
+            The <span class="text-brand-red">driving school platform</span> that does the thinking for you
           </h1>
           <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-            DVSA progress tracking, drag-and-drop scheduling, and automated lesson reminders — all from your phone. Purpose-built for UK driving instructors.
+            AI-generated lesson briefings. DVSA competency tracking across the full 8-category framework. Automated Google review requests that grow your school. Everything a UK driving instructor needs — in one place.
           </p>
 
           <a
@@ -197,42 +213,103 @@ const features = [
   <section class="section bg-white">
     <div class="container-custom">
       <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-3">
-        The Only UK Driving School Software with Full DVSA Tracking
+        AI, DVSA Tracking, and Automated Reviews — in One Platform
       </h2>
-      <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">Built around the problems UK ADIs actually face — double bookings, no-shows, and knowing when students are test-ready.</p>
+      <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">Built around the three things that make a driving school grow: better lessons, clearer progress, and more Google reviews.</p>
       <div class="grid md:grid-cols-3 gap-6">
 
-        <!-- Card 1: DVSA -->
+        <!-- Card 1: AI Lesson Briefings -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">AI Lesson Briefings</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Every lesson comes with a pre-generated briefing — what you covered last time, what to focus on today. Saves 5–10 minutes per lesson.</p>
+        </div>
+
+        <!-- Card 2: DVSA Framework Tracking -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
             <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
           </div>
-          <p class="font-semibold text-gray-900 mb-2">DVSA Competency Tracking</p>
-          <p class="text-gray-600 text-sm leading-relaxed">Track all 27 DVSA driving skills across 8 categories. See exactly when each student is test-ready. Share progress with parents and students through their own portal.</p>
+          <p class="font-semibold text-gray-900 mb-2">DVSA Framework Tracking</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Not a generic progress bar. All 8 official DVSA categories and 27 skills, tracked lesson by lesson. Test readiness scoring built in.</p>
         </div>
 
-        <!-- Card 2: Scheduling -->
+        <!-- Card 3: Automated Google Reviews -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">Automated Google Reviews</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Every pupil who passes is automatically asked for a Google review. The single fastest way to grow a UK driving school.</p>
+        </div>
+
+        <!-- Card 4: WhatsApp + SMS Reminders -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+          </div>
+          <p class="font-semibold text-gray-900 mb-2">WhatsApp + SMS Reminders</p>
+          <p class="text-gray-600 text-sm leading-relaxed">UK pupils actually read WhatsApp. Automated reminders reduce no-shows by 30–50%. SMS included as backup.</p>
+        </div>
+
+        <!-- Card 5: Three-Way Scheduling -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
             <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
-          <p class="font-semibold text-gray-900 mb-2">Smart Lesson Scheduling</p>
-          <p class="text-gray-600 text-sm leading-relaxed">Six calendar views with drag-and-drop rescheduling. Three-way conflict detection checks instructor, student, and vehicle before every booking. No more double-bookings.</p>
+          <p class="font-semibold text-gray-900 mb-2">Three-Way Scheduling</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Pupil, instructor, and vehicle conflicts all detected automatically. Drag-and-drop calendar. Mobile-first so you can manage between lessons.</p>
         </div>
 
-        <!-- Card 3: Reminders -->
+        <!-- Card 6: Embeddable Booking Widget -->
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
             <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
             </svg>
           </div>
-          <p class="font-semibold text-gray-900 mb-2">Automated Lesson Reminders</p>
-          <p class="text-gray-600 text-sm leading-relaxed">SMS and email reminders sent automatically 24 hours before each lesson. Students confirm with one click. ADIs report reducing no-shows by 60% or more.</p>
+          <p class="font-semibold text-gray-900 mb-2">Embeddable Booking Widget</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Drop our booking form into your existing website. Pupils book directly without leaving your site. Your brand, our engine.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ────────────────────────────────────────────────── -->
+  <section class="section bg-gray-50 border-t border-gray-100">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Up and Running in Minutes</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-brand-red text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Sign up in 3 minutes</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Set up your school, import pupils, connect Stripe. No training required.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-brand-red text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Teach with AI at your side</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Open each lesson, get an AI briefing. Mark progress against DVSA skills as you go.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-brand-red text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Watch reviews roll in</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Every test pass triggers an automated Google review request. Your reputation grows on autopilot.</p>
         </div>
 
       </div>
@@ -321,7 +398,7 @@ const features = [
   <!-- ── Feature Checklist ─────────────────────────────────────────── -->
   <section class="section bg-white">
     <div class="container-custom">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Everything You Need to Run Your Driving School</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Everything Included — No Per-Feature Upsells</h2>
       <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-3">
         {features.map((f) => (
           <div class="flex items-start gap-3">
@@ -367,6 +444,30 @@ const features = [
     <div class="container-custom">
       <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Frequently Asked Questions</h2>
       <div class="max-w-2xl mx-auto divide-y divide-gray-100">
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+            What does the AI actually do?
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            DriveSchoolPro uses Anthropic's Claude model to generate a 3–4 sentence briefing for each lesson based on your previous notes and the pupil's progress. It's not a chatbot — it's lesson prep that's already written for you when you open the card. You can turn it off if you don't want it, and your pupil data is never used to train AI models.
+          </p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+            Is this different from Total Drive or other apps?
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Most UK driving school apps are digital diaries. DriveSchoolPro is a full platform: AI lesson briefings, the complete DVSA 8-category framework (not just a progress bar), automated Google review generation, and Stripe Connect payments — all included. See a detailed comparison <a href="/compare/total-drive" class="text-brand-red hover:underline">here</a>.
+          </p>
+        </details>
 
         <details class="group py-5">
           <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
