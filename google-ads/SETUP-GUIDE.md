@@ -1,5 +1,28 @@
 # Google Ads Campaign Setup Guide
 
+## Re-importing after ad copy refresh (April 2026)
+
+If you've already imported a previous version of these campaigns, follow these steps to update:
+
+1. **Open Google Ads Editor**
+2. **Get recent changes** — File → Get Recent Changes → All Campaigns
+3. **Pause the Search campaign** (if live) — set campaign status to Paused temporarily
+4. **Delete existing ads only** (keep keywords, extensions, negative lists)
+   - Navigate to each ad group
+   - Select all ads (Ctrl+A)
+   - Delete
+5. **Import the new CSV** — File → Import → From CSV → select `google-ads/search-campaign.csv`
+6. **Review changes in the Editor before posting**
+7. **Post to Google Ads** — File → Post
+8. **Review ad approval status** — new ads take 1–24 hours to approve
+9. **Resume the campaign** — set status back to Enabled
+
+Do NOT delete the keyword lists, negative keyword lists, or conversion tracking. Those stay as they are.
+
+If you have NOT yet launched the campaign, skip this section and follow the standard setup flow below.
+
+---
+
 ## Prerequisites
 - Google Ads account created at ads.google.com
 - Payment method added
@@ -151,6 +174,12 @@ Add all 6 callouts:
 3. Check that the landing page has no nav bar and a clear CTA
 4. Set campaign status to **Enabled**
 5. Set a reminder to check back in 24 hours for first data
+
+### Pre-Launch Checks (AI-first refresh — April 2026)
+
+- [ ] Landing page H1 matches ad copy message (AI-powered, DVSA framework, automated reviews)
+- [ ] Landing page mentions AI briefings prominently in the first viewport
+- [ ] FAQ on landing page answers "What does the AI actually do?" and "Is this different from Total Drive?"
 
 ---
 
