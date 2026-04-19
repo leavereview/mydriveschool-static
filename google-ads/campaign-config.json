@@ -171,28 +171,28 @@
   "extensions": {
     "sitelinks": [
       {
-        "text": "See Pricing",
+        "text": "How Progress Works",
+        "url": "https://driveschoolpro.com/how-progress-works/",
+        "description_1": "DVSA 8-category framework, tracked lesson by lesson.",
+        "description_2": "AI briefings + test readiness scoring."
+      },
+      {
+        "text": "vs Total Drive",
+        "url": "https://driveschoolpro.com/compare/total-drive/",
+        "description_1": "Honest feature comparison.",
+        "description_2": "AI briefings, pricing, reminders."
+      },
+      {
+        "text": "Pricing",
         "url": "https://driveschoolpro.com/pricing/",
-        "description_1": "£29/month. No setup fees.",
+        "description_1": "From £29/month. No hidden fees.",
         "description_2": "No contracts. Cancel anytime."
       },
       {
         "text": "DVSA Skills Guide",
         "url": "https://driveschoolpro.com/dvsa-27-driving-skills/",
         "description_1": "All 27 DVSA driving skills explained.",
-        "description_2": "Free guide for ADIs and learners."
-      },
-      {
-        "text": "Scheduling Features",
-        "url": "https://driveschoolpro.com/driving-school-scheduling-software/",
-        "description_1": "Drag-and-drop calendar with 6 views.",
-        "description_2": "Three-way conflict detection."
-      },
-      {
-        "text": "Cost Calculator",
-        "url": "https://driveschoolpro.com/tools/cost-calculator/",
-        "description_1": "Free tool for learner drivers.",
-        "description_2": "City-by-city UK cost breakdown."
+        "description_2": "The framework examiners actually use."
       }
     ],
     "callouts": [
