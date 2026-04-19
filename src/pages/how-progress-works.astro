@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../components/seo/BreadcrumbsEnhanced.astro';
+import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
+import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
+
+const faqItems = [
+  {
+    question: "What DVSA skills does DriveSchoolPro track?",
+    answer: "DriveSchoolPro tracks all 27 official DVSA driving skills across 8 categories: The Basics, Control & Positioning, Observation & Planning, Junctions & Roundabouts, Manoeuvres, Road Types, Driving Conditions, and Following Routes. These are the same categories and skills used by DVSA examiners — not a simplified version.",
+    links: [
+      { text: 'All 27 DVSA skills explained', url: '/dvsa-27-driving-skills/' }
+    ]
+  },
+  {
+    question: "How is test readiness calculated?",
+    answer: "DriveSchoolPro generates a test readiness score by averaging progress across all 27 DVSA skills, weighted by category. When a pupil reaches consistent Independent-level performance across all 8 categories, the system flags them as test-ready. Instructors can see a breakdown by category so it's clear exactly where a pupil still needs work.",
+    links: []
+  },
+  {
+    question: "Can pupils see their own progress?",
+    answer: "Yes. Every pupil gets access to a self-service portal where they can view their progress against each DVSA skill, see upcoming lessons, check their lesson package balance, and update their contact details. Parents can also be given separate portal access — particularly useful for learners under 18.",
+    links: []
+  },
+  {
+    question: "What does the AI lesson briefing contain?",
+    answer: "Before each lesson, DriveSchoolPro generates a 3–4 sentence briefing using Anthropic's Claude. It draws on your notes from the previous session and the pupil's current DVSA skill ratings. The briefing typically covers what was covered last time, what still needs work, and what to focus on today. It can be turned off per-pupil if you prefer not to use it.",
+    links: []
+  },
+  {
+    question: "How do I record progress after a lesson?",
+    answer: "After each lesson, you open the session record on your phone and rate the pupil's performance against the relevant DVSA skills. Ratings use a six-level scale from Not Started through to Independent. The ratings feed into the progress dashboard and update the test readiness score automatically.",
+    links: []
+  },
+  {
+    question: "Can I share progress with parents?",
+    answer: "Yes. Instructors can invite a parent or guardian to view the pupil's progress portal. Parents see DVSA skill ratings, upcoming lessons, and lesson notes (if you choose to share them). They don't have access to payment details or instructor-only notes.",
+    links: []
+  }
+];
+
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How DVSA Progress Tracking Works in DriveSchoolPro",
+  "description": "A walkthrough of how DriveSchoolPro tracks the DVSA 8-category, 27-skill framework lesson by lesson, generates AI lesson briefings, and shows pupils their test readiness.",
+  "author": { "@type": "Organization", "name": "DriveSchoolPro" },
+  "publisher": { "@type": "Organization", "name": "DriveSchoolPro" },
+  "datePublished": "2026-04-19",
+  "dateModified": "2026-04-19"
+};
+---
+
+<BaseLayout
+  title="How DVSA Progress Tracking Works | DriveSchoolPro"
+  description="How DriveSchoolPro tracks all 27 DVSA skills across 8 categories, generates AI lesson briefings, scores test readiness, and gives pupils their own progress portal."
+  image="/images/marketing/dashboard-overview.webp"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'How Progress Works', href: '/how-progress-works/' }
+    ]}
+  />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1 bg-brand-red/20 text-brand-red-light rounded-full text-sm font-medium mb-4">DVSA Progress Tracking</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">How Progress Tracking Works</h1>
+        <p class="text-xl text-gray-300 mb-8">
+          DriveSchoolPro tracks every pupil against the full DVSA 8-category, 27-skill framework — lesson by lesson. AI briefings give you context before each session. Pupils see their own progress in real time.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://app.driveschoolpro.com/signup" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href="/dvsa-27-driving-skills/" class="btn-secondary text-lg px-8 py-4">See All 27 DVSA Skills</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FeaturedAnswer question="How does DriveSchoolPro track driving progress?">
+    DriveSchoolPro tracks pupil progress against all 27 official DVSA driving skills across 8 categories, updated after every lesson. AI-generated briefings give instructors context before each session. A test readiness score updates automatically as skills improve. Pupils and parents can view progress through a self-service portal.
+  </FeaturedAnswer>
+
+  <!-- The Framework -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">The DVSA Framework — Not a Simplified Version</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Most driving school software uses a generic progress bar. DriveSchoolPro is built around the actual framework DVSA examiners use — 8 categories and 27 specific skills. When a pupil sees their progress, they're seeing exactly the same breakdown their examiner uses to assess them.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          {[
+            { num: '1–4', title: 'The Basics', skills: 'Safety checks, cockpit drill, controls, moving off' },
+            { num: '5–7', title: 'Control & Positioning', skills: 'Steering, acceleration, braking, road position' },
+            { num: '8–13', title: 'Observation & Planning', skills: 'Mirrors, signals, anticipation, hazard awareness' },
+            { num: '14–16', title: 'Junctions & Roundabouts', skills: 'Turning, emerging, reading priority and give-way' },
+            { num: '17–20', title: 'Manoeuvres', skills: 'Parallel park, bay park, turn in the road, emergency stop' },
+            { num: '21–23', title: 'Road Types', skills: 'Urban roads, rural roads, dual carriageways, motorways' },
+            { num: '24–26', title: 'Driving Conditions', skills: 'Night driving, adverse weather, reduced visibility' },
+            { num: '27', title: 'Following Routes', skills: 'Independent driving, following sat-nav instructions' },
+          ].map(({ num, title, skills }) => (
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div class="text-xs font-semibold text-brand-red mb-1">Skills {num}</div>
+              <div class="font-bold text-brand-navy mb-2">{title}</div>
+              <div class="text-gray-600 text-sm">{skills}</div>
+            </div>
+          ))}
+        </div>
+        <p class="mt-6 text-sm text-gray-500">
+          <a href="/dvsa-27-driving-skills/" class="text-brand-red hover:underline font-medium">Full breakdown of all 27 DVSA skills →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It's Recorded -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Recording Progress After Each Lesson</h2>
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          After each lesson, open the session on your phone and rate the pupil's performance against the skills you covered. Each skill uses a six-level scale:
+        </p>
+        <div class="space-y-3 mb-8">
+          {[
+            { level: 'Not Started', desc: 'Skill not yet introduced', color: 'bg-gray-200 text-gray-700' },
+            { level: 'Introduced', desc: 'Pupil has seen the skill but not yet practised it', color: 'bg-blue-100 text-blue-800' },
+            { level: 'Developing', desc: 'Practising but not yet consistent', color: 'bg-yellow-100 text-yellow-800' },
+            { level: 'Competent', desc: 'Consistent with occasional prompting', color: 'bg-orange-100 text-orange-800' },
+            { level: 'Proficient', desc: 'Performs skill reliably without prompts', color: 'bg-green-100 text-green-800' },
+            { level: 'Independent', desc: 'Examiner-standard — pupil owns this skill', color: 'bg-brand-red-light text-brand-red' },
+          ].map(({ level, desc, color }) => (
+            <div class="flex items-center gap-4">
+              <span class={`text-xs font-semibold px-3 py-1 rounded-full flex-shrink-0 w-28 text-center ${color}`}>{level}</span>
+              <span class="text-gray-600 text-sm">{desc}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          You only need to rate the skills you actually worked on in that lesson — you don't have to touch all 27 every time. Ratings persist between sessions and update the overall progress dashboard automatically.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Briefings -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">AI Lesson Briefings</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Before each lesson, DriveSchoolPro generates a short briefing using Anthropic's Claude. It reads your notes from the previous session and the pupil's current skill ratings, then writes a 3–4 sentence summary of what to focus on.
+        </p>
+        <div class="bg-brand-navy text-white rounded-2xl p-6 mb-6">
+          <div class="text-xs font-semibold text-brand-red mb-3 uppercase tracking-wider">Example AI Briefing</div>
+          <p class="text-gray-300 leading-relaxed italic">
+            "Last session Emma worked on junctions and struggled with speed on approach — she was arriving too fast and having to brake late. Her mirror checks are now consistent (Proficient). Today's focus: junction approach speed and timing. She's also not yet introduced to parallel parking, which would be good to cover if junctions go well. Emma tends to tense up when she makes a mistake — keep the tone relaxed."
+          </p>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          The briefing is ready when you open the lesson card — you don't have to scroll back through previous notes or remember what happened last week. For multi-instructor schools, it means cover instructors arrive with full context without having to ask colleagues.
+        </p>
+        <p class="text-gray-500 text-sm mt-4">AI briefings can be turned off per pupil. Pupil data is never used to train AI models.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Test Readiness & Pupil Portal -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Test Readiness Score and Pupil Portal</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          As skill ratings improve, a test readiness score updates automatically. The score reflects average progress across all 8 categories, so it's clear whether a pupil is ready across the board or has specific gaps.
+        </p>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Pupils access their progress through a self-service portal — no app download required. They can see:
+        </p>
+        <ul class="space-y-3 mb-8">
+          {[
+            'Their rating on each of the 27 DVSA skills',
+            'Overall test readiness score by category',
+            'Upcoming lesson dates and times',
+            'Lesson package balance (hours remaining)',
+            'Lesson notes, if the instructor chooses to share them',
+          ].map(item => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-600">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-gray-600 leading-relaxed">
+          Parents can be given separate read-only portal access. This removes the need for progress update calls and gives parents objective data rather than a vague "coming along well".
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-brand-navy text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold mb-3">See It With Your Own Students</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">14-day free trial — set up your first pupils and track a week of lessons before committing.</p>
+      <a href="https://app.driveschoolpro.com/signup" class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
+        Start Free Trial &rarr;
+      </a>
+      <p class="text-white/50 text-sm mt-3">No credit card required &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQEnhanced
+    faqs={faqItems}
+    title="Progress Tracking — Common Questions"
+    site="driveschool"
+    pageUrl="https://driveschoolpro.com/how-progress-works/"
+  />
+
+</BaseLayout>

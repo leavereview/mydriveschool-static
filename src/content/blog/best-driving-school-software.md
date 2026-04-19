@@ -255,6 +255,8 @@ Total Drive is a UK-focused platform that positions itself as an all-in-one solu
 
 **Best Fit**: UK ADIs who want a domestic platform covering both lesson management and pupil communication in one tool.
 
+> Considering Total Drive vs DriveSchoolPro specifically? See our [full side-by-side comparison](/compare/total-drive/) covering AI briefings, pricing, reminders, and DVSA tracking.
+
 ### Driving Instructor Manager ⭐ Best One-Time Purchase
 
 **Rating**: 3.7/5 | **Starting Price**: £149 (one-time) | **Best For**: Instructors avoiding subscriptions
