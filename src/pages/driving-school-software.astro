@@ -6,6 +6,7 @@ import StatisticsSection from '../components/seo/StatisticsSection.astro';
 import ComparisonTable from '../components/seo/ComparisonTable.astro';
 import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
 import MarketingScreenshot from '../components/MarketingScreenshot.astro';
+import { OFFER } from '../config/offer';
 
 // Driving School Industry Statistics
 const drivingStats = [
@@ -121,10 +122,10 @@ const faqItems = [
   },
   {
     question: "How much does driving school software cost?",
-    answer: "DriveSchoolPro's Solo Plan starts from £29/month for solo ADIs with unlimited students, DVSA progress tracking, and automated reminders. A School Plan for multi-instructor schools (£79/month) is coming soon. All plans include a 14-day free trial with no credit card required.",
+    answer: `DriveSchoolPro's Solo Plan starts from £29/month for solo ADIs with unlimited students, DVSA progress tracking, and automated reminders. A School Plan for multi-instructor schools (£79/month) is coming soon. All plans include ${OFFER.short} with no credit card required.`,
     links: [
       { text: 'Full pricing details', url: '/pricing/' },
-      { text: 'Start Free Trial', url: 'https://app.driveschoolpro.com/signup' }
+      { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
     ]
   },
   {
@@ -161,7 +162,7 @@ const faqItems = [
     answer: "Yes. Many of our users are independent ADIs who need better organisation without the complexity of enterprise software. The Solo Plan (£29/month) includes unlimited students, DVSA progress tracking, automated reminders, and invoicing—everything a solo instructor needs to run professionally.",
     links: [
       { text: 'Solo plan details', url: '/pricing/' },
-      { text: 'Start Free Trial', url: 'https://app.driveschoolpro.com/signup' }
+      { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
     ]
   },
   {
@@ -233,7 +234,7 @@ const faqItems = [
           AI-generated lesson briefings. Full DVSA 8-category framework. Automated Google review requests. Stop juggling spreadsheets, WhatsApp, and paper diaries — DriveSchoolPro brings everything together in one platform.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://app.driveschoolpro.com/signup" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>
           <a href="/pricing/" class="btn-secondary text-lg px-8 py-4">See Driving School Software Pricing</a>
         </div>
       </div>
@@ -517,9 +518,9 @@ const faqItems = [
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Simplify Your Driving School?</h2>
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-        Start your free trial and streamline your driving school.
+        {OFFER.long}. Streamline your driving school today.
       </p>
-      <a href="/get-started/" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Free Trial</a>
+      <a href={OFFER.ctaPrimary.href} class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>
     </div>
   </section>
 </BaseLayout>
