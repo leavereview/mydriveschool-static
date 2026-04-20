@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 import Testimonials from '../components/Testimonials.astro';
+import { OFFER } from '../config/offer';
 
 // SoftwareApplication Schema
 const softwareApplicationSchema = {
@@ -37,10 +38,10 @@ const softwareApplicationSchema = {
       "@id": "https://driveschoolpro.com/#free-trial",
       "price": "0",
       "priceCurrency": "GBP",
-      "name": "14-Day Free Trial",
-      "description": "Try DriveSchoolPro free for 14 days with full access",
+      "name": "3 Months Free",
+      "description": OFFER.long,
       "availability": "https://schema.org/InStock",
-      "url": "https://app.driveschoolpro.com/signup",
+      "url": OFFER.ctaPrimary.href,
       "priceValidUntil": "2026-12-31"
     }
   ],
@@ -73,13 +74,13 @@ const offerSchema = {
   "@context": "https://schema.org",
   "@type": "Offer",
   "@id": "https://driveschoolpro.com/#free-trial-offer",
-  "name": "14-Day Free Trial - DriveSchoolPro",
-  "description": "Try DriveSchoolPro free for 14 days with complete access to all features including lesson scheduling, student management, and automated billing. No credit card required.",
+  "name": `3 Months Free - DriveSchoolPro`,
+  "description": `${OFFER.long}. Complete access to all features including lesson scheduling, student management, and automated billing. No credit card required.`,
   "price": "0",
   "priceCurrency": "GBP",
   "priceValidUntil": "2026-12-31",
   "availability": "https://schema.org/InStock",
-  "url": "https://app.driveschoolpro.com/signup",
+  "url": OFFER.ctaPrimary.href,
   "seller": {
     "@type": "Organization",
     "name": "DriveSchoolPro"
@@ -98,7 +99,7 @@ const offerSchema = {
     {
       "@type": "PropertyValue",
       "name": "Trial Duration",
-      "value": "14 days"
+      "value": "3 months"
     },
     {
       "@type": "PropertyValue",
@@ -163,7 +164,7 @@ const stats = [
 ];
 ---
 
-<BaseLayout title="DriveSchoolPro | Driving School Software for UK ADIs" description="DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. Get 3 months free — limited time offer." image="/images/marketing/dashboard-overview.webp">
+<BaseLayout title="DriveSchoolPro | Driving School Software for UK ADIs" description={`DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. ${OFFER.long}.`} image="/images/marketing/dashboard-overview.webp">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
@@ -172,8 +173,8 @@ const stats = [
   <!-- Announcement Banner -->
   <div id="announcement-banner" class="bg-brand-red text-white py-3 relative">
     <div class="container-custom flex items-center justify-center gap-3 text-sm md:text-base">
-      <span>Now Live — Get 3 months free when you sign up today</span>
-      <a href="https://app.driveschoolpro.com/signup" class="font-bold underline hover:no-underline whitespace-nowrap">Get 3 months free &rarr;</a>
+      <span>Now Live — {OFFER.short} when you sign up today</span>
+      <a href={OFFER.ctaPrimary.href} class="font-bold underline hover:no-underline whitespace-nowrap">{OFFER.short} &rarr;</a>
       <button id="dismiss-banner" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white" aria-label="Dismiss banner">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
       </button>
@@ -206,10 +207,10 @@ const stats = [
           AI-generated lesson briefings. DVSA competency tracking built around the actual 8-category framework. Automated review requests that grow your school. Everything a modern ADI needs — in one place.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/get-started/" class="btn-primary text-lg px-8 py-4">Start your free trial →</a>
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">{OFFER.ctaPrimary.label} →</a>
           <a href="#ai-briefings" class="btn-secondary text-lg px-8 py-4">See how it works</a>
         </div>
-        <p class="mt-6 text-sm text-gray-400">No credit card required • Start your 14-day free trial today</p>
+        <p class="mt-6 text-sm text-gray-400">No credit card required • {OFFER.short}</p>
       </div>
     </div>
   </section>
@@ -326,7 +327,7 @@ const stats = [
 
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/dvsa-27-driving-skills/" class="btn-primary">Explore the 27 DVSA Skills</a>
-            <a href="https://app.driveschoolpro.com/signup" class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-lg text-white font-semibold hover:bg-white/10 transition-colors">Start Free Trial</a>
+            <a href={OFFER.ctaPrimary.href} class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-lg text-white font-semibold hover:bg-white/10 transition-colors">{OFFER.ctaPrimary.labelShort}</a>
           </div>
           <a href="/how-progress-works/" class="inline-block mt-4 text-white/70 hover:text-white font-medium hover:underline transition-colors text-sm">Learn how progress tracking works →</a>
         </div>
@@ -561,17 +562,17 @@ const stats = [
         Sign up today and see how DriveSchoolPro can transform your business.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://app.driveschoolpro.com/signup" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Free Trial</a>
-        <a href="/pricing/" class="btn bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4">See Plans & Pricing</a>
+        <a href={OFFER.ctaPrimary.href} class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>
+        <a href={OFFER.ctaSecondary.href} class="btn bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4">{OFFER.ctaSecondary.label}</a>
       </div>
     </div>
   </section>
 
   <!-- Sticky mobile CTA — only visible on small screens -->
   <div class="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t border-gray-200 md:hidden">
-    <a href="https://app.driveschoolpro.com/signup"
+    <a href={OFFER.ctaPrimary.href}
        class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-semibold text-base hover:bg-brand-red-dark transition-colors">
-      Start Free Trial
+      {OFFER.ctaPrimary.labelShort}
     </a>
     <p class="text-center text-gray-500 text-xs mt-1">No credit card required</p>
   </div>
@@ -579,12 +580,12 @@ const stats = [
   <!-- Sticky mobile CTA — shown on scroll past hero, mobile only -->
   <a
     id="sticky-mobile-cta"
-    href="https://app.driveschoolpro.com/signup"
+    href={OFFER.ctaPrimary.href}
     class="md:hidden fixed bottom-0 left-0 right-0 z-40 py-4 text-center font-semibold text-white text-base translate-y-full transition-transform duration-300"
     style="background-color: #E8546C;"
-    aria-label="Start your free trial"
+    aria-label={OFFER.ctaPrimary.label}
   >
-    Start Free Trial
+    {OFFER.ctaPrimary.labelShort}
   </a>
 
   <script>
