@@ -1,0 +1,14 @@
+---
+import { OFFER } from '../config/offer';
+---
+
+<div class="not-prose my-8 rounded-xl bg-brand-red-light border border-brand-red/20 p-6 text-center">
+  <p class="text-brand-navy font-semibold mb-3">{OFFER.long}.</p>
+  <a
+    href={OFFER.ctaPrimary.href}
+    class="btn-primary inline-block"
+  >
+    {OFFER.ctaPrimary.label}
+  </a>
+  <p class="mt-3 text-sm text-gray-500">No credit card required.</p>
+</div>
