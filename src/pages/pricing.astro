@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { OFFER } from '../config/offer';
 
 // Pricing tiers
 const pricingTiers = [
@@ -27,7 +28,7 @@ const offerSchemas = pricingTiers.filter(t => !t.comingSoon).map((tier) => ({
   },
   "priceValidUntil": "2026-12-31",
   "availability": "https://schema.org/InStock",
-  "url": "https://app.driveschoolpro.com/signup",
+  "url": OFFER.ctaPrimary.href,
   "seller": {
     "@type": "Organization",
     "name": "DriveSchoolPro"
@@ -42,7 +43,7 @@ const offerSchemas = pricingTiers.filter(t => !t.comingSoon).map((tier) => ({
     {
       "@type": "PropertyValue",
       "name": "Free Trial",
-      "value": "14 days"
+      "value": OFFER.short
     },
     {
       "@type": "PropertyValue",
@@ -63,7 +64,7 @@ const faqSchema = {
       "name": "Is there a free trial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, all plans include a 14-day free trial with full access to all features. No credit card required to start."
+        "text": `Yes, all plans include ${OFFER.short} with full access to all features. No credit card required to start.`
       }
     },
     {
@@ -106,13 +107,13 @@ const freeTrialSchema = {
   "@context": "https://schema.org",
   "@type": "Offer",
   "@id": "https://driveschoolpro.com/pricing/#free-trial",
-  "name": "14-Day Free Trial",
-  "description": "Try DriveSchoolPro free for 14 days. No credit card required.",
+  "name": `3 Months Free - DriveSchoolPro`,
+  "description": `${OFFER.long}. No credit card required.`,
   "price": "0",
   "priceCurrency": "GBP",
   "priceValidUntil": "2026-12-31",
   "availability": "https://schema.org/InStock",
-  "url": "https://app.driveschoolpro.com/signup",
+  "url": OFFER.ctaPrimary.href,
   "eligibleRegion": {
     "@type": "Place",
     "name": "United Kingdom"
@@ -127,7 +128,7 @@ const freeTrialSchema = {
     {
       "@type": "PropertyValue",
       "name": "Trial Duration",
-      "value": "14 days"
+      "value": OFFER.short
     },
     {
       "@type": "PropertyValue",
@@ -138,7 +139,7 @@ const freeTrialSchema = {
 };
 ---
 
-<BaseLayout title="Driving School Software Pricing | Plans from £29/month | DriveSchoolPro" description="Driving school software from £29/month. DVSA tracking, scheduling, automated reminders, and invoicing included. No hidden fees. Get 3 months free when you sign up — limited time offer.">
+<BaseLayout title="Driving School Software Pricing | Plans from £29/month | DriveSchoolPro" description={`Driving school software from £29/month. DVSA tracking, scheduling, automated reminders, and invoicing included. No hidden fees. ${OFFER.long}.`}>
   <Fragment slot="head">
     {offerSchemas.map(offerSchema => (
       <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
@@ -196,7 +197,7 @@ const freeTrialSchema = {
               <li>✓ Invoicing & payment recording</li>
               <li>✓ Student self-service portal</li>
             </ul>
-            <a href="https://app.driveschoolpro.com/signup" class="btn-primary w-full">Start Free Trial</a>
+            <a href={OFFER.ctaPrimary.href} class="btn-primary w-full">{OFFER.ctaPrimary.label}</a>
             <p class="text-center text-gray-500 text-xs mt-3">No credit card required · Cancel anytime</p>
           </div>
           <!-- School Plan — launching soon -->
@@ -213,7 +214,7 @@ const freeTrialSchema = {
               <li>✓ Role-based access control</li>
             </ul>
             <p class="text-center text-sm text-gray-600 font-medium py-3 px-4 bg-gray-50 rounded-lg">
-              Launching Soon — <a href="https://app.driveschoolpro.com/signup" class="text-brand-red hover:underline">Start with Solo</a> now and upgrade when it launches
+              Launching Soon — <a href={OFFER.ctaPrimary.href} class="text-brand-red hover:underline">Start with Solo</a> now and upgrade when it launches
             </p>
           </div>
         </div>
@@ -308,7 +309,7 @@ const freeTrialSchema = {
         <div class="space-y-4">
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">Is there a free trial?</h3>
-            <p class="text-gray-600 text-sm">Yes, all plans include a 14-day free trial with full access to all features. No credit card required to start.</p>
+            <p class="text-gray-600 text-sm">Yes, all plans include {OFFER.short} with full access to all features. No credit card required to start.</p>
           </div>
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">Can I change plans later?</h3>
