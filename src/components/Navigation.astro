@@ -1,4 +1,5 @@
 ---
+import { OFFER } from '../config/offer';
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
@@ -104,8 +105,8 @@ function isActive(href: string): boolean {
         <a href="https://app.driveschoolpro.com/login" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
           Log in
         </a>
-        <a href="/get-started/" class="btn-primary text-sm">
-          Get Started Free
+        <a href={OFFER.ctaPrimary.href} class="btn-primary text-sm">
+          {OFFER.ctaPrimary.labelShort}
         </a>
       </div>
 
@@ -163,8 +164,8 @@ function isActive(href: string): boolean {
         </div>
       ))}
       <div class="mt-4 px-4 flex flex-col gap-2">
-        <a href="/get-started/" class="btn-primary w-full text-center">
-          Get Started Free
+        <a href={OFFER.ctaPrimary.href} class="btn-primary w-full text-center">
+          {OFFER.ctaPrimary.labelShort}
         </a>
         <a href="https://app.driveschoolpro.com/login" class="btn-secondary w-full text-center">
           Log in

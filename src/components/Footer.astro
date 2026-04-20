@@ -1,4 +1,5 @@
 ---
+import { OFFER } from '../config/offer';
 const currentYear = new Date().getFullYear();
 
 const footerLinks = {
@@ -125,10 +126,10 @@ const footerLinks = {
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Get Started</h3>
         <p class="text-gray-400 text-sm mb-4">
-          Ready to streamline your driving school? Start your free trial today.
+          Ready to streamline your driving school? {OFFER.long}.
         </p>
-        <a href="https://app.driveschoolpro.com/signup" class="btn-primary text-sm">
-          Start Free Trial
+        <a href={OFFER.ctaPrimary.href} class="btn-primary text-sm">
+          {OFFER.ctaPrimary.label}
         </a>
       </div>
     </div>

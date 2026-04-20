@@ -1,5 +1,6 @@
 ---
 import type { CityData, FixedCosts, ExperienceLevel, NationalAverage } from '../../data/driving-costs';
+import { OFFER } from '../../config/offer';
 
 interface Props {
   cities: CityData[];
@@ -209,8 +210,8 @@ const nationalJson = JSON.stringify(nationalAverage);
     <p class="text-gray-600 text-sm mt-1">
       DriveSchoolPro helps UK ADIs manage students, schedule lessons, and track DVSA progress — all from your phone.
     </p>
-    <a href="/get-started/" class="inline-block mt-3 text-brand-red font-semibold text-sm hover:underline">
-      Try it free →
+    <a href={OFFER.ctaPrimary.href} class="inline-block mt-3 text-brand-red font-semibold text-sm hover:underline">
+      {OFFER.short} →
     </a>
   </div>
 </div>
