@@ -6,6 +6,7 @@ import StatisticsSection from '../components/seo/StatisticsSection.astro';
 import ComparisonTable from '../components/seo/ComparisonTable.astro';
 import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
 import MarketingScreenshot from '../components/MarketingScreenshot.astro';
+import { OFFER } from '../config/offer';
 
 // Management Software Statistics
 const managementStats = [
@@ -134,7 +135,7 @@ const faqItems = [
     answer: "DriveSchoolPro's Solo Plan is £29/month for independent ADIs with all features included — no per-user or per-student fees. A multi-instructor School Plan at £79/month is coming soon.",
     links: [
       { text: 'Full pricing details', url: '/pricing/' },
-      { text: 'Start Free Trial', url: 'https://app.driveschoolpro.com/signup' }
+      { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
     ]
   },
   {
@@ -192,7 +193,7 @@ const faqItems = [
     question: "How long does setup take?",
     answer: "A guided 7-step onboarding wizard walks you through setup: business details, your first instructor, your first vehicle, lesson types and pricing, booking rules, and your first student. Most schools are fully operational within an hour. With 16 configuration pages, you can customise the platform to match exactly how your school operates. Full support included.",
     links: [
-      { text: 'Get started', url: 'https://app.driveschoolpro.com/signup' },
+      { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href },
       { text: 'Pricing plans', url: '/pricing/' }
     ]
   },
@@ -229,7 +230,7 @@ const schemaMarkup = {
 
 <BaseLayout
   title="Driving School Student Management Software | DVSA Tracking & Scheduling | DriveSchoolPro"
-  description="Replace admin chaos with clarity. DriveSchoolPro tracks DVSA progress across 27 skills, manages lesson packages, invoicing, and multi-instructor scheduling — from £29/month. Get 3 months free."
+  description={`Replace admin chaos with clarity. DriveSchoolPro tracks DVSA progress across 27 skills, manages lesson packages, invoicing, and multi-instructor scheduling — from £29/month. ${OFFER.meta}`}
   image="/images/marketing/dvsa-progress-tracking.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
@@ -257,7 +258,7 @@ const schemaMarkup = {
         </p>
         <p class="text-gray-400 mb-8">Last updated: February 2026 | Reading time: 12 minutes</p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://app.driveschoolpro.com/signup" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>
           <a href="#what-is" class="btn-secondary text-lg px-8 py-4">Read the Guide</a>
         </div>
       </div>
@@ -617,8 +618,8 @@ const schemaMarkup = {
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Simplify Your School Management?</h2>
       <p class="text-xl mb-8 opacity-90">DriveSchoolPro combines scheduling, student management, payments, and reporting in one easy-to-use platform.</p>
-      <a href="https://app.driveschoolpro.com/signup" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">Start Free Trial</a>
-      <p class="text-sm mt-4 opacity-75">No credit card required. Start your 14-day free trial today.</p>
+      <a href={OFFER.ctaPrimary.href} class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>
+      <p class="text-sm mt-4 opacity-75">No credit card required. {OFFER.short}.</p>
     </div>
   </section>
 
