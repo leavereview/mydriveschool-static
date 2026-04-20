@@ -6,9 +6,10 @@ interface Props {
   description: string;
   canonicalUrl?: string;
   ogImage?: string;
+  robots?: string;
 }
 
-const { title, description, canonicalUrl, ogImage = '/images/og-default.jpg' } = Astro.props;
+const { title, description, canonicalUrl, ogImage = '/images/og-default.jpg', robots } = Astro.props;
 const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
 ---
 
@@ -26,6 +27,7 @@ const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
 
   <title>{title}</title>
   <meta name="description" content={description} />
+  {robots && <meta name="robots" content={robots} />}
   {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
   <meta property="og:type" content="website" />
