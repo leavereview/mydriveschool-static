@@ -49,6 +49,20 @@ const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
+  <!--
+    GA4 Configuration — driveschoolpro.com
+
+    Measurement ID: G-2E741HXVN9 (via data stream "driveschoolpro.com", created 2026-03-20)
+    Cross-domain: linked to app.driveschoolpro.com for signup attribution (setup: 2026-04-20)
+
+    Known data-quality gaps:
+    - Before 2026-01-26: cookie consent not yet added; GA4 undercounted
+    - ~2026-03-20: measurement ID typo in effect for part of the day (commit f7894ec)
+    - Before 2026-04-18: Google Ads conversion tracking not attached; paid CAC unattributable
+    - Before 2026-04-20: cross-domain linker not configured; signup conversions unattributed
+
+    Any historical analysis crossing these dates needs caveating.
+  -->
   <script is:inline define:vars={{ GOOGLE_ADS_ID }}>
     (function() {
       try {
@@ -64,7 +78,12 @@ const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
             gtag('js', new Date());
-            gtag('config', 'G-2E741HXVN9');
+            gtag('config', 'G-2E741HXVN9', {
+              linker: {
+                domains: ['driveschoolpro.com', 'app.driveschoolpro.com'],
+                accept_incoming: true
+              }
+            });
             if (GOOGLE_ADS_ID) { gtag('config', GOOGLE_ADS_ID); }
           }
         }

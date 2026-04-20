@@ -1,4 +1,5 @@
 ---
+import { OFFER } from '../config/offer';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BreadcrumbsEnhanced from '../components/seo/BreadcrumbsEnhanced.astro';
 import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
@@ -76,7 +77,7 @@ const schemaMarkup = {
           DriveSchoolPro tracks every pupil against the full DVSA 8-category, 27-skill framework — lesson by lesson. AI briefings give you context before each session. Pupils see their own progress in real time.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://app.driveschoolpro.com/signup" class="btn-primary text-lg px-8 py-4">Start Free Trial</a>
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">{OFFER.ctaPrimary.labelShort}</a>
           <a href="/dvsa-27-driving-skills/" class="btn-secondary text-lg px-8 py-4">See All 27 DVSA Skills</a>
         </div>
       </div>
@@ -210,9 +211,9 @@ const schemaMarkup = {
   <section class="section bg-brand-navy text-white text-center">
     <div class="container-custom">
       <h2 class="text-3xl font-bold mb-3">See It With Your Own Students</h2>
-      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">14-day free trial — set up your first pupils and track a week of lessons before committing.</p>
-      <a href="https://app.driveschoolpro.com/signup" class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
-        Start Free Trial &rarr;
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">{OFFER.long} — set up your first pupils and track a week of lessons before committing.</p>
+      <a href={OFFER.ctaPrimary.href} class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
+        {OFFER.ctaPrimary.label} &rarr;
       </a>
       <p class="text-white/50 text-sm mt-3">No credit card required &middot; Cancel anytime</p>
     </div>

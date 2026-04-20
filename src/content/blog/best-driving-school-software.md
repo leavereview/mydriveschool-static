@@ -140,8 +140,6 @@ Understanding your business metrics—revenue per instructor, average lessons to
 
 **Best Fit**: Independent UK driving schools or regional schools with 2-10 instructors who want comprehensive features without complexity.
 
-[Try DriveSchoolPro free for 3 months →](https://app.driveschoolpro.com/signup)
-
 ### DriveScout ⭐ Best for US Multi-Location Schools
 
 **Rating**: 4.5/5 | **Starting Price**: $79/month | **Best For**: US schools with 5+ locations

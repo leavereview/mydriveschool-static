@@ -1,5 +1,6 @@
 ---
 // About Page - EEAT Optimized for Google Trust
+import { OFFER } from '../config/offer';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -551,8 +552,8 @@ const testimonials = [
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
         Experience the same attention to detail and operational expertise that made RevelationPets a success.
       </p>
-      <a href="https://app.driveschoolpro.com/signup" class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">
-        Start Free Trial
+      <a href={OFFER.ctaPrimary.href} class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">
+        {OFFER.ctaPrimary.label}
       </a>
     </div>
   </section>

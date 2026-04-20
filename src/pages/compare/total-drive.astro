@@ -1,4 +1,5 @@
 ---
+import { OFFER } from '../../config/offer';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
 import FeaturedAnswer from '../../components/seo/FeaturedAnswer.astro';
@@ -28,7 +29,7 @@ const faqItems = [
   {
     question: "Is DriveSchoolPro better than Total Drive?",
     answer: "It depends what matters to you. DriveSchoolPro has AI lesson briefings, automated Google reviews, WhatsApp reminders, and transparent £29/month pricing. Total Drive is an established UK platform with a solid reputation, but pricing requires a direct conversation and it lacks AI briefings and automated review generation. If you want a modern platform with clear pricing and AI features, DriveSchoolPro is the stronger choice.",
-    links: [{ text: 'Start free trial', url: 'https://app.driveschoolpro.com/signup' }]
+    links: [{ text: 'Start free trial', url: OFFER.ctaPrimary.href }]
   },
   {
     question: "How much does Total Drive cost compared to DriveSchoolPro?",
@@ -48,7 +49,7 @@ const faqItems = [
   {
     question: "Which is better for a solo ADI?",
     answer: "DriveSchoolPro is purpose-built for solo UK ADIs. The £29/month Solo Plan includes all features with no per-student limits. Total Drive may suit solo ADIs too, but the lack of transparent pricing and the absence of AI briefings and automated reviews make DriveSchoolPro the more compelling option for most independent instructors.",
-    links: [{ text: 'Start free trial', url: 'https://app.driveschoolpro.com/signup' }]
+    links: [{ text: 'Start free trial', url: OFFER.ctaPrimary.href }]
   },
   {
     question: "Is Total Drive a reliable platform?",
@@ -95,7 +96,7 @@ const schemaMarkup = {
           An honest, feature-by-feature comparison. Total Drive is an established UK platform. DriveSchoolPro is built for ADIs who want AI lesson briefings, automated Google reviews, and transparent pricing from day one.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://app.driveschoolpro.com/signup" class="btn-primary text-lg px-8 py-4">Try DriveSchoolPro Free</a>
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">Try DriveSchoolPro Free</a>
           <a href="#comparison" class="btn-secondary text-lg px-8 py-4">See Feature Table</a>
         </div>
       </div>
@@ -129,7 +130,7 @@ const schemaMarkup = {
               'Embeddable booking widget',
               'Pupil and parent portals',
               'Stripe Connect payments',
-              '14-day free trial, no card required',
+              OFFER.short + ', no card required',
             ].map(item => (
               <li class="flex items-start gap-3 text-sm">
                 <svg class="w-4 h-4 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -139,7 +140,7 @@ const schemaMarkup = {
               </li>
             ))}
           </ul>
-          <a href="https://app.driveschoolpro.com/signup" class="btn-primary w-full text-center block">Start Free Trial</a>
+          <a href={OFFER.ctaPrimary.href} class="btn-primary w-full text-center block">{OFFER.ctaPrimary.labelShort}</a>
         </div>
 
         <!-- Total Drive -->
@@ -276,10 +277,10 @@ const schemaMarkup = {
     <div class="container-custom">
       <h2 class="text-3xl font-bold mb-3">Try DriveSchoolPro Free for 14 Days</h2>
       <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">No credit card. No demo call. Set up in 3 minutes and run a week of real lessons before deciding.</p>
-      <a href="https://app.driveschoolpro.com/signup" class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
-        Start Free Trial &rarr;
+      <a href={OFFER.ctaPrimary.href} class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
+        {OFFER.ctaPrimary.label} &rarr;
       </a>
-      <p class="text-white/50 text-sm mt-3">14-day free trial &middot; No credit card required &middot; Cancel anytime</p>
+      <p class="text-white/50 text-sm mt-3">{OFFER.short} &middot; No credit card required &middot; Cancel anytime</p>
     </div>
   </section>
 

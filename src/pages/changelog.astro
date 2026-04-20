@@ -1,4 +1,5 @@
 ---
+import { OFFER } from '../config/offer';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
@@ -142,8 +143,8 @@ const tagColours: Record<string, string> = {
         <!-- CTA -->
         <div class="mt-16 p-6 bg-brand-red-light rounded-xl">
           <h3 class="text-lg font-bold text-brand-navy mb-2">Try the latest version free</h3>
-          <p class="text-gray-600 text-sm mb-4">14-day free trial. No credit card required. Full access to every feature from day one.</p>
-          <a href="https://app.driveschoolpro.com/signup" class="btn-primary">Start Free Trial</a>
+          <p class="text-gray-600 text-sm mb-4">No credit card required. Full access to every feature from day one.</p>
+          <a href={OFFER.ctaPrimary.href} class="btn-primary">{OFFER.ctaPrimary.label}</a>
         </div>
       </div>
     </div>
