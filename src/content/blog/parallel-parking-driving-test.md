@@ -2,6 +2,7 @@
 title: "Parallel Parking: From Level 1 to Test-Ready"
 description: "Master parallel parking for your UK driving test. Learn reference points, common mistakes, and the 5 DVSA skill levels to pass first time."
 date: "2026-02-20"
+image: /images/blog-lesson.jpg
 tags: ["student-management"]
 author: "DriveSchoolPro Team"
 category: "Manoeuvres"
@@ -138,8 +139,6 @@ Once parked, apply the handbrake and select neutral. Take a moment to assess you
 ## Track Your Progress
 
 Our driving school software lets you and your instructor record your DVSA level for parallel parking after every lesson. Watch your progression from Level 1 to Level 5 — and see at a glance which specific aspects (observations, accuracy, control) still need work.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

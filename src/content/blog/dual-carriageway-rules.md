@@ -2,6 +2,7 @@
 title: "Dual Carriageways: Rules & Driving Test Guide (Skill 22)"
 description: "How to join, travel, overtake, and leave dual carriageways safely. DVSA Skill 22 fully explained for UK learner drivers and ADIs."
 date: "2026-02-21"
+image: /images/hero-driving.jpg
 tags: ["student-management", "road-types", "dvsa-skills"]
 author: "DriveSchoolPro Team"
 category: "Road Types"
@@ -127,8 +128,6 @@ Once in the deceleration lane, brake progressively and adjust your speed for the
 ## Track Your Progress
 
 Many pupils have their first dual carriageway experience very late in their training, which means they arrive at test standard without having had the chance to build genuine confidence at speed. Ask your instructor to include dual carriageway driving from around 15–20 hours in, even if it feels early. Earlier exposure makes a significant difference to confidence on test day.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

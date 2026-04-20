@@ -2,6 +2,7 @@
 title: "Bay Parking on Your Driving Test: Forward and Reverse"
 description: "Master bay parking for your UK driving test. Learn reverse and forward bay park techniques, what examiners assess, and how to avoid common faults."
 date: "2026-02-21"
+image: /images/blog-lesson.jpg
 tags: ["manoeuvres", "driving-test", "bay-parking"]
 author: "DriveSchoolPro Team"
 category: "Manoeuvres"
@@ -109,8 +110,6 @@ If the examiner asks you to drive forward into a bay, position yourself further 
 ## Track Your Progress
 
 DriveSchoolPro lets you log each manoeuvre against the DVSA competency scale, so you and your instructor can see exactly when you move from Level 3 (prompted) to Level 4 (independent). Consistent tracking means no nasty surprises on test day.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

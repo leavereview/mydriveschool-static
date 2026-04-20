@@ -2,6 +2,7 @@
 title: "Driving in Rain: DVSA Skill 25 — Adverse Weather Guide"
 description: "How to drive safely in rain, fog, ice and adverse weather for your UK driving test. Covers stopping distances, aquaplaning and fog lights."
 date: "2026-02-21"
+image: /images/feature-driving.jpg
 tags: ["driving-conditions", "dvsa-skills", "adverse-weather", "rain-driving"]
 author: "DriveSchoolPro Team"
 category: "Driving Conditions"
@@ -103,8 +104,6 @@ Ice and snow require the most dramatic speed reductions. Stopping distances on i
 ## Track Your Progress
 
 After each lesson in adverse weather conditions, rate yourself against the DVSA 1-5 scale for Skill 25. Consistent Level 4 performance — adapting your driving independently to whatever conditions you encounter — is the benchmark for test readiness. Your instructor should be formally logging this as part of your [structured training record](/blog/student-progress-tracking/).
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

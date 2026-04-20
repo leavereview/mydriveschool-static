@@ -119,7 +119,7 @@ Keep both running simultaneously for the first two weeks. This is your safety ne
 
 ### Step 2: Set up the software (10 minutes)
 
-Go to [DriveSchoolPro and start your free trial](/get-started/). During setup:
+Go to [DriveSchoolPro and start your free trial](https://app.driveschoolpro.com/signup). During setup:
 
 - Set your working days and hours (block out days you never teach)
 - Set your standard lesson price
@@ -263,8 +263,6 @@ Initial setup — account creation, working hours, lesson price — takes around
 Run both systems side by side for two weeks. Add your students, let the reminders go out automatically, and log a week's worth of DVSA skills after each lesson. By the end of the fortnight, you will know whether it works for your practice.
 
 No risk. No commitment. If it does not work, your paper diary is still there.
-
-[Start Your Free 14-Day Trial →](/get-started/)
 
 ---
 

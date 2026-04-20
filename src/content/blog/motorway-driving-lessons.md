@@ -2,6 +2,7 @@
 title: "Motorway Driving: DVSA Skill 23 — Rules for New Drivers"
 description: "Learners can now drive on motorways with an ADI. Master joining, lane discipline, following distance, and smart motorway rules for DVSA Skill 23."
 date: "2026-02-21"
+image: /images/hero-driving.jpg
 tags: ["student-management", "road-types", "dvsa-skills"]
 author: "DriveSchoolPro Team"
 category: "Road Types"
@@ -154,8 +155,6 @@ Never attempt to repair a tyre or carry out any vehicle work on the hard shoulde
 ## Track Your Progress
 
 Motorway driving is a skill that benefits enormously from gradual exposure across multiple lessons rather than a single long motorway session. Aim for three or four motorway lessons of 30–45 minutes each, across different times of day and traffic conditions. By your final lesson before the test, motorway driving should feel like the most straightforward part of the drive — because the high speed and simple layout (no junctions, no pedestrians, no cyclists) actually make it easier than urban driving once the initial unfamiliarity wears off.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

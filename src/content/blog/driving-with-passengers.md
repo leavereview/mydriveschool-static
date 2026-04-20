@@ -2,6 +2,7 @@
 title: "Driving with Passengers & Loads: DVSA Skill 26"
 description: "How to drive responsibly with passengers and loads for your UK driving test. Covers distractions, vehicle dynamics, and new driver rules."
 date: "2026-02-21"
+image: /images/blog-new-driver.jpg
 tags: ["driving-conditions", "dvsa-skills", "passengers", "vehicle-loading"]
 author: "DriveSchoolPro Team"
 category: "Driving Conditions"
@@ -109,8 +110,6 @@ For any load, check your tyre pressures. Most manufacturers specify a higher tyr
 ## Track Your Progress
 
 Rate yourself against the DVSA 1-5 scale after every lesson where you drive with others present. The goal is Level 4 — managing passengers and loads independently, without your driving standard dropping even slightly compared to solo practice. Many drivers reach test standard when alone but drop a level with passengers — catching this early is key.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

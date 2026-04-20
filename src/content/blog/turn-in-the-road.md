@@ -2,6 +2,7 @@
 title: "Turn in the Road: 3-Point Turn Guide for Driving Test"
 description: "Complete guide to the turn in the road manoeuvre for your UK driving test. Master clutch control, observation, and kerb clearance with DVSA Skill 18."
 date: "2026-02-21"
+image: /images/blog-lesson.jpg
 tags: ["manoeuvres", "driving-test", "turn-in-the-road"]
 author: "DriveSchoolPro Team"
 category: "Manoeuvres"
@@ -111,8 +112,6 @@ Another full all-round observation before moving. Select first gear, apply appro
 ## Track Your Progress
 
 DriveSchoolPro lets you track your competency for every DVSA skill, including the turn in the road, against the five-level scale. Logging your progress after each lesson helps both you and your instructor see clearly when you are ready to move from practising with prompts to performing independently on test day.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

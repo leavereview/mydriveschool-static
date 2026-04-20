@@ -236,8 +236,6 @@ No-shows are a systems problem, and every system in this guide is solvable. The 
 
 DriveSchoolPro sends automated reminders, tracks cancellations, manages lesson packages, and reports your no-show rate by student and time slot — so you can focus on teaching rather than chasing.
 
-**[Start Your Free Trial →](/get-started/)**
-
 ---
 
 ## Related Articles

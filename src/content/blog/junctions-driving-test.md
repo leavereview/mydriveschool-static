@@ -2,6 +2,7 @@
 title: "Junctions on Your Driving Test: T-Junctions & Crossroads"
 description: "Junctions cause more driving test faults than anything else. Learn the MSPSL routine, open vs closed junctions, and crossroad priority for DVSA Skill 14."
 date: "2026-02-21"
+image: /images/blog-learner.jpg
 tags: ["junctions", "driving-test", "observation", "road-positioning"]
 author: "DriveSchoolPro Team"
 category: "Junctions & Roundabouts"
@@ -107,8 +108,6 @@ At a crossroads where you have give way lines or traffic lights, priority is cle
 ## Track Your Progress
 
 Junction skills — along with every other DVSA competency — can be tracked lesson by lesson in DriveSchoolPro. Because junctions appear so frequently during normal driving, your competency data builds up quickly, giving you and your instructor a clear picture of your development and where to focus next.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

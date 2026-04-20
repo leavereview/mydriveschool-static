@@ -2,6 +2,7 @@
 title: "The Emergency Stop: What Examiners Look For (Skill 20)"
 description: "How to perform an emergency stop on your UK driving test. ABS technique, 1-in-3 chance of being tested, and the 5 DVSA levels to test-ready standard."
 date: "2026-02-20"
+image: /images/blog-lesson.jpg
 tags: ["student-management"]
 author: "DriveSchoolPro Team"
 category: "Manoeuvres"
@@ -171,8 +172,6 @@ Understanding these numbers connects the emergency stop to the broader skill of 
 ## Track Your Progress
 
 Our software records your DVSA level for the emergency stop after every lesson. Your instructor logs whether you're at Level 1, 2, 3, 4, or 5 — and you can see your progression at any time. When you reach Level 5, you know you're ready.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

@@ -2,6 +2,7 @@
 title: "Country Roads: DVSA Skill 21 — Rural Driving Guide"
 description: "Country roads kill more drivers than motorways. Learn DVSA Skill 21 — speed, bends, passing places, and farm hazards for your UK test."
 date: "2026-02-21"
+image: /images/hero-driving.jpg
 tags: ["student-management", "road-types", "dvsa-skills"]
 author: "DriveSchoolPro Team"
 category: "Road Types"
@@ -123,8 +124,6 @@ A crest in the road that hides the far side is called a blind summit. Always ass
 ## Track Your Progress
 
 Country road driving progresses fastest when pupils drive on genuinely rural roads, not just quiet residential streets. Ask your instructor to include country routes from mid-training onwards. Instructors sometimes delay country roads until pupils are close to test standard — but earlier exposure produces better hazard awareness and more confident speed management.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

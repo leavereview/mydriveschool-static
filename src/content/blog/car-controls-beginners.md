@@ -2,6 +2,7 @@
 title: "Car Controls for Beginners: DVSA Skill 5 Explained"
 description: "Master every pedal, gear, and switch before your first drive. DVSA Skill 5 car controls explained for UK learner drivers."
 date: "2026-02-21"
+image: /images/feature-instructor.jpg
 tags: ["student-management", "control-positioning", "dvsa-skills"]
 author: "DriveSchoolPro Team"
 category: "Control & Positioning"
@@ -117,8 +118,6 @@ Red lights require immediate attention — they indicate a serious fault (oil pr
 ## Track Your Progress
 
 DVSA Skill 5 is assessed as a background skill throughout your entire training. Use the five-level scale above to honestly rate where you are at the end of each lesson, and share that rating with your instructor. Drivers who self-assess accurately progress faster than those who rely solely on instructor feedback.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

@@ -455,8 +455,6 @@ Yes. Starting with software from your first student means the system is already 
 
 DriveSchoolPro gives you scheduling, DVSA competency tracking, student management, and vehicle compliance from day one — built specifically for UK ADIs and driving schools.
 
-[Start Your Free Trial →](/get-started/)
-
 ---
 
 ## Related Articles

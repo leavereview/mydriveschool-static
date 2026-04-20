@@ -3,6 +3,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorByline from '../../components/AuthorByline.astro';
+import OfferCTA from '../../components/OfferCTA.astro';
+import { OFFER } from '../../config/offer';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -128,6 +130,7 @@ const relatedPosts = allPosts
           <div class="prose max-w-none">
             <Content />
           </div>
+          <OfferCTA />
 
           <!-- Share / Actions -->
           <div class="mt-12 pt-8 border-t border-gray-200">
@@ -173,8 +176,8 @@ const relatedPosts = allPosts
               <p class="text-sm text-gray-600 mb-4">
                 The complete driving school management platform for instructors and schools.
               </p>
-              <a href="https://app.driveschoolpro.com/signup" class="btn-primary w-full text-center text-sm">
-                Start Free Trial
+              <a href={OFFER.ctaPrimary.href} class="btn-primary w-full text-center text-sm">
+                {OFFER.ctaPrimary.label}
               </a>
             </div>
 

@@ -2,6 +2,7 @@
 title: "Use of Speed: DVSA Skill 11 — Driving at the Right Pace"
 description: "Speed management for UK learner drivers: drive at the right pace for conditions, not just the limit. Master DVSA Skill 11 for your test."
 date: "2026-02-21"
+image: /images/feature-driving.jpg
 tags: ["student-management", "dvsa-skills", "speed", "observation"]
 author: "DriveSchoolPro Team"
 category: "Observation & Planning"
@@ -105,8 +106,6 @@ Match your speed to these factors:
 ## Track Your Progress
 
 Before your next lesson, ask your instructor to score your Use of Speed on the 1–5 DVSA scale and identify one specific situation where you chose the wrong pace. Targeting a single scenario each lesson is faster than trying to improve everything at once.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

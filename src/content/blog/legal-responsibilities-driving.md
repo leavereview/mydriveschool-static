@@ -2,6 +2,7 @@
 title: "Legal Responsibilities: DVSA Skill 1 for Learner Drivers"
 description: "Everything UK learner drivers must know about legal responsibilities — licence, insurance, MOT, L plates and the new driver 6-point rule."
 date: "2026-02-21"
+image: /images/blog-theory.jpg
 tags: ["the-basics", "dvsa-skills", "legal", "learner-driver", "new-driver"]
 author: "DriveSchoolPro Team"
 category: "The Basics"
@@ -113,8 +114,6 @@ This rule exists because newly qualified drivers are statistically the most dang
 ## Track Your Progress
 
 Legal knowledge underpins every other driving skill. As you progress through your training, revisit Skill 1 periodically — especially after your theory test, and again as you approach your practical test. Rate yourself honestly: can you explain every item listed here without hesitation? Level 4 means yes.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

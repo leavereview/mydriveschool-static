@@ -2,6 +2,7 @@
 title: "Road Positioning: DVSA Skill 7 — Lane Discipline Guide"
 description: "Keep the right distance from parked cars, choose the correct lane, and nail road positioning for your UK driving test. DVSA Skill 7."
 date: "2026-02-21"
+image: /images/feature-instructor.jpg
 tags: ["student-management", "control-positioning", "dvsa-skills"]
 author: "DriveSchoolPro Team"
 category: "Control & Positioning"
@@ -121,8 +122,6 @@ At roundabouts, use the approach road's lane markings and road signs to select t
 ## Track Your Progress
 
 Road positioning improves most rapidly when pupils have a clear feedback loop after every drive. At the end of each lesson, ask your instructor to rate your positioning on the 5-level scale above and identify one specific improvement to focus on next time. Most pupils reach Level 4 within 10–15 hours of driving, but consistent Level 5 positioning on varied road types may take longer.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

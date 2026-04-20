@@ -2,6 +2,7 @@
 title: "Car Safety Checks: DVSA Skill 2 — Show Me Tell Me Guide"
 description: "Complete guide to Show Me Tell Me for your UK driving test. Learn all 20 questions, what examiners ask, and how to check tyres, oil and lights."
 date: "2026-02-21"
+image: /images/feature-student.jpg
 tags: ["the-basics", "dvsa-skills", "show-me-tell-me", "vehicle-checks", "driving-test"]
 author: "DriveSchoolPro Team"
 category: "The Basics"
@@ -103,8 +104,6 @@ You are at test-ready standard. You perform safety checks automatically before d
 ## Track Your Progress
 
 By the time you reach test standard (Level 4), you should be able to answer any of the 20 Show Me Tell Me questions without hesitation and perform any physical check correctly on your own. Your instructor should [track your progress](/blog/student-progress-tracking/) against Skill 2 throughout your training. Practise with your instructor on multiple vehicles so you are not thrown by a different layout on test day.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

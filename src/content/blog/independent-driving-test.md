@@ -2,6 +2,7 @@
 title: "Independent Driving: DVSA Skill 27 — Sat Nav & Road Signs"
 description: "Master the independent driving section of your UK test. Learn how sat nav works on test, what happens if you go wrong, and road sign following."
 date: "2026-02-21"
+image: /images/blog-pass-test.jpg
 tags: ["following-routes", "dvsa-skills", "independent-driving", "sat-nav", "driving-test"]
 author: "DriveSchoolPro Team"
 category: "Following Routes"
@@ -97,8 +98,6 @@ One in five tests still uses road sign following. In these cases, the examiner w
 ## Track Your Progress
 
 The independent driving section is specifically logged as Skill 27 in the DVSA's Driver's Record. Rate yourself after practising: are you at Level 3 (needing occasional prompts) or Level 4 (fully independent)? The goal before test day is consistent Level 4, including when things go slightly wrong mid-route. Your instructor should be [logging your progress](/blog/student-progress-tracking/) after each session to confirm you are on track for test standard.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

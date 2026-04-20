@@ -2,6 +2,7 @@
 title: "Roundabout Rules UK: Master DVSA Skill 15"
 description: "UK roundabout rules for learner drivers. Lane selection, signalling, mini roundabouts, and what examiners look for on your driving test."
 date: "2026-02-20"
+image: /images/feature-driving.jpg
 tags: ["student-management"]
 author: "DriveSchoolPro Team"
 category: "Junctions & Roundabouts"
@@ -160,8 +161,6 @@ Some larger roundabouts use spiral lane markings — the lanes change their dire
 ## Track Your Progress
 
 Our software tracks your roundabout progress across the 5 DVSA levels. After each lesson, your instructor records whether you're at Level 1, 2, 3, 4, or 5 — and you can see exactly which aspects (entry timing, signalling, lane selection) still need work.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

@@ -2,6 +2,7 @@
 title: "Observation and Anticipation on Your Driving Test: DVSA Skill 10"
 description: "Master observation and anticipation for your UK driving test. What examiners check, the MSM routine, hazard perception, and how to reach DVSA Level 5 standard."
 date: "2026-02-22"
+image: /images/blog-learner.jpg
 tags: ["driving-test", "observation", "anticipation", "hazard-perception"]
 author: "DriveSchoolPro Team"
 category: "Observation & Planning"
@@ -145,8 +146,6 @@ The skills transfer — drivers who do well at hazard perception tend to observe
 ## Track Your Progress
 
 Observation and anticipation develop with supervised practice — but only if you know which aspects need work. DriveSchoolPro's [student progress tracking](/blog/student-progress-tracking/) covers all 27 DVSA skills, including Skill 10, across every lesson. Your instructor records your level after each session, and you can see whether your observation is improving, plateauing, or regressing in specific driving environments.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

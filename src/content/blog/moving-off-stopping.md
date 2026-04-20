@@ -2,6 +2,7 @@
 title: "Moving Off and Stopping: Master DVSA Skill 6"
 description: "POM routine, clutch control, hill starts, and safe stopping positions. Everything UK learners need to master DVSA Skill 6."
 date: "2026-02-21"
+image: /images/feature-instructor.jpg
 tags: ["student-management", "control-positioning", "dvsa-skills"]
 author: "DriveSchoolPro Team"
 category: "Control & Positioning"
@@ -123,8 +124,6 @@ Check mirrors (interior, left door mirror), reduce speed progressively with the 
 ## Track Your Progress
 
 Moving off and stopping is one of the first skills taught and one of the last to be fully refined. Pupils often plateau at Level 3 — technically capable but still needing the occasional prompt. The jump from Level 3 to Level 4 comes from deliberate repetition across different road conditions: hills, busy roads, narrow streets, and car parks.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

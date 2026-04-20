@@ -2,6 +2,7 @@
 title: "Night Driving: DVSA Skill 24 — Driving in the Dark"
 description: "Master night driving for your UK test. Learn correct headlight use, full vs dipped beam, and how to handle reduced visibility safely."
 date: "2026-02-21"
+image: /images/feature-driving.jpg
 tags: ["driving-conditions", "dvsa-skills", "night-driving", "headlights"]
 author: "DriveSchoolPro Team"
 category: "Driving Conditions"
@@ -101,8 +102,6 @@ Speed management at night is not about driving slowly — it is about driving at
 ## Track Your Progress
 
 Use the DVSA 1-5 scale to rate yourself after each night driving lesson. If you are consistently reaching Level 4 — managing headlights and speed independently without prompts — you are on track for test standard. Your instructor should be assessing this skill formally as part of your [training record](/blog/student-progress-tracking/).
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

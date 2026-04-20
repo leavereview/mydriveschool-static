@@ -2,6 +2,7 @@
 title: "Signalling on Your Driving Test: When and How (Skill 9)"
 description: "Find out when to signal and when not to on your UK driving test. DVSA Skill 9 levels, common faults, and practice tips explained."
 date: "2026-02-21"
+image: /images/blog-lesson.jpg
 tags: ["student-management"]
 author: "DriveSchoolPro Team"
 category: "Observation & Planning"
@@ -117,8 +118,6 @@ After every left turn, glance at your instrument cluster or listen for the ticki
 Signalling faults are easy to miss in the moment but easy to spot in a lesson debrief. Tracking which junctions caused hesitation — too late, forgot to cancel, signalled unnecessarily — gives you a targeted practice plan rather than just more laps of the same route.
 
 DriveSchoolPro lets instructors log signalling faults by type and location after each lesson, so patterns become visible before they become test failures.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 

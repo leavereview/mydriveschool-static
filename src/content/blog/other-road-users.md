@@ -2,6 +2,7 @@
 title: "Dealing with Other Road Users: DVSA Skill 12"
 description: "Learn how to safely interact with cyclists, pedestrians, horses, and other drivers on UK roads. Master DVSA Skill 12 for your driving test."
 date: "2026-02-21"
+image: /images/feature-student.jpg
 tags: ["student-management", "dvsa-skills", "road-users", "observation"]
 author: "DriveSchoolPro Team"
 category: "Observation & Planning"
@@ -117,8 +118,6 @@ Horses are unpredictable around engine noise and sudden movements. Pass them wid
 ## Track Your Progress
 
 After each lesson, ask your instructor to identify one interaction where your response to another road user was late, too close, or caused them to adjust. Reviewing one specific moment per lesson builds awareness faster than general feedback.
-
-[Start Free Trial →](https://app.driveschoolpro.com/signup)
 
 ---
 
