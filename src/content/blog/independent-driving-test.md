@@ -105,3 +105,11 @@ The independent driving section is specifically logged as Skill 27 in the DVSA's
 
 - [Legal Responsibilities: DVSA Skill 1](/blog/legal-responsibilities-driving/) — understanding the rules of the road underpins confident independent navigation
 - [Car Safety Checks: DVSA Skill 2](/blog/car-safety-checks/) — test day preparation starts before you get in the car
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Anticipation & Planning: DVSA Skill 10 for Safer Driving](/blog/anticipation-driving/)
+- [Country Roads: DVSA Skill 21 — Rural Driving Guide](/blog/country-roads-driving/)
+- [Dual Carriageways: Rules & Driving Test Guide (Skill 22)](/blog/dual-carriageway-rules/)
+

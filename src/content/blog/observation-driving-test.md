@@ -154,3 +154,11 @@ Observation and anticipation develop with supervised practice — but only if yo
 - [Junctions (Skill 14)](/blog/junctions-driving-test) — effective observation is the single most important factor in safe junction handling
 - [Roundabouts (Skill 15)](/blog/roundabout-rules-uk) — approach speed and entry timing at roundabouts depend entirely on good observation
 - [All 27 DVSA Driving Skills](/dvsa-27-driving-skills/) — see how observation underpins the complete test-ready skill framework
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Mirrors & the MSM Routine: DVSA Skill 8 Explained](/blog/msm-routine-driving/)
+- [Signalling on Your Driving Test: When and How (Skill 9)](/blog/signalling-driving-test/)
+- [Anticipation & Planning: DVSA Skill 10 for Safer Driving](/blog/anticipation-driving/)
+

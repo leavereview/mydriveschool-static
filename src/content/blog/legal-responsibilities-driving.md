@@ -121,3 +121,11 @@ Legal knowledge underpins every other driving skill. As you progress through you
 
 - [Car Safety Checks: DVSA Skill 2](/blog/car-safety-checks/) — the next step, covering Show Me Tell Me and vehicle roadworthiness in practice
 - [The Cockpit Drill: DVSA Skill 3](/blog/cockpit-drill-driving/) — turning legal readiness into physical readiness before every drive
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Car Safety Checks: DVSA Skill 2 — Show Me Tell Me Guide](/blog/car-safety-checks/)
+- [The Cockpit Drill: DVSA Skill 3 — DSSSM Explained](/blog/cockpit-drill-driving/)
+- [Vehicle Security: DVSA Skill 4 — Parking & Anti-Theft](/blog/vehicle-security/)
+

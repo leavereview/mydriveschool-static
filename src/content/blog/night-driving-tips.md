@@ -109,3 +109,10 @@ Use the DVSA 1-5 scale to rate yourself after each night driving lesson. If you 
 
 - [Driving in Rain: DVSA Skill 25](/blog/driving-in-rain/) — adverse weather requires the same adaptive mindset as night driving
 - [Use of Speed: DVSA Skill 11](/blog/use-of-speed/) — understanding appropriate speed is inseparable from night driving safety
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Driving in Rain: DVSA Skill 25 — Adverse Weather Guide](/blog/driving-in-rain/)
+- [Driving with Passengers & Loads: DVSA Skill 26](/blog/driving-with-passengers/)
+

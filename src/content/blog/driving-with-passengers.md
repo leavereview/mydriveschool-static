@@ -117,3 +117,10 @@ Rate yourself against the DVSA 1-5 scale after every lesson where you drive with
 
 - [Night Driving: DVSA Skill 24](/blog/night-driving-tips/) — the same adaptive mindset applies to managing passengers in difficult conditions
 - [Driving in Rain: DVSA Skill 25](/blog/driving-in-rain/) — additional weight affects wet-weather handling and stopping distances even more
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Night Driving: DVSA Skill 24 — Driving in the Dark](/blog/night-driving-tips/)
+- [Driving in Rain: DVSA Skill 25 — Adverse Weather Guide](/blog/driving-in-rain/)
+

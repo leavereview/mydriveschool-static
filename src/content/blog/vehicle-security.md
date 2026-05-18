@@ -125,3 +125,11 @@ Vehicle security habits are assessed throughout your test, not just at the end. 
 
 - [The Cockpit Drill: DVSA Skill 3](/blog/cockpit-drill-driving/) — the mirror-checking habits you build in the cockpit drill apply directly to safe vehicle exit
 - [Legal Responsibilities: DVSA Skill 1](/blog/legal-responsibilities-driving/) — understanding what is and is not legal when stopping and parking on UK roads
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Legal Responsibilities: DVSA Skill 1 for Learner Drivers](/blog/legal-responsibilities-driving/)
+- [Car Safety Checks: DVSA Skill 2 — Show Me Tell Me Guide](/blog/car-safety-checks/)
+- [The Cockpit Drill: DVSA Skill 3 — DSSSM Explained](/blog/cockpit-drill-driving/)
+

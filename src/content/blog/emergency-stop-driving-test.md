@@ -180,3 +180,11 @@ Our software records your DVSA level for the emergency stop after every lesson. 
 - [Anticipation and Planning (Skill 10)](/driving-skills/observation-signalling/) — the skill that reduces how often you need an emergency stop
 - [Use of Speed (Skill 11)](/driving-skills/observation-signalling/) — appropriate speed directly affects stopping distances
 - [All Manoeuvres (Skills 17–20)](/driving-skills/manoeuvres/) — see the other manoeuvres that may appear on your test
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Reversing: Master DVSA Skill 17 for Your Driving Test](/blog/reversing-driving-lesson/)
+- [Turn in the Road: 3-Point Turn Guide for Driving Test](/blog/turn-in-the-road/)
+- [Bay Parking on Your Driving Test: Forward and Reverse](/blog/bay-parking-driving-test/)
+

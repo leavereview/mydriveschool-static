@@ -126,3 +126,10 @@ DVSA Skill 5 is assessed as a background skill throughout your entire training. 
 - [Moving Off and Stopping (Skill 6)](/blog/moving-off-stopping/) — once you know the controls, the next step is using them to move the car safely
 - [Road Positioning (Skill 7)](/blog/road-positioning-driving/) — correct steering technique feeds directly into maintaining a safe road position
 - [Control and Positioning Skills Overview](/driving-skills/control-positioning/) — see all skills in this category and track your progress across the full range
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Moving Off and Stopping: Master DVSA Skill 6](/blog/moving-off-stopping/)
+- [Road Positioning: DVSA Skill 7 — Lane Discipline Guide](/blog/road-positioning-driving/)
+

@@ -169,3 +169,10 @@ Our software tracks your roundabout progress across the 5 DVSA levels. After eac
 - [Junctions (Skill 14)](/driving-skills/junctions-roundabouts/) — the approach and observation routine also applies at roundabouts
 - [Signalling (Skill 9)](/driving-skills/observation-signalling/) — correct signals are assessed closely at every roundabout
 - [Safe Positioning (Skill 7)](/driving-skills/control-positioning/) — lane discipline on the roundabout is an extension of positioning skills
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Junctions on Your Driving Test: T-Junctions & Crossroads](/blog/junctions-driving-test/)
+- [Pedestrian Crossings: Rules & Driving Test Guide (Skill 16)](/blog/pedestrian-crossings-rules/)
+

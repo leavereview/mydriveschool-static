@@ -116,3 +116,10 @@ Junction skills — along with every other DVSA competency — can be tracked le
 - [Roundabouts](/blog/roundabout-rules-uk) — DVSA Skill 15, where observation, signalling, and lane discipline combine in a more complex multi-lane environment
 - [Pedestrian Crossings](/blog/pedestrian-crossings-rules) — DVSA Skill 16, another high-fault area requiring anticipation and correct prioritisation of vulnerable road users
 - [Observation and Anticipation](/blog/observation-driving-test) — the foundational skill that underpins safe junction handling across all road types
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Roundabout Rules UK: Master DVSA Skill 15](/blog/roundabout-rules-uk/)
+- [Pedestrian Crossings: Rules & Driving Test Guide (Skill 16)](/blog/pedestrian-crossings-rules/)
+

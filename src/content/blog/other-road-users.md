@@ -126,3 +126,11 @@ After each lesson, ask your instructor to identify one interaction where your re
 - [Use of Speed (Skill 11)](/blog/speed-awareness-driving/) — Your speed directly determines how much time you have to respond to other road users
 - [Anticipation and Planning (Skill 10)](/blog/anticipation-planning-driving/) — Spotting road users early is the foundation of responding safely
 - [Use of Mirrors (Skill 8)](/blog/use-of-mirrors-driving/) — Effective mirror checks are essential before every manoeuvre near cyclists and pedestrians
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Mirrors & the MSM Routine: DVSA Skill 8 Explained](/blog/msm-routine-driving/)
+- [Signalling on Your Driving Test: When and How (Skill 9)](/blog/signalling-driving-test/)
+- [Anticipation & Planning: DVSA Skill 10 for Safer Driving](/blog/anticipation-driving/)
+

@@ -113,3 +113,11 @@ The cockpit drill is one of those skills where Level 4 is achievable relatively 
 
 - [Car Safety Checks: DVSA Skill 2](/blog/car-safety-checks/) — external checks before the cockpit drill ensure the vehicle itself is safe to drive
 - [Vehicle Security: DVSA Skill 4](/blog/vehicle-security/) — the complementary process for leaving and securing the vehicle
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Legal Responsibilities: DVSA Skill 1 for Learner Drivers](/blog/legal-responsibilities-driving/)
+- [Car Safety Checks: DVSA Skill 2 — Show Me Tell Me Guide](/blog/car-safety-checks/)
+- [Vehicle Security: DVSA Skill 4 — Parking & Anti-Theft](/blog/vehicle-security/)
+

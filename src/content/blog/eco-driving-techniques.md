@@ -126,3 +126,11 @@ Your instructor can assess eco-driving alongside your normal lesson by noting ho
 - [Use of Speed (Skill 11)](/blog/speed-awareness-driving/) — Appropriate speed and eco-driving overlap: smooth speed management reduces both hazards and fuel use
 - [Anticipation and Planning (Skill 10)](/blog/anticipation-planning-driving/) — The further ahead you read the road, the less often you accelerate unnecessarily
 - [Dealing with Other Road Users (Skill 12)](/blog/other-road-users/) — Smooth, predictable driving benefits other road users as well as your fuel consumption
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Mirrors & the MSM Routine: DVSA Skill 8 Explained](/blog/msm-routine-driving/)
+- [Signalling on Your Driving Test: When and How (Skill 9)](/blog/signalling-driving-test/)
+- [Anticipation & Planning: DVSA Skill 10 for Safer Driving](/blog/anticipation-driving/)
+

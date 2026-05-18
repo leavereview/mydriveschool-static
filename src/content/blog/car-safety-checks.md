@@ -111,3 +111,11 @@ By the time you reach test standard (Level 4), you should be able to answer any 
 
 - [Legal Responsibilities: DVSA Skill 1](/blog/legal-responsibilities-driving/) — understanding MOT and roadworthiness requirements underpins these checks
 - [The Cockpit Drill: DVSA Skill 3](/blog/cockpit-drill-driving/) — after the external checks, the cockpit drill is your next step before driving
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Legal Responsibilities: DVSA Skill 1 for Learner Drivers](/blog/legal-responsibilities-driving/)
+- [The Cockpit Drill: DVSA Skill 3 — DSSSM Explained](/blog/cockpit-drill-driving/)
+- [Vehicle Security: DVSA Skill 4 — Parking & Anti-Theft](/blog/vehicle-security/)
+

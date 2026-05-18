@@ -163,3 +163,10 @@ Motorway driving is a skill that benefits enormously from gradual exposure acros
 - [Dual Carriageways (Skill 22)](/blog/dual-carriageway-rules/) — the essential prerequisite for motorway driving, covering joining, lane discipline, and overtaking at speed
 - [Country Roads (Skill 21)](/blog/country-roads-driving/) — rural driving, where the dangers are different but the principle of speed-to-conditions is equally critical
 - [Road Types Skills Overview](/driving-skills/road-types/) — see all road type skills and how they progress through the DVSA curriculum
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Country Roads: DVSA Skill 21 — Rural Driving Guide](/blog/country-roads-driving/)
+- [Dual Carriageways: Rules & Driving Test Guide (Skill 22)](/blog/dual-carriageway-rules/)
+

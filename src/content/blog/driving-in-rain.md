@@ -111,3 +111,10 @@ After each lesson in adverse weather conditions, rate yourself against the DVSA 
 
 - [Night Driving: DVSA Skill 24](/blog/night-driving-tips/) — reduced visibility at night requires the same adaptive approach as adverse weather
 - [Driving with Passengers: DVSA Skill 26](/blog/driving-with-passengers/) — vehicle loading affects handling in wet conditions even more than in dry
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Night Driving: DVSA Skill 24 — Driving in the Dark](/blog/night-driving-tips/)
+- [Driving with Passengers & Loads: DVSA Skill 26](/blog/driving-with-passengers/)
+

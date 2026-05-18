@@ -136,3 +136,10 @@ Many pupils have their first dual carriageway experience very late in their trai
 - [Country Roads (Skill 21)](/blog/country-roads-driving/) — the rural road skill that immediately precedes dual carriageways in the DVSA framework
 - [Motorway Driving (Skill 23)](/blog/motorway-driving-lessons/) — the next step up, with higher-volume traffic and additional motorway-specific rules
 - [Road Types Skills Overview](/driving-skills/road-types/) — see all road type skills in context
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Country Roads: DVSA Skill 21 — Rural Driving Guide](/blog/country-roads-driving/)
+- [Motorway Driving: DVSA Skill 23 — Rules for New Drivers](/blog/motorway-driving-lessons/)
+

@@ -120,3 +120,11 @@ DriveSchoolPro lets you track your competency for every DVSA skill, including th
 - [Reversing](/blog/reversing-driving-lesson) — DVSA Skill 17, the fundamental rearward control that the reverse phase of this manoeuvre depends on
 - [Bay Parking](/blog/bay-parking-driving-test) — DVSA Skill 19, another manoeuvre where slow speed and accurate observation are the keys to success
 - [Parallel Parking](/blog/parallel-parking-driving-test) — combines reversing accuracy with judgment of road-side positioning
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Reversing: Master DVSA Skill 17 for Your Driving Test](/blog/reversing-driving-lesson/)
+- [Bay Parking on Your Driving Test: Forward and Reverse](/blog/bay-parking-driving-test/)
+- [Parallel Parking: From Level 1 to Test-Ready](/blog/parallel-parking-driving-test/)
+

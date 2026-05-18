@@ -118,3 +118,11 @@ Every time you practise reversing, you can log your competency level against the
 - [Bay Parking](/blog/bay-parking-driving-test) — DVSA Skill 19, which builds directly on your reversing control to park accurately in a marked bay
 - [Parallel Parking](/blog/parallel-parking-driving-test) — combines reversing with precise steering to park neatly behind another vehicle at the roadside
 - [Turn in the Road](/blog/turn-in-the-road) — DVSA Skill 18, where reversing control and all-round observation combine in a confined space
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Turn in the Road: 3-Point Turn Guide for Driving Test](/blog/turn-in-the-road/)
+- [Bay Parking on Your Driving Test: Forward and Reverse](/blog/bay-parking-driving-test/)
+- [Parallel Parking: From Level 1 to Test-Ready](/blog/parallel-parking-driving-test/)
+

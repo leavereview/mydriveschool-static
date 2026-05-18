@@ -131,3 +131,10 @@ Country road driving progresses fastest when pupils drive on genuinely rural roa
 
 - [Dual Carriageways (Skill 22)](/blog/dual-carriageway-rules/) — the next step up in road type complexity, with higher speeds and joining/leaving technique
 - [Road Types Skills Overview](/driving-skills/road-types/) — see all road type skills and how they connect across your training
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Dual Carriageways: Rules & Driving Test Guide (Skill 22)](/blog/dual-carriageway-rules/)
+- [Motorway Driving: DVSA Skill 23 — Rules for New Drivers](/blog/motorway-driving-lessons/)
+

@@ -126,3 +126,11 @@ DriveSchoolPro lets instructors log signalling faults by type and location after
 - [Mirrors & the MSM Routine (Skill 8)](/blog/msm-routine-driving/) — signals always follow mirrors; make sure the sequence is solid before working on timing
 - [Anticipation and Planning (Skill 10)](/blog/anticipation-driving/) — reading the road early gives you more time to decide whether a signal is needed
 - [Observation & Signalling Skills](/driving-skills/observation-signalling/) — browse all skills in this category
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Mirrors & the MSM Routine: DVSA Skill 8 Explained](/blog/msm-routine-driving/)
+- [Anticipation & Planning: DVSA Skill 10 for Safer Driving](/blog/anticipation-driving/)
+- [Observation and Anticipation on Your Driving Test: DVSA Skill 10](/blog/observation-driving-test/)
+

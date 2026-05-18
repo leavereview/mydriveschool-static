@@ -132,3 +132,10 @@ Moving off and stopping is one of the first skills taught and one of the last to
 - [Car Controls (Skill 5)](/blog/car-controls-beginners/) — secure knowledge of the pedals and gears is the prerequisite for smooth moving off
 - [Road Positioning (Skill 7)](/blog/road-positioning-driving/) — safe stopping positions depend on understanding where you should be on the road
 - [Control and Positioning Skills Overview](/driving-skills/control-positioning/) — track your progress across all skills in this category
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Car Controls for Beginners: DVSA Skill 5 Explained](/blog/car-controls-beginners/)
+- [Road Positioning: DVSA Skill 7 — Lane Discipline Guide](/blog/road-positioning-driving/)
+

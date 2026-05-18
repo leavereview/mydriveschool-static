@@ -114,3 +114,11 @@ Before your next lesson, ask your instructor to score your Use of Speed on the 1
 - [Anticipation and Planning (Skill 10)](/blog/anticipation-planning-driving/) — Speed management depends entirely on reading the road ahead; these two skills develop together
 - [Dealing with Other Road Users (Skill 12)](/blog/other-road-users/) — The presence of cyclists, pedestrians, and large vehicles directly affects the speed you should choose
 - [Eco-Friendly Driving (Skill 13)](/blog/eco-driving-techniques/) — Smooth speed management is also the foundation of fuel-efficient driving
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Mirrors & the MSM Routine: DVSA Skill 8 Explained](/blog/msm-routine-driving/)
+- [Signalling on Your Driving Test: When and How (Skill 9)](/blog/signalling-driving-test/)
+- [Anticipation & Planning: DVSA Skill 10 for Safer Driving](/blog/anticipation-driving/)
+

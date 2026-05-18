@@ -128,3 +128,11 @@ DriveSchoolPro's [student progress tracking](/blog/student-progress-tracking/) l
 - [Use of Speed (Skill 11)](/blog/use-of-speed-driving-test/) — anticipation directly determines whether your speed is appropriate; the two skills are inseparable
 - [Mirrors & the MSM Routine (Skill 8)](/blog/msm-routine-driving/) — looking ahead is only useful if you also know what is behind you when you need to act
 - [Observation & Signalling Skills](/driving-skills/observation-signalling/) — browse all skills in this category
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Mirrors & the MSM Routine: DVSA Skill 8 Explained](/blog/msm-routine-driving/)
+- [Signalling on Your Driving Test: When and How (Skill 9)](/blog/signalling-driving-test/)
+- [Observation and Anticipation on Your Driving Test: DVSA Skill 10](/blog/observation-driving-test/)
+

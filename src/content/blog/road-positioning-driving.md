@@ -130,3 +130,10 @@ Road positioning improves most rapidly when pupils have a clear feedback loop af
 - [Car Controls (Skill 5)](/blog/car-controls-beginners/) — good steering technique is the foundation of consistent road positioning
 - [Moving Off and Stopping (Skill 6)](/blog/moving-off-stopping/) — safe stopping positions depend on correct positioning awareness
 - [Control and Positioning Skills Overview](/driving-skills/control-positioning/) — see all skills in this category and how they connect
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Car Controls for Beginners: DVSA Skill 5 Explained](/blog/car-controls-beginners/)
+- [Moving Off and Stopping: Master DVSA Skill 6](/blog/moving-off-stopping/)
+

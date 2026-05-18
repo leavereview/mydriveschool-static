@@ -146,3 +146,10 @@ Pedestrian crossing skills develop alongside your wider junction and observation
 - [Junctions](/blog/junctions-driving-test) — DVSA Skill 14, where observation and priority decisions are equally critical and similarly high-fault
 - [Observation and Anticipation](/blog/observation-driving-test) — the foundational perceptual skill that determines how early and accurately you identify crossings and pedestrian hazards
 - [Roundabouts](/blog/roundabouts-driving-test) — DVSA Skill 15, another complex priority situation where lane discipline and observation combine
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Junctions on Your Driving Test: T-Junctions & Crossroads](/blog/junctions-driving-test/)
+- [Roundabout Rules UK: Master DVSA Skill 15](/blog/roundabout-rules-uk/)
+

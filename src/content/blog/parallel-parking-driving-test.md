@@ -147,3 +147,11 @@ Our driving school software lets you and your instructor record your DVSA level 
 - [Reversing (Skill 17)](/driving-skills/manoeuvres/) — the foundation that parallel parking is built on
 - [Observation & Mirrors (Skill 8)](/driving-skills/observation-signalling/) — the checking routine that applies throughout every manoeuvre
 - [All Manoeuvres: Skills 17–20](/driving-skills/manoeuvres/) — see what else might come up on your test
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Reversing: Master DVSA Skill 17 for Your Driving Test](/blog/reversing-driving-lesson/)
+- [Turn in the Road: 3-Point Turn Guide for Driving Test](/blog/turn-in-the-road/)
+- [Bay Parking on Your Driving Test: Forward and Reverse](/blog/bay-parking-driving-test/)
+

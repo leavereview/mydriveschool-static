@@ -118,3 +118,11 @@ DriveSchoolPro lets you log each manoeuvre against the DVSA competency scale, so
 - [Parallel Parking](/blog/parallel-parking-driving-test) — the other key parking manoeuvre tested on the day, requiring precision in a tight on-road space
 - [Reversing](/blog/reversing-driving-lesson) — DVSA Skill 17, the fundamental control that underpins every manoeuvre involving rearward movement
 - [Turn in the Road](/blog/turn-in-the-road) — DVSA Skill 18, testing clutch control and observation in a confined space
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Reversing: Master DVSA Skill 17 for Your Driving Test](/blog/reversing-driving-lesson/)
+- [Turn in the Road: 3-Point Turn Guide for Driving Test](/blog/turn-in-the-road/)
+- [Parallel Parking: From Level 1 to Test-Ready](/blog/parallel-parking-driving-test/)
+

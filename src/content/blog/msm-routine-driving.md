@@ -116,3 +116,11 @@ DriveSchoolPro's progress tracking lets instructors mark each DVSA skill level a
 - [Signalling on Your Driving Test (Skill 9)](/blog/signalling-driving-test/) — mirrors and signals are always paired; learn when and how to signal after your mirror check
 - [Anticipation and Planning (Skill 10)](/blog/anticipation-driving/) — looking further ahead reduces the chances of being caught out by a late mirror check
 - [Observation & Signalling Skills](/driving-skills/observation-signalling/) — browse all skills in this category
+
+## Related Articles
+
+- [DVSA 27 Driving Skills Framework](/dvsa-27-driving-skills/)
+- [Signalling on Your Driving Test: When and How (Skill 9)](/blog/signalling-driving-test/)
+- [Anticipation & Planning: DVSA Skill 10 for Safer Driving](/blog/anticipation-driving/)
+- [Observation and Anticipation on Your Driving Test: DVSA Skill 10](/blog/observation-driving-test/)
+
