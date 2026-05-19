@@ -457,5 +457,5 @@ Managing instructor schedules, student bookings, and vehicle coordination takes 
 ## Related Articles
 
 - [Driving School Scheduling Software](/driving-school-scheduling-software/)
-- [Reduce No-Shows at Your Driving School](/blog/reduce-no-shows-driving-school/)
+- [Reduce No-Shows at Your Driving School](/blog/reduce-driving-lesson-no-shows/)
 - [Student Progress Tracking](/blog/student-progress-tracking/)

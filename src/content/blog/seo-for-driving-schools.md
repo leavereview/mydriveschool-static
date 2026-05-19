@@ -357,5 +357,5 @@ Better visibility brings more inquiries. [DriveSchoolPro](/driving-school-softwa
 ## Related Articles
 
 - [Driving School Software](/driving-school-software/)
-- [Reduce No-Shows at Your Driving School](/blog/reduce-no-shows-driving-school/)
+- [Reduce No-Shows at Your Driving School](/blog/reduce-driving-lesson-no-shows/)
 - [Starting a Driving School Guide](/blog/starting-driving-school-guide/)

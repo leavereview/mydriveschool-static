@@ -357,5 +357,5 @@ Managing student bookings, reminders, and your teaching schedule doesn't have to
 ## Related Articles
 
 - [Driving School Scheduling Software](/driving-school-scheduling-software/)
-- [Reduce No-Shows at Your Driving School](/blog/reduce-no-shows-driving-school/)
+- [Reduce No-Shows at Your Driving School](/blog/reduce-driving-lesson-no-shows/)
 - [Driver Schedule Guide](/blog/driver-schedule-guide/)

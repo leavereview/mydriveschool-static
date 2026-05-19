@@ -148,5 +148,5 @@ Simplifying your payment setup is one of the highest-return improvements you can
 ## Related Articles
 
 - [Driving School Management Software](/driving-school-management-software/)
-- [Reduce No-Shows at Your Driving School](/blog/reduce-no-shows-driving-school/)
+- [Reduce No-Shows at Your Driving School](/blog/reduce-driving-lesson-no-shows/)
 - [Best Driving School Software](/blog/best-driving-school-software/)

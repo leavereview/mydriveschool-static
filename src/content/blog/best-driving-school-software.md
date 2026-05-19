@@ -72,7 +72,7 @@ Your students should be able to book lessons 24/7 without phone calls. The syste
 
 ### 2. Automated SMS & Email Reminders
 
-No-shows cost UK driving schools an estimated £420 million annually. Automated reminders sent 24-48 hours before lessons reduce no-shows by 40-60%. (Learn more in our [complete guide to reducing no-shows](/blog/reduce-no-shows-driving-school/).)
+No-shows cost UK driving schools an estimated £420 million annually. Automated reminders sent 24-48 hours before lessons reduce no-shows by 40-60%. (Learn more in our [complete guide to reducing no-shows](/blog/reduce-driving-lesson-no-shows/).)
 
 **What to check**: Does the software allow customizable reminder timing? Can you send reminders via both SMS and email? Are SMS costs included or extra?
 
@@ -470,5 +470,5 @@ Start your trial, import 10-20 students as a test, and see the impact on your da
 ## Related Articles
 
 - [Driving School Software](/driving-school-software/)
-- [Free Driving School Software](/blog/free-driving-school-software/)
+- [Free Driving School Software](/free-driving-school-software/)
 - [How to Choose Driving School Scheduling Software](/blog/how-to-choose-driving-school-scheduling-software/)

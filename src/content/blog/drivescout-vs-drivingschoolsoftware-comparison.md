@@ -161,4 +161,4 @@ Both platforms have genuine drawbacks that are worth taking seriously. DriveScou
 
 - [Driving School Software](/driving-school-software/)
 - [Best Driving School Software](/blog/best-driving-school-software/)
-- [Free Driving School Software](/blog/free-driving-school-software/)
+- [Free Driving School Software](/free-driving-school-software/)
