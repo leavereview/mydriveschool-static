@@ -1,5 +1,5 @@
 ---
-title: "Junctions on Your Driving Test: T-Junctions & Crossroads"
+title: "Driving Test Junctions: How to Pass T-Junctions & Crossroads"
 description: "Junctions cause more driving test faults than anything else. Learn the MSPSL routine, open vs closed junctions, and crossroad priority for DVSA Skill 14."
 date: "2026-02-21"
 image: /images/blog-learner.jpg

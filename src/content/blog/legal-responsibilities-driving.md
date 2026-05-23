@@ -1,5 +1,5 @@
 ---
-title: "Legal Responsibilities: DVSA Skill 1 for Learner Drivers"
+title: "Driving Legal Responsibilities (DVSA Skill 1): UK Learner Guide"
 description: "Everything UK learner drivers must know about legal responsibilities — licence, insurance, MOT, L plates and the new driver 6-point rule."
 date: "2026-02-21"
 image: /images/blog-theory.jpg

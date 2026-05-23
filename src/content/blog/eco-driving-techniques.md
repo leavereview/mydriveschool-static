@@ -1,5 +1,5 @@
 ---
-title: "Eco-Friendly Driving: DVSA Skill 13 — Fuel Efficiency Guide"
+title: "Eco-Driving Techniques: Save Fuel & Pass DVSA Skill 13"
 description: "Eco-driving for UK learner drivers: master block gear changes, coasting, and smooth acceleration to pass your test and cut fuel costs."
 date: "2026-02-21"
 image: /images/feature-driving.jpg
