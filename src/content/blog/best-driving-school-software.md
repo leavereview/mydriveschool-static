@@ -50,7 +50,7 @@ UK ADIs must keep their tuition vehicles MOT'd, taxed, and insured. Schools with
 
 | Software | Best For | Starting Price | Mobile App | DVSA Tracking | Free Trial |
 |----------|----------|----------------|------------|---------------|------------|
-| DriveSchoolPro | UK ADIs & schools (1–20 instructors) | £29/month | ✅ Yes | ✅ Full | 3 months free |
+| DriveSchoolPro | UK ADIs & schools (1–20 instructors) | £16/month | ✅ Yes | ✅ Full | 3 months free |
 | Driving School Office | UK schools wanting established platform | Contact for pricing | ✅ Yes | ✅ Yes | Demo only |
 | DrivingSchoolSoftware.com | Enterprise with custom needs | £99/month | ✅ Yes | ⚠️ Partial | 30 days |
 | Total Drive | UK instructors wanting all-in-one | Contact for pricing | ✅ Yes | ✅ Yes | Demo |
@@ -116,7 +116,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 
 ### DriveSchoolPro ⭐ Best Overall for UK Schools
 
-**Rating**: 4.8/5 | **Starting Price**: £29/month | **Best For**: 1-20 instructor UK driving schools
+**Rating**: 4.8/5 | **Starting Price**: £16/month | **Best For**: 1-20 instructor UK driving schools
 
 **What We Like**:
 - Built specifically for UK driving schools (DVSA syllabus tracking included)
@@ -132,7 +132,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 - Limited customization for franchise schools with strict branding requirements
 
 **Pricing Breakdown**:
-- Solo Plan: £29/month (1 instructor, unlimited students)
+- Solo Plan: £16/month (1 instructor, unlimited students)
 - Team Plan: £49/month (2-5 instructors)
 - School Plan: £99/month (6-20 instructors, includes priority support)
 
@@ -279,7 +279,7 @@ Total Drive is a UK-focused platform that positions itself as an all-in-one solu
 
 ### Solo UK ADIs (Just You)
 
-**Want UK-specific features at the right price**: Choose **DriveSchoolPro** Solo Plan (£29/month). DVSA progress tracking, automated reminders, and invoicing — everything a solo ADI needs without paying for multi-instructor features you won't use.
+**Want UK-specific features at the right price**: Choose **DriveSchoolPro** Solo Plan (£16/month). DVSA progress tracking, automated reminders, and invoicing — everything a solo ADI needs without paying for multi-instructor features you won't use.
 
 **Want an established UK platform**: **Driving School Office** or **Total Drive** — both UK-focused, though you'll need to request a demo for pricing.
 
@@ -442,7 +442,7 @@ All reputable platforms allow data export (student lists, lesson history, financ
 
 ## Final Recommendations
 
-**For most UK ADIs and driving schools (1–20 instructors)**: Start with **[DriveSchoolPro](/driving-school-software/)** at £29–79/month depending on instructor count. Full DVSA tracking, automated SMS and email reminders, vehicle compliance alerts, and a clean pupil portal — purpose-built for the UK ADI market.
+**For most UK ADIs and driving schools (1–20 instructors)**: Start with **[DriveSchoolPro](/driving-school-software/)** at £16–79/month depending on instructor count. Full DVSA tracking, automated SMS and email reminders, vehicle compliance alerts, and a clean pupil portal — purpose-built for the UK ADI market.
 
 **For UK schools preferring an established platform**: Get demos from **Driving School Office** and **Total Drive** — both UK-focused with DVSA alignment and a track record in the UK market.
 

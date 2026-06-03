@@ -509,7 +509,7 @@ Student progress tracking isn't optional for modern driving schools—it's essen
 
 Ready to implement digital progress tracking with built-in DVSA competency checklists, parent dashboards, and mobile access?
 
-[Try DriveSchoolPro free for 14 days](https://app.driveschoolpro.com/signup) and see how systematic progress tracking transforms your teaching effectiveness and student outcomes.
+[Try DriveSchoolPro free for 3 months](https://app.driveschoolpro.com/signup) and see how systematic progress tracking transforms your teaching effectiveness and student outcomes.
 
 **Questions about setting up progress tracking?** [Contact our team](/contact/) for a free consultation and demonstration.
 
