@@ -2,14 +2,14 @@
 
 > Driving school management software for UK ADIs and driving schools — lesson scheduling, student management, DVSA competency tracking, and automated billing.
 
-DriveSchoolPro helps independent driving instructors (ADIs) and driving school owners manage their business end-to-end. Tracks all 27 DVSA competency skills per student, automates lesson reminders to cut no-shows, and handles invoicing — so instructors can focus on teaching. Solo Plan from £29/month.
+DriveSchoolPro helps independent driving instructors (ADIs) and driving school owners manage their business end-to-end. Tracks all 27 DVSA competency skills per student, automates lesson reminders to cut no-shows, and handles invoicing — so instructors can focus on teaching. Solo Plan from £16/month.
 
 ## Core Pages
 
 - [Home](https://driveschoolpro.com/): Product overview, feature highlights, testimonials, and free trial
 - [Driving School Software](https://driveschoolpro.com/driving-school-management-software/): Full product overview — scheduling, student management, DVSA tracking, billing, and reminders
-- [Free Driving School Software](https://driveschoolpro.com/free-driving-school-software/): 14-day free trial with full feature access, no credit card required
-- [Pricing](https://driveschoolpro.com/pricing/): Solo Plan (£29/month) for independent ADIs; School Plan for multi-instructor schools launching soon
+- [Free Driving School Software](https://driveschoolpro.com/free-driving-school-software/): 3 months free with full feature access, no credit card required
+- [Pricing](https://driveschoolpro.com/pricing/): Solo Plan (£16/month) for independent ADIs; School Plan for multi-instructor schools launching soon
 - [About](https://driveschoolpro.com/about/): Product story and mission
 - [Contact](https://driveschoolpro.com/contact/): Start free trial or ask a question
 
