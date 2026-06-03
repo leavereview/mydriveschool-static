@@ -5,7 +5,7 @@ import { OFFER } from '../config/offer';
 
 // Pricing tiers
 const pricingTiers = [
-  { name: 'Solo Plan', description: 'For independent ADIs', monthlyPrice: 29, popular: false, comingSoon: false },
+  { name: 'Solo Plan', description: 'For independent ADIs', monthlyPrice: 16, popular: false, comingSoon: false },
   { name: 'School Plan', description: 'For driving schools', monthlyPrice: 79, popular: false, comingSoon: true }
 ];
 // Note: Enterprise plan removed from display — only Solo (live) and School (launching soon) shown.
@@ -72,7 +72,7 @@ const faqSchema = {
       "name": "How much does driving school software cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DriveSchoolPro's Solo Plan is £29/month for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. A School Plan for multi-instructor driving schools is launching soon at £79/month. There are no setup fees and no long-term contracts."
+        "text": "DriveSchoolPro's Solo Plan is £16/month for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. A School Plan for multi-instructor driving schools is launching soon at £79/month. There are no setup fees and no long-term contracts."
       }
     },
     {
@@ -139,7 +139,7 @@ const freeTrialSchema = {
 };
 ---
 
-<BaseLayout title="Driving School Software Pricing 2026: From £29/month" description={`Driving school software from £29/month. DVSA tracking, scheduling, automated reminders, and invoicing included. No hidden fees. ${OFFER.long}.`}>
+<BaseLayout title="Driving School Software Pricing 2026: From £16/month" description={`Driving school software from £16/month. DVSA tracking, scheduling, automated reminders, and invoicing included. No hidden fees. ${OFFER.long}.`}>
   <Fragment slot="head">
     {offerSchemas.map(offerSchema => (
       <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
