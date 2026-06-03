@@ -6,7 +6,7 @@ import { OFFER } from '../config/offer';
 // Pricing tiers
 const pricingTiers = [
   { name: 'Solo Plan', description: 'For independent ADIs', monthlyPrice: 16, popular: false, comingSoon: false },
-  { name: 'School Plan', description: 'For driving schools', monthlyPrice: 79, popular: false, comingSoon: true }
+  { name: 'School Plan', description: 'For driving schools', monthlyPrice: 16, popular: false, comingSoon: true } // per-instructor: £16 first + £12 each additional; not rendered while comingSoon
 ];
 // Note: Enterprise plan removed from display — only Solo (live) and School (launching soon) shown.
 
@@ -69,7 +69,7 @@ const faqSchema = {
       "name": "How much does driving school software cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DriveSchoolPro's Solo Plan is £16/month for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. A School Plan for multi-instructor driving schools is launching soon at £79/month. There are no setup fees and no long-term contracts."
+        "text": "DriveSchoolPro's Solo Plan is £16/month for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. A multi-instructor School Plan is launching soon — £16/month for your first instructor, then £12/month for each additional (so a 3-instructor school is £40/month). There are no setup fees and no long-term contracts."
       }
     },
     {
