@@ -7,7 +7,7 @@ tags: ["Software", "Scheduling"]
 author: "DriveSchoolPro Team"
 ---
 
-Choosing scheduling software for your driving school sounds simple until you're looking at a list of features you don't fully understand, pricing pages that hide the real cost, and free trials that expire before you've worked out how to use them.
+Choosing [driving school scheduling software](/driving-school-scheduling-software/) sounds simple until you're looking at a list of features you don't fully understand, pricing pages that hide the real cost, and free trials that expire before you've worked out how to use them.
 
 This guide cuts through the noise. It covers what actually matters for UK ADIs, what you can safely ignore, and the specific questions to ask before committing.
 

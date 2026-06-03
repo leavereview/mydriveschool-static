@@ -21,7 +21,7 @@ faqs:
 
 The UK driving instruction market is larger than most people realise. There are around 40,000 active ADIs in England, Scotland, and Wales, and the learner population has grown steadily as the backlog from COVID test cancellations continues to work through the system. At the same time, a significant wave of ADIs who qualified in the 1990s are now retiring, creating genuine space for new instructors to build strong local practices.
 
-If you are considering starting a driving school — whether as a solo ADI or with ambitions to build a multi-instructor business — this guide covers everything you need to know: qualification, setup costs, vehicle choice, pricing, finding students, and managing operations from day one.
+If you are considering starting a driving school — whether as a solo ADI or with ambitions to build a multi-instructor business — this guide covers everything you need to know: qualification, setup costs, vehicle choice, pricing, finding students, and managing operations with [driving school software](/driving-school-software/) from day one.
 
 This is a serious career decision. Done well, it offers flexibility, good income, and real satisfaction. Done without preparation, it can be expensive and exhausting. Read this guide carefully before committing.
 

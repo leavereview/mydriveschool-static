@@ -7,7 +7,7 @@ tags: ["Software", "Student Management"]
 author: "DriveSchoolPro Team"
 ---
 
-Good student management is what separates a driving school that feels chaotic from one that runs smoothly. When you know exactly where each pupil is — what they've covered, what they owe, when their next lesson is — you can focus on teaching instead of admin.
+Good student management is what separates a driving school that feels chaotic from one that runs smoothly. When you know exactly where each pupil is — what they've covered, what they owe, when their next lesson is — you can focus on teaching instead of admin. The right [driving school management software](/driving-school-management-software/) makes that possible at any scale.
 
 This guide covers everything involved in managing students at a driving school: what records to keep, how to track DVSA progress, how to handle parent communication, and what software does better than a spreadsheet.
 
