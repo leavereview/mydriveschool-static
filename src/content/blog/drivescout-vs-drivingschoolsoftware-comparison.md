@@ -150,7 +150,7 @@ DriveScout is easier to get running quickly. DrivingSchoolSoftware.com requires 
 Both platforms have genuine drawbacks that are worth taking seriously. DriveScout is expensive for what smaller UK schools actually need, and DrivingSchoolSoftware.com's interface creates friction in daily use. DriveSchoolPro is built specifically for UK driving schools with:
 
 - Simple, modern interface instructors can use from day one
-- [Flat monthly pricing from £16](/pricing/) — no setup fees, no per-student surprises
+- [Flat monthly pricing from £22](/pricing/) — no setup fees, no per-student surprises
 - UK-focused features including DVSA progress tracking
 - GoCardless integration for direct debit lesson packages
 - Student portal that works on mobile without friction

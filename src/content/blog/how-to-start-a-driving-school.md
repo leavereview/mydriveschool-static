@@ -16,7 +16,7 @@ faqs:
   - question: "Can I teach while I am still qualifying?"
     answer: "Yes, with a trainee licence (pink badge). You can apply for a trainee licence after passing Part 1 and Part 2 of the ADI test. The trainee licence allows you to give paid lessons for up to 6 months while you complete Part 3, but you must be supervised by a qualified ADI for at least 20% of your teaching time."
   - question: "Is driving school software worth it from day one?"
-    answer: "Yes. Starting with software while your diary is small means the system is already set up and your habits are formed before the complexity grows. DriveSchoolPro is free for 3 months with no credit card required, and the paid plan starts at £16/month — less than the cost of two missed lessons."
+    answer: "Yes. Starting with software while your diary is small means the system is already set up and your habits are formed before the complexity grows. DriveSchoolPro is free for 14 days with no credit card required, and the paid plan starts at £22/month — less than the cost of two missed lessons."
 ---
 
 The UK driving instruction market is larger than most people realise. There are around 40,000 active ADIs in England, Scotland, and Wales, and the learner population has grown steadily as the backlog from COVID test cancellations continues to work through the system. At the same time, a significant wave of ADIs who qualified in the 1990s are now retiring, creating genuine space for new instructors to build strong local practices.
@@ -333,7 +333,7 @@ At that point, you are spending 1–2 hours per day on admin that good software 
 
 ### Starting With Software From Day One
 
-The argument for setting up software from your first student, not your twentieth, is simple: it costs nothing meaningful to start (DriveSchoolPro is free for 3 months, then £16/month), and the habits you form when your diary is small will serve you when it is full.
+The argument for setting up software from your first student, not your twentieth, is simple: it costs nothing meaningful to start (DriveSchoolPro is free for 14 days, then £22/month), and the habits you form when your diary is small will serve you when it is full.
 
 [DriveSchoolPro](/driving-school-software/) is built specifically for UK ADIs and schools. It handles:
 
@@ -447,7 +447,7 @@ Yes. After passing Parts 1 and 2, you can apply for a trainee licence. This is v
 
 ### Is driving school software worth it from day one?
 
-Yes. Starting with software from your first student means the system is already built by the time complexity arrives. DriveSchoolPro is free for 3 months — no credit card required — and the paid plan costs less per month than a single missed lesson.
+Yes. Starting with software from your first student means the system is already built by the time complexity arrives. DriveSchoolPro is free for 14 days — no credit card required — and the paid plan costs less per month than a single missed lesson.
 
 ---
 

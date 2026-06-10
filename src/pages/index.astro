@@ -20,7 +20,7 @@ const softwareApplicationSchema = {
       "@id": "https://driveschoolpro.com/#solo-plan",
       "name": "Solo Plan",
       "description": "For independent ADIs. Unlimited students, DVSA progress tracking, scheduling, and invoicing.",
-      "price": "16",
+      "price": "22.00",
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
       "url": OFFER.ctaPrimary.href,
@@ -31,7 +31,7 @@ const softwareApplicationSchema = {
       "@id": "https://driveschoolpro.com/#free-trial",
       "price": "0",
       "priceCurrency": "GBP",
-      "name": "3 Months Free",
+      "name": "14-Day Free Trial",
       "description": OFFER.long,
       "availability": "https://schema.org/InStock",
       "url": OFFER.ctaPrimary.href,
@@ -67,7 +67,7 @@ const offerSchema = {
   "@context": "https://schema.org",
   "@type": "Offer",
   "@id": "https://driveschoolpro.com/#free-trial-offer",
-  "name": `3 Months Free - DriveSchoolPro`,
+  "name": `14-Day Free Trial - DriveSchoolPro`,
   "description": `${OFFER.long}. Complete access to all features including lesson scheduling, student management, and automated billing. No credit card required.`,
   "price": "0",
   "priceCurrency": "GBP",
@@ -89,7 +89,7 @@ const offerSchema = {
     {
       "@type": "PropertyValue",
       "name": "Trial Duration",
-      "value": "3 months"
+      "value": "14 days"
     },
     {
       "@type": "PropertyValue",
@@ -160,29 +160,7 @@ const stats = [
     <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
   </Fragment>
 
-  <!-- Announcement Banner -->
-  <div id="announcement-banner" class="bg-brand-red text-white py-3 relative">
-    <div class="container-custom flex items-center justify-center gap-3 text-sm md:text-base">
-      <span>Now Live — {OFFER.short} when you sign up today</span>
-      <a href={OFFER.ctaPrimary.href} class="font-bold underline hover:no-underline whitespace-nowrap">{OFFER.short} &rarr;</a>
-      <button id="dismiss-banner" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white" aria-label="Dismiss banner">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-      </button>
-    </div>
-  </div>
-  <script>
-    const banner = document.getElementById('announcement-banner');
-    const dismissBtn = document.getElementById('dismiss-banner');
-    if (localStorage.getItem('ea-banner-dismissed')) {
-      banner?.remove();
-    }
-    dismissBtn?.addEventListener('click', () => {
-      banner?.remove();
-      localStorage.setItem('ea-banner-dismissed', '1');
-    });
-  </script>
-
-  <!-- Hero -->
+  <!-- Hero -->  <!-- (announcement banner now rendered site-wide via PromoBanner in BaseLayout) -->
   <section id="hero-section" class="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-gray-900 text-white">
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0" style="background-image: url('/images/hero-driving.jpg'); background-size: cover; background-position: center;"></div>

@@ -1,0 +1,29 @@
+---
+import { PROMO } from '../config/offer';
+---
+
+{PROMO.enabled && (
+  <div id="promo-banner" class="bg-brand-red text-white py-3 relative">
+    <div class="container-custom flex items-center justify-center gap-3 text-sm md:text-base pr-10">
+      <span>
+        <strong>{PROMO.headline}</strong>
+        {' '}Start free for 14 days, then £16.50/month for 3 months with code <strong>{PROMO.code}</strong> — Ends 31 August.
+      </span>
+      <a href={PROMO.href} class="font-bold underline hover:no-underline whitespace-nowrap">Start Free &rarr;</a>
+      <button id="dismiss-promo-banner" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white" aria-label="Dismiss banner">
+        ✕
+      </button>
+    </div>
+    <script>
+      const banner = document.getElementById('promo-banner');
+      const dismissBtn = document.getElementById('dismiss-promo-banner');
+      if (localStorage.getItem('summer26-banner-dismissed')) {
+        banner?.remove();
+      }
+      dismissBtn?.addEventListener('click', () => {
+        banner?.remove();
+        localStorage.setItem('summer26-banner-dismissed', '1');
+      });
+    </script>
+  </div>
+)}

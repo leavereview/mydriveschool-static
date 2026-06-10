@@ -78,13 +78,13 @@ Driving school software pricing is often structured to look cheaper than it is. 
 
 **Annual commitment discounts.** Monthly pricing looks higher. Calculate whether the annual commitment makes sense given you're new to the product.
 
-For a solo ADI, a flat-rate monthly subscription with reminders included — like [DriveSchoolPro's £16/month plan](/pricing/) — is almost always better value than per-student or feature-tiered pricing.
+For a solo ADI, a flat-rate monthly subscription with reminders included — like [DriveSchoolPro's £22/month plan](/pricing/) — is almost always better value than per-student or feature-tiered pricing.
 
 ## Step 5: Research 3–4 Options
 
 The main UK driving school software options worth evaluating:
 
-- **DriveSchoolPro** — modern web platform, AI lesson briefings, full DVSA framework, automated Google reviews. Flat £16/month.
+- **DriveSchoolPro** — modern web platform, AI lesson briefings, full DVSA framework, automated Google reviews. Flat £22/month.
 - **Total Drive** — established diary-focused tool, strong on basic scheduling
 - **MyDriving** — popular with larger schools, more complex setup
 - **Pinpoint** — specialist DVSA tracking tool, limited scheduling features
@@ -132,7 +132,7 @@ For most UK ADIs, the decision comes down to two things: whether the mobile cale
 
 If a platform ticks those two boxes, trial it with real data for two weeks. If it doesn't cause friction in your daily workflow by the end of week one, you've found your answer.
 
-[DriveSchoolPro offers a free 3-month trial](https://app.driveschoolpro.com/signup) — no credit card required. Set up your first week of lessons and see whether it fits before committing.
+[DriveSchoolPro offers a free 14-day trial](https://app.driveschoolpro.com/signup) — no credit card required. Set up your first week of lessons and see whether it fits before committing.
 
 ## Related Articles
 
