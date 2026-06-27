@@ -31,7 +31,7 @@ Every student record should be complete from day one. Information you collect at
 
 **Contact details:**
 - Full name (as it appears on provisional licence)
-- Mobile number — for WhatsApp and SMS reminders
+- Mobile number — for WhatsApp reminders (coming soon)
 - Email address
 - Home address
 - Emergency contact (useful for learners under 18)

@@ -1,13 +1,13 @@
 ---
 title: "SEO for Driving Schools"
-description: "SEO for driving schools: rank #1 locally with Google Business optimization, keyword targeting, and content strategy. 47% of students find schools via search."
+description: "SEO for driving schools: rank #1 locally with Google Business optimisation, keyword targeting, and content strategy. 47% of students find schools via search."
 image: /images/blog-software.jpg
 date: "2026-02-13"
 tags: ["Marketing"]
 author: "DriveSchoolPro Team"
 ---
 
-When someone searches "driving lessons near me" or "driving school [your town]," you want your business to appear. Search engine optimization (SEO) determines whether potential students find you or your competitors. This guide covers practical SEO strategies specifically for [driving schools](/driving-school-software/).
+When someone searches "driving lessons near me" or "driving school [your town]," you want your business to appear. Search engine optimisation (SEO) determines whether potential students find you or your competitors. This guide covers practical SEO strategies specifically for [driving schools](/driving-school-software/).
 
 ## Why SEO Matters for Driving Schools
 

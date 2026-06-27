@@ -10,8 +10,7 @@ const comparisonRows = [
   { label: 'AI lesson briefings', values: [true, false], highlight: true },
   { label: 'Full DVSA 8-category framework', values: [true, true] },
   { label: 'Automated Google review requests', values: [true, false], highlight: true },
-  { label: 'WhatsApp reminders', values: [true, false], highlight: true },
-  { label: 'SMS reminders', values: [true, true] },
+  { label: 'WhatsApp reminders', values: ['Coming soon', false], highlight: true },
   { label: 'Email reminders', values: [true, true] },
   { label: 'Three-way conflict detection (pupil + instructor + vehicle)', values: [true, false] },
   { label: 'Embeddable booking widget for your website', values: [true, false] },
@@ -28,12 +27,12 @@ const comparisonRows = [
 const faqItems = [
   {
     question: "Is DriveSchoolPro better than Total Drive?",
-    answer: "It depends what matters to you. DriveSchoolPro has AI lesson briefings, automated Google reviews, WhatsApp reminders, and transparent £22/month pricing. Total Drive is an established UK platform with a solid reputation, but pricing requires a direct conversation and it lacks AI briefings and automated review generation. If you want a modern platform with clear pricing and AI features, DriveSchoolPro is the stronger choice.",
+    answer: "It depends what matters to you. DriveSchoolPro has AI lesson briefings, automated Google reviews, automated email reminders, and transparent £22/month pricing. Total Drive is an established UK platform with a solid reputation, but pricing requires a direct conversation and it lacks AI briefings and automated review generation. If you want a modern platform with clear pricing and AI features, DriveSchoolPro is the stronger choice.",
     links: [{ text: 'Start free trial', url: OFFER.ctaPrimary.href }]
   },
   {
     question: "How much does Total Drive cost compared to DriveSchoolPro?",
-    answer: "DriveSchoolPro is £22/month for the Solo Plan with all features included — no setup fees, no contracts. Total Drive does not publish its pricing publicly; you need to contact them for a quote. This makes direct cost comparison difficult, but it also means you can't evaluate Total Drive without going through a sales conversation first.",
+    answer: "DriveSchoolPro is £22/month for the Solo Plan — no setup fees, no contracts. Total Drive does not publish its pricing publicly; you need to contact them for a quote. This makes direct cost comparison difficult, but it also means you can't evaluate Total Drive without going through a sales conversation first.",
     links: [{ text: 'See DriveSchoolPro pricing', url: '/pricing/' }]
   },
   {
@@ -48,7 +47,7 @@ const faqItems = [
   },
   {
     question: "Which is better for a solo ADI?",
-    answer: "DriveSchoolPro is purpose-built for solo UK ADIs. The £22/month Solo Plan includes all features with no per-student limits. Total Drive may suit solo ADIs too, but the lack of transparent pricing and the absence of AI briefings and automated reviews make DriveSchoolPro the more compelling option for most independent instructors.",
+    answer: "DriveSchoolPro is purpose-built for solo UK ADIs. The £22/month Solo Plan covers everything an independent ADI needs, with no per-student limits. Total Drive may suit solo ADIs too, but the lack of transparent pricing and the absence of AI briefings and automated reviews make DriveSchoolPro the more compelling option for most independent instructors.",
     links: [{ text: 'Start free trial', url: OFFER.ctaPrimary.href }]
   },
   {
@@ -104,7 +103,7 @@ const schemaMarkup = {
   </section>
 
   <FeaturedAnswer question="How does DriveSchoolPro compare to Total Drive?">
-    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking and scheduling. DriveSchoolPro adds AI-generated lesson briefings, automated Google review requests after each test pass, WhatsApp reminders, and transparent £22/month pricing. Total Drive is more established but doesn't offer AI features, automated reviews, or public pricing.
+    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking and scheduling. DriveSchoolPro adds AI-generated lesson briefings, automated Google review requests after each test pass, automated email reminders, and transparent £22/month pricing. Total Drive is more established but doesn't offer AI features, automated reviews, or public pricing.
   </FeaturedAnswer>
 
   <!-- Summary Cards -->
@@ -119,13 +118,13 @@ const schemaMarkup = {
             <span class="text-xs font-semibold bg-brand-red text-white px-2 py-1 rounded-full">Recommended</span>
           </div>
           <div class="text-3xl font-bold text-brand-navy mb-1">£22<span class="text-base font-normal text-gray-500">/month</span></div>
-          <div class="text-sm text-gray-500 mb-6">Solo Plan · All features included · No contract</div>
+          <div class="text-sm text-gray-500 mb-6">Solo Plan · No setup fees · No contract</div>
           <ul class="space-y-3 mb-8">
             {[
               'AI lesson briefings before every session',
               'Full DVSA 8-category, 27-skill framework',
               'Automated Google review requests',
-              'WhatsApp + SMS + email reminders',
+              'Email reminders (WhatsApp coming soon)',
               'Three-way conflict detection',
               'Embeddable booking widget',
               'Pupil and parent portals',
@@ -244,8 +243,8 @@ const schemaMarkup = {
             body: 'Every test pass in DriveSchoolPro triggers an automatic review request. This is the most effective way to build Google reviews — asking at exactly the right moment. Total Drive doesn\'t offer this.'
           },
           {
-            title: 'WhatsApp reminders',
-            body: 'UK pupils actually read WhatsApp messages. DriveSchoolPro sends automated lesson reminders via WhatsApp and SMS. Total Drive sends email and SMS but not WhatsApp.'
+            title: 'WhatsApp reminders (coming soon)',
+            body: 'DriveSchoolPro sends automated email reminders with one-click confirm today, and WhatsApp reminders are coming soon — UK pupils actually read WhatsApp. Total Drive doesn\'t offer WhatsApp reminders.'
           },
           {
             title: 'Transparent pricing',

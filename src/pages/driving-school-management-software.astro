@@ -8,41 +8,37 @@ import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
 import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 import { OFFER } from '../config/offer';
 
-// Management Software Statistics
+// DriveSchoolPro at a glance — verifiable product facts, not industry estimates
 const managementStats = [
   {
-    label: 'Average Admin Time (Manual)',
-    value: '15+ hrs',
-    context: 'Weekly admin hours without management software'
+    label: 'DVSA Skills Tracked',
+    value: '27',
+    context: 'Across 8 categories, on a 6-level scale (Not Started to Reflection)'
+  },
+  {
+    label: 'Proficiency Levels',
+    value: '6',
+    context: 'From Not Started through to Reflection, recorded after every lesson'
+  },
+  {
+    label: 'Conflict Detection',
+    value: '3-way',
+    context: 'Every staff booking checks student, instructor and vehicle availability'
+  },
+  {
+    label: 'Solo Plan',
+    value: '£22/mo',
+    context: 'One inclusive price for independent ADIs — no per-student fees'
+  },
+  {
+    label: 'Free Trial',
+    value: '14 days',
+    context: 'No card required, cancel anytime'
   },
   {
     label: 'Admin Time Saved',
-    value: 'Up to 75%',
-    change: { value: 75, direction: 'up' as const, period: 'Industry average with software' },
-    context: 'Reduction in administrative workload'
-  },
-  {
-    label: 'Revenue Increase',
-    value: 'Up to 22%',
-    change: { value: 22, direction: 'up' as const, period: 'Industry average' },
-    context: 'With automated billing and scheduling'
-  },
-  {
-    label: 'UK Driving Schools Using Software',
-    value: '58%',
-    change: { value: 28, direction: 'up' as const, period: 'since 2020' },
-    context: 'Digital transformation in the industry'
-  },
-  {
-    label: 'Average Customer Retention',
-    value: '85%',
-    context: 'With student progress portals and communication'
-  },
-  {
-    label: 'Payment Collection Rate',
-    value: 'Up to 95%',
-    change: { value: 30, direction: 'up' as const, period: 'Industry average with software' },
-    context: 'With automated invoicing and reminders'
+    value: '10+ hrs',
+    context: 'Per week — based on early user feedback'
   }
 ];
 
@@ -124,7 +120,7 @@ const comparisonData = [
 const faqItems = [
   {
     question: "What is driving school management software?",
-    answer: "Driving school management software is an all-in-one platform that handles student records, scheduling, payments, instructor management, and reporting. It replaces spreadsheets and paper records with automated digital systems that save 15+ hours weekly and can increase revenue by up to 22% through better organisation and automated workflows.",
+    answer: "Driving school management software is an all-in-one platform that handles student records, scheduling, payments, instructor management, and reporting. It replaces spreadsheets and paper records with automated digital systems that cut admin time — early users report saving 10+ hours a week — and bring student records, scheduling, payments, and reporting into one place.",
     links: [
       { text: 'View all features', url: '/driving-school-software/' },
       { text: 'See pricing', url: '/pricing/' }
@@ -132,7 +128,7 @@ const faqItems = [
   },
   {
     question: "How much does driving school management software cost?",
-    answer: "DriveSchoolPro's Solo Plan is £22/month for independent ADIs with all features included — no per-user or per-student fees. The multi-instructor School Plan is £22/month for your first instructor, then £12/month for each additional (a 3-instructor school is £46/month).",
+    answer: "DriveSchoolPro's Solo Plan is £22/month for independent ADIs — everything an independent instructor needs, with no per-user or per-student fees. The multi-instructor School Plan is £22/month for your first instructor, then £12/month for each additional (a 3-instructor school is £46/month).",
     links: [
       { text: 'Full pricing details', url: '/pricing/' },
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
@@ -275,14 +271,15 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school management software?">
-    Driving school management software is an all-in-one platform that handles student records, DVSA competency tracking, scheduling, invoicing, instructor management, and business reporting. It replaces spreadsheets and paper files with automated systems that save 15+ hours weekly and improve organisation through features like three-way conflict detection, automated reminders, and a student self-service portal (coming soon).
+    Driving school management software is an all-in-one platform that handles student records, DVSA competency tracking, scheduling, invoicing, instructor management, and business reporting. It replaces spreadsheets and paper files with automated systems that cut admin time — early users report saving 10+ hours a week — through features like three-way conflict detection, automated reminders, and a student self-service portal (coming soon).
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
   <StatisticsSection
     site="driveschool"
     pageUrl="https://driveschoolpro.com/driving-school-management-software/"
-    title="Driving School Management Software Impact"
+    title="DriveSchoolPro at a glance"
+    description="What you get with DriveSchoolPro — no industry estimates, just what the product does."
     stats={managementStats}
   />
 
@@ -597,7 +594,7 @@ const schemaMarkup = {
             </h3>
             <p class="text-gray-600 mb-4">
               Before investing in software, understand your potential earnings and costs. Our free calculator
-              shows your effective hourly rate, break-even utilization, and profit projections with UK industry benchmarks.
+              shows your effective hourly rate, break-even utilisation, and profit projections with UK industry benchmarks.
             </p>
             <a href="/driving-school-calculator/" class="btn-primary inline-flex items-center">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

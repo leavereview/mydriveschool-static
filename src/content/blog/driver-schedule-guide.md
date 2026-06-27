@@ -1,13 +1,13 @@
 ---
 title: "Driver Schedule Guide"
-description: "Learn to create efficient instructor schedules that maximize bookings, reduce gaps, and keep students and instructors happy."
+description: "Learn to create efficient instructor schedules that maximise bookings, reduce gaps, and keep students and instructors happy."
 image: /images/blog-scheduling.jpg
 date: "2026-01-23"
 tags: ["Scheduling", "Business"]
 author: "DriveSchoolPro Team"
 ---
 
-Creating an effective driver schedule is one of the most impactful things you can do for your driving school's profitability and student satisfaction. Poor scheduling means wasted time, frustrated instructors, and missed revenue. Good scheduling maximizes every hour — and schools using [driving school scheduling software](/driving-school-scheduling-software/) consistently outperform those managing diaries manually.
+Creating an effective driver schedule is one of the most impactful things you can do for your driving school's profitability and student satisfaction. Poor scheduling means wasted time, frustrated instructors, and missed revenue. Good scheduling maximises every hour — and schools using [driving school scheduling software](/driving-school-scheduling-software/) consistently outperform those managing diaries manually.
 
 This guide covers how to build driver schedules that work for your instructors, your students, and your business.
 
@@ -440,13 +440,13 @@ Target: Near 100% during peak demand
 Effective driver scheduling requires:
 
 1. **Understanding demand patterns** in your market
-2. **Geographic efficiency** to minimize travel
+2. **Geographic efficiency** to minimise travel
 3. **Appropriate buffers** for realistic transitions
 4. **Instructor preference balance** with business needs
 5. **Right technology** to manage complexity
 6. **Regular measurement** and adjustment
 
-Good scheduling isn't set-and-forget—it's ongoing optimization.
+Good scheduling isn't set-and-forget—it's ongoing optimisation.
 
 ## Ready to Streamline Your Scheduling?
 

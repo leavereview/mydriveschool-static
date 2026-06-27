@@ -17,7 +17,7 @@ This comprehensive guide breaks down exactly what to track, how to track it, the
 
 ### Impact on Pass Rates
 
-We analyzed data from 1,200 driving schools and found striking differences:
+We analysed data from 1,200 driving schools and found striking differences:
 
 | Tracking Method | First-Time Pass Rate | Average Lessons to Test |
 |----------------|---------------------|------------------------|
@@ -463,7 +463,7 @@ When tracking student progress, you must comply with UK GDPR:
 - Brief tutorial: "Here's how to view your progress"
 - Encourage them to check between lessons
 
-### Ongoing: Refine & Optimize
+### Ongoing: Refine & Optimise
 - Review which competencies students struggle with most
 - Adjust lesson planning based on patterns
 - Use data to improve your teaching methods
