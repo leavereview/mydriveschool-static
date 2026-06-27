@@ -27,9 +27,9 @@ const schedulingStats = [
     context: 'Faster lesson booking vs manual methods'
   },
   {
-    label: 'Double-Booking Incidents',
-    value: '0%',
-    context: 'With real-time availability checking'
+    label: 'Conflict Detection',
+    value: '3-way',
+    context: 'Checks student, instructor and vehicle before every booking'
   },
   {
     label: 'Lesson Utilisation Rate',
@@ -116,7 +116,7 @@ const faqItems = [
   },
   {
     question: "How much does driving school scheduling software cost?",
-    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. DriveSchoolPro's Solo Plan is £22/month for solo ADIs, and the multi-instructor School Plan is £22/month for your first instructor, then £12 each additional (up to 5). All features included, no hidden fees.",
+    answer: "Driving school scheduling software typically costs £29-150 per month depending on features and school size. DriveSchoolPro's Solo Plan is £22/month for solo ADIs, and the multi-instructor School Plan is £22/month for your first instructor, then £12 each additional (up to 5). No setup fees, no contracts, no hidden fees.",
     links: [
       { text: 'Full pricing', url: '/pricing/' },
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
@@ -139,7 +139,7 @@ const faqItems = [
   },
   {
     question: "Does scheduling software prevent double-bookings?",
-    answer: "Quality driving school scheduling software completely prevents double-bookings by checking instructor, student, and vehicle availability in real-time before allowing any booking. Manual calendars and spreadsheets cause double-bookings that damage your reputation.",
+    answer: "Quality driving school scheduling software helps prevent double-bookings by checking instructor, student, and vehicle availability before you confirm a booking. Manual calendars and spreadsheets make double-bookings far more likely, which damages your reputation.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-software/' }
     ]
@@ -242,7 +242,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school scheduling software?">
-    Driving school scheduling software automates lesson management, instructor coordination, and appointment scheduling through drag-and-drop calendars, three-way conflict detection, and automated email reminders. Modern platforms like DriveSchoolPro save 10+ hours weekly, reduce no-shows significantly, support recurring lesson series, and eliminate double-bookings entirely.
+    Driving school scheduling software automates lesson management, instructor coordination, and appointment scheduling through drag-and-drop calendars, three-way conflict detection, and automated email reminders. Modern platforms like DriveSchoolPro save 10+ hours weekly, reduce no-shows significantly, support recurring lesson series, and check student, instructor and vehicle availability to prevent clashes.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -318,7 +318,7 @@ const schemaMarkup = {
         <ul class="space-y-2">
           <li><strong>Up to 70% fewer phone calls</strong> — students book online instead</li>
           <li><strong>Up to 50% reduction in no-shows</strong> — automated reminders work</li>
-          <li><strong>Zero double-bookings</strong> — software prevents conflicts automatically</li>
+          <li><strong>Fewer double-bookings</strong> — checks student, instructor and vehicle before every booking</li>
           <li><strong>Higher instructor utilization</strong> — fewer gaps between lessons</li>
         </ul>
 

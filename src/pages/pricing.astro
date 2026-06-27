@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { OFFER, PROMO } from '../config/offer';
 
-// Pricing tiers — all prices inc VAT
+// Pricing tiers (monthly, GBP)
 const pricingTiers = [
   { name: 'Solo Plan', description: 'For independent ADIs', monthlyPrice: 22, popular: false, comingSoon: false },
   { name: 'School Plan', description: 'For driving schools', monthlyPrice: 22, popular: true, comingSoon: false } // per-instructor: £22 first + £12 each additional, up to 5 instructors
@@ -16,7 +16,7 @@ const offerSchemas = pricingTiers.filter(t => !t.comingSoon).map((tier) => ({
   "@type": "Offer",
   "@id": `https://driveschoolpro.com/pricing/#${tier.name.toLowerCase().replace(/\s+/g, '-')}`,
   "name": tier.name,
-  "description": `${tier.description}. All features included.`,
+  "description": `${tier.description}. No setup fees, no contracts, cancel anytime.`,
   "price": tier.monthlyPrice,
   "priceCurrency": "GBP",
   "priceSpecification": {
@@ -61,7 +61,7 @@ const faqSchema = {
       "name": "Is there a free trial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Yes, all plans include ${OFFER.short} with full access to all features. No credit card required to start.`
+        "text": `Yes — every plan starts with ${OFFER.short}, with no credit card required.`
       }
     },
     {
@@ -69,7 +69,7 @@ const faqSchema = {
       "name": "How much does driving school software cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DriveSchoolPro's Solo Plan is £22/month (inc VAT) for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. The multi-instructor School Plan is £22/month for your first instructor, then £12/month for each additional, up to 5 instructors (so a 5-instructor school is £70/month — £14 per instructor). There are no setup fees and no long-term contracts."
+        "text": "DriveSchoolPro's Solo Plan is £22/month for independent ADIs with unlimited students, DVSA progress tracking, scheduling, and invoicing. The multi-instructor School Plan is £22/month for your first instructor, then £12/month for each additional, up to 5 instructors (so a 5-instructor school is £70/month — £14 per instructor). There are no setup fees and no long-term contracts."
       }
     },
     {
@@ -93,7 +93,7 @@ const faqSchema = {
       "name": "What payment methods do you accept?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For your subscription, we accept all major credit and debit cards. For student payments within the software, you can record cash, bank transfer, and cheque. Online card payments via Stripe are coming soon."
+        "text": "For your subscription, we accept all major credit and debit cards, billed securely by Stripe. For student payments within the software, you can record cash, bank transfer, and cheque — online card payments for students are coming soon."
       }
     }
   ]
@@ -133,7 +133,7 @@ const freeTrialSchema = {
 };
 ---
 
-<BaseLayout title="Driving School Software Pricing 2026: From £22/month" description={`Driving school software from £22/month inc VAT. DVSA tracking, scheduling, automated reminders, and invoicing included. No hidden fees. ${OFFER.meta}`}>
+<BaseLayout title="Driving School Software Pricing 2026: From £22/month" description={`Driving school software from £22/month. DVSA tracking, scheduling, automated reminders, and invoicing included. No hidden fees. ${OFFER.meta}`}>
   <Fragment slot="head">
     {offerSchemas.map(offerSchema => (
       <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
@@ -160,7 +160,7 @@ const freeTrialSchema = {
       <div class="max-w-3xl text-center mx-auto">
         <span class="inline-block bg-brand-red/20 text-brand-red-light px-3 py-1 rounded-full text-sm mb-4">Pricing</span>
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Driving School Software Pricing</h1>
-        <p class="text-xl text-gray-300">All features included. No setup fees. No contracts. Just powerful driving school software.</p>
+        <p class="text-xl text-gray-300">No setup fees. No contracts. Cancel anytime. Just powerful driving school software.</p>
       </div>
     </div>
   </section>
@@ -171,7 +171,7 @@ const freeTrialSchema = {
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-brand-navy mb-4">Choose the Right Plan for Your Driving School</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            The Solo Plan gives independent ADIs everything they need to manage students, lessons, and DVSA progress. The School Plan adds multi-instructor tools for growing driving schools. All prices include VAT.
+            The Solo Plan gives independent ADIs everything they need to manage students, lessons, and DVSA progress. The School Plan adds multi-instructor tools for growing driving schools.
           </p>
           {PROMO.enabled && (
             <p class="inline-block bg-brand-red-light text-brand-navy text-sm font-medium px-4 py-2 rounded-lg">
@@ -294,7 +294,7 @@ const freeTrialSchema = {
           </table>
         </div>
         <p class="text-gray-600 mb-4">
-          At £22/month, the Solo Plan pays for itself if it saves you even an hour of admin a month — and most ADIs report saving 10+ hours weekly. The School Plan is £22/month for your first instructor and £12/month for each additional (up to 5) — £70/month for a 5-instructor school, or £14 per instructor. All prices include VAT.
+          At £22/month, the Solo Plan pays for itself if it saves you even an hour of admin a month — and early users report saving 10+ hours weekly. The School Plan is £22/month for your first instructor and £12/month for each additional (up to 5) — £70/month for a 5-instructor school, or £14 per instructor.
         </p>
         <p class="text-gray-600">
           There are no setup fees, no per-lesson charges, and no hidden costs. You pay monthly and can cancel at any time. See <a href="/driving-school-software/" class="text-brand-red hover:underline">all driving school software features</a> included in every plan.
@@ -311,7 +311,7 @@ const freeTrialSchema = {
         <div class="space-y-4">
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">Is there a free trial?</h3>
-            <p class="text-gray-600 text-sm">Yes, all plans include {OFFER.short} with full access to all features. No credit card required to start.</p>
+            <p class="text-gray-600 text-sm">Yes — every plan starts with {OFFER.short}, with no credit card required.</p>
           </div>
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">Can I change plans later?</h3>
@@ -323,7 +323,7 @@ const freeTrialSchema = {
           </div>
           <div class="card">
             <h3 class="font-bold text-brand-navy mb-2">What payment methods do you accept?</h3>
-            <p class="text-gray-600 text-sm">For your subscription, we accept all major credit and debit cards. For your students, the software supports recording payments via cash, bank transfer, and cheque. Online card payments via Stripe are coming soon.</p>
+            <p class="text-gray-600 text-sm">For your subscription, we accept all major credit and debit cards, billed securely by Stripe. For your students, the software supports recording payments via cash, bank transfer, and cheque — online card payments for students are coming soon.</p>
           </div>
         </div>
         <p class="text-sm text-gray-500 mt-6 text-center">

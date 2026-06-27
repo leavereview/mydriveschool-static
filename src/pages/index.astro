@@ -46,7 +46,7 @@ const softwareApplicationSchema = {
     "Invoicing & Payment Recording",
     "Test Date Management",
     "DVSA Competency Framework",
-    "SMS & Email Reminders",
+    "WhatsApp & Email Reminders",
     "Student Self-Service Portal",
     "Reports & Analytics",
     "Recurring Lesson Series",
@@ -68,7 +68,7 @@ const offerSchema = {
   "@type": "Offer",
   "@id": "https://driveschoolpro.com/#free-trial-offer",
   "name": `14-Day Free Trial - DriveSchoolPro`,
-  "description": `${OFFER.long}. Complete access to all features including lesson scheduling, student management, and automated billing. No credit card required.`,
+  "description": `${OFFER.long}. Includes lesson scheduling, student management, and automated billing. No credit card required.`,
   "price": "0",
   "priceCurrency": "GBP",
   "priceValidUntil": "2026-12-31",
@@ -108,7 +108,7 @@ const features = [
   {
     icon: 'calendar',
     title: 'Smart Scheduling',
-    description: 'Six calendar views — agenda, week, month, timeline, availability, and day — with colour-coded lessons across all instructors. Three-way conflict detection ensures no double-bookings. Drag-and-drop rescheduling, recurring lesson series, and quick booking straight from the calendar.'
+    description: 'Day, week and month calendar views with colour-coded lessons across every instructor. Three-way conflict detection checks student, instructor, and vehicle before every booking. Drag-and-drop rescheduling, recurring lesson series, and quick booking straight from the calendar.'
   },
   {
     icon: 'users',
@@ -118,7 +118,7 @@ const features = [
   {
     icon: 'bell',
     title: 'Automated Reminders',
-    description: 'Automated email reminders with configurable timing. Students confirm lessons with one click from their inbox — reducing no-shows before they happen. Customise your message templates with merge fields like student name, lesson time, and pickup location.'
+    description: 'Automated WhatsApp and email reminders with configurable timing. Students confirm lessons with one click — reducing no-shows before they happen. (SMS coming soon.)'
   },
   {
     icon: 'chart',
@@ -134,7 +134,7 @@ const highlights = [
   },
   {
     title: 'Three-Way Conflict Detection',
-    description: 'Every booking checks student, instructor, and vehicle availability simultaneously. Zero double-bookings, guaranteed.'
+    description: 'Every booking checks student, instructor, and vehicle availability at the same time — so you never double-book a student, instructor, or car.'
   },
   {
     title: 'Student Self-Service Portal',
@@ -414,7 +414,7 @@ const stats = [
             Built for Instructors and Schools of All Sizes
           </h2>
           <p class="text-lg text-gray-600 mb-6">
-            Whether you're a solo instructor or manage a fleet of vehicles and instructors, DriveSchoolPro adapts to your unique needs with flexible scheduling, multi-instructor support, and customizable lesson types.
+            Whether you're a solo instructor or manage a fleet of vehicles and instructors, DriveSchoolPro adapts to your unique needs with flexible scheduling, multi-instructor support, and customisable lesson types.
           </p>
           <ul class="space-y-4 mb-8">
             <li class="flex items-start gap-3">

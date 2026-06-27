@@ -72,10 +72,12 @@ const datasetData: DatasetSchema = {
   }
 };
 
-const schemaMarkup = schemaGen.getDatasetSchema(datasetData, pageUrl);
+// Only emit Dataset structured data when a real source is provided — never
+// publish a dataset with a fabricated "<site> Research Team" creator.
+const schemaMarkup = source ? schemaGen.getDatasetSchema(datasetData, pageUrl) : null;
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+{schemaMarkup && <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />}
 
 <section class="statistics-section">
   <header class="stats-header">
