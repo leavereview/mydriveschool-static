@@ -205,6 +205,14 @@ const faqItems = [
     ]
   },
   {
+    question: "How do I track a student's driving test readiness?",
+    answer: "Each student's driving test readiness is scored from their progress across the 27 DVSA skills, recorded after every lesson on a 6-level scale (Not Started to Reflection). DriveSchoolPro highlights pupils approaching their test date with their current readiness score, so you can see at a glance who is genuinely test-ready and which competencies still need work before you book — managing each student's driving test on evidence, not guesswork.",
+    links: [
+      { text: 'Student progress tracking', url: '/driving-school-software/' },
+      { text: 'The DVSA 27 skills', url: '/dvsa-27-driving-skills/' }
+    ]
+  },
+  {
     question: "Can I upload and track student documents?",
     answer: "Yes. Upload provisional licences and custom document types. Set expiry dates and the system alerts you when documents are approaching expiry. Documents are marked as verified or pending for clear compliance status."
   },
@@ -230,7 +238,7 @@ const schemaMarkup = {
 
 <BaseLayout
   title="Driving School Student Management Software | DriveSchoolPro"
-  description={`Replace admin chaos with clarity. DriveSchoolPro tracks DVSA progress across 27 skills, manages lesson packages, invoicing, and multi-instructor scheduling — from £22/month. ${OFFER.meta}`}
+  description="Driving test student management software for UK ADIs. Track each pupil's DVSA progress, test readiness, bookings & pass rates in one place. From £22/month."
   image="/images/marketing/dvsa-progress-tracking.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
@@ -288,6 +296,7 @@ const schemaMarkup = {
             <li><a href="#what-is" class="hover:text-brand-red">→ What Is Management Software?</a></li>
             <li><a href="#key-features" class="hover:text-brand-red">→ Key Features</a></li>
             <li><a href="#student-management" class="hover:text-brand-red">→ Student Management</a></li>
+            <li><a href="#test-management" class="hover:text-brand-red">→ Driving Test Tracking</a></li>
             <li><a href="#payments" class="hover:text-brand-red">→ Payments & Billing</a></li>
             <li><a href="#instructor-management" class="hover:text-brand-red">→ Instructor Management</a></li>
             <li><a href="#reporting" class="hover:text-brand-red">→ Reporting & Analytics</a></li>
@@ -461,9 +470,23 @@ const schemaMarkup = {
 
         <p>Related: <a href="/blog/driving-school-payment-processing/" class="text-brand-red hover:underline">Driving School Payment Processing Guide</a></p>
 
-        <h2 id="test-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Driving Test Management</h2>
+        <h2 id="test-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Track Every Student's Driving Test Journey</h2>
 
-        <p>Keep track of every student's test journey. Record practical test bookings with date, test centre, and test type. Log results when they come in — pass or fail, with examiner feedback. Your dashboard shows upcoming tests across all your students so nothing is missed, and reporting tracks your school's first-time pass rate over time. For students approaching their test date, the system highlights their DVSA readiness score so you can focus lesson time where it matters most.</p>
+        <p>Student management and driving test management are two halves of the same job. Once you can manage each student's driving test from the same record that holds their DVSA progress, lessons, and payments, nothing falls through the cracks. DriveSchoolPro keeps every pupil's <strong>driving test student records</strong> — bookings, readiness, and results — attached to their profile, so the path from first lesson to test pass is one continuous, visible journey rather than a separate spreadsheet you have to cross-reference.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Test Bookings on the Student Record</h3>
+
+        <p>Record each practical test booking with the date, test centre, and test type directly against the student. Your dashboard surfaces upcoming tests across every pupil so nothing is missed, and because the booking lives on the student record, you always see it alongside that learner's lesson history and DVSA progress — not buried in a separate diary.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">DVSA Test Readiness, Per Student</h3>
+
+        <p>For every student approaching their test date, the system highlights a DVSA readiness score drawn from their progress across the 27 skills (8 categories, 6-level scale). That tells you, at a glance, which pupils are genuinely test-ready and which still have weak competencies to shore up — so you can manage each student's driving test preparation and focus final lessons exactly where they matter most. It is the difference between booking a test on a hunch and booking it on evidence.</p>
+
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Results &amp; Per-Student Pass Rates</h3>
+
+        <p>When results come in, log the outcome — pass or fail — with examiner feedback against the student's record. Over time, reporting rolls these up into your school's first-time pass rate and lets you see results by student and by instructor. Driving test student management isn't just admin: tracking outcomes against readiness scores shows you which learners you're sending to test too early, and helps you lift your overall pass rate lesson by lesson.</p>
+
+        <p>Related: <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">Driving School Scheduling Software</a> for booking the lessons that get students test-ready.</p>
 
         <h2 id="document-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Student Document Tracking</h2>
 

@@ -146,8 +146,8 @@ const skillGroups = [
 ---
 
 <BaseLayout
-  title="The DVSA 27 Driving Skills: Pass Your Test First Time"
-  description="Every DVSA driving skill explained — from Skill 1 (legal responsibilities) to Skill 27 (route following). The official Ready to Pass framework, in plain English."
+  title="DVSA's 27 Driving Skills Explained (2026): Are You Test-Ready?"
+  description="All 27 DVSA driving skills explained in plain English, with the 5 levels that show when you're ready to pass. Your pre-test checklist."
 >
   <!-- Breadcrumbs -->
   <BreadcrumbsEnhanced
@@ -166,17 +166,17 @@ const skillGroups = [
           DVSA Ready to Pass Framework
         </span>
         <h1 class="text-4xl md:text-5xl font-bold mb-5 leading-tight">
-          The Complete Guide to DVSA's 27 Driving Skills
+          DVSA's 27 Driving Skills — Explained, So You Know When You're Test-Ready
         </h1>
         <p class="text-xl text-gray-300 mb-4">
-          Master every skill. Track your progress. Pass first time.
+          Every skill you'll be assessed on, in plain English — plus how to tell when you're actually ready to pass.
         </p>
         <p class="text-gray-400 mb-8">
-          This is the official DVSA framework used by every Approved Driving Instructor (ADI) in the UK. All 27 skills, clearly explained — plus the 5-level progression system that shows exactly when you're ready for your test.
+          These are the official DVSA skills every Approved Driving Instructor (ADI) teaches against. We break down all 27, group them the way the test does, and explain the 5-level progression so you can honestly judge where you stand before booking your test.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">Start Tracking Your Progress</a>
-          <a href="#skills" class="btn-secondary text-lg px-8 py-4">See All 27 Skills</a>
+          <a href="#skills" class="btn-primary text-lg px-8 py-4">See All 27 Skills</a>
+          <a href="#checklist" class="btn-secondary text-lg px-8 py-4">Pre-Test Checklist</a>
         </div>
         <p class="mt-4 text-sm text-gray-500">
           <a href="https://readytopass.campaign.gov.uk/driving-skills/" class="underline hover:text-gray-300 transition-colors" rel="noopener noreferrer" target="_blank">
@@ -374,50 +374,39 @@ const skillGroups = [
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section bg-gray-50">
+  <!-- Pre-Test Checklist -->
+  <section class="section bg-gray-50" id="checklist">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-4">What Instructors Say About DVSA Skill Tracking</h2>
-        <p class="text-gray-600 mb-8">Real feedback from ADIs and driving school owners using DriveSchoolPro.</p>
-        <div class="grid md:grid-cols-3 gap-6">
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-          <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <p class="text-gray-700 mb-4 italic">"[PLACEHOLDER — early access customer quote coming soon. Replace with real testimonial before launch.]"</p>
-            <footer class="text-sm font-semibold text-brand-navy">— [PLACEHOLDER: Name], <span class="font-normal text-gray-500">[PLACEHOLDER: School name, City]</span></footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </section>
+        <h2 class="text-3xl font-bold text-brand-navy mb-4">Your Pre-Test Readiness Checklist</h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Booking a test before you're ready is the most common reason learners fail. Before you reserve a slot, work through this honest self-check. If you can tick every box, you're in a strong position to pass first time.
+        </p>
 
-  <!-- Case Study -->
-  <section class="section bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-brand-navy mb-4">Case Study: [PLACEHOLDER School Name] — Tracking DVSA Progress Digitally</h2>
-        <p class="text-gray-600 mb-8">[PLACEHOLDER — replace with a real customer case study before launch. Structure: business background, problem they had, how they solved it with DriveSchoolPro, specific metrics achieved.]</p>
-        <div class="bg-brand-red-light rounded-xl p-8 grid md:grid-cols-3 gap-6 text-center">
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[XX]%</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. reduction in no-shows]</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[X] hrs</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. saved per week on admin]</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-brand-red mb-1">[XX]%</div>
-            <div class="text-sm text-brand-navy font-medium">[PLACEHOLDER metric, e.g. increase in revenue]</div>
-          </div>
+        <div class="bg-white rounded-xl border border-gray-200 shadow-sm divide-y divide-gray-100">
+          {[
+            { title: 'You\'re at Level 5 on every skill', body: 'You consistently reach Reflection — driving independently and understanding why each decision is safe — across all 27 skills, not just most of them.' },
+            { title: 'Junctions and roundabouts feel routine', body: 'Skills 14–16 cause the most test failures. Approach, observation, and lane choice should feel automatic, not something you have to think hard about.' },
+            { title: 'You can complete every manoeuvre unprompted', body: 'Reversing, turning the car around, parking, and the emergency stop (Skills 17–20) are all controlled and accurate without your instructor talking you through them.' },
+            { title: 'Independent driving holds no fear', body: 'You can follow a sat nav or road signs for 20 minutes (Skill 27) while keeping full control of the car — taking a wrong turn doesn\'t rattle you.' },
+            { title: 'You\'ve driven in varied conditions', body: 'You\'ve practised on country roads, dual carriageways, in the dark, and in poor weather (Skills 21–25), not only on quiet familiar routes.' },
+            { title: 'Your instructor agrees you\'re ready', body: 'An experienced ADI tracking your progress is the best judge of test readiness. If they say wait, it\'s worth a few more lessons to avoid a fail and a long rebooking wait.' },
+          ].map((item) => (
+            <div class="flex items-start gap-4 p-5">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-brand-red-light text-brand-red flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+              </span>
+              <div>
+                <h3 class="font-bold text-brand-navy mb-1">{item.title}</h3>
+                <p class="text-gray-600 text-sm">{item.body}</p>
+              </div>
+            </div>
+          ))}
         </div>
+
+        <p class="text-gray-600 mt-6">
+          Not sure where you stand on each skill? That's exactly what the 5-level system above is for — and why so many learners ask their instructor to <a href="#digital-tracking" class="text-brand-red hover:underline font-medium">track their progress digitally</a> so they can see it for themselves.
+        </p>
       </div>
     </div>
   </section>
