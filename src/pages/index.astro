@@ -697,9 +697,9 @@ const homeFaqs = [
   <!-- Final CTA -->
   <section class="section bg-gradient-to-r from-brand-red to-brand-red-dark text-white">
     <div class="container-custom text-center">
-      <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Streamline Your Driving School?</h2>
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to spend less time on admin?</h2>
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-        Sign up today and see how DriveSchoolPro can transform your business.
+        Start your 14-day free trial — no card required, cancel anytime. Most instructors are up and running in about 10 minutes.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href={OFFER.ctaPrimary.href} class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>
@@ -708,21 +708,11 @@ const homeFaqs = [
     </div>
   </section>
 
-  <!-- Sticky mobile CTA — only visible on small screens -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t border-gray-200 md:hidden">
-    <a href={OFFER.ctaPrimary.href}
-       class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-semibold text-base hover:bg-brand-red-dark transition-colors">
-      {OFFER.ctaPrimary.labelShort}
-    </a>
-    <p class="text-center text-gray-500 text-xs mt-1">No credit card required</p>
-  </div>
-
   <!-- Sticky mobile CTA — shown on scroll past hero, mobile only -->
   <a
     id="sticky-mobile-cta"
     href={OFFER.ctaPrimary.href}
-    class="md:hidden fixed bottom-0 left-0 right-0 z-40 py-4 text-center font-semibold text-white text-base translate-y-full transition-transform duration-300"
-    style="background-color: #E8546C;"
+    class="md:hidden fixed bottom-0 left-0 right-0 z-40 py-4 text-center font-semibold text-white text-base bg-brand-red translate-y-full transition-transform duration-300"
     aria-label={OFFER.ctaPrimary.label}
   >
     {OFFER.ctaPrimary.labelShort}
