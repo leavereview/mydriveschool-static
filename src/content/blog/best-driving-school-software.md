@@ -121,7 +121,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 **What We Like**:
 - Built specifically for UK driving schools (DVSA syllabus tracking included)
 - Unlimited students and lessons at all price tiers
-- Email reminders included (configurable timing, delivery logs, one-click confirmation); WhatsApp reminders on the Solo plan; SMS reminders coming soon
+- Email reminders included (configurable timing, delivery logs, one-click confirmation); WhatsApp reminders coming soon
 - Excellent mobile app for instructors
 - Invoicing and payment recording (cash, bank transfer, cheque); online card payments via Stripe coming soon
 - 14-day free trial with no credit card required
@@ -442,7 +442,7 @@ All reputable platforms allow data export (student lists, lesson history, financ
 
 ## Final Recommendations
 
-**For most UK ADIs and driving schools (1–5 instructors)**: Start with **[DriveSchoolPro](/driving-school-software/)** from £22/month — £22 for a solo ADI, then £12 per additional instructor (up to 5) for schools. Full DVSA tracking, automated email reminders (SMS coming soon), vehicle compliance alerts, and a clean pupil portal — purpose-built for the UK ADI market.
+**For most UK ADIs and driving schools (1–5 instructors)**: Start with **[DriveSchoolPro](/driving-school-software/)** from £22/month — £22 for a solo ADI, then £12 per additional instructor (up to 5) for schools. Full DVSA tracking, automated email reminders (WhatsApp coming soon), vehicle compliance alerts, and a clean pupil portal — purpose-built for the UK ADI market.
 
 **For UK schools preferring an established platform**: Get demos from **Driving School Office** and **Total Drive** — both UK-focused with DVSA alignment and a track record in the UK market.
 

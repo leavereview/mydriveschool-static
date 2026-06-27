@@ -10,21 +10,9 @@ import { OFFER } from '../config/offer';
 
 const schedulingStats = [
   {
-    label: 'Admin Time Saved Weekly',
-    value: '10+ hrs',
-    change: { value: 65, direction: 'up' as const, period: 'Industry average with software' },
-    context: 'With automated scheduling and reminders'
-  },
-  {
-    label: 'No-Show Reduction',
-    value: 'Up to 50%',
-    change: { value: 50, direction: 'up' as const, period: 'With automated reminders' },
-    context: 'Using automated email reminders'
-  },
-  {
-    label: 'Scheduling Efficiency',
-    value: '3x',
-    context: 'Faster lesson booking vs manual methods'
+    label: 'Calendar Views',
+    value: '3',
+    context: 'Day, week and month (month as a colour-coded heatmap)'
   },
   {
     label: 'Conflict Detection',
@@ -32,16 +20,24 @@ const schedulingStats = [
     context: 'Checks student, instructor and vehicle before every booking'
   },
   {
-    label: 'Lesson Utilisation Rate',
-    value: '92%',
-    change: { value: 18, direction: 'up' as const, period: 'Industry average with software' },
-    context: 'Better calendar management fills gaps'
+    label: 'Recurring Lessons',
+    value: 'Built in',
+    context: 'Set up a weekly series in one go'
   },
   {
-    label: 'Phone Call Reduction',
-    value: 'Up to 70%',
-    change: { value: 70, direction: 'up' as const, period: 'with student portal (coming soon)' },
-    context: 'Fewer scheduling phone interruptions'
+    label: 'Admin Time Saved',
+    value: '10+ hrs',
+    context: 'Per week — based on early user feedback'
+  },
+  {
+    label: 'Solo Plan',
+    value: '£22/mo',
+    context: 'All-in for an independent ADI'
+  },
+  {
+    label: 'Free Trial',
+    value: '14 days',
+    context: 'No card required, cancel anytime'
   }
 ];
 
@@ -249,7 +245,7 @@ const schemaMarkup = {
   <StatisticsSection
     site="driveschool"
     pageUrl="https://driveschoolpro.com/driving-school-scheduling-software/"
-    title="Scheduling Software Impact on Driving Schools"
+    title="Scheduling at a glance"
     stats={schedulingStats}
   />
 
@@ -407,7 +403,7 @@ const schemaMarkup = {
             <li><strong>24 hours before:</strong> Detailed reminder with time, instructor, pickup location, and what to bring.</li>
             <li><strong>2 hours before:</strong> Brief confirmation reminder. Last chance to reschedule.</li>
           </ul>
-          <p class="mt-4 text-sm"><strong>Use channels people actually read:</strong> automated WhatsApp and email reminders are included, with SMS coming soon — far higher open rates than email alone.</p>
+          <p class="mt-4 text-sm"><strong>Reminders that get read:</strong> automated email reminders are included, with WhatsApp coming soon.</p>
         </div>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Easy Rescheduling Options</h3>

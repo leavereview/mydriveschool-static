@@ -203,7 +203,7 @@ Not all driving school software is the same, and the wrong choice wastes your ti
 **What to look for:**
 
 - **DVSA competency tracking** — non-negotiable for UK ADIs. This is what separates driving school software from a calendar app
-- **Automated SMS reminders** — email reminders have a 20% open rate; SMS has 98%
+- **Automated email reminders** — sent before every lesson so fewer pupils forget (WhatsApp reminders coming to DriveSchoolPro)
 - **Mobile-first design** — you are working from your phone between lessons, not sitting at a desk
 - **UK pricing and currency** — US-focused tools often price in dollars, use American scheduling conventions, and have no DVSA awareness
 - **Flat monthly pricing** — avoid tools that charge per student, which becomes expensive as you grow

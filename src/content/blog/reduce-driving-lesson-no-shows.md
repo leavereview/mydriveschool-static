@@ -14,7 +14,7 @@ faqs:
   - question: "Should I charge for no-shows?"
     answer: "Yes. Charging for no-shows (or forfeiting a deposit) is standard practice and is essential to reducing repeat offenders. The first time, many ADIs issue a warning rather than charge — which is fair and preserves the relationship. The second time, the full lesson fee applies. Students who have financial skin in the game are significantly less likely to no-show."
   - question: "What is the best way to send driving lesson reminders?"
-    answer: "SMS is the most effective channel — it has a 98% open rate versus around 20% for email. Send two reminders: one 24 hours before the lesson and one 2 hours before. Ask students to reply to confirm. Driving school software like DriveSchoolPro sends these automatically, so you set them up once and they run for every lesson without any manual effort."
+    answer: "Automated reminders are the most effective fix. Send two — one 24 hours before the lesson and one 2 hours before — and ask students to confirm. Driving school software like DriveSchoolPro sends these automatically by email (with WhatsApp reminders coming soon), so you set them up once and they run for every lesson without any manual effort."
   - question: "How many no-shows is normal for a driving instructor?"
     answer: "A no-show rate of 5–10% is typical for UK ADIs without any formal reminder or policy system in place. With automated reminders and a clear cancellation policy, most instructors bring this below 3%. Anything above 15% usually indicates a combination of missing reminders, no deposit requirement, and students who were never properly vetted at enquiry."
 ---
@@ -55,7 +55,7 @@ Even reducing no-shows by half pays for software, absorbs fuel costs, and leaves
 
 The most common reason students no-show is simple: they forgot. Not malice, not indifference — just a busy life and a lesson they booked three weeks ago. A reminder 24 hours out catches 60–70% of would-be no-shows before they happen.
 
-**SMS vs email vs WhatsApp**: SMS wins outright. Open rates are around 98% for SMS, roughly 20% for email, and WhatsApp sits somewhere in between depending on your student base. If you use one channel only, use SMS.
+**Email vs WhatsApp**: email reminders are reliable, included in most software, and easy to automate; WhatsApp tends to get read fastest and is coming to DriveSchoolPro soon. Whichever channel you use, the win comes from automating it so every student gets a reminder, every time.
 
 **When to send**: 24 hours before *and* 2 hours before. The double reminder catches both the forgetful and the students who genuinely had something come up overnight. For very early morning lessons (8am), send the second reminder the evening before rather than at 6am.
 
@@ -198,7 +198,7 @@ The insight is usually actionable quickly. If Monday mornings consistently have 
 
 Use this as your implementation checklist. The first three items have the highest impact and can be done today.
 
-- [ ] Set up automated SMS reminders at 24 hours and 2 hours before each lesson
+- [ ] Set up automated email reminders at 24 hours and 2 hours before each lesson
 - [ ] Write your cancellation policy and send it to all active students
 - [ ] Require a deposit or first-lesson prepayment for all new bookings
 - [ ] Add a self-service rescheduling option (portal, reply-to-text, or booking link)
@@ -223,7 +223,7 @@ A standard UK policy requires 24 or 48 hours notice to cancel or reschedule with
 Yes. The first time, many ADIs issue a warning rather than charge — which is fair and preserves the relationship. From the second no-show onwards, enforcing the full lesson charge is reasonable and expected by most students if the policy was communicated clearly.
 
 **What's the best way to send lesson reminders?**
-SMS is most effective — 98% open rate versus around 20% for email. Send two: 24 hours before and 2 hours before. Ask students to confirm with a reply. Automated reminders via [DriveSchoolPro](/driving-school-software/) run without any manual effort once configured.
+Automated reminders are the most effective fix. Send two — 24 hours before and 2 hours before — and ask students to confirm. Automated email reminders via [DriveSchoolPro](/driving-school-software/) run without any manual effort once configured (WhatsApp reminders coming soon).
 
 **How many no-shows is normal for a driving instructor?**
 Without any system in place, 10–15% is common. With automated reminders and a clear cancellation policy, most ADIs bring this below 5%. Above 15% usually means reminders are missing, there's no deposit requirement, and students weren't vetted at enquiry.

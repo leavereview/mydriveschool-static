@@ -10,36 +10,34 @@ import { OFFER } from '../config/offer';
 
 const freeStats = [
   {
-    label: 'Solo ADIs Using Free Tools',
-    value: '35%',
-    context: 'Start with spreadsheets or free plans'
+    label: 'DriveSchoolPro Solo',
+    value: '£22/mo',
+    context: 'All-in for an independent ADI — no per-student fees'
   },
   {
-    label: 'Upgrade Within 6 Months',
-    value: '78%',
-    change: { value: 78, direction: 'up' as const, period: 'of free users' },
-    context: 'When hitting limitations or growth'
+    label: 'Free Trial',
+    value: '14 days',
+    context: 'Full access, no card required'
   },
   {
-    label: 'Average Cost of Paid Plan',
-    value: '£29-79',
-    context: 'Monthly pricing for driving school software'
+    label: 'Students',
+    value: 'Unlimited',
+    context: 'No caps on the paid plans'
   },
   {
-    label: 'ROI from Paid Software',
-    value: '8:1',
-    context: 'Every £1 spent saves £8 in time/no-shows'
+    label: 'DVSA Skills Tracked',
+    value: '27',
+    context: 'Across 8 categories — more than free tools track'
   },
   {
-    label: 'Time Lost with Free Tools',
-    value: '6+ hrs',
-    context: 'Weekly admin time vs paid automation'
+    label: 'Conflict Detection',
+    value: '3-way',
+    context: 'Student, instructor and vehicle'
   },
   {
-    label: 'Free Trial Success Rate',
-    value: '68%',
-    change: { value: 68, direction: 'up' as const, period: 'convert to paid' },
-    context: 'ADIs who see value during trial period'
+    label: 'Admin Time Saved',
+    value: '10+ hrs',
+    context: 'Per week — based on early user feedback'
   }
 ];
 
@@ -231,7 +229,7 @@ const schemaMarkup = {
   <StatisticsSection
     site="driveschool"
     pageUrl="https://driveschoolpro.com/free-driving-school-software/"
-    title="Free vs Paid Driving School Software Reality"
+    title="DriveSchoolPro vs free tools"
     stats={freeStats}
   />
 
@@ -352,7 +350,7 @@ const schemaMarkup = {
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                  <span class="text-gray-700">Automated email reminders (SMS coming soon)</span>
+                  <span class="text-gray-700">Automated email reminders (WhatsApp coming soon)</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
@@ -432,10 +430,10 @@ const schemaMarkup = {
                   <td class="p-4 text-center text-green-500">✓</td>
                 </tr>
                 <tr class="bg-gray-50">
-                  <td class="p-4 font-medium">SMS Reminders</td>
+                  <td class="p-4 font-medium">Email Reminders</td>
                   <td class="p-4 text-center text-red-500">✗</td>
-                  <td class="p-4 text-center text-amber-500">Coming Soon</td>
-                  <td class="p-4 text-center text-amber-500">Coming Soon</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
+                  <td class="p-4 text-center text-green-500">✓</td>
                 </tr>
                 <tr>
                   <td class="p-4 font-medium">DVSA Competency Tracking</td>

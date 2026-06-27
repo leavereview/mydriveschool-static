@@ -8,18 +8,22 @@ import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
 import MarketingScreenshot from '../components/MarketingScreenshot.astro';
 import { OFFER } from '../config/offer';
 
-// Driving School Industry Statistics
+// Driving school software — verifiable product facts + known DVSA figures
 const drivingStats = [
   {
     label: 'UK Driving Instructors',
     value: '40,000+',
-    change: { value: 8, direction: 'up' as const, period: 'since 2020' },
-    context: 'Approved Driving Instructors (ADIs) registered with DVSA'
+    context: 'Approved Driving Instructors registered with the DVSA'
   },
   {
-    label: 'Active Learner Drivers',
-    value: '1.2M',
-    context: 'Students actively taking lessons in the UK'
+    label: 'DVSA Skills Tracked',
+    value: '27',
+    context: 'Across 8 categories, on a 6-level scale (Not Started to Reflection)'
+  },
+  {
+    label: 'Conflict Detection',
+    value: '3-way',
+    context: 'Every staff booking checks student, instructor and vehicle'
   },
   {
     label: 'Admin Time Saved',
@@ -27,20 +31,14 @@ const drivingStats = [
     context: 'Per week — based on early user feedback'
   },
   {
-    label: 'No-Show Reduction',
-    value: 'Up to 65%',
-    context: 'With automated email reminders'
-  },
-  {
-    label: 'Revenue Increase',
-    value: 'Up to 18%',
-    change: { value: 18, direction: 'up' as const, period: 'Industry average' },
-    context: 'With automated scheduling and lesson packages'
-  },
-  {
     label: 'Average Pass Rate',
     value: '46%',
-    context: 'UK practical test first-time pass rate (DVSA)'
+    context: 'UK practical-test first-time pass rate (DVSA)'
+  },
+  {
+    label: 'Free Trial',
+    value: '14 days',
+    context: 'No card required, cancel anytime'
   }
 ];
 
@@ -174,7 +172,7 @@ const faqItems = [
   },
   {
     question: "Does driving school software send lesson reminders?",
-    answer: "Yes. Automated reminders go out via WhatsApp and email with configurable timing (SMS coming soon). You can set per-student notification preferences, and full delivery logs let you verify every message was sent and received. This reduces no-shows significantly.",
+    answer: "Yes. Automated reminders go out via email with configurable timing (WhatsApp coming soon). You can set per-student notification preferences, and full delivery logs let you verify every message was sent and received. This reduces no-shows significantly.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
@@ -249,7 +247,7 @@ const faqItems = [
   <StatisticsSection
     site="driveschool"
     pageUrl="https://driveschoolpro.com/driving-school-software/"
-    title="UK Driving School Industry Overview"
+    title="Driving school software at a glance"
     stats={drivingStats}
   />
 

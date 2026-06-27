@@ -10,8 +10,7 @@ const comparisonRows = [
   { label: 'AI lesson briefings', values: [true, false], highlight: true },
   { label: 'Full DVSA 8-category framework', values: [true, true] },
   { label: 'Automated Google review requests', values: [true, false], highlight: true },
-  { label: 'WhatsApp reminders', values: [true, false], highlight: true },
-  { label: 'SMS reminders', values: ['Coming soon', true] },
+  { label: 'WhatsApp reminders', values: ['Coming soon', false], highlight: true },
   { label: 'Email reminders', values: [true, true] },
   { label: 'Three-way conflict detection (pupil + instructor + vehicle)', values: [true, false] },
   { label: 'Embeddable booking widget for your website', values: [true, false] },
@@ -28,7 +27,7 @@ const comparisonRows = [
 const faqItems = [
   {
     question: "Is DriveSchoolPro better than Total Drive?",
-    answer: "It depends what matters to you. DriveSchoolPro has AI lesson briefings, automated Google reviews, WhatsApp reminders, and transparent £22/month pricing. Total Drive is an established UK platform with a solid reputation, but pricing requires a direct conversation and it lacks AI briefings and automated review generation. If you want a modern platform with clear pricing and AI features, DriveSchoolPro is the stronger choice.",
+    answer: "It depends what matters to you. DriveSchoolPro has AI lesson briefings, automated Google reviews, automated email reminders, and transparent £22/month pricing. Total Drive is an established UK platform with a solid reputation, but pricing requires a direct conversation and it lacks AI briefings and automated review generation. If you want a modern platform with clear pricing and AI features, DriveSchoolPro is the stronger choice.",
     links: [{ text: 'Start free trial', url: OFFER.ctaPrimary.href }]
   },
   {
@@ -104,7 +103,7 @@ const schemaMarkup = {
   </section>
 
   <FeaturedAnswer question="How does DriveSchoolPro compare to Total Drive?">
-    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking and scheduling. DriveSchoolPro adds AI-generated lesson briefings, automated Google review requests after each test pass, WhatsApp reminders, and transparent £22/month pricing. Total Drive is more established but doesn't offer AI features, automated reviews, or public pricing.
+    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking and scheduling. DriveSchoolPro adds AI-generated lesson briefings, automated Google review requests after each test pass, automated email reminders, and transparent £22/month pricing. Total Drive is more established but doesn't offer AI features, automated reviews, or public pricing.
   </FeaturedAnswer>
 
   <!-- Summary Cards -->
@@ -125,7 +124,7 @@ const schemaMarkup = {
               'AI lesson briefings before every session',
               'Full DVSA 8-category, 27-skill framework',
               'Automated Google review requests',
-              'WhatsApp + email reminders (SMS coming soon)',
+              'Email reminders (WhatsApp coming soon)',
               'Three-way conflict detection',
               'Embeddable booking widget',
               'Pupil and parent portals',
@@ -244,8 +243,8 @@ const schemaMarkup = {
             body: 'Every test pass in DriveSchoolPro triggers an automatic review request. This is the most effective way to build Google reviews — asking at exactly the right moment. Total Drive doesn\'t offer this.'
           },
           {
-            title: 'WhatsApp reminders',
-            body: 'UK pupils actually read WhatsApp messages. DriveSchoolPro sends automated lesson reminders via WhatsApp and email, with SMS coming soon. Total Drive doesn\'t currently offer WhatsApp reminders.'
+            title: 'WhatsApp reminders (coming soon)',
+            body: 'DriveSchoolPro sends automated email reminders with one-click confirm today, and WhatsApp reminders are coming soon — UK pupils actually read WhatsApp. Total Drive doesn\'t offer WhatsApp reminders.'
           },
           {
             title: 'Transparent pricing',
