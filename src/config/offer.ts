@@ -51,10 +51,10 @@ export const PROMO = {
   code: "SUMMER26",
   endDate: "2026-08-31",
   headline: "Summer sale: 25% off your first 3 months.",
-  body: "Start free for 14 days, then £16.50/month for 3 months with code SUMMER26 — Ends 31 August.",
+  body: "Start free for 14 days, then £16.50/month for 3 months with code SUMMER26 — Ends 31 August 2026.",
   /** Short line for the pricing page, near the plan cards */
   pricingNote:
-    "Summer sale: enter SUMMER26 at checkout for 25% off your first 3 months (then £22/month). Ends 31 Aug.",
+    "Summer sale: enter SUMMER26 at checkout for 25% off your first 3 months (then £22/month). Ends 31 August 2026.",
   href: "https://app.driveschoolpro.com/signup",
 } as const;
 

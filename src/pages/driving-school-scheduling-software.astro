@@ -81,7 +81,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: '6 Calendar Views (Agenda, Week, Month, Timeline, Availability, Day)',
+    label: 'Day, Week & Month calendar views',
     values: [true, false, false]
   },
   {
@@ -89,7 +89,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: '6 Calendar Views (incl. Timeline & Availability)',
+    label: 'Colour-coded multi-instructor calendar',
     values: [true, false, false]
   },
   {
@@ -146,7 +146,7 @@ const faqItems = [
   },
   {
     question: "Can I manage multiple instructors with scheduling software?",
-    answer: "Multi-instructor scheduling is available with the School Plan — £22/month for your first instructor, then £12/month for each additional (up to 5 instructors; 6+ → Enterprise). It provides individual calendars, shared availability view, student assignments, and three-way conflict detection across all instructors and vehicles.",
+    answer: "Multi-instructor scheduling is available with the School Plan — £22/month for your first instructor, then £12/month for each additional (up to 5 instructors; 6+ → Enterprise). It provides individual calendars, shared availability, student assignments, and three-way conflict detection across all instructors and vehicles.",
     links: [
       { text: 'School plan details', url: '/pricing/' },
       { text: 'Instructor management', url: '/driving-school-management-software/' }
@@ -175,14 +175,14 @@ const faqItems = [
   },
   {
     question: "Does scheduling software sync with Google Calendar?",
-    answer: "Calendar sync with Google Calendar, Apple Calendar, and Outlook is planned for a future release. Currently, DriveSchoolPro has its own full-featured calendar with day, week, and month heatmap views, drag-and-drop rescheduling, and recurring lesson series—so everything lives in one place.",
+    answer: "DriveSchoolPro has its own full-featured calendar with day, week, and month views, drag-and-drop rescheduling, and recurring lesson series, so everything lives in one place. You can export lessons to Google, Apple, or Outlook via a one-way calendar file (ICS); two-way sync isn't available yet.",
     links: [
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
     ]
   },
   {
     question: "How many calendar views are there?",
-    answer: "DriveSchoolPro offers six calendar views: agenda (chronological list), week (grid with time slots), month (overview with lesson counts), timeline (horizontal per instructor), availability (open vs booked slots), and day (detailed single day). Switch between views instantly — each is designed for a different workflow. You can also book lessons directly from the calendar using the quick booking panel.",
+    answer: "DriveSchoolPro offers three calendar views — day (a detailed single day), week (a grid with time slots), and month (a colour-coded heatmap of how busy you are). Switch between them instantly; each suits a different workflow. You can also book lessons directly from the calendar using the quick booking panel.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
@@ -328,11 +328,11 @@ const schemaMarkup = {
 
         <p>Your scheduling software should display appointments in a clear, visual calendar format:</p>
 
-        <p>Six calendar views — agenda, week, month, timeline, availability, and day — so you always have the right view for the task. Planning the week ahead? Use week view. Checking instructor capacity? Switch to availability view. Need a quick list of what's coming? Agenda view has you covered.</p>
+        <p>Three calendar views — day, week, and month — so you always have the right view for the task. Planning the week ahead? Use week view. Want to see how busy you are at a glance? The month heatmap shows it. Need to focus on a single day? Switch to day view.</p>
 
         <ul class="space-y-2">
           <li>All instructors' schedules on one screen (filterable)</li>
-          <li>Six views: agenda, week, month, timeline, availability, and day</li>
+          <li>Day, week and month views (month shown as a colour-coded heatmap)</li>
           <li>Colour-coding by instructor, lesson type, or status</li>
           <li>Quick identification of open slots</li>
           <li><strong>Drag-and-drop rescheduling</strong> — moving a lesson should be effortless</li>
@@ -407,7 +407,7 @@ const schemaMarkup = {
             <li><strong>24 hours before:</strong> Detailed reminder with time, instructor, pickup location, and what to bring.</li>
             <li><strong>2 hours before:</strong> Brief confirmation reminder. Last chance to reschedule.</li>
           </ul>
-          <p class="mt-4 text-sm"><strong>Use channels people actually read:</strong> automated email reminders are included, with WhatsApp reminders on the Solo plan and SMS coming soon — far higher open rates than email alone.</p>
+          <p class="mt-4 text-sm"><strong>Use channels people actually read:</strong> automated WhatsApp and email reminders are included, with SMS coming soon — far higher open rates than email alone.</p>
         </div>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Easy Rescheduling Options</h3>
