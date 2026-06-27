@@ -74,7 +74,7 @@ Your students should be able to book lessons 24/7 without phone calls. The syste
 
 No-shows cost UK driving schools an estimated £420 million annually. Automated reminders sent 24-48 hours before lessons reduce no-shows by 40-60%. (Learn more in our [complete guide to reducing no-shows](/blog/reduce-driving-lesson-no-shows/).)
 
-**What to check**: Does the software allow customizable reminder timing? Can you send reminders via both SMS and email? Are SMS costs included or extra?
+**What to check**: Does the software allow customisable reminder timing? Can you send reminders via both SMS and email? Are SMS costs included or extra?
 
 ### 3. Student Progress Tracking
 
@@ -129,7 +129,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 
 **What Could Be Better**:
 - No built-in theory test module (partners with third-party providers)
-- Limited customization for franchise schools with strict branding requirements
+- Limited customisation for franchise schools with strict branding requirements
 
 **Pricing Breakdown**:
 - Solo Plan: £22/month (1 instructor, unlimited students) — live now
@@ -149,7 +149,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 - Territory mapping to assign students to nearest instructor
 - Built-in lead tracking and CRM functionality
 - Integrates with Google Ads for ROI tracking
-- Customizable booking widget embeds on your website
+- Customisable booking widget embeds on your website
 
 **What Could Be Better**:
 - Higher price point (minimum $79/month even for solo instructors)
@@ -169,7 +169,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 **Rating**: 4.3/5 | **Starting Price**: £99/month | **Best For**: Large schools (20+ instructors) with custom needs
 
 **What We Like**:
-- Highly customizable (can match complex workflows)
+- Highly customisable (can match complex workflows)
 - Advanced reporting (export to accounting software)
 - White-label options for franchise branding
 - API access for custom integrations
@@ -312,7 +312,7 @@ Total Drive is a UK-focused platform that positions itself as an all-in-one solu
 - Import existing students (most platforms provide templates)
 - Configure lesson types, prices, durations
 - Set up payment processing
-- Customize automated reminders
+- Customise automated reminders
 
 **Time investment**: 3-6 hours spread across the week
 
@@ -331,7 +331,7 @@ Total Drive is a UK-focused platform that positions itself as an all-in-one solu
 
 **Time investment**: 2 hours setup + handling student questions
 
-### Week 4: Optimize
+### Week 4: Optimise
 - Review no-show rates
 - Adjust reminder timing if needed
 - Set up reporting dashboards
@@ -392,7 +392,7 @@ Some schools start fresh without importing existing students, forcing manual re-
 
 ### ❌ Ignoring Mobile Experience
 
-50%+ of bookings happen on mobile devices. If your booking widget isn't mobile-optimized, you're losing bookings.
+50%+ of bookings happen on mobile devices. If your booking widget isn't mobile-optimised, you're losing bookings.
 
 **Better approach**: Test booking on a phone before launch. Choose software with native mobile apps for instructors.
 

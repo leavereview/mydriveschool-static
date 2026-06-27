@@ -60,7 +60,7 @@ function isActive(href: string): boolean {
             <a
               href={link.href}
               class:list={[
-                'px-4 py-2 rounded-lg font-medium transition-all duration-200',
+                'px-4 py-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2',
                 isActive(link.href)
                   ? 'text-brand-red bg-brand-red-light'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -75,7 +75,7 @@ function isActive(href: string): boolean {
             </a>
 
             {link.dropdown && (
-              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
                 <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px]">
                   {link.dropdown.map((item) => (
                     item.label === '---' ? (
@@ -84,7 +84,7 @@ function isActive(href: string): boolean {
                       <a
                         href={item.href}
                         class:list={[
-                          'block px-4 py-2 text-sm transition-colors',
+                          'block px-4 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-red',
                           isActive(item.href)
                             ? 'text-brand-red bg-brand-red-light'
                             : 'text-gray-600 hover:text-brand-red hover:bg-gray-50'
