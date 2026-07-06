@@ -52,3 +52,19 @@ rsync -avz --delete dist/ lightsail:/var/www/driveschoolpro.com/
 ```
 
 Always use the `lightsail` SSH alias, not the raw IP.
+
+## PPC Landing Pages (external contracts — do not rename or noindex)
+
+Two pages are **Google Ads landing pages** (they also double as indexable SEO pages). Their
+URLs and H1s are referenced by live Google Ads campaigns — once ads are live, treat the URLs
+as **external contracts**: don't rename, move, or noindex them without updating the ads first.
+
+- `/driving-instructor-software` — solo ADI lander (leads with Solo £22/mo)
+- `/driving-school-software-uk` — multi-instructor lander (leads with School £22 + £12/extra)
+  - Note the `-uk` slug: `/driving-school-software` is the existing SEO pillar and was deliberately
+    kept; the lander uses a distinct slug rather than overwriting a ranking page.
+
+Both use `LandingLayout` (no global nav — company details + GA4/Ads conversion are inherited from
+the layout), link to `/compare/total-drive/`, and stay in the sitemap by default. They cross-link
+(solo ↔ school) and are linked from the homepage plan cards so each satisfies `verify-seo.js`'s
+≥2-inbound-internal-links rule. Pure PPC-only variants still live under `/ads/*` (noindexed).
