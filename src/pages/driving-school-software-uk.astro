@@ -1,0 +1,337 @@
+---
+import { OFFER, PROMO } from '../config/offer';
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
+const GOOGLE_ADS_CONVERSION_LABEL = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || '';
+
+const pageUrl = 'https://driveschoolpro.com/driving-school-software-uk/';
+
+// ── Differentiator trio (school angle) ────────────────────────────────
+const differentiators = [
+  {
+    title: 'Reminders that cut no-shows',
+    body: 'Automated email reminders go out before every lesson, across all your instructors, so fewer pupils forget. WhatsApp reminders are coming soon.',
+    path: 'M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z',
+  },
+  {
+    title: 'DVSA progress tracking',
+    body: 'Every pupil tracked against the full DVSA framework — 8 categories, 27 skills — whichever instructor teaches them.',
+    path: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  },
+  {
+    title: 'Whole-school visibility',
+    body: "Every instructor's calendar, utilisation and revenue in one view — plus vehicle compliance tracking — so you can see how the whole school is doing.",
+    path: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z',
+  },
+];
+
+// ── Feature grid — school variant (vehicle/compliance + role-based access) ──
+const features = [
+  { name: 'Multi-instructor diary', desc: "Every instructor's day in one calendar, colour-coded, with clash detection." },
+  { name: 'Pupil & staff management', desc: 'Assign and reassign pupils, and keep everyone in one place.' },
+  { name: 'Online booking widget', desc: "Pupils book on your site; bookings land in the right instructor's diary." },
+  { name: 'Payments & invoicing', desc: 'Take card payments through Stripe, invoice pupils and track balances.' },
+  { name: 'Vehicle & compliance tracking', desc: "Track each car's MOT, insurance and service dates, with reminders before they lapse." },
+  { name: 'Role-based access', desc: 'Owners see everything; instructors see only their own diary and pupils.' },
+];
+
+// ── FAQ (5) — school questions, plain-text answers matching the JSON-LD ──
+const faqs = [
+  {
+    q: 'How does pricing work for multiple instructors?',
+    a: 'The School plan is £22 a month for your first instructor, then £12 a month for each additional instructor, up to five. A five-instructor school is £70 a month — about £14 per instructor. Running six or more? Talk to us about Enterprise. Every plan starts with a 14-day free trial and no card.',
+  },
+  {
+    q: 'Can instructors see only their own diary?',
+    a: 'Yes. The School plan includes role-based access, so each instructor sees their own diary and pupils while owners get whole-school visibility across every calendar.',
+  },
+  {
+    q: 'Does it track vehicle compliance?',
+    a: "Yes. Record each vehicle's MOT, insurance and service dates and get reminders before anything lapses, so your fleet stays road-legal.",
+  },
+  {
+    q: 'Can pupils book online?',
+    a: "Yes. Embed the booking widget on your website and pupils book lessons 24/7 — bookings drop straight into the right instructor's diary, with you in control of the rules.",
+  },
+  {
+    q: 'Can we move our data over?',
+    a: "There's no bulk importer yet, but setup is quick — add your instructors and pupils in minutes and keep your current system running alongside until you're ready. If you get stuck, we'll help.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${pageUrl}#faqpage`,
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'DriveSchoolPro',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, iOS, Android',
+  url: 'https://driveschoolpro.com',
+  offers: {
+    '@type': 'Offer',
+    price: '22',
+    priceCurrency: 'GBP',
+    priceValidUntil: '2026-12-31',
+    description: 'School plan — £22/month first instructor, £12/month each additional (up to 5). Multi-instructor diary, DVSA tracking, vehicle compliance and reporting.',
+  },
+  description: 'Driving school software for UK schools — run every instructor\'s diary, pupils and payments from one dashboard, with DVSA tracking, vehicle compliance and reporting built in.',
+};
+---
+
+<LandingLayout
+  title="Driving School Software UK | DriveSchoolPro"
+  description="Run every instructor's diary, pupils and payments from one dashboard, with DVSA tracking and reporting built in. 14-day free trial, no card required."
+  canonicalUrl={pageUrl}
+  ogImage="/images/marketing/instructor-availability.webp"
+  robots="index, follow"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} slot="head" />
+
+  <!-- Conversion tracking — fires the Google Ads conversion, then navigates -->
+  <script is:inline define:vars={{ GOOGLE_ADS_ID, GOOGLE_ADS_CONVERSION_LABEL }} slot="head">
+    window.trackAdConversion = function (url) {
+      if (typeof window.gtag === 'function' && GOOGLE_ADS_ID && GOOGLE_ADS_CONVERSION_LABEL) {
+        window.gtag('event', 'conversion', {
+          send_to: GOOGLE_ADS_ID + '/' + GOOGLE_ADS_CONVERSION_LABEL,
+          event_callback: function () { window.location = url; },
+        });
+        setTimeout(function () { window.location = url; }, 1000);
+        return false;
+      }
+      window.location = url;
+    };
+  </script>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <section class="bg-white pt-8 pb-10 md:pt-16 md:pb-20">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-12 lg:gap-16">
+
+        <!-- Text -->
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <a href="/" class="inline-flex items-center gap-2 mb-6" aria-label="DriveSchoolPro home">
+            <span class="text-2xl font-bold text-brand-navy tracking-tight">DriveSchool<span class="text-brand-red">Pro</span></span>
+          </a>
+
+          {PROMO.enabled && (
+            <div class="inline-flex items-center gap-2 bg-brand-red-light text-brand-red text-sm font-semibold px-3 py-1.5 rounded-full mb-5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              25% off your first 3 months with code {PROMO.code}
+            </div>
+          )}
+
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight mb-4">
+            Driving school software for schools that are <span class="text-brand-red">actually growing</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            One dashboard for every instructor's diary, pupils and payments — with the compliance and reporting a real school needs.
+          </p>
+
+          <a
+            href={OFFER.ctaPrimary.href}
+            onclick="return trackAdConversion(this.href)"
+            class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+          >
+            Start your free trial &rarr;
+          </a>
+          <p class="text-sm text-gray-400 mt-3">
+            No credit card required &middot; {OFFER.short} &middot;
+            <a href="#pricing" class="underline hover:text-gray-600">See pricing</a>
+          </p>
+        </div>
+
+        <!-- Hero image — every instructor's availability in one view -->
+        <div class="md:w-1/2">
+          <img
+            src="/images/marketing/instructor-availability.webp"
+            alt="DriveSchoolPro dashboard showing every instructor's availability and lessons in one view"
+            class="rounded-2xl shadow-xl border border-gray-100 w-full h-auto"
+            width="1440"
+            height="900"
+            loading="eager"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ─────────────────────────────────────────────────── -->
+  <section class="bg-gray-50 py-6 border-y border-gray-100">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-600">
+        <span class="flex items-center gap-2"><span class="text-base">🇬🇧</span> Built for UK schools</span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">Up to 5 instructors, then Enterprise</span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">27 DVSA skills tracked</span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2">UK GDPR compliant</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Differentiator trio ───────────────────────────────────────── -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-3">
+        Run the whole school from one screen
+      </h2>
+      <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">
+        Everything your instructors need to teach, and everything you need to see how the school is performing.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        {differentiators.map((d) => (
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-red-light flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={d.path} />
+              </svg>
+            </div>
+            <p class="font-semibold text-gray-900 mb-2">{d.title}</p>
+            <p class="text-gray-600 text-sm leading-relaxed">{d.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Everything in one place ───────────────────────────────────── -->
+  <section class="section bg-gray-50 border-t border-gray-100">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-3">Everything in one place</h2>
+      <p class="text-gray-500 text-center mb-10 max-w-2xl mx-auto">One system for the whole school — no add-ons, no per-pupil charges.</p>
+      <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-3">
+        {features.map((f) => (
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <span class="font-semibold text-gray-900 text-sm">{f.name}</span>
+              <span class="text-gray-500 text-sm"> — {f.desc}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing (School) ──────────────────────────────────────────── -->
+  <section id="pricing" class="section bg-white scroll-mt-6">
+    <div class="container-custom">
+      <div class="max-w-lg mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-3">Pricing that grows with your school</h2>
+        <div class="bg-gray-50 border-2 border-brand-navy rounded-2xl p-8 mt-6">
+          <p class="text-sm font-semibold text-brand-navy uppercase tracking-wider mb-2">School plan</p>
+          <div class="text-5xl font-bold text-brand-navy mb-1">£22<span class="text-lg font-normal text-gray-500">/mo</span></div>
+          <p class="text-gray-600 text-sm mb-1">first instructor, then <strong>£12/month</strong> for each additional (up to 5)</p>
+          <p class="text-gray-500 text-xs mb-6">e.g. a 5-instructor school is £70/month — £14 per instructor. Running 6+? Talk to us about Enterprise.</p>
+          {PROMO.enabled && (
+            <p class="text-brand-red text-sm font-medium bg-brand-red-light rounded-lg px-4 py-2 mb-6">
+              {PROMO.pricingNote}
+            </p>
+          )}
+          <a
+            href={OFFER.ctaPrimary.href}
+            onclick="return trackAdConversion(this.href)"
+            class="block w-full text-center bg-brand-red text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+          >
+            Start your free trial &rarr;
+          </a>
+          <p class="text-xs text-gray-400 mt-3">{OFFER.short} · no credit card required · cancel anytime</p>
+        </div>
+        <p class="text-sm text-gray-400 mt-6">Just teaching solo? <a href="/driving-instructor-software/" class="text-brand-red hover:underline">See DriveSchoolPro for driving instructors &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Switching reassurance ─────────────────────────────────────── -->
+  <section class="section bg-gray-50 border-y border-gray-100">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-6">Moving your school across is simple</h2>
+        <div class="grid sm:grid-cols-2 gap-4 text-left mb-8">
+          <div class="flex items-start gap-3">
+            <span class="text-brand-red font-bold">✓</span>
+            <p class="text-gray-600 text-sm">No contract — pay monthly and cancel any time.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-brand-red font-bold">✓</span>
+            <p class="text-gray-600 text-sm">We'll help you move your instructors and pupils across.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-brand-red font-bold">✓</span>
+            <p class="text-gray-600 text-sm">Run it alongside your current system until you're ready.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-brand-red font-bold">✓</span>
+            <p class="text-gray-600 text-sm">UK-based founder support — talk to the people who built it.</p>
+          </div>
+        </div>
+        <a href="/compare/total-drive/" class="text-brand-red font-semibold hover:underline">Compare us with Total Drive &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────────────────────────────── -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-10">Frequently asked questions</h2>
+      <div class="max-w-2xl mx-auto divide-y divide-gray-100">
+        {faqs.map((f) => (
+          <details class="group py-5">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-gray-900">
+              {f.q}
+              <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ─────────────────────────────────────────────────── -->
+  <section class="section bg-brand-navy text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Ready to run the whole school from one place?</h2>
+      <p class="text-white/80 text-lg mb-8">Start free for 14 days. No card, no contract, cancel any time.</p>
+      <a
+        href={OFFER.ctaPrimary.href}
+        onclick="return trackAdConversion(this.href)"
+        class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
+      >
+        Start your free trial &rarr;
+      </a>
+      <p class="text-white/50 text-sm mt-3">{OFFER.short} &middot; no credit card required</p>
+    </div>
+  </section>
+
+  <!-- ── Sticky mobile CTA ─────────────────────────────────────────── -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-sm border-t border-gray-200 md:hidden">
+    <a
+      href={OFFER.ctaPrimary.href}
+      onclick="return trackAdConversion(this.href)"
+      class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors"
+    >
+      Start your free trial &rarr;
+    </a>
+  </div>
+</LandingLayout>
