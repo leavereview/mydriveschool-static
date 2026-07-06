@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -67,29 +68,36 @@ const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
   -->
   <script is:inline define:vars={{ GOOGLE_ADS_ID }}>
     (function() {
-      try {
-        const consent = localStorage.getItem('dsp-cookie-consent');
-        if (consent) {
-          const consentData = JSON.parse(consent);
-          if (consentData.consent === 'all') {
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2E741HXVN9';
-            document.head.appendChild(script);
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', 'G-2E741HXVN9', {
-              linker: {
-                domains: ['driveschoolpro.com', 'app.driveschoolpro.com'],
-                accept_incoming: true
-              }
-            });
-            if (GOOGLE_ADS_ID) { gtag('config', GOOGLE_ADS_ID); }
+      var loaded = false;
+      function loadGA() {
+        if (loaded) return;
+        loaded = true;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2E741HXVN9';
+        document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-2E741HXVN9', {
+          linker: {
+            domains: ['driveschoolpro.com', 'app.driveschoolpro.com'],
+            accept_incoming: true
           }
-        }
-      } catch (e) {}
+        });
+        if (GOOGLE_ADS_ID) { gtag('config', GOOGLE_ADS_ID); }
+      }
+      function hasConsent() {
+        try {
+          var c = localStorage.getItem('dsp-cookie-consent');
+          return !!c && JSON.parse(c).consent === 'all';
+        } catch (e) { return false; }
+      }
+      // Load now if consent already granted; otherwise load the moment the
+      // visitor accepts (so a cold PPC visitor's first-session conversion fires).
+      if (hasConsent()) loadGA();
+      window.addEventListener('cookieConsentAccepted', loadGA);
     })();
   </script>
 </head>
@@ -107,5 +115,7 @@ const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
       DriveSchoolPro is a product of LEAVE.REVIEW LTD, registered in England and Wales, company number 05408918.
     </p>
   </footer>
+
+  <CookieConsent />
 </body>
 </html>
