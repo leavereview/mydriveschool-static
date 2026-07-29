@@ -169,14 +169,26 @@ const schemaOrg = {
   <!--
     GA4 Configuration — driveschoolpro.com
 
-    Measurement ID: G-2E741HXVN9 (via data stream "driveschoolpro.com", created 2026-03-20)
+    Measurement ID: G-4HJLDWJ8DR
+    Verified against the GA4 Admin API on 2026-07-29: this is the ONLY data stream on
+    property 517695357 (account "My Drive School"). Do not change it without re-checking
+    the Admin API — see the 2026-03-20 entry below for what happens when you do.
     Cross-domain: linked to app.driveschoolpro.com for signup attribution (setup: 2026-04-20)
 
     Known data-quality gaps:
     - Before 2026-01-26: cookie consent not yet added; GA4 undercounted
-    - ~2026-03-20: measurement ID typo in effect for part of the day (commit f7894ec)
+    - 2026-03-20 to 2026-07-29: TOTAL DATA LOSS. The measurement-ID typo of commit f7894ec
+      was "fixed" the same day to G-2E741HXVN9, which is not a real data stream in any
+      property on this account. Every consented pageview on driveschoolpro.com was sent
+      to a non-existent ID and silently discarded for ~4 months, PPC traffic included.
+      Property 517695357 recorded 0 sessions from driveschoolpro.com across that period.
+      Treat driveschoolpro.com GA4 data before 2026-07-29 as absent, not as low.
     - Before 2026-04-18: Google Ads conversion tracking not attached; paid CAC unattributable
+    - As of 2026-07-29 Google Ads conversion tracking is STILL inert: PUBLIC_GOOGLE_ADS_ID
+      is unset at build, so the trackAdConversion branch below is dead-code-eliminated.
     - Before 2026-04-20: cross-domain linker not configured; signup conversions unattributed
+    - app.driveschoolpro.com serves G-MYJBZF0E98, which likewise matches no visible stream
+      and is additionally blocked by that app's CSP (no googletagmanager.com in script-src).
 
     Any historical analysis crossing these dates needs caveating.
   -->
@@ -190,13 +202,13 @@ const schemaOrg = {
           if (consentData.consent === 'all') {
             const script = document.createElement('script');
             script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2E741HXVN9';
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4HJLDWJ8DR';
             document.head.appendChild(script);
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
             gtag('js', new Date());
-            gtag('config', 'G-2E741HXVN9', {
+            gtag('config', 'G-4HJLDWJ8DR', {
               linker: {
                 domains: ['driveschoolpro.com', 'app.driveschoolpro.com'],
                 accept_incoming: true

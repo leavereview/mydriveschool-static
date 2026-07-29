@@ -55,14 +55,17 @@ const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
   <!--
     GA4 Configuration — driveschoolpro.com
 
-    Measurement ID: G-2E741HXVN9 (via data stream "driveschoolpro.com", created 2026-03-20)
-    Cross-domain: linked to app.driveschoolpro.com for signup attribution (setup: 2026-04-20)
+    Measurement ID: G-4HJLDWJ8DR
+    Verified against the GA4 Admin API on 2026-07-29: this is the ONLY data stream on
+    property 517695357 (account "My Drive School"). Keep in sync with BaseLayout.astro.
 
-    Known data-quality gaps:
-    - Before 2026-01-26: cookie consent not yet added; GA4 undercounted
-    - ~2026-03-20: measurement ID typo in effect for part of the day (commit f7894ec)
-    - Before 2026-04-18: Google Ads conversion tracking not attached; paid CAC unattributable
-    - Before 2026-04-20: cross-domain linker not configured; signup conversions unattributed
+    Known data-quality gaps (see BaseLayout.astro for the full list):
+    - 2026-03-20 to 2026-07-29: TOTAL DATA LOSS on these PPC landers. The ID in place was
+      G-2E741HXVN9, which matches no real data stream, so every Google Ads visit that
+      accepted cookies was discarded. Do not read pre-2026-07-29 PPC performance from GA4.
+    - Google Ads conversion tracking is STILL inert: PUBLIC_GOOGLE_ADS_ID is unset at build,
+      so the trackAdConversion branch compiles away to a bare redirect. Paid conversions
+      remain unattributable until that env var is set at build time.
 
     Any historical analysis crossing these dates needs caveating.
   -->
@@ -74,13 +77,13 @@ const GOOGLE_ADS_ID = import.meta.env.PUBLIC_GOOGLE_ADS_ID || '';
         loaded = true;
         var script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2E741HXVN9';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4HJLDWJ8DR';
         document.head.appendChild(script);
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         window.gtag = gtag;
         gtag('js', new Date());
-        gtag('config', 'G-2E741HXVN9', {
+        gtag('config', 'G-4HJLDWJ8DR', {
           linker: {
             domains: ['driveschoolpro.com', 'app.driveschoolpro.com'],
             accept_incoming: true
