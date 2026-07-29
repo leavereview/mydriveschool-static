@@ -1,9 +1,10 @@
 ---
-title: "Best Driving School Software 2026: UK ADI Comparison Guide"
-description: "Compare the best driving school software for UK ADIs in 2026. Real pricing, DVSA compliance, feature tables, and best-fit guide by school size. DriveSchoolPro: 14-day free trial."
+title: "Best Driving School Software 2026: UK ADI & Instructor Booking Comparison"
+description: "Compare driving school and instructor booking software for UK ADIs on real 2026 pricing. Cheapest options ranked, solo-instructor picks, DVSA tracking. 14-day free trial."
 image: /images/blog-software.jpg
 imageAlt: "Driving school instructor using management software on tablet to schedule lessons and track student progress"
 date: "2026-02-24"
+updatedDate: "2026-07-29"
 tags: ["Software"]
 author: "DriveSchoolPro Team"
 ---
@@ -53,10 +54,50 @@ UK ADIs must keep their tuition vehicles MOT'd, taxed, and insured. Schools with
 | DriveSchoolPro | UK ADIs & schools (1–5 instructors) | £22/month | ✅ Yes | ✅ Full | 14-day free trial |
 | Driving School Office | UK schools wanting established platform | Contact for pricing | ✅ Yes | ✅ Yes | Demo only |
 | DrivingSchoolSoftware.com | Enterprise with custom needs | £99/month | ✅ Yes | ⚠️ Partial | 30 days |
-| Total Drive | UK instructors wanting all-in-one | Contact for pricing | ✅ Yes | ✅ Yes | Demo |
+| Total Drive | UK instructors wanting all-in-one | From £18/month | ✅ Yes | ✅ Yes | 30-day free trial |
 | DriveScout | US multi-location schools | $79/month | ✅ Yes | ❌ No | 7 days |
 | Acuity Scheduling | Solo instructors on tight budget | $16/month | ⚠️ Limited | ❌ No | 7 days |
 | Driving Instructor Manager | Windows desktop, no subscription | £149 (one-time) | ❌ No | ⚠️ Basic | 30 days |
+
+## Cheapest Driving School Booking Software, Ranked by Price
+
+If price is your deciding factor, here is the same list ordered by what you actually pay in month one — cheapest first. Prices as published, July 2026.
+
+| Rank | Software | Monthly cost | What you give up at this price |
+|------|----------|--------------|-------------------------------|
+| 1 | Acuity Scheduling | **$16/month** | It's a generic scheduler. No DVSA progress tracking, no pupil records, no driving-school reporting — you're buying a calendar. |
+| 2 | Total Drive | **From £18/month** | Genuine UK ADI software with a 30-day free trial. Discounts for multi-car instructors. |
+| 3 | DriveSchoolPro | **£22/month** | Nothing material at solo level; DVSA tracking and pupil records included. Extra instructors are £12/month each. |
+| 4 | DriveScout | **$79/month** | Built for US multi-location schools. No DVSA tracking, so UK ADIs are paying for features they can't use. |
+| 5 | DrivingSchoolSoftware.com | **£99/month** | Only partial DVSA tracking despite being the second most expensive option here. |
+| 6 | Driving Instructor Manager | **£149 one-off** | Windows desktop only, no mobile app. Cheapest over three years if you never change computer. |
+| — | Driving School Office | Contact for pricing | No published pricing, so you cannot compare it without a sales call. |
+
+**The honest read on "cheapest":** Acuity at $16/month is genuinely the lowest number, and for an ADI who only needs a booking calendar and already tracks pupil progress on paper, it is a reasonable choice. But it isn't driving school software — it's appointment software. The moment you want DVSA progress tracking, pupil records or test-readiness reporting, you're rebuilding those in spreadsheets and the saving evaporates.
+
+**We are not the cheapest, and we'd rather say so.** Total Drive publishes from £18/month against our £22, and its trial is 30 days to our 14. If the monthly figure is the whole decision, it wins on both counts. Where we'd argue our case is the per-instructor model as you add staff (£12 per additional instructor) and depth of DVSA progress tracking — but £4/month is a real difference and you should try both. Our [head-to-head with Total Drive](/compare/total-drive/) goes through it properly.
+
+**On the one-off option:** Driving Instructor Manager at £149 once looks expensive in month one and cheap by month eight against a £22/month subscription. The catch is that it's a Windows desktop application with no mobile app, so you're back at a laptop to move a lesson.
+
+If you want genuinely free rather than cheap, we've covered what the no-cost options actually cover in our guide to [free driving school software](/free-driving-school-software/).
+
+## Best Booking Software for Solo Driving Instructors
+
+Most comparisons are written for schools with several instructors, which is a different buying decision to a solo ADI. If you're a one-person operation, three things change.
+
+**You don't need multi-instructor features, and you shouldn't pay for them.** Diary allocation across instructors, franchise reporting and staff permissions are the main things separating mid-tier from entry-tier plans. Solo instructors can ignore that entire axis.
+
+**Mobile matters more than desktop.** You are between lessons in a car, not at a desk. A platform whose mobile experience is an afterthought will cost you more in daily friction than it saves in subscription. This is where Driving Instructor Manager's desktop-only model becomes a real constraint rather than a footnote.
+
+**Your admin is pupil progress, not payroll.** For a solo ADI the recurring admin burden is tracking where each pupil is against the DVSA syllabus and knowing who's test-ready. That's the feature to buy on.
+
+### Solo instructor picks
+
+- **Best overall for UK solo ADIs — DriveSchoolPro at £22/month.** Full DVSA progress tracking, mobile app, pupil records, and a 14-day free trial. Built around the UK syllabus rather than adapted to it.
+- **Cheapest that works — Acuity at $16/month.** Only if you genuinely just want a booking calendar and will track progress yourself.
+- **Avoid at solo level — DrivingSchoolSoftware.com (£99/month) and DriveScout ($79/month).** Both are priced for multi-instructor operations. As a solo ADI you'd be paying four times DriveSchoolPro's price for capability you can't use.
+
+If you run several instructors rather than working solo, the [decision framework by school size](#how-to-choose-decision-framework-by-school-size) below is the more relevant section.
 
 ## What to Look For in Driving School Software
 
