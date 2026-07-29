@@ -8,7 +8,7 @@ image: /images/blog-scheduling.jpg
 imageAlt: "Driving instructor switching from paper diary to driving school software on smartphone beside a lesson booking calendar"
 faqs:
   - question: "Can I try driving school software before committing?"
-    answer: "Yes. DriveSchoolPro offers a 14-day free trial with no credit card required. You can add all your students, set up your calendar, and run the software alongside your paper diary before deciding. If it does not work for you, you simply stop — nothing is lost."
+    answer: "Yes. DriveSchoolPro is free until 31 March 2027 while in early access, with no credit card required. You can add all your students, set up your calendar, and run the software alongside your paper diary for as long as you like. If it does not work for you, you simply stop — nothing is lost."
   - question: "Will my students notice the change?"
     answer: "They will notice improvements, not disruption. They will start receiving automatic text reminders before each lesson, which most students genuinely appreciate. The booking and scheduling process stays the same from their perspective — they still contact you to book, and you confirm. The difference is on your end: everything is recorded, tracked, and reminded automatically."
   - question: "What happens if I lose my phone?"
@@ -87,7 +87,7 @@ The clearest way to understand the difference is to walk through a real working 
 
 **Software:** Export twelve months of income data in one click. Forward it to your accountant or drop it into your self-assessment. Done in minutes.
 
-This is not hypothetical. These are the actual time differences that make [driving school management software](/driving-school-management-software/) worth £22 a month to most ADIs who switch.
+This is not hypothetical. These are the actual time differences that make [driving school management software](/driving-school-management-software/) worth it to most ADIs who switch — and right now DriveSchoolPro is free until 31 March 2027 while in early access.
 
 ---
 
@@ -97,7 +97,7 @@ This guide would not be much use if it glossed over the genuine drawbacks.
 
 **There is a learning curve.** It is small — budget 30 minutes to set up and a week to feel completely comfortable — but it is real. If you are mid-way through a busy teaching week and your time is limited, choose a quieter period to make the switch.
 
-**It costs money.** DriveSchoolPro is £22 per month. That is £264 per year. For a new ADI on a tight budget, that is a real consideration. See the [pricing page](/pricing/) for current plans. The [ROI calculator below](#the-numbers) shows the break-even point — it is lower than most ADIs expect.
+**It will cost money eventually.** Right now DriveSchoolPro is free — until 31 March 2027, while in early access — so cost is not a barrier to switching today. Pricing will be announced well before 1 April 2027, and nothing is charged automatically. See the [pricing page](/pricing/) for what's included. The [numbers below](#the-numbers) show how much admin time the software saves — the saving is bigger than most ADIs expect.
 
 **You need your phone charged and connected.** Cloud-based software requires internet access to sync. If you are teaching in a rural area with patchy signal, check whether the app has offline functionality or requires consistent connectivity.
 
@@ -119,7 +119,7 @@ Keep both running simultaneously for the first two weeks. This is your safety ne
 
 ### Step 2: Set up the software (10 minutes)
 
-Go to [DriveSchoolPro and start your free trial](https://app.driveschoolpro.com/signup). During setup:
+Go to [DriveSchoolPro and get started free](https://app.driveschoolpro.com/signup). During setup:
 
 - Set your working days and hours (block out days you never teach)
 - Set your standard lesson price
@@ -212,7 +212,7 @@ Not all driving school software is the same, and the wrong choice wastes your ti
 
 - US-focused tools with no DVSA framework — [DriveScout vs purpose-built UK software](/blog/drivescout-vs-drivingschoolsoftware-comparison/) covers this in detail
 - Tools that require desktop access to do anything meaningful
-- Tools with no free trial — any credible provider lets you try before you commit
+- Tools you cannot try free — any credible provider lets you try before you commit
 
 See the [full driving school software comparison](/blog/best-driving-school-software/) for a detailed breakdown of every option, including [free options and what they actually include](/free-driving-school-software/).
 
@@ -222,7 +222,7 @@ For scheduling specifically, the [guide to choosing driving school scheduling so
 
 ## The Numbers — When Software Pays for Itself {#the-numbers}
 
-At £22 per month (£264 per year), software pays for itself faster than most ADIs expect.
+And right now DriveSchoolPro costs nothing — it is free until 31 March 2027 while in early access, so the time savings are pure gain from day one.
 
 **No-shows prevented.** If software prevents 10 no-shows per year through automated reminders — that is fewer than one per month — and your lesson rate is £35, that is £350 recovered. You are already ahead. A no-show rate above 5% is common without reminder systems; [the strategies for reducing no-shows further](/blog/reduce-driving-lesson-no-shows/) cover this in detail.
 
@@ -238,7 +238,7 @@ To calculate what this looks like for your specific situation — your lesson ra
 
 **Can I try driving school software before committing?**
 
-Yes. DriveSchoolPro offers a 14-day free trial with no credit card required. You can add all your students, set up your calendar, and run the software alongside your paper diary before deciding. If it does not work for you, you simply stop — nothing is lost.
+Yes. DriveSchoolPro is free until 31 March 2027 while in early access, with no credit card required. You can add all your students, set up your calendar, and run the software alongside your paper diary for as long as you like. If it does not work for you, you simply stop — nothing is lost.
 
 **Will my students notice the change?**
 

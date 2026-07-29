@@ -7,7 +7,7 @@ tags: ["Software", "Scheduling"]
 author: "DriveSchoolPro Team"
 ---
 
-Choosing [driving school scheduling software](/driving-school-scheduling-software/) sounds simple until you're looking at a list of features you don't fully understand, pricing pages that hide the real cost, and free trials that expire before you've worked out how to use them.
+Choosing [driving school scheduling software](/driving-school-scheduling-software/) sounds simple until you're looking at a list of features you don't fully understand, pricing pages that hide the real cost, and trials that expire before you've worked out how to use them.
 
 This guide cuts through the noise. It covers what actually matters for UK ADIs, what you can safely ignore, and the specific questions to ask before committing.
 
@@ -42,7 +42,7 @@ Your answers determine which features are essential and which are marketing nois
 This is non-negotiable. The system must prevent double-bookings automatically — not just flag them after the fact. Look specifically for three-way detection: pupil, instructor, and vehicle.
 
 ### Mobile-first design
-You're booking and rescheduling lessons from your car, between sessions. If the scheduling interface doesn't work well on a phone, you won't use it. Test the mobile experience specifically during a free trial.
+You're booking and rescheduling lessons from your car, between sessions. If the scheduling interface doesn't work well on a phone, you won't use it. Test the mobile experience specifically before you commit.
 
 ### Automated reminders
 This is where most ADIs see the fastest return on investment. Automated lesson reminders sent 24–48 hours in advance consistently reduce no-shows by 30–50%. Check: are reminders SMS, email, or WhatsApp? Are they included in the base price or a paid add-on?
@@ -78,13 +78,13 @@ Driving school software pricing is often structured to look cheaper than it is. 
 
 **Annual commitment discounts.** Monthly pricing looks higher. Calculate whether the annual commitment makes sense given you're new to the product.
 
-For a solo ADI, a flat-rate monthly subscription with reminders included — like [DriveSchoolPro's £22/month plan](/pricing/) — is almost always better value than per-student or feature-tiered pricing.
+For a solo ADI, flat-rate pricing with reminders included is almost always better value than per-student or feature-tiered pricing. [DriveSchoolPro](/pricing/) goes one further right now: it's free until 31 March 2027 while in early access.
 
 ## Step 5: Research 3–4 Options
 
 The main UK driving school software options worth evaluating:
 
-- **DriveSchoolPro** — modern web platform, AI lesson briefings, full DVSA framework, automated Google reviews. Flat £22/month.
+- **DriveSchoolPro** — modern web platform, AI lesson briefings, full DVSA framework, automated Google reviews. Free until 31 March 2027 (early access).
 - **Total Drive** — established diary-focused tool, strong on basic scheduling
 - **MyDriving** — popular with larger schools, more complex setup
 - **Pinpoint** — specialist DVSA tracking tool, limited scheduling features
@@ -93,7 +93,7 @@ Read recent reviews on Capterra and G2. Pay specific attention to complaints abo
 
 ## Step 6: Run a Real Trial
 
-A free trial is only useful if you test realistic scenarios. During your trial:
+Trying software free is only useful if you test realistic scenarios. While you evaluate:
 
 1. Set up 5 real pupils with their actual details
 2. Book a week's worth of lessons including a recurring series
@@ -107,7 +107,7 @@ If you hit friction on any of these steps, that friction will be part of your da
 
 ## Red Flags
 
-**No free trial.** Any credible driving school software offers a free trial. If they won't let you try before committing, that's a significant warning sign.
+**No free way to try it.** Any credible driving school software lets you try before you pay. If they won't let you try before committing, that's a significant warning sign.
 
 **Long minimum contracts.** Twelve-month minimum terms for basic scheduling software are a red flag. Month-to-month should be standard.
 
@@ -132,7 +132,7 @@ For most UK ADIs, the decision comes down to two things: whether the mobile cale
 
 If a platform ticks those two boxes, trial it with real data for two weeks. If it doesn't cause friction in your daily workflow by the end of week one, you've found your answer.
 
-[DriveSchoolPro offers a free 14-day trial](https://app.driveschoolpro.com/signup) — no credit card required. Set up your first week of lessons and see whether it fits before committing.
+[DriveSchoolPro is free until 31 March 2027](https://app.driveschoolpro.com/signup) while in early access — no credit card required. Set up your first week of lessons and see whether it fits.
 
 ## Related Articles
 

@@ -444,7 +444,7 @@ When tracking student progress, you must comply with UK GDPR:
 ### Week 1: Choose Your System
 - Decide: Paper or digital?
 - If digital, evaluate software options
-- Sign up for free trials
+- Try the shortlisted platforms free
 - Set up your competency checklist template
 
 ### Week 2: Start Tracking Current Students
@@ -509,7 +509,7 @@ Student progress tracking isn't optional for modern driving schools—it's essen
 
 Ready to implement digital progress tracking with built-in DVSA competency checklists, parent dashboards, and mobile access?
 
-[Try DriveSchoolPro free for 14 days](https://app.driveschoolpro.com/signup) and see how systematic progress tracking transforms your teaching effectiveness and student outcomes.
+[Get started with DriveSchoolPro free](https://app.driveschoolpro.com/signup) — free until 31 March 2027 while in early access — and see how systematic progress tracking transforms your teaching effectiveness and student outcomes.
 
 **Questions about setting up progress tracking?** [Contact our team](/contact/) for a free consultation and demonstration.
 

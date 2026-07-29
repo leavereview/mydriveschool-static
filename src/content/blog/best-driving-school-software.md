@@ -1,6 +1,6 @@
 ---
 title: "Best Driving School Software 2026: UK ADI & Instructor Booking Comparison"
-description: "Compare driving school and instructor booking software for UK ADIs on real 2026 pricing. Cheapest options ranked, solo-instructor picks, DVSA tracking. 14-day free trial."
+description: "Compare driving school and instructor booking software for UK ADIs on real 2026 pricing. Cheapest options ranked, solo-instructor picks, DVSA tracking. DriveSchoolPro is free until 31 March 2027."
 image: /images/blog-software.jpg
 imageAlt: "Driving school instructor using management software on tablet to schedule lessons and track student progress"
 date: "2026-02-24"
@@ -51,7 +51,7 @@ UK ADIs must keep their tuition vehicles MOT'd, taxed, and insured. Schools with
 
 | Software | Best For | Starting Price | Mobile App | DVSA Tracking | Free Trial |
 |----------|----------|----------------|------------|---------------|------------|
-| DriveSchoolPro | UK ADIs & schools (1–5 instructors) | £22/month | ✅ Yes | ✅ Full | 14-day free trial |
+| DriveSchoolPro | UK ADIs & schools (1–5 instructors) | Free until 31 March 2027 (early access) | ✅ Yes | ✅ Full | Free until 31 March 2027 |
 | Driving School Office | UK schools wanting established platform | Contact for pricing | ✅ Yes | ✅ Yes | Demo only |
 | DrivingSchoolSoftware.com | Enterprise with custom needs | £99/month | ✅ Yes | ⚠️ Partial | 30 days |
 | Total Drive | UK instructors wanting all-in-one | From £18/month | ✅ Yes | ✅ Yes | 30-day free trial |
@@ -67,7 +67,7 @@ If price is your deciding factor, here is the same list ordered by what you actu
 |------|----------|--------------|-------------------------------|
 | 1 | Acuity Scheduling | **$16/month** | It's a generic scheduler. No DVSA progress tracking, no pupil records, no driving-school reporting — you're buying a calendar. |
 | 2 | Total Drive | **From £18/month** | Genuine UK ADI software with a 30-day free trial. Discounts for multi-car instructors. |
-| 3 | DriveSchoolPro | **£22/month** | Nothing material at solo level; DVSA tracking and pupil records included. Extra instructors are £12/month each. |
+| 3 | DriveSchoolPro | **Free until 31 March 2027 (early access)** | Nothing material; DVSA tracking, pupil records and multi-instructor features included. Pricing announced well before 1 April 2027. |
 | 4 | DriveScout | **$79/month** | Built for US multi-location schools. No DVSA tracking, so UK ADIs are paying for features they can't use. |
 | 5 | DrivingSchoolSoftware.com | **£99/month** | Only partial DVSA tracking despite being the second most expensive option here. |
 | 6 | Driving Instructor Manager | **£149 one-off** | Windows desktop only, no mobile app. Cheapest over three years if you never change computer. |
@@ -75,9 +75,9 @@ If price is your deciding factor, here is the same list ordered by what you actu
 
 **The honest read on "cheapest":** Acuity at $16/month is genuinely the lowest number, and for an ADI who only needs a booking calendar and already tracks pupil progress on paper, it is a reasonable choice. But it isn't driving school software — it's appointment software. The moment you want DVSA progress tracking, pupil records or test-readiness reporting, you're rebuilding those in spreadsheets and the saving evaporates.
 
-**We are not the cheapest, and we'd rather say so.** Total Drive publishes from £18/month against our £22, and its trial is 30 days to our 14. If the monthly figure is the whole decision, it wins on both counts. Where we'd argue our case is the per-instructor model as you add staff (£12 per additional instructor) and depth of DVSA progress tracking — but £4/month is a real difference and you should try both. Our [head-to-head with Total Drive](/compare/total-drive/) goes through it properly.
+**On DriveSchoolPro's £0:** right now we are the cheapest, because we're in early access — the full product is free until 31 March 2027, with no card required and pricing announced well before 1 April 2027. That's a genuine early-access arrangement rather than a freemium tier: nothing is feature-capped, and nothing is charged automatically. Total Drive at £18/month remains the cheapest established paid option, and our [head-to-head with Total Drive](/compare/total-drive/) goes through the feature differences properly.
 
-**On the one-off option:** Driving Instructor Manager at £149 once looks expensive in month one and cheap by month eight against a £22/month subscription. The catch is that it's a Windows desktop application with no mobile app, so you're back at a laptop to move a lesson.
+**On the one-off option:** Driving Instructor Manager at £149 once looks expensive in month one and cheap by month eight against a typical £20/month subscription. The catch is that it's a Windows desktop application with no mobile app, so you're back at a laptop to move a lesson.
 
 If you want genuinely free rather than cheap, we've covered what the no-cost options actually cover in our guide to [free driving school software](/free-driving-school-software/).
 
@@ -93,7 +93,7 @@ Most comparisons are written for schools with several instructors, which is a di
 
 ### Solo instructor picks
 
-- **Best overall for UK solo ADIs — DriveSchoolPro at £22/month.** Full DVSA progress tracking, mobile app, pupil records, and a 14-day free trial. Built around the UK syllabus rather than adapted to it.
+- **Best overall for UK solo ADIs — DriveSchoolPro, free until 31 March 2027.** Full DVSA progress tracking, mobile app, pupil records — free while in early access, no card required. Built around the UK syllabus rather than adapted to it.
 - **Cheapest that works — Acuity at $16/month.** Only if you genuinely just want a booking calendar and will track progress yourself.
 - **Avoid at solo level — DrivingSchoolSoftware.com (£99/month) and DriveScout ($79/month).** Both are priced for multi-instructor operations. As a solo ADI you'd be paying four times DriveSchoolPro's price for capability you can't use.
 
@@ -157,7 +157,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 
 ### DriveSchoolPro ⭐ Best Overall for UK Schools
 
-**Rating**: 4.8/5 | **Starting Price**: £22/month | **Best For**: 1-5 instructor UK driving schools
+**Rating**: 4.8/5 | **Price**: Free until 31 March 2027 (early access) | **Best For**: 1-5 instructor UK driving schools
 
 **What We Like**:
 - Built specifically for UK driving schools (DVSA syllabus tracking included)
@@ -165,7 +165,7 @@ Understanding your business metrics—revenue per instructor, average lessons to
 - Email reminders included (configurable timing, delivery logs, one-click confirmation); WhatsApp reminders coming soon
 - Excellent mobile app for instructors
 - Invoicing and payment recording (cash, bank transfer, cheque); online card payments via Stripe coming soon
-- 14-day free trial with no credit card required
+- Free until 31 March 2027 (early access) with no credit card required
 - Outstanding UK-based support (avg response time: 2 hours)
 
 **What Could Be Better**:
@@ -173,9 +173,8 @@ Understanding your business metrics—revenue per instructor, average lessons to
 - Limited customisation for franchise schools with strict branding requirements
 
 **Pricing Breakdown**:
-- Solo Plan: £22/month (1 instructor, unlimited students) — live now
-- School Plan: £22/month for your first instructor, then £12/month for each additional — up to 5 instructors (a 3-instructor school is £46/month); adds fleet/compliance tracking, analytics, and role-based access
-- Enterprise: custom pricing (11+ instructors)
+- Free until 31 March 2027 while in early access — solo ADIs and multi-instructor schools alike, unlimited students, fleet/compliance tracking, analytics, and role-based access included
+- Pricing will be announced well before 1 April 2027; no card on file, so nothing is charged automatically
 
 **Real User Quote**: *"We've saved 12 hours a week on admin since switching. The automated reminders alone cut our no-shows by half."* — Sarah Johnson, Drive Right School, Manchester
 
@@ -320,7 +319,7 @@ Total Drive is a UK-focused platform that positions itself as an all-in-one solu
 
 ### Solo UK ADIs (Just You)
 
-**Want UK-specific features at the right price**: Choose **DriveSchoolPro** Solo Plan (£22/month). DVSA progress tracking, automated reminders, and invoicing — everything a solo ADI needs without paying for multi-instructor features you won't use.
+**Want UK-specific features at the right price**: Choose **DriveSchoolPro** (free until 31 March 2027 while in early access). DVSA progress tracking, automated reminders, and invoicing — everything a solo ADI needs, currently at no cost.
 
 **Want an established UK platform**: **Driving School Office** or **Total Drive** — both UK-focused, though you'll need to request a demo for pricing.
 
@@ -330,13 +329,13 @@ Total Drive is a UK-focused platform that positions itself as an all-in-one solu
 
 ### Small UK Schools (2–5 Instructors)
 
-**Best choice**: **DriveSchoolPro** School Plan (from £22/month — £22 for your first instructor, £12 each additional (up to 5)). Purpose-built for UK ADIs, covers all five non-negotiables above (DVSA tracking, pickup buffer, shared pupil records, UK payments, vehicle compliance), with a clean multi-instructor calendar.
+**Best choice**: **DriveSchoolPro** (free until 31 March 2027 while in early access, multi-instructor features included). Purpose-built for UK ADIs, covers all five non-negotiables above (DVSA tracking, pickup buffer, shared pupil records, UK payments, vehicle compliance), with a clean multi-instructor calendar.
 
 **Established platform preference**: **Driving School Office** or **Total Drive** — both handle multi-instructor scenarios well.
 
 ### Medium Schools (6–20 Instructors)
 
-**Best choice**: **DriveSchoolPro** School Plan (from £22/month — £22 for your first instructor, £12 each additional) with priority support covers up to 5 instructors — handling multiple instructors, vehicle compliance across a fleet, and full DVSA progress tracking per pupil. Schools needing more than 5 instructors should contact DriveSchoolPro about Enterprise (custom pricing, unlimited instructors).
+**Best choice**: **DriveSchoolPro** (free until 31 March 2027 while in early access) — handling multiple instructors, vehicle compliance across a fleet, and full DVSA progress tracking per pupil. Schools running 6+ instructors should contact DriveSchoolPro for help getting set up.
 
 **Need enterprise-level customisation**: Consider **DrivingSchoolSoftware.com** Standard (£99/month) if you have unusual workflows that need configuring.
 
@@ -394,14 +393,14 @@ Let's calculate the return on investment for a typical small driving school:
 - **Total weekly cost**: £435
 - **Annual cost**: £22,620
 
-**With Software (e.g., DriveSchoolPro School Plan at £46/month for 3 instructors)**:
+**With Software (e.g., DriveSchoolPro — currently free until 31 March 2027)**:
 - Reduced no-shows (8% rate): 5 lessons × £35 = £175 lost revenue (saves £140/week)
 - Admin time: 2 hours/week × £15/hour = £30 cost (saves £90/week)
-- Software cost: £46/month = £10.62/week
-- **Total weekly cost**: £214.23
-- **Annual cost**: £11,140
+- Software cost: £0/month during early access
+- **Total weekly cost**: £205
+- **Annual cost**: £10,660
 
-**Annual Savings**: £11,480 (51% reduction in costs)
+**Annual Savings**: £11,960 (53% reduction in costs)
 
 Even if you only reduce no-shows by 25% and save 3 hours/week on admin, you'll save £5,000+ annually. The software pays for itself many times over.
 
@@ -451,7 +450,7 @@ Yes, in purpose-built platforms. Any instructor assigned to a pupil should see t
 
 ### What if I want to see it in action first?
 
-All reputable platforms offer a demo or free trial. For **DriveSchoolPro**, the [14-day free trial](https://app.driveschoolpro.com/signup) requires no credit card. Import 5–10 real pupils and run a week of lessons through it — that's the only reliable test of whether a platform suits your workflow.
+All reputable platforms offer a demo or free trial. **DriveSchoolPro** goes further: it's [free until 31 March 2027](https://app.driveschoolpro.com/signup) while in early access, with no credit card required. Import 5–10 real pupils and run a week of lessons through it — that's the only reliable test of whether a platform suits your workflow.
 
 ### What if I'm already using Google Calendar?
 
@@ -483,7 +482,7 @@ All reputable platforms allow data export (student lists, lesson history, financ
 
 ## Final Recommendations
 
-**For most UK ADIs and driving schools (1–5 instructors)**: Start with **[DriveSchoolPro](/driving-school-software/)** from £22/month — £22 for a solo ADI, then £12 per additional instructor (up to 5) for schools. Full DVSA tracking, automated email reminders (WhatsApp coming soon), vehicle compliance alerts, and a clean pupil portal — purpose-built for the UK ADI market.
+**For most UK ADIs and driving schools (1–5 instructors)**: Start with **[DriveSchoolPro](/driving-school-software/)** — free until 31 March 2027 while in early access, for solo ADIs and multi-instructor schools alike. Full DVSA tracking, automated email reminders (WhatsApp coming soon), vehicle compliance alerts, and a clean pupil portal — purpose-built for the UK ADI market.
 
 **For UK schools preferring an established platform**: Get demos from **Driving School Office** and **Total Drive** — both UK-focused with DVSA alignment and a track record in the UK market.
 
@@ -499,8 +498,8 @@ All reputable platforms allow data export (student lists, lesson history, financ
 
 The best time to implement driving school software was 2 years ago. The second best time is today.
 
-Most platforms offer free trials:
-- [Try DriveSchoolPro free for 14 days](https://app.driveschoolpro.com/signup) (no credit card required)
+Most platforms offer free trials — and DriveSchoolPro is currently free outright:
+- [Get started with DriveSchoolPro free](https://app.driveschoolpro.com/signup) (free until 31 March 2027, no credit card required)
 - [DriveScout 7-day trial](https://www.drivescout.com)
 - [Acuity Scheduling 7-day trial](https://acuityscheduling.com)
 

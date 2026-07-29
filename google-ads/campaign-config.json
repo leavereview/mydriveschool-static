@@ -42,7 +42,7 @@
         { "text": "adi booking software", "match_type": "EXACT" }
       ],
       "negative_keywords": [
-        { "text": "free", "match_type": "EXACT", "notes": "We have a free trial but don't want pure 'free' seekers" },
+        { "text": "free", "match_type": "EXACT", "notes": "Historic exclusion of pure 'free' seekers — product is now free until 31 March 2027 (early access), so reconsider this negative before activation" },
         { "text": "learn to drive", "match_type": "PHRASE", "notes": "Learner drivers, not our buyer" },
         { "text": "driving lessons near me", "match_type": "PHRASE" },
         { "text": "driving test", "match_type": "PHRASE" },
@@ -61,8 +61,8 @@
             "Built for UK ADIs",
             "Full DVSA Framework Built In",
             "Automated Google Reviews",
-            "Free 14-Day Trial",
-            "No Card Required",
+            "Free Until 31 March 2027",
+            "Early Access — No Card Needed",
             "Modern Platform, Not a Diary",
             "All-in-One for UK ADIs",
             "Track All 27 DVSA Skills",
@@ -75,7 +75,7 @@
           "descriptions": [
             "AI briefings, DVSA framework, automated Google reviews. Everything UK ADIs need.",
             "For UK ADIs. WhatsApp reminders, Stripe payments, and embeddable booking widget built in.",
-            "Free 14-day trial. No card required. Set up in 3 minutes. Replace your diary and tools.",
+            "DriveSchoolPro is free during early access. No card required. Set up in 3 minutes.",
             "AI lesson prep. DVSA tracking. Automated reviews. Scheduling. All included, no upsells."
           ],
           "pin_notes": "Pin 'Driving School Software UK' to Headline 1 position"
@@ -107,8 +107,8 @@
             "AI-Powered Lesson Prep",
             "Embeddable Booking Widget",
             "Reduce No-Shows by 40%",
-            "Free 14-Day Trial",
-            "No Card Required",
+            "Free Until 31 March 2027",
+            "Early Access — No Card Needed",
             "Three-Way Conflict Detection",
             "Mobile-First Diary",
             "DVSA Framework Included",
@@ -120,7 +120,7 @@
           "descriptions": [
             "Drag-drop calendar, WhatsApp reminders, booking widget, AI briefings, and auto reviews.",
             "Three-way conflict detection: pupil, instructor, vehicle clashes caught automatically.",
-            "Free 14-day trial. No card required. Set up in 3 minutes. Switch from your paper diary.",
+            "Free until 31 March 2027 during early access. No card required. Switch from your paper diary.",
             "Everything a modern ADI needs. AI prep. DVSA tracking. Automated reviews. One price."
           ],
           "pin_notes": "Pin 'Driving Lesson Scheduler' to Headline 1 position"
@@ -145,12 +145,12 @@
             "The Actual DVSA Framework",
             "AI Lesson Prep Built In",
             "Test Readiness Score",
-            "Free 14-Day Trial",
+            "Free Until 31 March 2027",
             "Built for UK ADIs",
             "Not Just a Progress Bar",
             "8 Categories, 27 Skills",
             "Pupils See Their Progress",
-            "No Card Required",
+            "Early Access — No Card Needed",
             "Parents Get Full Visibility",
             "Mobile-First Platform",
             "Automated Review Requests",
@@ -159,7 +159,7 @@
           "descriptions": [
             "The only UK platform built around the actual DVSA 8-category, 27-skill framework.",
             "AI lesson briefings based on last session. Test readiness scoring. Parent portal included.",
-            "Free 14-day trial. No card required. Replace your progress bar with the DVSA framework.",
+            "Free until 31 March 2027. No card required. Replace your progress bar with the DVSA framework.",
             "Know exactly where each pupil is. Built around DVSA, not a simplified progress bar."
           ],
           "pin_notes": "Pin 'DVSA Progress Tracking' to Headline 1 position"
@@ -185,7 +185,7 @@
       {
         "text": "Pricing",
         "url": "https://driveschoolpro.com/pricing/",
-        "description_1": "From £29/month. No hidden fees.",
+        "description_1": "Free until 31 March 2027.",
         "description_2": "No contracts. Cancel anytime."
       },
       {
@@ -203,7 +203,7 @@
       "Three-Way Scheduling",
       "Embeddable Booking Widget",
       "Stripe Connect Payments",
-      "Free 14-Day Trial"
+      "Free Until 31 Mar 2027"
     ],
     "structured_snippets": [
       {
@@ -231,6 +231,6 @@
   "quality_score_strategy": {
     "landing_page_relevance": "Ads landing page H1, H2s, and body text all contain the exact keywords being bid on. FAQ section answers the questions searchers have. Page is mobile-optimised and loads in < 2 seconds.",
     "ad_relevance": "Each ad group has tightly themed keywords with ad copy that uses those exact terms in headlines. No broad match keywords that dilute relevance.",
-    "expected_ctr": "Headlines include the offer (3 months free), specificity (UK ADIs, 27 DVSA skills), and urgency (Launch Offer). Descriptions provide concrete benefits (save 10+ hours/week, reduce no-shows 60%)."
+    "expected_ctr": "Headlines include the offer (free until 31 March 2027), specificity (UK ADIs, 27 DVSA skills), and urgency (early access). Descriptions provide concrete benefits (save 10+ hours/week, reduce no-shows 60%)."
   }
 }

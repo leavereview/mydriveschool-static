@@ -39,7 +39,7 @@ If you have NOT yet launched the campaign, skip this section and follow the stan
 5. Configure the conversion:
    - **Conversion name:** Signup Started
    - **Category:** Sign-up
-   - **Value:** Don't use a value (or set £29 as estimated lifetime value)
+   - **Value:** Don't use a value (product is free until 31 March 2027 — revisit once pricing is announced)
    - **Count:** One
 6. Select **Install tag yourself**
 7. Copy the two values you'll need:
@@ -154,7 +154,7 @@ Copy all 4 sitelinks from `campaign-config.json`. Add descriptions to each.
 
 ### Callout Extensions:
 Add all 6 callouts:
-- 3 Months Free
+- Free Until 31 Mar 2027
 - No Credit Card Required
 - DVSA Tracking Built In
 - UK-Based Support
@@ -214,7 +214,7 @@ To confirm tracking is firing correctly:
 1. Install the **Google Tag Assistant** Chrome extension
 2. Navigate to `driveschoolpro.com/ads/driving-school-software`
 3. Accept all cookies in the consent banner
-4. Click "Start Your Free Trial"
+4. Click "Get Started Free"
 5. In Tag Assistant, confirm a conversion event fires for your `AW-XXXXXXXXXX` tag
 
 Alternatively, check **Google Ads → Tools → Conversions** — the "Signup Started" conversion should show status "Recording conversions" within 24 hours of the first click.
