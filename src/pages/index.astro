@@ -18,25 +18,14 @@ const softwareApplicationSchema = {
   "offers": [
     {
       "@type": "Offer",
-      "@id": "https://driveschoolpro.com/#solo-plan",
-      "name": "Solo Plan",
-      "description": "For independent ADIs. Unlimited students, DVSA progress tracking, scheduling, and invoicing.",
-      "price": "22.00",
-      "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock",
-      "url": OFFER.ctaPrimary.href,
-      "priceValidUntil": "2027-12-31"
-    },
-    {
-      "@type": "Offer",
-      "@id": "https://driveschoolpro.com/#free-trial",
+      "@id": "https://driveschoolpro.com/#early-access",
+      "name": "Early Access — Free until 31 March 2027",
+      "description": "DriveSchoolPro is free during early access — until 31 March 2027. Unlimited students, DVSA progress tracking, scheduling, and invoicing. No card required.",
       "price": "0",
       "priceCurrency": "GBP",
-      "name": "14-Day Free Trial",
-      "description": OFFER.long,
       "availability": "https://schema.org/InStock",
       "url": OFFER.ctaPrimary.href,
-      "priceValidUntil": "2026-12-31"
+      "priceValidUntil": "2027-03-31"
     }
   ],
   "featureList": [
@@ -61,48 +50,6 @@ const softwareApplicationSchema = {
     "@type": "BusinessAudience",
     "audienceType": "Driving Schools, Driving Instructors, ADI Training Schools"
   }
-};
-
-// Free Trial Offer Schema
-const offerSchema = {
-  "@context": "https://schema.org",
-  "@type": "Offer",
-  "@id": "https://driveschoolpro.com/#free-trial-offer",
-  "name": `14-Day Free Trial - DriveSchoolPro`,
-  "description": `${OFFER.long}. Includes lesson scheduling, student management, and automated billing. No credit card required.`,
-  "price": "0",
-  "priceCurrency": "GBP",
-  "priceValidUntil": "2026-12-31",
-  "availability": "https://schema.org/InStock",
-  "url": OFFER.ctaPrimary.href,
-  "seller": {
-    "@type": "Organization",
-    "name": "DriveSchoolPro"
-  },
-  "itemOffered": {
-    "@id": "https://driveschoolpro.com/#software"
-  },
-  "eligibleRegion": {
-    "@type": "Place",
-    "name": "United Kingdom"
-  },
-  "additionalProperty": [
-    {
-      "@type": "PropertyValue",
-      "name": "Trial Duration",
-      "value": "14 days"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Credit Card Required",
-      "value": "No"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Full Feature Access",
-      "value": "Yes"
-    }
-  ]
 };
 
 const features = [
@@ -158,7 +105,7 @@ const stats = [
 const homeFaqs = [
   {
     question: "Do I need a credit card to start?",
-    answer: "No. Your 14-day free trial needs no card — just sign up and start using DriveSchoolPro. You only add payment details if you decide to carry on.",
+    answer: "No. DriveSchoolPro is free while we're in early access — until 31 March 2027 — and there's no card required. Just sign up and start using it.",
   },
   {
     question: "Can I cancel anytime? Is there a contract?",
@@ -176,12 +123,12 @@ const homeFaqs = [
   },
   {
     question: "I'm moving from a paper diary, WhatsApp or a spreadsheet — is it hard to switch?",
-    answer: "Not at all. Most instructors are set up in about 10 minutes, and you can keep your current diary running alongside until you're confident. Start with the 14-day free trial — no card required.",
+    answer: "Not at all. Most instructors are set up in about 10 minutes, and you can keep your current diary running alongside until you're confident. DriveSchoolPro is free during early access — no card required.",
     links: [{ text: "Switching guide", url: "/blog/switch-paper-diary-to-driving-school-software/" }],
   },
   {
-    question: "How does per-instructor pricing work?",
-    answer: "Solo is £22/month for one instructor. The School Plan is £22/month for your first instructor, then £12/month for each additional, up to 5 (a 5-instructor school is £70/month). For 6 or more instructors, contact us about Enterprise.",
+    question: "How much does DriveSchoolPro cost?",
+    answer: "Nothing right now. DriveSchoolPro is free while we're in early access — until 31 March 2027 — for solo instructors and multi-instructor schools alike. Pricing will be announced well before 1 April 2027, and nothing is ever charged automatically.",
     links: [{ text: "See full pricing", url: "/pricing/" }],
   },
   {
@@ -189,8 +136,8 @@ const homeFaqs = [
     answer: "Reminders go out by email, with one-click confirm so pupils can confirm or reschedule before the lesson. WhatsApp is coming soon.",
   },
   {
-    question: "What if I want to stop — do you offer refunds?",
-    answer: "You start with a 14-day free trial (no card), so you can decide before you pay anything. Plans are monthly — cancel anytime before your renewal date and you won't be charged again.",
+    question: "What if I want to stop?",
+    answer: "You can stop anytime. DriveSchoolPro is free until 31 March 2027 with no card on file, so there's nothing to refund — close your account whenever you like and you'll never be charged automatically.",
   },
 ];
 ---
@@ -198,7 +145,6 @@ const homeFaqs = [
 <BaseLayout title="DriveSchoolPro | Driving School Software for UK ADIs" description={`DVSA progress tracking, three-way scheduling, and automated reminders. Purpose-built for UK driving schools. ${OFFER.long}.`} image="/images/marketing/dashboard-overview.webp">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
   </Fragment>
 
   <!-- Hero -->  <!-- (announcement banner now rendered site-wide via PromoBanner in BaseLayout) -->
@@ -518,7 +464,7 @@ const homeFaqs = [
             </svg>
           </div>
           <h3 class="font-bold text-brand-navy mb-2">Try it risk-free</h3>
-          <p class="text-gray-600 text-sm">14-day free trial, no card required, cancel anytime. If it's not for you, you've lost nothing.</p>
+          <p class="text-gray-600 text-sm">Free until 31 March 2027, no card required, cancel anytime. If it's not for you, you've lost nothing.</p>
         </div>
       </div>
       <div class="text-center mt-8">
@@ -649,39 +595,30 @@ const homeFaqs = [
   <section class="section bg-white border-t border-gray-100">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="badge-primary mb-4">Simple, transparent pricing</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Plans that grow with your school</h2>
-        <p class="text-lg text-gray-600">From £22/mo · 14-day free trial · no card required</p>
+        <span class="badge-primary mb-4">Free during early access</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Free until 31 March 2027</h2>
+        <p class="text-lg text-gray-600">Early access · no card required · we take no commission on the payments you collect</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
-        <!-- Solo -->
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
+        <!-- Solo instructors -->
         <div class="card flex flex-col">
-          <h3 class="text-lg font-bold text-brand-navy mb-1">Solo</h3>
+          <h3 class="text-lg font-bold text-brand-navy mb-1">Solo instructors</h3>
           <p class="text-gray-500 text-sm mb-4">For independent ADIs</p>
-          <div class="text-3xl font-bold text-brand-navy mb-4">£22<span class="text-base font-normal text-gray-500">/month</span></div>
-          <p class="text-gray-600 text-sm mb-6 flex-grow">Everything one instructor needs — scheduling, DVSA tracking, reminders, and invoicing. <a href="/driving-instructor-software/" class="text-brand-red hover:underline">More for driving instructors &rarr;</a></p>
-          <a href="/pricing/" class="btn-secondary w-full text-center">See Solo plan</a>
+          <div class="text-3xl font-bold text-brand-navy mb-4">£0<span class="text-base font-normal text-gray-500"> until 31 March 2027</span></div>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">Everything one instructor needs — scheduling, DVSA tracking, reminders, and invoicing. Free while we build with founding schools. <a href="/driving-instructor-software/" class="text-brand-red hover:underline">More for driving instructors &rarr;</a></p>
+          <a href="/pricing/" class="btn-secondary w-full text-center">See what's included</a>
         </div>
-        <!-- School (most popular) -->
+        <!-- Driving schools -->
         <div class="card flex flex-col border-2 border-brand-red ring-2 ring-brand-red/15 relative">
-          <span class="badge-primary mb-2 self-start">Most Popular</span>
-          <h3 class="text-lg font-bold text-brand-navy mb-1">School</h3>
-          <p class="text-gray-500 text-sm mb-4">For driving schools</p>
-          <div class="text-3xl font-bold text-brand-navy">£22<span class="text-base font-normal text-gray-500">/mo</span></div>
-          <p class="text-xs text-gray-500 mb-4">+ £12/mo per extra instructor (up to 5 = £70/mo)</p>
-          <p class="text-gray-600 text-sm mb-6 flex-grow">Everything in Solo plus multi-instructor tools, vehicle compliance, analytics, and role-based access. <a href="/driving-school-software-uk/" class="text-brand-red hover:underline">More for driving schools &rarr;</a></p>
-          <a href="/pricing/" class="btn-primary w-full text-center">See School plan</a>
-        </div>
-        <!-- Enterprise -->
-        <div class="card flex flex-col">
-          <h3 class="text-lg font-bold text-brand-navy mb-1">Enterprise</h3>
-          <p class="text-gray-500 text-sm mb-4">For 6+ instructors</p>
-          <div class="text-3xl font-bold text-brand-navy mb-4">Custom</div>
-          <p class="text-gray-600 text-sm mb-6 flex-grow">Unlimited instructors, priority support, and custom onboarding for larger schools.</p>
-          <a href="/contact/" class="btn-secondary w-full text-center">Contact sales</a>
+          <span class="badge-primary mb-2 self-start">Early access</span>
+          <h3 class="text-lg font-bold text-brand-navy mb-1">Driving schools</h3>
+          <p class="text-gray-500 text-sm mb-4">For multi-instructor schools</p>
+          <div class="text-3xl font-bold text-brand-navy mb-4">£0<span class="text-base font-normal text-gray-500"> until 31 March 2027</span></div>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">Multi-instructor tools, vehicle compliance, analytics, and role-based access — the full product, free during early access. <a href="/driving-school-software-uk/" class="text-brand-red hover:underline">More for driving schools &rarr;</a></p>
+          <a href="/pricing/" class="btn-primary w-full text-center">See what's included</a>
         </div>
       </div>
-      <p class="text-center text-gray-500 text-sm mt-8">All plans include a 14-day free trial — no card required, cancel anytime. <a href="/pricing/" class="text-brand-red font-semibold hover:underline">Compare plans &rarr;</a></p>
+      <p class="text-center text-gray-500 text-sm mt-8">Free because it's early — pricing will be announced well before 1 April 2027, and nothing is charged automatically. <a href="/pricing/" class="text-brand-red font-semibold hover:underline">See what's included &rarr;</a></p>
     </div>
   </section>
 
@@ -699,7 +636,7 @@ const homeFaqs = [
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to spend less time on admin?</h2>
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-        Start your 14-day free trial — no card required, cancel anytime. Most instructors are up and running in about 10 minutes.
+        DriveSchoolPro is free until 31 March 2027 — no card required, cancel anytime. Most instructors are up and running in about 10 minutes.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href={OFFER.ctaPrimary.href} class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>

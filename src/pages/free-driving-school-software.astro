@@ -10,19 +10,19 @@ import { OFFER } from '../config/offer';
 
 const freeStats = [
   {
-    label: 'DriveSchoolPro Solo',
-    value: '£22/mo',
-    context: 'All-in for an independent ADI — no per-student fees'
+    label: 'DriveSchoolPro Today',
+    value: '£0',
+    context: 'The full product, free during early access — no per-student fees'
   },
   {
-    label: 'Free Trial',
-    value: '14 days',
+    label: 'Free Until',
+    value: '31 Mar 2027',
     context: 'Full access, no card required'
   },
   {
     label: 'Students',
     value: 'Unlimited',
-    context: 'No caps on the paid plans'
+    context: 'No caps — even while free'
   },
   {
     label: 'DVSA Skills Tracked',
@@ -89,7 +89,7 @@ const comparisonData = [
 const faqItems = [
   {
     question: "Is there truly free driving school software?",
-    answer: "Yes, some providers offer genuinely free plans with basic features. However, most free options have severe limitations: 5-10 student limit, no online booking, no automated email reminders, no payment processing. 78% of ADIs using free tools upgrade within 6 months when hitting limitations. Free trials (14-30 days full access) are better for testing before committing.",
+    answer: "Yes — DriveSchoolPro is genuinely free right now. The full product — unlimited students, scheduling, DVSA tracking, invoicing, and automated reminders — is free until 31 March 2027 while we're in early access, with no card required. Most other 'free' options are freemium plans with severe limitations: 5-10 student caps, no online booking, no automated email reminders, no payment recording. 78% of ADIs using those free tools upgrade within 6 months when hitting limitations.",
     links: [
       { text: 'Free trial comparison', url: '/pricing/' },
       { text: 'All features', url: '/driving-school-software/' }
@@ -104,15 +104,15 @@ const faqItems = [
   },
   {
     question: "Can I run a driving school on free software alone?",
-    answer: "For a solo instructor with under 10 students, free software might suffice initially. However, limitations quickly appear: no drag-and-drop scheduling means clunky diary management, manual reminders lead to no-shows, student limit blocks growth, no invoicing requires separate tools. Most successful instructors find paid software (£22/month) pays for itself through time savings and reduced no-shows.",
+    answer: "With DriveSchoolPro, yes — because you get the full product free until 31 March 2027, not a stripped-back tier. With typical freemium tools the limitations quickly appear: no drag-and-drop scheduling means clunky diary management, manual reminders lead to no-shows, student limits block growth, and no invoicing requires separate tools. Free only works when it's the whole product.",
     links: [
       { text: 'ROI calculator', url: '/pricing/' },
       { text: 'Management features', url: '/driving-school-management-software/' }
     ]
   },
   {
-    question: "What's the difference between free trials and free plans?",
-    answer: "Free trials give full access to all features for 14-30 days, then require payment or lose access. Free plans offer permanent access to extremely limited features (5-10 students, basic calendar, no automation). Free trials are better for testing—you experience the full platform before committing. 68% of trial users convert to paid after seeing the value.",
+    question: "What's the difference between free trials, free plans, and DriveSchoolPro's early access?",
+    answer: "Free trials give full access for 14-30 days, then require payment or you lose access. Free plans offer permanent access to extremely limited features (5-10 students, basic calendar, no automation). DriveSchoolPro's early access is different: the full product is free until 31 March 2027 — no time-boxed trial, no feature caps, no card required, and pricing will be announced well before 1 April 2027.",
     links: [
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href },
       { text: 'See pricing', url: '/pricing/' }
@@ -127,7 +127,7 @@ const faqItems = [
   },
   {
     question: "Can I upgrade from free to paid without losing data?",
-    answer: "With reputable software providers, yes. Your student records, lesson history, and settings transfer seamlessly when upgrading. This is why choosing free plans from established companies (who offer paid tiers) is safer than obscure free-only tools. DriveSchoolPro's free trial gives you full access to test with real data before committing.",
+    answer: "With reputable software providers, yes. Your student records, lesson history, and settings transfer seamlessly when upgrading. This is why choosing software from established companies is safer than obscure free-only tools. With DriveSchoolPro there's nothing to upgrade from — you're on the full product from day one, free until 31 March 2027, with all your data intact whenever pricing launches.",
     links: [
       { text: 'Upgrade path', url: '/pricing/' },
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
@@ -143,7 +143,7 @@ const faqItems = [
   },
   {
     question: "How much does driving school software actually cost?",
-    answer: "DriveSchoolPro's Solo Plan is £22/month for solo ADIs with unlimited students and full features. The multi-instructor School Plan is £22/month for your first instructor, then £12/month for each additional (up to 5 instructors). Compared to hidden costs of free tools (6+ hours weekly at £20/hour = £520/month in time, plus no-show losses), paid software delivers 8:1 ROI. Most ADIs recoup costs within the first month.",
+    answer: "Driving school software typically costs £15-100+ per month. DriveSchoolPro is currently free — until 31 March 2027 — while we're in early access, for solo ADIs and multi-instructor schools alike. Compare that with the hidden costs of limited free tools (6+ hours weekly at £20/hour = £520/month in time, plus no-show losses) and the value is clear. Pricing will be announced well before 1 April 2027.",
     links: [
       { text: 'Full pricing', url: '/pricing/' },
       { text: 'Feature comparison', url: '/driving-school-software/' }
@@ -158,7 +158,7 @@ const faqItems = [
   },
   {
     question: "What's the best free alternative to paid driving school software?",
-    answer: "There isn't one that works at scale. Best approach: Start a DriveSchoolPro free trial (full features, no credit card required) to test with real students. This beats limited 'free forever' plans that block growth. If cost is a barrier, the Solo Plan (£22/month for unlimited students, DVSA tracking, automated reminders) pays for itself through time savings and reduced no-shows.",
+    answer: "Right now, it's DriveSchoolPro itself. The full product — unlimited students, DVSA tracking, scheduling, invoicing, and automated reminders — is free until 31 March 2027 while we're in early access, with no card required. That beats both limited 'free forever' plans that block growth and time-boxed trials that expire just as you're settled in.",
     links: [
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href },
       { text: 'Solo plan details', url: '/pricing/' }
@@ -210,7 +210,7 @@ const schemaMarkup = {
         <span class="inline-block px-4 py-1 bg-brand-red/20 text-brand-red-light rounded-full text-sm font-medium mb-4">Free Software Guide</span>
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Free Driving School Software: What's Actually Available?</h1>
         <p class="text-xl text-gray-300 mb-8">
-          Searching for free driving school software? This honest guide covers what's genuinely free, what has hidden costs, and when it makes sense to pay for better tools.
+          Searching for free driving school software? Good news: DriveSchoolPro is the full product, free until 31 March 2027 while we're in early access. This honest guide also covers what other "free" options really offer — and their hidden costs.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>
@@ -222,7 +222,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="Is there truly free driving school software?">
-    Yes, but with severe limitations. Free plans typically restrict to 5-10 students, exclude automated scheduling and email reminders, and lack invoicing. 78% of ADIs upgrade within 6 months when hitting limitations. Free trials (14-day full access) are better for testing before committing. Paid plans (£22/month) deliver 8:1 ROI through time savings and reduced no-shows.
+    Yes — DriveSchoolPro is the full product, free until 31 March 2027 while we're in early access: unlimited students, scheduling, DVSA tracking, invoicing, and automated reminders, with no card required. Most other "free" options are freemium plans restricted to 5-10 students with no automation — 78% of ADIs using them upgrade within 6 months when hitting limitations.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -242,8 +242,8 @@ const schemaMarkup = {
           <div class="text-sm text-gray-600">Starting Cost</div>
         </div>
         <div>
-          <div class="text-3xl font-bold text-brand-red">14 Days</div>
-          <div class="text-sm text-gray-600">Typical Free Trial</div>
+          <div class="text-3xl font-bold text-brand-red">31 Mar 2027</div>
+          <div class="text-sm text-gray-600">DriveSchoolPro Free Until</div>
         </div>
         <div>
           <div class="text-3xl font-bold text-brand-red">5-10</div>
@@ -333,7 +333,7 @@ const schemaMarkup = {
             <div class="bg-gray-50 rounded-xl p-6">
               <h3 class="text-xl font-bold text-brand-navy mb-3">2. Free Trials (Full Features, Limited Time)</h3>
               <p class="text-gray-600 mb-4">
-                Most professional driving school software offers free trials, typically 14-30 days with full feature access:
+                Most professional driving school software offers free trials, typically 14-30 days with full feature access, then a monthly fee:
               </p>
               <ul class="space-y-2">
                 <li class="flex items-start gap-3">
@@ -346,11 +346,11 @@ const schemaMarkup = {
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                  <span class="text-gray-700">Scheduling, invoicing, and student portal (coming soon)</span>
+                  <span class="text-gray-700">Scheduling, invoicing, and student-facing tools</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                  <span class="text-gray-700">Automated email reminders (WhatsApp coming soon)</span>
+                  <span class="text-gray-700">Automated reminders</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-13a1 1 0 112 0v4a1 1 0 11-2 0V5zm1 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /></svg>
@@ -393,6 +393,34 @@ const schemaMarkup = {
                 <strong>Best for:</strong> Technically minded instructors or those with IT support available.
               </p>
             </div>
+
+            <div class="bg-brand-red-light rounded-xl p-6 border-2 border-brand-red">
+              <h3 class="text-xl font-bold text-brand-navy mb-3">4. DriveSchoolPro Early Access — the Full Product, Free</h3>
+              <p class="text-gray-700 mb-4">
+                DriveSchoolPro doesn't fit any of the categories above right now. While we're in early access, the entire product is free until 31 March 2027 — not a limited tier, not a time-boxed trial:
+              </p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Unlimited pupils and lessons — no caps</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Scheduling, DVSA tracking, invoicing, and automated reminders included</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">No card required — nothing is charged automatically</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                  <span class="text-gray-700">Pricing announced well before 1 April 2027</span>
+                </li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-4">
+                <strong>Why free?</strong> Because it's early — we're building with founding schools, and your feedback shapes the product.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -405,9 +433,9 @@ const schemaMarkup = {
               <thead>
                 <tr class="bg-brand-navy text-white">
                   <th class="p-4 text-left">Feature</th>
-                  <th class="p-4 text-center">Free Plans</th>
-                  <th class="p-4 text-center">Free Trials</th>
-                  <th class="p-4 text-center">Paid Plans</th>
+                  <th class="p-4 text-center">Typical Free Plans</th>
+                  <th class="p-4 text-center">Typical Paid Plans</th>
+                  <th class="p-4 text-center">DriveSchoolPro (free until 31 Mar 2027)</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200">
@@ -771,8 +799,8 @@ const schemaMarkup = {
   <section class="section bg-gray-50">
     <div class="container-custom">
       <ComparisonTable
-        title="Paid Software vs Free Plans vs DIY Solutions"
-        headers={['Paid Software', 'Free Plans', 'Spreadsheets/DIY']}
+        title="DriveSchoolPro vs Free Plans vs DIY Solutions"
+        headers={['DriveSchoolPro (free until 31 Mar 2027)', 'Free Plans', 'Spreadsheets/DIY']}
         rows={comparisonData}
       />
     </div>
@@ -824,9 +852,9 @@ const schemaMarkup = {
   <!-- CTA Section -->
   <section class="section bg-gradient-to-r from-brand-red to-brand-red-dark text-white">
     <div class="container-custom text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Try Before You Buy—No Card Required</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">The Full Product, Free Until 31 March 2027</h2>
       <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-        Get full access to every feature. See for yourself what DriveSchoolPro can do for your school.
+        Get full access to every feature — no card required. See for yourself what DriveSchoolPro can do for your school.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href={OFFER.ctaPrimary.href} class="btn bg-white text-brand-red hover:bg-gray-100 text-lg px-8 py-4">{OFFER.ctaPrimary.label}</a>

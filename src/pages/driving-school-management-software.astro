@@ -26,13 +26,13 @@ const managementStats = [
     context: 'Every staff booking checks student, instructor and vehicle availability'
   },
   {
-    label: 'Solo Plan',
-    value: '£22/mo',
-    context: 'One inclusive price for independent ADIs — no per-student fees'
+    label: 'Price Today',
+    value: '£0',
+    context: 'Free during early access — no per-student fees'
   },
   {
-    label: 'Free Trial',
-    value: '14 days',
+    label: 'Free Until',
+    value: '31 Mar 2027',
     context: 'No card required, cancel anytime'
   },
   {
@@ -128,7 +128,7 @@ const faqItems = [
   },
   {
     question: "How much does driving school management software cost?",
-    answer: "DriveSchoolPro's Solo Plan is £22/month for independent ADIs — everything an independent instructor needs, with no per-user or per-student fees. The multi-instructor School Plan is £22/month for your first instructor, then £12/month for each additional (a 3-instructor school is £46/month).",
+    answer: "DriveSchoolPro is currently free — until 31 March 2027 — while we're in early access, for independent ADIs and multi-instructor schools alike, with no per-user or per-student fees. No card is required, and pricing will be announced well before 1 April 2027.",
     links: [
       { text: 'Full pricing details', url: '/pricing/' },
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
@@ -157,7 +157,7 @@ const faqItems = [
   },
   {
     question: "Is management software suitable for solo ADIs?",
-    answer: "Absolutely. Solo ADIs benefit from automated scheduling, DVSA competency tracking, automated reminders, and professional invoicing without the complexity of enterprise systems. The Solo Plan (£22/month) includes unlimited students and all core features.",
+    answer: "Absolutely. Solo ADIs benefit from automated scheduling, DVSA competency tracking, automated reminders, and professional invoicing without the complexity of enterprise systems. DriveSchoolPro includes unlimited students and all core features — free during early access until 31 March 2027.",
     links: [
       { text: 'Solo plan details', url: '/pricing/' },
       { text: 'Software overview', url: '/driving-school-software/' }
@@ -165,7 +165,7 @@ const faqItems = [
   },
   {
     question: "How does multi-instructor management work?",
-    answer: "Multi-instructor management is available with the School Plan — £22/month for your first instructor, then £12/month for each additional (up to 5 instructors). Each instructor will get their own login, calendar, and student assignments. You'll see all instructors' schedules, performance metrics, and be able to reassign students. Schools with 6+ instructors are covered by Enterprise plans.",
+    answer: "Yes — multi-instructor management is included, and free during early access until 31 March 2027. Each instructor gets their own login, calendar, and student assignments. You'll see all instructors' schedules, performance metrics, and be able to reassign students. Running 6+ instructors? Talk to us and we'll help you get set up.",
     links: [
       { text: 'School plan features', url: '/pricing/' },
       { text: 'Instructor management', url: '/driving-school-software/' }
@@ -234,7 +234,7 @@ const schemaMarkup = {
 
 <BaseLayout
   title="Driving School Student Management Software | DriveSchoolPro"
-  description="Driving test student management software for UK ADIs. Track each pupil's DVSA progress, test readiness, bookings & pass rates in one place. From £22/month."
+  description="Driving test student management software for UK ADIs. Track each pupil's DVSA progress, test readiness, bookings & pass rates in one place. Free during early access — until 31 March 2027."
   image="/images/marketing/dvsa-progress-tracking.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />

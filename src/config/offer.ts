@@ -3,31 +3,32 @@
  *
  * Changing the current offer requires editing only this file.
  *
- * Last updated: 2026-06-10
+ * Last updated: 2026-07-29
  *
  * History:
  *   Jan – early Mar 2026: "14-day free trial"
  *   Mid-Mar – Mar 31:     "Founding Member / Early Access"
  *   Apr 1 – Apr 13:       "Get Started Free"
  *   Apr 14 – Jun 9:       "3 months free"
- *   Jun 10 – present:     "14-day free trial" (evergreen) + SUMMER26 promo (see PROMO below)
+ *   Jun 10 – Jul 28 2026: "14-day free trial" (evergreen) + SUMMER26 promo (see PROMO below)
+ *   Jul 29 2026 – present: "Free until 31 March 2027" (free launch — early access)
  */
 
 export const OFFER = {
   /** Short offer text — used in CTAs, headlines, inline callouts */
-  short: "14-day free trial",
+  short: "Free until 31 March 2027",
 
   /** Long offer text — used in hero subheads, body copy */
-  long: "Start with a 14-day free trial",
+  long: "DriveSchoolPro is free while we're in early access — until 31 March 2027",
 
   /** Meta-description-friendly fragment (no dashes, no emphasis).
    *  Evergreen only — never put time-boxed promos here (persists in search results). */
-  meta: "Start with a 14-day free trial.",
+  meta: "Free during early access — until 31 March 2027.",
 
   /** Primary CTA — used as the main signup button everywhere */
   ctaPrimary: {
-    label: "Start Free — 14-day free trial",
-    labelShort: "Start Free",
+    label: "Get started free",
+    labelShort: "Get started",
     href: "https://app.driveschoolpro.com/signup",
   },
 
@@ -47,7 +48,8 @@ export type OfferConfig = typeof OFFER;
  * To take the sale down: set `enabled: false` and rebuild.
  */
 export const PROMO = {
-  enabled: true,
+  // SUMMER26 ended with the free launch (Jul 29 2026) — object kept for history.
+  enabled: false,
   code: "SUMMER26",
   endDate: "2026-08-31",
   headline: "Summer sale: 25% off your first 3 months.",

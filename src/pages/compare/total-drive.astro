@@ -20,19 +20,19 @@ const comparisonRows = [
   { label: 'Test readiness scoring', values: [true, true] },
   { label: 'Transparent public pricing', values: [true, true] },
   { label: 'Month-to-month, no contract', values: [true, 'Unknown'] },
-  { label: 'Free trial (no card required)', values: [true, true] },
+  { label: 'Free to start (no card required)', values: ['Free until 31 Mar 2027', '30-day trial'] },
   { label: 'Mobile-first web app', values: [true, true] },
 ];
 
 const faqItems = [
   {
     question: "Is DriveSchoolPro better than Total Drive?",
-    answer: "It depends what matters to you. Total Drive is cheaper — from £18/month against our £22 — and its trial is 30 days to our 14, so on price and trial length it wins. Where DriveSchoolPro differs is the feature set: AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments, a parent portal and an embeddable booking widget. If the monthly cost is the deciding factor, Total Drive is the cheaper option and we'd rather you knew that. Pricing verified July 2026.",
-    links: [{ text: 'Start free trial', url: OFFER.ctaPrimary.href }]
+    answer: "It depends what matters to you. On price, right now DriveSchoolPro wins: it's free until 31 March 2027 while we're in early access, against Total Drive's £18/month after its 30-day trial. On track record, Total Drive is the more established platform and we'd rather you knew that. Where DriveSchoolPro differs is the feature set: AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments, a parent portal and an embeddable booking widget. Pricing verified July 2026.",
+    links: [{ text: 'Get started free', url: OFFER.ctaPrimary.href }]
   },
   {
     question: "How much does Total Drive cost compared to DriveSchoolPro?",
-    answer: "Total Drive publishes from £18/month for instructors, with discounts for multi-car instructors and a 30-day free trial with no payment details required. DriveSchoolPro is £22/month for the Solo Plan, with additional instructors at £12/month each and a 14-day free trial. Total Drive is therefore about £4/month cheaper at solo level. Both publish their pricing openly. Verified against vendor sites July 2026.",
+    answer: "Total Drive publishes from £18/month for instructors, with discounts for multi-car instructors and a 30-day free trial with no payment details required. DriveSchoolPro is currently free — until 31 March 2027 — while we're in early access, with no card required; pricing will be announced well before 1 April 2027. Both publish their terms openly. Verified against vendor sites July 2026.",
     links: [{ text: 'See DriveSchoolPro pricing', url: '/pricing/' }]
   },
   {
@@ -47,8 +47,8 @@ const faqItems = [
   },
   {
     question: "Which is better for a solo ADI?",
-    answer: "Both suit solo ADIs, and the honest answer is that it turns on budget. Total Drive is from £18/month with a 30-day trial; DriveSchoolPro is £22/month with a 14-day trial and no per-student limits. If you want the lowest monthly cost, Total Drive is cheaper. If AI lesson briefings, automated Google review requests after each pass, Stripe Connect payments and a parent portal are worth £4/month to you, DriveSchoolPro is the better fit. Try both — neither trial asks for a card.",
-    links: [{ text: 'Start free trial', url: OFFER.ctaPrimary.href }]
+    answer: "Both suit solo ADIs. On cost, DriveSchoolPro is currently free until 31 March 2027 (early access, no per-student limits), while Total Drive is from £18/month after its 30-day trial. On maturity, Total Drive is the more established platform. If AI lesson briefings, automated Google review requests after each pass, Stripe Connect payments and a parent portal appeal, DriveSchoolPro is the better fit — and trying it costs nothing. Neither platform asks for a card to start.",
+    links: [{ text: 'Get started free', url: OFFER.ctaPrimary.href }]
   },
   {
     question: "Is Total Drive a reliable platform?",
@@ -103,7 +103,7 @@ const schemaMarkup = {
   </section>
 
   <FeaturedAnswer question="How does DriveSchoolPro compare to Total Drive?">
-    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking, scheduling and publicly listed pricing. Total Drive is the cheaper and more established option, from £18/month with a 30-day free trial. DriveSchoolPro is £22/month with a 14-day trial and adds AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments, a parent portal and an embeddable booking widget. Pricing verified July 2026.
+    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking, scheduling and openly published terms. Total Drive is the more established option, from £18/month with a 30-day free trial. DriveSchoolPro is free until 31 March 2027 while in early access — no card required — and adds AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments, a parent portal and an embeddable booking widget. Pricing verified July 2026.
   </FeaturedAnswer>
 
   <!-- Summary Cards -->
@@ -117,8 +117,8 @@ const schemaMarkup = {
             <span class="text-xl font-bold text-brand-navy">DriveSchool<span class="text-brand-red">Pro</span></span>
             <span class="text-xs font-semibold bg-brand-red text-white px-2 py-1 rounded-full">Recommended</span>
           </div>
-          <div class="text-3xl font-bold text-brand-navy mb-1">£22<span class="text-base font-normal text-gray-500">/month</span></div>
-          <div class="text-sm text-gray-500 mb-6">Solo Plan · No setup fees · No contract</div>
+          <div class="text-3xl font-bold text-brand-navy mb-1">£0<span class="text-base font-normal text-gray-500"> until 31 March 2027</span></div>
+          <div class="text-sm text-gray-500 mb-6">Early access · No setup fees · No contract</div>
           <ul class="space-y-3 mb-8">
             {[
               'AI lesson briefings before every session',
@@ -252,8 +252,8 @@ const schemaMarkup = {
             body: 'DriveSchoolPro takes payments through Stripe Connect and gives parents their own portal access — useful when you teach under-18s and the person paying is not the person learning. Total Drive offers a pupil portal but no parent access.'
           },
           {
-            title: 'Per-instructor pricing as you add staff',
-            body: 'Additional instructors are £12/month each on top of the £22 first seat, so a three-instructor school is £46/month. Total Drive offers discounts for multi-car instructors but does not publish the tiers, so compare a real quote against that figure before deciding.'
+            title: 'Free during early access — for any number of instructors',
+            body: 'DriveSchoolPro is free until 31 March 2027, including multi-instructor features, while Total Drive is from £18/month. Total Drive offers discounts for multi-car instructors but does not publish the tiers. Our pricing will be announced well before 1 April 2027, and nothing is charged automatically.'
           },
         ].map(({ title, body }) => (
           <li class="flex items-start gap-4">
@@ -275,7 +275,7 @@ const schemaMarkup = {
   <!-- CTA -->
   <section class="section bg-brand-navy text-white text-center">
     <div class="container-custom">
-      <h2 class="text-3xl font-bold mb-3">Try DriveSchoolPro Free for 14 Days</h2>
+      <h2 class="text-3xl font-bold mb-3">Try DriveSchoolPro — Free Until 31 March 2027</h2>
       <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">No credit card. No demo call. Set up in 3 minutes and run a week of real lessons before deciding.</p>
       <a href={OFFER.ctaPrimary.href} class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
         {OFFER.ctaPrimary.label} &rarr;

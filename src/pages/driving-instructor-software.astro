@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: 'What does it cost?',
-    a: 'The Solo plan is £22 a month for independent ADIs, with unlimited pupils and every feature included. You start with a 14-day free trial and no card is required.',
+    a: "Nothing right now. DriveSchoolPro is free while we're in early access — until 31 March 2027 — with unlimited pupils and every feature included. No card is required, and pricing will be announced well before 1 April 2027.",
   },
   {
     q: 'Is there a contract?',
@@ -82,10 +82,10 @@ const softwareSchema = {
   url: 'https://driveschoolpro.com',
   offers: {
     '@type': 'Offer',
-    price: '22',
+    price: '0',
     priceCurrency: 'GBP',
-    priceValidUntil: '2026-12-31',
-    description: 'Solo plan for independent ADIs — unlimited pupils, DVSA tracking, scheduling, invoicing and reminders.',
+    priceValidUntil: '2027-03-31',
+    description: 'Free during early access — until 31 March 2027. For independent ADIs — unlimited pupils, DVSA tracking, scheduling, invoicing and reminders.',
   },
   description: 'Driving instructor software for UK ADIs — diary, pupil management, payments, automated reminders and full DVSA progress tracking in one app.',
 };
@@ -93,7 +93,7 @@ const softwareSchema = {
 
 <LandingLayout
   title="Driving Instructor Software UK | DriveSchoolPro"
-  description="Diary, pupils, payments, reminders and DVSA progress tracking in one app for UK driving instructors. Start a 14-day free trial — no card required."
+  description="Diary, pupils, payments, reminders and DVSA progress tracking in one app for UK driving instructors. Free during early access — until 31 March 2027. No card required."
   canonicalUrl={pageUrl}
   ogImage="/images/marketing/dashboard-overview.webp"
   robots="index, follow"
@@ -148,7 +148,7 @@ const softwareSchema = {
             onclick="return trackAdConversion(this.href)"
             class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
           >
-            Start your free trial &rarr;
+            Get started free &rarr;
           </a>
           <p class="text-sm text-gray-400 mt-3">
             No credit card required &middot; {OFFER.short} &middot;
@@ -237,11 +237,11 @@ const softwareSchema = {
   <section id="pricing" class="section bg-white scroll-mt-6">
     <div class="container-custom">
       <div class="max-w-md mx-auto text-center">
-        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-3">Simple pricing for solo instructors</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-3">Free while we're in early access</h2>
         <div class="bg-gray-50 border-2 border-brand-red rounded-2xl p-8 mt-6">
-          <p class="text-sm font-semibold text-brand-red uppercase tracking-wider mb-2">Solo plan</p>
-          <div class="text-5xl font-bold text-brand-navy mb-1">£22<span class="text-lg font-normal text-gray-500">/month</span></div>
-          <p class="text-gray-500 text-sm mb-6">Unlimited pupils · every feature included · no setup fee</p>
+          <p class="text-sm font-semibold text-brand-red uppercase tracking-wider mb-2">Early access</p>
+          <div class="text-5xl font-bold text-brand-navy mb-1">£0<span class="text-lg font-normal text-gray-500"> until 31 March 2027</span></div>
+          <p class="text-gray-500 text-sm mb-6">Unlimited pupils · every feature included · pricing announced well before 1 April 2027</p>
           {PROMO.enabled && (
             <p class="text-brand-red text-sm font-medium bg-brand-red-light rounded-lg px-4 py-2 mb-6">
               {PROMO.pricingNote}
@@ -252,9 +252,9 @@ const softwareSchema = {
             onclick="return trackAdConversion(this.href)"
             class="block w-full text-center bg-brand-red text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
           >
-            Start your free trial &rarr;
+            Get started free &rarr;
           </a>
-          <p class="text-xs text-gray-400 mt-3">{OFFER.short} · no credit card required · cancel anytime</p>
+          <p class="text-xs text-gray-400 mt-3">{OFFER.short} · no card required · nothing charged automatically</p>
         </div>
         <p class="text-sm text-gray-400 mt-6">Running a team of instructors? <a href="/driving-school-software-uk/" class="text-brand-red hover:underline">See DriveSchoolPro for driving schools &rarr;</a></p>
       </div>
@@ -269,7 +269,7 @@ const softwareSchema = {
         <div class="grid sm:grid-cols-2 gap-4 text-left mb-8">
           <div class="flex items-start gap-3">
             <span class="text-brand-red font-bold">✓</span>
-            <p class="text-gray-600 text-sm">No contract — pay monthly and cancel any time.</p>
+            <p class="text-gray-600 text-sm">No contract — free until 31 March 2027, cancel any time.</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="text-brand-red font-bold">✓</span>
@@ -319,7 +319,7 @@ const softwareSchema = {
         onclick="return trackAdConversion(this.href)"
         class="inline-block w-full md:w-auto text-center bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors"
       >
-        Start your free trial &rarr;
+        Get started free &rarr;
       </a>
       <p class="text-white/50 text-sm mt-3">{OFFER.short} &middot; no credit card required</p>
     </div>
@@ -332,7 +332,7 @@ const softwareSchema = {
       onclick="return trackAdConversion(this.href)"
       class="block w-full text-center bg-brand-red text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors"
     >
-      Start your free trial &rarr;
+      Get started free &rarr;
     </a>
   </div>
 </LandingLayout>
