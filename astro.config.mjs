@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
-import { buildLastmodMap, lastmodSerializer } from '../scripts/sitemap-lastmod.mjs';
+import { buildLastmodMap, lastmodSerializer } from './scripts/sitemap-lastmod.mjs';
 
 const lastmod = buildLastmodMap(dirname(fileURLToPath(import.meta.url)));
 
