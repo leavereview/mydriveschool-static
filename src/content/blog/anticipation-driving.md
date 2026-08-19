@@ -125,7 +125,7 @@ DriveSchoolPro's [student progress tracking](/blog/student-progress-tracking/) l
 
 ## Related Skills
 
-- [Use of Speed (Skill 11)](/blog/use-of-speed-driving-test/) — anticipation directly determines whether your speed is appropriate; the two skills are inseparable
+- [Use of Speed (Skill 11)](/blog/speed-awareness-driving/) — anticipation directly determines whether your speed is appropriate; the two skills are inseparable
 - [Mirrors & the MSM Routine (Skill 8)](/blog/msm-routine-driving/) — looking ahead is only useful if you also know what is behind you when you need to act
 - [Observation & Signalling Skills](/driving-skills/observation-signalling/) — browse all skills in this category
 

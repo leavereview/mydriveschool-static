@@ -124,8 +124,8 @@ After each lesson, ask your instructor to identify one interaction where your re
 ## Related Skills
 
 - [Use of Speed (Skill 11)](/blog/speed-awareness-driving/) — Your speed directly determines how much time you have to respond to other road users
-- [Anticipation and Planning (Skill 10)](/blog/anticipation-planning-driving/) — Spotting road users early is the foundation of responding safely
-- [Use of Mirrors (Skill 8)](/blog/use-of-mirrors-driving/) — Effective mirror checks are essential before every manoeuvre near cyclists and pedestrians
+- [Anticipation and Planning (Skill 10)](/blog/anticipation-driving/) — Spotting road users early is the foundation of responding safely
+- [Observation & Anticipation (Skill 10)](/blog/observation-driving-test/) — Effective mirror checks and the MSM routine are essential before every manoeuvre near cyclists and pedestrians
 
 ## Related Articles
 

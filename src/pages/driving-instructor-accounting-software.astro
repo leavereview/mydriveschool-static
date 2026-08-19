@@ -1,0 +1,203 @@
+---
+import { OFFER } from '../config/offer';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../components/seo/BreadcrumbsEnhanced.astro';
+import FeaturedAnswer from '../components/seo/FeaturedAnswer.astro';
+import ComparisonTable from '../components/seo/ComparisonTable.astro';
+import FAQEnhanced from '../components/seo/FAQEnhanced.astro';
+
+// This page deliberately does NOT claim DriveSchoolPro is accounting software.
+// It records lesson income and issues invoices; it does not do bookkeeping, expenses,
+// mileage or a Self Assessment return. Saying so plainly is the point of the page —
+// ADIs searching this term are trying to work out which tool does which job.
+const comparisonRows = [
+  { label: 'Record lesson income per pupil', values: [true, 'Manual entry'], highlight: true },
+  { label: 'Issue invoices to pupils', values: [true, true] },
+  { label: 'Track outstanding balances', values: [true, true] },
+  { label: 'Lesson packages with expiry dates', values: [true, false], highlight: true },
+  { label: 'Revenue reports by period', values: [true, true] },
+  { label: 'Categorise business expenses', values: [false, true] },
+  { label: 'Mileage tracking', values: [false, true] },
+  { label: 'Bank feed reconciliation', values: [false, true] },
+  { label: 'Self Assessment / MTD submission', values: [false, true] },
+  { label: 'Knows what a pupil, lesson or test is', values: [true, false], highlight: true },
+];
+
+const faqItems = [
+  {
+    question: 'Is DriveSchoolPro accounting software?',
+    answer:
+      'No, and we would rather say so up front. DriveSchoolPro records lesson income, issues invoices, tracks outstanding balances and reports revenue by period — the income side of your books, captured automatically as you teach. It does not categorise expenses, track mileage, reconcile a bank feed or file a Self Assessment return. For those you still want proper accounting software or an accountant. The two work well together: DriveSchoolPro is where the income data comes from, accounting software is where the tax return happens.',
+    links: [{ text: 'What DriveSchoolPro does do', url: '/driving-school-management-software/' }],
+  },
+  {
+    question: 'What accounting software is best for driving instructors?',
+    answer:
+      'For most self-employed ADIs, general small-business accounting software is the right answer — the market leaders all handle sole-trader Self Assessment and Making Tax Digital, and none of them need to understand driving lessons to do that job well. What they cannot do is tell you which pupil owes for which lesson. That is the gap instructor software fills. Run both: instructor software for the lesson-level detail, accounting software for the tax return.',
+    links: [],
+  },
+  {
+    question: 'How do driving instructors keep track of lesson income?',
+    answer:
+      'Badly, if it lives in a paper diary. The common failure is not fraud or carelessness — it is that lesson income arrives in small amounts, from many people, by several methods, often in cash, across a week where you are driving rather than filing. By the time you reconcile, you are reconstructing from memory. Recording the payment against the lesson at the moment it happens removes the reconstruction entirely, and it is the single biggest bookkeeping improvement most ADIs can make.',
+    links: [{ text: 'Switching from a paper diary', url: '/blog/switch-paper-diary-to-driving-school-software/' }],
+  },
+  {
+    question: 'Can I claim my driving school software as a business expense?',
+    answer:
+      'Software used wholly and exclusively for your instructing business is generally an allowable business expense for a self-employed ADI, alongside things like your ADI registration, insurance and vehicle costs. The rules on apportionment matter if something is used partly personally, so check your own circumstances with an accountant rather than relying on a software vendor for tax advice. We are not qualified to give it and will not pretend otherwise.',
+    links: [],
+  },
+  {
+    question: 'Do I need to worry about Making Tax Digital as a driving instructor?',
+    answer:
+      'Making Tax Digital for Income Tax applies to self-employed people above defined income thresholds, phased in over several years, and the thresholds and dates have moved more than once. Rather than quote a figure that may be out of date by the time you read it, check the current position on GOV.UK or with your accountant. The practical preparation is the same either way: keep digital records of income and expenses as you go, rather than in a shoebox each April.',
+    links: [],
+  },
+  {
+    question: 'Does DriveSchoolPro handle cash payments?',
+    answer:
+      'Yes. You can record payments taken by cash, bank transfer or cheque against the lesson and pupil they belong to, which is what makes the income side reconcile later. Online card payments are coming soon. Cash is still common in driving instruction, and software that assumes every payment is a card transaction quietly fails the people who need the record most.',
+    links: [{ text: 'Get started free', url: OFFER.ctaPrimary.href }],
+  },
+];
+
+const schemaMarkup = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Driving Instructor Accounting Software: What You Actually Need',
+  description:
+    'What driving instructor accounting software does, what instructor management software does, and why most self-employed ADIs need both.',
+  author: { '@type': 'Organization', name: 'DriveSchoolPro' },
+  publisher: { '@type': 'Organization', name: 'DriveSchoolPro' },
+  datePublished: '2026-08-19',
+  dateModified: '2026-08-19',
+};
+---
+
+<BaseLayout
+  title="Driving Instructor Accounting Software"
+  description="What accounting software does for a self-employed ADI, what instructor software does, and why you need both. Honest guide, no overclaiming."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Driving Instructor Accounting Software', href: '/driving-instructor-accounting-software/' },
+    ]}
+  />
+
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1 bg-brand-red/20 text-brand-red-light rounded-full text-sm font-medium mb-4">Finance &amp; Admin</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Driving Instructor Accounting Software</h1>
+        <p class="text-xl text-gray-300 mb-8">
+          Most ADIs searching this are trying to solve two different problems with one tool. Here is which job belongs to accounting software, which belongs to instructor software, and where the join actually is.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">Try DriveSchoolPro Free</a>
+          <a href="#two-jobs" class="btn-secondary text-lg px-8 py-4">Read the Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FeaturedAnswer question="What is driving instructor accounting software?">
+    Strictly, accounting software for a driving instructor is general small-business bookkeeping software used by a self-employed ADI: it categorises expenses, tracks mileage, reconciles your bank feed and produces the figures for your Self Assessment return. It does not know what a pupil or a lesson is. Instructor management software sits on the other side of that line — it records which pupil paid for which lesson, issues invoices and reports revenue, but does not file your tax return. Most self-employed ADIs need both, and the useful question is not which to buy but where the handover happens.
+  </FeaturedAnswer>
+
+  <section class="section bg-white" id="two-jobs">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-3xl font-bold text-brand-navy mb-6">The two jobs people mean by "accounting"</h2>
+      <p class="text-gray-700 mb-4">
+        When an instructor searches for accounting software, they usually want one of two quite different things, and buying the wrong one is why so many ADIs end up with a subscription they never open.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>Job one is the tax return.</strong> Expenses categorised, mileage logged, bank transactions reconciled, and a set of numbers that survives contact with HMRC. This is genuine bookkeeping, it is well served by mainstream accounting software, and nothing about it is specific to driving instruction. A tool built for plumbers does it just as well.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>Job two is knowing who owes you money.</strong> Which pupil has hours left on a package, who paid cash on Tuesday, whose block booking expires this month, and what you actually earned last week versus what you invoiced. This is not bookkeeping — it is operational, it happens daily, and general accounting software is terrible at it because it has no concept of a pupil or a lesson.
+      </p>
+      <p class="text-gray-700 mb-8">
+        The failure mode is trying to run job two inside accounting software. You end up creating a "customer" per pupil and an invoice per lesson by hand, which is more admin than the paper diary you were escaping.
+      </p>
+
+      <h2 class="text-3xl font-bold text-brand-navy mb-6">Why lesson income is unusually hard to track</h2>
+      <p class="text-gray-700 mb-4">
+        Driving instruction has a genuinely awkward income profile. Payments are small, frequent, and come from many different people. They arrive by bank transfer, in cash, and sometimes in advance as a block booking that is consumed over months. And crucially, you are driving for most of the working day, so nothing gets recorded at the moment it happens.
+      </p>
+      <p class="text-gray-700 mb-4">
+        Block bookings are the specific trap. A pupil pays for ten hours up front. That money arrives in one month and is earned across the next three. If your only record is a bank statement, your monthly income looks lumpy and unrelated to the work you did, and you cannot answer the one question that matters operationally: how many hours does this pupil have left?
+      </p>
+      <p class="text-gray-700 mb-8">
+        Recording the payment against the pupil and the lesson at the point it happens solves both problems at once. Your income record reflects work delivered, and the remaining balance on a package is simply always correct.
+      </p>
+
+      <h2 class="text-3xl font-bold text-brand-navy mb-6">What DriveSchoolPro does — and what it does not</h2>
+      <p class="text-gray-700 mb-4">
+        We would rather be clear than sell you something on a misunderstanding. DriveSchoolPro is not accounting software and does not try to be.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>It does:</strong> record payments against pupils and lessons by cash, bank transfer or cheque; create and send invoices with line items and track them through their lifecycle; manage lesson packages with configurable hours, pricing and expiry; show outstanding balances; and report revenue, lessons delivered, cancellations and no-shows by period. Online card payments are coming soon.
+      </p>
+      <p class="text-gray-700 mb-8">
+        <strong>It does not:</strong> categorise business expenses, track mileage, connect to a bank feed, produce a profit-and-loss statement for HMRC, or file anything. For all of that you want accounting software or an accountant — and the revenue figures from DriveSchoolPro are what you hand them.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-gray-50">
+    <div class="container-custom max-w-4xl">
+      <ComparisonTable
+        title="Instructor software vs accounting software"
+        description="Which tool does which job. The honest answer for most self-employed ADIs is that you want both, doing different things."
+        headers={['Capability', 'DriveSchoolPro', 'General accounting software']}
+        rows={comparisonRows}
+      />
+      <p class="text-gray-500 text-sm mt-4">
+        Nothing here is tax advice. Thresholds, allowable expenses and Making Tax Digital timing change — check GOV.UK or an accountant for your own position.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-3xl font-bold text-brand-navy mb-6">A workable setup for a solo ADI</h2>
+      <ol class="space-y-4 text-gray-700 mb-8">
+        <li><strong>1. Record every payment against the lesson when it happens.</strong> In the car, on your phone, before you drive off. This is the whole discipline; everything else follows from it.</li>
+        <li><strong>2. Invoice from the same place.</strong> If invoices are generated from lesson records, they cannot disagree with what you taught.</li>
+        <li><strong>3. Keep expenses somewhere separate and boring.</strong> Fuel, maintenance, insurance, ADI registration, CPD, and your software subscriptions. Accounting software or a spreadsheet — the tool matters far less than doing it weekly.</li>
+        <li><strong>4. Reconcile monthly, not annually.</strong> Compare the revenue report to what actually hit your bank. A month of discrepancies is solvable; a year of them is a weekend you will never get back.</li>
+        <li><strong>5. Hand your accountant the revenue report.</strong> Rather than a diary and a carrier bag of receipts.</li>
+      </ol>
+
+      <p class="text-gray-700">
+        If you are still running the diary side on paper, the operational change is bigger than the bookkeeping one — see
+        <a href="/blog/switch-paper-diary-to-driving-school-software/" class="text-brand-red hover:underline">switching from a paper diary</a>, or the
+        <a href="/driving-school-management-software/" class="text-brand-red hover:underline">management software overview</a> for what else moves at the same time. If you are comparing platforms on price,
+        <a href="/blog/best-driving-school-software/" class="text-brand-red hover:underline">the software roundup</a> has published 2026 pricing for seven of them.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-brand-navy text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold mb-3">Get the Income Side Right — Free Until 31 March 2027</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">Record payments against lessons, invoice from the same records, and hand your accountant a report instead of a diary.</p>
+      <a href={OFFER.ctaPrimary.href} class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
+        {OFFER.ctaPrimary.label} &rarr;
+      </a>
+      <p class="text-white/50 text-sm mt-3">{OFFER.short} &middot; No credit card required &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <FAQEnhanced
+    faqs={faqItems}
+    title="Driving Instructor Accounting — Common Questions"
+    site="driveschool"
+    pageUrl="https://driveschoolpro.com/driving-instructor-accounting-software/"
+  />
+</BaseLayout>
