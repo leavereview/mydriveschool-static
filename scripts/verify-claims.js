@@ -55,6 +55,9 @@ const FORBIDDEN = [
   ['monitors your utilisation', 'utilisationReportFlag is off'],
   ['driving test bookings and results', '/tests is gated with /reports/tests'],
   ['invite a parent', 'parentAccessFlag is off'],
+  ['parent portal', 'parentAccessFlag is off'],
+  ['parent portals', 'parentAccessFlag is off'],
+  ['parents their own portal', 'parentAccessFlag is off'],
   ['inc vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['including vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['#ff385c', 'not a brand token'],
@@ -98,6 +101,10 @@ const ALLOW = [
    'buying-guide criterion for evaluating any vendor'],
   ['/blog/how-to-choose-driving-school-scheduling-software/', 'recurring series',
    'buying-guide criterion for evaluating any vendor'],
+  ['/blog/student-management-driving-schools/', 'parent portal',
+   'generic advice on what a student management system should include'],
+  ['/blog/student-progress-tracking/', 'parent portal',
+   'item in a checklist for evaluating any digital tracking system'],
 ];
 
 function allowed(page, rule) {
@@ -110,8 +117,13 @@ function nearby(text, a, b, win) {
   while (i !== -1) {
     const slice = text.slice(Math.max(0, i - win), i + a.length + win);
     // "WhatsApp ... coming soon" is CORRECT and must never be flagged. If
-    // WhatsApp is what the marker belongs to, this is not a stale badge.
-    if (slice.includes(b) && !slice.includes('whatsapp'))
+    // WhatsApp is what the marker belongs to, this is not a stale badge. The
+    // WhatsApp lookup uses a WIDER window than the match: in a feature list
+    // ("...reminders (WhatsApp coming soon), conflict detection, booking
+    // widget...") the marker can sit further from the feature than from the
+    // word that owns it.
+    const owner = text.slice(Math.max(0, i - win - 60), i + a.length + win);
+    if (slice.includes(b) && !owner.includes('whatsapp'))
       hits.push(text.slice(Math.max(0, i - 40), i + a.length + 60).trim());
     i = text.indexOf(a, i + 1);
   }
