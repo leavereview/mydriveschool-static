@@ -111,7 +111,7 @@ Before your next lesson, ask your instructor to score your Use of Speed on the 1
 
 ## Related Skills
 
-- [Anticipation and Planning (Skill 10)](/blog/anticipation-planning-driving/) — Speed management depends entirely on reading the road ahead; these two skills develop together
+- [Anticipation and Planning (Skill 10)](/blog/anticipation-driving/) — Speed management depends entirely on reading the road ahead; these two skills develop together
 - [Dealing with Other Road Users (Skill 12)](/blog/other-road-users/) — The presence of cyclists, pedestrians, and large vehicles directly affects the speed you should choose
 - [Eco-Friendly Driving (Skill 13)](/blog/eco-driving-techniques/) — Smooth speed management is also the foundation of fuel-efficient driving
 

@@ -1,0 +1,226 @@
+---
+import { OFFER } from '../../config/offer';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+import FeaturedAnswer from '../../components/seo/FeaturedAnswer.astro';
+import ComparisonTable from '../../components/seo/ComparisonTable.astro';
+import FAQEnhanced from '../../components/seo/FAQEnhanced.astro';
+
+// Driving School Office details taken from drivingschooloffice.co.uk, August 2026.
+// Where the vendor does not state something publicly, this table says "Not published"
+// rather than guessing. That is deliberate — an invented competitor spec is worse
+// than an honest gap.
+const comparisonRows = [
+  { label: 'Published pricing', values: [true, false], highlight: true },
+  { label: 'Full DVSA 27-skill framework', values: [true, 'Not advertised'], highlight: true },
+  { label: 'AI lesson briefings', values: [true, false], highlight: true },
+  { label: 'Online diary and booking', values: [true, true] },
+  { label: 'Pupil progress tracker', values: [true, true] },
+  { label: 'Online lesson payments', values: ['Invoicing now, card payments coming soon', true] },
+  { label: 'Automated notifications', values: [true, true] },
+  { label: 'Bulk messaging to pupils', values: [true, true] },
+  { label: 'Instructor expense tracking', values: [false, true] },
+  { label: 'White-labelling / franchise management', values: [false, true] },
+  { label: 'Native mobile app', values: ['Mobile-first web app', 'Mobile friendly'] },
+  { label: 'Parent portal access', values: [true, 'Not published'] },
+  { label: 'Automated Google review requests', values: [true, false], highlight: true },
+  { label: 'Embeddable booking widget', values: [true, 'Not published'] },
+  { label: 'Free to start', values: ['Free until 31 Mar 2027', 'First Instructor Free'] },
+];
+
+const faqItems = [
+  {
+    question: 'How much does Driving School Office cost?',
+    answer:
+      'Driving School Office does not publish its prices. Its site describes "Pay-As-You-Grow Pricing" and advertises "First Instructor Free", but you have to request a quote for the actual figures. That is a legitimate model for franchise-scale software, though it makes budgeting harder if you are a solo ADI. DriveSchoolPro publishes its terms openly and is free until 31 March 2027 during early access. Checked against drivingschooloffice.co.uk, August 2026.',
+    links: [{ text: 'See DriveSchoolPro pricing', url: '/pricing/' }],
+  },
+  {
+    question: 'Is DriveSchoolPro better than Driving School Office?',
+    answer:
+      'For a solo or small-team ADI, we think so — published pricing, the full DVSA 27-skill framework, AI lesson briefings and free access until 31 March 2027. For a franchise operator, Driving School Office is genuinely the stronger product: it has white-labelling, instructor expense tracking and franchise management that DriveSchoolPro simply does not have and is not currently building. It is also a longer-established platform. Pick on which side of that line you sit.',
+    links: [{ text: 'Get started free', url: OFFER.ctaPrimary.href }],
+  },
+  {
+    question: 'Does Driving School Office track the DVSA 27 driving skills?',
+    answer:
+      'It advertises a pupil progress tracker, but does not publicly advertise tracking against the DVSA 27-skill framework specifically. If DVSA skill-by-skill proficiency matters to you, ask them directly before committing rather than relying on this page — we can only report what they publish. DriveSchoolPro rates every pupil against all 27 skills and produces a test-readiness view from those ratings.',
+    links: [{ text: 'The DVSA 27 driving skills', url: '/dvsa-27-driving-skills/' }],
+  },
+  {
+    question: 'Where does Driving School Office genuinely win?',
+    answer:
+      'Three places. Franchise and multi-car management, including white-labelling so the software carries your school\'s branding rather than the vendor\'s. Instructor expense tracking, which matters when you employ or contract several instructors. And track record — it is an established UK platform with years of operation behind it, where DriveSchoolPro is newer. If any of those three is your priority, it is the better choice and we would rather tell you that than lose your trust.',
+    links: [],
+  },
+  {
+    question: 'Can I move my pupil records from Driving School Office to DriveSchoolPro?',
+    answer:
+      'Yes. The practical route is to export your pupil list to CSV and import it, then start logging DVSA skill ratings from your next lesson onward rather than trying to backfill history. Most instructors are running live within a day. You do not need to run both platforms in parallel for long — a week of real lessons is enough to know whether the switch works for you.',
+    links: [{ text: 'Switching from a paper diary', url: '/blog/switch-paper-diary-to-driving-school-software/' }],
+  },
+  {
+    question: 'Which is better for a single-car driving school?',
+    answer:
+      'DriveSchoolPro, on balance. The franchise features that justify Driving School Office — white-labelling, expense tracking across instructors, franchise administration — are exactly the features a single-car school never opens, and an unpublished price is harder to justify when you are the only person paying it. DriveSchoolPro is free until 31 March 2027 with no card required, so the trial costs nothing but your time.',
+    links: [{ text: 'Get started free', url: OFFER.ctaPrimary.href }],
+  },
+];
+
+const schemaMarkup = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'DriveSchoolPro vs Driving School Office: Honest Comparison for UK ADIs',
+  description:
+    'Side-by-side comparison of DriveSchoolPro and Driving School Office — features, pricing transparency, DVSA tracking, and which suits solo ADIs versus franchises.',
+  author: { '@type': 'Organization', name: 'DriveSchoolPro' },
+  publisher: { '@type': 'Organization', name: 'DriveSchoolPro' },
+  datePublished: '2026-08-19',
+  dateModified: '2026-08-19',
+};
+---
+
+<BaseLayout
+  title="DriveSchoolPro vs Driving School Office"
+  description="Honest comparison of DriveSchoolPro and Driving School Office. Pricing transparency, DVSA skill tracking, franchise features, and which suits solo UK ADIs."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Compare', href: '/compare/' },
+      { label: 'vs Driving School Office', href: '/compare/driving-school-office/' },
+    ]}
+  />
+
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1 bg-brand-red/20 text-brand-red-light rounded-full text-sm font-medium mb-4">Platform Comparison</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">DriveSchoolPro vs Driving School Office</h1>
+        <p class="text-xl text-gray-300 mb-8">
+          Two UK platforms built for different businesses. Driving School Office is franchise software. DriveSchoolPro is instructor software. The right answer depends entirely on which one you are running.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">Try DriveSchoolPro Free</a>
+          <a href="#comparison" class="btn-secondary text-lg px-8 py-4">See Feature Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FeaturedAnswer question="How does DriveSchoolPro compare to Driving School Office?">
+    Driving School Office is a long-established UK platform ("Engine 3.0") aimed at driving schools and franchises, with white-labelling, instructor expense tracking and franchise management. It does not publish its pricing — it advertises "Pay-As-You-Grow" and "First Instructor Free" and quotes on request. DriveSchoolPro is built for the individual ADI and small school: published pricing, the full DVSA 27-skill framework, AI lesson briefings, and free until 31 March 2027 during early access. If you run a franchise, Driving School Office is the better fit. If you teach, DriveSchoolPro is. Verified against drivingschooloffice.co.uk, August 2026.
+  </FeaturedAnswer>
+
+  <section class="section bg-white">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-3xl font-bold text-brand-navy mb-6">The honest summary</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6 border-t-4 border-gray-300">
+          <h3 class="font-bold text-brand-navy text-lg mb-3">Choose Driving School Office if…</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li>You run a franchise or a multi-car school and need white-labelled software carrying your own brand.</li>
+            <li>You need to track instructor expenses across a team.</li>
+            <li>You want an established platform with years of UK operation behind it, and you are comfortable requesting a quote.</li>
+            <li>Franchise administration is a real part of your week.</li>
+          </ul>
+        </div>
+        <div class="card p-6 border-t-4 border-brand-red">
+          <h3 class="font-bold text-brand-navy text-lg mb-3">Choose DriveSchoolPro if…</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li>You teach, and the software should get out of the way between lessons.</li>
+            <li>You want DVSA 27-skill tracking and a defensible test-readiness view for parents.</li>
+            <li>You want to know the price before you talk to anyone.</li>
+            <li>You would rather trial it tonight than book a demo call.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison" class="section bg-gray-50">
+    <div class="container-custom max-w-4xl">
+      <ComparisonTable
+        title="DriveSchoolPro vs Driving School Office"
+        description="Verified against drivingschooloffice.co.uk in August 2026. Where the vendor does not publish a detail, this table says so rather than guessing."
+        headers={['Feature', 'DriveSchoolPro', 'Driving School Office']}
+        rows={comparisonRows}
+      />
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-3xl font-bold text-brand-navy mb-6">Where Driving School Office genuinely wins</h2>
+      <p class="text-gray-700 mb-4">
+        We would rather be useful than flattering, so: there are real situations where Driving School Office is the correct purchase and DriveSchoolPro is not.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>Franchise operations.</strong> White-labelling means the software your instructors and pupils log into carries your school's branding, not the vendor's. For a franchise selling territories to instructors, that is not cosmetic — it is the product. DriveSchoolPro has no white-labelling and none planned.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>Instructor expense tracking.</strong> If you have several instructors submitting fuel, maintenance and training costs, having that inside the same system as the diary is genuinely valuable. DriveSchoolPro does not do this; you would keep it in your accounting software.
+      </p>
+      <p class="text-gray-700 mb-8">
+        <strong>Longevity.</strong> Driving School Office has been serving UK driving schools for years. DriveSchoolPro is newer. If "has it been around a while" is high on your list, that is a fair reason to choose them, and no feature table changes it.
+      </p>
+
+      <h2 class="text-3xl font-bold text-brand-navy mb-6">Where we think we are the better fit</h2>
+      <p class="text-gray-700 mb-4">
+        <strong>You can see the price.</strong> DriveSchoolPro publishes what it costs and is free until 31 March 2027 during early access, with pricing announced well before that date and nothing charged automatically. Driving School Office quotes on request. For a solo ADI budgeting a year ahead, a published number is worth something.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>DVSA skills are the spine of the product, not a feature.</strong> Every pupil is rated against all
+        <a href="/dvsa-27-driving-skills/" class="text-brand-red hover:underline">27 DVSA driving skills</a>, and test readiness is computed from those ratings rather than asserted. Driving School Office advertises a pupil progress tracker but does not publicly advertise the DVSA 27-skill framework — ask them directly if it matters to you.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>AI lesson briefings.</strong> Before each lesson, DriveSchoolPro generates a short briefing from your previous notes and the pupil's current skill ratings, so context carries between sessions without you re-reading your own notes in the car.
+        <a href="/how-progress-works/" class="text-brand-red hover:underline">How progress tracking works</a> covers the mechanism.
+      </p>
+      <p class="text-gray-700">
+        <strong>Automated Google review requests.</strong> Every test pass triggers a review request at the moment the pupil is happiest. For a school building local reputation, that compounds.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-brand-navy text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold mb-3">Try DriveSchoolPro — Free Until 31 March 2027</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">No credit card. No demo call. Set up in 3 minutes and run a week of real lessons before deciding.</p>
+      <a href={OFFER.ctaPrimary.href} class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
+        {OFFER.ctaPrimary.label} &rarr;
+      </a>
+      <p class="text-white/50 text-sm mt-3">{OFFER.short} &middot; No credit card required &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <FAQEnhanced
+    faqs={faqItems}
+    title="DriveSchoolPro vs Driving School Office — Common Questions"
+    site="driveschool"
+    pageUrl="https://driveschoolpro.com/compare/driving-school-office/"
+  />
+
+  <section class="section bg-gray-50">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-2xl font-bold text-brand-navy mb-6">Related comparisons</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/compare/total-drive/" class="card p-6 hover:shadow-lg transition-shadow group">
+          <h3 class="font-bold text-brand-navy mb-2 group-hover:text-brand-red transition-colors">vs Total Drive</h3>
+          <p class="text-gray-600 text-sm">The most established UK instructor app, from £18/month</p>
+        </a>
+        <a href="/blog/best-driving-school-software/" class="card p-6 hover:shadow-lg transition-shadow group">
+          <h3 class="font-bold text-brand-navy mb-2 group-hover:text-brand-red transition-colors">Full software roundup</h3>
+          <p class="text-gray-600 text-sm">Seven UK platforms compared on 2026 pricing</p>
+        </a>
+        <a href="/compare/" class="card p-6 hover:shadow-lg transition-shadow group">
+          <h3 class="font-bold text-brand-navy mb-2 group-hover:text-brand-red transition-colors">All comparisons</h3>
+          <p class="text-gray-600 text-sm">Every head-to-head we have published</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

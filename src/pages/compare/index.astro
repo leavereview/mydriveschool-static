@@ -1,0 +1,182 @@
+---
+import { OFFER } from '../../config/offer';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+import FeaturedAnswer from '../../components/seo/FeaturedAnswer.astro';
+import FAQEnhanced from '../../components/seo/FAQEnhanced.astro';
+
+// Every figure below is taken from the vendor's own public pricing page.
+// Verified August 2026. Where a vendor does not publish a price, we say so
+// rather than repeating a number from a comparison site.
+const platforms = [
+  {
+    name: 'Total Drive',
+    href: '/compare/total-drive/',
+    positioning: 'The most established UK instructor app',
+    price: 'From £18/month',
+    trial: '30-day free trial, no card',
+    bestFor: 'Instructors who want a proven, widely used UK platform and are happy to pay from day 31.',
+    gap: 'No AI lesson briefings, no automated Google review requests, no parent portal.',
+  },
+  {
+    name: 'Driving School Office',
+    href: '/compare/driving-school-office/',
+    positioning: 'Long-standing UK school and franchise admin ("Engine 3.0")',
+    price: 'Not published — "Pay-As-You-Grow"',
+    trial: 'Free trial offered; length not stated. "First Instructor Free"',
+    bestFor: 'Multi-car schools and franchises that need white-labelling and instructor expense tracking.',
+    gap: 'No published pricing, no native mobile app, and no DVSA 27-skill framework advertised.',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'What is the best driving school software in the UK?',
+    answer: 'There is no single best platform — it depends on whether you are a solo ADI or a multi-car school, and whether DVSA skill tracking matters to you. Total Drive is the most established UK instructor app at from £18/month. Driving School Office suits larger schools and franchises but does not publish its pricing. DriveSchoolPro is free until 31 March 2027 during early access and is built around the full DVSA 27-skill framework. Compare them side by side using the links on this page.',
+    links: [{ text: 'Full software comparison', url: '/blog/best-driving-school-software/' }],
+  },
+  {
+    question: 'How much should driving school software cost?',
+    answer: 'UK instructor software generally runs from about £18 to £99 per month per instructor. Total Drive publishes from £18/month. DrivingSchoolSoftware.com is £99/month. Some platforms, including Driving School Office, do not publish pricing at all and quote on request. DriveSchoolPro is free until 31 March 2027 while in early access, with pricing announced well before that date. Verified against vendor sites August 2026.',
+    links: [{ text: 'See DriveSchoolPro pricing', url: '/pricing/' }],
+  },
+  {
+    question: 'Do I need driving-school-specific software, or will a generic booking tool do?',
+    answer: 'A generic tool such as Acuity or Calendly will take bookings and payments perfectly well, and it is cheaper. What it cannot do is track a pupil against the DVSA 27 driving skills, detect a three-way clash between pupil, instructor and vehicle, or give a parent visibility of an under-18 pupil. If you only need a diary, generic is fine. If you are managing test readiness, it is not.',
+    links: [{ text: 'The DVSA 27 driving skills', url: '/dvsa-27-driving-skills/' }],
+  },
+  {
+    question: 'Why should I trust a comparison written by one of the vendors?',
+    answer: 'You should read it sceptically — we have an obvious interest. What we can offer is verifiability: every competitor price on these pages is taken from that vendor\'s own public pricing page, dated, and we state plainly where a competitor is better or more established than us. Where a vendor does not publish a price, we say that rather than inventing one. Check the figures against the vendor sites yourself.',
+    links: [],
+  },
+];
+
+const schemaMarkup = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Driving School Software Comparisons',
+  description:
+    'Honest side-by-side comparisons of UK driving school software: DriveSchoolPro vs Total Drive, Driving School Office and other platforms. Vendor-verified pricing.',
+  url: 'https://driveschoolpro.com/compare/',
+  publisher: { '@type': 'Organization', name: 'DriveSchoolPro' },
+};
+---
+
+<BaseLayout
+  title="Compare UK Driving School Software"
+  description="Honest side-by-side comparisons of UK driving school software. Vendor-verified pricing for Total Drive, Driving School Office and DriveSchoolPro."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+  <BreadcrumbsEnhanced
+    site="driveschool"
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Compare', href: '/compare/' },
+    ]}
+  />
+
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-navy to-gray-900 text-white py-16">
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1 bg-brand-red/20 text-brand-red-light rounded-full text-sm font-medium mb-4">Platform Comparisons</span>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Compare UK Driving School Software</h1>
+        <p class="text-xl text-gray-300 mb-8">
+          Side-by-side comparisons against the platforms UK ADIs actually shortlist. Every competitor price comes from that vendor's own pricing page, and we say where they beat us.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">Try DriveSchoolPro Free</a>
+          <a href="/blog/best-driving-school-software/" class="btn-secondary text-lg px-8 py-4">Read the Full Roundup</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FeaturedAnswer question="Which driving school software should a UK ADI choose?">
+    For most solo UK ADIs the shortlist comes down to three: Total Drive, the most established UK instructor app at from £18/month with a 30-day trial; Driving School Office, aimed at multi-car schools and franchises but with no published pricing; and DriveSchoolPro, free until 31 March 2027 during early access and built around the full DVSA 27-skill framework. If you are managing test readiness rather than just a diary, prioritise DVSA skill tracking over price. All pricing verified against vendor sites August 2026.
+  </FeaturedAnswer>
+
+  <section class="section bg-white">
+    <div class="container-custom max-w-5xl">
+      <h2 class="text-3xl font-bold text-brand-navy mb-3">Head-to-head comparisons</h2>
+      <p class="text-gray-600 mb-10">Each page covers features, pricing, where the competitor genuinely wins, and where we think we are the better fit.</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {platforms.map((p) => (
+          <a href={p.href} class="card p-6 hover:shadow-lg transition-shadow group block">
+            <h3 class="font-bold text-brand-navy text-xl mb-1 group-hover:text-brand-red transition-colors">
+              DriveSchoolPro vs {p.name}
+            </h3>
+            <p class="text-gray-500 text-sm mb-4">{p.positioning}</p>
+            <dl class="text-sm space-y-2 mb-4">
+              <div class="flex gap-2">
+                <dt class="font-semibold text-gray-700 w-24 flex-shrink-0">Price</dt>
+                <dd class="text-gray-600">{p.price}</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold text-gray-700 w-24 flex-shrink-0">Trial</dt>
+                <dd class="text-gray-600">{p.trial}</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold text-gray-700 w-24 flex-shrink-0">Best for</dt>
+                <dd class="text-gray-600">{p.bestFor}</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold text-gray-700 w-24 flex-shrink-0">Gaps</dt>
+                <dd class="text-gray-600">{p.gap}</dd>
+              </div>
+            </dl>
+            <span class="text-brand-red font-semibold text-sm">Read the comparison &rarr;</span>
+          </a>
+        ))}
+      </div>
+
+      <p class="text-gray-500 text-sm mt-8">
+        Looking for a wider list including DrivingSchoolSoftware.com, DriveScout and Acuity? The
+        <a href="/blog/best-driving-school-software/" class="text-brand-red hover:underline"> full driving school software roundup</a> covers seven platforms with pricing, or read the
+        <a href="/blog/drivescout-vs-drivingschoolsoftware-comparison/" class="text-brand-red hover:underline">DriveScout vs DrivingSchoolSoftware.com comparison</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-gray-50">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-2xl font-bold text-brand-navy mb-6">What actually separates these platforms</h2>
+      <div class="space-y-5 text-gray-700">
+        <p>
+          Almost every platform on this list will take a booking, send a reminder and produce an invoice. Those are table stakes and they are not worth choosing on. Three things genuinely differ.
+        </p>
+        <p>
+          <strong>DVSA skill tracking.</strong> Some platforms record a lesson; fewer record a pupil's proficiency against each of the
+          <a href="/dvsa-27-driving-skills/" class="text-brand-red hover:underline">DVSA 27 driving skills</a>. If you have ever had to justify to a parent why their child is not test-ready, the difference is obvious. Generic scheduling tools have none of this.
+        </p>
+        <p>
+          <strong>Whether pricing is published at all.</strong> Total Drive and DriveSchoolPro publish their terms openly. Driving School Office quotes on request. Neither approach is wrong, but an unpublished price usually means the number varies by who is asking, and it makes budgeting harder for a solo ADI.
+        </p>
+        <p>
+          <strong>Who the software is really built for.</strong> Franchise-oriented tools carry white-labelling and instructor expense tracking that a solo ADI will never open. Instructor-first tools skip the franchise layer. Buying the wrong side of that line is the most common expensive mistake — see
+          <a href="/blog/switch-paper-diary-to-driving-school-software/" class="text-brand-red hover:underline">switching from a paper diary</a> for what the transition actually involves.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-brand-navy text-white text-center">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold mb-3">Try DriveSchoolPro — Free Until 31 March 2027</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto">No credit card. No demo call. Set up in 3 minutes and run a week of real lessons before deciding.</p>
+      <a href={OFFER.ctaPrimary.href} class="inline-block bg-brand-red text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors">
+        {OFFER.ctaPrimary.label} &rarr;
+      </a>
+      <p class="text-white/50 text-sm mt-3">{OFFER.short} &middot; No credit card required &middot; Cancel anytime</p>
+    </div>
+  </section>
+
+  <FAQEnhanced
+    faqs={faqItems}
+    title="Choosing Driving School Software — Common Questions"
+    site="driveschool"
+    pageUrl="https://driveschoolpro.com/compare/"
+  />
+</BaseLayout>

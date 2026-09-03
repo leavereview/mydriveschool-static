@@ -124,7 +124,7 @@ Your instructor can assess eco-driving alongside your normal lesson by noting ho
 ## Related Skills
 
 - [Use of Speed (Skill 11)](/blog/speed-awareness-driving/) — Appropriate speed and eco-driving overlap: smooth speed management reduces both hazards and fuel use
-- [Anticipation and Planning (Skill 10)](/blog/anticipation-planning-driving/) — The further ahead you read the road, the less often you accelerate unnecessarily
+- [Anticipation and Planning (Skill 10)](/blog/anticipation-driving/) — The further ahead you read the road, the less often you accelerate unnecessarily
 - [Dealing with Other Road Users (Skill 12)](/blog/other-road-users/) — Smooth, predictable driving benefits other road users as well as your fuel consumption
 
 ## Related Articles
