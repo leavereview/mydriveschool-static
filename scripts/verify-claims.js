@@ -84,6 +84,7 @@ const STALE = [
   ['card payments', 'coming soon', 60, 'Stripe Connect is live'],
   ['card payments', 'in development', 60, 'Stripe Connect is live'],
   ['online payments', 'coming soon', 60, 'Stripe Connect is live'],
+  ['online booking', 'coming soon', 60, 'portal booking and the embed widget are live'],
   ['multi-instructor management', 'coming soon', 60, 'FOUNDING includes School tier'],
 ];
 
