@@ -173,9 +173,9 @@ Understanding your business metrics—revenue per instructor, average lessons to
 **What We Like**:
 - Built specifically for UK driving schools (DVSA syllabus tracking included)
 - Unlimited students and lessons at all price tiers
-- Email reminders included (configurable timing, delivery logs, one-click confirmation); WhatsApp reminders coming soon
+- Email reminders included (configurable timing, delivery logs); WhatsApp reminders coming soon
 - Excellent mobile app for instructors
-- Invoicing and payment recording (cash, bank transfer, cheque); online card payments via Stripe coming soon
+- Invoicing and payment recording (cash, bank transfer, cheque), plus online card payments via Stripe pay-links
 - Free until 31 March 2027 (early access) with no credit card required
 - Outstanding UK-based support (avg response time: 2 hours)
 

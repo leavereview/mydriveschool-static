@@ -59,7 +59,7 @@ const comparisonData = [
     highlight: true
   },
   {
-    label: 'Student Self-Service Portal (Coming Soon)',
+    label: 'Student Self-Service Portal',
     values: [true, false, false]
   },
   {
@@ -91,7 +91,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Document Management with Expiry Alerts',
+    label: 'Student Records & Lesson History',
     values: [true, false, false]
   },
   {
@@ -136,14 +136,14 @@ const faqItems = [
   },
   {
     question: "Can I track student progress with management software?",
-    answer: "Yes. DriveSchoolPro includes the full DVSA competency framework with 8 categories and 27 skills, each tracked on a 6-level proficiency scale (Not Started to Reflection). This provides cross-instructor continuity — any instructor can pick up exactly where the last left off. Students will soon be able to view their own progress through their self-service portal (coming soon).",
+    answer: "Yes. DriveSchoolPro includes the full DVSA competency framework with 8 categories and 27 skills, each tracked on a 6-level proficiency scale (Not Started to Reflection). This provides cross-instructor continuity — any instructor can pick up exactly where the last left off. Students view their own progress through their self-service portal.",
     links: [
       { text: 'Student management features', url: '/driving-school-software/' }
     ]
   },
   {
     question: "Does the software handle payments and invoicing?",
-    answer: "Yes. Record payments via cash, bank transfer, and cheque. Create invoices with line items, track status through a full lifecycle, and send to students via email. Sell lesson packages with configurable hours, pricing, and expiry dates. Refund processing is also supported. Online card payments via Stripe are coming soon.",
+    answer: "Yes. Record payments via cash, bank transfer, and cheque. Create invoices with line items, track status through a full lifecycle, and send to students via email. Sell lesson packages with configurable hours, pricing, and expiry dates. Refund processing is also supported. You can also take card payments through Stripe pay-links on invoices. We take no commission — 0% of your payments — and Stripe's standard processing fee applies to card payments.",
     links: [
       { text: 'Pricing details', url: '/pricing/' }
     ]
@@ -180,7 +180,7 @@ const faqItems = [
   },
   {
     question: "Can parents access their child's progress?",
-    answer: "The student self-service portal itself is coming soon — students will be able to view lessons, track DVSA progress, and manage their details. A dedicated parent/guardian portal for minor students is planned for after the student portal launches. In the meantime, automated lesson reminders keep parents informed.",
+    answer: "Pupils log in to the student portal to view upcoming and past lessons, track their DVSA progress, check package balances and invoices, and manage their own details. A dedicated parent and guardian view is still on our roadmap.",
     links: [
       { text: 'Student portal features', url: '/driving-school-software/' }
     ]
@@ -194,8 +194,8 @@ const faqItems = [
     ]
   },
   {
-    question: "Can I track driving test bookings and results?",
-    answer: "Yes. Record test bookings with date, centre, and type. Log results and examiner notes when they come in. Your dashboard shows upcoming tests across all students, and reports track your school's first-time pass rate over time. Students near their test date are highlighted with their DVSA readiness score so you can focus final lessons effectively.",
+    question: "How do I know when a pupil is ready for their test?",
+    answer: "Every pupil is tracked against the full DVSA framework — 8 categories and 27 skills on a six-level scale from Not Started to Reflection — so readiness is based on evidence from real lessons rather than a hunch. Pupils near test readiness surface in their progress view, and they can follow along in their own portal. Recording test bookings and results, with pass-rate reporting, is coming soon.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
@@ -210,7 +210,7 @@ const faqItems = [
   },
   {
     question: "Can I upload and track student documents?",
-    answer: "Yes. Upload provisional licences and custom document types. Set expiry dates and the system alerts you when documents are approaching expiry. Documents are marked as verified or pending for clear compliance status."
+    answer: "Every pupil has a full record — contact details, DVSA progress, lesson history, notes and a running balance — so whoever teaches them next has the whole picture. Document storage is coming soon."
   },
   {
     question: "Is there a student financial ledger?",
@@ -271,7 +271,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school management software?">
-    Driving school management software is an all-in-one platform that handles student records, DVSA competency tracking, scheduling, invoicing, instructor management, and business reporting. It replaces spreadsheets and paper files with automated systems that cut admin time — early users report saving 10+ hours a week — through features like three-way conflict detection, automated reminders, and a student self-service portal (coming soon).
+    Driving school management software is an all-in-one platform that handles student records, DVSA competency tracking, scheduling, invoicing, instructor management, and business reporting. It replaces spreadsheets and paper files with automated systems that cut admin time — early users report saving 10+ hours a week — through features like three-way conflict detection, automated reminders, and a student self-service portal.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->
@@ -322,7 +322,7 @@ const schemaMarkup = {
           <li><strong>Single source of truth:</strong> All student, instructor, and business data in one place. No more hunting through spreadsheets or paper files.</li>
           <li><strong>Automated workflows:</strong> Reminders, invoices, and communications happen automatically instead of manually.</li>
           <li><strong>Better decisions:</strong> Real-time reporting shows what's working and what needs attention.</li>
-          <li><strong>Professional image:</strong> Professional invoicing, automated communications, and a student portal (coming soon) make you look modern and organised.</li>
+          <li><strong>Professional image:</strong> Professional invoicing, automated communications, and a student portal make you look modern and organised.</li>
         </ul>
 
         <h2 id="key-features" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Key Features of Driving School Management Software</h2>
@@ -330,15 +330,15 @@ const schemaMarkup = {
         <div class="grid md:grid-cols-2 gap-6 my-8">
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Student Management</h3>
-            <p class="text-gray-700 text-sm">Complete student profiles with DVSA competency tracking (8 categories, 27 skills), per-student notification preferences, and student portal access (coming soon).</p>
+            <p class="text-gray-700 text-sm">Complete student profiles with DVSA competency tracking (8 categories, 27 skills), per-student notification preferences, and student portal access.</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Scheduling</h3>
-            <p class="text-gray-700 text-sm">Drag-and-drop calendar with day/week/month views, three-way conflict detection, automated reminders, and recurring lesson series.</p>
+            <p class="text-gray-700 text-sm">Drag-and-drop calendar with day/week/month views, three-way conflict detection, and automated reminders. Recurring lesson series coming soon.</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Payments</h3>
-            <p class="text-gray-700 text-sm">Invoice lifecycle management, payment recording (cash, bank transfer, cheque), lesson packages, and email delivery. Online card payments coming soon. See how this fits alongside <a href="/driving-instructor-accounting-software/" class="text-brand-red hover:underline">driving instructor accounting software</a>.</p>
+            <p class="text-gray-700 text-sm">Invoice lifecycle management, payment recording (cash, bank transfer, cheque), lesson packages, and email delivery, plus card payments through Stripe pay-links. See how this fits alongside <a href="/driving-instructor-accounting-software/" class="text-brand-red hover:underline">driving instructor accounting software</a>.</p>
           </div>
           <div class="bg-gray-50 p-6 rounded-lg">
             <h3 class="font-bold text-brand-navy mb-2">Reporting</h3>
@@ -383,7 +383,7 @@ const schemaMarkup = {
           <li>8 DVSA categories covering all aspects of driving</li>
           <li>27 individual competencies with 6-level proficiency scale (Not Started to Reflection)</li>
           <li>Cross-instructor continuity — any instructor sees the complete picture</li>
-          <li>Students will soon view their own progress through their self-service portal (coming soon)</li>
+          <li>Students view their own DVSA progress, lessons, invoices and package balances in their self-service portal</li>
         </ul>
 
         <p>This ensures consistency across multiple instructors and gives students clear visibility into their progress.</p>
@@ -400,9 +400,9 @@ const schemaMarkup = {
 
         <p>Related: <a href="/blog/student-management-driving-schools/" class="text-brand-red hover:underline">Student Management for Driving Schools: Complete Guide</a></p>
 
-        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Student Portal <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Student Portal</h3>
 
-        <p>Students will get their own secure login to self-serve — launching shortly after the initial release:</p>
+        <p>Students get their own secure login to self-serve:</p>
 
         <ul class="space-y-2">
           <li>View upcoming and past lessons</li>
@@ -450,8 +450,8 @@ const schemaMarkup = {
         </div>
 
         <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-          <p class="font-bold text-brand-navy">Online card payments coming soon</p>
-          <p>Stripe integration for online card payments is in development. Currently, the system supports manual payment recording with full invoice lifecycle management.</p>
+          <p class="font-bold text-brand-navy">Take card payments online</p>
+          <p>Send invoices with Stripe pay-links so pupils can pay by card, alongside manual recording of cash, bank transfer and cheque. We take no commission — 0% of your payments — and Stripe's standard processing fee applies to card payments.</p>
         </div>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Package Sales</h3>
@@ -469,25 +469,25 @@ const schemaMarkup = {
 
         <h2 id="test-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Track Every Student's Driving Test Journey</h2>
 
-        <p>Student management and driving test management are two halves of the same job. Once you can manage each student's driving test from the same record that holds their DVSA progress, lessons, and payments, nothing falls through the cracks. DriveSchoolPro keeps every pupil's <strong>driving test student records</strong> — bookings, readiness, and results — attached to their profile, so the path from first lesson to test pass is one continuous, visible journey rather than a separate spreadsheet you have to cross-reference.</p>
+        <p>Student management and driving test management are two halves of the same job. Once you can manage each student's driving test from the same record that holds their DVSA progress, lessons, and payments, nothing falls through the cracks. DriveSchoolPro keeps every pupil's <strong>driving test student records</strong> — DVSA readiness today, with test bookings and results coming soon — attached to their profile, so the path from first lesson to test pass is one continuous, visible journey rather than a separate spreadsheet you have to cross-reference.</p>
 
-        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Test Bookings on the Student Record</h3>
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Test Bookings on the Student Record <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
 
-        <p>Record each practical test booking with the date, test centre, and test type directly against the student. Your dashboard surfaces upcoming tests across every pupil so nothing is missed, and because the booking lives on the student record, you always see it alongside that learner's lesson history and DVSA progress — not buried in a separate diary.</p>
+        <p>Recording each practical test booking — date, test centre and test type — directly against the student, with upcoming tests surfaced on your dashboard, is coming soon. Today the same record already holds their DVSA progress, lessons and payments.</p>
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">DVSA Test Readiness, Per Student</h3>
 
         <p>For every student approaching their test date, the system highlights a DVSA readiness score drawn from their progress across the 27 skills (8 categories, 6-level scale). That tells you, at a glance, which pupils are genuinely test-ready and which still have weak competencies to shore up — so you can manage each student's driving test preparation and focus final lessons exactly where they matter most. It is the difference between booking a test on a hunch and booking it on evidence.</p>
 
-        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Results &amp; Per-Student Pass Rates</h3>
+        <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Results &amp; Per-Student Pass Rates <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
 
-        <p>When results come in, log the outcome — pass or fail — with examiner feedback against the student's record. Over time, reporting rolls these up into your school's first-time pass rate and lets you see results by student and by instructor. Driving test student management isn't just admin: tracking outcomes against readiness scores shows you which learners you're sending to test too early, and helps you lift your overall pass rate lesson by lesson.</p>
+        <p>Progress is recorded against the DVSA framework after each lesson, so a pupil's readiness builds from evidence rather than memory. Over time you can see how each pupil is progressing, and pupils can follow along in their own portal. Logging test bookings and results against a pupil's record, and rolling those up into your school's first-time pass rate, is coming soon.</p>
 
         <p>Related: <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">Driving School Scheduling Software</a> for booking the lessons that get students test-ready.</p>
 
         <h2 id="document-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Student Document Tracking</h2>
 
-        <p>Upload and manage student documents — provisional licences, passport photos, theory test certificates, medical declarations, and any custom document types your school requires. Set expiry dates and the dashboard alerts you when documents are approaching expiry. Verified documents are clearly marked so you always know a student's compliance status at a glance.</p>
+        <p>Every pupil has a complete record — contact details, DVSA progress, lesson history, notes and a running balance — so whoever teaches them next has the whole picture without a handover call. Document storage is coming soon.</p>
 
         <h2 id="instructor-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Instructor Management</h2>
 
@@ -514,6 +514,18 @@ const schemaMarkup = {
           <li>Set availability templates and submit time-off requests</li>
           <li>View their performance and assigned students</li>
         </ul>
+
+        <h2 id="communication" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Keeping Pupils in the Loop</h2>
+        <p class="text-gray-700 mb-4">
+          Send a pupil a quick update in one tap — running late, on my way, arrived — without digging
+          out your phone and typing it out. Automated email reminders go out before every lesson
+          (WhatsApp coming soon), with configurable timing and full delivery logs so you can see
+          exactly what was sent and when.
+        </p>
+        <p class="text-gray-700 mb-4">
+          After a pass, DriveSchoolPro can prompt you to ask for a Google review at the moment a pupil
+          is happiest, and keeps a record of who has already been asked so nobody gets chased twice.
+        </p>
 
         <h2 id="reporting" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Reporting & Analytics</h2>
 

@@ -16,7 +16,6 @@ const comparisonRows = [
   { label: 'Embeddable booking widget for your website', values: [true, false] },
   { label: 'Stripe Connect payments', values: [true, false] },
   { label: 'Pupil self-service portal', values: [true, true] },
-  { label: 'Parent portal access', values: [true, false] },
   { label: 'Test readiness scoring', values: [true, true] },
   { label: 'Transparent public pricing', values: [true, true] },
   { label: 'Month-to-month, no contract', values: [true, 'Unknown'] },
@@ -27,7 +26,7 @@ const comparisonRows = [
 const faqItems = [
   {
     question: "Is DriveSchoolPro better than Total Drive?",
-    answer: "It depends what matters to you. On price, right now DriveSchoolPro wins: it's free until 31 March 2027 while we're in early access, against Total Drive's £18/month after its 30-day trial. On track record, Total Drive is the more established platform and we'd rather you knew that. Where DriveSchoolPro differs is the feature set: AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments, a parent portal and an embeddable booking widget. Pricing verified July 2026.",
+    answer: "It depends what matters to you. On price, right now DriveSchoolPro wins: it's free until 31 March 2027 while we're in early access, against Total Drive's £18/month after its 30-day trial. On track record, Total Drive is the more established platform and we'd rather you knew that. Where DriveSchoolPro differs is the feature set: AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments and an embeddable booking widget. Pricing verified July 2026.",
     links: [{ text: 'Get started free', url: OFFER.ctaPrimary.href }]
   },
   {
@@ -47,7 +46,7 @@ const faqItems = [
   },
   {
     question: "Which is better for a solo ADI?",
-    answer: "Both suit solo ADIs. On cost, DriveSchoolPro is currently free until 31 March 2027 (early access, no per-student limits), while Total Drive is from £18/month after its 30-day trial. On maturity, Total Drive is the more established platform. If AI lesson briefings, automated Google review requests after each pass, Stripe Connect payments and a parent portal appeal, DriveSchoolPro is the better fit — and trying it costs nothing. Neither platform asks for a card to start.",
+    answer: "Both suit solo ADIs. On cost, DriveSchoolPro is currently free until 31 March 2027 (early access, no per-student limits), while Total Drive is from £18/month after its 30-day trial. On maturity, Total Drive is the more established platform. If AI lesson briefings, automated Google review requests after each pass and Stripe Connect payments appeal, DriveSchoolPro is the better fit — and trying it costs nothing. Neither platform asks for a card to start.",
     links: [{ text: 'Get started free', url: OFFER.ctaPrimary.href }]
   },
   {
@@ -103,7 +102,7 @@ const schemaMarkup = {
   </section>
 
   <FeaturedAnswer question="How does DriveSchoolPro compare to Total Drive?">
-    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking, scheduling and openly published terms. Total Drive is the more established option, from £18/month with a 30-day free trial. DriveSchoolPro is free until 31 March 2027 while in early access — no card required — and adds AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments, a parent portal and an embeddable booking widget. Pricing verified July 2026.
+    DriveSchoolPro and Total Drive are both UK driving school platforms with DVSA tracking, scheduling and openly published terms. Total Drive is the more established option, from £18/month with a 30-day free trial. DriveSchoolPro is free until 31 March 2027 while in early access — no card required — and adds AI-generated lesson briefings, automated Google review requests after each test pass, Stripe Connect payments and an embeddable booking widget. Pricing verified July 2026.
   </FeaturedAnswer>
 
   <!-- Summary Cards -->
@@ -127,7 +126,7 @@ const schemaMarkup = {
               'Email reminders (WhatsApp coming soon)',
               'Three-way conflict detection',
               'Embeddable booking widget',
-              'Pupil and parent portals',
+              'Pupil self-service portal',
               'Stripe Connect payments',
               OFFER.short + ', no card required',
             ].map(item => (
@@ -158,7 +157,6 @@ const schemaMarkup = {
               { text: 'SMS and email reminders', has: true },
               { text: 'No embeddable booking widget', has: false },
               { text: 'Pupil portal included', has: true },
-              { text: 'No parent portal', has: false },
               { text: '30-day free trial, no card required', has: true },
               { text: 'Discounts for multi-car instructors', has: true },
             ].map(({ text, has }) => (
@@ -245,11 +243,11 @@ const schemaMarkup = {
           },
           {
             title: 'WhatsApp reminders (coming soon)',
-            body: 'DriveSchoolPro sends automated email reminders with one-click confirm today, and WhatsApp reminders are coming soon — UK pupils actually read WhatsApp. Total Drive doesn\'t offer WhatsApp reminders.'
+            body: 'DriveSchoolPro sends automated email reminders today, and WhatsApp reminders are coming soon — UK pupils actually read WhatsApp. Total Drive doesn\'t offer WhatsApp reminders.'
           },
           {
-            title: 'Stripe Connect payments and a parent portal',
-            body: 'DriveSchoolPro takes payments through Stripe Connect and gives parents their own portal access — useful when you teach under-18s and the person paying is not the person learning. Total Drive offers a pupil portal but no parent access.'
+            title: 'Stripe Connect payments built in',
+            body: 'DriveSchoolPro takes card payments through Stripe Connect, so pupils can pay from an invoice pay-link and the money lands in your own account — we take no commission on it.'
           },
           {
             title: 'Free during early access — for any number of instructors',

@@ -75,7 +75,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Student Self-Service Portal (Coming Soon)',
+    label: 'Student Self-Service Portal',
     values: [true, false, false]
   },
   {
@@ -83,11 +83,11 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Multi-Instructor Management (Coming Soon)',
+    label: 'Multi-Instructor Management',
     values: [true, false, false]
   },
   {
-    label: 'Online Booking Widget (Coming Soon)',
+    label: 'Online Booking Widget',
     values: [true, false, false]
   },
   {
@@ -99,11 +99,11 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Document Management with Expiry Alerts',
+    label: 'Student Records & Lesson History',
     values: [true, false, false]
   },
   {
-    label: 'Lesson Confirmation via Email with Message Templates',
+    label: 'Email Reminders with Message Templates',
     values: [true, false, false]
   }
 ];
@@ -127,7 +127,7 @@ const faqItems = [
   },
   {
     question: "Can students book lessons online?",
-    answer: "A student self-service portal is coming soon — students will be able to view upcoming and past lessons, track their DVSA competency progress, check package balances, and manage their personal details. Schools will also be able to embed a public booking widget on their website. In the meantime, scheduling is handled through the admin calendar with three-way conflict detection.",
+    answer: "Yes. Pupils log in to the student portal to view upcoming and past lessons, track their DVSA competency progress, check package balances and invoices, book from your live availability, and manage their own details.",
     links: [
       { text: 'Student portal features', url: '/driving-school-management-software/' }
     ]
@@ -142,14 +142,14 @@ const faqItems = [
   },
   {
     question: "Can I track student progress?",
-    answer: "Yes. The full DVSA competency framework tracks 27 skills across 8 categories with a 6-level proficiency scale. After each lesson, instructors record which competencies were covered and update proficiency levels. Students will soon be able to see their progress through their own portal, which motivates them and reduces 'When will I be ready?' questions.",
+    answer: "Yes. The full DVSA competency framework tracks 27 skills across 8 categories with a 6-level proficiency scale. After each lesson, instructors record which competencies were covered and update proficiency levels. Students see their progress through their own portal, which motivates them and reduces 'When will I be ready?' questions.",
     links: [
       { text: 'Progress tracking features', url: '/driving-school-management-software/' }
     ]
   },
   {
     question: "How does automated billing work?",
-    answer: "Create lesson packages with configurable hours, pricing, and expiry dates. The system generates invoices with line items, tracks payment status through a full lifecycle, and sends invoices to students via email. Record payments via cash, bank transfer, or cheque. Online card payments via Stripe are coming soon.",
+    answer: "Create lesson packages with configurable hours, pricing, and expiry dates. The system generates invoices with line items, tracks payment status through a full lifecycle, and sends invoices to students via email. Record payments via cash, bank transfer, or cheque. You can also take card payments through Stripe pay-links on invoices. We take no commission — 0% of your payments — and Stripe's standard processing fee applies to card payments.",
     links: [
       { text: 'See pricing', url: '/pricing/' }
     ]
@@ -186,7 +186,7 @@ const faqItems = [
   },
   {
     question: "Can I embed a booking widget on my website?",
-    answer: "An embeddable booking widget is coming soon. When launched, you'll be able to add it to any website with a single code snippet so students can see available time slots, choose a lesson type, and book directly. In the meantime, you manage all bookings through the drag-and-drop calendar.",
+    answer: "Yes. Add the embeddable booking widget to any website with a single code snippet, and pupils see your live availability, pick a slot, and book — with three-way conflict detection running before the booking is confirmed.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
@@ -200,7 +200,7 @@ const faqItems = [
   },
   {
     question: "Can I track driving test dates and results?",
-    answer: "Yes. Record test bookings with date, centre, and test type. Log results when they come in. Your dashboard shows upcoming tests across all students, and reporting tracks your school's first-time pass rate over time.",
+    answer: "You track every pupil against the full DVSA framework — 8 categories and 27 skills, each on a six-level scale — so you can see at a glance who is genuinely ready for test and who still has gaps to close. Recording test bookings and test results, with first-time pass rate reporting, is coming soon.",
     links: [
       { text: 'Management features', url: '/driving-school-management-software/' }
     ]
@@ -292,7 +292,7 @@ const faqItems = [
         <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div>
             <h3 class="text-xl font-bold text-brand-navy mb-3">Three-Way Scheduling</h3>
-            <p class="text-gray-700">Drag-and-drop calendar with conflict detection across students, instructors, and vehicles. Day, week, and month views with recurring lesson series.</p>
+            <p class="text-gray-700">Drag-and-drop calendar with conflict detection across students, instructors, and vehicles. Day, week, and month views. Recurring lesson series coming soon.</p>
           </div>
           <MarketingScreenshot
             src="/images/marketing/calendar-week-view.webp"
@@ -321,7 +321,7 @@ const faqItems = [
         <!-- Student Portal -->
         <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div>
-            <h3 class="text-xl font-bold text-brand-navy mb-3">Student Portal <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Student Portal</h3>
             <p class="text-gray-700">Secure student login to view lessons, track DVSA progress, check package balances, and manage personal details.</p>
           </div>
           <div class="flex justify-center">
@@ -354,23 +354,23 @@ const faqItems = [
         <!-- Feature blocks without dedicated screenshots — clean card grid -->
         <div class="grid md:grid-cols-2 gap-6 mb-8">
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
-            <h3 class="text-xl font-bold text-brand-navy mb-3">Online Booking Widget <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Online Booking Widget</h3>
             <p class="text-gray-700">Let new students book lessons from your website — 24/7, without a phone call. Embed the DriveSchoolPro booking widget on any website with a single code snippet. Students choose their lesson type, pick an available time slot, enter their details, and book instantly. You control which times are available, which lesson types are bookable, and how far ahead students can book. Existing students can also book directly through their secure portal.</p>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
             <h3 class="text-xl font-bold text-brand-navy mb-3">Lesson Delivery Workflow</h3>
-            <p class="text-gray-700">After each lesson, record exactly what happened — directly from your phone. The outcome wizard walks you through selecting which DVSA competencies were covered, updating proficiency levels, and adding instructor notes. Everything is saved to the student's progress record instantly, so the next instructor (or you, next week) knows exactly where to pick up. Students will soon see their updated progress through their self-service portal.</p>
+            <p class="text-gray-700">After each lesson, record exactly what happened — directly from your phone. The outcome wizard walks you through selecting which DVSA competencies were covered, updating proficiency levels, and adding instructor notes. Everything is saved to the student's progress record instantly, so the next instructor (or you, next week) knows exactly where to pick up. Students see their updated progress in their own self-service portal.</p>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
-            <h3 class="text-xl font-bold text-brand-navy mb-3">Driving Test Management</h3>
-            <p class="text-gray-700">Track practical test bookings with date, test centre, and test type. When results come in, record pass or fail with examiner notes. The dashboard shows upcoming tests across all students, and you can monitor your school's first-time pass rate to measure the quality of your instruction over time.</p>
+            <h3 class="text-xl font-bold text-brand-navy mb-3">Driving Test Management <span class="badge-coming-soon ml-2">Coming Soon</span></h3>
+            <p class="text-gray-700">Every pupil is tracked against the full DVSA framework — 8 categories and 27 skills on a six-level scale — so test readiness is based on evidence from real lessons. Pupils can follow their own progress in the student portal. Recording test bookings with date, centre and type, logging results, and first-time pass rate reporting are coming soon.</p>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
             <h3 class="text-xl font-bold text-brand-navy mb-3">Student Documents &amp; Compliance</h3>
-            <p class="text-gray-700">Upload and track student documents — provisional licence, passport photos, medical declarations — with expiry date alerts. The dashboard flags documents approaching expiry so nothing slips through the cracks. Custom document categories let you track whatever your school requires.</p>
+            <p class="text-gray-700">Keep every pupil's contact details, DVSA progress, lesson history, notes and running balance in one record, so anyone covering a lesson has the full picture.</p>
           </div>
         </div>
       </div>
