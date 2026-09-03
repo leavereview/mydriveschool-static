@@ -32,6 +32,12 @@ function walk(dir) {
 // decode the entities Astro emits, collapse whitespace, lowercase.
 function normalise(html) {
   return html
+    // Close block-level elements with a sentinel first. Proximity must not read
+    // a marker that belongs to the NEXT heading or paragraph as if it belonged
+    // to the last words of this one - that artifact produced two false
+    // positives (a "Coming Soon" badge on a following <h3>, and a feature list
+    // where the marker sat nearer a later item than the word that owned it).
+    .replace(/<\/(h[1-6]|p|li|td|th|div|section|article|tr|ul|ol)>/gi, ' \u00b6 ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&#8212;|&mdash;/g, '-').replace(/&#8217;|&rsquo;/g, "'")
     .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
@@ -53,7 +59,6 @@ const FORBIDDEN = [
   ['upload and manage student documents', 'documents UI has no surface'],
   ['instructor utilisation report', 'utilisationReportFlag is off'],
   ['monitors your utilisation', 'utilisationReportFlag is off'],
-  ['driving test bookings and results', '/tests is gated with /reports/tests'],
   ['invite a parent', 'parentAccessFlag is off'],
   ['parent portal', 'parentAccessFlag is off'],
   ['parent portals', 'parentAccessFlag is off'],
@@ -67,14 +72,31 @@ const FORBIDDEN = [
 const PAIRED = [
   ['recurring lesson', 'coming soon', 120, 'recurringBookingFlag is off'],
   ['recurring series', 'coming soon', 120, 'recurringBookingFlag is off'],
+  // Test bookings/results and pass-rate reporting are BUILT but hidden: /tests
+  // and /reports/tests share one predicate (testsReportFlag, off). The decision
+  // is to keep selling them as upcoming rather than drop them, so they are
+  // allowed wherever a coming-soon marker sits alongside.
+  //
+  // These match PRODUCT-CAPABILITY phrasings only. Bare "pass rate" and "test
+  // results" are domain vocabulary all over the blog - DVSA national rates,
+  // "Premature Test Bookings" as a section heading - and guarding them produced
+  // 33 hits that were almost all legitimate editorial. A guard that cries wolf
+  // gets switched off, so it only fires on wording that promises a feature.
+  ['recording test bookings', 'coming soon', 160, 'testsReportFlag is off'],
+  ['record test bookings', 'coming soon', 160, 'testsReportFlag is off'],
+  ['practical test booking', 'coming soon', 160, 'testsReportFlag is off'],
+  ['logging test bookings', 'coming soon', 160, 'testsReportFlag is off'],
+  ['log test bookings', 'coming soon', 160, 'testsReportFlag is off'],
+  ['test bookings and results', 'coming soon', 160, 'testsReportFlag is off'],
+  ['test bookings and test results', 'coming soon', 160, 'testsReportFlag is off'],
+  ['pass-rate reporting', 'coming soon', 160, 'testsReportFlag is off'],
+  ['pass rate reporting', 'coming soon', 160, 'testsReportFlag is off'],
 ];
 
 // Forbidden only when two phrases co-occur. Narrower than FORBIDDEN because the
 // bare phrase is legitimate elsewhere: the blog cites "first-time pass rates" as
 // an industry statistic, which is fine; claiming WE report yours is not.
-const FORBIDDEN_PAIR = [
-  ['first-time pass rate', 'monitor', 40, 'no data path: /tests is hidden'],
-];
+const FORBIDDEN_PAIR = [];
 
 /** A shipped feature sitting next to a stale marker. [feature, marker, window, why] */
 const STALE = [
@@ -106,10 +128,23 @@ const ALLOW = [
    'generic advice on what a student management system should include'],
   ['/blog/student-progress-tracking/', 'parent portal',
    'item in a checklist for evaluating any digital tracking system'],
+  ['/blog/how-to-choose-driving-school-scheduling-software/', 'practical test booking',
+   'UK regulatory context (test booking rules), not a product claim'],
 ];
 
 function allowed(page, rule) {
   return ALLOW.some(([p, phrase]) => page === p && rule.includes(`"${phrase}"`));
+}
+
+/** Is `b` within `win` chars of the match at `i`, without crossing a block boundary? */
+function hasNear(text, i, alen, b, win) {
+  const before = text.slice(Math.max(0, i - win), i);
+  const after = text.slice(i + alen, i + alen + win);
+  const bBefore = before.lastIndexOf(b);
+  if (bBefore !== -1 && !before.slice(bBefore + b.length).includes('\u00b6')) return true;
+  const bAfter = after.indexOf(b);
+  if (bAfter !== -1 && !after.slice(0, bAfter).includes('\u00b6')) return true;
+  return false;
 }
 
 function nearby(text, a, b, win) {
@@ -124,7 +159,7 @@ function nearby(text, a, b, win) {
     // widget...") the marker can sit further from the feature than from the
     // word that owns it.
     const owner = text.slice(Math.max(0, i - win - 60), i + a.length + win);
-    if (slice.includes(b) && !owner.includes('whatsapp'))
+    if (hasNear(text, i, a.length, b, win) && !owner.includes('whatsapp'))
       hits.push(text.slice(Math.max(0, i - 40), i + a.length + 60).trim());
     i = text.indexOf(a, i + 1);
   }
@@ -149,8 +184,7 @@ for (const file of pages) {
   for (const [phrase, need, win, why] of PAIRED) {
     let i = text.indexOf(phrase);
     while (i !== -1) {
-      const slice = text.slice(Math.max(0, i - win), i + phrase.length + win);
-      if (!slice.includes(need)) {
+      if (!hasNear(text, i, phrase.length, need, win)) {
         failures.push({ page, rule: `"${phrase}" without "${need}"`, why });
         break;
       }
