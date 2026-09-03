@@ -91,7 +91,7 @@ const comparisonData = [
     values: [true, false, false]
   },
   {
-    label: 'Document Management with Expiry Alerts',
+    label: 'Student Records & Lesson History',
     values: [true, false, false]
   },
   {
@@ -194,8 +194,8 @@ const faqItems = [
     ]
   },
   {
-    question: "Can I track driving test bookings and results?",
-    answer: "Yes. Record test bookings with date, centre, and type. Log results and examiner notes when they come in. Your dashboard shows upcoming tests across all students, and reports track your school's first-time pass rate over time. Students near their test date are highlighted with their DVSA readiness score so you can focus final lessons effectively.",
+    question: "How do I know when a pupil is ready for their test?",
+    answer: "Every pupil is tracked against the full DVSA framework — 8 categories and 27 skills on a six-level scale from Not Started to Reflection — so readiness is based on evidence from real lessons rather than a hunch. Pupils near test readiness surface in their progress view, and they can follow along in their own portal.",
     links: [
       { text: 'Scheduling features', url: '/driving-school-scheduling-software/' }
     ]
@@ -210,7 +210,7 @@ const faqItems = [
   },
   {
     question: "Can I upload and track student documents?",
-    answer: "Yes. Upload provisional licences and custom document types. Set expiry dates and the system alerts you when documents are approaching expiry. Documents are marked as verified or pending for clear compliance status."
+    answer: "Every pupil has a full record — contact details, DVSA progress, lesson history, notes and a running balance — so whoever teaches them next has the whole picture. Document storage is coming soon."
   },
   {
     question: "Is there a student financial ledger?",
@@ -481,13 +481,13 @@ const schemaMarkup = {
 
         <h3 class="text-xl font-bold text-brand-navy mt-8 mb-4">Results &amp; Per-Student Pass Rates</h3>
 
-        <p>When results come in, log the outcome — pass or fail — with examiner feedback against the student's record. Over time, reporting rolls these up into your school's first-time pass rate and lets you see results by student and by instructor. Driving test student management isn't just admin: tracking outcomes against readiness scores shows you which learners you're sending to test too early, and helps you lift your overall pass rate lesson by lesson.</p>
+        <p>Progress is recorded against the DVSA framework after each lesson, so a pupil's readiness builds from evidence rather than memory. Over time you can see how each pupil is progressing, and pupils can follow along in their own portal.</p>
 
         <p>Related: <a href="/driving-school-scheduling-software/" class="text-brand-red hover:underline">Driving School Scheduling Software</a> for booking the lessons that get students test-ready.</p>
 
         <h2 id="document-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Student Document Tracking</h2>
 
-        <p>Upload and manage student documents — provisional licences, passport photos, theory test certificates, medical declarations, and any custom document types your school requires. Set expiry dates and the dashboard alerts you when documents are approaching expiry. Verified documents are clearly marked so you always know a student's compliance status at a glance.</p>
+        <p>Every pupil has a complete record — contact details, DVSA progress, lesson history, notes and a running balance — so whoever teaches them next has the whole picture without a handover call. Document storage is coming soon.</p>
 
         <h2 id="instructor-management" class="text-3xl font-bold text-brand-navy mt-12 mb-6">Instructor Management</h2>
 
