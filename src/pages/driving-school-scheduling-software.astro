@@ -21,8 +21,8 @@ const schedulingStats = [
   },
   {
     label: 'Recurring Lessons',
-    value: 'Built in',
-    context: 'Set up a weekly series in one go'
+    value: 'Coming soon',
+    context: 'Weekly series in one go — in testing now'
   },
   {
     label: 'Admin Time Saved',
@@ -70,7 +70,7 @@ const comparisonData = [
   },
   {
     label: 'Recurring Lesson Series',
-    values: [true, false, false]
+    values: ['Coming soon', false, false]
   },
   {
     label: 'Pickup Location Management',
@@ -105,7 +105,7 @@ const comparisonData = [
 const faqItems = [
   {
     question: "What is the best scheduling software for driving schools?",
-    answer: "The best scheduling software offers three-way conflict detection (student, instructor, and vehicle), automated reminders, multi-instructor calendars, and prevents double-bookings. DriveSchoolPro combines all these features with drag-and-drop rescheduling and recurring lesson series — and it's free during early access, until 31 March 2027.",
+    answer: "The best scheduling software offers three-way conflict detection (student, instructor, and vehicle), automated reminders, multi-instructor calendars, and prevents double-bookings. DriveSchoolPro combines all these features with drag-and-drop rescheduling (recurring lesson series coming soon) — and it's free during early access, until 31 March 2027.",
     links: [
       { text: 'Pricing plans', url: '/pricing/' }
     ]
@@ -171,7 +171,7 @@ const faqItems = [
   },
   {
     question: "Does scheduling software sync with Google Calendar?",
-    answer: "DriveSchoolPro has its own full-featured calendar with day, week, and month views, drag-and-drop rescheduling, and recurring lesson series, so everything lives in one place. You can export lessons to Google, Apple, or Outlook via a one-way calendar file (ICS); two-way sync isn't available yet.",
+    answer: "DriveSchoolPro has its own full-featured calendar with day, week, and month views, and drag-and-drop rescheduling, so everything lives in one place (recurring lesson series coming soon). You can export lessons to Google, Apple, or Outlook via a one-way calendar file (ICS); two-way sync isn't available yet.",
     links: [
       { text: OFFER.ctaPrimary.labelShort, url: OFFER.ctaPrimary.href }
     ]
@@ -201,7 +201,7 @@ const schemaMarkup = {
 
 <BaseLayout
   title="Driving School Scheduling Software | Bookings & Reminders | DriveSchoolPro"
-  description="Driving school scheduling software with three-way conflict detection, recurring lesson series, and automated reminders. Drag-and-drop calendars. Reduce no-shows by up to 50%."
+  description="Driving school scheduling software with three-way conflict detection, drag-and-drop calendars, and automated reminders. Reduce no-shows by up to 50%."
   image="/images/marketing/calendar-week-view.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
@@ -238,7 +238,7 @@ const schemaMarkup = {
 
   <!-- Featured Answer -->
   <FeaturedAnswer question="What is driving school scheduling software?">
-    Driving school scheduling software automates lesson management, instructor coordination, and appointment scheduling through drag-and-drop calendars, three-way conflict detection, and automated email reminders. Modern platforms like DriveSchoolPro save 10+ hours weekly, reduce no-shows significantly, support recurring lesson series, and check student, instructor and vehicle availability to prevent clashes.
+    Driving school scheduling software automates lesson management, instructor coordination, and appointment scheduling through drag-and-drop calendars, three-way conflict detection, and automated email reminders. Modern platforms like DriveSchoolPro save 10+ hours weekly, reduce no-shows significantly, and check student, instructor and vehicle availability to prevent clashes.
   </FeaturedAnswer>
 
   <!-- Statistics Section -->

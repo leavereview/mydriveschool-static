@@ -84,6 +84,26 @@ const STALE = [
   ['multi-instructor management', 'coming soon', 60, 'FOUNDING includes School tier'],
 ];
 
+/**
+ * Documented exceptions. A rule fires on a phrase, but a phrase is not always a
+ * claim about US: a competitor review describes THEIR product, and a buying
+ * guide tells the reader what to look for from any vendor. Silencing those by
+ * editing the prose would falsify genuine content, so they are listed here with
+ * a reason instead. [pagePrefix, phrase, why]
+ */
+const ALLOW = [
+  ['/blog/drivescout-vs-drivingschoolsoftware-comparison/', 'recurring lesson',
+   'describes DriveScout\'s scheduling, not ours'],
+  ['/blog/how-to-choose-driving-school-scheduling-software/', 'recurring lesson',
+   'buying-guide criterion for evaluating any vendor'],
+  ['/blog/how-to-choose-driving-school-scheduling-software/', 'recurring series',
+   'buying-guide criterion for evaluating any vendor'],
+];
+
+function allowed(page, rule) {
+  return ALLOW.some(([p, phrase]) => page === p && rule.includes(`"${phrase}"`));
+}
+
 function nearby(text, a, b, win) {
   const hits = [];
   let i = text.indexOf(a);
@@ -134,10 +154,16 @@ for (const file of pages) {
       failures.push({ page, rule: `stale: "${a}" near "${b}"`, why });
 }
 
+const kept = failures.filter((f) => !allowed(f.page, f.rule));
+const skipped = failures.length - kept.length;
+failures.length = 0;
+failures.push(...kept);
+
 if (failures.length) {
   console.error(`CLAIM VERIFICATION FAILED - ${failures.length} issue(s):\n`);
   const byPage = {};
   for (const f of failures) (byPage[f.page] ||= []).push(f);
+  if (skipped) console.error(`(${skipped} documented exception(s) allowed - see ALLOW)\n`);
   for (const [page, list] of Object.entries(byPage)) {
     console.error(`  ${page}`);
     for (const f of list) console.error(`    - ${f.rule}  (${f.why})`);
@@ -145,4 +171,5 @@ if (failures.length) {
   }
   process.exit(1);
 }
-console.log(`Claim verification passed - ${pages.length} pages checked.`);
+console.log(`Claim verification passed - ${pages.length} pages checked` +
+  (skipped ? `, ${skipped} documented exception(s) allowed.` : '.'));
