@@ -1,0 +1,148 @@
+/**
+ * Claim verification — asserts the built site does not contradict the app.
+ *
+ * verify-seo.js checks that pages are structurally sound; this checks that what
+ * they SAY is true. Each rule cites the app-side flag that makes it a rule, so a
+ * flag flip tells you exactly which rule to retire.
+ *
+ * Ground truth: driveschoolpro/src/lib/feature-flags.ts and the per-feature
+ * constants in src/lib/config/*-visibility.ts. Every flag env var is empty in
+ * .env.example, and UNSET MEANS HIDDEN.
+ *
+ * Verified against production 2026-09-03:
+ *   /confirm/<token>    -> 404  => lesson confirmation OFF
+ *   /portal/find-school -> 200  => student portal LIVE
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+
+const distDir = path.join(process.cwd(), 'dist');
+
+function walk(dir) {
+  const out = [];
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, e.name);
+    if (e.isDirectory()) out.push(...walk(full));
+    else if (e.name.endsWith('.html')) out.push(full);
+  }
+  return out;
+}
+
+// Strip tags so "Portal <span>Coming Soon</span>" reads as adjacent words,
+// decode the entities Astro emits, collapse whitespace, lowercase.
+function normalise(html) {
+  return html
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&#8212;|&mdash;/g, '-').replace(/&#8217;|&rsquo;/g, "'")
+    .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ')
+    .toLowerCase();
+}
+
+/** Phrases that must never appear. [phrase, why] */
+const FORBIDDEN = [
+  ['one-click confirm', 'lessonConfirmationFlag is off'],
+  ['one click confirm', 'lessonConfirmationFlag is off'],
+  ['one-tap confirmation', 'lessonConfirmationFlag is off'],
+  ['one-click confirmation', 'lessonConfirmationFlag is off'],
+  ['confirm or reschedule', 'lessonConfirmationFlag is off'],
+  ['with expiry alerts', 'documents UI has no surface'],
+  ['expiry date alerts', 'documents UI has no surface'],
+  ['approaching expiry', 'documents UI has no surface'],
+  ['upload student documents', 'documents UI has no surface'],
+  ['upload and manage student documents', 'documents UI has no surface'],
+  ['instructor utilisation report', 'utilisationReportFlag is off'],
+  ['monitors your utilisation', 'utilisationReportFlag is off'],
+  ['driving test bookings and results', '/tests is gated with /reports/tests'],
+  ['invite a parent', 'parentAccessFlag is off'],
+  ['inc vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
+  ['including vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
+  ['#ff385c', 'not a brand token'],
+];
+
+/** Phrase is only allowed when a marker sits nearby. [phrase, need, window, why] */
+const PAIRED = [
+  ['recurring lesson', 'coming soon', 120, 'recurringBookingFlag is off'],
+  ['recurring series', 'coming soon', 120, 'recurringBookingFlag is off'],
+];
+
+// Forbidden only when two phrases co-occur. Narrower than FORBIDDEN because the
+// bare phrase is legitimate elsewhere: the blog cites "first-time pass rates" as
+// an industry statistic, which is fine; claiming WE report yours is not.
+const FORBIDDEN_PAIR = [
+  ['first-time pass rate', 'monitor', 40, 'no data path: /tests is hidden'],
+];
+
+/** A shipped feature sitting next to a stale marker. [feature, marker, window, why] */
+const STALE = [
+  ['student portal', 'coming soon', 60, 'student portal is GA'],
+  ['self-service portal', 'coming soon', 60, 'student portal is GA'],
+  ['booking widget', 'coming soon', 60, 'embed booking widget is built'],
+  ['card payments', 'coming soon', 60, 'Stripe Connect is live'],
+  ['card payments', 'in development', 60, 'Stripe Connect is live'],
+  ['online payments', 'coming soon', 60, 'Stripe Connect is live'],
+  ['multi-instructor management', 'coming soon', 60, 'FOUNDING includes School tier'],
+];
+
+function nearby(text, a, b, win) {
+  const hits = [];
+  let i = text.indexOf(a);
+  while (i !== -1) {
+    const slice = text.slice(Math.max(0, i - win), i + a.length + win);
+    // "WhatsApp ... coming soon" is CORRECT and must never be flagged. If
+    // WhatsApp is what the marker belongs to, this is not a stale badge.
+    if (slice.includes(b) && !slice.includes('whatsapp'))
+      hits.push(text.slice(Math.max(0, i - 40), i + a.length + 60).trim());
+    i = text.indexOf(a, i + 1);
+  }
+  return hits;
+}
+
+if (!fs.existsSync(distDir)) {
+  console.error('ERROR: dist/ not found. Run npm run build first.');
+  process.exit(1);
+}
+
+const pages = walk(distDir);
+const failures = [];
+
+for (const file of pages) {
+  const page = '/' + path.relative(distDir, file).replace(/index\.html$/, '').replace(/\.html$/, '/');
+  const text = normalise(fs.readFileSync(file, 'utf8'));
+
+  for (const [phrase, why] of FORBIDDEN)
+    if (text.includes(phrase)) failures.push({ page, rule: `forbidden: "${phrase}"`, why });
+
+  for (const [phrase, need, win, why] of PAIRED) {
+    let i = text.indexOf(phrase);
+    while (i !== -1) {
+      const slice = text.slice(Math.max(0, i - win), i + phrase.length + win);
+      if (!slice.includes(need)) {
+        failures.push({ page, rule: `"${phrase}" without "${need}"`, why });
+        break;
+      }
+      i = text.indexOf(phrase, i + 1);
+    }
+  }
+
+  for (const [a, b, win, why] of FORBIDDEN_PAIR)
+    for (const _ of nearby(text, a, b, win))
+      failures.push({ page, rule: `forbidden: "${a}" near "${b}"`, why });
+
+  for (const [a, b, win, why] of STALE)
+    for (const _ of nearby(text, a, b, win))
+      failures.push({ page, rule: `stale: "${a}" near "${b}"`, why });
+}
+
+if (failures.length) {
+  console.error(`CLAIM VERIFICATION FAILED - ${failures.length} issue(s):\n`);
+  const byPage = {};
+  for (const f of failures) (byPage[f.page] ||= []).push(f);
+  for (const [page, list] of Object.entries(byPage)) {
+    console.error(`  ${page}`);
+    for (const f of list) console.error(`    - ${f.rule}  (${f.why})`);
+    console.error('');
+  }
+  process.exit(1);
+}
+console.log(`Claim verification passed - ${pages.length} pages checked.`);
