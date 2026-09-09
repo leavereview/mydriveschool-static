@@ -2,41 +2,57 @@
 import { OFFER } from '../config/offer';
 const currentPath = Astro.url.pathname;
 
-const navLinks = [
-  { label: 'Home', href: '/' },
+// Every link lives in the menu panel — the bar itself only carries the logo,
+// Log in and the primary CTA (Shopify-style). Sections drive the panel columns.
+const menuSections = [
   {
-    label: 'Software',
+    title: 'Software',
     href: '/driving-school-software/',
-    dropdown: [
-      { label: 'Driving School Software', href: '/driving-school-software/' },
-      { label: 'Scheduling Software', href: '/driving-school-scheduling-software/' },
-      { label: 'Management Software', href: '/driving-school-management-software/' },
-      { label: 'Free Software', href: '/free-driving-school-software/' },
-      { label: '---', href: '#' },
-      { label: 'Revenue Calculator', href: '/driving-school-calculator/' },
-      { label: 'Cost of Learning Calculator', href: '/tools/cost-calculator/' },
-    ]
+    groups: [
+      [
+        { label: 'Driving School Software', href: '/driving-school-software/' },
+        { label: 'Scheduling Software', href: '/driving-school-scheduling-software/' },
+        { label: 'Management Software', href: '/driving-school-management-software/' },
+        { label: 'Free Software', href: '/free-driving-school-software/' },
+      ],
+      [
+        { label: 'Revenue Calculator', href: '/driving-school-calculator/' },
+        { label: 'Cost of Learning Calculator', href: '/tools/cost-calculator/' },
+      ],
+    ],
   },
   {
-    label: 'Driving Skills',
+    title: 'Driving Skills',
     href: '/dvsa-27-driving-skills/',
-    dropdown: [
-      { label: '27 Driving Skills Guide', href: '/dvsa-27-driving-skills/' },
-      { label: '---', href: '#' },
-      { label: 'The Basics (Skills 1–4)', href: '/driving-skills/basics/' },
-      { label: 'Control & Positioning (5–7)', href: '/driving-skills/control-positioning/' },
-      { label: 'Observation & Planning (8–13)', href: '/driving-skills/observation-signalling/' },
-      { label: 'Junctions & Roundabouts (14–16)', href: '/driving-skills/junctions-roundabouts/' },
-      { label: 'Manoeuvres (17–20)', href: '/driving-skills/manoeuvres/' },
-      { label: 'Road Types (21–23)', href: '/driving-skills/road-types/' },
-      { label: 'Driving Conditions (24–26)', href: '/driving-skills/driving-conditions/' },
-      { label: 'Following Routes (Skill 27)', href: '/driving-skills/following-routes/' },
-    ]
+    groups: [
+      [
+        { label: '27 Driving Skills Guide', href: '/dvsa-27-driving-skills/' },
+      ],
+      [
+        { label: 'The Basics (Skills 1–4)', href: '/driving-skills/basics/' },
+        { label: 'Control & Positioning (5–7)', href: '/driving-skills/control-positioning/' },
+        { label: 'Observation & Planning (8–13)', href: '/driving-skills/observation-signalling/' },
+        { label: 'Junctions & Roundabouts (14–16)', href: '/driving-skills/junctions-roundabouts/' },
+        { label: 'Manoeuvres (17–20)', href: '/driving-skills/manoeuvres/' },
+        { label: 'Road Types (21–23)', href: '/driving-skills/road-types/' },
+        { label: 'Driving Conditions (24–26)', href: '/driving-skills/driving-conditions/' },
+        { label: 'Following Routes (Skill 27)', href: '/driving-skills/following-routes/' },
+      ],
+    ],
   },
-  { label: 'Pricing', href: '/pricing/' },
-  { label: 'Blog', href: '/blog/' },
-  { label: 'About', href: '/about/' },
-  { label: 'Contact', href: '/contact/' },
+  {
+    title: 'Company',
+    href: '/about/',
+    groups: [
+      [
+        { label: 'Home', href: '/' },
+        { label: 'Pricing', href: '/pricing/' },
+        { label: 'Blog', href: '/blog/' },
+        { label: 'About', href: '/about/' },
+        { label: 'Contact', href: '/contact/' },
+      ],
+    ],
+  },
 ];
 
 function isActive(href: string): boolean {
@@ -54,156 +70,129 @@ function isActive(href: string): boolean {
         <span class="text-2xl font-bold text-brand-navy">DriveSchool<span class="text-brand-red">Pro</span></span>
       </a>
 
-      <div class="hidden md:flex items-center gap-1">
-        {navLinks.map((link) => (
-          <div class="relative group">
-            <a
-              href={link.href}
-              class:list={[
-                'px-4 py-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2',
-                isActive(link.href)
-                  ? 'text-brand-red bg-brand-red-light'
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-              ]}
-            >
-              {link.label}
-              {link.dropdown && (
-                <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              )}
-            </a>
-
-            {link.dropdown && (
-              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px]">
-                  {link.dropdown.map((item) => (
-                    item.label === '---' ? (
-                      <div class="border-t border-gray-200 my-1"></div>
-                    ) : (
-                      <a
-                        href={item.href}
-                        class:list={[
-                          'block px-4 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-red',
-                          isActive(item.href)
-                            ? 'text-brand-red bg-brand-red-light'
-                            : 'text-gray-600 hover:text-brand-red hover:bg-gray-50'
-                        ]}
-                      >
-                        {item.label}
-                      </a>
-                    )
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div class="hidden md:flex items-center gap-3">
-        <a href="https://app.driveschoolpro.com/login" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+      <div class="flex items-center gap-2 md:gap-4">
+        <a
+          href="https://app.driveschoolpro.com/login"
+          class="hidden sm:inline-block text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+        >
           Log in
         </a>
-        <a href={OFFER.ctaPrimary.href} class="btn-primary text-sm">
+        <a href={OFFER.ctaPrimary.href} class="hidden sm:inline-block btn-primary text-sm">
           {OFFER.ctaPrimary.labelShort}
         </a>
-      </div>
 
-      <button
-        type="button"
-        class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 min-w-[44px] min-h-[44px] flex items-center justify-center"
-        id="mobile-menu-btn"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+        <button
+          type="button"
+          class="p-2 rounded-lg text-gray-700 hover:bg-gray-100 min-w-[44px] min-h-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2"
+          id="nav-menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <svg class="w-6 h-6" id="nav-menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="w-6 h-6 hidden" id="nav-menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
-  <div class="md:hidden hidden" id="mobile-menu">
-    <div class="px-4 py-4 bg-white border-t border-gray-100 shadow-lg overflow-y-auto overscroll-contain max-h-[calc(100dvh-4rem)]">
-      {navLinks.map((link) => (
-        <div>
-          <a
-            href={link.href}
-            class:list={[
-              'block px-4 py-3 rounded-lg font-medium',
-              isActive(link.href)
-                ? 'text-brand-red bg-brand-red-light'
-                : 'text-gray-600 hover:bg-gray-50'
-            ]}
-          >
-            {link.label}
-          </a>
-          {link.dropdown && (
-            <div class="ml-4 border-l-2 border-gray-100">
-              {link.dropdown.map((item) => (
-                item.label === '---' ? (
-                  <div class="border-t border-gray-200 my-1 ml-4"></div>
-                ) : (
-                  <a
-                    href={item.href}
-                    class:list={[
-                      'block px-4 py-2 text-sm',
-                      isActive(item.href)
-                        ? 'text-brand-red'
-                        : 'text-gray-500 hover:text-brand-red'
-                    ]}
-                  >
-                    {item.label}
-                  </a>
-                )
+  <div class="hidden" id="nav-menu">
+    <div class="bg-white border-t border-gray-100 shadow-lg overflow-y-auto overscroll-contain max-h-[calc(100dvh-4rem)] md:max-h-[calc(100dvh-5rem)]">
+      <div class="container-custom py-6 md:py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          {menuSections.map((section) => (
+            <div>
+              <a
+                href={section.href}
+                class:list={[
+                  'block text-xs font-semibold uppercase tracking-wider mb-3 transition-colors',
+                  isActive(section.href) ? 'text-brand-red' : 'text-gray-400 hover:text-gray-600'
+                ]}
+              >
+                {section.title}
+              </a>
+              {section.groups.map((group, groupIndex) => (
+                <div class:list={[groupIndex > 0 && 'mt-3 pt-3 border-t border-gray-100']}>
+                  {group.map((item) => (
+                    <a
+                      href={item.href}
+                      class:list={[
+                        'block px-3 py-2 -mx-3 rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red',
+                        isActive(item.href)
+                          ? 'text-brand-red bg-brand-red-light'
+                          : 'text-gray-600 hover:text-brand-red hover:bg-gray-50'
+                      ]}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
               ))}
             </div>
-          )}
+          ))}
         </div>
-      ))}
-      <div class="mt-4 px-4 flex flex-col gap-2">
-        <a href={OFFER.ctaPrimary.href} class="btn-primary w-full text-center">
-          {OFFER.ctaPrimary.labelShort}
-        </a>
-        <a href="https://app.driveschoolpro.com/login" class="btn-secondary w-full text-center">
-          Log in
-        </a>
+
+        <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:hidden gap-2">
+          <a href={OFFER.ctaPrimary.href} class="btn-primary w-full text-center">
+            {OFFER.ctaPrimary.labelShort}
+          </a>
+          <a href="https://app.driveschoolpro.com/login" class="btn-secondary w-full text-center">
+            Log in
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </nav>
 
+<div class="fixed inset-0 z-40 bg-brand-navy/30 hidden" id="nav-menu-backdrop"></div>
+
 <script>
-  const mobileBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const menuBtn = document.getElementById('nav-menu-btn');
+  const menu = document.getElementById('nav-menu');
+  const backdrop = document.getElementById('nav-menu-backdrop');
+  const iconOpen = document.getElementById('nav-menu-icon-open');
+  const iconClose = document.getElementById('nav-menu-icon-close');
 
   let isOpen = false;
 
   function openMenu() {
     isOpen = true;
-    mobileMenu?.classList.remove('hidden');
-    mobileBtn?.setAttribute('aria-expanded', 'true');
+    menu?.classList.remove('hidden');
+    backdrop?.classList.remove('hidden');
+    iconOpen?.classList.add('hidden');
+    iconClose?.classList.remove('hidden');
+    menuBtn?.setAttribute('aria-expanded', 'true');
+    menuBtn?.setAttribute('aria-label', 'Close menu');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     isOpen = false;
-    mobileMenu?.classList.add('hidden');
-    mobileBtn?.setAttribute('aria-expanded', 'false');
+    menu?.classList.add('hidden');
+    backdrop?.classList.add('hidden');
+    iconOpen?.classList.remove('hidden');
+    iconClose?.classList.add('hidden');
+    menuBtn?.setAttribute('aria-expanded', 'false');
+    menuBtn?.setAttribute('aria-label', 'Open menu');
     document.body.style.overflow = '';
   }
 
-  mobileBtn?.addEventListener('click', () => {
+  menuBtn?.addEventListener('click', () => {
     if (isOpen) closeMenu();
     else openMenu();
   });
 
+  backdrop?.addEventListener('click', closeMenu);
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isOpen) {
       closeMenu();
-      (mobileBtn as HTMLElement)?.focus();
+      (menuBtn as HTMLElement)?.focus();
     }
   });
 </script>
