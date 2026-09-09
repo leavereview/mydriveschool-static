@@ -7,9 +7,10 @@ interface Props {
   priority?: boolean;
   class?: string;
   mobile?: boolean;
+  bare?: boolean;
 }
 
-const { src, width, height, alt, priority = false, mobile = false, class: className = '' } = Astro.props;
+const { src, width, height, alt, priority = false, mobile = false, bare = false, class: className = '' } = Astro.props;
 const loading = priority ? 'eager' : 'lazy';
 ---
 
@@ -27,6 +28,16 @@ const loading = priority ? 'eager' : 'lazy';
       />
     </div>
   </div>
+) : bare ? (
+  <img
+    src={src}
+    width={width}
+    height={height}
+    alt={alt}
+    loading={loading}
+    decoding="async"
+    class:list={['w-full h-auto', className]}
+  />
 ) : (
   <img
     src={src}
