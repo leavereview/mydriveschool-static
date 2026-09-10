@@ -241,11 +241,72 @@ const homeFaqs = [
     </div>
   </section>
 
-  <!-- §3 Scheduling — Sunday night. Filled by Task 3. -->
-  <section id="the-week" class="section bg-white border-t border-gray-100 scroll-mt-20"></section>
+  <!-- §3 Scheduling — Sunday night -->
+  <section id="the-week" class="section bg-white border-t border-gray-100 scroll-mt-20">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg text-gray-500 italic mb-4">
+            Sunday night, kitchen table, three pupils to move and a diary full of pencil marks.
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
+            Move a lesson. Everything else catches up.
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Drag it and it's done. Three-way conflict checking means you can't double-book a
+            pupil, an instructor, or a car. Day, week and month views — the month view shows
+            you where the gaps are.
+          </p>
+          <a href="/driving-school-scheduling-software/" class="text-brand-red font-semibold hover:underline">
+            See how scheduling works &rarr;
+          </a>
+        </div>
+        <div>
+          <ProductDemo
+            poster="/images/marketing/calendar-week-view.webp"
+            width={1440}
+            height={900}
+            alt="A lesson is dragged from Tuesday to Thursday in the weekly calendar; a second drag onto a clashing slot raises a conflict warning."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- §4 AI briefings — the morning. Filled by Task 4. -->
-  <section id="know-what-to-teach" class="section bg-gray-50 border-t border-gray-100 scroll-mt-20"></section>
+  <!-- §4 AI lesson briefings — the morning -->
+  <section id="know-what-to-teach" class="section bg-gray-50 border-t border-gray-100 scroll-mt-20">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <ProductDemo
+            poster="/images/marketing/ai-briefing-mobile.webp"
+            width={640}
+            height={1308}
+            alt="A lesson card is opened and its AI briefing is already written: what was covered last time, what the pupil struggled with, and what to focus on today."
+            phone
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <span class="badge-primary mb-4">AI · BUILT IN</span>
+          <p class="text-lg text-gray-500 italic mb-4">
+            You pull up outside their house trying to remember what went wrong at that
+            roundabout three weeks ago.
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
+            Know exactly what to teach before you pull up.
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Open the lesson and the briefing is already written: what you covered, what they
+            struggled with, what to work on today. Four sentences, ten seconds to read.
+            Written by Claude — and your data is never used to train it.
+          </p>
+          <a href={OFFER.ctaPrimary.href} class="text-brand-red font-semibold hover:underline">
+            {OFFER.ctaPrimary.label} &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- §5 Progress tracking — in the car. Filled by Task 5. -->
   <section id="log-the-lesson" class="section bg-white border-t border-gray-100 scroll-mt-20"></section>
