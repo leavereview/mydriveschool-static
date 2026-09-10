@@ -12,13 +12,13 @@ const faqs = [
     links: []
   },
   {
-    question: "When does the request go out?",
-    answer: "You choose the trigger, and most instructors tie it to a pupil passing. Timing is the whole trick — someone asked on the afternoon they passed writes a warm review in two minutes; the same person asked three weeks later does not reply.",
+    question: "When does someone appear on the list?",
+    answer: "Two things put a pupil there: passing their practical test, and going quiet after a run of lessons. You set how long to wait before they surface — anything from immediately up to seven days — so the ask lands when it will be welcome rather than the moment they walk out of the test centre.",
     links: []
   },
   {
-    question: "Do I have to ask each pupil myself?",
-    answer: "No, that is the point. Asking is the part everyone means to do and forgets, usually because the moment you remember is a fortnight too late. Setting it up once means it happens every time without you thinking about it.",
+    question: "Does it send the request for me?",
+    answer: "It does the remembering; you do the sending. Candidates appear on your Today screen and the request goes with one tap. That is deliberate — an ask that looks personal works far better than one that obviously came from software, and you stay in control of who gets asked.",
     links: []
   },
   {
@@ -41,7 +41,7 @@ const faqs = [
 
 <BaseLayout
   title="Automated Google Review Collection for Driving Instructors | DriveSchoolPro"
-  description="Review requests sent to your Google Business Profile automatically on the day a pupil passes — the day they are happiest to write one. Free until 31 March 2027."
+  description="Pupils who have just passed appear on your Today screen with a Google review request ready to send — on the day they are happiest to write one. Free until 31 March 2027."
 >
   <BreadcrumbsEnhanced items={[{ label: 'Home', href: '/' }, { label: 'Features', href: '/features/' }, { label: 'Reviews' }]} site="driveschool" />
 
@@ -50,7 +50,7 @@ const faqs = [
       <div class="max-w-3xl mb-12">
         <p class="text-sm uppercase tracking-wider text-gray-400 mb-3">End of month</p>
         <h1 class="text-4xl md:text-5xl font-bold text-brand-navy leading-tight mb-6">
-          They pass. The review request goes out that afternoon.
+          The reviews you meant to ask for, actually asked for.
         </h1>
         <p class="text-xl text-gray-600 leading-relaxed">
           Word of mouth got you every pupil you have ever had. It is also the only part of your
@@ -64,7 +64,7 @@ const faqs = [
       <ProductDemo
         poster="/images/marketing/dashboard-overview.webp"
         posterAlt="The DriveSchoolPro dashboard overview showing the day's lessons and business metrics."
-        alt="A pupil is marked as having passed their test and a Google review request is sent to them automatically the same day."
+        alt="A pupil who has just passed appears in the review nudge panel on the Today screen, and a Google review request is sent to them in one tap."
         width={1440}
         height={900}
       />
@@ -88,12 +88,14 @@ const faqs = [
       </div>
 
       <div>
-        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">The part everyone means to do</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">It remembers so you don't have to</h2>
         <p class="text-lg text-gray-600">
           Almost every instructor knows they should ask for reviews. Very few do it consistently,
           and not through laziness — asking requires remembering, at the exact right moment, while
-          driving to the next pickup. Set the trigger once and it stops depending on your memory.
-          Over a year that is the difference between four reviews and forty.
+          driving to the next pickup. DriveSchoolPro does that half: pupils who have passed, and
+          pupils who have gone quiet, appear on your Today screen with a request ready to go. You
+          still press send, which is what keeps it feeling like it came from you. Over a year that
+          is the difference between four reviews and forty.
         </p>
       </div>
 
@@ -103,7 +105,8 @@ const faqs = [
           Requests point at your Google Business Profile — the listing people actually see when they
           search for an instructor in your town — and the message is yours to write. We will not
           promise you a ranking; nobody honestly can. What the tool does is narrow and useful: it
-          asks the right person at the right moment, every time, without you having to remember.
+          puts the right person in front of you at the right moment, so the ask stops depending on
+          you remembering.
         </p>
       </div>
     </div>
@@ -116,8 +119,8 @@ const faqs = [
         <li class="flex gap-4">
           <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center">1</span>
           <div>
-            <h3 class="font-bold text-brand-navy mb-1">Add your Google review link</h3>
-            <p class="text-gray-600">From settings. One paste, once.</p>
+            <h3 class="font-bold text-brand-navy mb-1">Connect your Google Business Profile</h3>
+            <p class="text-gray-600">From settings. Without it the feature stays hidden, since there would be nowhere to send anyone.</p>
           </div>
         </li>
         <li class="flex gap-4">
@@ -130,8 +133,8 @@ const faqs = [
         <li class="flex gap-4">
           <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center">3</span>
           <div>
-            <h3 class="font-bold text-brand-navy mb-1">Forget about it</h3>
-            <p class="text-gray-600">The request goes out when a pupil finishes, on the day it will land best.</p>
+            <h3 class="font-bold text-brand-navy mb-1">Send from your Today screen</h3>
+            <p class="text-gray-600">Pupils who have passed, and pupils who have gone quiet, appear there when they are due an ask. One tap each.</p>
           </div>
         </li>
       </ol>

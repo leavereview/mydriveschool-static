@@ -70,6 +70,14 @@ const FORBIDDEN = [
   ['parents can be given', 'parentAccessFlag is off'],
   ['pupils and parents can view', 'parentAccessFlag is off'],
   ['parent and guardian access', 'parentAccessFlag is off'],
+  // Review collection is a NUDGE, not an automatic send: ReviewNudgePanel puts
+  // candidates (test passes + inactive pupils) on the Today screen and the
+  // instructor taps send. Copy claiming it sends by itself is false. Found and
+  // corrected 2026-09-10 after the first draft of /features/reviews/ shipped it.
+  ['review request goes out automatically', 'review collection is a nudge, not an automatic send'],
+  ['review requests go out automatically', 'review collection is a nudge, not an automatic send'],
+  ['requests go to your google business profile automatically', 'review collection is a nudge, not an automatic send'],
+  ['reviews are sent automatically', 'review collection is a nudge, not an automatic send'],
   ['inc vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['including vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['#ff385c', 'not a brand token'],
