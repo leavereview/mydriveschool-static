@@ -1,0 +1,161 @@
+---
+import { OFFER } from '../../config/offer';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbsEnhanced from '../../components/seo/BreadcrumbsEnhanced.astro';
+import FAQEnhanced from '../../components/seo/FAQEnhanced.astro';
+import ProductDemo from '../../components/ProductDemo.astro';
+
+const faqs = [
+  {
+    question: "Where do the reviews go?",
+    answer: "To your Google Business Profile. That is the listing that shows up when someone searches for a driving instructor in your town, so it is the one worth building.",
+    links: []
+  },
+  {
+    question: "When does the request go out?",
+    answer: "You choose the trigger, and most instructors tie it to a pupil passing. Timing is the whole trick — someone asked on the afternoon they passed writes a warm review in two minutes; the same person asked three weeks later does not reply.",
+    links: []
+  },
+  {
+    question: "Do I have to ask each pupil myself?",
+    answer: "No, that is the point. Asking is the part everyone means to do and forgets, usually because the moment you remember is a fortnight too late. Setting it up once means it happens every time without you thinking about it.",
+    links: []
+  },
+  {
+    question: "Can I change the wording?",
+    answer: "Yes. The request is yours, in your words. A short personal message reads better than anything generic, and pupils can tell the difference.",
+    links: []
+  },
+  {
+    question: "Will this get me ranked higher on Google?",
+    answer: "We would not promise that, and be sceptical of anyone who does. What we can say plainly is what the tool does: it sends review requests to your Google Business Profile at the moment a pupil is most likely to respond. What Google does with the result is Google's business.",
+    links: []
+  },
+  {
+    question: "What if a pupil leaves a bad review?",
+    answer: "Reviews are between the pupil and Google — nothing is filtered or intercepted, and it would be against Google's policies to try. A steady stream of genuine reviews is the best answer to an occasional poor one.",
+    links: []
+  }
+];
+---
+
+<BaseLayout
+  title="Automated Google Review Collection for Driving Instructors | DriveSchoolPro"
+  description="Review requests sent to your Google Business Profile automatically on the day a pupil passes — the day they are happiest to write one. Free until 31 March 2027."
+>
+  <BreadcrumbsEnhanced items={[{ label: 'Home', href: '/' }, { label: 'Features', href: '/features/' }, { label: 'Reviews' }]} site="driveschool" />
+
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mb-12">
+        <p class="text-sm uppercase tracking-wider text-gray-400 mb-3">End of month</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-brand-navy leading-tight mb-6">
+          They pass. The review request goes out that afternoon.
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Word of mouth got you every pupil you have ever had. It is also the only part of your
+          marketing you cannot do more of by trying harder — you cannot make more people bump into
+          each other at the school gates. The nearest thing to scaling it is a public trail of
+          people saying you were good, and that means reviews you never quite get round to asking
+          for.
+        </p>
+      </div>
+
+      <ProductDemo
+        poster="/images/marketing/dashboard-overview.webp"
+        posterAlt="The DriveSchoolPro dashboard overview showing the day's lessons and business metrics."
+        alt="A pupil is marked as having passed their test and a Google review request is sent to them automatically the same day."
+        width={1440}
+        height={900}
+      />
+    </div>
+  </section>
+
+  <section class="section bg-gray-50 border-t border-gray-100">
+    <div class="container-custom max-w-4xl space-y-14">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Asked on the best day of their year</h2>
+        <p class="text-lg text-gray-600 mb-4">
+          Timing does almost all the work here. A learner who has just passed is, for about
+          forty-eight hours, delighted with you and telling everyone. That is when a request lands
+          well and gets a warm, specific, genuinely useful review.
+        </p>
+        <p class="text-lg text-gray-600">
+          Three weeks later they have a car, a job to get to and no particular feelings about
+          driving lessons. Same pupil, same experience, no review. Automating the ask is really
+          just a way of never missing that window.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">The part everyone means to do</h2>
+        <p class="text-lg text-gray-600">
+          Almost every instructor knows they should ask for reviews. Very few do it consistently,
+          and not through laziness — asking requires remembering, at the exact right moment, while
+          driving to the next pickup. Set the trigger once and it stops depending on your memory.
+          Over a year that is the difference between four reviews and forty.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">In your words, to your Google profile</h2>
+        <p class="text-lg text-gray-600">
+          Requests point at your Google Business Profile — the listing people actually see when they
+          search for an instructor in your town — and the message is yours to write. We will not
+          promise you a ranking; nobody honestly can. What the tool does is narrow and useful: it
+          asks the right person at the right moment, every time, without you having to remember.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white border-t border-gray-100">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-8">How it works</h2>
+      <ol class="space-y-6">
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center">1</span>
+          <div>
+            <h3 class="font-bold text-brand-navy mb-1">Add your Google review link</h3>
+            <p class="text-gray-600">From settings. One paste, once.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center">2</span>
+          <div>
+            <h3 class="font-bold text-brand-navy mb-1">Write the message in your own voice</h3>
+            <p class="text-gray-600">Short and personal beats polished and generic.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center">3</span>
+          <div>
+            <h3 class="font-bold text-brand-navy mb-1">Forget about it</h3>
+            <p class="text-gray-600">The request goes out when a pupil finishes, on the day it will land best.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <FAQEnhanced faqs={faqs} site="driveschool" pageUrl="https://driveschoolpro.com/features/reviews/" title="Questions about review collection" />
+
+  <section class="section bg-brand-navy text-white">
+    <div class="container-custom text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Let your finished pupils find you the next ones</h2>
+      <p class="text-lg text-gray-300 mb-8">Free until 31 March 2027. No card, no contract, cancel any time.</p>
+      <a href={OFFER.ctaPrimary.href} class="btn-primary text-lg px-8 py-4">{OFFER.ctaPrimary.label} &rarr;</a>
+    </div>
+  </section>
+
+  <section class="section bg-white border-t border-gray-100">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-xl font-bold text-brand-navy mb-6">Related</h2>
+      <ul class="space-y-3 text-lg">
+        <li><a href="/features/getting-paid/" class="text-brand-red font-semibold hover:underline">Getting paid &rarr;</a> <span class="text-gray-500">— the pupils who finish are the ones who paid up front</span></li>
+        <li><a href="/features/progress-tracking/" class="text-brand-red font-semibold hover:underline">Progress tracking &rarr;</a> <span class="text-gray-500">— getting them test-ready in the first place</span></li>
+        <li><a href="/blog/seo-for-driving-schools/" class="text-brand-red font-semibold hover:underline">SEO for driving schools &rarr;</a> <span class="text-gray-500">— the wider picture on getting found</span></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

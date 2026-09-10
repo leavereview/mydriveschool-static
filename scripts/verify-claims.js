@@ -63,6 +63,13 @@ const FORBIDDEN = [
   ['parent portal', 'parentAccessFlag is off'],
   ['parent portals', 'parentAccessFlag is off'],
   ['parents their own portal', 'parentAccessFlag is off'],
+  // Found live on /how-progress-works/ 2026-09-10: the page sold parent access in
+  // three phrasings none of the rules above matched, while its own FAQ said the
+  // feature did not exist. These close that gap.
+  ['parents can also be given', 'parentAccessFlag is off'],
+  ['parents can be given', 'parentAccessFlag is off'],
+  ['pupils and parents can view', 'parentAccessFlag is off'],
+  ['parent and guardian access', 'parentAccessFlag is off'],
   ['inc vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['including vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['#ff385c', 'not a brand token'],
