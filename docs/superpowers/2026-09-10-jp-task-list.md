@@ -98,7 +98,37 @@ The homepage is **live**. The `/features` hub is built and pushed but **not depl
 
 ---
 
-## 6. Small things found along the way
+## 6. Claim scan — what it turned up
+
+Every product claim in the new copy was checked against the app on 2026-09-10.
+
+**Verified correct:** three-way conflict checking (`checkLessonConflicts` does take `studentId`,
+even though the client-side util only does time+vehicle), day/week/month views, the month heatmap,
+configurable reminder timing (`reminderHoursBefore [24, 2]`), test readiness scoring,
+cash/bank/cheque recording, package hours, offline via serwist.
+
+**Four were false and are now fixed** — all of them had passed a green `verify-claims.js`:
+
+1. **Parent portal access** on `/how-progress-works/`, contradicted by the same page's own FAQ.
+2. **Review requests "go out automatically"** — mine. It is `ReviewNudgePanel` on Today; you tap send.
+3. **Instructor calendar export** — the only `text/calendar` response in the app is the public
+   booking-management route, a pupil's own lesson. No diary export or feed exists. Claimed in my
+   scheduling FAQ *and*, pre-existing, on `/driving-school-scheduling-software/`.
+4. **Per-pupil AI briefing toggle** — no such setting anywhere. Claimed on two pages.
+
+Nineteen guards now cover all four wordings.
+
+**One thing for you to confirm:** I changed the test copy from "recording test bookings and results
+is coming soon" to saying recording is live and *pass-rate reporting* is what's coming. That
+reverses your 3 September call, which assumed recording was hidden — it isn't, the per-pupil
+surface on the student Details tab is ungated. Worth a 30-second check in production that the
+book-test tiles and "mark passed" really do appear, since I'm reading code rather than the running
+app. `src/pages/index.astro` still carries the older "coming soon" wording in its `highlights`
+array; I left it alone pending your confirmation.
+
+---
+
+## 7. Small things found along the way
 
 Not urgent, none blocking.
 
