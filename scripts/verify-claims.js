@@ -78,6 +78,18 @@ const FORBIDDEN = [
   ['review requests go out automatically', 'review collection is a nudge, not an automatic send'],
   ['requests go to your google business profile automatically', 'review collection is a nudge, not an automatic send'],
   ['reviews are sent automatically', 'review collection is a nudge, not an automatic send'],
+  // Found 2026-09-10 by scanning every product claim against the app. The only
+  // text/calendar response in the whole app is the PUBLIC booking-management
+  // route (a pupil's own lesson); there is no instructor diary export or feed.
+  ['export lessons to google', 'no instructor-side calendar export exists'],
+  ['export your driveschoolpro diary', 'no instructor-side calendar export exists'],
+  ['one-way calendar file', 'no instructor-side calendar export exists'],
+  ['reads an ics feed', 'no instructor-side calendar export exists'],
+  // No per-pupil switch for AI briefings exists anywhere in validations, config
+  // or schema.prisma. Claimed on two pages before this scan.
+  ['turned off per pupil', 'no per-pupil briefing toggle exists'],
+  ['turned off per-pupil', 'no per-pupil briefing toggle exists'],
+  ['off per pupil', 'no per-pupil briefing toggle exists'],
   ['inc vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['including vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['#ff385c', 'not a brand token'],
