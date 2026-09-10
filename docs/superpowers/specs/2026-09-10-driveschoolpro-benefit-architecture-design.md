@@ -331,8 +331,21 @@ or details would be a UK GDPR breach and would contradict the site's own trust b
 
 1. **Three named testimonials** (name, town, one sentence, permission to publish). §8 is
    `[PLACEHOLDER]` until these exist. Highest-leverage single input to the page.
-2. **Is "set up in about 10 minutes" measured or estimated?** If measured it becomes a
-   footnoted claim; if estimated it gets softened.
+   **Also urgent independent of this project:** the four quotes currently in
+   `src/components/Testimonials.astro` are attributed to named individuals ("Sarah J.,
+   Birmingham, Independent ADI") with specific claims ("one no-show in the last month") and
+   carry no placeholder marking, so they read as real. They also appear as `Review` entries
+   in JSON-LD. Replace them with the real testimonials when they arrive; until then they
+   should be marked or pulled. JP flagged for 2026-09-11.
+2. ~~Is "set up in about 10 minutes" measured or estimated?~~ **Answered 2026-09-10 (JP):
+   setup is five minutes.** The site currently understates this in **nine** places across
+   seven files (`index.astro` ×3, `pricing.astro` ×2, `get-started.astro` ×1,
+   `driving-instructor-software.astro` ×3, `ads/driving-school-software.astro` ×2). Correct
+   to five as part of implementation. Write it as a plain product fact ("Setting up takes
+   about five minutes"), **not** as a footnoted statistic — a footnote implies measurement
+   we do not have. Do **not** alter the "ten minutes" inside testimonial quotes; those are
+   attributed speech and are handled by item 1 below. Unrelated: the "saves 5–10 minutes per
+   lesson" briefing claim is a different metric — leave it.
 3. **First-week verbatims** — what early users actually say, warts included. Source material
    for headline copy.
 4. **Recorded objections** — what made someone decline. Feeds the FAQ and §9 reassurance.
