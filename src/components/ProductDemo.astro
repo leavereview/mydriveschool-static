@@ -15,11 +15,17 @@ interface Props {
   height: number;
   /** Describes what HAPPENS in the clip, not just what is pictured. */
   alt: string;
+  /**
+   * Describes the POSTER STILL, used whenever no clip is present. Without it a
+   * screen reader is told a lesson is being dragged while the page is showing a
+   * static image. Falls back to `alt` only when the two genuinely coincide.
+   */
+  posterAlt?: string;
   phone?: boolean;
   class?: string;
 }
 
-const { src, poster, width, height, alt, phone = false, class: className = '' } = Astro.props;
+const { src, poster, width, height, alt, posterAlt, phone = false, class: className = '' } = Astro.props;
 
 const frameClass = phone
   ? 'mx-auto max-w-[280px] rounded-[2rem] border-[8px] border-gray-800 bg-gray-800 p-1 shadow-2xl'
@@ -49,7 +55,7 @@ const mediaClass = phone
         src={poster}
         width={width}
         height={height}
-        alt={alt}
+        alt={posterAlt ?? alt}
         loading="lazy"
         decoding="async"
         class:list={[mediaClass]}
