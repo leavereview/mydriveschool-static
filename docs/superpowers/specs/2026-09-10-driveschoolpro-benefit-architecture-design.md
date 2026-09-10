@@ -338,9 +338,10 @@ or details would be a UK GDPR breach and would contradict the site's own trust b
    in JSON-LD. Replace them with the real testimonials when they arrive; until then they
    should be marked or pulled. JP flagged for 2026-09-11.
 2. ~~Is "set up in about 10 minutes" measured or estimated?~~ **Answered 2026-09-10 (JP):
-   setup is five minutes.** The site currently understates this in **nine** places across
-   seven files (`index.astro` ×3, `pricing.astro` ×2, `get-started.astro` ×1,
-   `driving-instructor-software.astro` ×3, `ads/driving-school-software.astro` ×2). Correct
+   setup is five minutes.** The site currently understates this in **eleven** editorial
+   places across six files (`pricing.astro` ×2, `index.astro` ×3, `get-started.astro` ×1,
+   `driving-instructor-software.astro` ×3, `ads/driving-school-software.astro` ×2), plus a
+   twelfth in the `highlight` label of `Testimonials.astro` which goes with item 1. Correct
    to five as part of implementation. Write it as a plain product fact ("Setting up takes
    about five minutes"), **not** as a footnoted statistic — a footnote implies measurement
    we do not have. Do **not** alter the "ten minutes" inside testimonial quotes; those are
