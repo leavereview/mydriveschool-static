@@ -308,14 +308,110 @@ const homeFaqs = [
     </div>
   </section>
 
-  <!-- §5 Progress tracking — in the car. Filled by Task 5. -->
-  <section id="log-the-lesson" class="section bg-white border-t border-gray-100 scroll-mt-20"></section>
+  <!-- §5 Progress tracking — in the car -->
+  <section id="log-the-lesson" class="section bg-white border-t border-gray-100 scroll-mt-20">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg text-gray-500 italic mb-4">
+            Notes get written up at eleven at night, or they don't get written up at all.
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
+            Logged before they've shut the door.
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Tap the skill, set the level, done. 27 DVSA competencies across 8 categories, six
+            levels from Not Started to Reflection. Any instructor picks up exactly where the
+            last one left off — and pupils can see their own progress in their portal, so they
+            stop asking how they're doing.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="/how-progress-works/" class="text-brand-red font-semibold hover:underline">
+              See how progress tracking works &rarr;
+            </a>
+            <a href="/dvsa-27-driving-skills/" class="text-gray-500 hover:text-brand-red hover:underline transition-colors">
+              Explore the 27 DVSA skills &rarr;
+            </a>
+          </div>
+        </div>
+        <div>
+          <ProductDemo
+            poster="/images/marketing/dvsa-progress-tracking.webp"
+            width={1440}
+            height={900}
+            alt="A single DVSA competency is tapped in the progress grid and its proficiency level is set; the grid cell updates immediately."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- §6 Packages and pre-payment — the pupil's phone. Filled by Task 6. -->
-  <section id="paid-before-they-turn-up" class="section bg-brand-navy text-white scroll-mt-20"></section>
+  <!-- §6 Packages and pre-payment — the pupil's phone -->
+  <section id="paid-before-they-turn-up" class="section bg-brand-navy text-white scroll-mt-20">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <ProductDemo
+            poster="/images/marketing/portal-dashboard-mobile.webp"
+            width={640}
+            height={1308}
+            alt="A pupil opens the package catalogue on their phone, buys a ten-lesson block by card, and books their first slots."
+            phone
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <span class="badge-primary mb-4">WHAT YOUR PUPILS SEE</span>
+          <p class="text-lg text-gray-300 italic mb-4">
+            Asking a 17-year-old for £35 at the kerb, in the rain, is nobody's favourite part
+            of this job.
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            They've already paid before they open the door.
+          </h2>
+          <p class="text-lg text-gray-300 mb-6">
+            Pupils browse your blocks in their own portal, pay by card through Stripe, and the
+            balance keeps itself up to date. Anything still outstanding gets a payment link
+            they can tap without logging in. Someone who's paid for ten lessons doesn't cancel
+            on a Sunday night.
+          </p>
+          <a href="/driving-instructor-accounting-software/" class="text-white font-semibold underline hover:text-brand-red transition-colors">
+            See how getting paid works &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- §7 Review collection — end of month. Filled by Task 7. -->
-  <section id="get-found" class="section bg-white border-t border-gray-100 scroll-mt-20"></section>
+  <!-- §7 Review collection — end of month -->
+  <section id="get-found" class="section bg-white border-t border-gray-100 scroll-mt-20">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg text-gray-500 italic mb-4">
+            Word of mouth got you every pupil you've ever had. It just doesn't scale.
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
+            They pass. The review request goes out that afternoon.
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Requests go to your Google Business Profile automatically, on the day they're
+            happiest to write one — the reviews that bring you the next pupil.
+          </p>
+          <a href={OFFER.ctaPrimary.href} class="text-brand-red font-semibold hover:underline">
+            {OFFER.ctaPrimary.label} &rarr;
+          </a>
+        </div>
+        <div>
+          <ProductDemo
+            poster="/images/marketing/dashboard-overview.webp"
+            width={1440}
+            height={900}
+            alt="A pupil is marked as having passed their test and a Google review request is sent to them automatically the same day."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Everything You Need — 4 feature cards -->
   <section class="section bg-white border-t border-gray-100">
