@@ -32,27 +32,24 @@ Your reminder for this fires **09:00 tomorrow** (routine `trig_01MRokmgRNbN7RzEd
 
 ---
 
-## 2. A product question only you can answer
+## 2. Review nudge — checked, no action needed
 
-**Does the review nudge actually fire in production today?**
+While writing `/features/reviews/` I traced the mechanism and briefly thought half of it was
+unreachable. It isn't. Recorded here so nobody re-opens it.
 
-While writing `/features/reviews/` I traced the mechanism. `getReviewNudgeCandidates` draws from
-two sources:
+`getReviewNudgeCandidates` draws from two sources: pupils who passed a final-stage test, and
+pupils who have gone quiet after a run of lessons. The first needs a `studentTest` PASS recorded
+— and `/tests` **is** 404'd in production, because `REPORT_ROUTE_ALIASES` maps `/tests` onto
+`/reports/tests`, which is gated by `NEXT_PUBLIC_TESTS_REPORT_ENABLED`.
 
-1. **Test passes** — `studentTest` with `result: 'PASS'` on a final-stage test type
-2. **Inactive pupils** — pupils who have gone quiet after a run of lessons
+But `/tests` is not the only way to mark a pass. `LicenceTestsCard` on the student Details tab
+exposes `quickMarkTestPassed`, and it sits in the "Licence & Training" section **outside** the
+`STUDENT_DETAILS_EXTRAS_ENABLED` gates (which wrap lines 661, 691 and 827 of `DetailsTab.tsx`;
+the card is at 712). So passes are recordable today and the trigger fires.
 
-Source 1 depends on a test result being recorded — but test management is behind
-`testsReportFlag`, which you confirmed **off** on 2026-09-03. If instructors cannot record a
-pass, the pass-based half of the feature may never trigger, leaving only the inactive-pupil half.
-
-The copy now describes the mechanism accurately either way, so nothing on the site is false. But
-if the pass trigger is genuinely unreachable, the reviews page is selling a weaker feature than
-it reads. Worth checking against production before deploying the hub.
-
-Related: `reviewRequestChannels` accepts `email | whatsapp | both`, and WhatsApp is flagged off —
-so email is the only live channel. The copy does not mention channels; keep it that way until
-WhatsApp lands.
+Two live constraints the copy already respects: the feature stays hidden until a Google Place ID
+is set, and `reviewRequestChannels` accepts `email | whatsapp | both` while WhatsApp is flagged
+off — so email is the only live channel. Don't mention channels until WhatsApp lands.
 
 ---
 
@@ -82,7 +79,6 @@ data** (publishing it would breach UK GDPR and contradict the site's own trust b
 
 The homepage is **live**. The `/features` hub is built and pushed but **not deployed**.
 
-- [ ] Decide on §2 above first
 - [ ] `./deploy.sh mydriveschool.software`
 - [ ] SEO changelog entry (I will run it — the homepage one is already logged)
 - [ ] Submit the six new URLs to the Indexing API — per your standing rule, not optional:
