@@ -90,6 +90,21 @@ const FORBIDDEN = [
   ['turned off per pupil', 'no per-pupil briefing toggle exists'],
   ['turned off per-pupil', 'no per-pupil briefing toggle exists'],
   ['off per pupil', 'no per-pupil briefing toggle exists'],
+  // Review collection: six more pages carried the "automatic" framing.
+  ['triggers an automatic review', 'review collection is a nudge, not an automatic send'],
+  ['automatic review request', 'review collection is a nudge, not an automatic send'],
+  ['automated google review request', 'review collection is a nudge, not an automatic send'],
+  ['automatically sends a review', 'review collection is a nudge, not an automatic send'],
+  // PLATFORM COMMISSION IS 3%. driveschoolpro/src/lib/utils/connect-fees.ts:14-25
+  // (#1139, JP 2026-08-24: "3%, everyone, from launch") and schema.prisma:1081
+  // platformFeePercent @default(3). It applies to FOUNDING orgs too - the free
+  // launch is no SUBSCRIPTION fee, not no commission. The site claimed the
+  // opposite in 17 places across 8 pages until 2026-09-11, three of them inside
+  // FAQPage JSON-LD. The changelog's July 2026 entry is exempt below: it was
+  // accurate when written, since the 3% decision postdates it.
+  ['no commission', 'platform commission is 3% (connect-fees.ts, JP 2026-08-24)'],
+  ['0% of your payments', 'platform commission is 3% (connect-fees.ts, JP 2026-08-24)'],
+  ['take no commission', 'platform commission is 3% (connect-fees.ts, JP 2026-08-24)'],
   ['inc vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['including vat', 'LEAVE.REVIEW LTD is not VAT-registered'],
   ['#ff385c', 'not a brand token'],
@@ -157,6 +172,10 @@ const ALLOW = [
    'item in a checklist for evaluating any digital tracking system'],
   ['/blog/how-to-choose-driving-school-scheduling-software/', 'practical test booking',
    'UK regulatory context (test booking rules), not a product claim'],
+  ['/changelog/', 'no commission',
+   'dated historical record - the July 2026 entry was accurate when written; the 3% decision is dated 2026-08-24'],
+  ['/changelog/', 'take no commission',
+   'dated historical record - see above'],
 ];
 
 function allowed(page, rule) {
