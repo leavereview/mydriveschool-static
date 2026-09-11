@@ -1,153 +1,149 @@
-# DriveSchoolPro — what's left for JP
+# DriveSchoolPro — JP's checklist
 
-**As of:** 2026-09-10
-**Built and pushed:** homepage restructure (live), `/features` hub (built, not deployed)
+**Updated:** 2026-09-11
+**Live:** homepage restructure, `/features` hub (6 pages), all claim corrections to date
 **Branch:** `design/benefit-led-content-architecture` · **PR:** #9
 
 ---
 
-## 1. Blocking — do these first
+## 🎬 Videos — 5 clips
 
-### 1.1 Regenerate the marketing screenshots ⚠️ blocks everything visual
-The captures in `public/images/marketing/*.webp` date from February 2026, **before** the March
-domain migration. The calendar shot still shows **"MyDriveSchool"** in the app sidebar. They are
-now on five homepage sections and six feature pages, and they will be far more conspicuous in
-video.
-
-- Regenerate in the **app** repo: `driveschoolpro/prompts/regenerate-marketing-screenshots.md`
-- Do this **before** recording any clip — the clips reuse these as poster frames
-- Check `dashboard-overview.webp` in particular: it is currently standing in for the reviews
-  section and does not show the review nudge panel
-
-### 1.2 Three real testimonials
-Still the highest-leverage single input to the site. Name, town, one sentence, permission.
-
-**And a live problem regardless:** the four quotes in `src/components/Testimonials.astro` are
-attributed to named individuals ("Sarah J., Birmingham"), make specific claims ("one no-show in
-the last month"), carry no placeholder marking, and are emitted as JSON-LD `Review` entries — so
-search engines ingest them as genuine reviews. If real ones are more than a few days away, mark
-or pull these in the meantime.
-
-Your reminder for this fires **09:00 tomorrow** (routine `trig_01MRokmgRNbN7RzEdc9mw81t`).
-
----
-
-## 2. Review nudge — checked, no action needed
-
-While writing `/features/reviews/` I traced the mechanism and briefly thought half of it was
-unreachable. It isn't. Recorded here so nobody re-opens it.
-
-`getReviewNudgeCandidates` draws from two sources: pupils who passed a final-stage test, and
-pupils who have gone quiet after a run of lessons. The first needs a `studentTest` PASS recorded
-— and `/tests` **is** 404'd in production, because `REPORT_ROUTE_ALIASES` maps `/tests` onto
-`/reports/tests`, which is gated by `NEXT_PUBLIC_TESTS_REPORT_ENABLED`.
-
-But `/tests` is not the only way to mark a pass. `LicenceTestsCard` on the student Details tab
-exposes `quickMarkTestPassed`, and it sits in the "Licence & Training" section **outside** the
-`STUDENT_DETAILS_EXTRAS_ENABLED` gates (which wrap lines 661, 691 and 827 of `DetailsTab.tsx`;
-the card is at 712). So passes are recordable today and the trigger fires.
-
-Two live constraints the copy already respects: the feature stays hidden until a Google Place ID
-is set, and `reviewRequestChannels` accepts `email | whatsapp | both` while WhatsApp is flagged
-off — so email is the only live channel. Don't mention channels until WhatsApp lands.
-
----
-
-## 3. Video — once 1.1 is done
-
-Full shot list with durations, framing and posters is Appendix A of
+Full shot list (durations, framing, posters) is Appendix A of
 `docs/superpowers/specs/2026-09-10-driveschoolpro-benefit-architecture-design.md`.
 
-- [ ] **Record `calendar-drag.mp4` as a pilot** (10s). Send it over — I will check file size at
-      your capture settings, text legibility at rendered width, loop seam, and whether any
-      flag-hidden UI is in frame.
-- [ ] Then the remaining four: `briefing-generate` (8s), `dvsa-log` (6s),
-      `pupil-buys-block` (14s, phone), `review-request` (10s)
-- [ ] I wire each in — one `src` attribute per clip, no other change
+**⚠️ Do task 1.1 below before recording any of these.** The clips reuse the existing screenshots
+as poster frames, and those still show the old brand name.
 
-**The trap worth repeating:** `verify-claims.js` reads HTML, not MP4s. A clip showing recurring
-bookings, parent access, the documents tab, or the utilisation/tests/compliance reports is a
-false claim with no automated guard. Frame to exclude them.
+- [ ] **Clip 1 — `calendar-drag.mp4`** · 10s · 1440×900 · homepage §3 + `/features/scheduling/`
+      Week view → drag Tuesday 15:00 to Thursday → drop → drag onto a clashing slot, conflict
+      fires → undo → back to the opening frame.
+      **Record this one first and send it to me** — I'll check size, legibility at rendered
+      width, loop seam, and flag-hidden UI before you shoot the other four.
+- [ ] **Clip 2 — `briefing-generate.mp4`** · 8s · 1440×900 · homepage §4 + `/features/lesson-briefings/`
+      Today view → click a lesson card → AI briefing visible, held long enough to read.
+      Briefing must be real output, four sentences, no real pupil name.
+- [ ] **Clip 3 — `dvsa-log.mp4`** · 6s · 1440×900 · homepage §5 + `/features/progress-tracking/`
+      Competency grid → tap one skill → set level → cell updates. **Two interactions maximum** —
+      the headline is "logged before they've shut the door", so it must feel fast.
+- [ ] **Clip 4 — `pupil-buys-block.mp4`** · 14s · **phone viewport** · homepage §6 + `/features/getting-paid/`
+      Pupil portal → package catalogue → tap a 10-lesson block → pay (Stripe **test mode**, never
+      real card details) → confirmation → day strip → pick a slot → booked.
+      If 14s is tight, split the booking half into its own clip rather than rushing.
+- [ ] **Clip 5 — `review-request.mp4`** · 10s · 1440×900 · homepage §7 + `/features/reviews/`
+      Mark a pupil passed → they appear in the **review nudge panel on Today** → send the request.
+      Show the prompt-and-tap, **not** an automatic send — that's what the copy now says.
+- [ ] I wire each one in as it arrives (one `src` attribute, no other change)
 
-Capture spec: one fictional school across all five clips, plausible UK names, **no real pupil
-data** (publishing it would breach UK GDPR and contradict the site's own trust bar), 1440×900
-(phone viewport for clip 4), light theme, 2s of stillness at each end, H.264 MP4, no audio track.
+**Capture spec for all five:** one fictional school reused across every clip, plausible UK names,
+**no real pupil data**. 1440×900 (phone viewport for clip 4), same browser, same zoom, no
+bookmarks bar, light theme. 2s of stillness at each end, start and end on the same frame so the
+loop doesn't snap. Move at about half natural speed, cursor visible. Export H.264 MP4, **no audio
+track**, plus a poster JPG of the first frame. Drop them in `public/videos/marketing/`.
 
----
-
-## 4. Ship the features hub
-
-The homepage is **live**. The `/features` hub is built and pushed but **not deployed**.
-
-- [ ] `./deploy.sh mydriveschool.software`
-- [ ] SEO changelog entry (I will run it — the homepage one is already logged)
-- [ ] Submit the six new URLs to the Indexing API — per your standing rule, not optional:
-      `/features/`, `/features/scheduling/`, `/features/lesson-briefings/`,
-      `/features/progress-tracking/`, `/features/getting-paid/`, `/features/reviews/`
-- [ ] Merge PR #9
-
----
-
-## 5. Watch after launch
-
-- **Cannibalisation.** `/features/scheduling/` now sits alongside `/driving-school-scheduling-software/`,
-  and `/features/progress-tracking/` alongside `/how-progress-works/`. Positioned as different
-  intents — keyword entry vs product truth — but watch GSC impressions. **Fallback if it bites:**
-  fold the pillar's unique content into the feature page and 301 the pillar.
-- **Homepage engagement**, since the hero CTA now lands on a demo section rather than a still.
+**Keep out of frame:** recurring bookings, parent access, the student documents tab, and the
+utilisation / tests / compliance reports. All hidden in production. `verify-claims.js` reads HTML,
+not MP4s — a clip is the one claim surface nothing guards.
 
 ---
 
-## 6. Claim scan — what it turned up
+## 🔴 Blocking
 
-Every product claim in the new copy was checked against the app on 2026-09-10.
-
-**Verified correct:** three-way conflict checking (`checkLessonConflicts` does take `studentId`,
-even though the client-side util only does time+vehicle), day/week/month views, the month heatmap,
-configurable reminder timing (`reminderHoursBefore [24, 2]`), test readiness scoring,
-cash/bank/cheque recording, package hours, offline via serwist.
-
-**Four were false and are now fixed** — all of them had passed a green `verify-claims.js`:
-
-1. **Parent portal access** on `/how-progress-works/`, contradicted by the same page's own FAQ.
-2. **Review requests "go out automatically"** — mine. It is `ReviewNudgePanel` on Today; you tap send.
-3. **Instructor calendar export** — the only `text/calendar` response in the app is the public
-   booking-management route, a pupil's own lesson. No diary export or feed exists. Claimed in my
-   scheduling FAQ *and*, pre-existing, on `/driving-school-scheduling-software/`.
-4. **Per-pupil AI briefing toggle** — no such setting anywhere. Claimed on two pages.
-
-Nineteen guards now cover all four wordings.
-
-**One thing for you to confirm:** I changed the test copy from "recording test bookings and results
-is coming soon" to saying recording is live and *pass-rate reporting* is what's coming. That
-reverses your 3 September call, which assumed recording was hidden — it isn't, the per-pupil
-surface on the student Details tab is ungated. Worth a 30-second check in production that the
-book-test tiles and "mark passed" really do appear, since I'm reading code rather than the running
-app. `src/pages/index.astro` still carries the older "coming soon" wording in its `highlights`
-array; I left it alone pending your confirmation.
+- [ ] **1.1 Regenerate the marketing screenshots.** `public/images/marketing/*.webp` predate the
+      March domain migration — the calendar shot still shows **"MyDriveSchool"** in the sidebar.
+      They're on five homepage sections and six feature pages right now. Regenerate in the app
+      repo: `driveschoolpro/prompts/regenerate-marketing-screenshots.md`.
+      Also: `dashboard-overview.webp` is standing in for the reviews section and doesn't show the
+      nudge panel — worth a purpose-shot still.
+- [ ] **1.2 Three real testimonials** — name, town, one sentence, permission.
+      **Separately urgent:** the four quotes in `src/components/Testimonials.astro` are attributed
+      to named individuals, make specific claims ("one no-show in the last month"), carry no
+      placeholder marking, and are emitted as JSON-LD `Review` entries. If real ones are more than
+      a few days out, mark or pull these.
+      *(Two "set up in ten minutes" quotes elsewhere on the site are the same placeholders — they
+      go when these do.)*
 
 ---
 
-## 7. Small things found along the way
+## 🟡 Confirm when you get a minute
 
-Not urgent, none blocking.
-
-| Thing | Where | Note |
-|---|---|---|
-| Dead internal-link map | `src/utils/internalLinks.ts` | Maps keywords to `/lesson-scheduling-software/` and `/driving-school-crm/`, **neither of which exists**. Nothing imports it and no post contains the keywords, so it generates no 404s today — but it will the moment someone wires it up. Delete it. |
-| Stale pricing in docs | `mydriveschool.software/CLAUDE.md` | Still describes the PPC landers as leading with "Solo £22/mo". The free launch retired that pricing. |
-| Uncommitted work | outer repo, `tools/gsc-client/history/changes.json` | Was already modified when this session started, on branch `seo/2026-08-19-changelog-and-structural-config`. My changelog entry is stacked on top. Not mine to commit. |
-| Stray file | `Security hardening — running.` | Untracked note from July 2026 in the site repo root. |
+- [ ] **2.1 Is the 3% commission right?** I've rewritten 17 claims across 8 pages to say
+      *"we charge 3% on card payments you collect, Stripe's processing fee separate"*, per
+      `connect-fees.ts` (#1139, your 2026-08-24 call) and `platformFeePercent @default(3)`.
+      **The assumption:** no per-org override. Only production knows. If founding schools *are*
+      set to 0%, tell me and I'll switch to a dated "no commission during early access" qualifier.
+- [ ] **2.2 Are test bookings/results really recordable in production?** I changed the copy from
+      "coming soon" to live, because `LicenceTestsCard` on the student Details tab has
+      `book-test-*` tiles and `quickMarkTestPassed`, sitting outside the
+      `STUDENT_DETAILS_EXTRAS_ENABLED` gates. Reading code, not the running app — worth 30 seconds
+      to confirm. `src/pages/index.astro` still says "coming soon" in its `highlights` array; I'll
+      align it once you confirm.
 
 ---
 
-## Done this session
+## 🔵 Next chunk of work (mine, on your say-so)
 
+Plan: `docs/superpowers/plans/2026-09-10-claims-remediation.md` — Task 5.
+
+- [ ] **`/compare/driving-school-office/`** — second comparison page, competitor claims unverified
+- [ ] **The two PPC landers** — `driving-instructor-software`, `driving-school-software-uk`.
+      Google Ads contracts, so highest consequence
+- [ ] **The four money pillars** — `driving-school-software`, `-management-`, `-scheduling-`,
+      `free-driving-school-software`
+- [ ] **`about`, `get-started`, `pricing`, `dvsa-27-driving-skills`, `/ads/*`, `/compare/`**
+- [ ] **Blog posts** — lowest risk, but `best-driving-school-software.md`,
+      `drivescout-vs-drivingschoolsoftware-comparison.md` and
+      `how-to-choose-driving-school-scheduling-software.md` make product and competitor claims
+- [ ] **`docs/claims-register.md`** — every claim, the page it's on, the `file:line` in the app
+      that proves it, the flag it depends on, date verified. The thing that makes the next flag
+      flip a lookup instead of a rediscovery
+
+**~30 of 41 pages have still never had a claim pass.**
+
+---
+
+## ⚪ Small, whenever
+
+- [ ] **`src/utils/internalLinks.ts`** — maps keywords to `/lesson-scheduling-software/` and
+      `/driving-school-crm/`, neither of which exists. Nothing imports it and no post contains the
+      keywords, so it's harmless today. Delete it before someone wires it up.
+- [ ] **`mydriveschool.software/CLAUDE.md`** — still says the PPC landers lead with "Solo £22/mo".
+      The free launch retired that.
+- [ ] **Outer repo** — `tools/gsc-client/history/changes.json` has uncommitted work from before
+      this session on `seo/2026-08-19-changelog-and-structural-config`, with my entries stacked on
+      top. Not mine to commit.
+- [ ] **`Security hardening — running.`** — stray untracked note from July in the repo root.
+- [ ] **Merge PR #9.**
+
+---
+
+## 👀 Watch in GSC
+
+- **Cannibalisation** — `/features/scheduling/` vs `/driving-school-scheduling-software/`, and
+  `/features/progress-tracking/` vs `/how-progress-works/`. If impressions split, fold the
+  pillar's unique content into the feature page and 301 it.
+- **Homepage engagement** — the hero CTA now lands on a demo section rather than a still.
+- **Pricing page** — it now discloses a 3% fee it didn't before. Worth watching conversion.
+
+---
+
+## ✅ Done
+
+**Shipped and live:**
 - `ProductDemo.astro` — silent looping MP4, poster fallback, lazy load, reduced-motion safe
-- `scripts/verify-demos.js` — in the postbuild chain
-- Homepage restructured into five benefit sections on the week's spine; hero CTA fixed **(live)**
-- Setup time corrected to five minutes in eleven places **(live)**
-- `/features` hub — six pages, 1,360–1,470 words each, FAQ schema, nav entry **(not deployed)**
-- **Two live false claims found and fixed:** parent portal access on `/how-progress-works/`
-  (contradicted by its own FAQ), and overstated review automation in my own first draft. Eight
-  new guards in `verify-claims.js` so neither wording can return.
+- `scripts/verify-demos.js` in the postbuild chain
+- Homepage rebuilt into five benefit sections on the week's spine; hero CTA fixed
+- `/features` hub — 6 pages, 1,360–1,470 words each, FAQ schema, nav entry
+- Setup time corrected to five minutes (was three different numbers across the site)
+
+**Claim corrections — 5 families, all live:**
+1. **Commission** — 17 claims said "no commission"; the app charges 3%
+2. **Review automation** — 11 claims across 6 pages said "automatic"; it's a prompt you tap
+3. **Calendar export** — claimed an instructor ICS export that doesn't exist anywhere in the app
+4. **Parent portal access** — claimed on `/how-progress-works/`, contradicted by its own FAQ
+5. **Per-pupil briefing toggle** — claimed on two pages; no such setting exists
+
+Plus an unmeasured "saves 5–10 minutes per lesson" and a "most ADIs report 10+ hours" claim.
+**26 guard rules** now in `verify-claims.js` so none of these wordings can return.
+
+**The lesson, for next time:** every one of those five passed a green build. `verify-claims.js`
+proves no *known-bad wording* is present — it cannot prove a claim is true. Read the code path.
